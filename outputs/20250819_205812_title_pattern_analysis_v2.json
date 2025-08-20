@@ -1,0 +1,640 @@
+{
+  "metadata": {
+    "analysis_date": "2025-08-19T20:58:12.610500",
+    "total_documents": 19558,
+    "titles_analyzed": 19558,
+    "analysis_version": "v2_corrected"
+  },
+  "geographic_analysis": {
+    "titles_with_geography": 1735,
+    "titles_without_geography": 17823,
+    "geographic_percentage": 8.87,
+    "top_geographic_entities": {
+      "Europe": 378,
+      "North America": 365,
+      "Asia": 255,
+      "Pacific": 213,
+      "Asia Pacific": 211,
+      "India": 118,
+      "Africa": 68,
+      "Middle East": 65,
+      "China": 59,
+      "Latin America": 50,
+      "Australia": 35,
+      "Germany": 34,
+      "Canada": 33,
+      "Japan": 33,
+      "UK": 32,
+      "Southeast Asia": 25,
+      "Brazil": 24,
+      "Saudi Arabia": 21,
+      "UAE": 20,
+      "GCC": 18
+    },
+    "multiple_regions_distribution": {
+      "2": 132,
+      "1": 1376,
+      "3": 207,
+      "5": 8,
+      "4": 11,
+      "6": 1
+    },
+    "geographic_patterns": {
+      "leading_geographic_count": 19,
+      "embedded_geographic_count": 3,
+      "trailing_geographic_count": 0,
+      "examples": {
+        "leading_geographic": [
+          "Asia Pacific, Middle East And Africa Emulsifiers Market Report, 2030",
+          "Europe, CIS & MENA Sorbitol Market Size Report, 2020-2027",
+          "North America, Europe And Oceania Building And Construction Fasteners Market Report, 2028",
+          "North America, Europe, And Asia Pacific Air Compressor Market Report 2030",
+          "Asia, Europe, and South America Anti-aging Market"
+        ],
+        "embedded_geographic": [
+          "Retail Industry in Australia - Analysis & Statistics",
+          "Retail Market in Singapore - Size, Outlook & Statistics",
+          "Aviation Fuel Terminals Market in India"
+        ],
+        "trailing_geographic": []
+      }
+    }
+  },
+  "topic_extraction_analysis": {
+    "successful_extractions": 43,
+    "challenging_extractions": 457,
+    "success_rate": 8.6,
+    "common_prefixes": {
+      "Antimicrobial Medical Textiles Market,": 1,
+      "Automotive Steel Wheels Market Size & Share Report,": 1,
+      "APAC & Middle East Personal Protective Equipment Market Report,": 1,
+      "Aerostructure Materials Market Size & Share Report,": 1,
+      "Ammunition Market Size,": 1,
+      "CNC Router Machine Market Size And Share Report,": 1,
+      "Bioceramics Market Size,": 1,
+      "Cryogenic Pump Market Size & Share,": 1,
+      "Automotive Timing Belt Market Size And Share Report,": 1,
+      "Desalting And Buffer Exchange Market Size Report,": 1
+    },
+    "common_suffixes": {
+      "Trends Report, 2030": 26,
+      "Industry Report, 2025": 26,
+      "Analysis Report, 2030": 17,
+      "Report 2030": 16,
+      "Industry Report, 2019-2025": 13,
+      "Industry Report, 2030": 11,
+      "Industry Report 2030": 6,
+      "Industry Report 2025": 5,
+      "Market Size And Share [2023 Report]": 5,
+      "Industry Trends Report, 2025": 4
+    },
+    "extraction_examples": [
+      {
+        "original": "Car Electrical Products Market Analysis, Outlook 2031",
+        "extracted_topic": "Outlook 2031",
+        "detected_prefix": "Car Electrical Products Market Analysis,",
+        "detected_suffix": null,
+        "successful": true
+      },
+      {
+        "original": "Online Education Market Insights, 2021-2031",
+        "extracted_topic": "2021-2031",
+        "detected_prefix": "Online Education Market Insights,",
+        "detected_suffix": null,
+        "successful": true
+      },
+      {
+        "original": "Field Service Management Market Insights, 2021-2031",
+        "extracted_topic": "2021-2031",
+        "detected_prefix": "Field Service Management Market Insights,",
+        "detected_suffix": null,
+        "successful": true
+      },
+      {
+        "original": "1,3 Propanediol Market Size, Share & Trends Report, 2030",
+        "extracted_topic": "1,3 Propanediol",
+        "detected_prefix": null,
+        "detected_suffix": "Market Size, Share & Trends Report, 2030",
+        "successful": true
+      },
+      {
+        "original": "Global Acids & Nutrient In Animal Nutrition Market Size Report, 2025",
+        "extracted_topic": "Acids & Nutrient In Animal Nutrition",
+        "detected_prefix": "Global",
+        "detected_suffix": "Market Size Report, 2025",
+        "successful": true
+      },
+      {
+        "original": "360-Degree Camera Market Size And Share Report 2030",
+        "extracted_topic": "360-Degree Camera",
+        "detected_prefix": null,
+        "detected_suffix": "Market Size And Share Report 2030",
+        "successful": true
+      },
+      {
+        "original": "Advanced Utility Boiler Market Size & Share Report, 2019-2025",
+        "extracted_topic": "2019-2025",
+        "detected_prefix": "Advanced Utility Boiler Market Size & Share Report,",
+        "detected_suffix": null,
+        "successful": true
+      },
+      {
+        "original": "Advanced Process Control Market Size & Share Report 2030",
+        "extracted_topic": "Advanced Process Control",
+        "detected_prefix": null,
+        "detected_suffix": "Market Size & Share Report 2030",
+        "successful": true
+      },
+      {
+        "original": "Agricultural Inoculants Market Size And Share [2023 Report]",
+        "extracted_topic": "Agricultural Inoculants",
+        "detected_prefix": null,
+        "detected_suffix": "Market Size And Share [2023 Report]",
+        "successful": true
+      },
+      {
+        "original": "Global Agro Textile Market Size, Share & Growth Report, 2030",
+        "extracted_topic": "Agro Textile",
+        "detected_prefix": "Global",
+        "detected_suffix": "Market Size, Share & Growth Report, 2030",
+        "successful": true
+      }
+    ],
+    "challenging_examples": [
+      {
+        "original": "Antimicrobial Medical Textiles Market, Industry Report, 2030",
+        "extracted_topic": "Industry Report, 2030",
+        "detected_prefix": "Antimicrobial Medical Textiles Market,",
+        "detected_suffix": null,
+        "successful": false
+      },
+      {
+        "original": "Automotive Steel Wheels Market Size & Share Report, 2030",
+        "extracted_topic": "2030",
+        "detected_prefix": "Automotive Steel Wheels Market Size & Share Report,",
+        "detected_suffix": null,
+        "successful": false
+      },
+      {
+        "original": "APAC & Middle East Personal Protective Equipment Market Report, 2030",
+        "extracted_topic": "2030",
+        "detected_prefix": "APAC & Middle East Personal Protective Equipment Market Report,",
+        "detected_suffix": null,
+        "successful": false
+      },
+      {
+        "original": "Aerostructure Materials Market Size & Share Report, 2030",
+        "extracted_topic": "2030",
+        "detected_prefix": "Aerostructure Materials Market Size & Share Report,",
+        "detected_suffix": null,
+        "successful": false
+      },
+      {
+        "original": "Ammunition Market Size, Share And Growth Report, 2030",
+        "extracted_topic": "Share And Growth Report, 2030",
+        "detected_prefix": "Ammunition Market Size,",
+        "detected_suffix": null,
+        "successful": false
+      },
+      {
+        "original": "CNC Router Machine Market Size And Share Report, 2030",
+        "extracted_topic": "2030",
+        "detected_prefix": "CNC Router Machine Market Size And Share Report,",
+        "detected_suffix": null,
+        "successful": false
+      },
+      {
+        "original": "Bioceramics Market Size, Share And Growth Report, 2030",
+        "extracted_topic": "Share And Growth Report, 2030",
+        "detected_prefix": "Bioceramics Market Size,",
+        "detected_suffix": null,
+        "successful": false
+      },
+      {
+        "original": "Cryogenic Pump Market Size & Share, Industry Report, 2030",
+        "extracted_topic": "Industry Report, 2030",
+        "detected_prefix": "Cryogenic Pump Market Size & Share,",
+        "detected_suffix": null,
+        "successful": false
+      },
+      {
+        "original": "Automotive Timing Belt Market Size And Share Report, 2030",
+        "extracted_topic": "2030",
+        "detected_prefix": "Automotive Timing Belt Market Size And Share Report,",
+        "detected_suffix": null,
+        "successful": false
+      },
+      {
+        "original": "Desalting And Buffer Exchange Market Size Report, 2030",
+        "extracted_topic": "2030",
+        "detected_prefix": "Desalting And Buffer Exchange Market Size Report,",
+        "detected_suffix": null,
+        "successful": false
+      }
+    ]
+  },
+  "market_term_analysis": {
+    "standard_market": {
+      "count": 19533,
+      "examples": [
+        "Antimicrobial Medical Textiles Market, Industry Report, 2030",
+        "Automotive Steel Wheels Market Size & Share Report, 2030",
+        "APAC & Middle East Personal Protective Equipment Market Report, 2030",
+        "Aerostructure Materials Market Size & Share Report, 2030",
+        "Ammunition Market Size, Share And Growth Report, 2030"
+      ]
+    },
+    "market_for": {
+      "count": 48,
+      "examples": [
+        "Carbon Black Market For Textile Fibers Growth Report, 2020",
+        "Oman Industrial Salts Market For Oil & Gas Industry Report, 2020-2027",
+        "U.S. Windows & Patio Doors Market For Single Family Homes, Report, 2030",
+        "Advanced Nanomaterials Market for Environmental Detection and Remediation",
+        "Advanced Materials Market for Nuclear Fusion Technology"
+      ]
+    },
+    "market_in": {
+      "count": 17,
+      "examples": [
+        "Big Data Market In The Oil & Gas Sector, Global Industry Report, 2025",
+        "Material Handling Equipment Market In Biomass Power Plant Report, 2030",
+        "Retail Market in Singapore - Size, Outlook & Statistics",
+        "Artificial Intelligence (AI) Market in Automotive",
+        "Aviation Fuel Terminals Market in India"
+      ]
+    },
+    "aftermarket": {
+      "count": 21,
+      "examples": [
+        "Automotive Aftermarket Glass Market Size Report, 2030",
+        "Aftermarket Fuel Additives Market",
+        "Automotive Headlight Coatings Aftermarket",
+        "Automotive Wiper Component AfterMarket",
+        "Off-highway Brake Oil Aftermarket Market"
+      ]
+    },
+    "marketplace": {
+      "count": 2,
+      "examples": [
+        "API Marketplace Market Size, Share & Growth Report, 2030",
+        "Data Marketplace Platform Market, Industry Report, 2030"
+      ]
+    },
+    "market_size": {
+      "count": 9395,
+      "examples": [
+        "Automotive Steel Wheels Market Size & Share Report, 2030",
+        "Aerostructure Materials Market Size & Share Report, 2030",
+        "Ammunition Market Size, Share And Growth Report, 2030",
+        "CNC Router Machine Market Size And Share Report, 2030",
+        "Bioceramics Market Size, Share And Growth Report, 2030"
+      ]
+    },
+    "market_share": {
+      "count": 99,
+      "examples": [
+        "Americas Enzymes Market Share Report, 2021-2028",
+        "Automotive Webbing Market Share & Growth Report, 2030",
+        "Global Automotive Paints Market Share, Size, Industry Report, 2025",
+        "Automotive Plastics for Passenger Vehicles Market Share Report, 2025",
+        "Battery Leasing & Swapping Market Share Report, 2030"
+      ]
+    }
+  },
+  "complex_pattern_analysis": {
+    "multiple_geographic_entities": {
+      "description": "Titles with multiple geographic entities",
+      "examples": [
+        {
+          "title": "APAC & Middle East Personal Protective Equipment Market Report, 2030",
+          "entities": [
+            "Middle East",
+            "APAC"
+          ]
+        },
+        {
+          "title": "Asia Pacific Aluminum Extrusion Market, Industry Report, 2030",
+          "entities": [
+            "Asia",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        },
+        {
+          "title": "Asia And Europe Steel Rebar Market, Industry Report, 2030",
+          "entities": [
+            "Europe",
+            "Asia"
+          ]
+        },
+        {
+          "title": "Asia Pacific Industrial Fasteners Market Size, Report, 2030",
+          "entities": [
+            "Asia",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        },
+        {
+          "title": "Asia Pacific Abrasives Market Size, Industry Report, 2030",
+          "entities": [
+            "Asia",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        },
+        {
+          "title": "Asia Pacific Amino Acids Market Size, Industry Report, 2030",
+          "entities": [
+            "Asia",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        },
+        {
+          "title": "Asia Pacific Aramid Fiber Market Size, Industry Report, 2030",
+          "entities": [
+            "Asia",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        },
+        {
+          "title": "Asia Pacific Air Purifier Market Size, Industry Report, 2030",
+          "entities": [
+            "Asia",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        },
+        {
+          "title": "Asia Pacific Filtration And Drying Equipment Market, Report, 2030",
+          "entities": [
+            "Asia",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        },
+        {
+          "title": "Asia Pacific Composites Market Size, Industry Report, 2030",
+          "entities": [
+            "Asia",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        }
+      ]
+    },
+    "geographic_conjunctions": {
+      "description": "Geographic entities connected with and/or/&",
+      "examples": [
+        {
+          "title": "APAC & Middle East Personal Protective Equipment Market Report, 2030",
+          "entities": [
+            "Middle East",
+            "APAC"
+          ]
+        },
+        {
+          "title": "Asia And Europe Steel Rebar Market, Industry Report, 2030",
+          "entities": [
+            "Europe",
+            "Asia"
+          ]
+        },
+        {
+          "title": "Asia Pacific, Middle East And Africa Emulsifiers Market Report, 2030",
+          "entities": [
+            "Asia",
+            "Africa",
+            "Middle East",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        },
+        {
+          "title": "Australia And New Zealand Industrial Fasteners Market Report, 2030",
+          "entities": [
+            "Australia",
+            "New Zealand"
+          ]
+        },
+        {
+          "title": "Australia & New Zealand Flooring Market Size Report, 2030",
+          "entities": [
+            "Australia",
+            "New Zealand"
+          ]
+        },
+        {
+          "title": "Europe & Asia Pacific Polypropylene Pipes Market Report, 2030",
+          "entities": [
+            "Europe",
+            "Asia",
+            "Pacific",
+            "Asia Pacific"
+          ]
+        },
+        {
+          "title": "Europe & Middle East Composites Market Size Report, 2030",
+          "entities": [
+            "Europe",
+            "Middle East"
+          ]
+        },
+        {
+          "title": "Middle East & Africa Hydrolyzed Bovine Collagen Market",
+          "entities": [
+            "Africa",
+            "Middle East"
+          ]
+        },
+        {
+          "title": "Middle East & Africa Palm Oil Market Size & Share Report",
+          "entities": [
+            "Africa",
+            "Middle East"
+          ]
+        },
+        {
+          "title": "Middle East & North Africa Disposable Gloves Market Report, 2027",
+          "entities": [
+            "Africa",
+            "Middle East",
+            "North Africa"
+          ]
+        }
+      ]
+    },
+    "market_for_geographic": {
+      "description": "Market for [geographic region] patterns",
+      "examples": [
+        {
+          "title": "Oman Industrial Salts Market For Oil & Gas Industry Report, 2020-2027",
+          "entities": []
+        },
+        {
+          "title": "Advanced Materials Market for Nuclear Fusion Technology",
+          "entities": []
+        },
+        {
+          "title": "Africa Polyvinylpyrrolidone Market for Pharmaceutical & Cosmetic Industries",
+          "entities": [
+            "Africa"
+          ]
+        },
+        {
+          "title": "Blister Packaging Market for Pharmaceutical Industry",
+          "entities": []
+        },
+        {
+          "title": "Drone Surveillance Market for Energy Industry",
+          "entities": []
+        },
+        {
+          "title": "Mineral Processing Equipment Market for Mining Industry",
+          "entities": []
+        },
+        {
+          "title": "Sodium Cyanide Market for Mining Industry",
+          "entities": []
+        },
+        {
+          "title": "Polymer Market for Waste Management Industry Report,2030",
+          "entities": []
+        }
+      ]
+    },
+    "market_in_geographic": {
+      "description": "Market in [geographic region] patterns",
+      "examples": [
+        {
+          "title": "Retail Market in Singapore - Size, Outlook & Statistics",
+          "entities": [
+            "Singapore",
+            "Singapore"
+          ]
+        },
+        {
+          "title": "Aviation Fuel Terminals Market in India",
+          "entities": [
+            "India"
+          ]
+        }
+      ]
+    },
+    "parenthetical_regions": {
+      "description": "Geographic information in parentheses",
+      "examples": [
+        {
+          "title": "Mosquito Repellent Candles (Citronella Oil, Eucalyptus Oil, Andiroba Oil, Basil Oil) Market",
+          "entities": []
+        },
+        {
+          "title": "Extreme Ultraviolet Lithography (EUVL) Market",
+          "entities": []
+        },
+        {
+          "title": "Flow Chemistry (Microreactor Systems, Continuous Stirred Tank Reactor, Plug Flow Reactor and Other Products) Market",
+          "entities": []
+        },
+        {
+          "title": "Human Papillomavirus (By Drug Class and Applications) and Cytomegalovirus (By Drug Type and Applications) Therapeutics Market",
+          "entities": []
+        },
+        {
+          "title": "Latin America (Brazil, Mexico, Argentina) Adhesives and Sealants (Acrylic, PVA, PU, Epoxy, EVA, Silicones) Market",
+          "entities": [
+            "Mexico",
+            "Brazil",
+            "Argentina",
+            "Latin America"
+          ]
+        },
+        {
+          "title": "Middle East & Africa (MEA) Mining, Material Handling & Mineral Processing Equipment Market",
+          "entities": [
+            "Africa",
+            "Middle East",
+            "MEA"
+          ]
+        },
+        {
+          "title": "Neurovascular Embolization Devices (Neurology) Market",
+          "entities": []
+        },
+        {
+          "title": "Polyurethane (PU) Dispersions (Aqueous and Solvent) Market",
+          "entities": []
+        },
+        {
+          "title": "Precision Electric Motors (Brushless) Market",
+          "entities": []
+        },
+        {
+          "title": "Remote Electronic Unit (REU) Market",
+          "entities": []
+        }
+      ]
+    }
+  },
+  "business_terminology_analysis": {
+    "size_terms": {
+      "size": 9428
+    },
+    "share_terms": {
+      "share": 6169
+    },
+    "growth_terms": {
+      "growth": 1626
+    },
+    "analysis_terms": {
+      "analysis": 592,
+      "analytics": 95
+    },
+    "forecast_terms": {
+      "forecast": 166,
+      "forecasting": 2
+    },
+    "trend_terms": {
+      "trends": 1122
+    },
+    "report_terms": {
+      "report": 11650
+    },
+    "industry_terms": {
+      "industry": 4497,
+      "industrial": 207
+    },
+    "market_descriptors": {
+      "global": 805,
+      "regional": 1,
+      "local": 2,
+      "domestic": 2,
+      "international": 1
+    }
+  },
+  "sample_titles": [
+    "Antimicrobial Medical Textiles Market, Industry Report, 2030",
+    "Automotive Steel Wheels Market Size & Share Report, 2030",
+    "APAC & Middle East Personal Protective Equipment Market Report, 2030",
+    "Aerostructure Materials Market Size & Share Report, 2030",
+    "Ammunition Market Size, Share And Growth Report, 2030",
+    "CNC Router Machine Market Size And Share Report, 2030",
+    "Bioceramics Market Size, Share And Growth Report, 2030",
+    "Cryogenic Pump Market Size & Share, Industry Report, 2030",
+    "Automotive Timing Belt Market Size And Share Report, 2030",
+    "Desalting And Buffer Exchange Market Size Report, 2030",
+    "Clean-In-Place Market Size, Share & Growth Report, 2030",
+    "Extreme Ultraviolet Lithography Market Size Report, 2030",
+    "Flexographic Printing Machine Market Size Report, 2030",
+    "Gasoline Direct Injection Market Size & Share Report, 2030",
+    "Docks Market Size, Share, Growth & Trends Report, 2030",
+    "Energy Efficient Windows Market Size & Share Report, 2030",
+    "Environmental Remediation Market Size, Share Report, 2030",
+    "Electric Submersible Pumps Market Size, Share Report 2030",
+    "Medical Alloys Market Size, Share & Growth Report, 2030",
+    "Industrial Hose Market Size, Share & Growth Report, 2030"
+  ]
+}
