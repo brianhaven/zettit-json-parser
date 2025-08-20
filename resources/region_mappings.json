@@ -1,0 +1,171 @@
+{
+    "regions": [
+        {
+            "standardized": "United States",
+            "variants": [
+                "U.S.", "US", "USA", "U.S.A.", "United States", "United States of America",
+                "(U.S.)", "(United States)", "US.", "U.S", "USA.", "U.S.A",
+                "United States.", "United States of America.",
+                "US-", "-US", "US-US", "US-EU", "U.S.-", "-U.S.", "U.S.-U.S.",
+                "U.S.-European", "U.S.-European Union"
+            ]
+        },
+        {
+            "standardized": "Europe",
+            "variants": [
+                "Europe", "European",
+                "Europe.", "European."
+            ]
+        },
+        {
+            "standardized": "European Union",
+            "variants": [
+                "EU", "European Union", "European-Union",
+                "EU.", "European-Union.", "European Union.",
+                "EU-", "-EU", "EU-EU", "US-EU", "U.S.-EU",
+                "EU Trade", "European Union Trade",
+                "European Union", "European Union Trade",
+                "European", "European Trade"
+            ]
+        },
+        {
+            "standardized": "Middle East and Africa",
+            "variants": [
+                "MEA", "Middle East & Africa", "Middle East and Africa",
+                "Middle-East and Africa", "Middle East Africa",
+                "MEA.", "Middle East & Africa.", "Middle East and Africa.",
+                "Middle-East and Africa.", "Middle East Africa.",
+                "MEA-", "-MEA", "MEA-MEA"
+            ]
+        },
+        {
+            "standardized": "Asia Pacific",
+            "variants": [
+                "APAC", "Asia-Pacific", "Asia Pacific", "Asia Pacific Region", "APAC Region",
+                "APAC.", "Asia-Pacific.", "Asia Pacific.", "Asia Pacific Region.", "APAC Region.",
+                "APAC-", "-APAC", "APAC-APAC"
+            ]
+        },
+        {
+            "standardized": "Asia Pacific and India",
+            "variants": ["Asia Pacific and India", "Asia Pacific & India"]
+        },
+        {
+            "standardized": "North America",
+            "variants": [
+                "North America", "NA", "North American", "North American Region",
+                "North America.", "NA.", "North American.", "North American Region.",
+                "NA-", "-NA", "NA-NA"
+            ]
+        },        
+        {
+            "standardized": "Latin America",
+            "variants": ["Latin America"]
+        },
+        {
+            "standardized": "Global",
+            "variants": [
+                "Global", "Worldwide", "International", "World",
+                "Global.", "Worldwide.", "International.", "World.",
+                "Global-", "-Global", "Global-Global"
+            ]
+        },
+        {
+            "standardized": "Europe, Middle East and Africa",
+            "variants": [
+                "EMEA", 
+                "Europe, Middle-East and Africa", 
+                "Europe Middle East and Africa", 
+                "Europe, Middle-East & Africa", 
+                "Europe Middle East & Africa",
+                "Europe, Middle-East and Africa (EMEA)",
+                "Europe Middle East and Africa (EMEA)",
+                "Europe, Middle-East & Africa (EMEA)",
+                "Europe Middle East & Africa (EMEA)"
+            ]
+        },
+        {
+            "standardized": "South America",
+            "variants": [
+                "South America"
+            ]
+        },
+        {
+            "standardized": "Central America",
+            "variants": ["Central America"]
+        },
+        {
+            "standardized": "Caribbean",
+            "variants": ["Caribbean"]
+        },
+        {
+            "standardized": "Americas",
+            "variants": ["Americas"]
+        },
+        {
+            "standardized": "Philippines",
+            "variants": ["Philippines"]
+        },
+        {
+            "standardized": "Brazil",
+            "variants": ["Brazil"]
+        },
+        {
+            "standardized": "Malaysia",
+            "variants": ["Malaysia"]
+        },
+        {
+            "standardized": "Saudi Arabia",
+            "variants": ["Saudi Arabia"]
+        },
+        {
+            "standardized": "United Arab Emirates",
+            "variants": [
+                "UAE", 
+                "U.A.E.", 
+                "United Arab Emirates",
+                "United Arab Emirates (UAE)",
+                "United Arab Emirates (U.A.E.)"
+            ]
+        },
+        {
+            "standardized": "Africa",
+            "variants": ["Africa"]
+        },
+        {
+            "standardized": "Middle East",
+            "variants": ["Middle East", "Middle-East"]
+        },
+        {
+            "standardized": "Southern Europe and Middle East",
+            "variants": ["Southern Europe & Middle East", "Southern Europe And Middle East"]
+        },
+        {
+            "standardized": "South East Asia",
+            "variants": ["South East Asia", "South-East Asia", "South East Asia (SEA)", 
+            "South-East Asia (SEA)", "Southeast Asia", "Southeast Asia (SEA)"]
+        },
+        {
+            "standardized": "Asia",
+            "variants": ["Asia"]
+        },
+        {
+            "standardized": "East Asia",
+            "variants": ["East Asia", "East-Asia", "East Asia (EA)", 
+            "East-Asia (EA)", "East Asia (East Asia)", "East-Asia (East Asia)"]
+        },
+        {
+            "standardized": "Oceania",
+            "variants": ["Oceania"]
+        },
+        {
+            "standardized": "Association of Southeast Asian Nations",
+            "variants": [
+                "ASEAN", 
+                "Association of Southeast Asian Nations",
+                "Association of Southeast Asian Nations (ASEAN)",
+                "Association of Southeast Asian Nations (ASEAN)"
+            ]
+        }
+    ]
+} 

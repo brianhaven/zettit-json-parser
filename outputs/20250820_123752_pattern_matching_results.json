@@ -1,0 +1,1935 @@
+{
+  "experiment_info": {
+    "timestamp_pdt": "2025-08-20 12:37:52 PDT",
+    "timestamp_utc": "2025-08-20 19:37:52 UTC",
+    "method": "pattern_matching",
+    "total_patterns": 56,
+    "total_titles": 500
+  },
+  "results": {
+    "method": "pattern_matching",
+    "total_titles": 500,
+    "total_patterns": 56,
+    "detections": {
+      "North America": {
+        "canonical_term": "North America",
+        "aliases": [
+          "NA",
+          "North American",
+          "North American Region"
+        ],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "South America": {
+        "canonical_term": "South America",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Latin America": {
+        "canonical_term": "Latin America",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Middle East": {
+        "canonical_term": "Middle East",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [
+          "APAC & Middle East Personal Protective Equipment Market Report, 2030",
+          "Asia Pacific, Middle East And Africa Emulsifiers Market Report, 2030"
+        ],
+        "total_detections": 2
+      },
+      "Asia Pacific": {
+        "canonical_term": "Asia Pacific",
+        "aliases": [
+          "APAC",
+          "Asia Pacific Region",
+          "APAC Region"
+        ],
+        "priority": 1,
+        "titles_detected": [
+          "Asia Pacific Kaolin Market Size, Share, Industry Report 2030",
+          "Asia Pacific Amino Acids Market Size, Industry Report, 2030",
+          "Asia Pacific Earphones And Headphones Market, Report 2030",
+          "Asia Pacific Heat Pump Market Size, Industry Report, 2030",
+          "Asia Pacific Medical Injection Molding Market, Report, 2030",
+          "Asia Pacific Filtration And Drying Equipment Market, Report, 2030",
+          "Asia Pacific Gas Turbine Market Size, Industry Report, 2030",
+          "Asia Pacific Hydrogen Energy Storage Market, Industry Report, 2030",
+          "Asia Pacific Food Grade Carbon Dioxide Market Report, 2030",
+          "Asia Pacific Oleochemicals Market Size, Share, Report 2030",
+          "Asia Pacific Air Purifier Market Size, Industry Report, 2030",
+          "Asia Pacific Reflective Materials Market Size Report, 2030",
+          "Asia Pacific Rainscreen Cladding Market Size, Report, 2030",
+          "Asia Pacific Farm Tire Market Size, Industry Report, 2030",
+          "Asia Pacific Cooling Tower Market, Industry Report, 2030",
+          "Asia Pacific Essential Oils Market Size, Industry Report 2030",
+          "APAC & Middle East Personal Protective Equipment Market Report, 2030",
+          "Asia Pacific, Middle East And Africa Emulsifiers Market Report, 2030",
+          "Asia Pacific Gypsum Board Market, Industry Report, 2030",
+          "Asia Pacific Flat Glass Market Size, Industry Report, 2030",
+          "Asia Pacific Industrial Air Filtration Market Size, Report, 2030",
+          "Asia Pacific Thermoplastic Elastomers Market, Report, 2030",
+          "Asia Pacific Disposable Gloves Market, Industry Report, 2030",
+          "Asia Pacific Collagen Market Size, Industry Report, 2030",
+          "Asia Pacific Precast Concrete Market, Industry Report, 2030",
+          "Asia Pacific Ceramic Tiles Market Size, Industry Report 2030",
+          "Asia Pacific Digital Signage Market, Industry Report, 2030",
+          "Asia Pacific Composites Market Size, Industry Report, 2030",
+          "Asia Pacific Industrial Fasteners Market Size, Report, 2030",
+          "Asia Pacific Carbon Dioxide Market, Industry Report, 2030",
+          "Asia Pacific Variable Frequency Drive Market Report, 2030",
+          "Asia Pacific Fuel Dispenser Market Size, Share Report, 2030",
+          "Asia Pacific Chemical Vapor Deposition Market, Industry Report, 2030",
+          "Asia Pacific Flooring Market Size And Share Report, 2030",
+          "APAC Food Service Equipment Market, Industry Report, 2030",
+          "Asia Pacific Pet Wearable Market Size, Industry Report 2030",
+          "Asia Pacific Thermal Paper Market, Industry Report, 2030",
+          "Asia Pacific Aluminum Extrusion Market, Industry Report, 2030",
+          "APAC Micro LED Market Size, Share, Industry Report, 2030",
+          "Asia Pacific Abrasives Market Size, Industry Report, 2030",
+          "Asia Pacific Power Tools & Hand Tools Market Report, 2030",
+          "Asia Pacific Aramid Fiber Market Size, Industry Report, 2030",
+          "Asia Pacific Filters Market Size, Share, Industry Report 2030"
+        ],
+        "total_detections": 43
+      },
+      "Southeast Asia": {
+        "canonical_term": "Southeast Asia",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "South Asia": {
+        "canonical_term": "South Asia",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "East Asia": {
+        "canonical_term": "East Asia",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Central Asia": {
+        "canonical_term": "Central Asia",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Eastern Europe": {
+        "canonical_term": "Eastern Europe",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Western Europe": {
+        "canonical_term": "Western Europe",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Central Europe": {
+        "canonical_term": "Central Europe",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "North Africa": {
+        "canonical_term": "North Africa",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Sub-Saharan Africa": {
+        "canonical_term": "Sub-Saharan Africa",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "West Africa": {
+        "canonical_term": "West Africa",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "East Africa": {
+        "canonical_term": "East Africa",
+        "aliases": [],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "EMEA": {
+        "canonical_term": "EMEA",
+        "aliases": [],
+        "priority": 2,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "MEA": {
+        "canonical_term": "MEA",
+        "aliases": [
+          "Middle East and Africa",
+          "Middle East & Africa",
+          "Middle East Africa"
+        ],
+        "priority": 2,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "ASEAN": {
+        "canonical_term": "ASEAN",
+        "aliases": [
+          "Association of Southeast Asian Nations"
+        ],
+        "priority": 2,
+        "titles_detected": [
+          "ASEAN Ceramics Market Size & Share, Report, 2030"
+        ],
+        "total_detections": 1
+      },
+      "GCC": {
+        "canonical_term": "GCC",
+        "aliases": [],
+        "priority": 2,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "MENA": {
+        "canonical_term": "MENA",
+        "aliases": [],
+        "priority": 2,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Europe": {
+        "canonical_term": "Europe",
+        "aliases": [
+          "European"
+        ],
+        "priority": 3,
+        "titles_detected": [
+          "Americas And Europe Polymer Coated Fabrics Market, 2030",
+          "Asia And Europe Steel Rebar Market, Industry Report, 2030"
+        ],
+        "total_detections": 2
+      },
+      "Asia": {
+        "canonical_term": "Asia",
+        "aliases": [],
+        "priority": 3,
+        "titles_detected": [
+          "Asia And Europe Steel Rebar Market, Industry Report, 2030"
+        ],
+        "total_detections": 1
+      },
+      "Africa": {
+        "canonical_term": "Africa",
+        "aliases": [],
+        "priority": 3,
+        "titles_detected": [
+          "Africa Diesel Generator Market Size, Share Report, 2030",
+          "Asia Pacific, Middle East And Africa Emulsifiers Market Report, 2030",
+          "Africa Nonwoven Fabrics Market Size, Industry Report, 2030",
+          "Africa Mobile Air Compressor Market Size Report, 2030",
+          "Africa Dewatering Pump Market Size & Share Report, 2030",
+          "Africa Stationary Electric Compressor Market, Report, 2030"
+        ],
+        "total_detections": 6
+      },
+      "Pacific": {
+        "canonical_term": "Pacific",
+        "aliases": [],
+        "priority": 3,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "America": {
+        "canonical_term": "America",
+        "aliases": [],
+        "priority": 3,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "United States": {
+        "canonical_term": "United States",
+        "aliases": [
+          "U.S.",
+          "US",
+          "USA",
+          "U.S.A.",
+          "United States of America"
+        ],
+        "priority": 4,
+        "titles_detected": [
+          "U.S. Hand Protection Equipment Market Size, Report, 2030"
+        ],
+        "total_detections": 1
+      },
+      "United Kingdom": {
+        "canonical_term": "United Kingdom",
+        "aliases": [
+          "U.K.",
+          "UK",
+          "Britain",
+          "Great Britain"
+        ],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "China": {
+        "canonical_term": "China",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "India": {
+        "canonical_term": "India",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Japan": {
+        "canonical_term": "Japan",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Germany": {
+        "canonical_term": "Germany",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "France": {
+        "canonical_term": "France",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Italy": {
+        "canonical_term": "Italy",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Canada": {
+        "canonical_term": "Canada",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Australia": {
+        "canonical_term": "Australia",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [
+          "Australia & New Zealand Flooring Market Size Report, 2030",
+          "Australia Abrasives Market Size, Industry Report, 2020-2027",
+          "Australia Steel Rebar Market Size, Industry Report, 2030",
+          "Australia And New Zealand Industrial Fasteners Market Report, 2030"
+        ],
+        "total_detections": 4
+      },
+      "Brazil": {
+        "canonical_term": "Brazil",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [
+          "Brazil Palm Oil Market Size & Share, Industry Report, 2030"
+        ],
+        "total_detections": 1
+      },
+      "Mexico": {
+        "canonical_term": "Mexico",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Saudi Arabia": {
+        "canonical_term": "Saudi Arabia",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "UAE": {
+        "canonical_term": "UAE",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Singapore": {
+        "canonical_term": "Singapore",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "South Korea": {
+        "canonical_term": "South Korea",
+        "aliases": [
+          "Korea"
+        ],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Indonesia": {
+        "canonical_term": "Indonesia",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Global": {
+        "canonical_term": "Global",
+        "aliases": [
+          "Worldwide",
+          "International",
+          "World"
+        ],
+        "priority": 3,
+        "titles_detected": [
+          "Global Aviation Security Market Size & Trends, Industry Report, 2025",
+          "Busbar Market Size, Share, Global Industry Analysis Report, 2025",
+          "Advanced Energy Market Size & Trends, Global Industry Report, 2025",
+          "Global Biogas Market Size, Share & Growth Report, 2030",
+          "Global Argan Oil Market Size & Trends Analysis Report, 2030",
+          "Animal Feed Micronutrients Market Size, Global Industry Report, 2025",
+          "Cadmium Telluride Market Size, Share, Global Industry Report, 2025",
+          "Global Base Metals Market Size, Industry Report, 2019-2025",
+          "Blowing Agents Market Size, Share, Global Industry Report, 2019-2025",
+          "Global Automotive Composite Market Size Report, 2020-2027",
+          "Bio-Based PVC Market Size, Share, Global Industry Report, 2019-2025",
+          "Ambient Energy Harvester Market Size, Global Industry Report, 2025",
+          "Acoustic Wave Sensor Market Size, Global Industry Report, 2025",
+          "Aerospace Composites Market Size, Share, Global Industry Report 2025",
+          "Animal Nutrition Chemicals Market Size, Global Industry Report, 2025",
+          "Breathable Membranes Market Size, Global Industry Report, 2019-2025",
+          "Ballistic Protection Market Size, Share, Global Industry Report, 2025",
+          "Global Base Metal Mining Market Size & Trends Report, 2030",
+          "Global Agro Textile Market Size, Share & Growth Report, 2030",
+          "Amaranth Oil Market Size, Share, Trends, Global Industry Report, 2025",
+          "Global Automotive Paints Market Share, Size, Industry Report, 2025",
+          "Battery Control Technology Market Size, Global Industry Report, 2025",
+          "Anti Glare Glass Market Size & Share, Global Industry Report, 2025",
+          "3D NAND Flash Memory Market Size, Global Industry Report, 2025",
+          "Big Data Market In The Oil & Gas Sector, Global Industry Report, 2025",
+          "Anti Crease Agent Market Size, Share, Global Industry Report, 2025",
+          "Global Acids & Nutrient In Animal Nutrition Market Size Report, 2025",
+          "Benzoe Siam Market Size, Share, Trends, Global Industry Report, 2025",
+          "Global Access Control & Authentication Market, Industry Report, 2025",
+          "Bio Polyols Market Size, Share, Trends, Global Industry Report, 2025",
+          "Beverage Ingredients Market Size, Share, Global Industry Report, 2025",
+          "Automotive Camera Market Size & Share, Global Industry Report, 2025",
+          "Global Biorefinery Market Size, Share, Trends, Industry Report, 2025",
+          "3D Sensor Market Size & Share, Global Industry Growth Report, 2025",
+          "Alcohol Enzymes Market Size, Global Industry Trends Report, 2025",
+          "Actuators Market Size, Share, Global Industry Trends Report, 2025",
+          "Argon Market Size, Share, Trends, Global Industry Growth Report, 2025",
+          "Bio-Based Adipic Acid Market Size, Global Industry Growth Report 2025",
+          "Benzyl Alcohol Market Size & Share, Global Industry Report, 2019-2025",
+          "Global Agricultural Fumigants Market Size, Trends Report, 2025",
+          "Beryllium Market Size, Value, Global Industry Trends Report, 2025",
+          "Aerosol Refrigerants Market Size, Share, Global Industry Report, 2025",
+          "Alcohol Excipients Market Size, Share, Global Industry Report, 2025",
+          "Airbag Market Size, Share & Trends, Global Industry Report, 2025",
+          "Bio-Based Ethylene Market Size, Growth, Global Industry Report, 2025",
+          "Bioethanol Market Size, Growth, Global Industry Analysis Report, 2025",
+          "Algae Oil Market Size, Share, Global Industry Analysis Report, 2025",
+          "Global Bio-based Itaconic Acid Market Size Report, 2019-2025",
+          "Armor Materials Market Size, Share, Global Industry Report, 2019-2025",
+          "Beauty Devices Market Size, Share, Global Industry Report, 2019-2025",
+          "Bio-energy Market Size, Global Industry Report, 2019-2025",
+          "Global Betaine Market Size, Share, Trends, Industry Report, 2025",
+          "Automotive Biofuels Market Size, Share, Global Industry Report, 2025",
+          "Biogas Generator Market Size, Share, Global Industry Report, 2022"
+        ],
+        "total_detections": 54
+      },
+      "European Union": {
+        "canonical_term": "European Union",
+        "aliases": [
+          "EU",
+          "EU Trade",
+          "European Union Trade",
+          "European",
+          "European Trade"
+        ],
+        "priority": 3,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Asia Pacific and India": {
+        "canonical_term": "Asia Pacific and India",
+        "aliases": [
+          "Asia Pacific & India"
+        ],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Europe, Middle East and Africa": {
+        "canonical_term": "Europe, Middle East and Africa",
+        "aliases": [
+          "EMEA",
+          "Europe Middle East and Africa",
+          "Europe Middle East & Africa"
+        ],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Central America": {
+        "canonical_term": "Central America",
+        "aliases": [],
+        "priority": 2,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Caribbean": {
+        "canonical_term": "Caribbean",
+        "aliases": [],
+        "priority": 3,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Americas": {
+        "canonical_term": "Americas",
+        "aliases": [],
+        "priority": 3,
+        "titles_detected": [
+          "Americas Coating Additives Market Size, Share Report, 2024",
+          "Americas Enzymes Market Share Report, 2021-2028",
+          "Americas Pipe Insulation Market Size & Share Report, 2030",
+          "Americas High-Purity Limestone Market Trends, Industry Report, 2025",
+          "Americas And Europe Polymer Coated Fabrics Market, 2030",
+          "Americas Stone Paper Market Size, Industry Report, 2030",
+          "Americas Reusable Gloves Market Size & Share Report 2030",
+          "Americas Structural Insulated Panel Market Report, 2021-2028"
+        ],
+        "total_detections": 8
+      },
+      "Philippines": {
+        "canonical_term": "Philippines",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Malaysia": {
+        "canonical_term": "Malaysia",
+        "aliases": [],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "United Arab Emirates": {
+        "canonical_term": "United Arab Emirates",
+        "aliases": [
+          "UAE",
+          "U.A.E."
+        ],
+        "priority": 4,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Southern Europe and Middle East": {
+        "canonical_term": "Southern Europe and Middle East",
+        "aliases": [
+          "Southern Europe & Middle East",
+          "Southern Europe And Middle East"
+        ],
+        "priority": 1,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "South East Asia": {
+        "canonical_term": "South East Asia",
+        "aliases": [
+          "Southeast Asia"
+        ],
+        "priority": 2,
+        "titles_detected": [],
+        "total_detections": 0
+      },
+      "Oceania": {
+        "canonical_term": "Oceania",
+        "aliases": [],
+        "priority": 3,
+        "titles_detected": [],
+        "total_detections": 0
+      }
+    },
+    "titles_with_regions": {
+      "APAC & Middle East Personal Protective Equipment Market Report, 2030": {
+        "regions": [
+          "Middle East",
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Middle East",
+          "APAC"
+        ]
+      },
+      "U.S. Hand Protection Equipment Market Size, Report, 2030": {
+        "regions": [
+          "United States"
+        ],
+        "extracted_regions": [
+          "U.S."
+        ]
+      },
+      "Global Access Control & Authentication Market, Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Acids & Nutrient In Animal Nutrition Market Size Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "3D Sensor Market Size & Share, Global Industry Growth Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "3D NAND Flash Memory Market Size, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Acoustic Wave Sensor Market Size, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Actuators Market Size, Share, Global Industry Trends Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Advanced Energy Market Size & Trends, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Aerospace Composites Market Size, Share, Global Industry Report 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Aerosol Refrigerants Market Size, Share, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Africa Dewatering Pump Market Size & Share Report, 2030": {
+        "regions": [
+          "Africa"
+        ],
+        "extracted_regions": [
+          "Africa"
+        ]
+      },
+      "Africa Diesel Generator Market Size, Share Report, 2030": {
+        "regions": [
+          "Africa"
+        ],
+        "extracted_regions": [
+          "Africa"
+        ]
+      },
+      "Africa Nonwoven Fabrics Market Size, Industry Report, 2030": {
+        "regions": [
+          "Africa"
+        ],
+        "extracted_regions": [
+          "Africa"
+        ]
+      },
+      "Africa Mobile Air Compressor Market Size Report, 2030": {
+        "regions": [
+          "Africa"
+        ],
+        "extracted_regions": [
+          "Africa"
+        ]
+      },
+      "Global Agro Textile Market Size, Share & Growth Report, 2030": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Agricultural Fumigants Market Size, Trends Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Africa Stationary Electric Compressor Market, Report, 2030": {
+        "regions": [
+          "Africa"
+        ],
+        "extracted_regions": [
+          "Africa"
+        ]
+      },
+      "Airbag Market Size, Share & Trends, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Alcohol Enzymes Market Size, Global Industry Trends Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Algae Oil Market Size, Share, Global Industry Analysis Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Alcohol Excipients Market Size, Share, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Americas Pipe Insulation Market Size & Share Report, 2030": {
+        "regions": [
+          "Americas"
+        ],
+        "extracted_regions": [
+          "Americas"
+        ]
+      },
+      "Americas Structural Insulated Panel Market Report, 2021-2028": {
+        "regions": [
+          "Americas"
+        ],
+        "extracted_regions": [
+          "Americas"
+        ]
+      },
+      "Americas Reusable Gloves Market Size & Share Report 2030": {
+        "regions": [
+          "Americas"
+        ],
+        "extracted_regions": [
+          "Americas"
+        ]
+      },
+      "Amaranth Oil Market Size, Share, Trends, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Americas And Europe Polymer Coated Fabrics Market, 2030": {
+        "regions": [
+          "Europe",
+          "Americas"
+        ],
+        "extracted_regions": [
+          "Europe",
+          "Americas"
+        ]
+      },
+      "Ambient Energy Harvester Market Size, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Americas High-Purity Limestone Market Trends, Industry Report, 2025": {
+        "regions": [
+          "Americas"
+        ],
+        "extracted_regions": [
+          "Americas"
+        ]
+      },
+      "Americas Stone Paper Market Size, Industry Report, 2030": {
+        "regions": [
+          "Americas"
+        ],
+        "extracted_regions": [
+          "Americas"
+        ]
+      },
+      "Americas Coating Additives Market Size, Share Report, 2024": {
+        "regions": [
+          "Americas"
+        ],
+        "extracted_regions": [
+          "Americas"
+        ]
+      },
+      "Americas Enzymes Market Share Report, 2021-2028": {
+        "regions": [
+          "Americas"
+        ],
+        "extracted_regions": [
+          "Americas"
+        ]
+      },
+      "Animal Nutrition Chemicals Market Size, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Animal Feed Micronutrients Market Size, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Anti Glare Glass Market Size & Share, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Anti Crease Agent Market Size, Share, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "APAC Micro LED Market Size, Share, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "APAC"
+        ]
+      },
+      "Global Argan Oil Market Size & Trends Analysis Report, 2030": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Asia Pacific Aluminum Extrusion Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Armor Materials Market Size, Share, Global Industry Report, 2019-2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Asia And Europe Steel Rebar Market, Industry Report, 2030": {
+        "regions": [
+          "Europe",
+          "Asia"
+        ],
+        "extracted_regions": [
+          "Europe",
+          "Asia"
+        ]
+      },
+      "Asia Pacific Industrial Fasteners Market Size, Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "ASEAN Ceramics Market Size & Share, Report, 2030": {
+        "regions": [
+          "ASEAN"
+        ],
+        "extracted_regions": [
+          "ASEAN"
+        ]
+      },
+      "Asia Pacific Abrasives Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Amino Acids Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Aramid Fiber Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Argon Market Size, Share, Trends, Global Industry Growth Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Asia Pacific Air Purifier Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Filtration And Drying Equipment Market, Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Composites Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Chemical Vapor Deposition Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Collagen Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Earphones And Headphones Market, Report 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Carbon Dioxide Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Filters Market Size, Share, Industry Report 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Farm Tire Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Flooring Market Size And Share Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Digital Signage Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Ceramic Tiles Market Size, Industry Report 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Cooling Tower Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Essential Oils Market Size, Industry Report 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Disposable Gloves Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Flat Glass Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Fuel Dispenser Market Size, Share Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Oleochemicals Market Size, Share, Report 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Food Grade Carbon Dioxide Market Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Heat Pump Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Rainscreen Cladding Market Size, Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "APAC Food Service Equipment Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "APAC"
+        ]
+      },
+      "Asia Pacific Hydrogen Energy Storage Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Thermoplastic Elastomers Market, Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Gas Turbine Market Size, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Kaolin Market Size, Share, Industry Report 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific, Middle East And Africa Emulsifiers Market Report, 2030": {
+        "regions": [
+          "Middle East",
+          "Asia Pacific",
+          "Africa"
+        ],
+        "extracted_regions": [
+          "Middle East",
+          "Asia Pacific",
+          "Africa"
+        ]
+      },
+      "Asia Pacific Industrial Air Filtration Market Size, Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Gypsum Board Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Pet Wearable Market Size, Industry Report 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Variable Frequency Drive Market Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Medical Injection Molding Market, Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Thermal Paper Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Reflective Materials Market Size Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Power Tools & Hand Tools Market Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Asia Pacific Precast Concrete Market, Industry Report, 2030": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ]
+      },
+      "Australia And New Zealand Industrial Fasteners Market Report, 2030": {
+        "regions": [
+          "Australia"
+        ],
+        "extracted_regions": [
+          "Australia"
+        ]
+      },
+      "Australia & New Zealand Flooring Market Size Report, 2030": {
+        "regions": [
+          "Australia"
+        ],
+        "extracted_regions": [
+          "Australia"
+        ]
+      },
+      "Australia Abrasives Market Size, Industry Report, 2020-2027": {
+        "regions": [
+          "Australia"
+        ],
+        "extracted_regions": [
+          "Australia"
+        ]
+      },
+      "Australia Steel Rebar Market Size, Industry Report, 2030": {
+        "regions": [
+          "Australia"
+        ],
+        "extracted_regions": [
+          "Australia"
+        ]
+      },
+      "Automotive Biofuels Market Size, Share, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Automotive Camera Market Size & Share, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Automotive Composite Market Size Report, 2020-2027": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Automotive Paints Market Share, Size, Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Aviation Security Market Size & Trends, Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Ballistic Protection Market Size, Share, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Base Metals Market Size, Industry Report, 2019-2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Base Metal Mining Market Size & Trends Report, 2030": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Battery Control Technology Market Size, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Benzoe Siam Market Size, Share, Trends, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Benzyl Alcohol Market Size & Share, Global Industry Report, 2019-2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Beauty Devices Market Size, Share, Global Industry Report, 2019-2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Bio-Based Adipic Acid Market Size, Global Industry Growth Report 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Betaine Market Size, Share, Trends, Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Bio-based Itaconic Acid Market Size Report, 2019-2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Bio-Based Ethylene Market Size, Growth, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Beryllium Market Size, Value, Global Industry Trends Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Big Data Market In The Oil & Gas Sector, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Beverage Ingredients Market Size, Share, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Bio Polyols Market Size, Share, Trends, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Bio-Based PVC Market Size, Share, Global Industry Report, 2019-2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Bio-energy Market Size, Global Industry Report, 2019-2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Bioethanol Market Size, Growth, Global Industry Analysis Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Biogas Generator Market Size, Share, Global Industry Report, 2022": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Biogas Market Size, Share & Growth Report, 2030": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Global Biorefinery Market Size, Share, Trends, Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Blowing Agents Market Size, Share, Global Industry Report, 2019-2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Breathable Membranes Market Size, Global Industry Report, 2019-2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Brazil Palm Oil Market Size & Share, Industry Report, 2030": {
+        "regions": [
+          "Brazil"
+        ],
+        "extracted_regions": [
+          "Brazil"
+        ]
+      },
+      "Busbar Market Size, Share, Global Industry Analysis Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      },
+      "Cadmium Telluride Market Size, Share, Global Industry Report, 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ]
+      }
+    },
+    "titles_without_regions": [
+      "Antimicrobial Medical Textiles Market, Industry Report, 2030",
+      "Automotive Steel Wheels Market Size & Share Report, 2030",
+      "Aerostructure Materials Market Size & Share Report, 2030",
+      "Ammunition Market Size, Share And Growth Report, 2030",
+      "CNC Router Machine Market Size And Share Report, 2030",
+      "Bioceramics Market Size, Share And Growth Report, 2030",
+      "Cryogenic Pump Market Size & Share, Industry Report, 2030",
+      "Automotive Timing Belt Market Size And Share Report, 2030",
+      "Desalting And Buffer Exchange Market Size Report, 2030",
+      "Clean-In-Place Market Size, Share & Growth Report, 2030",
+      "Extreme Ultraviolet Lithography Market Size Report, 2030",
+      "Flexographic Printing Machine Market Size Report, 2030",
+      "Gasoline Direct Injection Market Size & Share Report, 2030",
+      "Docks Market Size, Share, Growth & Trends Report, 2030",
+      "Energy Efficient Windows Market Size & Share Report, 2030",
+      "Environmental Remediation Market Size, Share Report, 2030",
+      "Electric Submersible Pumps Market Size, Share Report 2030",
+      "Medical Alloys Market Size, Share & Growth Report, 2030",
+      "Industrial Hose Market Size, Share & Growth Report, 2030",
+      "Linear Slides Market Size, Share & Growth Report, 2030",
+      "Glass Fiber Reinforced Gypsum Market Size Report, 2030",
+      "KSA Cement Market Size, Share And Trends, Report, 2030",
+      "Industrial Vending Machine Market, Industry Report, 2030",
+      "HDPE And LLDPE Geomembrane Market Size Report, 2030",
+      "Laser Debonding Equipment Market, Industry Report, 2030",
+      "Metal Aerosol Can Market Size, Share & Trends Report, 2030",
+      "Nanocomposites Market Size, Share & Trends Report, 2030",
+      "Metal Keystock Market Size, Share & Growth Report, 2030",
+      "Metrology Equipment Market Size, Industry Report, 2030",
+      "Metal Feeler Gauge Market Size And Share Report, 2030",
+      "Pervious Pavement Market Size, Share, Growth Report, 2030",
+      "Nanoclay Reinforcement Market Size & Share Report, 2030",
+      "Microspheres Market Size, Share And Growth Report, 2030",
+      "Piston Market Size, Share & Trends Analysis Report, 2030",
+      "Torque Vectoring Market Size, Share & Growth Report, 2030",
+      "Power Quality Measurement Equipment Market Report, 2030",
+      "Clutch Market",
+      "Soil Testing Equipment Market Size And Share Report, 2030",
+      "Refrigerated Air Dryer Market Size & Share Report, 2030",
+      "Water Quality Sensor Market Size And Share Report, 2030",
+      "Torque Converter Market Size, Share & Growth Report, 2030",
+      "Automotive Fuel Rail Market",
+      "Automotive VVT System Market",
+      "Thin Wafers Market",
+      "Wheelchair Accessible Vehicle Converters Market",
+      "Coated Casing Market",
+      "Coding and Marking System Market",
+      "Automotive Lubricants After Market",
+      "Nephrology and Urology Devices Market",
+      "Needle Coke Market Insights, 2031",
+      "Car Electrical Products Market Analysis, Outlook 2031",
+      "Differential Market",
+      "Durable Medical Equipment Market",
+      "Warranty Management Software Market",
+      "Online Education Market Insights, 2021-2031",
+      "Automotive Flywheel Market",
+      "Patient Handling Equipment Market",
+      "Field Service Management Market Insights, 2021-2031",
+      "Robotic Wheelchairs Market",
+      "1,3 Propanediol Market Size, Share & Trends Report, 2030",
+      "Magnetic Ink Character Recognition (MICR) Devices Market",
+      "Pulsed Laser Deposition Systems Market",
+      "Rubber Gloves Market",
+      "3D Printing Metal Market Size & Share, Industry Report 2030",
+      "3D Printing Ceramics Market Size, Industry Report, 2030",
+      "3D Printing Filament Market Size, Industry Report, 2027",
+      "Advanced Battery Energy Storage System Market, Industry Report 2025",
+      "Advanced Carbon Materials Market Size, Share Report, 2030",
+      "Abrasives Market Size, Share & Growth Analysis Report 2030",
+      "Advanced Ceramic Additives Market Size, Share Report 2030",
+      "3D Display Market Size, Share And Growth Report, 2030",
+      "Abaca Fiber Market Size And Share, Industry Report, 2030",
+      "Absorbent Glass Mat Battery Market, Industry Report 2030",
+      "Acoustic Insulation Market Size, Share & Trends Report 2030",
+      "2D Gesture Recognition Market Size, Industry Analysis Report, 2022",
+      "12-Aminododecanoic Acid Market Size & Trends Report, 2030",
+      "360-Degree Camera Market Size And Share Report 2030",
+      "3D Metrology Market Size, Share & Trends Report, 2030",
+      "Active Insulation Market Size & Share, Industry Report, 2030",
+      "3D Projector Market Size, Share And Growth Report, 2030",
+      "3D Rendering Market Size, Share & Growth Report, 2030",
+      "3D Printing Materials Market Size, Industry Report, 2030",
+      "Activated Alumina Market Size, Share & Growth Report, 2030",
+      "3D Semiconductor Packaging Market Size, Share, Industry Report 2025",
+      "4K TV Market Size, Share, Trends & Growth Report, 2030",
+      "Acrylic Adhesives Market Size, Share, Industry Trend Report 2018-2025",
+      "Less Than Or Equal To 5 mm² Pressure Sensor Market Report, 2030",
+      "Abaca Pulp Market Size, Share And Trends Report, 2030",
+      "2D Barcode Reader Market Size, Industry Report, 2030",
+      "5-Hydroxymethylfurfural Market Size & Growth Report, 2030",
+      "9-Decanoic Acid Methyl Ester Market, Industry Report, 2030",
+      "Advanced Battery Market Size, Share & Trends Report, 2030",
+      "Advanced Ceramics Market Size, Share, Growth Report 2030",
+      "Advanced Composites Market Size And Share Report, 2030",
+      "Advanced Energy Storage Systems Market Size Report, 2030",
+      "Advanced Gas Generators Market Size, Share, Industry Report, 2025",
+      "Advanced Functional Material Market Size, Share, Industry Report 2025",
+      "Advanced Phase Change Materials Market Size Report, 2030",
+      "Advanced Polymer Composites Market, Industry Report 2030",
+      "Advanced Materials In Electrical Vehicle Charging Infrastructure Market Report, 2028",
+      "Advanced Glass Market Size, Share Analysis [2023 Report]",
+      "Advanced Structural Ceramics Market Size, Industry Trend Report 2025",
+      "Advanced Protective Gear & Armor Market Size, Industry Report, 2025",
+      "Advanced Utility Boiler Market Size & Share Report, 2019-2025",
+      "Advanced Process Control Market Size & Share Report 2030",
+      "Aerosol Actuators Market Size & Share, Industry Report 2030",
+      "Aerosol Propellants Market Size, Share & Trends Report, 2030",
+      "Aerogel Market Size, Share & Growth Analysis Report, 2030",
+      "Aerosol Caps Market Size & Share, Industry Report, 2030",
+      "Aerospace And Defense MRO Market, Industry Report, 2030",
+      "Aerospace Adhesives & Sealants Market Size Report, 2030",
+      "Aerosol Valves Market Size, Share And Trends Report, 2030",
+      "Aerospace and Defense (A&D) Fuel Market Size, Industry Report, 2025",
+      "Aerospace & Defense C-Class Parts Market Size Report, 2030",
+      "Aerospace And Defense Materials Market Size Report, 2030",
+      "Aerospace Forging Market Size, Share, Industry Report 2030",
+      "Aerospace Floor Panels Market Size & Share Report, 2030",
+      "Aerospace Insulation Market Size, Industry Report, 2027",
+      "Aerospace Parts Manufacturing Market Size Report, 2030",
+      "Air Compressor Market Size, Share And Growth Report, 2030",
+      "Agricultural Inoculants Market Size And Share [2023 Report]",
+      "Air Conditioning Systems Market Size & Share Report, 2030",
+      "Agricultural Enzymes Market Size And Share Report, 2030",
+      "Aggregates Market Growth, Industry Report, 2020-2027",
+      "Air & Gas Compressor Market Size, Industry Analysis Report, 2025",
+      "Aggregate Base Course Market Size, Industry Report, 2030",
+      "AI In Energy Market Size, Share And Growth Report, 2030",
+      "Agrochemicals Testing And Inspection Service Market Report, 2028",
+      "Agriculture Sensor Market Size, Share, Industry Report, 2030",
+      "Air Deflector Market Size, Share And Growth Report, 2030",
+      "Air Cooled Heat Exchanger Market Size, Industry Report 2030",
+      "Air Core Drilling Market Size & Share, Industry Report, 2030",
+      "Air Purifier Market Size, Share, Trends Analysis Report, 2030",
+      "Air Separation Plant Market Size, Industry Report, 2030",
+      "Air Insulated Switchgear Market Size & Share Report, 2030",
+      "Air Quality Monitoring Equipment Market Size Report, 2030",
+      "Air Handling Units Market Size, Share & Trends Report, 2030",
+      "Air Electrode Battery Market Size And Share Report, 2030",
+      "Airborne Radars Market Size & Share, Industry Report, 2030",
+      "Air Pollution Control Systems Market Size, Industry Report, 2020-2025",
+      "Air Freshener Market Size, Share, Growth, Industry Trends Report 2025",
+      "Aircraft Tire Market Size, Share, And Growth Report, 2030",
+      "Airflow And Zone Controls Equipment Market Report, 2030",
+      "Aircraft Fairings Market Size & Share, Industry Report, 2030",
+      "Aircraft Sensors Market Size, Share & Growth Report, 2030",
+      "Aircraft Mounts Market Size, Share & Growth Report, 2020-2027",
+      "Aircraft Seating Materials Market Size & Trends Report, 2030",
+      "Airport Security Market Size & Share, Industry Report, 2030",
+      "Albumin Market Size, Share & Trends Analysis Report, 2030",
+      "Alkaline Fuel Cells Market Size & Share, Industry Growth Report, 2025",
+      "Alpaca Fiber Market Size & Share, Industry Analysis Report, 2019-2025",
+      "Alternative Fuels Market Size & Share, Industry Report 2030",
+      "Alfalfa Market Size, Share & Growth Analysis Report, 2030",
+      "Alkaline Water Electrolysis Market Size & Share Report, 2030",
+      "All Weather Tire Market Size And Share, Industry Report, 2030",
+      "Alumina Trihydrate Market Size, Share, Growth Report, 2030",
+      "Alloy Steel Market Size, Share, Growth, Industry Report 2030",
+      "Algae Biofuel Market Size, Share & Trends Report, 2030",
+      "Aluminum Alloys Market Size, Share & Trends Report, 2030",
+      "Aluminum Casting Market Size, Share, Industry Report, 2030",
+      "Aluminum Extrusion Market Size And Share Report, 2030",
+      "Aluminum Profiles And Accessories Market Size Report, 2030",
+      "Aluminum Flat Products Market Size & Share Report, 2020-2027",
+      "Aluminum Forging Market Size, Share & Growth Report 2030",
+      "Aluminum Composite Panels Market, Industry Report, 2030",
+      "Aluminum Foil Market Size, Share & Trends Report, 2030",
+      "Aluminum Die Casting Market Size And Share Report, 2030",
+      "Aluminum Welding Market Size & Size, Industry Analysis Report, 2025",
+      "Amino Acids Market Size, Share And Growth Report, 2030",
+      "Aluminum Wire Market Size & Share, Industry Report, 2030",
+      "Amaranth Market Size & Share, Industry Analysis Report, 2019-2025",
+      "Analog & Mixed Signal Device Market Size, Industry Report, 2025",
+      "Analog Integrated Circuit Market Size & Share Report, 2025",
+      "Animal Feed Protein Ingredients Market Size, Industry Report, 2025",
+      "Animal Feed Enzymes Market Size & Share Report, 2030",
+      "Animal Feed Plant Based Protein Isolate Market Report, 2030",
+      "Anchors And Grouts Market Size, Industry Report, 2030",
+      "Animal Antimicrobials And Antibiotics Market Report, 2030",
+      "Animal Growth Promoters & Performance Enhancers Market, 2025",
+      "Animal Feed Antioxidants Market Size, Industry Report, 2022",
+      "Animal Feed Additives Market Size And Share Report, 2030",
+      "Animal Feed Market Size And Share Analysis Report, 2030",
+      "Animal Nutrition Organic Acids Market Report, 2028",
+      "Antenna Transducer And Radome Market, Industry Report, 2019-2025",
+      "Anti-Foaming Agents Market Size And Share Report, 2030",
+      "Anti-counterfeit Packaging Market Size & Share Report, 2030",
+      "Antimicrobial Glass Powder Market, Industry Report, 2030",
+      "Antimicrobial Textiles Market Size And Share Report, 2030",
+      "Antimicrobial Preservatives Market Size & Growth Report 2030",
+      "Antibacterial Glass Market Size, Share, Industry Report, 2030",
+      "Animal Parasiticides Market Size And Share [2023 Report]",
+      "Anti-fog Additives Market Size, Share & Growth Report, 2030",
+      "Antimony Market Size, Share, Growth & Trends Report, 2030",
+      "Application Specific Integrated Circuit Market Report, 2030",
+      "Aquafeed Additives Market Size, Share & Growth Report, 2030",
+      "Aquafeed Market Size, Share, Trends & Growth Report, 2030",
+      "Aramid Fiber Market Size And Share Analysis Report, 2030",
+      "Aquaculture Additives Market Size & Share, Industry Report, 2019-2025",
+      "Arbitrary Waveform Generator Market, Industry Report, 2030",
+      "Apiculture Market Size, Share, Growth Analysis Report, 2030",
+      "Arachidonic Acid Market Size, Share & Growth Report, 2030",
+      "Aseptic Packaging Market Size, Share & Growth Report 2030",
+      "Artificial Turf Market Size And Share, Industry Report, 2030",
+      "Architectural Lighting Market Size, Industry Report, 2030",
+      "Artificial Lift Systems Market Size, Industry Report, 2030",
+      "Artificial Photosynthesis Market Size And Share Report, 2030",
+      "Architectural Flat Glass Market Size And Share Report, 2030",
+      "Architectural Coatings Market Size & Share Report, 2025",
+      "Arc Flash Protection Market Size And Share Report, 2030",
+      "Argon Gas Market Size, Share, Trends Analysis Report, 2030",
+      "Attapulgite Market Size And Share, Industry Report, 2030",
+      "ATM Market Size, Share And Growth Analysis Report, 2030",
+      "Audio Visual Hardware Market Size & Share Report, 2030",
+      "Asphalt Mixing Plants Market Size And Share Report, 2030",
+      "Atomic Layer Deposition Market Size & Share Report, 2030",
+      "Aspartic Acid Market Size, Share & Growth Report, 2030",
+      "Asphalt Additives Market Size, Share, Industry Report, 2019-2025",
+      "Autoclave Aerated Concrete Market Size, Share Report, 2030",
+      "Automatic Speech Recognition Apps Market Size, Industry Report, 2025",
+      "Automated Test Equipment Market Size, Share Report, 2030",
+      "Automated Breach And Attack Simulation Market Report, 2030",
+      "Automatic Power Factor Controller Market Size Report, 2025",
+      "Automatic Weapons Market Size And Share [2023 Report]",
+      "Automated Fingerprint Identification System (AFIS) Market Report, 2030",
+      "Automotive Adhesive Tapes Market Size, Share Report, 2030",
+      "Automotive Aftermarket Glass Market Size Report, 2030",
+      "Automotive Bushing Market Size And Share Report, 2030",
+      "Automotive Aluminum Market Size, Share, Industry Trends Report, 2025",
+      "Automotive Advanced High Strength Steel Market Report, 2030",
+      "Automotive Air Filters Market Size, Industry Report, 2030",
+      "Automotive Ceramics Market Size, Industry Report, 2030",
+      "Automotive Gear Oil Market Size, Share, Industry Report, 2019-2025",
+      "Automotive Glass Market Size, Share, Industry Report 2030",
+      "Automotive Exterior Materials Market, Industry Report, 2030",
+      "Automotive Garage Equipment Market Size Report, 2030",
+      "Automotive Heat Shield Market Size, Industry Report, 2030",
+      "Automotive Embedded Telematics Market Size Report, 2030",
+      "Automotive Interior Materials Market, Industry Report, 2030",
+      "Automotive Magnesium Alloy Market Size, Share, Industry Report, 2025",
+      "Automotive Lead Acid Battery Market, Industry Report, 2030",
+      "Automotive Lightweight Materials Market Size Report, 2030",
+      "Automotive Metal Stamping Market Size, Share Report, 2030",
+      "Automotive Lighting Market Size And Share Report, 2030",
+      "Automotive Metals Market Size, Share & Trends Report 2030",
+      "Automotive Plastic Fasteners Market Size Report, 2030",
+      "Automotive Sensor Market Size, Industry Report, 2030",
+      "Automotive Webbing Market Share & Growth Report, 2030",
+      "Automotive Printed Circuit Board Market Size Report, 2030",
+      "Automotive Steel Market Size, Share, Industry Report, 2030",
+      "Automotive NVH Materials Market Size & Share Report, 2030",
+      "Automotive Motor Market Size, Share, Industry Report, 2030",
+      "Automotive Polymer Composites Market Size Report, 2030",
+      "Automotive Stainless Steel Tube Market Size Report, 2030",
+      "Automotive Pressure Sensitive Tapes Market Size Report 2030",
+      "Automotive Tire Market Size & Share, Industry Report, 2030",
+      "Automotive Sunroof Market Size And Share Report, 2030",
+      "Automotive Shielding Market Size And Share [2023 Report]",
+      "Automotive Plastics for Passenger Vehicles Market Share Report, 2025",
+      "Aviation Connector Market Size, Share, Industry Report, 2030",
+      "Automotive Window And Exterior Sealing System Market Report, 2030",
+      "Azodicarbonamide Market Size & Share, Industry Report, 2019-2025",
+      "Bag On Valve Products Market Size, Share, Industry Report, 2019-2025",
+      "Axial Flow Pump Market Size, Share & Trends Report, 2030",
+      "Baggage Scanners Market Size, Share & Trends, Industry Report, 2025",
+      "Ballistic Composites Market Size, Industry Report, 2030",
+      "Ballistic Protective Equipment Market Size Report, 2030",
+      "Ballast Water Treatment Systems Market Size Report, 2030",
+      "Barrier Films Flexible Electronics Market Size, Industry Report, 2025",
+      "Bare Die Shipping & Handling and Processing & Storage Market Report, 2030",
+      "Basalt Fiber Market Size, Share And Growth Report, 2030",
+      "Barcode Printers Market Size & Share, Industry Report, 2030",
+      "Barium Fluoride Market Size, Share, Industry Analysis Report, 2025",
+      "Barite Market Size, Share & Growth Analysis Report, 2030",
+      "Battery Anode Materials Market Size & Trends Report, 2030",
+      "Bamboos Market Size, Share, Growth, Industry Report, 2030",
+      "Battery Cooling Plate Market Size And Share Report, 2030",
+      "Battery Electrolyte Market Size, Share & Growth Report 2030",
+      "Battery Management System Market Size & Share Report",
+      "Battery Metals Market Size, Share & Trends Report, 2030",
+      "Battery Energy Storage Systems Market Size Report, 2027",
+      "Battery Contract Manufacturing Market Analysis Report, 2030",
+      "Battery Leasing & Swapping Market Share Report, 2030",
+      "Battery Market Size, Share & Growth, Industry Report, 2030",
+      "Battery Raw Materials Market Size And Share Report, 2030",
+      "Battery Vents Market Size, Share And Trends Report, 2030",
+      "Battery Recycling Market Size & Share Analysis Report, 2030",
+      "Beauty & Personal Care Surfactants Market Size, Industry Report, 2025",
+      "Battery Sensor Market Size, Share And Growth Report, 2030",
+      "Bauxite Market Size, Share & Growth Analysis Report, 2030",
+      "Bearing Market Size, Share & Growth Analysis Report, 2030",
+      "Bearing Isolators Market Size, Share & Growth Report, 2030",
+      "Battery Separator Market Size, Share & Trends Report, 2030",
+      "Bio-based Platform Chemicals Market Size, Industry Report, 2019-2025",
+      "Bifacial Solar Market Size, Share And Growth Report, 2030",
+      "Bio-acetic Acid Market Size, Share & Growth Report, 2030",
+      "Bio-Based Construction Polymer Market Size Report, 2030",
+      "Bio-based Polycarbonate Market Size & Share Report, 2030",
+      "Beta-carotene Market Size, Share & Growth Report, 2030",
+      "Bio Based Functional Polymers Market Size, Industry Report, 2019-2025",
+      "Bio-based Polyethylene Market Size And Share Report, 2030",
+      "Bio-based Emulsion Polymers Market Size, Share, Industry Report 2025",
+      "Bio-succinic Acid Market Size, Share & Trends Report, 2030",
+      "Bio Based Polyolefins Market Size & Share Report, 2025",
+      "Bio-LNG Market Size, Share, Growth & Trends Report, 2030",
+      "Bio-based Propylene Glycol Market Size Report, 2019-2025",
+      "Bioactive Materials Market Share, Industry Report, 2021-2028",
+      "Bio-based Polyethylene Terephthalate Market Report, 2030",
+      "Bio Solvents Market Size, Share And Growth Report, 2030",
+      "Bioadhesives Market Size, Share & Growth Report, 2030",
+      "Bio-butanol Market Size, Share And Trends Report, 2030",
+      "Bio-polyamide Market Size & Share, Industry Report, 2030",
+      "Bio Based Polymethyl Methacrylate Market Size, Industry Report, 2025",
+      "Bioacoustics Sensing Market Size, Share, Growth, Industry Report 2025",
+      "Biodegradable Mulch Films Market Size, Share Report, 2030",
+      "Biocomposites Market Size & Share, Industry Report, 2030",
+      "Biodegradable Plastic Packaging Market Size, Industry Report, 2027",
+      "Biodiesel Market Size, Share & Trends Analysis Report, 2030",
+      "Bioenergy With CCS Market Size And Share Report, 2030",
+      "Bioethanol Yeast Market Size, Share, Industry Report, 2030",
+      "Biodegradable Paper & Plastic Packaging Market, Industry Report 2025",
+      "Biofuels Market Size, Share & Growth Analysis Report, 2030",
+      "Biofuel Enzymes Market Size & Share, Industry Report, 2030",
+      "Bioenergy Market Size, Share & Growth Report, 2030",
+      "Bioliquid Heat And Power Generation Market Report, 2030",
+      "Biomass Boilers Market Size & Share, Industry Report, 2030",
+      "Biomass Power Market Size, Share & Trends Report, 2030",
+      "Biopellet Energy Market Size & Share Report, 2019-2025",
+      "Bioplastic Packaging Market Size, Industry Report, 2030",
+      "Biophotonics Market Size, Share And Trends Report, 2030",
+      "Biomimetic Materials Market Size & Trends, Industry Report, 2019-2025",
+      "Biological Wastewater Treatment Market Size Report, 2030",
+      "Biometric Sensor Market Size, Share & Trends Report, 2030",
+      "Bit Error Rate Testers Market Size, Share, Industry Report, 2019-2025",
+      "Biphenyl Market Size, Share & Trends Report, 2030",
+      "Biosurfactants Market Size & Share, Industry Report, 2030",
+      "Biopolymers Market Size, Share And Growth Report, 2030",
+      "Blanket Insulation Market Size, Share & Trends Report, 2030",
+      "Biotech Ingredients Market Size, Share, Industry Report 2030",
+      "Biotechnology Based Chemicals Market Size, Industry Report, 2025",
+      "Bluetooth Smart and Smart Ready Market, Industry Report, 2018-2025",
+      "Blasting Automation Services Market Size Report, 2030",
+      "Blow Molding Tools Market Size Report, 2022-2030",
+      "Blue Hydrogen Market Size & Share, Industry Report, 2030",
+      "Blowout Preventer Market Size, Share, Industry Report, 2030",
+      "Brazed Plate Heat Exchangers Market Size Report, 2030",
+      "Boom Lifts Market Size, Share, Trends & Growth Report, 2030",
+      "Boric Acid Market Size, Share, Analysis, Industry Report, 2019-2025",
+      "Body Armor Market Size, Share & Growth Analysis Report, 2030",
+      "Boiler, Turbine & Generator Market Size, Share, Industry Report, 2025",
+      "Boiler Control Solutions Market Size & Share Report, 2030",
+      "Bolts Market Size, Share & Growth Analysis Report, 2028",
+      "Board Insulation Market Size, Share & Growth Report, 2030",
+      "Boron Market Size, Share, Growth, Industry Trends Report, 2019-2025",
+      "Bronze Market Size, Share & Trends Analysis Report, 2030",
+      "Brick Cladding Systems Market Size & Share Report, 2030",
+      "Broadcast Equipment Market Size And Share [2023 Report]",
+      "Bromelain Market Size, Share, Growth Analysis Report, 2030",
+      "Building Applied Photovoltaics Market Size, Industry Report, 2025",
+      "Building & Construction Plastic Fasteners Market Report, 2025",
+      "Building Acoustic Insulation Market Size & Share Report 2030",
+      "Brewing Enzymes Market Size, Share & Growth Report, 2030",
+      "Brushless DC Motor Market Size, Industry Report, 2030",
+      "Broadcast Switchers Market Size, Industry Report, 2030",
+      "Bricks Market Size, Share & Trends Analysis Report, 2030",
+      "Broaching Machine Market Size And Share Report, 2030",
+      "Building & Construction Glass Market Size, Industry Report, 2019-2025",
+      "Brewery Equipment Market Size, Industry Report, 2030",
+      "Buildtech Textiles Market Size & Share, Industry Report, 2019-2025",
+      "Building Thermal Insulation Market, Industry Report, 2030",
+      "Cable And Accessories Market Size, Share, Industry Report, 2019-2025",
+      "Cable Management System Market Size, Share Report, 2030",
+      "Building-integrated Photovoltaics Market Size Report, 2030",
+      "Building Materials Market Size, Share & Trends Report, 2030",
+      "Burner Management System Market, Industry Report, 2030",
+      "Building And Construction Sheets Market Size Report, 2030",
+      "Calcined Petcoke Market Size & Size, Industry Analysis Report, 2025",
+      "Bulletproof Glass Market Size, Share & Growth Report, 2030",
+      "1,4-Butanediol, Polytetramethylene Ether Glycol and spandex Market Size, Share Report, 2019-2025",
+      "Building-integrated Photovoltaics Facade Market Report, 2030",
+      "Bullet Proof Jackets Market Size & Share Report, 2022-2030",
+      "Building And Construction Tapes Market Size Report, 2030",
+      "Cable Conduit Systems Market Size & Share Report, 2030"
+    ]
+  }
+}

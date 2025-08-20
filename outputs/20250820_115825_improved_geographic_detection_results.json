@@ -1,0 +1,76 @@
+{
+  "experiment_info": {
+    "timestamp_pdt": "2025-08-20 11:58:25 PDT",
+    "timestamp_utc": "2025-08-20 18:58:25 UTC",
+    "dataset_size": 200,
+    "methods_tested": [
+      "patterns_only",
+      "spacy_only",
+      "patterns_spacy"
+    ]
+  },
+  "results_summary": {
+    "patterns_only": {
+      "detection_rate": 17.5,
+      "titles_with_entities": 35,
+      "total_entities": 35,
+      "processing_time": 0.08
+    },
+    "spacy_only": {
+      "detection_rate": 5.0,
+      "titles_with_entities": 10,
+      "total_entities": 10,
+      "processing_time": 1.78
+    },
+    "patterns_spacy": {
+      "detection_rate": 17.5,
+      "titles_with_entities": 35,
+      "total_entities": 44,
+      "processing_time": 1.84
+    }
+  },
+  "detailed_results": {
+    "patterns_only": {
+      "method": "patterns_only",
+      "total_processed": 200,
+      "titles_with_entities": 35,
+      "titles_without_entities": 165,
+      "detection_rate": 17.5,
+      "total_entities_detected": 35,
+      "avg_entities_per_title": 0.17,
+      "processing_time_seconds": 0.08,
+      "sample_results": [
+        {
+          "title_id": "68a41f94f7fead4d2a162253",
+          "title": "Rapid Application Development Platform Market Report, 2030",
+          "entities_found": [],
+          "entity_details": [],
+          "confidence_score": 0.9,
+          "detection_method": "patterns_only",
+          "processing_notes": [
+            "patterns_only: 0 entities"
+          ],
+          "has_regions": false
+        },
+        {
+          "title_id": "68a41dd2f7fead4d2a160ca3",
+          "title": "Thailand Medical Tourism Market Size, Industry Report 2030",
+          "entities_found": [],
+          "entity_details": [],
+          "confidence_score": 0.9,
+          "detection_method": "patterns_only",
+          "processing_notes": [
+            "patterns_only: 0 entities"
+          ],
+          "has_regions": false
+        },
+        {
+          "title_id": "68a42291c3325a49107cc1ce",
+          "title": "U.S. Surgical Equipment Market Size, Industry Report, 2030",
+          "entities_found": [
+            "United States"
+          ],
+          "entity_details": [
+            {
+              "entity": "United States",
+              "entity_type": 

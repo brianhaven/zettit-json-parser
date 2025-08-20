@@ -1,0 +1,1692 @@
+{
+  "experiment_timestamp_pdt": "2025-08-20 00:47:30 PDT",
+  "experiment_timestamp_utc": "2025-08-20 07:47:30 UTC",
+  "mongodb_connection_status": "Connected",
+  "spacy_model_status": "Available",
+  "dataset_info": {
+    "total_titles_loaded": 200,
+    "collection": "markets_raw",
+    "sampling_method": "random"
+  },
+  "scenario_results": [
+    {
+      "scenario": "ExperimentScenario.TITLE_SHORT_ORIGINAL",
+      "model_config": "patterns_only",
+      "total_processed": 200,
+      "titles_with_entities": 27,
+      "total_entities_detected": 28,
+      "unique_entities": [
+        "ASEAN",
+        "China",
+        "Germany",
+        "South Korea",
+        "Europe",
+        "India",
+        "East Asia",
+        "France",
+        "Australia",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "Americas",
+        "North America",
+        "Global"
+      ],
+      "entity_type_distribution": {
+        "country": 4,
+        "acronym": 2,
+        "compound": 7,
+        "region": 15
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 0,
+        "High": 28
+      },
+      "detection_rate": 13.5,
+      "avg_entities_per_title": 0.14,
+      "processing_time_seconds": 1.52,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "Automotive Engine Management System Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "Data Monetization Solution For Healthcare Providers Market Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "U.S. Vital Signs Monitoring Devices Market, Industry Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "Smart Speaker Market Size, Share And Growth Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "Polyamide-imide Market Size, Share & Growth Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "Field-erected Cooling Tower Market Size, Share Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "India Injection Molded Plastic Market, Industry Report, 2030",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "Flaxseed Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "Smart Glass and Window Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "Cord Blood Banking Services Market Size Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "ExperimentScenario.TITLE_SHORT_ORIGINAL",
+      "model_config": "patterns_spacy",
+      "total_processed": 200,
+      "titles_with_entities": 32,
+      "total_entities_detected": 36,
+      "unique_entities": [
+        "North America Expanded",
+        "ASEAN",
+        "South East",
+        "India",
+        "France",
+        "North America",
+        "North America Commercial",
+        "Germany",
+        "Europe",
+        "East Asia",
+        "U.S.",
+        "Australia",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "Global",
+        "China",
+        "Americas",
+        "South Korea"
+      ],
+      "entity_type_distribution": {
+        "country": 9,
+        "acronym": 2,
+        "compound": 7,
+        "region": 18
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 5,
+        "High": 31
+      },
+      "detection_rate": 16.0,
+      "avg_entities_per_title": 0.18,
+      "processing_time_seconds": 3.38,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "Automotive Engine Management System Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "Data Monetization Solution For Healthcare Providers Market Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "U.S. Vital Signs Monitoring Devices Market, Industry Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "Smart Speaker Market Size, Share And Growth Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "Polyamide-imide Market Size, Share & Growth Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "Field-erected Cooling Tower Market Size, Share Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "India Injection Molded Plastic Market, Industry Report, 2030",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "Flaxseed Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "Smart Glass and Window Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "Cord Blood Banking Services Market Size Report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "ExperimentScenario.TITLE_SHORT_CLEANED",
+      "model_config": "patterns_only",
+      "total_processed": 200,
+      "titles_with_entities": 27,
+      "total_entities_detected": 28,
+      "unique_entities": [
+        "ASEAN",
+        "China",
+        "Germany",
+        "South Korea",
+        "Europe",
+        "India",
+        "East Asia",
+        "France",
+        "Australia",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "Americas",
+        "North America",
+        "Global"
+      ],
+      "entity_type_distribution": {
+        "country": 4,
+        "acronym": 2,
+        "compound": 7,
+        "region": 15
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 0,
+        "High": 28
+      },
+      "detection_rate": 13.5,
+      "avg_entities_per_title": 0.14,
+      "processing_time_seconds": 1.48,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "Automotive Engine Management System Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "Data Monetization Solution For Healthcare Providers Market Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "U.S. Vital Signs Monitoring Devices Market, Industry Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "Smart Speaker Market Size, Share And Growth Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "Polyamide-imide Market Size, Share & Growth Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "Field-erected Cooling Tower Market Size, Share Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "India Injection Molded Plastic Market, Industry Report",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "Flaxseed Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "Smart Glass and Window Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "Cord Blood Banking Services Market Size Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "ExperimentScenario.TITLE_SHORT_CLEANED",
+      "model_config": "patterns_spacy",
+      "total_processed": 200,
+      "titles_with_entities": 32,
+      "total_entities_detected": 36,
+      "unique_entities": [
+        "North America Expanded",
+        "ASEAN",
+        "South East",
+        "India",
+        "France",
+        "North America",
+        "North America Commercial",
+        "Germany",
+        "Europe",
+        "East Asia",
+        "U.S.",
+        "Australia",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "Global",
+        "China",
+        "Americas",
+        "South Korea"
+      ],
+      "entity_type_distribution": {
+        "country": 9,
+        "acronym": 2,
+        "compound": 7,
+        "region": 18
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 5,
+        "High": 31
+      },
+      "detection_rate": 16.0,
+      "avg_entities_per_title": 0.18,
+      "processing_time_seconds": 3.32,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "Automotive Engine Management System Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "Data Monetization Solution For Healthcare Providers Market Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "U.S. Vital Signs Monitoring Devices Market, Industry Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "Smart Speaker Market Size, Share And Growth Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "Polyamide-imide Market Size, Share & Growth Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "Field-erected Cooling Tower Market Size, Share Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "India Injection Molded Plastic Market, Industry Report",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "Flaxseed Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "Smart Glass and Window Market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "Cord Blood Banking Services Market Size Report",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "ExperimentScenario.TITLE_SHORT_LOWERCASE",
+      "model_config": "patterns_only",
+      "total_processed": 200,
+      "titles_with_entities": 27,
+      "total_entities_detected": 28,
+      "unique_entities": [
+        "ASEAN",
+        "China",
+        "Germany",
+        "South Korea",
+        "Europe",
+        "India",
+        "East Asia",
+        "France",
+        "Australia",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "Americas",
+        "North America",
+        "Global"
+      ],
+      "entity_type_distribution": {
+        "country": 4,
+        "acronym": 2,
+        "compound": 7,
+        "region": 15
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 0,
+        "High": 28
+      },
+      "detection_rate": 13.5,
+      "avg_entities_per_title": 0.14,
+      "processing_time_seconds": 1.49,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "automotive engine management system market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "data monetization solution for healthcare providers market report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "u.s. vital signs monitoring devices market, industry report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "smart speaker market size, share and growth report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "polyamide-imide market size, share & growth report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "field-erected cooling tower market size, share report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "india injection molded plastic market, industry report, 2030",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "flaxseed market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "smart glass and window market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "cord blood banking services market size report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "ExperimentScenario.TITLE_SHORT_LOWERCASE",
+      "model_config": "patterns_spacy",
+      "total_processed": 200,
+      "titles_with_entities": 38,
+      "total_entities_detected": 40,
+      "unique_entities": [
+        "ASEAN",
+        "u.s.",
+        "China",
+        "Germany",
+        "South Korea",
+        "Europe",
+        "India",
+        "south east asia",
+        "East Asia",
+        "France",
+        "Australia",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "Americas",
+        "North America",
+        "Global"
+      ],
+      "entity_type_distribution": {
+        "country": 15,
+        "acronym": 2,
+        "compound": 7,
+        "region": 16
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 11,
+        "High": 29
+      },
+      "detection_rate": 19.0,
+      "avg_entities_per_title": 0.2,
+      "processing_time_seconds": 3.37,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "automotive engine management system market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "data monetization solution for healthcare providers market report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "u.s. vital signs monitoring devices market, industry report, 2030",
+          "entities_found": [
+            "u.s."
+          ],
+          "confidence_score": 0.7,
+          "detection_method": "spacy",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 1 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "smart speaker market size, share and growth report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "polyamide-imide market size, share & growth report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "field-erected cooling tower market size, share report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "india injection molded plastic market, industry report, 2030",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.95,
+          "detection_method": "patterns+spacy",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 1 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "flaxseed market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "smart glass and window market",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "cord blood banking services market size report, 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "ExperimentScenario.TITLE_FULL_ORIGINAL",
+      "model_config": "patterns_only",
+      "total_processed": 200,
+      "titles_with_entities": 93,
+      "total_entities_detected": 121,
+      "unique_entities": [
+        "Middle East",
+        "ASEAN",
+        "China",
+        "Germany",
+        "South Korea",
+        "Europe",
+        "India",
+        "Latin America",
+        "East Asia",
+        "France",
+        "Australia",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "Americas",
+        "North America",
+        "Global"
+      ],
+      "entity_type_distribution": {
+        "region": 92,
+        "compound": 19,
+        "acronym": 5,
+        "country": 5
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 0,
+        "High": 121
+      },
+      "detection_rate": 46.5,
+      "avg_entities_per_title": 0.6,
+      "processing_time_seconds": 6.19,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "Automotive Engine Management System Market (Component: Engine Control Unit, Sensors, Fuel Pump, and Others; Engine Type) - Global Industry Analysis, Size, Share, Growth, Trends, and Forecast, 2022-2031",
+          "entities_found": [
+            "Global"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "Data Monetization Solution For Healthcare Providers Market Size, Share & Trends Analysis Report By Type (Software, Services), By Region (North America, Europe, Asia Pacific, Latin America, MEA), And Segment Forecasts, 2024 - 2030",
+          "entities_found": [
+            "North America",
+            "Europe",
+            "Asia Pacific",
+            "Latin America",
+            "MEA"
+          ],
+          "confidence_score": 0.8,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 5 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "U.S. Vital Signs Monitoring Devices Market Size, Share & Trends Analysis Report By Product (BP Monitors, Pulse Oximeters), By End-use Hospitals, Ambulatory Centers), And Segment Forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "Smart Speaker Market Size, Share & Trends Analysis Report By Virtual Personal Assistant (Amazon Alexa, Google Assistant, Apple Siri), By Region, And Segment Forecasts, 2023 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "Polyamide-imide Market Size, Share & Trends Analysis Report By Application (Molding Resins, Wire Enamels, Coating, Fiber), By Region (North America, Europe, Asia Pacific), And Segment Forecasts, 2024 - 2030",
+          "entities_found": [
+            "North America",
+            "Europe",
+            "Asia Pacific"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 3 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "Field-erected Cooling Tower Market Size, Share & Trends Analysis Report By Tower Type (Wet, Dry, Hybrid), By Design (Forced Draft, Natural Draft), By End Use (Power Generation, Metallurgy), By Region, And Segment Forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "India Injection Molded Plastic Market Size, Share & Trends Analysis Report By Raw Material (Polypropylene, Acrylonitrile Butadiene Styrene, HDPE, LDPE, Polystyrene, Polyethylene, PET, Polyvinyl Chloride, PEEK, PU), By Application (Medical), And Segment Forecasts, 2025 - 2030",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "Flaxseed Market (Nature: Organic and Conventional; Type: Whole, Powder, Oil, and Others; End Use: Food & Beverage Industry, Nutraceuticals, Animal Feed, Retail/Household, and Industrial; and Distribution Channel: Business to Business and Business to Consumer) - North America Industry Analysis, Size, Share, Growth, Trends, and Forecast, 2021-2031",
+          "entities_found": [
+            "North America"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "Smart Glass and Window Market - Global Industry Analysis, Size, Share, Growth, Trends and Forecast 2015 - 2021",
+          "entities_found": [
+            "Global"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "Cord Blood Banking Services Market Size, Share & Trends Analysis Report By Service (Collection & Transportation, Processing), By Bank (Private, Public, Hybrid), By Component, By Application, By End-use, By Region, And Segment Forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "ExperimentScenario.TITLE_FULL_ORIGINAL",
+      "model_config": "patterns_spacy",
+      "total_processed": 200,
+      "titles_with_entities": 123,
+      "total_entities_detected": 166,
+      "unique_entities": [
+        "New Zealand",
+        "North America Expanded",
+        "Middle East",
+        "ASEAN",
+        "Main Landing",
+        "Resectoscopes",
+        "Colposcopes",
+        "South East",
+        "India",
+        "France",
+        "North America",
+        "North America Commercial",
+        "Germany",
+        "Europe",
+        "Region",
+        "Latin America",
+        "Medium Density",
+        "East Asia",
+        "U.S.",
+        "Australia",
+        "Laparoscopes",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "Global",
+        "Bridges",
+        "Endoscopic",
+        "China",
+        "Transit",
+        "Hysteroscopes",
+        "Menveo",
+        "Americas",
+        "South Korea"
+      ],
+      "entity_type_distribution": {
+        "region": 122,
+        "compound": 19,
+        "acronym": 5,
+        "country": 20
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 39,
+        "High": 127
+      },
+      "detection_rate": 61.5,
+      "avg_entities_per_title": 0.83,
+      "processing_time_seconds": 9.34,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "Automotive Engine Management System Market (Component: Engine Control Unit, Sensors, Fuel Pump, and Others; Engine Type) - Global Industry Analysis, Size, Share, Growth, Trends, and Forecast, 2022-2031",
+          "entities_found": [
+            "Global"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "Data Monetization Solution For Healthcare Providers Market Size, Share & Trends Analysis Report By Type (Software, Services), By Region (North America, Europe, Asia Pacific, Latin America, MEA), And Segment Forecasts, 2024 - 2030",
+          "entities_found": [
+            "North America",
+            "Europe",
+            "Asia Pacific",
+            "Latin America",
+            "MEA"
+          ],
+          "confidence_score": 0.84,
+          "detection_method": "patterns+spacy",
+          "processing_notes": [
+            "Pattern detection: 5 entities",
+            "spaCy detection: 4 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "U.S. Vital Signs Monitoring Devices Market Size, Share & Trends Analysis Report By Product (BP Monitors, Pulse Oximeters), By End-use Hospitals, Ambulatory Centers), And Segment Forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "Smart Speaker Market Size, Share & Trends Analysis Report By Virtual Personal Assistant (Amazon Alexa, Google Assistant, Apple Siri), By Region, And Segment Forecasts, 2023 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "Polyamide-imide Market Size, Share & Trends Analysis Report By Application (Molding Resins, Wire Enamels, Coating, Fiber), By Region (North America, Europe, Asia Pacific), And Segment Forecasts, 2024 - 2030",
+          "entities_found": [
+            "North America",
+            "Europe",
+            "Asia Pacific"
+          ],
+          "confidence_score": 0.95,
+          "detection_method": "patterns+spacy",
+          "processing_notes": [
+            "Pattern detection: 3 entities",
+            "spaCy detection: 3 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "Field-erected Cooling Tower Market Size, Share & Trends Analysis Report By Tower Type (Wet, Dry, Hybrid), By Design (Forced Draft, Natural Draft), By End Use (Power Generation, Metallurgy), By Region, And Segment Forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "India Injection Molded Plastic Market Size, Share & Trends Analysis Report By Raw Material (Polypropylene, Acrylonitrile Butadiene Styrene, HDPE, LDPE, Polystyrene, Polyethylene, PET, Polyvinyl Chloride, PEEK, PU), By Application (Medical), And Segment Forecasts, 2025 - 2030",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "Flaxseed Market (Nature: Organic and Conventional; Type: Whole, Powder, Oil, and Others; End Use: Food & Beverage Industry, Nutraceuticals, Animal Feed, Retail/Household, and Industrial; and Distribution Channel: Business to Business and Business to Consumer) - North America Industry Analysis, Size, Share, Growth, Trends, and Forecast, 2021-2031",
+          "entities_found": [
+            "North America"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "Smart Glass and Window Market - Global Industry Analysis, Size, Share, Growth, Trends and Forecast 2015 - 2021",
+          "entities_found": [
+            "Global"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "Cord Blood Banking Services Market Size, Share & Trends Analysis Report By Service (Collection & Transportation, Processing), By Bank (Private, Public, Hybrid), By Component, By Application, By End-use, By Region, And Segment Forecasts, 2024 - 2030",
+          "entities_found": [
+            "Region"
+          ],
+          "confidence_score": 0.7,
+          "detection_method": "spacy",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 1 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "ExperimentScenario.TITLE_FULL_LOWERCASE",
+      "model_config": "patterns_only",
+      "total_processed": 200,
+      "titles_with_entities": 93,
+      "total_entities_detected": 121,
+      "unique_entities": [
+        "Middle East",
+        "ASEAN",
+        "China",
+        "Germany",
+        "South Korea",
+        "Europe",
+        "India",
+        "Latin America",
+        "East Asia",
+        "France",
+        "Australia",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "Americas",
+        "North America",
+        "Global"
+      ],
+      "entity_type_distribution": {
+        "region": 92,
+        "compound": 19,
+        "acronym": 5,
+        "country": 5
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 0,
+        "High": 121
+      },
+      "detection_rate": 46.5,
+      "avg_entities_per_title": 0.6,
+      "processing_time_seconds": 6.17,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "automotive engine management system market (component: engine control unit, sensors, fuel pump, and others; engine type) - global industry analysis, size, share, growth, trends, and forecast, 2022-2031",
+          "entities_found": [
+            "Global"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "data monetization solution for healthcare providers market size, share & trends analysis report by type (software, services), by region (north america, europe, asia pacific, latin america, mea), and segment forecasts, 2024 - 2030",
+          "entities_found": [
+            "North America",
+            "Europe",
+            "Asia Pacific",
+            "Latin America",
+            "MEA"
+          ],
+          "confidence_score": 0.8,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 5 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "u.s. vital signs monitoring devices market size, share & trends analysis report by product (bp monitors, pulse oximeters), by end-use hospitals, ambulatory centers), and segment forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "smart speaker market size, share & trends analysis report by virtual personal assistant (amazon alexa, google assistant, apple siri), by region, and segment forecasts, 2023 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "polyamide-imide market size, share & trends analysis report by application (molding resins, wire enamels, coating, fiber), by region (north america, europe, asia pacific), and segment forecasts, 2024 - 2030",
+          "entities_found": [
+            "North America",
+            "Europe",
+            "Asia Pacific"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 3 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "field-erected cooling tower market size, share & trends analysis report by tower type (wet, dry, hybrid), by design (forced draft, natural draft), by end use (power generation, metallurgy), by region, and segment forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "india injection molded plastic market size, share & trends analysis report by raw material (polypropylene, acrylonitrile butadiene styrene, hdpe, ldpe, polystyrene, polyethylene, pet, polyvinyl chloride, peek, pu), by application (medical), and segment forecasts, 2025 - 2030",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "flaxseed market (nature: organic and conventional; type: whole, powder, oil, and others; end use: food & beverage industry, nutraceuticals, animal feed, retail/household, and industrial; and distribution channel: business to business and business to consumer) - north america industry analysis, size, share, growth, trends, and forecast, 2021-2031",
+          "entities_found": [
+            "North America"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "smart glass and window market - global industry analysis, size, share, growth, trends and forecast 2015 - 2021",
+          "entities_found": [
+            "Global"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "cord blood banking services market size, share & trends analysis report by service (collection & transportation, processing), by bank (private, public, hybrid), by component, by application, by end-use, by region, and segment forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "ExperimentScenario.TITLE_FULL_LOWERCASE",
+      "model_config": "patterns_spacy",
+      "total_processed": 200,
+      "titles_with_entities": 108,
+      "total_entities_detected": 144,
+      "unique_entities": [
+        "Middle East",
+        "pmma",
+        "ASEAN",
+        "ps",
+        "India",
+        "south east asia",
+        "chlorpyriphos",
+        "France",
+        "North America",
+        "colposcopes",
+        "menveo",
+        "Germany",
+        "Europe",
+        "Latin America",
+        "East Asia",
+        "evoh",
+        "Australia",
+        "Africa",
+        "Asia Pacific",
+        "MEA",
+        "iraq",
+        "Global",
+        "u.s.",
+        "China",
+        "new zealand",
+        "hysteroscopes",
+        "adcetris",
+        "Americas",
+        "South Korea"
+      ],
+      "entity_type_distribution": {
+        "region": 93,
+        "compound": 19,
+        "acronym": 5,
+        "country": 27
+      },
+      "confidence_distribution": {
+        "Low": 0,
+        "Medium": 21,
+        "High": 123
+      },
+      "detection_rate": 54.0,
+      "avg_entities_per_title": 0.72,
+      "processing_time_seconds": 9.46,
+      "sample_results": [
+        {
+          "title_id": "68049b0096ec0c90d2bad3f2",
+          "original_title": "automotive engine management system market (component: engine control unit, sensors, fuel pump, and others; engine type) - global industry analysis, size, share, growth, trends, and forecast, 2022-2031",
+          "entities_found": [
+            "Global"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b3e",
+          "original_title": "data monetization solution for healthcare providers market size, share & trends analysis report by type (software, services), by region (north america, europe, asia pacific, latin america, mea), and segment forecasts, 2024 - 2030",
+          "entities_found": [
+            "North America",
+            "Europe",
+            "Asia Pacific",
+            "Latin America",
+            "MEA"
+          ],
+          "confidence_score": 0.84,
+          "detection_method": "patterns+spacy",
+          "processing_notes": [
+            "Pattern detection: 5 entities",
+            "spaCy detection: 4 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a42291c3325a49107cc20e",
+          "original_title": "u.s. vital signs monitoring devices market size, share & trends analysis report by product (bp monitors, pulse oximeters), by end-use hospitals, ambulatory centers), and segment forecasts, 2024 - 2030",
+          "entities_found": [
+            "u.s."
+          ],
+          "confidence_score": 0.7,
+          "detection_method": "spacy",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 1 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049ac996ec0c90d2baceb9",
+          "original_title": "smart speaker market size, share & trends analysis report by virtual personal assistant (amazon alexa, google assistant, apple siri), by region, and segment forecasts, 2023 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41f94f7fead4d2a162145",
+          "original_title": "polyamide-imide market size, share & trends analysis report by application (molding resins, wire enamels, coating, fiber), by region (north america, europe, asia pacific), and segment forecasts, 2024 - 2030",
+          "entities_found": [
+            "North America",
+            "Europe",
+            "Asia Pacific"
+          ],
+          "confidence_score": 0.95,
+          "detection_method": "patterns+spacy",
+          "processing_notes": [
+            "Pattern detection: 3 entities",
+            "spaCy detection: 3 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049a6196ec0c90d2bac99a",
+          "original_title": "field-erected cooling tower market size, share & trends analysis report by tower type (wet, dry, hybrid), by design (forced draft, natural draft), by end use (power generation, metallurgy), by region, and segment forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a4113351d98522fff5a3c9",
+          "original_title": "india injection molded plastic market size, share & trends analysis report by raw material (polypropylene, acrylonitrile butadiene styrene, hdpe, ldpe, polystyrene, polyethylene, pet, polyvinyl chloride, peek, pu), by application (medical), and segment forecasts, 2025 - 2030",
+          "entities_found": [
+            "India"
+          ],
+          "confidence_score": 0.95,
+          "detection_method": "patterns+spacy",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 1 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049bea96ec0c90d2bae4e5",
+          "original_title": "flaxseed market (nature: organic and conventional; type: whole, powder, oil, and others; end use: food & beverage industry, nutraceuticals, animal feed, retail/household, and industrial; and distribution channel: business to business and business to consumer) - north america industry analysis, size, share, growth, trends, and forecast, 2021-2031",
+          "entities_found": [
+            "North America"
+          ],
+          "confidence_score": 0.95,
+          "detection_method": "patterns+spacy",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 1 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68049c6596ec0c90d2baea88",
+          "original_title": "smart glass and window market - global industry analysis, size, share, growth, trends and forecast 2015 - 2021",
+          "entities_found": [
+            "Global"
+          ],
+          "confidence_score": 0.9,
+          "detection_method": "patterns",
+          "processing_notes": [
+            "Pattern detection: 1 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        },
+        {
+          "title_id": "68a41dbef7fead4d2a160b34",
+          "original_title": "cord blood banking services market size, share & trends analysis report by service (collection & transportation, processing), by bank (private, public, hybrid), by component, by application, by end-use, by region, and segment forecasts, 2024 - 2030",
+          "entities_found": [],
+          "confidence_score": 0.9,
+          "detection_method": "none",
+          "processing_notes": [
+            "Pattern detection: 0 entities",
+            "spaCy detection: 0 entities",
+            "GLiNER detection: 0 entities"
+          ]
+        }
+      ]
+    }
+  ],
+  "comparative_analysis": {
+    "best_detection_rate": {
+      "scenario": "title_full_original",
+      "model": "patterns_spacy",
+      "rate": 61.5
+    },
+    "most_entities_detected": {
+      "scenario": "title_full_original",
+      "model": "patterns_spacy",
+      "count": 166
+    },
+    "best_confidence_distribution": {
+      "scenario": "title_short_original",
+      "model": "patterns_only",
+      "high_confidence_pct": 100.0
+    },
+    "fastest_processing": {
+      "scenario": "title_short_cleaned",
+      "model": "patterns_only",
+      "time": 1.48
+    },
+    "scenario_comparisons": {},
+    "model_comparisons": {
+      "patterns_only": {
+        "avg_detection_rate": 26.7,
+        "avg_entities_per_title": 0.32,
+        "total_unique_entities": 79,
+        "scenario_count": 5
+      },
+      "patterns_spacy": {
+        "avg_detection_rate": 33.3,
+        "avg_entities_per_title": 0.42,
+        "total_unique_entities": 117,
+        "scenario_count": 5
+      }
+    }
+  },
+  "recommendations": [
+    "BEST OVERALL: Use title_full_original with patterns_spacy for highest detection rate (61.50%)",
+    "spaCy Integration provides 6.60% average detection rate improvement",
+    "Use report_title_full for better detection (52.12% vs 15.25%)",
+    "Highest confidence results from title_short_original with patterns_only (100.0% high confidence)"
+  ]
+}

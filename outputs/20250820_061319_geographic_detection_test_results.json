@@ -1,0 +1,389 @@
+{
+  "pattern_tests": [
+    {
+      "test_name": "mongodb_pattern_library",
+      "status": "pass",
+      "results": {
+        "total_patterns": 43,
+        "patterns_by_priority": {
+          "1": 16,
+          "2": 5,
+          "3": 5,
+          "4": 17
+        },
+        "patterns_with_aliases": 10,
+        "sample_patterns": {
+          "1": [
+            {
+              "term": "North America",
+              "aliases": [
+                "NA"
+              ]
+            },
+            {
+              "term": "South America",
+              "aliases": []
+            },
+            {
+              "term": "Latin America",
+              "aliases": [
+                "LATAM"
+              ]
+            },
+            {
+              "term": "Middle East",
+              "aliases": [
+                "ME"
+              ]
+            },
+            {
+              "term": "Asia Pacific",
+              "aliases": [
+                "APAC",
+                "Asia-Pacific"
+              ]
+            }
+          ],
+          "2": [
+            {
+              "term": "EMEA",
+              "aliases": []
+            },
+            {
+              "term": "MEA",
+              "aliases": []
+            },
+            {
+              "term": "ASEAN",
+              "aliases": []
+            },
+            {
+              "term": "GCC",
+              "aliases": []
+            },
+            {
+              "term": "MENA",
+              "aliases": []
+            }
+          ],
+          "3": [
+            {
+              "term": "Europe",
+              "aliases": [
+                "European"
+              ]
+            },
+            {
+              "term": "Asia",
+              "aliases": [
+                "Asian"
+              ]
+            },
+            {
+              "term": "Africa",
+              "aliases": [
+                "African"
+              ]
+            },
+            {
+              "term": "Pacific",
+              "aliases": []
+            },
+            {
+              "term": "America",
+              "aliases": []
+            }
+          ],
+          "4": [
+            {
+              "term": "United States",
+              "aliases": [
+                "U.S.",
+                "US",
+                "USA",
+                "U.S.A."
+              ]
+            },
+            {
+              "term": "United Kingdom",
+              "aliases": [
+                "U.K.",
+                "UK",
+                "Britain",
+                "Great Britain"
+              ]
+            },
+            {
+              "term": "China",
+              "aliases": []
+            },
+            {
+              "term": "India",
+              "aliases": []
+            },
+            {
+              "term": "Japan",
+              "aliases": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "test_name": "compound_first_processing",
+      "status": "pass",
+      "results": {
+        "total_tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "test_details": [
+          {
+            "title": "North America Market Analysis Report",
+            "expected": [
+              "North America"
+            ],
+            "detected": [
+              "North America"
+            ],
+            "should_not_contain": [
+              "America"
+            ],
+            "passed": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "Asia Pacific and Middle East Market Study",
+            "expected": [
+              "Asia Pacific",
+              "Middle East"
+            ],
+            "detected": [
+              "Asia Pacific",
+              "Middle East"
+            ],
+            "should_not_contain": [
+              "Asia",
+              "East"
+            ],
+            "passed": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "Eastern Europe Technology Market Outlook",
+            "expected": [
+              "Eastern Europe"
+            ],
+            "detected": [
+              "Eastern Europe"
+            ],
+            "should_not_contain": [
+              "Europe"
+            ],
+            "passed": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "South America Regional Market Report",
+            "expected": [
+              "South America"
+            ],
+            "detected": [
+              "South America"
+            ],
+            "should_not_contain": [
+              "America"
+            ],
+            "passed": true,
+            "confidence": 0.9
+          }
+        ]
+      }
+    }
+  ],
+  "model_tests": [
+    {
+      "test_name": "model_integration_placeholders",
+      "status": "pass",
+      "results": {
+        "model_status": {
+          "spacy_model_available": false,
+          "gliner_model_available": false,
+          "models_enabled": true
+        },
+        "detection_successful": true,
+        "entities_detected": [
+          "North America"
+        ]
+      }
+    }
+  ],
+  "accuracy_tests": [
+    {
+      "test_name": "geographic_accuracy",
+      "status": "pass",
+      "results": {
+        "total_tests": 13,
+        "correct_predictions": 13,
+        "accuracy_percentage": 100.0,
+        "test_details": [
+          {
+            "title": "Global Automotive Market Report",
+            "description": "Global without specific geography",
+            "expected_count": 0,
+            "detected_count": 0,
+            "detected_entities": [],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "APAC Semiconductor Market Analysis",
+            "description": "Regional acronym",
+            "expected_count": 1,
+            "detected_count": 1,
+            "detected_entities": [
+              "Asia Pacific"
+            ],
+            "correct": true,
+            "confidence": 0.85
+          },
+          {
+            "title": "North America Healthcare Market",
+            "description": "Compound region",
+            "expected_count": 1,
+            "detected_count": 1,
+            "detected_entities": [
+              "North America"
+            ],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "Europe and Asia Technology Market",
+            "description": "Multiple regions",
+            "expected_count": 2,
+            "detected_count": 2,
+            "detected_entities": [
+              "Europe",
+              "Asia"
+            ],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "United States Manufacturing Market",
+            "description": "Country name",
+            "expected_count": 1,
+            "detected_count": 1,
+            "detected_entities": [
+              "United States"
+            ],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "EMEA Financial Services Market",
+            "description": "Regional acronym",
+            "expected_count": 1,
+            "detected_count": 1,
+            "detected_entities": [
+              "EMEA"
+            ],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "After Market Services Analysis",
+            "description": "After Market (not geographic)",
+            "expected_count": 0,
+            "detected_count": 0,
+            "detected_entities": [],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "Farmers Market Industry Report",
+            "description": "Farmers Market (not geographic)",
+            "expected_count": 0,
+            "detected_count": 0,
+            "detected_entities": [],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "Stock Market Performance Review",
+            "description": "Stock Market (not geographic)",
+            "expected_count": 0,
+            "detected_count": 0,
+            "detected_entities": [],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "Asia Pacific, Europe and North America Market",
+            "description": "Three regions",
+            "expected_count": 3,
+            "detected_count": 3,
+            "detected_entities": [
+              "Asia Pacific",
+              "Europe",
+              "North America"
+            ],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "China and India Technology Market",
+            "description": "Two countries",
+            "expected_count": 2,
+            "detected_count": 2,
+            "detected_entities": [
+              "China",
+              "India"
+            ],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "Blockchain Technology Market Trends",
+            "description": "No geography",
+            "expected_count": 0,
+            "detected_count": 0,
+            "detected_entities": [],
+            "correct": true,
+            "confidence": 0.9
+          },
+          {
+            "title": "Market Research Methodology",
+            "description": "Generic market title",
+            "expected_count": 0,
+            "detected_count": 0,
+            "detected_entities": [],
+            "correct": true,
+            "confidence": 0.9
+          }
+        ]
+      }
+    }
+  ],
+  "performance_tests": [
+    {
+      "test_name": "performance_metrics",
+      "status": "pass",
+      "results": {
+        "total_titles": 25,
+        "processing_time_seconds": 0.498,
+        "titles_per_second": 50.2,
+        "titles_with_geography": 10,
+        "geography_detection_rate": 40.0,
+        "total_entities_detected": 10,
+        "average_entities_per_title": 0.4,
+        "average_confidence": 0.906,
+        "confidence_distribution": {
+          "high_confidence_0.9+": 24,
+          "medium_confidence_0.7-0.89": 1,
+          "low_confidence_below_0.7": 0
+        }
+      }
+    }
+  ]
+}

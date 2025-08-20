@@ -1,0 +1,2779 @@
+{
+  "experiment_info": {
+    "timestamp_pdt": "2025-08-20 12:30:51 PDT",
+    "timestamp_utc": "2025-08-20 19:30:51 UTC",
+    "total_patterns": 56,
+    "total_test_titles": 78
+  },
+  "results": {
+    "total_patterns": 56,
+    "total_test_titles": 78,
+    "pattern_results": {
+      "North America": {
+        "term": "North America",
+        "aliases": [
+          "NA",
+          "North American",
+          "North American Region"
+        ],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "North America Healthcare Market Size",
+            "matched_text": "North America",
+            "start_pos": 0,
+            "end_pos": 13
+          },
+          {
+            "title": "Europe and North America Market Comparison",
+            "matched_text": "North America",
+            "start_pos": 11,
+            "end_pos": 24
+          }
+        ],
+        "alias_detections": {
+          "North American": [
+            {
+              "title": "North American and South American markets",
+              "matched_text": "North American",
+              "start_pos": 0,
+              "end_pos": 14
+            }
+          ]
+        },
+        "total_detections": 3,
+        "titles_detected": [
+          "Europe and North America Market Comparison",
+          "North American and South American markets",
+          "North America Healthcare Market Size"
+        ]
+      },
+      "South America": {
+        "term": "South America",
+        "aliases": [],
+        "priority": 1,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      },
+      "Latin America": {
+        "term": "Latin America",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "Latin America Economic Overview",
+            "matched_text": "Latin America",
+            "start_pos": 0,
+            "end_pos": 13
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Latin America Economic Overview"
+        ]
+      },
+      "Middle East": {
+        "term": "Middle East",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "Middle East Energy Market Forecast",
+            "matched_text": "Middle East",
+            "start_pos": 0,
+            "end_pos": 11
+          },
+          {
+            "title": "Europe, Middle East and Africa Analysis",
+            "matched_text": "Middle East",
+            "start_pos": 8,
+            "end_pos": 19
+          },
+          {
+            "title": "Middle East and Africa Economic Study",
+            "matched_text": "Middle East",
+            "start_pos": 0,
+            "end_pos": 11
+          },
+          {
+            "title": "Southern Europe and Middle East Report",
+            "matched_text": "Middle East",
+            "start_pos": 20,
+            "end_pos": 31
+          },
+          {
+            "title": "Middle East conflicts with East Asia trade",
+            "matched_text": "Middle East",
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 5,
+        "titles_detected": [
+          "Southern Europe and Middle East Report",
+          "Middle East and Africa Economic Study",
+          "Europe, Middle East and Africa Analysis",
+          "Middle East Energy Market Forecast",
+          "Middle East conflicts with East Asia trade"
+        ]
+      },
+      "Asia Pacific": {
+        "term": "Asia Pacific",
+        "aliases": [
+          "APAC",
+          "Asia Pacific Region",
+          "APAC Region"
+        ],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "Asia Pacific Manufacturing Report",
+            "matched_text": "Asia Pacific",
+            "start_pos": 0,
+            "end_pos": 12
+          },
+          {
+            "title": "Asia Pacific and India Market Report",
+            "matched_text": "Asia Pacific",
+            "start_pos": 0,
+            "end_pos": 12
+          },
+          {
+            "title": "Asia Pacific, EMEA Market Analysis",
+            "matched_text": "Asia Pacific",
+            "start_pos": 0,
+            "end_pos": 12
+          },
+          {
+            "title": "European Union Trade with Asia Pacific",
+            "matched_text": "Asia Pacific",
+            "start_pos": 26,
+            "end_pos": 38
+          }
+        ],
+        "alias_detections": {
+          "APAC": [
+            {
+              "title": "APAC Technology Trends",
+              "matched_text": "APAC",
+              "start_pos": 0,
+              "end_pos": 4
+            }
+          ]
+        },
+        "total_detections": 5,
+        "titles_detected": [
+          "APAC Technology Trends",
+          "Asia Pacific Manufacturing Report",
+          "Asia Pacific, EMEA Market Analysis",
+          "European Union Trade with Asia Pacific",
+          "Asia Pacific and India Market Report"
+        ]
+      },
+      "Southeast Asia": {
+        "term": "Southeast Asia",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "Southeast Asia Economic Report",
+            "matched_text": "Southeast Asia",
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Southeast Asia Economic Report"
+        ]
+      },
+      "South Asia": {
+        "term": "South Asia",
+        "aliases": [],
+        "priority": 1,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      },
+      "East Asia": {
+        "term": "East Asia",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "South East Asia Market Analysis",
+            "matched_text": "East Asia",
+            "start_pos": 6,
+            "end_pos": 15
+          },
+          {
+            "title": "Middle East conflicts with East Asia trade",
+            "matched_text": "East Asia",
+            "start_pos": 27,
+            "end_pos": 36
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 2,
+        "titles_detected": [
+          "South East Asia Market Analysis",
+          "Middle East conflicts with East Asia trade"
+        ]
+      },
+      "Central Asia": {
+        "term": "Central Asia",
+        "aliases": [],
+        "priority": 1,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      },
+      "Eastern Europe": {
+        "term": "Eastern Europe",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "Eastern Europe Economic Report",
+            "matched_text": "Eastern Europe",
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Eastern Europe Economic Report"
+        ]
+      },
+      "Western Europe": {
+        "term": "Western Europe",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "Western Europe Market Analysis",
+            "matched_text": "Western Europe",
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Western Europe Market Analysis"
+        ]
+      },
+      "Central Europe": {
+        "term": "Central Europe",
+        "aliases": [],
+        "priority": 1,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      },
+      "North Africa": {
+        "term": "North Africa",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "North Africa Economic Study",
+            "matched_text": "North Africa",
+            "start_pos": 0,
+            "end_pos": 12
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "North Africa Economic Study"
+        ]
+      },
+      "Sub-Saharan Africa": {
+        "term": "Sub-Saharan Africa",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "Sub-Saharan Africa Development Report",
+            "matched_text": "Sub-Saharan Africa",
+            "start_pos": 0,
+            "end_pos": 18
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Sub-Saharan Africa Development Report"
+        ]
+      },
+      "West Africa": {
+        "term": "West Africa",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "West Africa Market Report",
+            "matched_text": "West Africa",
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "West Africa Market Report"
+        ]
+      },
+      "East Africa": {
+        "term": "East Africa",
+        "aliases": [],
+        "priority": 1,
+        "detections": [
+          {
+            "title": "East Africa Economic Analysis",
+            "matched_text": "East Africa",
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "East Africa Economic Analysis"
+        ]
+      },
+      "EMEA": {
+        "term": "EMEA",
+        "aliases": [],
+        "priority": 2,
+        "detections": [
+          {
+            "title": "EMEA Market Analysis",
+            "matched_text": "EMEA",
+            "start_pos": 0,
+            "end_pos": 4
+          },
+          {
+            "title": "Asia Pacific, EMEA Market Analysis",
+            "matched_text": "EMEA",
+            "start_pos": 14,
+            "end_pos": 18
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 2,
+        "titles_detected": [
+          "Asia Pacific, EMEA Market Analysis",
+          "EMEA Market Analysis"
+        ]
+      },
+      "MEA": {
+        "term": "MEA",
+        "aliases": [
+          "Middle East and Africa",
+          "Middle East & Africa",
+          "Middle East Africa"
+        ],
+        "priority": 2,
+        "detections": [
+          {
+            "title": "MEA Regional Study",
+            "matched_text": "MEA",
+            "start_pos": 0,
+            "end_pos": 3
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "MEA Regional Study"
+        ]
+      },
+      "ASEAN": {
+        "term": "ASEAN",
+        "aliases": [
+          "Association of Southeast Asian Nations"
+        ],
+        "priority": 2,
+        "detections": [
+          {
+            "title": "ASEAN Economic Community Report",
+            "matched_text": "ASEAN",
+            "start_pos": 0,
+            "end_pos": 5
+          }
+        ],
+        "alias_detections": {
+          "Association of Southeast Asian Nations": [
+            {
+              "title": "Association of Southeast Asian Nations Report",
+              "matched_text": "Association of Southeast Asian Nations",
+              "start_pos": 0,
+              "end_pos": 38
+            }
+          ]
+        },
+        "total_detections": 2,
+        "titles_detected": [
+          "Association of Southeast Asian Nations Report",
+          "ASEAN Economic Community Report"
+        ]
+      },
+      "GCC": {
+        "term": "GCC",
+        "aliases": [],
+        "priority": 2,
+        "detections": [
+          {
+            "title": "GCC Market Analysis",
+            "matched_text": "GCC",
+            "start_pos": 0,
+            "end_pos": 3
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "GCC Market Analysis"
+        ]
+      },
+      "MENA": {
+        "term": "MENA",
+        "aliases": [],
+        "priority": 2,
+        "detections": [
+          {
+            "title": "MENA Regional Study",
+            "matched_text": "MENA",
+            "start_pos": 0,
+            "end_pos": 4
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "MENA Regional Study"
+        ]
+      },
+      "Europe": {
+        "term": "Europe",
+        "aliases": [
+          "European"
+        ],
+        "priority": 3,
+        "detections": [
+          {
+            "title": "Europe Automotive Industry Analysis",
+            "matched_text": "Europe",
+            "start_pos": 0,
+            "end_pos": 6
+          },
+          {
+            "title": "Europe, Middle East and Africa Analysis",
+            "matched_text": "Europe",
+            "start_pos": 0,
+            "end_pos": 6
+          },
+          {
+            "title": "Southern Europe and Middle East Report",
+            "matched_text": "Europe",
+            "start_pos": 9,
+            "end_pos": 15
+          },
+          {
+            "title": "Europe and North America Market Comparison",
+            "matched_text": "Europe",
+            "start_pos": 0,
+            "end_pos": 6
+          },
+          {
+            "title": "Global study covering USA, Europe, and Asia",
+            "matched_text": "Europe",
+            "start_pos": 27,
+            "end_pos": 33
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 5,
+        "titles_detected": [
+          "Global study covering USA, Europe, and Asia",
+          "Europe and North America Market Comparison",
+          "Southern Europe and Middle East Report",
+          "Europe, Middle East and Africa Analysis",
+          "Europe Automotive Industry Analysis"
+        ]
+      },
+      "Asia": {
+        "term": "Asia",
+        "aliases": [],
+        "priority": 3,
+        "detections": [
+          {
+            "title": "Global study covering USA, Europe, and Asia",
+            "matched_text": "Asia",
+            "start_pos": 39,
+            "end_pos": 43
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Global study covering USA, Europe, and Asia"
+        ]
+      },
+      "Africa": {
+        "term": "Africa",
+        "aliases": [],
+        "priority": 3,
+        "detections": [
+          {
+            "title": "Africa Development Report",
+            "matched_text": "Africa",
+            "start_pos": 0,
+            "end_pos": 6
+          },
+          {
+            "title": "Europe, Middle East and Africa Analysis",
+            "matched_text": "Africa",
+            "start_pos": 24,
+            "end_pos": 30
+          },
+          {
+            "title": "Middle East and Africa Economic Study",
+            "matched_text": "Africa",
+            "start_pos": 16,
+            "end_pos": 22
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 3,
+        "titles_detected": [
+          "Africa Development Report",
+          "Middle East and Africa Economic Study",
+          "Europe, Middle East and Africa Analysis"
+        ]
+      },
+      "Pacific": {
+        "term": "Pacific",
+        "aliases": [],
+        "priority": 3,
+        "detections": [
+          {
+            "title": "Pacific Rim countries analysis",
+            "matched_text": "Pacific",
+            "start_pos": 0,
+            "end_pos": 7
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Pacific Rim countries analysis"
+        ]
+      },
+      "America": {
+        "term": "America",
+        "aliases": [],
+        "priority": 3,
+        "detections": [
+          {
+            "title": "America First Policy Report",
+            "matched_text": "America",
+            "start_pos": 0,
+            "end_pos": 7
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "America First Policy Report"
+        ]
+      },
+      "United States": {
+        "term": "United States",
+        "aliases": [
+          "U.S.",
+          "US",
+          "USA",
+          "U.S.A.",
+          "United States of America"
+        ],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "United States Market Report",
+            "matched_text": "United States",
+            "start_pos": 0,
+            "end_pos": 13
+          }
+        ],
+        "alias_detections": {
+          "U.S.": [
+            {
+              "title": "U.S. Technology Sector Analysis",
+              "matched_text": "U.S.",
+              "start_pos": 0,
+              "end_pos": 4
+            },
+            {
+              "title": "U.S. Onshore Drilling Fluids Market Size, Industry Report, 2018-2025",
+              "matched_text": "U.S.",
+              "start_pos": 0,
+              "end_pos": 4
+            }
+          ],
+          "US": [
+            {
+              "title": "US Manufacturing Report",
+              "matched_text": "US",
+              "start_pos": 0,
+              "end_pos": 2
+            },
+            {
+              "title": "Multi-regional analysis: US, UK, Germany, France",
+              "matched_text": "US",
+              "start_pos": 25,
+              "end_pos": 27
+            }
+          ],
+          "USA": [
+            {
+              "title": "USA Economic Forecast",
+              "matched_text": "USA",
+              "start_pos": 0,
+              "end_pos": 3
+            },
+            {
+              "title": "Global study covering USA, Europe, and Asia",
+              "matched_text": "USA",
+              "start_pos": 22,
+              "end_pos": 25
+            }
+          ]
+        },
+        "total_detections": 7,
+        "titles_detected": [
+          "U.S. Onshore Drilling Fluids Market Size, Industry Report, 2018-2025",
+          "USA Economic Forecast",
+          "Global study covering USA, Europe, and Asia",
+          "Multi-regional analysis: US, UK, Germany, France",
+          "U.S. Technology Sector Analysis",
+          "US Manufacturing Report",
+          "United States Market Report"
+        ]
+      },
+      "United Kingdom": {
+        "term": "United Kingdom",
+        "aliases": [
+          "U.K.",
+          "UK",
+          "Britain",
+          "Great Britain"
+        ],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "United Kingdom Market Study",
+            "matched_text": "United Kingdom",
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ],
+        "alias_detections": {
+          "U.K.": [
+            {
+              "title": "U.K. Financial Services Report",
+              "matched_text": "U.K.",
+              "start_pos": 0,
+              "end_pos": 4
+            }
+          ],
+          "UK": [
+            {
+              "title": "UK Economic Analysis",
+              "matched_text": "UK",
+              "start_pos": 0,
+              "end_pos": 2
+            },
+            {
+              "title": "Multi-regional analysis: US, UK, Germany, France",
+              "matched_text": "UK",
+              "start_pos": 29,
+              "end_pos": 31
+            }
+          ]
+        },
+        "total_detections": 4,
+        "titles_detected": [
+          "United Kingdom Market Study",
+          "Multi-regional analysis: US, UK, Germany, France",
+          "U.K. Financial Services Report",
+          "UK Economic Analysis"
+        ]
+      },
+      "China": {
+        "term": "China",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "China Technology Market",
+            "matched_text": "China",
+            "start_pos": 0,
+            "end_pos": 5
+          },
+          {
+            "title": "Worldwide report including China, India, Japan",
+            "matched_text": "China",
+            "start_pos": 27,
+            "end_pos": 32
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 2,
+        "titles_detected": [
+          "Worldwide report including China, India, Japan",
+          "China Technology Market"
+        ]
+      },
+      "India": {
+        "term": "India",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "India Economic Report",
+            "matched_text": "India",
+            "start_pos": 0,
+            "end_pos": 5
+          },
+          {
+            "title": "Asia Pacific and India Market Report",
+            "matched_text": "India",
+            "start_pos": 17,
+            "end_pos": 22
+          },
+          {
+            "title": "Worldwide report including China, India, Japan",
+            "matched_text": "India",
+            "start_pos": 34,
+            "end_pos": 39
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 3,
+        "titles_detected": [
+          "Asia Pacific and India Market Report",
+          "Worldwide report including China, India, Japan",
+          "India Economic Report"
+        ]
+      },
+      "Japan": {
+        "term": "Japan",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Japan Manufacturing Study",
+            "matched_text": "Japan",
+            "start_pos": 0,
+            "end_pos": 5
+          },
+          {
+            "title": "Worldwide report including China, India, Japan",
+            "matched_text": "Japan",
+            "start_pos": 41,
+            "end_pos": 46
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 2,
+        "titles_detected": [
+          "Worldwide report including China, India, Japan",
+          "Japan Manufacturing Study"
+        ]
+      },
+      "Germany": {
+        "term": "Germany",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Germany Industrial Report",
+            "matched_text": "Germany",
+            "start_pos": 0,
+            "end_pos": 7
+          },
+          {
+            "title": "Multi-regional analysis: US, UK, Germany, France",
+            "matched_text": "Germany",
+            "start_pos": 33,
+            "end_pos": 40
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 2,
+        "titles_detected": [
+          "Multi-regional analysis: US, UK, Germany, France",
+          "Germany Industrial Report"
+        ]
+      },
+      "France": {
+        "term": "France",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "France Market Overview",
+            "matched_text": "France",
+            "start_pos": 0,
+            "end_pos": 6
+          },
+          {
+            "title": "Multi-regional analysis: US, UK, Germany, France",
+            "matched_text": "France",
+            "start_pos": 42,
+            "end_pos": 48
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 2,
+        "titles_detected": [
+          "France Market Overview",
+          "Multi-regional analysis: US, UK, Germany, France"
+        ]
+      },
+      "Italy": {
+        "term": "Italy",
+        "aliases": [],
+        "priority": 4,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      },
+      "Canada": {
+        "term": "Canada",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Canada Market Analysis",
+            "matched_text": "Canada",
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Canada Market Analysis"
+        ]
+      },
+      "Australia": {
+        "term": "Australia",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Australia Resource Report",
+            "matched_text": "Australia",
+            "start_pos": 0,
+            "end_pos": 9
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Australia Resource Report"
+        ]
+      },
+      "Brazil": {
+        "term": "Brazil",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Brazil Economic Forecast",
+            "matched_text": "Brazil",
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Brazil Economic Forecast"
+        ]
+      },
+      "Mexico": {
+        "term": "Mexico",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Mexico Market Study",
+            "matched_text": "Mexico",
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Mexico Market Study"
+        ]
+      },
+      "Saudi Arabia": {
+        "term": "Saudi Arabia",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Saudi Arabia Energy Report",
+            "matched_text": "Saudi Arabia",
+            "start_pos": 0,
+            "end_pos": 12
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Saudi Arabia Energy Report"
+        ]
+      },
+      "UAE": {
+        "term": "UAE",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "UAE Financial Analysis",
+            "matched_text": "UAE",
+            "start_pos": 0,
+            "end_pos": 3
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "UAE Financial Analysis"
+        ]
+      },
+      "Singapore": {
+        "term": "Singapore",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Singapore Financial Market",
+            "matched_text": "Singapore",
+            "start_pos": 0,
+            "end_pos": 9
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Singapore Financial Market"
+        ]
+      },
+      "South Korea": {
+        "term": "South Korea",
+        "aliases": [
+          "Korea"
+        ],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "South Korea Technology Report",
+            "matched_text": "South Korea",
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "South Korea Technology Report"
+        ]
+      },
+      "Indonesia": {
+        "term": "Indonesia",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Indonesia Market Study",
+            "matched_text": "Indonesia",
+            "start_pos": 0,
+            "end_pos": 9
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Indonesia Market Study"
+        ]
+      },
+      "Global": {
+        "term": "Global",
+        "aliases": [
+          "Worldwide",
+          "International",
+          "World"
+        ],
+        "priority": 3,
+        "detections": [
+          {
+            "title": "Global Technology Market Report 2025",
+            "matched_text": "Global",
+            "start_pos": 0,
+            "end_pos": 6
+          },
+          {
+            "title": "Global study covering USA, Europe, and Asia",
+            "matched_text": "Global",
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ],
+        "alias_detections": {
+          "Worldwide": [
+            {
+              "title": "Worldwide report including China, India, Japan",
+              "matched_text": "Worldwide",
+              "start_pos": 0,
+              "end_pos": 9
+            }
+          ]
+        },
+        "total_detections": 3,
+        "titles_detected": [
+          "Worldwide report including China, India, Japan",
+          "Global study covering USA, Europe, and Asia",
+          "Global Technology Market Report 2025"
+        ]
+      },
+      "European Union": {
+        "term": "European Union",
+        "aliases": [
+          "EU",
+          "EU Trade",
+          "European Union Trade",
+          "European",
+          "European Trade"
+        ],
+        "priority": 3,
+        "detections": [
+          {
+            "title": "European Union Market Analysis",
+            "matched_text": "European Union",
+            "start_pos": 0,
+            "end_pos": 14
+          },
+          {
+            "title": "European Union Trade with Asia Pacific",
+            "matched_text": "European Union",
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ],
+        "alias_detections": {
+          "EU": [
+            {
+              "title": "EU Trade Report",
+              "matched_text": "EU",
+              "start_pos": 0,
+              "end_pos": 2
+            }
+          ],
+          "European": [
+            {
+              "title": "European Trade Study",
+              "matched_text": "European",
+              "start_pos": 0,
+              "end_pos": 8
+            }
+          ]
+        },
+        "total_detections": 4,
+        "titles_detected": [
+          "European Union Market Analysis",
+          "EU Trade Report",
+          "European Union Trade with Asia Pacific",
+          "European Trade Study"
+        ]
+      },
+      "Asia Pacific and India": {
+        "term": "Asia Pacific and India",
+        "aliases": [
+          "Asia Pacific & India"
+        ],
+        "priority": 1,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      },
+      "Europe, Middle East and Africa": {
+        "term": "Europe, Middle East and Africa",
+        "aliases": [
+          "EMEA",
+          "Europe Middle East and Africa",
+          "Europe Middle East & Africa"
+        ],
+        "priority": 1,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      },
+      "Central America": {
+        "term": "Central America",
+        "aliases": [],
+        "priority": 2,
+        "detections": [
+          {
+            "title": "Central America Market Study",
+            "matched_text": "Central America",
+            "start_pos": 0,
+            "end_pos": 15
+          },
+          {
+            "title": "Caribbean and Central America study",
+            "matched_text": "Central America",
+            "start_pos": 14,
+            "end_pos": 29
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 2,
+        "titles_detected": [
+          "Caribbean and Central America study",
+          "Central America Market Study"
+        ]
+      },
+      "Caribbean": {
+        "term": "Caribbean",
+        "aliases": [],
+        "priority": 3,
+        "detections": [
+          {
+            "title": "Caribbean and Central America study",
+            "matched_text": "Caribbean",
+            "start_pos": 0,
+            "end_pos": 9
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Caribbean and Central America study"
+        ]
+      },
+      "Americas": {
+        "term": "Americas",
+        "aliases": [],
+        "priority": 3,
+        "detections": [
+          {
+            "title": "Americas-wide economic report",
+            "matched_text": "Americas",
+            "start_pos": 0,
+            "end_pos": 8
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Americas-wide economic report"
+        ]
+      },
+      "Philippines": {
+        "term": "Philippines",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Philippines Economic Report",
+            "matched_text": "Philippines",
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Philippines Economic Report"
+        ]
+      },
+      "Malaysia": {
+        "term": "Malaysia",
+        "aliases": [],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "Malaysia Market Analysis",
+            "matched_text": "Malaysia",
+            "start_pos": 0,
+            "end_pos": 8
+          }
+        ],
+        "alias_detections": {},
+        "total_detections": 1,
+        "titles_detected": [
+          "Malaysia Market Analysis"
+        ]
+      },
+      "United Arab Emirates": {
+        "term": "United Arab Emirates",
+        "aliases": [
+          "UAE",
+          "U.A.E."
+        ],
+        "priority": 4,
+        "detections": [
+          {
+            "title": "United Arab Emirates Market",
+            "matched_text": "United Arab Emirates",
+            "start_pos": 0,
+            "end_pos": 20
+          }
+        ],
+        "alias_detections": {
+          "U.A.E.": [
+            {
+              "title": "U.A.E. Technology Report",
+              "matched_text": "U.A.E.",
+              "start_pos": 0,
+              "end_pos": 6
+            }
+          ]
+        },
+        "total_detections": 2,
+        "titles_detected": [
+          "United Arab Emirates Market",
+          "U.A.E. Technology Report"
+        ]
+      },
+      "Southern Europe and Middle East": {
+        "term": "Southern Europe and Middle East",
+        "aliases": [
+          "Southern Europe & Middle East",
+          "Southern Europe And Middle East"
+        ],
+        "priority": 1,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      },
+      "South East Asia": {
+        "term": "South East Asia",
+        "aliases": [
+          "Southeast Asia"
+        ],
+        "priority": 2,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      },
+      "Oceania": {
+        "term": "Oceania",
+        "aliases": [],
+        "priority": 3,
+        "detections": [],
+        "alias_detections": {},
+        "total_detections": 0,
+        "titles_detected": []
+      }
+    },
+    "detection_summary": {
+      "total_detections": 87,
+      "patterns_with_detections": 46,
+      "patterns_with_alias_detections": 8,
+      "patterns_without_detections": 10,
+      "detection_rate_by_pattern": 82.14,
+      "avg_detections_per_pattern": 1.55
+    },
+    "problem_patterns": [],
+    "title_extraction_results": {
+      "Global Technology Market Report 2025": {
+        "regions": [
+          "Global"
+        ],
+        "extracted_regions": [
+          "Global"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Global",
+            "detected_text": "Global",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ]
+      },
+      "Europe Automotive Industry Analysis": {
+        "regions": [
+          "Europe"
+        ],
+        "extracted_regions": [
+          "Europe"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Europe",
+            "detected_text": "Europe",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ]
+      },
+      "North America Healthcare Market Size": {
+        "regions": [
+          "North America"
+        ],
+        "extracted_regions": [
+          "North America"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "North America",
+            "detected_text": "North America",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 13
+          }
+        ]
+      },
+      "Asia Pacific Manufacturing Report": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "Asia Pacific"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Asia Pacific",
+            "detected_text": "Asia Pacific",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 12
+          }
+        ]
+      },
+      "Middle East Energy Market Forecast": {
+        "regions": [
+          "Middle East"
+        ],
+        "extracted_regions": [
+          "Middle East"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Middle East",
+            "detected_text": "Middle East",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ]
+      },
+      "Latin America Economic Overview": {
+        "regions": [
+          "Latin America"
+        ],
+        "extracted_regions": [
+          "Latin America"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Latin America",
+            "detected_text": "Latin America",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 13
+          }
+        ]
+      },
+      "Africa Development Report": {
+        "regions": [
+          "Africa"
+        ],
+        "extracted_regions": [
+          "Africa"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Africa",
+            "detected_text": "Africa",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ]
+      },
+      "APAC Technology Trends": {
+        "regions": [
+          "Asia Pacific"
+        ],
+        "extracted_regions": [
+          "APAC"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Asia Pacific",
+            "detected_text": "APAC",
+            "source": "alias",
+            "alias_used": "APAC",
+            "start_pos": 0,
+            "end_pos": 4
+          }
+        ]
+      },
+      "EMEA Market Analysis": {
+        "regions": [
+          "EMEA"
+        ],
+        "extracted_regions": [
+          "EMEA"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "EMEA",
+            "detected_text": "EMEA",
+            "source": "term",
+            "priority": 2,
+            "start_pos": 0,
+            "end_pos": 4
+          }
+        ]
+      },
+      "MEA Regional Study": {
+        "regions": [
+          "MEA"
+        ],
+        "extracted_regions": [
+          "MEA"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "MEA",
+            "detected_text": "MEA",
+            "source": "term",
+            "priority": 2,
+            "start_pos": 0,
+            "end_pos": 3
+          }
+        ]
+      },
+      "United States Market Report": {
+        "regions": [
+          "United States"
+        ],
+        "extracted_regions": [
+          "United States"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United States",
+            "detected_text": "United States",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 13
+          }
+        ]
+      },
+      "U.S. Technology Sector Analysis": {
+        "regions": [
+          "United States"
+        ],
+        "extracted_regions": [
+          "U.S."
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United States",
+            "detected_text": "U.S.",
+            "source": "alias",
+            "alias_used": "U.S.",
+            "start_pos": 0,
+            "end_pos": 4
+          }
+        ]
+      },
+      "U.S. Onshore Drilling Fluids Market Size, Industry Report, 2018-2025": {
+        "regions": [
+          "United States"
+        ],
+        "extracted_regions": [
+          "U.S."
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United States",
+            "detected_text": "U.S.",
+            "source": "alias",
+            "alias_used": "U.S.",
+            "start_pos": 0,
+            "end_pos": 4
+          }
+        ]
+      },
+      "US Manufacturing Report": {
+        "regions": [
+          "United States"
+        ],
+        "extracted_regions": [
+          "US"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United States",
+            "detected_text": "US",
+            "source": "alias",
+            "alias_used": "US",
+            "start_pos": 0,
+            "end_pos": 2
+          }
+        ]
+      },
+      "USA Economic Forecast": {
+        "regions": [
+          "United States"
+        ],
+        "extracted_regions": [
+          "USA"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United States",
+            "detected_text": "USA",
+            "source": "alias",
+            "alias_used": "USA",
+            "start_pos": 0,
+            "end_pos": 3
+          }
+        ]
+      },
+      "United Kingdom Market Study": {
+        "regions": [
+          "United Kingdom"
+        ],
+        "extracted_regions": [
+          "United Kingdom"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United Kingdom",
+            "detected_text": "United Kingdom",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ]
+      },
+      "U.K. Financial Services Report": {
+        "regions": [
+          "United Kingdom"
+        ],
+        "extracted_regions": [
+          "U.K."
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United Kingdom",
+            "detected_text": "U.K.",
+            "source": "alias",
+            "alias_used": "U.K.",
+            "start_pos": 0,
+            "end_pos": 4
+          }
+        ]
+      },
+      "UK Economic Analysis": {
+        "regions": [
+          "United Kingdom"
+        ],
+        "extracted_regions": [
+          "UK"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United Kingdom",
+            "detected_text": "UK",
+            "source": "alias",
+            "alias_used": "UK",
+            "start_pos": 0,
+            "end_pos": 2
+          }
+        ]
+      },
+      "Germany Industrial Report": {
+        "regions": [
+          "Germany"
+        ],
+        "extracted_regions": [
+          "Germany"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Germany",
+            "detected_text": "Germany",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 7
+          }
+        ]
+      },
+      "France Market Overview": {
+        "regions": [
+          "France"
+        ],
+        "extracted_regions": [
+          "France"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "France",
+            "detected_text": "France",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ]
+      },
+      "China Technology Market": {
+        "regions": [
+          "China"
+        ],
+        "extracted_regions": [
+          "China"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "China",
+            "detected_text": "China",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 5
+          }
+        ]
+      },
+      "India Economic Report": {
+        "regions": [
+          "India"
+        ],
+        "extracted_regions": [
+          "India"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "India",
+            "detected_text": "India",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 5
+          }
+        ]
+      },
+      "Japan Manufacturing Study": {
+        "regions": [
+          "Japan"
+        ],
+        "extracted_regions": [
+          "Japan"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Japan",
+            "detected_text": "Japan",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 5
+          }
+        ]
+      },
+      "Canada Market Analysis": {
+        "regions": [
+          "Canada"
+        ],
+        "extracted_regions": [
+          "Canada"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Canada",
+            "detected_text": "Canada",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ]
+      },
+      "Australia Resource Report": {
+        "regions": [
+          "Australia"
+        ],
+        "extracted_regions": [
+          "Australia"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Australia",
+            "detected_text": "Australia",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 9
+          }
+        ]
+      },
+      "Brazil Economic Forecast": {
+        "regions": [
+          "Brazil"
+        ],
+        "extracted_regions": [
+          "Brazil"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Brazil",
+            "detected_text": "Brazil",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ]
+      },
+      "Mexico Market Study": {
+        "regions": [
+          "Mexico"
+        ],
+        "extracted_regions": [
+          "Mexico"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Mexico",
+            "detected_text": "Mexico",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ]
+      },
+      "Saudi Arabia Energy Report": {
+        "regions": [
+          "Saudi Arabia"
+        ],
+        "extracted_regions": [
+          "Saudi Arabia"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Saudi Arabia",
+            "detected_text": "Saudi Arabia",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 12
+          }
+        ]
+      },
+      "UAE Financial Analysis": {
+        "regions": [
+          "UAE"
+        ],
+        "extracted_regions": [
+          "UAE"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "UAE",
+            "detected_text": "UAE",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 3
+          }
+        ]
+      },
+      "U.A.E. Technology Report": {
+        "regions": [
+          "United Arab Emirates"
+        ],
+        "extracted_regions": [
+          "U.A.E."
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United Arab Emirates",
+            "detected_text": "U.A.E.",
+            "source": "alias",
+            "alias_used": "U.A.E.",
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ]
+      },
+      "Indonesia Market Study": {
+        "regions": [
+          "Indonesia"
+        ],
+        "extracted_regions": [
+          "Indonesia"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Indonesia",
+            "detected_text": "Indonesia",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 9
+          }
+        ]
+      },
+      "South Korea Technology Report": {
+        "regions": [
+          "South Korea"
+        ],
+        "extracted_regions": [
+          "South Korea"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "South Korea",
+            "detected_text": "South Korea",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ]
+      },
+      "Singapore Financial Market": {
+        "regions": [
+          "Singapore"
+        ],
+        "extracted_regions": [
+          "Singapore"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Singapore",
+            "detected_text": "Singapore",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 9
+          }
+        ]
+      },
+      "Philippines Economic Report": {
+        "regions": [
+          "Philippines"
+        ],
+        "extracted_regions": [
+          "Philippines"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Philippines",
+            "detected_text": "Philippines",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ]
+      },
+      "Malaysia Market Analysis": {
+        "regions": [
+          "Malaysia"
+        ],
+        "extracted_regions": [
+          "Malaysia"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Malaysia",
+            "detected_text": "Malaysia",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 8
+          }
+        ]
+      },
+      "Asia Pacific and India Market Report": {
+        "regions": [
+          "Asia Pacific",
+          "India"
+        ],
+        "extracted_regions": [
+          "Asia Pacific",
+          "India"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Asia Pacific",
+            "detected_text": "Asia Pacific",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 12
+          },
+          {
+            "canonical_term": "India",
+            "detected_text": "India",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 17,
+            "end_pos": 22
+          }
+        ]
+      },
+      "Europe, Middle East and Africa Analysis": {
+        "regions": [
+          "Middle East",
+          "Europe",
+          "Africa"
+        ],
+        "extracted_regions": [
+          "Middle East",
+          "Europe",
+          "Africa"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Middle East",
+            "detected_text": "Middle East",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 8,
+            "end_pos": 19
+          },
+          {
+            "canonical_term": "Europe",
+            "detected_text": "Europe",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 6
+          },
+          {
+            "canonical_term": "Africa",
+            "detected_text": "Africa",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 24,
+            "end_pos": 30
+          }
+        ]
+      },
+      "Middle East and Africa Economic Study": {
+        "regions": [
+          "Middle East",
+          "Africa"
+        ],
+        "extracted_regions": [
+          "Middle East",
+          "Africa"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Middle East",
+            "detected_text": "Middle East",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 11
+          },
+          {
+            "canonical_term": "Africa",
+            "detected_text": "Africa",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 16,
+            "end_pos": 22
+          }
+        ]
+      },
+      "Southern Europe and Middle East Report": {
+        "regions": [
+          "Middle East",
+          "Europe"
+        ],
+        "extracted_regions": [
+          "Middle East",
+          "Europe"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Middle East",
+            "detected_text": "Middle East",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 20,
+            "end_pos": 31
+          },
+          {
+            "canonical_term": "Europe",
+            "detected_text": "Europe",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 9,
+            "end_pos": 15
+          }
+        ]
+      },
+      "South East Asia Market Analysis": {
+        "regions": [
+          "East Asia"
+        ],
+        "extracted_regions": [
+          "East Asia"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "East Asia",
+            "detected_text": "East Asia",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 6,
+            "end_pos": 15
+          }
+        ]
+      },
+      "Southeast Asia Economic Report": {
+        "regions": [
+          "Southeast Asia"
+        ],
+        "extracted_regions": [
+          "Southeast Asia"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Southeast Asia",
+            "detected_text": "Southeast Asia",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ]
+      },
+      "Central America Market Study": {
+        "regions": [
+          "Central America"
+        ],
+        "extracted_regions": [
+          "Central America"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Central America",
+            "detected_text": "Central America",
+            "source": "term",
+            "priority": 2,
+            "start_pos": 0,
+            "end_pos": 15
+          }
+        ]
+      },
+      "Eastern Europe Economic Report": {
+        "regions": [
+          "Eastern Europe"
+        ],
+        "extracted_regions": [
+          "Eastern Europe"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Eastern Europe",
+            "detected_text": "Eastern Europe",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ]
+      },
+      "Western Europe Market Analysis": {
+        "regions": [
+          "Western Europe"
+        ],
+        "extracted_regions": [
+          "Western Europe"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Western Europe",
+            "detected_text": "Western Europe",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ]
+      },
+      "Sub-Saharan Africa Development Report": {
+        "regions": [
+          "Sub-Saharan Africa"
+        ],
+        "extracted_regions": [
+          "Sub-Saharan Africa"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Sub-Saharan Africa",
+            "detected_text": "Sub-Saharan Africa",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 18
+          }
+        ]
+      },
+      "North Africa Economic Study": {
+        "regions": [
+          "North Africa"
+        ],
+        "extracted_regions": [
+          "North Africa"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "North Africa",
+            "detected_text": "North Africa",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 12
+          }
+        ]
+      },
+      "West Africa Market Report": {
+        "regions": [
+          "West Africa"
+        ],
+        "extracted_regions": [
+          "West Africa"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "West Africa",
+            "detected_text": "West Africa",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ]
+      },
+      "East Africa Economic Analysis": {
+        "regions": [
+          "East Africa"
+        ],
+        "extracted_regions": [
+          "East Africa"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "East Africa",
+            "detected_text": "East Africa",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 11
+          }
+        ]
+      },
+      "ASEAN Economic Community Report": {
+        "regions": [
+          "ASEAN"
+        ],
+        "extracted_regions": [
+          "ASEAN"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "ASEAN",
+            "detected_text": "ASEAN",
+            "source": "term",
+            "priority": 2,
+            "start_pos": 0,
+            "end_pos": 5
+          }
+        ]
+      },
+      "GCC Market Analysis": {
+        "regions": [
+          "GCC"
+        ],
+        "extracted_regions": [
+          "GCC"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "GCC",
+            "detected_text": "GCC",
+            "source": "term",
+            "priority": 2,
+            "start_pos": 0,
+            "end_pos": 3
+          }
+        ]
+      },
+      "MENA Regional Study": {
+        "regions": [
+          "MENA"
+        ],
+        "extracted_regions": [
+          "MENA"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "MENA",
+            "detected_text": "MENA",
+            "source": "term",
+            "priority": 2,
+            "start_pos": 0,
+            "end_pos": 4
+          }
+        ]
+      },
+      "EU Trade Report": {
+        "regions": [
+          "European Union"
+        ],
+        "extracted_regions": [
+          "EU"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "European Union",
+            "detected_text": "EU",
+            "source": "alias",
+            "alias_used": "EU",
+            "start_pos": 0,
+            "end_pos": 2
+          }
+        ]
+      },
+      "European Union Market Analysis": {
+        "regions": [
+          "European Union"
+        ],
+        "extracted_regions": [
+          "European Union"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "European Union",
+            "detected_text": "European Union",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ]
+      },
+      "European Trade Study": {
+        "regions": [
+          "European Union"
+        ],
+        "extracted_regions": [
+          "European"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "European Union",
+            "detected_text": "European",
+            "source": "alias",
+            "alias_used": "European",
+            "start_pos": 0,
+            "end_pos": 8
+          }
+        ]
+      },
+      "Association of Southeast Asian Nations Report": {
+        "regions": [
+          "ASEAN"
+        ],
+        "extracted_regions": [
+          "Association of Southeast Asian Nations"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "ASEAN",
+            "detected_text": "Association of Southeast Asian Nations",
+            "source": "alias",
+            "alias_used": "Association of Southeast Asian Nations",
+            "start_pos": 0,
+            "end_pos": 38
+          }
+        ]
+      },
+      "United Arab Emirates Market": {
+        "regions": [
+          "United Arab Emirates"
+        ],
+        "extracted_regions": [
+          "United Arab Emirates"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "United Arab Emirates",
+            "detected_text": "United Arab Emirates",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 0,
+            "end_pos": 20
+          }
+        ]
+      },
+      "Europe and North America Market Comparison": {
+        "regions": [
+          "North America",
+          "Europe"
+        ],
+        "extracted_regions": [
+          "North America",
+          "Europe"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "North America",
+            "detected_text": "North America",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 11,
+            "end_pos": 24
+          },
+          {
+            "canonical_term": "Europe",
+            "detected_text": "Europe",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 6
+          }
+        ]
+      },
+      "Asia Pacific, EMEA Market Analysis": {
+        "regions": [
+          "Asia Pacific",
+          "EMEA"
+        ],
+        "extracted_regions": [
+          "Asia Pacific",
+          "EMEA"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Asia Pacific",
+            "detected_text": "Asia Pacific",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 12
+          },
+          {
+            "canonical_term": "EMEA",
+            "detected_text": "EMEA",
+            "source": "term",
+            "priority": 2,
+            "start_pos": 14,
+            "end_pos": 18
+          }
+        ]
+      },
+      "Global study covering USA, Europe, and Asia": {
+        "regions": [
+          "Europe",
+          "Asia",
+          "Global",
+          "United States"
+        ],
+        "extracted_regions": [
+          "Europe",
+          "Asia",
+          "Global",
+          "USA"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Europe",
+            "detected_text": "Europe",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 27,
+            "end_pos": 33
+          },
+          {
+            "canonical_term": "Asia",
+            "detected_text": "Asia",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 39,
+            "end_pos": 43
+          },
+          {
+            "canonical_term": "Global",
+            "detected_text": "Global",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 6
+          },
+          {
+            "canonical_term": "United States",
+            "detected_text": "USA",
+            "source": "alias",
+            "alias_used": "USA",
+            "start_pos": 22,
+            "end_pos": 25
+          }
+        ]
+      },
+      "Multi-regional analysis: US, UK, Germany, France": {
+        "regions": [
+          "Germany",
+          "France",
+          "United States",
+          "United Kingdom"
+        ],
+        "extracted_regions": [
+          "Germany",
+          "France",
+          "US",
+          "UK"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Germany",
+            "detected_text": "Germany",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 33,
+            "end_pos": 40
+          },
+          {
+            "canonical_term": "France",
+            "detected_text": "France",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 42,
+            "end_pos": 48
+          },
+          {
+            "canonical_term": "United States",
+            "detected_text": "US",
+            "source": "alias",
+            "alias_used": "US",
+            "start_pos": 25,
+            "end_pos": 27
+          },
+          {
+            "canonical_term": "United Kingdom",
+            "detected_text": "UK",
+            "source": "alias",
+            "alias_used": "UK",
+            "start_pos": 29,
+            "end_pos": 31
+          }
+        ]
+      },
+      "Worldwide report including China, India, Japan": {
+        "regions": [
+          "China",
+          "India",
+          "Japan",
+          "Global"
+        ],
+        "extracted_regions": [
+          "China",
+          "India",
+          "Japan",
+          "Worldwide"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "China",
+            "detected_text": "China",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 27,
+            "end_pos": 32
+          },
+          {
+            "canonical_term": "India",
+            "detected_text": "India",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 34,
+            "end_pos": 39
+          },
+          {
+            "canonical_term": "Japan",
+            "detected_text": "Japan",
+            "source": "term",
+            "priority": 4,
+            "start_pos": 41,
+            "end_pos": 46
+          },
+          {
+            "canonical_term": "Global",
+            "detected_text": "Worldwide",
+            "source": "alias",
+            "alias_used": "Worldwide",
+            "start_pos": 0,
+            "end_pos": 9
+          }
+        ]
+      },
+      "America First Policy Report": {
+        "regions": [
+          "America"
+        ],
+        "extracted_regions": [
+          "America"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "America",
+            "detected_text": "America",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 7
+          }
+        ]
+      },
+      "European Union Trade with Asia Pacific": {
+        "regions": [
+          "Asia Pacific",
+          "European Union"
+        ],
+        "extracted_regions": [
+          "Asia Pacific",
+          "European Union"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Asia Pacific",
+            "detected_text": "Asia Pacific",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 26,
+            "end_pos": 38
+          },
+          {
+            "canonical_term": "European Union",
+            "detected_text": "European Union",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ]
+      },
+      "Middle East conflicts with East Asia trade": {
+        "regions": [
+          "Middle East",
+          "East Asia"
+        ],
+        "extracted_regions": [
+          "Middle East",
+          "East Asia"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Middle East",
+            "detected_text": "Middle East",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 0,
+            "end_pos": 11
+          },
+          {
+            "canonical_term": "East Asia",
+            "detected_text": "East Asia",
+            "source": "term",
+            "priority": 1,
+            "start_pos": 27,
+            "end_pos": 36
+          }
+        ]
+      },
+      "North American and South American markets": {
+        "regions": [
+          "North America"
+        ],
+        "extracted_regions": [
+          "North American"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "North America",
+            "detected_text": "North American",
+            "source": "alias",
+            "alias_used": "North American",
+            "start_pos": 0,
+            "end_pos": 14
+          }
+        ]
+      },
+      "Pacific Rim countries analysis": {
+        "regions": [
+          "Pacific"
+        ],
+        "extracted_regions": [
+          "Pacific"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Pacific",
+            "detected_text": "Pacific",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 7
+          }
+        ]
+      },
+      "Caribbean and Central America study": {
+        "regions": [
+          "Central America",
+          "Caribbean"
+        ],
+        "extracted_regions": [
+          "Central America",
+          "Caribbean"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Central America",
+            "detected_text": "Central America",
+            "source": "term",
+            "priority": 2,
+            "start_pos": 14,
+            "end_pos": 29
+          },
+          {
+            "canonical_term": "Caribbean",
+            "detected_text": "Caribbean",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 9
+          }
+        ]
+      },
+      "Americas-wide economic report": {
+        "regions": [
+          "Americas"
+        ],
+        "extracted_regions": [
+          "Americas"
+        ],
+        "detection_details": [
+          {
+            "canonical_term": "Americas",
+            "detected_text": "Americas",
+            "source": "term",
+            "priority": 3,
+            "start_pos": 0,
+            "end_pos": 8
+          }
+        ]
+      },
+      "Blockchain Technology Market Report": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      },
+      "Artificial Intelligence Industry Analysis": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      },
+      "Renewable Energy Sector Study": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      },
+      "Pharmaceutical Research Report": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      },
+      "Automotive Technology Trends": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      },
+      "Healthcare Innovation Report": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      },
+      "Financial Services Analysis": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      },
+      "E-commerce Market Study": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      },
+      "Cybersecurity Industry Report": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      },
+      "Clean Energy Technology Analysis": {
+        "regions": [],
+        "extracted_regions": [],
+        "detection_details": []
+      }
+    }
+  }
+}

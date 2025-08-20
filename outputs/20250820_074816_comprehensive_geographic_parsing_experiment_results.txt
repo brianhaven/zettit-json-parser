@@ -1,0 +1,160 @@
+COMPREHENSIVE GEOGRAPHIC PARSING EXPERIMENT RESULTS
+================================================================================
+Analysis Date (PDT): 2025-08-20 00:47:30 PDT
+Analysis Date (UTC): 2025-08-20 07:47:30 UTC
+================================================================================
+
+SYSTEM STATUS
+----------------------------------------
+MongoDB: Connected
+spaCy Model: Available
+Dataset Size: 200 titles
+
+EXPERIMENT RESULTS BY SCENARIO
+----------------------------------------
+
+Scenario: title_short_original
+Model: patterns_only
+Detection Rate: 13.50%
+Total Entities: 28
+Unique Entities: 15
+Avg Entities/Title: 0.14
+Processing Time: 1.52s
+Confidence Distribution:
+  Low: 0
+  Medium: 0
+  High: 28
+------------------------------
+
+Scenario: title_short_original
+Model: patterns_spacy
+Detection Rate: 16.00%
+Total Entities: 36
+Unique Entities: 19
+Avg Entities/Title: 0.18
+Processing Time: 3.38s
+Confidence Distribution:
+  Low: 0
+  Medium: 5
+  High: 31
+------------------------------
+
+Scenario: title_short_cleaned
+Model: patterns_only
+Detection Rate: 13.50%
+Total Entities: 28
+Unique Entities: 15
+Avg Entities/Title: 0.14
+Processing Time: 1.48s
+Confidence Distribution:
+  Low: 0
+  Medium: 0
+  High: 28
+------------------------------
+
+Scenario: title_short_cleaned
+Model: patterns_spacy
+Detection Rate: 16.00%
+Total Entities: 36
+Unique Entities: 19
+Avg Entities/Title: 0.18
+Processing Time: 3.32s
+Confidence Distribution:
+  Low: 0
+  Medium: 5
+  High: 31
+------------------------------
+
+Scenario: title_short_lowercase
+Model: patterns_only
+Detection Rate: 13.50%
+Total Entities: 28
+Unique Entities: 15
+Avg Entities/Title: 0.14
+Processing Time: 1.49s
+Confidence Distribution:
+  Low: 0
+  Medium: 0
+  High: 28
+------------------------------
+
+Scenario: title_short_lowercase
+Model: patterns_spacy
+Detection Rate: 19.00%
+Total Entities: 40
+Unique Entities: 17
+Avg Entities/Title: 0.20
+Processing Time: 3.37s
+Confidence Distribution:
+  Low: 0
+  Medium: 11
+  High: 29
+------------------------------
+
+Scenario: title_full_original
+Model: patterns_only
+Detection Rate: 46.50%
+Total Entities: 121
+Unique Entities: 17
+Avg Entities/Title: 0.60
+Processing Time: 6.19s
+Confidence Distribution:
+  Low: 0
+  Medium: 0
+  High: 121
+------------------------------
+
+Scenario: title_full_original
+Model: patterns_spacy
+Detection Rate: 61.50%
+Total Entities: 166
+Unique Entities: 33
+Avg Entities/Title: 0.83
+Processing Time: 9.34s
+Confidence Distribution:
+  Low: 0
+  Medium: 39
+  High: 127
+------------------------------
+
+Scenario: title_full_lowercase
+Model: patterns_only
+Detection Rate: 46.50%
+Total Entities: 121
+Unique Entities: 17
+Avg Entities/Title: 0.60
+Processing Time: 6.17s
+Confidence Distribution:
+  Low: 0
+  Medium: 0
+  High: 121
+------------------------------
+
+Scenario: title_full_lowercase
+Model: patterns_spacy
+Detection Rate: 54.00%
+Total Entities: 144
+Unique Entities: 29
+Avg Entities/Title: 0.72
+Processing Time: 9.46s
+Confidence Distribution:
+  Low: 0
+  Medium: 21
+  High: 123
+------------------------------
+
+COMPARATIVE ANALYSIS
+----------------------------------------
+Best Detection Rate: title_full_original with patterns_spacy (61.50%)
+Most Entities Detected: title_full_original with patterns_spacy (166 entities)
+Best Confidence: title_short_original with patterns_only (100.0% high confidence)
+
+RECOMMENDATIONS
+----------------------------------------
+1. BEST OVERALL: Use title_full_original with patterns_spacy for highest detection rate (61.50%)
+2. spaCy Integration provides 6.60% average detection rate improvement
+3. Use report_title_full for better detection (52.12% vs 15.25%)
+4. Highest confidence results from title_short_original with patterns_only (100.0% high confidence)
+
+================================================================================
+END OF REPORT

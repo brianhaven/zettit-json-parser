@@ -1,0 +1,22 @@
+Geographic Entity Detection Test Report
+============================================================
+Analysis Date (PDT): 2025-08-19 23:24:44 PDT
+Analysis Date (UTC): 2025-08-20 06:24:44 UTC
+============================================================
+
+TEST SUMMARY:
+
+PATTERN_TESTS:
+  ✅ mongodb_pattern_library: pass
+  ✅ compound_first_processing: pass
+
+MODEL_TESTS:
+  ✅ model_integration_placeholders: pass
+
+ACCURACY_TESTS:
+  ✅ geographic_accuracy: pass
+
+PERFORMANCE_TESTS:
+  ✅ performance_metrics: pass
+
+KEY PERFORMANCE METRICS:
