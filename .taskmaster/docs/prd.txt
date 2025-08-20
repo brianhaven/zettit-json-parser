@@ -1,0 +1,112 @@
+# Market Research Title Parser - Product Requirements Document
+
+## Executive Summary
+Build a systematic pattern-matching solution that extracts structured information from 19,558+ market research report titles using MongoDB-based pattern libraries and deterministic processing logic.
+
+## Core Problem
+Market research organizations have massive collections of report titles containing structured data (topics, geographic regions, report types, forecast dates) that needs systematic extraction. Manual processing is impractical, and traditional NLP solutions cost $900+/month for GPU-based approaches.
+
+## Solution Overview
+Transform the NLP problem into deterministic pattern matching through systematic removal:
+1. Remove known patterns in order (dates, report types, geographic regions)
+2. What remains IS the topic - no interpretation required
+3. Track confidence levels for human review of edge cases
+
+## Key Features Required
+
+### 1. MongoDB Pattern Library System
+- Create pattern_libraries collection for real-time pattern storage
+- Support geographic entities, market terms, date patterns, report types
+- Include performance tracking (success_count, failure_count)
+- Enable real-time updates without deployment
+
+### 2. Market Term Classification System
+- Detect "Market for" patterns (0.2% of dataset)
+- Detect "Market in" patterns (0.1% of dataset) 
+- Route remaining 99.7% as standard "Market" titles
+- Apply different processing logic for each type
+
+### 3. Date Extraction System
+- Extract field: extracted_forecast_date_range
+- Handle standard patterns: ", 2030" (terminal comma format)
+- Handle range patterns: ", 2020-2027"
+- Handle bracket patterns: "[2023 Report]"
+- Handle embedded patterns: "Outlook 2031" (no comma)
+- Target: 98-99% extraction accuracy
+
+### 4. Report Type Extraction System
+- Extract field: extracted_report_type
+- Include "Market" prefix for standard titles
+- Post-date removal for clean patterns (~20 core types vs 4,000+ with dates)
+- Examples: "Market Size & Share Report", "Market Industry Report"
+- Target: 95-97% extraction accuracy
+
+### 5. Geographic Entity Detection System
+- Extract field: extracted_regions (array preserving source order)
+- Compound-first processing ("North America" before "America")
+- 363+ entity library with aliases and priority ordering
+- Optional SpaCy/GLiNER integration for entity discovery
+- Target: 96-98% detection accuracy
+
+### 6. Topic Extraction System
+- Extract fields: topic (clean) and topicName (normalized)
+- Everything before "Market" minus extracted patterns
+- Preserve technical compounds and specifications
+- Handle special concatenation for "Market for/in" patterns
+- Target: 92-95% extraction accuracy
+
+### 7. Confidence Tracking System
+- Calculate confidence scores based on extraction completeness
+- Flag titles with confidence < 0.8 for human review
+- Maintain confusion tracker for pattern library improvement
+- Track performance metrics in MongoDB
+
+## Technical Requirements
+
+### Database Architecture
+- MongoDB Atlas collections: markets_raw, pattern_libraries, markets_processed
+- Real-time library updates without deployment
+- Performance tracking built into database operations
+- Indexing for fast pattern lookups
+
+### Processing Pipeline
+- Step-based systematic approach
+- Single orchestrator script for complete processing
+- MongoDB library manager for pattern access
+- Progress indicators for large dataset processing
+
+### Output Standards
+- Dual timestamps (PDT and UTC) in all output files
+- Comprehensive logging for debugging
+- Graceful error handling with informative messages
+- Success rate tracking and failure analysis
+
+## Success Criteria
+- Overall Processing: 95-98% complete success
+- Date Extraction: 98-99% accuracy
+- Report Type: 95-97% accuracy  
+- Geographic Detection: 96-98% accuracy
+- Topic Extraction: 92-95% accuracy
+- < 5% titles requiring human review
+- < 1% critical parsing failures
+
+## Implementation Strategy
+1. Set up MongoDB pattern library collections
+2. Implement market term classification (2 patterns)
+3. Build date pattern extraction system
+4. Develop report type library with deduplication
+5. Integrate geographic entity detection with compound priority
+6. Build topic extraction with technical compound preservation
+7. Implement end-to-end validation and confidence scoring
+
+## Constraints
+- MongoDB-first architecture (no local caching complexity)
+- Deterministic processing (same input = same output)
+- Cost-effective deployment on AWS EC2 t3.large (~$70-80/month)
+- Script-based implementation (not AI-dependent for production)
+
+## Future Enhancements
+- Automated pattern discovery from processing results
+- Machine learning for confidence score optimization
+- API service for real-time title processing
+- Self-improving system through success/failure tracking

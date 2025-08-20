@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project extracts structured information (topics, topicNames, regions) from market research report titles in MongoDB's markets_raw collection using systematic pattern analysis and library-based processing.
+A systematic pattern-matching solution that extracts structured information (topics, topicNames, regions) from market research report titles using MongoDB-based pattern libraries and deterministic processing logic.
 
 ## Development Standards
 
@@ -26,79 +26,164 @@ This project extracts structured information (topics, topicNames, regions) from 
 - Include both PDT/PST and UTC timestamps in file headers
 - Examples: `20250819_153045_pattern_analysis.json`, `20250819_153045_processing_summary.md`
 
+## MongoDB-First Architecture
+
+### Database Strategy
+**MongoDB Atlas serves as both data source and pattern library storage:**
+- **Primary data:** `markets_raw` collection (19,558+ titles)
+- **Pattern libraries:** `pattern_libraries` collection with real-time updates
+- **Processed results:** `markets_processed` collection for output tracking
+- **Performance metrics:** Built-in success/failure tracking
+
+### Claude Code MongoDB Integration
+**IMPORTANT: Use MongoDB MCP Server for all database interactions**
+
+**For interactive database work:**
+```bash
+# List collections
+/mcp:supabase list_tables  # Use MongoDB MCP equivalent
+
+# Query titles 
+/mcp:mongodb find markets_raw {}
+
+# Update pattern libraries
+/mcp:mongodb insert pattern_libraries {...}
+```
+
+**For scripts:** Scripts use pymongo API directly
+```python
+from pymongo import MongoClient
+client = MongoClient(os.getenv('MONGODB_URI'))
+db = client['deathstar']
+```
+
 ### Processing Methodology
 
 **Step-based systematic approach:**
 1. **Market term classification:** Separate "Market for"/"Market in" from standard "Market" titles
-2. **Date extraction:** Remove dates first to prevent report type contamination
-3. **Report type extraction:** Extract from "Market" onwards (include "Market" for standard titles)
-4. **Geographic processing:** Compound entity detection with priority (e.g., "North America" before "America")
-5. **Topic extraction:** Preserve complete technical compounds and specifications
+2. **Date extraction:** Remove dates first (`extracted_forecast_date_range` field)
+3. **Report type extraction:** Extract from "Market" onwards (`extracted_report_type` field)
+4. **Geographic processing:** Compound entity detection (`extracted_regions` array, preserve order)
+5. **Topic extraction:** Complete technical compound preservation (`topic` and `topicName` fields)
 
 ### Library-Based Processing Strategy
 
-**Core principle:** Build comprehensive libraries for:
-- Confusing market terms ("After Market", "Marketplace", "Farmers Market")
-- Date patterns (bracketed formats, non-comma patterns)
-- Geographic entities (compound-first priority)
-- Report type variations
+**MongoDB Pattern Libraries Structure:**
+```javascript
+// pattern_libraries collection
+{
+  "type": "geographic_entity", // or "market_term", "date_pattern", "report_type"
+  "term": "North America",
+  "aliases": ["NA", "North American"],
+  "priority": 1,  // For compound processing order
+  "active": true,
+  "success_count": 1547,
+  "failure_count": 3,
+  "created_date": ISODate(),
+  "last_updated": ISODate()
+}
+```
 
 **Processing philosophy:** Systematic removal approach
-- Remove dates/suffixes, report types, geographic regions
+- Remove known patterns in order (dates, report types, geographic regions)
 - What remains IS the topic (regardless of internal punctuation)
-- Handle edge cases through library expansion, not complex parsing
+- Track performance metrics in MongoDB for continuous improvement
+
+### Extracted Field Standards
+
+**Required output fields:**
+- `market_term_type`: "standard", "market_for", or "market_in"
+- `extracted_forecast_date_range`: Date/range string
+- `extracted_report_type`: Full report type including "Market"
+- `extracted_regions`: Array preserving source order
+- `topic`: Clean extracted topic
+- `topicName`: Normalized topic for system use
+- `confidence_score`: Float 0.0-1.0 for quality tracking
 
 ### Code Standards
 
-- **MongoDB connection:** Use environment variables from `.env` file
-- **Logging:** Include comprehensive logging for debugging
-- **Error handling:** Graceful handling with informative error messages
-- **Performance:** Process large datasets efficiently with progress indicators
-- **Validation:** Include success rate tracking and failure analysis
-
-### Environment Setup
-
-**Required environment variables:**
-```
-MONGODB_URI=mongodb+srv://...
-```
+**MongoDB Integration:**
+- Use environment variables from `.env` file for connection
+- MongoDB collections for pattern libraries (not static files)
+- Real-time library updates without deployment
+- Performance tracking built into database operations
 
 **Dependencies:**
 - `pymongo` for MongoDB connectivity
 - `python-dotenv` for environment variable management
-- Standard libraries: `json`, `re`, `datetime`, `collections`
+- `spacy` for geographic entity discovery (optional)
+- `gliner` for named entity recognition (optional)
+
+**Script Requirements:**
+- Comprehensive logging for debugging
+- Graceful error handling with informative messages
+- Progress indicators for large dataset processing
+- Confidence tracking for edge case identification
 
 ### Testing Strategy
 
-- Use `/experiments/` directory for development and testing
-- Set aside confusing titles for manual review and library improvement
-- Continuous validation against known patterns
-- User feedback integration for library enhancement
+**Development Process:**
+- Use `/experiments/` directory for iterative development
+- MongoDB-based A/B testing for pattern libraries
+- Confidence scoring to identify titles needing human review
+- Real-time performance metrics for continuous improvement
+
+**Validation Approach:**
+- Track success/failure rates in MongoDB
+- Human review of low-confidence extractions
+- Pattern library enhancement based on processing results
 
 ### Success Metrics
 
-**Target success rates:**
-- Standard titles (99.7% of dataset): 95-98% processing success
-- Special market terms (0.3% of dataset): 85-90% processing success
-- Overall dataset: 95-97% complete processing success
+**Target accuracy rates:**
+- **Date extraction:** 98-99% accuracy
+- **Report type extraction:** 95-97% accuracy  
+- **Geographic detection:** 96-98% accuracy
+- **Topic extraction:** 92-95% accuracy
+- **Overall processing:** 95-98% complete success
 
-### Library Maintenance
+**Quality indicators:**
+- < 5% titles requiring human review (confidence < 0.8)
+- < 2% false positive geographic detection
+- < 1% critical parsing failures
 
-- Expandable libraries for continuous improvement
-- User-guided enhancement of edge case handling
-- Pattern discovery from real data for library updates
-- Version control for library changes and improvements
+### Implementation Strategy
+
+**Modular Development:**
+1. MongoDB library setup and initialization
+2. Market term classification (2 patterns)
+3. Date pattern extraction and library building
+4. Report type pattern extraction and library building  
+5. Geographic entity detection with SpaCy/GLiNER enhancement
+6. Topic extraction and normalization
+7. End-to-end validation and confidence tuning
+
+**Script Architecture:**
+- Single orchestrator script for complete processing
+- MongoDB library manager for pattern access
+- Confidence tracker for edge case identification
+- Performance metrics integration
 
 ## Current Status
 
-**Completed Analysis:**
-- Pattern discovery across 19,558 titles
-- AI analysis of processing strategies
-- Failure case identification and solutions
-- Processing architecture design
+**Architecture Finalized:**
+- MongoDB-first approach confirmed
+- Step-by-step processing methodology defined
+- Field naming standards established
+- Library structure designed
 
 **Next Steps:**
-- Library building and systematic removal implementation
-- Production script development
-- Validation and testing framework
-- Deployment preparation
+1. Set up MongoDB pattern library collections
+2. Implement market term classification
+3. Build date pattern extraction system
+4. Develop report type library
+5. Integrate geographic entity detection
+6. Build topic extraction logic
+7. Implement end-to-end validation
+
+**Development Priority:**
+Script-based implementation with deterministic pattern matching achieves 95%+ accuracy through systematic removal approach and MongoDB-based library management.
+
+## Task Master AI Instructions
+**Import Task Master's development workflow commands and guidelines, treat as if import is in the main CLAUDE.md file.**
+@./.taskmaster/CLAUDE.md

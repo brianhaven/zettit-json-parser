@@ -1,0 +1,219 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup MongoDB Atlas Environment",
+        "description": "Configure MongoDB Atlas environment with required collections for pattern libraries and market research data processing.",
+        "details": "1. Create a MongoDB Atlas account or use existing account\n2. Set up a new cluster (recommend M10 tier for production, M0 for development)\n3. Create the following collections:\n   - markets_raw: For storing raw market research titles\n   - pattern_libraries: For storing pattern matching libraries\n   - markets_processed: For storing processed results\n4. Set up appropriate indexes for performance:\n   - Text index on pattern_libraries.pattern\n   - Index on markets_raw.title\n   - Compound index on markets_processed.confidence_score\n5. Configure network access and database users\n6. Generate and securely store connection strings\n7. Implement connection pooling with the latest MongoDB Node.js driver (v5.0+)\n8. Set up automated backups for the database\n9. Document the database schema and access patterns",
+        "testStrategy": "1. Verify successful connection to MongoDB Atlas\n2. Confirm all collections are created with proper indexes\n3. Test read/write operations to each collection\n4. Measure query performance with sample data\n5. Verify backup and restore functionality\n6. Test connection pooling under load conditions",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Implement Pattern Library Manager",
+        "description": "Create a module to manage pattern libraries in MongoDB, including CRUD operations and performance tracking.",
+        "details": "1. Create a PatternLibraryManager class with the following methods:\n   - getPatterns(type): Retrieve patterns by type (geographic, market_terms, date_patterns, report_types)\n   - addPattern(type, pattern, priority): Add new pattern to library\n   - updatePattern(id, updates): Update existing pattern\n   - deletePattern(id): Remove pattern from library\n   - trackSuccess(patternId): Increment success_count for pattern\n   - trackFailure(patternId): Increment failure_count for pattern\n   - getPerformanceMetrics(): Get pattern performance statistics\n2. Implement caching mechanism with TTL to reduce database calls\n3. Add bulk operations for pattern updates\n4. Include validation for pattern formats\n5. Implement proper error handling and logging\n6. Use MongoDB transactions for critical operations\n7. Add methods for pattern prioritization and sorting\n8. Include documentation with JSDoc",
+        "testStrategy": "1. Unit tests for each CRUD operation\n2. Test pattern retrieval performance with large datasets\n3. Verify success/failure tracking increments correctly\n4. Test cache invalidation and refresh\n5. Validate error handling for edge cases\n6. Performance testing with concurrent operations\n7. Integration tests with mock MongoDB instance",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Develop Market Term Classification System",
+        "description": "Build a system to classify market research titles into different categories based on patterns ('Market for', 'Market in', standard 'Market').",
+        "details": "1. Create a MarketTermClassifier class with the following methods:\n   - classify(title): Determine market title type\n   - isMarketForPattern(title): Check if title matches 'Market for' pattern (~0.2% of dataset)\n   - isMarketInPattern(title): Check if title matches 'Market in' pattern (~0.1% of dataset)\n   - isStandardMarket(title): Check if title is standard market pattern (99.7% of dataset)\n2. Implement regex patterns for each classification type\n3. Add confidence scoring for classification results\n4. Include preprocessing to normalize text (lowercase, trim, etc.)\n5. Handle edge cases like multiple pattern matches\n6. Track classification statistics for monitoring\n7. Use the latest ECMAScript regex features for better pattern matching\n8. Implement fallback logic for unclassified titles\n9. Add detailed logging for classification decisions",
+        "testStrategy": "1. Unit tests with sample titles for each pattern type\n2. Test with edge cases and ambiguous titles\n3. Verify classification distribution matches expected percentages\n4. Measure classification performance with large datasets\n5. Test preprocessing normalization\n6. Validate confidence scoring accuracy\n7. Integration tests with the pattern library",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Build Date Extraction System",
+        "description": "Develop a system to extract forecast date ranges from market research titles with high accuracy.",
+        "details": "1. Create a DateExtractor class with the following methods:\n   - extract(title): Extract date information from title\n   - extractTerminalCommaFormat(title): Handle ', 2030' patterns\n   - extractRangeFormat(title): Handle ', 2020-2027' patterns\n   - extractBracketFormat(title): Handle '[2023 Report]' patterns\n   - extractEmbeddedFormat(title): Handle 'Outlook 2031' patterns without commas\n   - normalizeDateRange(startDate, endDate): Standardize date range format\n   - getConfidence(): Return confidence score for extraction\n2. Implement comprehensive regex patterns for all date formats\n3. Handle edge cases like multiple dates in title\n4. Normalize extracted dates to ISO format\n5. Add validation for realistic date ranges (e.g., not in the distant past)\n6. Track extraction success/failure for pattern improvement\n7. Use date-fns (v2.29+) for date manipulation\n8. Implement fallback strategies for unusual formats\n9. Add detailed logging for extraction process",
+        "testStrategy": "1. Unit tests for each date format pattern\n2. Test with edge cases and unusual date formats\n3. Verify normalization to ISO format\n4. Measure extraction accuracy against sample dataset\n5. Test confidence scoring accuracy\n6. Validate handling of multiple dates in title\n7. Integration tests with the full processing pipeline",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Implement Report Type Extraction System",
+        "description": "Create a system to identify and extract report types from market research titles.",
+        "details": "1. Create a ReportTypeExtractor class with the following methods:\n   - extract(title): Extract report type from title\n   - extractAfterDateRemoval(title, extractedDate): Process title after date is removed\n   - normalizeReportType(type): Standardize report type format\n   - getConfidence(): Return confidence score for extraction\n2. Build a comprehensive library of ~20 core report types\n3. Handle variations with date inclusions (potentially 4,000+ variations)\n4. Implement prefix handling for 'Market' in standard titles\n5. Use pattern matching with prioritization for overlapping types\n6. Track extraction success/failure for pattern improvement\n7. Implement fuzzy matching for slight variations using fuzzyset.js (v1.0+)\n8. Add detailed logging for extraction decisions\n9. Include performance metrics tracking",
+        "testStrategy": "1. Unit tests for each report type pattern\n2. Test with variations including dates\n3. Verify normalization of report types\n4. Measure extraction accuracy against sample dataset\n5. Test confidence scoring accuracy\n6. Validate handling of ambiguous report types\n7. Integration tests with date extraction system\n8. Performance testing with large datasets",
+        "priority": "medium",
+        "dependencies": [
+          2,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Develop Geographic Entity Detection System",
+        "description": "Build a system to identify and extract geographic entities from market research titles with compound-first processing.",
+        "details": "1. Create a GeographicEntityDetector class with the following methods:\n   - detect(title): Extract geographic entities as array preserving source order\n   - loadEntityLibrary(): Load 363+ entity library from MongoDB\n   - detectCompoundFirst(title): Process compound entities before simple ones\n   - normalizeEntityNames(entities): Standardize entity names\n   - resolveAliases(entity): Map aliases to standard names\n   - getConfidence(): Return confidence score for detection\n2. Implement compound-first processing logic ('North America' before 'America')\n3. Build priority ordering system for overlapping entities\n4. Handle special cases like country codes and abbreviations\n5. Add support for optional SpaCy/GLiNER integration for entity discovery\n6. Track detection success/failure for pattern improvement\n7. Implement caching for frequently used entities\n8. Add detailed logging for detection process\n9. Include performance metrics tracking",
+        "testStrategy": "1. Unit tests for entity detection with various patterns\n2. Test compound-first processing with overlapping entities\n3. Verify alias resolution accuracy\n4. Measure detection accuracy against sample dataset\n5. Test confidence scoring accuracy\n6. Validate handling of ambiguous geographic references\n7. Integration tests with the full processing pipeline\n8. Performance testing with large datasets",
+        "priority": "medium",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Create Topic Extraction System",
+        "description": "Develop a system to extract clean topics and normalized topic names from market research titles after removing other extracted elements.",
+        "details": "1. Create a TopicExtractor class with the following methods:\n   - extract(title, extractedElements): Extract topic after removing other elements\n   - processStandardMarket(title, extractedElements): Handle standard market titles\n   - processMarketFor(title, extractedElements): Handle 'Market for' pattern titles\n   - processMarketIn(title, extractedElements): Handle 'Market in' pattern titles\n   - preserveTechnicalCompounds(topic): Maintain technical specifications\n   - normalizeTopic(topic): Create standardized topic name\n   - getConfidence(): Return confidence score for extraction\n2. Implement logic to extract everything before 'Market' minus extracted patterns\n3. Handle special concatenation for 'Market for/in' patterns\n4. Preserve technical compounds and specifications\n5. Add normalization for consistent topic naming\n6. Track extraction success/failure for pattern improvement\n7. Implement cleaning routines for common artifacts\n8. Add detailed logging for extraction process\n9. Include performance metrics tracking",
+        "testStrategy": "1. Unit tests for each market pattern type\n2. Test technical compound preservation\n3. Verify topic normalization consistency\n4. Measure extraction accuracy against sample dataset\n5. Test confidence scoring accuracy\n6. Validate handling of complex titles\n7. Integration tests with other extraction systems\n8. Performance testing with large datasets",
+        "priority": "high",
+        "dependencies": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Implement Confidence Tracking System",
+        "description": "Build a system to calculate confidence scores for extraction results and flag titles requiring human review.",
+        "details": "1. Create a ConfidenceTracker class with the following methods:\n   - calculateOverallConfidence(extractionResults): Compute overall confidence score\n   - weightedAverage(confidenceScores, weights): Calculate weighted confidence\n   - shouldFlagForReview(confidence): Determine if human review needed (< 0.8)\n   - trackConfusionPatterns(title, extractionResults): Record pattern confusion\n   - getPerformanceMetrics(): Return system performance statistics\n2. Implement weighted scoring based on extraction completeness\n3. Add confusion tracking for pattern library improvement\n4. Create flagging system for titles with confidence < 0.8\n5. Implement detailed reporting for human review cases\n6. Track performance metrics in MongoDB\n7. Add trend analysis for confidence scores over time\n8. Implement visualization helpers for confidence distribution\n9. Include detailed logging for confidence calculations",
+        "testStrategy": "1. Unit tests for confidence calculation with various scenarios\n2. Test flagging logic for human review\n3. Verify confusion tracking accuracy\n4. Measure performance metrics accuracy\n5. Test with edge cases and ambiguous titles\n6. Validate trend analysis functionality\n7. Integration tests with the full processing pipeline\n8. Performance testing with large datasets",
+        "priority": "medium",
+        "dependencies": [
+          7
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Develop Processing Pipeline Orchestrator",
+        "description": "Create a central orchestrator script to manage the complete title processing pipeline with progress tracking.",
+        "details": "1. Create a PipelineOrchestrator class with the following methods:\n   - processBatch(titles): Process a batch of titles\n   - processTitle(title): Process individual title through all extractors\n   - saveResults(results): Store processed results in MongoDB\n   - trackProgress(current, total): Update processing progress\n   - handleErrors(title, error): Manage processing errors\n   - generateReport(batchId): Create processing summary report\n2. Implement step-based systematic approach for processing\n3. Add progress indicators for large dataset processing\n4. Create comprehensive logging for debugging\n5. Implement graceful error handling with informative messages\n6. Add performance monitoring for each processing step\n7. Implement batch processing with configurable batch size\n8. Create retry mechanism for failed processing attempts\n9. Include dual timestamps (PDT and UTC) in all output files",
+        "testStrategy": "1. Unit tests for each orchestration step\n2. Test batch processing with various batch sizes\n3. Verify error handling and recovery\n4. Measure processing performance with large datasets\n5. Test progress tracking accuracy\n6. Validate report generation\n7. Integration tests with all extraction systems\n8. End-to-end testing with sample dataset",
+        "priority": "high",
+        "dependencies": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Build MongoDB Library Manager",
+        "description": "Create a dedicated manager for accessing and updating pattern libraries in MongoDB with performance optimization.",
+        "details": "1. Create a MongoDBLibraryManager class with the following methods:\n   - getLibrary(type): Retrieve specific pattern library\n   - updateLibrary(type, patterns): Update pattern library\n   - optimizeLibrary(type): Reorganize patterns for performance\n   - analyzeLibraryPerformance(type): Generate performance metrics\n   - suggestImprovements(type): Recommend library enhancements\n2. Implement caching with TTL for frequently accessed libraries\n3. Add bulk operations for library updates\n4. Create indexing strategies for pattern lookup optimization\n5. Implement versioning for pattern libraries\n6. Add rollback capability for failed updates\n7. Create monitoring for library usage patterns\n8. Implement automated backup before significant changes\n9. Include detailed logging for library operations",
+        "testStrategy": "1. Unit tests for library retrieval and updates\n2. Test caching performance and invalidation\n3. Verify optimization effectiveness\n4. Measure library access performance under load\n5. Test versioning and rollback functionality\n6. Validate suggestion algorithm accuracy\n7. Integration tests with pattern-using components\n8. Performance testing with large pattern libraries",
+        "priority": "medium",
+        "dependencies": [
+          1,
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Implement Error Handling and Logging System",
+        "description": "Develop a comprehensive error handling and logging system for debugging and monitoring the title parsing process.",
+        "details": "1. Create an ErrorHandler class with the following methods:\n   - logError(component, error, context): Record error with context\n   - categorizeError(error): Classify error type\n   - suggestResolution(errorType): Provide resolution guidance\n   - trackErrorFrequency(errorType): Monitor error patterns\n2. Implement structured logging with Winston (v3.8+)\n3. Add log levels (debug, info, warn, error) with appropriate filtering\n4. Create rotating log files with compression\n5. Implement context-aware error messages\n6. Add stack trace preservation for debugging\n7. Create error dashboards for monitoring\n8. Implement alert system for critical errors\n9. Include performance impact tracking for errors",
+        "testStrategy": "1. Unit tests for error handling in various scenarios\n2. Test log rotation and compression\n3. Verify error categorization accuracy\n4. Measure logging performance impact\n5. Test alert system functionality\n6. Validate resolution suggestions\n7. Integration tests with all system components\n8. Stress testing with high error volumes",
+        "priority": "medium",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Develop Validation and Testing Framework",
+        "description": "Create a comprehensive validation framework to test extraction accuracy and system performance.",
+        "details": "1. Create a ValidationFramework class with the following methods:\n   - validateExtraction(title, expectedResults): Test extraction accuracy\n   - batchValidate(testSet): Run validation on test dataset\n   - calculateAccuracyMetrics(): Compute precision, recall, F1 score\n   - generateConfusionMatrix(): Create confusion matrix for errors\n   - identifyProblemPatterns(): Find patterns causing issues\n2. Implement test data generation from known good examples\n3. Create golden dataset with manually verified results\n4. Add performance benchmarking for processing speed\n5. Implement A/B testing for pattern library improvements\n6. Create visualization for accuracy metrics\n7. Add regression testing for system changes\n8. Implement continuous validation pipeline\n9. Include detailed reporting for validation results",
+        "testStrategy": "1. Unit tests for validation methods\n2. Test with golden dataset for accuracy\n3. Verify metrics calculation correctness\n4. Measure validation performance with large datasets\n5. Test problem pattern identification\n6. Validate A/B testing methodology\n7. Integration tests with processing pipeline\n8. End-to-end testing with sample dataset",
+        "priority": "medium",
+        "dependencies": [
+          9
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Implement AWS EC2 Deployment Configuration",
+        "description": "Configure deployment setup for AWS EC2 t3.large instance with cost-effective resource utilization.",
+        "details": "1. Create deployment scripts for AWS EC2 t3.large instance\n2. Configure auto-scaling based on processing load\n3. Implement resource monitoring with CloudWatch\n4. Set up cost optimization with spot instances for batch processing\n5. Configure security groups and network access controls\n6. Implement automated backups and disaster recovery\n7. Create deployment pipeline with CI/CD integration\n8. Set up health checks and auto-recovery\n9. Implement performance tuning for Node.js on EC2\n   - Use Node.js v18+ for performance improvements\n   - Configure cluster module for multi-core utilization\n   - Optimize memory allocation for large datasets\n   - Implement connection pooling for MongoDB\n   - Set up proper logging rotation and compression\n   - Configure PM2 for process management",
+        "testStrategy": "1. Test deployment scripts in staging environment\n2. Verify auto-scaling functionality under load\n3. Test disaster recovery procedures\n4. Measure performance metrics on t3.large\n5. Validate security configuration\n6. Test CI/CD pipeline end-to-end\n7. Verify cost optimization effectiveness\n8. Conduct load testing to ensure stability",
+        "priority": "low",
+        "dependencies": [
+          9,
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "Create Administrative Dashboard",
+        "description": "Develop an administrative dashboard for monitoring system performance, managing pattern libraries, and reviewing flagged titles.",
+        "details": "1. Create a web-based dashboard using Express.js (v4.18+) and React (v18+)\n2. Implement the following features:\n   - System performance monitoring\n   - Pattern library management interface\n   - Flagged title review workflow\n   - Extraction statistics visualization\n   - User management for administrators\n3. Add real-time updates with Socket.IO\n4. Implement secure authentication with JWT\n5. Create responsive design for mobile access\n6. Add export functionality for reports\n7. Implement batch operations for pattern updates\n8. Create user activity logging\n9. Add role-based access control",
+        "testStrategy": "1. Unit tests for dashboard components\n2. Test authentication and authorization\n3. Verify real-time update functionality\n4. Measure dashboard performance under load\n5. Test responsive design on various devices\n6. Validate export functionality\n7. Integration tests with backend systems\n8. User acceptance testing with administrators",
+        "priority": "low",
+        "dependencies": [
+          10,
+          11,
+          12
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Implement End-to-End Integration and System Testing",
+        "description": "Perform comprehensive integration testing of the complete system with the full dataset of 19,558+ market research report titles.",
+        "details": "1. Create an IntegrationTester class with the following methods:\n   - runFullDatasetTest(): Process complete dataset\n   - analyzeResults(results): Evaluate processing outcomes\n   - identifySystemBottlenecks(): Find performance issues\n   - generateComprehensiveReport(): Create detailed test report\n2. Implement staged testing approach:\n   - Start with 1% sample for quick validation\n   - Progress to 10% for performance testing\n   - Run full dataset for final validation\n3. Create performance benchmarks for each component\n4. Implement detailed logging for processing steps\n5. Add success criteria validation:\n   - Overall Processing: 95-98% complete success\n   - Date Extraction: 98-99% accuracy\n   - Report Type: 95-97% accuracy\n   - Geographic Detection: 96-98% accuracy\n   - Topic Extraction: 92-95% accuracy\n   - < 5% titles requiring human review\n   - < 1% critical parsing failures\n6. Create visualization for test results\n7. Implement automated regression testing\n8. Add performance comparison with previous versions",
+        "testStrategy": "1. Run tests with progressively larger datasets\n2. Verify success criteria achievement\n3. Measure processing time and resource utilization\n4. Test with edge cases and problematic titles\n5. Validate bottleneck identification\n6. Verify report generation accuracy\n7. Conduct stress testing with concurrent processing\n8. Perform final acceptance testing against PRD requirements",
+        "priority": "high",
+        "dependencies": [
+          9,
+          12,
+          13
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-20T03:41:38.410Z",
+      "updated": "2025-08-20T03:41:38.411Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

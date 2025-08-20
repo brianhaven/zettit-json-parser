@@ -75,14 +75,15 @@ Market research report titles contain valuable structured data that needs to be 
 
 ## Solution Architecture
 
-### Step-Based Systematic Processing
+### MongoDB-First Systematic Processing
 1. **Market Term Classification**: Separate special patterns ("Market for"/"Market in") from standard titles
-2. **Date Extraction**: Remove terminal date patterns first to prevent contamination
-3. **Report Type Processing**: Extract descriptors after "Market" keyword
-4. **Geographic Entity Detection**: Compound-priority matching with comprehensive entity libraries
-5. **Topic Extraction**: Preserve complete technical compounds through systematic removal
+2. **Date Extraction**: Remove terminal date patterns first (`extracted_forecast_date_range`)
+3. **Report Type Processing**: Extract descriptors after "Market" keyword (`extracted_report_type`)
+4. **Geographic Entity Detection**: Compound-priority matching from MongoDB libraries (`extracted_regions`)
+5. **Topic Extraction**: Preserve complete technical compounds (`topic` and `topicName`)
 
-### Library-Driven Approach
+### MongoDB-Based Libraries
+- **Pattern Libraries Collection**: Real-time updatable pattern storage with performance tracking
 - **Geographic Entities**: 363+ regions, countries, acronyms with compound-first processing
 - **Market Term Exceptions**: Handle "After Market", "Marketplace", edge cases
 - **Date Pattern Recognition**: Standard, bracketed, and embedded date formats
@@ -90,11 +91,12 @@ Market research report titles contain valuable structured data that needs to be 
 
 ## Key Features
 
-- **High Accuracy**: 95-98% success rate through systematic processing
+- **High Accuracy**: 95-98% success rate through systematic pattern removal
+- **Real-time Updates**: MongoDB-based libraries update without deployment
 - **Scalable**: Handles large MongoDB collections efficiently  
-- **Maintainable**: Library-based approach for continuous improvement
-- **Production Ready**: Comprehensive error handling and logging
-- **Cost Effective**: CPU-optimized alternative to expensive GPU-based NLP models
+- **Self-Improving**: Performance tracking and automated pattern learning
+- **Production Ready**: Comprehensive error handling and confidence scoring
+- **Cost Effective**: CPU-optimized alternative to expensive GPU-based NLP models (~$70/month vs $900/month)
 
 ## Project Structure
 
@@ -141,7 +143,13 @@ All analysis outputs include dual timestamps:
 ```
 
 ### Processing Philosophy
-**"Systematic Removal"**: Remove known patterns (dates, report types, regions) systematically. What remains IS the topic, regardless of internal punctuation or special characters.
+**"Systematic Removal"**: Remove known patterns (dates, report types, regions) systematically using MongoDB-based libraries. What remains IS the topic, regardless of internal punctuation or special characters.
+
+### Database Architecture
+**MongoDB Atlas Collections:**
+- `markets_raw`: Source data (19,558+ titles)
+- `pattern_libraries`: Real-time pattern storage with performance tracking
+- `markets_processed`: Extracted results with confidence scoring
 
 ## Performance Metrics
 
@@ -156,10 +164,13 @@ All analysis outputs include dual timestamps:
 **Input**: `"APAC & Middle East Personal Protective Equipment Market Size & Share Report, 2030"`
 
 **Output**:
-- **Topic**: "Personal Protective Equipment"
-- **Geographic**: ["APAC", "Middle East"] 
-- **Report Type**: "Market Size & Share Report"
-- **Date**: "2030"
+- **market_term_type**: "standard"
+- **extracted_forecast_date_range**: "2030"
+- **extracted_report_type**: "Market Size & Share Report"
+- **extracted_regions**: ["APAC", "Middle East"] 
+- **topic**: "Personal Protective Equipment"
+- **topicName**: "personal-protective-equipment"
+- **confidence_score**: 0.95
 
 ## Technology Stack
 
