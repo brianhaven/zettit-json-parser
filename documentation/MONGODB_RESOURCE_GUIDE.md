@@ -8,8 +8,9 @@
 - **Database**: `deathstar` 
 - **Collection**: `markets_raw`
 - **Connection String Format**: 
-  ```
-  mongodb+srv://username:password@cluster.mongodb.net/deathstar?retryWrites=true&w=majority
+  ```bash
+  # Template - replace with your actual credentials
+  mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/deathstar?retryWrites=true&w=majority
   ```
 
 ### Required Dependencies

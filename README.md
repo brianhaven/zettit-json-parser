@@ -120,8 +120,9 @@ Market research report titles contain valuable structured data that needs to be 
 
 ### Environment Setup
 Create `.env` file:
-```
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database
+```bash
+# Replace with your actual MongoDB Atlas connection string
+MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/YOUR_DATABASE
 ```
 
 ### Quick Start
