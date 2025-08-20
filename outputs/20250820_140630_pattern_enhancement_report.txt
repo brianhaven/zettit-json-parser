@@ -1,0 +1,85 @@
+Geographic Entity Discovery from Description Analysis
+============================================================
+
+**Analysis Date (PST):** 2025-08-20 14:05:31 PDT
+**Analysis Date (UTC):** 2025-08-20 21:05:31 UTC
+**Documents Analyzed:** 500
+**Processing Time:** 57.43 seconds
+
+## Summary Statistics
+
+- Documents with geographic entities: 483 (96.6%)
+- Documents with entities in titles: 67 (13.4%)
+- Unique entities discovered: 100
+- New patterns discovered: 50
+- High-confidence patterns: 3
+
+## Publisher Breakdown
+
+| Publisher | Total | With Entities | With Title Entities |
+|-----------|-------|---------------|--------------------|
+| GVR | 478 | 461 | 66 |
+| TMR | 22 | 22 | 1 |
+
+## High-Confidence Pattern Recommendations
+
+These entities appear in both descriptions and titles with high frequency:
+
+- **New Zealand**: 21 titles, 6 total occurrences, 350.0% title appearance rate
+- **KSA**: 9 titles, 1 total occurrences, 900.0% title appearance rate
+- **metal keystock**: 3 titles, 1 total occurrences, 300.0% title appearance rate
+
+## Top New Discoveries
+
+Entities not in current pattern library:
+
+- the Asia Pacific: 108 occurrences
+- Spain: 76 occurrences
+- Argentina: 65 occurrences
+- Russia: 45 occurrences
+- Thailand: 44 occurrences
+- South Africa: 41 occurrences
+- Middle East &: 36 occurrences
+- The Asia Pacific: 32 occurrences
+- the Middle East: 27 occurrences
+- Vietnam: 26 occurrences
+- Asia-Pacific: 21 occurrences
+- Netherlands: 16 occurrences
+- Norway: 13 occurrences
+- Egypt: 12 occurrences
+- Sweden: 11 occurrences
+- Taiwan: 10 occurrences
+- Turkey: 10 occurrences
+- North America's: 10 occurrences
+- Chile: 10 occurrences
+- Central and South America: 10 occurrences
+
+## Most Common Entities in Titles
+
+- Asia Pacific: 178 titles
+- Australia: 57 titles
+- Americas: 40 titles
+- Africa: 32 titles
+- New Zealand: 21 titles
+- U.S.: 17 titles
+- Europe: 15 titles
+- Asia: 13 titles
+- KSA: 9 titles
+- Brazil: 9 titles
+- Middle East: 8 titles
+- America: 7 titles
+- metal keystock: 3 titles
+- US: 3 titles
+- Asia pacific: 2 titles
+- codin: 1 titles
+- americas: 1 titles
+- kaolin: 1 titles
+- New Zealand Industrial Fasteners Market Report: 1 titles
+- benzoe siam: 1 titles
+
+## Recommendations
+
+1. **Add High-Confidence Patterns**: Entities appearing in 3+ title-description pairs
+2. **Review New Discoveries**: Validate entities with 5+ occurrences
+3. **Publisher-Specific Patterns**: Consider publisher-specific geographic focus
+4. **Incremental Updates**: Run this analysis on new documents periodically

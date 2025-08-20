@@ -6,8 +6,20 @@ Validates date extraction accuracy and performance.
 """
 
 import sys
+import os
 import logging
-from date_extractor_v1 import DateExtractor, DateFormat
+
+# Add parent directory to path to import numbered modules
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Import using importlib to handle numbered module names
+import importlib.util
+spec = importlib.util.spec_from_file_location("date_extractor", "../02_date_extractor_v1.py")
+date_extractor_module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(date_extractor_module)
+
+DateExtractor = date_extractor_module.DateExtractor
+DateFormat = date_extractor_module.DateFormat
 
 # Configure logging for tests
 logging.basicConfig(level=logging.WARNING)

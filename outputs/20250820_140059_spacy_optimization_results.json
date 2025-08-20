@@ -1,0 +1,264 @@
+{
+  "experiment_info": {
+    "timestamp_pst": "2025-08-20 14:00:59 PDT",
+    "timestamp_utc": "2025-08-20 21:00:59 UTC",
+    "sample_size": 0,
+    "existing_patterns_count": 89,
+    "models_tested": [
+      "en_core_web_md_standard",
+      "en_core_web_md_optimized",
+      "en_core_web_lg_standard",
+      "en_core_web_lg_optimized"
+    ]
+  },
+  "model_results": {
+    "en_core_web_md_standard": {
+      "model_info": {
+        "nlp": "<spacy.lang.en.English object at 0x7f8b5496ee80>",
+        "description": "en_core_web_md with full pipeline",
+        "components": [
+          "tok2vec",
+          "tagger",
+          "parser",
+          "attribute_ruler",
+          "lemmatizer",
+          "ner"
+        ]
+      },
+      "bulk_analysis": {
+        "total_entities": 0,
+        "unique_entities": 0,
+        "entity_counts": {},
+        "processing_time": 0.00031280517578125,
+        "text_length": 0,
+        "entities_per_second": 0.0,
+        "raw_entities": []
+      },
+      "individual_analysis": {
+        "total_entities": 0,
+        "unique_entities": 0,
+        "titles_with_entities": 0,
+        "entity_counts": {},
+        "processing_time": 0.00018143653869628906,
+        "entities_per_second": 0.0,
+        "detection_rate": 0
+      },
+      "bulk_pattern_comparison": {
+        "spacy_total": 0,
+        "patterns_total": 89,
+        "overlapping": 0,
+        "new_discoveries": 0,
+        "missing_from_spacy": 89,
+        "overlap_percentage": 0.0,
+        "discovery_percentage": 0,
+        "new_discoveries_list": [],
+        "overlapping_list": [],
+        "high_frequency_new": []
+      },
+      "individual_pattern_comparison": {
+        "spacy_total": 0,
+        "patterns_total": 89,
+        "overlapping": 0,
+        "new_discoveries": 0,
+        "missing_from_spacy": 89,
+        "overlap_percentage": 0.0,
+        "discovery_percentage": 0,
+        "new_discoveries_list": [],
+        "overlapping_list": [],
+        "high_frequency_new": []
+      },
+      "performance_metrics": {
+        "bulk_speed": 0.0,
+        "individual_speed": 0.0,
+        "bulk_efficiency": 0.0,
+        "individual_efficiency": 0.0,
+        "bulk_discovery_rate": 0,
+        "individual_discovery_rate": 0
+      }
+    },
+    "en_core_web_md_optimized": {
+      "model_info": {
+        "nlp": "<spacy.lang.en.English object at 0x7f8b2d989880>",
+        "description": "en_core_web_md with NER-only pipeline",
+        "components": [
+          "tok2vec",
+          "ner"
+        ]
+      },
+      "bulk_analysis": {
+        "total_entities": 0,
+        "unique_entities": 0,
+        "entity_counts": {},
+        "processing_time": 8.702278137207031e-05,
+        "text_length": 0,
+        "entities_per_second": 0.0,
+        "raw_entities": []
+      },
+      "individual_analysis": {
+        "total_entities": 0,
+        "unique_entities": 0,
+        "titles_with_entities": 0,
+        "entity_counts": {},
+        "processing_time": 3.9577484130859375e-05,
+        "entities_per_second": 0.0,
+        "detection_rate": 0
+      },
+      "bulk_pattern_comparison": {
+        "spacy_total": 0,
+        "patterns_total": 89,
+        "overlapping": 0,
+        "new_discoveries": 0,
+        "missing_from_spacy": 89,
+        "overlap_percentage": 0.0,
+        "discovery_percentage": 0,
+        "new_discoveries_list": [],
+        "overlapping_list": [],
+        "high_frequency_new": []
+      },
+      "individual_pattern_comparison": {
+        "spacy_total": 0,
+        "patterns_total": 89,
+        "overlapping": 0,
+        "new_discoveries": 0,
+        "missing_from_spacy": 89,
+        "overlap_percentage": 0.0,
+        "discovery_percentage": 0,
+        "new_discoveries_list": [],
+        "overlapping_list": [],
+        "high_frequency_new": []
+      },
+      "performance_metrics": {
+        "bulk_speed": 0.0,
+        "individual_speed": 0.0,
+        "bulk_efficiency": 0.0,
+        "individual_efficiency": 0.0,
+        "bulk_discovery_rate": 0,
+        "individual_discovery_rate": 0
+      }
+    },
+    "en_core_web_lg_standard": {
+      "model_info": {
+        "nlp": "<spacy.lang.en.English object at 0x7f8b28589f70>",
+        "description": "en_core_web_lg with full pipeline",
+        "components": [
+          "tok2vec",
+          "tagger",
+          "parser",
+          "attribute_ruler",
+          "lemmatizer",
+          "ner"
+        ]
+      },
+      "bulk_analysis": {
+        "total_entities": 0,
+        "unique_entities": 0,
+        "entity_counts": {},
+        "processing_time": 0.00011754035949707031,
+        "text_length": 0,
+        "entities_per_second": 0.0,
+        "raw_entities": []
+      },
+      "individual_analysis": {
+        "total_entities": 0,
+        "unique_entities": 0,
+        "titles_with_entities": 0,
+        "entity_counts": {},
+        "processing_time": 5.7220458984375e-05,
+        "entities_per_second": 0.0,
+        "detection_rate": 0
+      },
+      "bulk_pattern_comparison": {
+        "spacy_total": 0,
+        "patterns_total": 89,
+        "overlapping": 0,
+        "new_discoveries": 0,
+        "missing_from_spacy": 89,
+        "overlap_percentage": 0.0,
+        "discovery_percentage": 0,
+        "new_discoveries_list": [],
+        "overlapping_list": [],
+        "high_frequency_new": []
+      },
+      "individual_pattern_comparison": {
+        "spacy_total": 0,
+        "patterns_total": 89,
+        "overlapping": 0,
+        "new_discoveries": 0,
+        "missing_from_spacy": 89,
+        "overlap_percentage": 0.0,
+        "discovery_percentage": 0,
+        "new_discoveries_list": [],
+        "overlapping_list": [],
+        "high_frequency_new": []
+      },
+      "performance_metrics": {
+        "bulk_speed": 0.0,
+        "individual_speed": 0.0,
+        "bulk_efficiency": 0.0,
+        "individual_efficiency": 0.0,
+        "bulk_discovery_rate": 0,
+        "individual_discovery_rate": 0
+      }
+    },
+    "en_core_web_lg_optimized": {
+      "model_info": {
+        "nlp": "<spacy.lang.en.English object at 0x7f8b1e264970>",
+        "description": "en_core_web_lg with NER-only pipeline",
+        "components": [
+          "tok2vec",
+          "ner"
+        ]
+      },
+      "bulk_analysis": {
+        "total_entities": 0,
+        "unique_entities": 0,
+        "entity_counts": {},
+        "processing_time": 7.677078247070312e-05,
+        "text_length": 0,
+        "entities_per_second": 0.0,
+        "raw_entities": []
+      },
+      "individual_analysis": {
+        "total_entities": 0,
+        "unique_entities": 0,
+        "titles_with_entities": 0,
+        "entity_counts": {},
+        "processing_time": 3.528594970703125e-05,
+        "entities_per_second": 0.0,
+        "detection_rate": 0
+      },
+      "bulk_pattern_comparison": {
+        "spacy_total": 0,
+        "patterns_total": 89,
+        "overlapping": 0,
+        "new_discoveries": 0,
+        "missing_from_spacy": 89,
+        "overlap_percentage": 0.0,
+        "discovery_percentage": 0,
+        "new_discoveries_list": [],
+        "overlapping_list": [],
+        "high_frequency_new": []
+      },
+      "individual_pattern_comparison": {
+        "spacy_total": 0,
+        "patterns_total": 89,
+        "overlapping": 0,
+        "new_discoveries": 0,
+        "missing_from_spacy": 89,
+        "overlap_percentage": 0.0,
+        "discovery_percentage": 0,
+        "new_discoveries_list": [],
+        "overlapping_list": [],
+        "high_frequency_new": []
+      },
+      "performance_metrics": {
+        "bulk_speed": 0.0,
+        "individual_speed": 0.0,
+        "bulk_efficiency": 0.0,
+        "individual_efficiency": 0.0,
+        "bulk_discovery_rate": 0,
+        "individual_discovery_rate": 0
+      }
+    }
+  }
+}

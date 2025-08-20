@@ -1,0 +1,2836 @@
+{
+  "experiment_info": {
+    "timestamp_pst": "2025-08-20 14:01:51 PDT",
+    "timestamp_utc": "2025-08-20 21:01:51 UTC",
+    "sample_size": 2000,
+    "existing_patterns_count": 89,
+    "models_tested": [
+      "en_core_web_md_standard",
+      "en_core_web_md_optimized",
+      "en_core_web_lg_standard",
+      "en_core_web_lg_optimized"
+    ]
+  },
+  "model_results": {
+    "en_core_web_md_standard": {
+      "model_info": {
+        "nlp": "<spacy.lang.en.English object at 0x7fcf7c2f7e80>",
+        "description": "en_core_web_md with full pipeline",
+        "components": [
+          "tok2vec",
+          "tagger",
+          "parser",
+          "attribute_ruler",
+          "lemmatizer",
+          "ner"
+        ]
+      },
+      "bulk_analysis": {
+        "total_entities": 70,
+        "unique_entities": 35,
+        "entity_counts": {
+          "Americas": 1,
+          "Asia": 1,
+          "Asia Pacific": 1,
+          "Middle East": 3,
+          "Africa": 1,
+          "Australia": 3,
+          "New Zealand Industrial Fasteners Market Report": 1,
+          "North America Car DVR Market Size Analysis Report": 1,
+          "China": 2,
+          "Europe": 13,
+          "Europe Residential Solar": 1,
+          "GCC": 1,
+          "India": 2,
+          "Indonesia": 2,
+          "Latin America Maintenance, Repair & Overhaul Market Report": 1,
+          "Middle East Molded Case Circuit": 1,
+          "Middle East Sea": 1,
+          "Middle East Distribution": 1,
+          "Middle East & North Africa": 1,
+          "North America": 17,
+          "North America Ceiling Tiles Market Size & Share Report": 1,
+          "North America Below Grade Waterproofing Membranes Market Report": 1,
+          "North America Drywall Hooks": 1,
+          "North America Concrete Flooring Market Size Report": 1,
+          "North America Decks Market Size And Share Report": 1,
+          "North America Geotextiles Market, Industry Report": 1,
+          "North America Industrial Vending Machine Market Report": 1,
+          "North America Lithium": 1,
+          "North America Non": 1,
+          "North America Mini": 1,
+          "North America Outdoor Play Structures Market Report": 1,
+          "North America Self": 1,
+          "North America Ultraviolet Disinfection Equipment Market Report": 1,
+          "North America Wiring Duct Market Size & Share Report": 1,
+          "Philippines": 1
+        },
+        "processing_time": 3.691269636154175,
+        "text_length": 120686,
+        "entities_per_second": 18.96366478199922,
+        "raw_entities": [
+          {
+            "text": "Americas",
+            "label": "LOC",
+            "start": 11217,
+            "end": 11225,
+            "confidence": null
+          },
+          {
+            "text": "Asia",
+            "label": "LOC",
+            "start": 14338,
+            "end": 14342,
+            "confidence": null
+          },
+          {
+            "text": "Asia Pacific",
+            "label": "LOC",
+            "start": 16757,
+            "end": 16769,
+            "confidence": null
+          },
+          {
+            "text": "Middle East",
+            "label": "LOC",
+            "start": 16771,
+            "end": 16782,
+            "confidence": null
+          },
+          {
+            "text": "Africa",
+            "label": "LOC",
+            "start": 16787,
+            "end": 16793,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 17667,
+            "end": 17676,
+            "confidence": null
+          },
+          {
+            "text": "New Zealand Industrial Fasteners Market Report",
+            "label": "GPE",
+            "start": 17681,
+            "end": 17727,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 17794,
+            "end": 17803,
+            "confidence": null
+          },
+          {
+            "text": "North America Car DVR Market Size Analysis Report",
+            "label": "LOC",
+            "start": 31342,
+            "end": 31391,
+            "confidence": null
+          },
+          {
+            "text": "China",
+            "label": "GPE",
+            "start": 35545,
+            "end": 35550,
+            "confidence": null
+          },
+          {
+            "text": "China",
+            "label": "GPE",
+            "start": 35778,
+            "end": 35783,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 52232,
+            "end": 52238,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 52866,
+            "end": 52872,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53047,
+            "end": 53053,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53931,
+            "end": 53937,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 54770,
+            "end": 54776,
+            "confidence": null
+          },
+          {
+            "text": "Europe Residential Solar",
+            "label": "LOC",
+            "start": 54833,
+            "end": 54857,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 55362,
+            "end": 55368,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56018,
+            "end": 56024,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56494,
+            "end": 56500,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56845,
+            "end": 56851,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56959,
+            "end": 56965,
+            "confidence": null
+          },
+          {
+            "text": "GCC",
+            "label": "GPE",
+            "start": 67490,
+            "end": 67493,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 79113,
+            "end": 79118,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 81018,
+            "end": 81023,
+            "confidence": null
+          },
+          {
+            "text": "Indonesia",
+            "label": "GPE",
+            "start": 82966,
+            "end": 82975,
+            "confidence": null
+          },
+          {
+            "text": "Indonesia",
+            "label": "GPE",
+            "start": 83510,
+            "end": 83519,
+            "confidence": null
+          },
+          {
+            "text": "Latin America Maintenance, Repair & Overhaul Market Report",
+            "label": "LOC",
+            "start": 88748,
+            "end": 88806,
+            "confidence": null
+          },
+          {
+            "text": "Middle East",
+            "label": "LOC",
+            "start": 99330,
+            "end": 99341,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Molded Case Circuit",
+            "label": "LOC",
+            "start": 99626,
+            "end": 99657,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Sea",
+            "label": "LOC",
+            "start": 99688,
+            "end": 99703,
+            "confidence": null
+          },
+          {
+            "text": "Middle East",
+            "label": "LOC",
+            "start": 99745,
+            "end": 99756,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Distribution",
+            "label": "LOC",
+            "start": 100548,
+            "end": 100572,
+            "confidence": null
+          },
+          {
+            "text": "Middle East & North Africa",
+            "label": "LOC",
+            "start": 100747,
+            "end": 100773,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 106764,
+            "end": 106777,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107003,
+            "end": 107016,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 107021,
+            "end": 107030,
+            "confidence": null
+          },
+          {
+            "text": "North America Ceiling Tiles Market Size & Share Report",
+            "label": "LOC",
+            "start": 107245,
+            "end": 107299,
+            "confidence": null
+          },
+          {
+            "text": "North America Below Grade Waterproofing Membranes Market Report",
+            "label": "LOC",
+            "start": 107378,
+            "end": 107441,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107570,
+            "end": 107583,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107958,
+            "end": 107971,
+            "confidence": null
+          },
+          {
+            "text": "North America Drywall Hooks",
+            "label": "LOC",
+            "start": 108211,
+            "end": 108238,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108283,
+            "end": 108296,
+            "confidence": null
+          },
+          {
+            "text": "North America Concrete Flooring Market Size Report",
+            "label": "LOC",
+            "start": 108340,
+            "end": 108390,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108455,
+            "end": 108468,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 108470,
+            "end": 108476,
+            "confidence": null
+          },
+          {
+            "text": "North America Decks Market Size And Share Report",
+            "label": "LOC",
+            "start": 108546,
+            "end": 108594,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108783,
+            "end": 108796,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 108798,
+            "end": 108804,
+            "confidence": null
+          },
+          {
+            "text": "North America Geotextiles Market, Industry Report",
+            "label": "LOC",
+            "start": 108987,
+            "end": 109036,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109044,
+            "end": 109057,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 109062,
+            "end": 109068,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109169,
+            "end": 109182,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109399,
+            "end": 109412,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109591,
+            "end": 109604,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109716,
+            "end": 109729,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109839,
+            "end": 109852,
+            "confidence": null
+          },
+          {
+            "text": "North America Industrial Vending Machine Market Report",
+            "label": "LOC",
+            "start": 109899,
+            "end": 109953,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110279,
+            "end": 110292,
+            "confidence": null
+          },
+          {
+            "text": "North America Lithium",
+            "label": "LOC",
+            "start": 110343,
+            "end": 110364,
+            "confidence": null
+          },
+          {
+            "text": "North America Non",
+            "label": "LOC",
+            "start": 110404,
+            "end": 110421,
+            "confidence": null
+          },
+          {
+            "text": "North America Mini",
+            "label": "LOC",
+            "start": 110467,
+            "end": 110485,
+            "confidence": null
+          },
+          {
+            "text": "North America Outdoor Play Structures Market Report",
+            "label": "LOC",
+            "start": 110735,
+            "end": 110786,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110865,
+            "end": 110878,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 111050,
+            "end": 111063,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 111435,
+            "end": 111448,
+            "confidence": null
+          },
+          {
+            "text": "North America Self",
+            "label": "LOC",
+            "start": 111494,
+            "end": 111512,
+            "confidence": null
+          },
+          {
+            "text": "North America Ultraviolet Disinfection Equipment Market Report",
+            "label": "LOC",
+            "start": 111880,
+            "end": 111942,
+            "confidence": null
+          },
+          {
+            "text": "North America Wiring Duct Market Size & Share Report",
+            "label": "LOC",
+            "start": 112196,
+            "end": 112248,
+            "confidence": null
+          },
+          {
+            "text": "Philippines",
+            "label": "GPE",
+            "start": 119788,
+            "end": 119799,
+            "confidence": null
+          }
+        ]
+      },
+      "individual_analysis": {
+        "total_entities": 91,
+        "unique_entities": 40,
+        "titles_with_entities": 84,
+        "entity_counts": {
+          "Africa": 2,
+          "Americas": 1,
+          "Asia": 1,
+          "Asia Pacific": 1,
+          "Middle East": 2,
+          "Australia": 3,
+          "New Zealand Industrial Fasteners Market Report": 1,
+          "Brazil": 1,
+          "Canada": 1,
+          "North America Car DVR Market Size Analysis Report": 1,
+          "China": 2,
+          "Europe": 19,
+          "France": 1,
+          "GCC": 2,
+          "India": 9,
+          "Indonesia": 2,
+          "Iran": 1,
+          "Latin America Maintenance, Repair & Overhaul Market Report": 1,
+          "Middle East Feeder And": 1,
+          "Middle East Sea": 1,
+          "Middle East Distribution": 1,
+          "Middle East & North Africa": 1,
+          "North America": 19,
+          "North America Ceiling Tiles Market Size & Share Report": 1,
+          "North America Below Grade Waterproofing Membranes Market Report": 1,
+          "North America Commercial Wall Water Resistive Barrier Market": 1,
+          "North America Concrete Flooring Market Size Report": 1,
+          "North America Decks Market Size And Share Report": 1,
+          "North America Geotextiles": 1,
+          "North America Industrial Vending Machine Market Report": 1,
+          "North America Lithium": 1,
+          "North America Non": 1,
+          "North America Mini": 1,
+          "North America Outdoor Play Structures Market Report": 1,
+          "North America Residential Light Frame Shear": 1,
+          "North America Self": 1,
+          "North America Ultraviolet": 1,
+          "North America Soft Alloy Aluminum Extrusion Market, Report": 1,
+          "Oman": 1,
+          "Philippines": 1
+        },
+        "processing_time": 2.896038293838501,
+        "entities_per_second": 31.422236437138306,
+        "detection_rate": 4.2
+      },
+      "bulk_pattern_comparison": {
+        "spacy_total": 35,
+        "patterns_total": 89,
+        "overlapping": 13,
+        "new_discoveries": 22,
+        "missing_from_spacy": 76,
+        "overlap_percentage": 14.606741573033707,
+        "discovery_percentage": 62.857142857142854,
+        "new_discoveries_list": [
+          "europe residential solar",
+          "latin america maintenance, repair & overhaul market report",
+          "middle east & north africa",
+          "middle east distribution",
+          "middle east molded case circuit",
+          "middle east sea",
+          "new zealand industrial fasteners market report",
+          "north america below grade waterproofing membranes market report",
+          "north america car dvr market size analysis report",
+          "north america ceiling tiles market size & share report",
+          "north america concrete flooring market size report",
+          "north america decks market size and share report",
+          "north america drywall hooks",
+          "north america geotextiles market, industry report",
+          "north america industrial vending machine market report",
+          "north america lithium",
+          "north america mini",
+          "north america non",
+          "north america outdoor play structures market report",
+          "north america self",
+          "north america ultraviolet disinfection equipment market report",
+          "north america wiring duct market size & share report"
+        ],
+        "overlapping_list": [
+          "africa",
+          "americas",
+          "asia",
+          "asia pacific",
+          "australia",
+          "china",
+          "europe",
+          "gcc",
+          "india",
+          "indonesia",
+          "middle east",
+          "north america",
+          "philippines"
+        ],
+        "high_frequency_new": []
+      },
+      "individual_pattern_comparison": {
+        "spacy_total": 40,
+        "patterns_total": 89,
+        "overlapping": 16,
+        "new_discoveries": 24,
+        "missing_from_spacy": 73,
+        "overlap_percentage": 17.97752808988764,
+        "discovery_percentage": 60.0,
+        "new_discoveries_list": [
+          "iran",
+          "latin america maintenance, repair & overhaul market report",
+          "middle east & north africa",
+          "middle east distribution",
+          "middle east feeder and",
+          "middle east sea",
+          "new zealand industrial fasteners market report",
+          "north america below grade waterproofing membranes market report",
+          "north america car dvr market size analysis report",
+          "north america ceiling tiles market size & share report",
+          "north america commercial wall water resistive barrier market",
+          "north america concrete flooring market size report",
+          "north america decks market size and share report",
+          "north america geotextiles",
+          "north america industrial vending machine market report",
+          "north america lithium",
+          "north america mini",
+          "north america non",
+          "north america outdoor play structures market report",
+          "north america residential light frame shear",
+          "north america self",
+          "north america soft alloy aluminum extrusion market, report",
+          "north america ultraviolet",
+          "oman"
+        ],
+        "overlapping_list": [
+          "africa",
+          "americas",
+          "asia",
+          "asia pacific",
+          "australia",
+          "brazil",
+          "canada",
+          "china",
+          "europe",
+          "france",
+          "gcc",
+          "india",
+          "indonesia",
+          "middle east",
+          "north america",
+          "philippines"
+        ],
+        "high_frequency_new": []
+      },
+      "performance_metrics": {
+        "bulk_speed": 18.96366478199922,
+        "individual_speed": 31.422236437138306,
+        "bulk_efficiency": 18.96366478199922,
+        "individual_efficiency": 31.422236437138306,
+        "bulk_discovery_rate": 62.857142857142854,
+        "individual_discovery_rate": 60.0
+      }
+    },
+    "en_core_web_md_optimized": {
+      "model_info": {
+        "nlp": "<spacy.lang.en.English object at 0x7fcf55e4f7f0>",
+        "description": "en_core_web_md with NER-only pipeline",
+        "components": [
+          "tok2vec",
+          "ner"
+        ]
+      },
+      "bulk_analysis": {
+        "total_entities": 70,
+        "unique_entities": 35,
+        "entity_counts": {
+          "Americas": 1,
+          "Asia": 1,
+          "Asia Pacific": 1,
+          "Middle East": 3,
+          "Africa": 1,
+          "Australia": 3,
+          "New Zealand Industrial Fasteners Market Report": 1,
+          "North America Car DVR Market Size Analysis Report": 1,
+          "China": 2,
+          "Europe": 13,
+          "Europe Residential Solar": 1,
+          "GCC": 1,
+          "India": 2,
+          "Indonesia": 2,
+          "Latin America Maintenance, Repair & Overhaul Market Report": 1,
+          "Middle East Molded Case Circuit": 1,
+          "Middle East Sea": 1,
+          "Middle East Distribution": 1,
+          "Middle East & North Africa": 1,
+          "North America": 17,
+          "North America Ceiling Tiles Market Size & Share Report": 1,
+          "North America Below Grade Waterproofing Membranes Market Report": 1,
+          "North America Drywall Hooks": 1,
+          "North America Concrete Flooring Market Size Report": 1,
+          "North America Decks Market Size And Share Report": 1,
+          "North America Geotextiles Market, Industry Report": 1,
+          "North America Industrial Vending Machine Market Report": 1,
+          "North America Lithium": 1,
+          "North America Non": 1,
+          "North America Mini": 1,
+          "North America Outdoor Play Structures Market Report": 1,
+          "North America Self": 1,
+          "North America Ultraviolet Disinfection Equipment Market Report": 1,
+          "North America Wiring Duct Market Size & Share Report": 1,
+          "Philippines": 1
+        },
+        "processing_time": 1.9764454364776611,
+        "text_length": 120686,
+        "entities_per_second": 35.41711737044008,
+        "raw_entities": [
+          {
+            "text": "Americas",
+            "label": "LOC",
+            "start": 11217,
+            "end": 11225,
+            "confidence": null
+          },
+          {
+            "text": "Asia",
+            "label": "LOC",
+            "start": 14338,
+            "end": 14342,
+            "confidence": null
+          },
+          {
+            "text": "Asia Pacific",
+            "label": "LOC",
+            "start": 16757,
+            "end": 16769,
+            "confidence": null
+          },
+          {
+            "text": "Middle East",
+            "label": "LOC",
+            "start": 16771,
+            "end": 16782,
+            "confidence": null
+          },
+          {
+            "text": "Africa",
+            "label": "LOC",
+            "start": 16787,
+            "end": 16793,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 17667,
+            "end": 17676,
+            "confidence": null
+          },
+          {
+            "text": "New Zealand Industrial Fasteners Market Report",
+            "label": "GPE",
+            "start": 17681,
+            "end": 17727,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 17794,
+            "end": 17803,
+            "confidence": null
+          },
+          {
+            "text": "North America Car DVR Market Size Analysis Report",
+            "label": "LOC",
+            "start": 31342,
+            "end": 31391,
+            "confidence": null
+          },
+          {
+            "text": "China",
+            "label": "GPE",
+            "start": 35545,
+            "end": 35550,
+            "confidence": null
+          },
+          {
+            "text": "China",
+            "label": "GPE",
+            "start": 35778,
+            "end": 35783,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 52232,
+            "end": 52238,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 52866,
+            "end": 52872,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53047,
+            "end": 53053,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53931,
+            "end": 53937,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 54770,
+            "end": 54776,
+            "confidence": null
+          },
+          {
+            "text": "Europe Residential Solar",
+            "label": "LOC",
+            "start": 54833,
+            "end": 54857,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 55362,
+            "end": 55368,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56018,
+            "end": 56024,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56494,
+            "end": 56500,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56845,
+            "end": 56851,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56959,
+            "end": 56965,
+            "confidence": null
+          },
+          {
+            "text": "GCC",
+            "label": "GPE",
+            "start": 67490,
+            "end": 67493,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 79113,
+            "end": 79118,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 81018,
+            "end": 81023,
+            "confidence": null
+          },
+          {
+            "text": "Indonesia",
+            "label": "GPE",
+            "start": 82966,
+            "end": 82975,
+            "confidence": null
+          },
+          {
+            "text": "Indonesia",
+            "label": "GPE",
+            "start": 83510,
+            "end": 83519,
+            "confidence": null
+          },
+          {
+            "text": "Latin America Maintenance, Repair & Overhaul Market Report",
+            "label": "LOC",
+            "start": 88748,
+            "end": 88806,
+            "confidence": null
+          },
+          {
+            "text": "Middle East",
+            "label": "LOC",
+            "start": 99330,
+            "end": 99341,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Molded Case Circuit",
+            "label": "LOC",
+            "start": 99626,
+            "end": 99657,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Sea",
+            "label": "LOC",
+            "start": 99688,
+            "end": 99703,
+            "confidence": null
+          },
+          {
+            "text": "Middle East",
+            "label": "LOC",
+            "start": 99745,
+            "end": 99756,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Distribution",
+            "label": "LOC",
+            "start": 100548,
+            "end": 100572,
+            "confidence": null
+          },
+          {
+            "text": "Middle East & North Africa",
+            "label": "LOC",
+            "start": 100747,
+            "end": 100773,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 106764,
+            "end": 106777,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107003,
+            "end": 107016,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 107021,
+            "end": 107030,
+            "confidence": null
+          },
+          {
+            "text": "North America Ceiling Tiles Market Size & Share Report",
+            "label": "LOC",
+            "start": 107245,
+            "end": 107299,
+            "confidence": null
+          },
+          {
+            "text": "North America Below Grade Waterproofing Membranes Market Report",
+            "label": "LOC",
+            "start": 107378,
+            "end": 107441,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107570,
+            "end": 107583,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107958,
+            "end": 107971,
+            "confidence": null
+          },
+          {
+            "text": "North America Drywall Hooks",
+            "label": "LOC",
+            "start": 108211,
+            "end": 108238,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108283,
+            "end": 108296,
+            "confidence": null
+          },
+          {
+            "text": "North America Concrete Flooring Market Size Report",
+            "label": "LOC",
+            "start": 108340,
+            "end": 108390,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108455,
+            "end": 108468,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 108470,
+            "end": 108476,
+            "confidence": null
+          },
+          {
+            "text": "North America Decks Market Size And Share Report",
+            "label": "LOC",
+            "start": 108546,
+            "end": 108594,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108783,
+            "end": 108796,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 108798,
+            "end": 108804,
+            "confidence": null
+          },
+          {
+            "text": "North America Geotextiles Market, Industry Report",
+            "label": "LOC",
+            "start": 108987,
+            "end": 109036,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109044,
+            "end": 109057,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 109062,
+            "end": 109068,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109169,
+            "end": 109182,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109399,
+            "end": 109412,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109591,
+            "end": 109604,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109716,
+            "end": 109729,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109839,
+            "end": 109852,
+            "confidence": null
+          },
+          {
+            "text": "North America Industrial Vending Machine Market Report",
+            "label": "LOC",
+            "start": 109899,
+            "end": 109953,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110279,
+            "end": 110292,
+            "confidence": null
+          },
+          {
+            "text": "North America Lithium",
+            "label": "LOC",
+            "start": 110343,
+            "end": 110364,
+            "confidence": null
+          },
+          {
+            "text": "North America Non",
+            "label": "LOC",
+            "start": 110404,
+            "end": 110421,
+            "confidence": null
+          },
+          {
+            "text": "North America Mini",
+            "label": "LOC",
+            "start": 110467,
+            "end": 110485,
+            "confidence": null
+          },
+          {
+            "text": "North America Outdoor Play Structures Market Report",
+            "label": "LOC",
+            "start": 110735,
+            "end": 110786,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110865,
+            "end": 110878,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 111050,
+            "end": 111063,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 111435,
+            "end": 111448,
+            "confidence": null
+          },
+          {
+            "text": "North America Self",
+            "label": "LOC",
+            "start": 111494,
+            "end": 111512,
+            "confidence": null
+          },
+          {
+            "text": "North America Ultraviolet Disinfection Equipment Market Report",
+            "label": "LOC",
+            "start": 111880,
+            "end": 111942,
+            "confidence": null
+          },
+          {
+            "text": "North America Wiring Duct Market Size & Share Report",
+            "label": "LOC",
+            "start": 112196,
+            "end": 112248,
+            "confidence": null
+          },
+          {
+            "text": "Philippines",
+            "label": "GPE",
+            "start": 119788,
+            "end": 119799,
+            "confidence": null
+          }
+        ]
+      },
+      "individual_analysis": {
+        "total_entities": 91,
+        "unique_entities": 40,
+        "titles_with_entities": 84,
+        "entity_counts": {
+          "Africa": 2,
+          "Americas": 1,
+          "Asia": 1,
+          "Asia Pacific": 1,
+          "Middle East": 2,
+          "Australia": 3,
+          "New Zealand Industrial Fasteners Market Report": 1,
+          "Brazil": 1,
+          "Canada": 1,
+          "North America Car DVR Market Size Analysis Report": 1,
+          "China": 2,
+          "Europe": 19,
+          "France": 1,
+          "GCC": 2,
+          "India": 9,
+          "Indonesia": 2,
+          "Iran": 1,
+          "Latin America Maintenance, Repair & Overhaul Market Report": 1,
+          "Middle East Feeder And": 1,
+          "Middle East Sea": 1,
+          "Middle East Distribution": 1,
+          "Middle East & North Africa": 1,
+          "North America": 19,
+          "North America Ceiling Tiles Market Size & Share Report": 1,
+          "North America Below Grade Waterproofing Membranes Market Report": 1,
+          "North America Commercial Wall Water Resistive Barrier Market": 1,
+          "North America Concrete Flooring Market Size Report": 1,
+          "North America Decks Market Size And Share Report": 1,
+          "North America Geotextiles": 1,
+          "North America Industrial Vending Machine Market Report": 1,
+          "North America Lithium": 1,
+          "North America Non": 1,
+          "North America Mini": 1,
+          "North America Outdoor Play Structures Market Report": 1,
+          "North America Residential Light Frame Shear": 1,
+          "North America Self": 1,
+          "North America Ultraviolet": 1,
+          "North America Soft Alloy Aluminum Extrusion Market, Report": 1,
+          "Oman": 1,
+          "Philippines": 1
+        },
+        "processing_time": 1.9805476665496826,
+        "entities_per_second": 45.94688708428379,
+        "detection_rate": 4.2
+      },
+      "bulk_pattern_comparison": {
+        "spacy_total": 35,
+        "patterns_total": 89,
+        "overlapping": 13,
+        "new_discoveries": 22,
+        "missing_from_spacy": 76,
+        "overlap_percentage": 14.606741573033707,
+        "discovery_percentage": 62.857142857142854,
+        "new_discoveries_list": [
+          "europe residential solar",
+          "latin america maintenance, repair & overhaul market report",
+          "middle east & north africa",
+          "middle east distribution",
+          "middle east molded case circuit",
+          "middle east sea",
+          "new zealand industrial fasteners market report",
+          "north america below grade waterproofing membranes market report",
+          "north america car dvr market size analysis report",
+          "north america ceiling tiles market size & share report",
+          "north america concrete flooring market size report",
+          "north america decks market size and share report",
+          "north america drywall hooks",
+          "north america geotextiles market, industry report",
+          "north america industrial vending machine market report",
+          "north america lithium",
+          "north america mini",
+          "north america non",
+          "north america outdoor play structures market report",
+          "north america self",
+          "north america ultraviolet disinfection equipment market report",
+          "north america wiring duct market size & share report"
+        ],
+        "overlapping_list": [
+          "africa",
+          "americas",
+          "asia",
+          "asia pacific",
+          "australia",
+          "china",
+          "europe",
+          "gcc",
+          "india",
+          "indonesia",
+          "middle east",
+          "north america",
+          "philippines"
+        ],
+        "high_frequency_new": []
+      },
+      "individual_pattern_comparison": {
+        "spacy_total": 40,
+        "patterns_total": 89,
+        "overlapping": 16,
+        "new_discoveries": 24,
+        "missing_from_spacy": 73,
+        "overlap_percentage": 17.97752808988764,
+        "discovery_percentage": 60.0,
+        "new_discoveries_list": [
+          "iran",
+          "latin america maintenance, repair & overhaul market report",
+          "middle east & north africa",
+          "middle east distribution",
+          "middle east feeder and",
+          "middle east sea",
+          "new zealand industrial fasteners market report",
+          "north america below grade waterproofing membranes market report",
+          "north america car dvr market size analysis report",
+          "north america ceiling tiles market size & share report",
+          "north america commercial wall water resistive barrier market",
+          "north america concrete flooring market size report",
+          "north america decks market size and share report",
+          "north america geotextiles",
+          "north america industrial vending machine market report",
+          "north america lithium",
+          "north america mini",
+          "north america non",
+          "north america outdoor play structures market report",
+          "north america residential light frame shear",
+          "north america self",
+          "north america soft alloy aluminum extrusion market, report",
+          "north america ultraviolet",
+          "oman"
+        ],
+        "overlapping_list": [
+          "africa",
+          "americas",
+          "asia",
+          "asia pacific",
+          "australia",
+          "brazil",
+          "canada",
+          "china",
+          "europe",
+          "france",
+          "gcc",
+          "india",
+          "indonesia",
+          "middle east",
+          "north america",
+          "philippines"
+        ],
+        "high_frequency_new": []
+      },
+      "performance_metrics": {
+        "bulk_speed": 35.41711737044008,
+        "individual_speed": 45.94688708428379,
+        "bulk_efficiency": 35.41711737044008,
+        "individual_efficiency": 45.94688708428379,
+        "bulk_discovery_rate": 62.857142857142854,
+        "individual_discovery_rate": 60.0
+      }
+    },
+    "en_core_web_lg_standard": {
+      "model_info": {
+        "nlp": "<spacy.lang.en.English object at 0x7fcf55e4f580>",
+        "description": "en_core_web_lg with full pipeline",
+        "components": [
+          "tok2vec",
+          "tagger",
+          "parser",
+          "attribute_ruler",
+          "lemmatizer",
+          "ner"
+        ]
+      },
+      "bulk_analysis": {
+        "total_entities": 74,
+        "unique_entities": 34,
+        "entity_counts": {
+          "Americas": 1,
+          "Asia": 1,
+          "Asia Pacific": 3,
+          "Middle East": 1,
+          "Australia": 2,
+          "New Zealand Industrial Fasteners Market Report": 1,
+          "North America Car DVR Market Size Analysis Report": 1,
+          "China": 2,
+          "Europe Building": 1,
+          "Europe": 15,
+          "France": 1,
+          "India": 8,
+          "Hydrocracking Market Size": 1,
+          "Indonesia": 1,
+          "Middle East Feeder": 1,
+          "Middle East Molded Case Circuit Breakers Market Report": 1,
+          "Middle East Sea": 1,
+          "Middle East Switchgears Market Share & Growth Report": 1,
+          "Middle East Distribution": 1,
+          "Nanosilver": 1,
+          "North America": 16,
+          "North America Commercial Facility Landscaping Services Market": 1,
+          "North America Commercial Facility Parking Lot Maintenance Market": 1,
+          "North America Commercial Facility Maintenance Market, Industry Report": 1,
+          "North America Commercial Facility Snow And Ice Management Service Market, Report": 1,
+          "North America Dehumidifier Market": 1,
+          "North America Geotextiles Market": 1,
+          "North America LED": 1,
+          "North America Industrial Duct For Dust Collection Market": 1,
+          "North America Lithium-": 1,
+          "North America Mini": 1,
+          "North America Screw Piles Market Size & Share Report": 1,
+          "North America Self": 1,
+          "Philippines": 1
+        },
+        "processing_time": 3.506477117538452,
+        "text_length": 120686,
+        "entities_per_second": 21.10380234049496,
+        "raw_entities": [
+          {
+            "text": "Americas",
+            "label": "LOC",
+            "start": 11217,
+            "end": 11225,
+            "confidence": null
+          },
+          {
+            "text": "Asia",
+            "label": "LOC",
+            "start": 14338,
+            "end": 14342,
+            "confidence": null
+          },
+          {
+            "text": "Asia Pacific",
+            "label": "LOC",
+            "start": 16331,
+            "end": 16343,
+            "confidence": null
+          },
+          {
+            "text": "Asia Pacific",
+            "label": "LOC",
+            "start": 16757,
+            "end": 16769,
+            "confidence": null
+          },
+          {
+            "text": "Middle East",
+            "label": "LOC",
+            "start": 16771,
+            "end": 16782,
+            "confidence": null
+          },
+          {
+            "text": "Asia Pacific",
+            "label": "LOC",
+            "start": 17069,
+            "end": 17081,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 17667,
+            "end": 17676,
+            "confidence": null
+          },
+          {
+            "text": "New Zealand Industrial Fasteners Market Report",
+            "label": "GPE",
+            "start": 17681,
+            "end": 17727,
+            "confidence": null
+          },
+          {
+            "text": "North America Car DVR Market Size Analysis Report",
+            "label": "LOC",
+            "start": 31342,
+            "end": 31391,
+            "confidence": null
+          },
+          {
+            "text": "China",
+            "label": "GPE",
+            "start": 35545,
+            "end": 35550,
+            "confidence": null
+          },
+          {
+            "text": "China",
+            "label": "GPE",
+            "start": 35778,
+            "end": 35783,
+            "confidence": null
+          },
+          {
+            "text": "Europe Building",
+            "label": "LOC",
+            "start": 51602,
+            "end": 51617,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 51807,
+            "end": 51813,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 52866,
+            "end": 52872,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 52925,
+            "end": 52931,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53047,
+            "end": 53053,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53818,
+            "end": 53824,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53931,
+            "end": 53937,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 54770,
+            "end": 54776,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 54833,
+            "end": 54839,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 55244,
+            "end": 55250,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56018,
+            "end": 56024,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56187,
+            "end": 56193,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56845,
+            "end": 56851,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56959,
+            "end": 56965,
+            "confidence": null
+          },
+          {
+            "text": "France",
+            "label": "GPE",
+            "start": 64803,
+            "end": 64809,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 79113,
+            "end": 79118,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 79232,
+            "end": 79237,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 79761,
+            "end": 79766,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 80059,
+            "end": 80064,
+            "confidence": null
+          },
+          {
+            "text": "Hydrocracking Market Size",
+            "label": "LOC",
+            "start": 80361,
+            "end": 80386,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 81018,
+            "end": 81023,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 81141,
+            "end": 81146,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 81265,
+            "end": 81270,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 82791,
+            "end": 82796,
+            "confidence": null
+          },
+          {
+            "text": "Indonesia",
+            "label": "GPE",
+            "start": 83510,
+            "end": 83519,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Feeder",
+            "label": "LOC",
+            "start": 99330,
+            "end": 99348,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Molded Case Circuit Breakers Market Report",
+            "label": "LOC",
+            "start": 99626,
+            "end": 99680,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Sea",
+            "label": "LOC",
+            "start": 99688,
+            "end": 99703,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Switchgears Market Share & Growth Report",
+            "label": "LOC",
+            "start": 99745,
+            "end": 99797,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Distribution",
+            "label": "LOC",
+            "start": 100548,
+            "end": 100572,
+            "confidence": null
+          },
+          {
+            "text": "Nanosilver",
+            "label": "GPE",
+            "start": 103818,
+            "end": 103828,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 106231,
+            "end": 106244,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 106764,
+            "end": 106777,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107003,
+            "end": 107016,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 107021,
+            "end": 107030,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107378,
+            "end": 107391,
+            "confidence": null
+          },
+          {
+            "text": "North America Commercial Facility Landscaping Services Market",
+            "label": "LOC",
+            "start": 107629,
+            "end": 107690,
+            "confidence": null
+          },
+          {
+            "text": "North America Commercial Facility Parking Lot Maintenance Market",
+            "label": "LOC",
+            "start": 107714,
+            "end": 107778,
+            "confidence": null
+          },
+          {
+            "text": "North America Commercial Facility Maintenance Market, Industry Report",
+            "label": "LOC",
+            "start": 107793,
+            "end": 107862,
+            "confidence": null
+          },
+          {
+            "text": "North America Commercial Facility Snow And Ice Management Service Market, Report",
+            "label": "LOC",
+            "start": 107870,
+            "end": 107950,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107958,
+            "end": 107971,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108135,
+            "end": 108148,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108283,
+            "end": 108296,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108455,
+            "end": 108468,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 108470,
+            "end": 108476,
+            "confidence": null
+          },
+          {
+            "text": "North America Dehumidifier Market",
+            "label": "LOC",
+            "start": 108725,
+            "end": 108758,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108783,
+            "end": 108796,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 108798,
+            "end": 108804,
+            "confidence": null
+          },
+          {
+            "text": "North America Geotextiles Market",
+            "label": "LOC",
+            "start": 108987,
+            "end": 109019,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109044,
+            "end": 109057,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109169,
+            "end": 109182,
+            "confidence": null
+          },
+          {
+            "text": "North America LED",
+            "label": "LOC",
+            "start": 109839,
+            "end": 109856,
+            "confidence": null
+          },
+          {
+            "text": "North America Industrial Duct For Dust Collection Market",
+            "label": "LOC",
+            "start": 110279,
+            "end": 110335,
+            "confidence": null
+          },
+          {
+            "text": "North America Lithium-",
+            "label": "LOC",
+            "start": 110343,
+            "end": 110365,
+            "confidence": null
+          },
+          {
+            "text": "North America Mini",
+            "label": "LOC",
+            "start": 110467,
+            "end": 110485,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110609,
+            "end": 110622,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110735,
+            "end": 110748,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110865,
+            "end": 110878,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 111050,
+            "end": 111063,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 111307,
+            "end": 111320,
+            "confidence": null
+          },
+          {
+            "text": "North America Screw Piles Market Size & Share Report",
+            "label": "LOC",
+            "start": 111435,
+            "end": 111487,
+            "confidence": null
+          },
+          {
+            "text": "North America Self",
+            "label": "LOC",
+            "start": 111494,
+            "end": 111512,
+            "confidence": null
+          },
+          {
+            "text": "Philippines",
+            "label": "GPE",
+            "start": 119788,
+            "end": 119799,
+            "confidence": null
+          }
+        ]
+      },
+      "individual_analysis": {
+        "total_entities": 66,
+        "unique_entities": 23,
+        "titles_with_entities": 61,
+        "entity_counts": {
+          "Americas": 1,
+          "Asia": 1,
+          "Asia Pacific": 2,
+          "Middle East": 1,
+          "Australia": 4,
+          "New Zealand Industrial Fasteners Market Report": 1,
+          "China": 2,
+          "Europe": 14,
+          "France": 1,
+          "Halloysite Market Size": 1,
+          "India": 16,
+          "Indonesia": 2,
+          "Mexico": 1,
+          "Middle East Feeder": 1,
+          "Middle East Molded Case Circuit Breakers Market Report": 1,
+          "Middle East Sea": 1,
+          "Middle East Switchgears Market Share & Growth Report": 1,
+          "Middle East Distribution": 1,
+          "North America": 10,
+          "North America Commercial Wall Water Resistive Barrier Market, Report": 1,
+          "North America Lithium-ion": 1,
+          "North America Self": 1,
+          "Philippines": 1
+        },
+        "processing_time": 2.998654365539551,
+        "entities_per_second": 22.009872414263576,
+        "detection_rate": 3.05
+      },
+      "bulk_pattern_comparison": {
+        "spacy_total": 34,
+        "patterns_total": 89,
+        "overlapping": 12,
+        "new_discoveries": 22,
+        "missing_from_spacy": 77,
+        "overlap_percentage": 13.48314606741573,
+        "discovery_percentage": 64.70588235294117,
+        "new_discoveries_list": [
+          "europe building",
+          "hydrocracking market size",
+          "middle east distribution",
+          "middle east feeder",
+          "middle east molded case circuit breakers market report",
+          "middle east sea",
+          "middle east switchgears market share & growth report",
+          "nanosilver",
+          "new zealand industrial fasteners market report",
+          "north america car dvr market size analysis report",
+          "north america commercial facility landscaping services market",
+          "north america commercial facility maintenance market, industry report",
+          "north america commercial facility parking lot maintenance market",
+          "north america commercial facility snow and ice management service market, report",
+          "north america dehumidifier market",
+          "north america geotextiles market",
+          "north america industrial duct for dust collection market",
+          "north america led",
+          "north america lithium-",
+          "north america mini",
+          "north america screw piles market size & share report",
+          "north america self"
+        ],
+        "overlapping_list": [
+          "americas",
+          "asia",
+          "asia pacific",
+          "australia",
+          "china",
+          "europe",
+          "france",
+          "india",
+          "indonesia",
+          "middle east",
+          "north america",
+          "philippines"
+        ],
+        "high_frequency_new": []
+      },
+      "individual_pattern_comparison": {
+        "spacy_total": 23,
+        "patterns_total": 89,
+        "overlapping": 13,
+        "new_discoveries": 10,
+        "missing_from_spacy": 76,
+        "overlap_percentage": 14.606741573033707,
+        "discovery_percentage": 43.47826086956522,
+        "new_discoveries_list": [
+          "halloysite market size",
+          "middle east distribution",
+          "middle east feeder",
+          "middle east molded case circuit breakers market report",
+          "middle east sea",
+          "middle east switchgears market share & growth report",
+          "new zealand industrial fasteners market report",
+          "north america commercial wall water resistive barrier market, report",
+          "north america lithium-ion",
+          "north america self"
+        ],
+        "overlapping_list": [
+          "americas",
+          "asia",
+          "asia pacific",
+          "australia",
+          "china",
+          "europe",
+          "france",
+          "india",
+          "indonesia",
+          "mexico",
+          "middle east",
+          "north america",
+          "philippines"
+        ],
+        "high_frequency_new": []
+      },
+      "performance_metrics": {
+        "bulk_speed": 21.10380234049496,
+        "individual_speed": 22.009872414263576,
+        "bulk_efficiency": 21.10380234049496,
+        "individual_efficiency": 22.009872414263576,
+        "bulk_discovery_rate": 64.70588235294117,
+        "individual_discovery_rate": 43.47826086956522
+      }
+    },
+    "en_core_web_lg_optimized": {
+      "model_info": {
+        "nlp": "<spacy.lang.en.English object at 0x7fcf41683fd0>",
+        "description": "en_core_web_lg with NER-only pipeline",
+        "components": [
+          "tok2vec",
+          "ner"
+        ]
+      },
+      "bulk_analysis": {
+        "total_entities": 74,
+        "unique_entities": 34,
+        "entity_counts": {
+          "Americas": 1,
+          "Asia": 1,
+          "Asia Pacific": 3,
+          "Middle East": 1,
+          "Australia": 2,
+          "New Zealand Industrial Fasteners Market Report": 1,
+          "North America Car DVR Market Size Analysis Report": 1,
+          "China": 2,
+          "Europe Building": 1,
+          "Europe": 15,
+          "France": 1,
+          "India": 8,
+          "Hydrocracking Market Size": 1,
+          "Indonesia": 1,
+          "Middle East Feeder": 1,
+          "Middle East Molded Case Circuit Breakers Market Report": 1,
+          "Middle East Sea": 1,
+          "Middle East Switchgears Market Share & Growth Report": 1,
+          "Middle East Distribution": 1,
+          "Nanosilver": 1,
+          "North America": 16,
+          "North America Commercial Facility Landscaping Services Market": 1,
+          "North America Commercial Facility Parking Lot Maintenance Market": 1,
+          "North America Commercial Facility Maintenance Market, Industry Report": 1,
+          "North America Commercial Facility Snow And Ice Management Service Market, Report": 1,
+          "North America Dehumidifier Market": 1,
+          "North America Geotextiles Market": 1,
+          "North America LED": 1,
+          "North America Industrial Duct For Dust Collection Market": 1,
+          "North America Lithium-": 1,
+          "North America Mini": 1,
+          "North America Screw Piles Market Size & Share Report": 1,
+          "North America Self": 1,
+          "Philippines": 1
+        },
+        "processing_time": 1.9094669818878174,
+        "text_length": 120686,
+        "entities_per_second": 38.75427053828342,
+        "raw_entities": [
+          {
+            "text": "Americas",
+            "label": "LOC",
+            "start": 11217,
+            "end": 11225,
+            "confidence": null
+          },
+          {
+            "text": "Asia",
+            "label": "LOC",
+            "start": 14338,
+            "end": 14342,
+            "confidence": null
+          },
+          {
+            "text": "Asia Pacific",
+            "label": "LOC",
+            "start": 16331,
+            "end": 16343,
+            "confidence": null
+          },
+          {
+            "text": "Asia Pacific",
+            "label": "LOC",
+            "start": 16757,
+            "end": 16769,
+            "confidence": null
+          },
+          {
+            "text": "Middle East",
+            "label": "LOC",
+            "start": 16771,
+            "end": 16782,
+            "confidence": null
+          },
+          {
+            "text": "Asia Pacific",
+            "label": "LOC",
+            "start": 17069,
+            "end": 17081,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 17667,
+            "end": 17676,
+            "confidence": null
+          },
+          {
+            "text": "New Zealand Industrial Fasteners Market Report",
+            "label": "GPE",
+            "start": 17681,
+            "end": 17727,
+            "confidence": null
+          },
+          {
+            "text": "North America Car DVR Market Size Analysis Report",
+            "label": "LOC",
+            "start": 31342,
+            "end": 31391,
+            "confidence": null
+          },
+          {
+            "text": "China",
+            "label": "GPE",
+            "start": 35545,
+            "end": 35550,
+            "confidence": null
+          },
+          {
+            "text": "China",
+            "label": "GPE",
+            "start": 35778,
+            "end": 35783,
+            "confidence": null
+          },
+          {
+            "text": "Europe Building",
+            "label": "LOC",
+            "start": 51602,
+            "end": 51617,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 51807,
+            "end": 51813,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 52866,
+            "end": 52872,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 52925,
+            "end": 52931,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53047,
+            "end": 53053,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53818,
+            "end": 53824,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 53931,
+            "end": 53937,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 54770,
+            "end": 54776,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 54833,
+            "end": 54839,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 55244,
+            "end": 55250,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56018,
+            "end": 56024,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56187,
+            "end": 56193,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56845,
+            "end": 56851,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 56959,
+            "end": 56965,
+            "confidence": null
+          },
+          {
+            "text": "France",
+            "label": "GPE",
+            "start": 64803,
+            "end": 64809,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 79113,
+            "end": 79118,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 79232,
+            "end": 79237,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 79761,
+            "end": 79766,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 80059,
+            "end": 80064,
+            "confidence": null
+          },
+          {
+            "text": "Hydrocracking Market Size",
+            "label": "LOC",
+            "start": 80361,
+            "end": 80386,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 81018,
+            "end": 81023,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 81141,
+            "end": 81146,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 81265,
+            "end": 81270,
+            "confidence": null
+          },
+          {
+            "text": "India",
+            "label": "GPE",
+            "start": 82791,
+            "end": 82796,
+            "confidence": null
+          },
+          {
+            "text": "Indonesia",
+            "label": "GPE",
+            "start": 83510,
+            "end": 83519,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Feeder",
+            "label": "LOC",
+            "start": 99330,
+            "end": 99348,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Molded Case Circuit Breakers Market Report",
+            "label": "LOC",
+            "start": 99626,
+            "end": 99680,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Sea",
+            "label": "LOC",
+            "start": 99688,
+            "end": 99703,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Switchgears Market Share & Growth Report",
+            "label": "LOC",
+            "start": 99745,
+            "end": 99797,
+            "confidence": null
+          },
+          {
+            "text": "Middle East Distribution",
+            "label": "LOC",
+            "start": 100548,
+            "end": 100572,
+            "confidence": null
+          },
+          {
+            "text": "Nanosilver",
+            "label": "GPE",
+            "start": 103818,
+            "end": 103828,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 106231,
+            "end": 106244,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 106764,
+            "end": 106777,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107003,
+            "end": 107016,
+            "confidence": null
+          },
+          {
+            "text": "Australia",
+            "label": "GPE",
+            "start": 107021,
+            "end": 107030,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107378,
+            "end": 107391,
+            "confidence": null
+          },
+          {
+            "text": "North America Commercial Facility Landscaping Services Market",
+            "label": "LOC",
+            "start": 107629,
+            "end": 107690,
+            "confidence": null
+          },
+          {
+            "text": "North America Commercial Facility Parking Lot Maintenance Market",
+            "label": "LOC",
+            "start": 107714,
+            "end": 107778,
+            "confidence": null
+          },
+          {
+            "text": "North America Commercial Facility Maintenance Market, Industry Report",
+            "label": "LOC",
+            "start": 107793,
+            "end": 107862,
+            "confidence": null
+          },
+          {
+            "text": "North America Commercial Facility Snow And Ice Management Service Market, Report",
+            "label": "LOC",
+            "start": 107870,
+            "end": 107950,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 107958,
+            "end": 107971,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108135,
+            "end": 108148,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108283,
+            "end": 108296,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108455,
+            "end": 108468,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 108470,
+            "end": 108476,
+            "confidence": null
+          },
+          {
+            "text": "North America Dehumidifier Market",
+            "label": "LOC",
+            "start": 108725,
+            "end": 108758,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 108783,
+            "end": 108796,
+            "confidence": null
+          },
+          {
+            "text": "Europe",
+            "label": "LOC",
+            "start": 108798,
+            "end": 108804,
+            "confidence": null
+          },
+          {
+            "text": "North America Geotextiles Market",
+            "label": "LOC",
+            "start": 108987,
+            "end": 109019,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109044,
+            "end": 109057,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 109169,
+            "end": 109182,
+            "confidence": null
+          },
+          {
+            "text": "North America LED",
+            "label": "LOC",
+            "start": 109839,
+            "end": 109856,
+            "confidence": null
+          },
+          {
+            "text": "North America Industrial Duct For Dust Collection Market",
+            "label": "LOC",
+            "start": 110279,
+            "end": 110335,
+            "confidence": null
+          },
+          {
+            "text": "North America Lithium-",
+            "label": "LOC",
+            "start": 110343,
+            "end": 110365,
+            "confidence": null
+          },
+          {
+            "text": "North America Mini",
+            "label": "LOC",
+            "start": 110467,
+            "end": 110485,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110609,
+            "end": 110622,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110735,
+            "end": 110748,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 110865,
+            "end": 110878,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 111050,
+            "end": 111063,
+            "confidence": null
+          },
+          {
+            "text": "North America",
+            "label": "LOC",
+            "start": 111307,
+            "end": 111320,
+            "confidence": null
+          },
+          {
+            "text": "North America Screw Piles Market Size & Share Report",
+            "label": "LOC",
+            "start": 111435,
+            "end": 111487,
+            "confidence": null
+          },
+          {
+            "text": "North America Self",
+            "label": "LOC",
+            "start": 111494,
+            "end": 111512,
+            "confidence": null
+          },
+          {
+            "text": "Philippines",
+            "label": "GPE",
+            "start": 119788,
+            "end": 119799,
+            "confidence": null
+          }
+        ]
+      },
+      "individual_analysis": {
+        "total_entities": 66,
+        "unique_entities": 23,
+        "titles_with_entities": 61,
+        "entity_counts": {
+          "Americas": 1,
+          "Asia": 1,
+          "Asia Pacific": 2,
+          "Middle East": 1,
+          "Australia": 4,
+          "New Zealand Industrial Fasteners Market Report": 1,
+          "China": 2,
+          "Europe": 14,
+          "France": 1,
+          "Halloysite Market Size": 1,
+          "India": 16,
+          "Indonesia": 2,
+          "Mexico": 1,
+          "Middle East Feeder": 1,
+          "Middle East Molded Case Circuit Breakers Market Report": 1,
+          "Middle East Sea": 1,
+          "Middle East Switchgears Market Share & Growth Report": 1,
+          "Middle East Distribution": 1,
+          "North America": 10,
+          "North America Commercial Wall Water Resistive Barrier Market, Report": 1,
+          "North America Lithium-ion": 1,
+          "North America Self": 1,
+          "Philippines": 1
+        },
+        "processing_time": 1.98124361038208,
+        "entities_per_second": 33.3124102730971,
+        "detection_rate": 3.05
+      },
+      "bulk_pattern_comparison": {
+        "spacy_total": 34,
+        "patterns_total": 89,
+        "overlapping": 12,
+        "new_discoveries": 22,
+        "missing_from_spacy": 77,
+        "overlap_percentage": 13.48314606741573,
+        "discovery_percentage": 64.70588235294117,
+        "new_discoveries_list": [
+          "europe building",
+          "hydrocracking market size",
+          "middle east distribution",
+          "middle east feeder",
+          "middle east molded case circuit breakers market report",
+          "middle east sea",
+          "middle east switchgears market share & growth report",
+          "nanosilver",
+          "new zealand industrial fasteners market report",
+          "north america car dvr market size analysis report",
+          "north america commercial facility landscaping services market",
+          "north america commercial facility maintenance market, industry report",
+          "north america commercial facility parking lot maintenance market",
+          "north america commercial facility snow and ice management service market, report",
+          "north america dehumidifier market",
+          "north america geotextiles market",
+          "north america industrial duct for dust collection market",
+          "north america led",
+          "north america lithium-",
+          "north america mini",
+          "north america screw piles market size & share report",
+          "north america self"
+        ],
+        "overlapping_list": [
+          "americas",
+          "asia",
+          "asia pacific",
+          "australia",
+          "china",
+          "europe",
+          "france",
+          "india",
+          "indonesia",
+          "middle east",
+          "north america",
+          "philippines"
+        ],
+        "high_frequency_new": []
+      },
+      "individual_pattern_comparison": {
+        "spacy_total": 23,
+        "patterns_total": 89,
+        "overlapping": 13,
+        "new_discoveries": 10,
+        "missing_from_spacy": 76,
+        "overlap_percentage": 14.606741573033707,
+        "discovery_percentage": 43.47826086956522,
+        "new_discoveries_list": [
+          "halloysite market size",
+          "middle east distribution",
+          "middle east feeder",
+          "middle east molded case circuit breakers market report",
+          "middle east sea",
+          "middle east switchgears market share & growth report",
+          "new zealand industrial fasteners market report",
+          "north america commercial wall water resistive barrier market, report",
+          "north america lithium-ion",
+          "north america self"
+        ],
+        "overlapping_list": [
+          "americas",
+          "asia",
+          "asia pacific",
+          "australia",
+          "china",
+          "europe",
+          "france",
+          "india",
+          "indonesia",
+          "mexico",
+          "middle east",
+          "north america",
+          "philippines"
+        ],
+        "high_frequency_new": []
+      },
+      "performance_metrics": {
+        "bulk_speed": 38.75427053828342,
+        "individual_speed": 33.3124102730971,
+        "bulk_efficiency": 38.75427053828342,
+        "individual_efficiency": 33.3124102730971,
+        "bulk_discovery_rate": 64.70588235294117,
+        "individual_discovery_rate": 43.47826086956522
+      }
+    }
+  }
+}

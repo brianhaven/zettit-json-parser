@@ -1,0 +1,30 @@
+Aggregation Size Comparison Report
+============================================================
+
+**Analysis Date (PST):** 2025-08-20 14:41:02 PDT
+**Analysis Date (UTC):** 2025-08-20 21:41:02 UTC
+**Documents Available:** 978
+
+## Performance by Aggregation Size
+
+| Size | Model | Total Ent | Unique | New | Ent/Sec | Overlap% |
+|------|-------|-----------|--------|-----|---------|----------|
+| 1 | MD | 5543 | 395 | 330 | 188.8 | 40.1 |
+| 1 | LG | 4095 | 297 | 234 | 143.0 | - |
+| 10 | MD | 2433 | 243 | 182 | 176.4 | 54.8 |
+| 10 | LG | 2120 | 209 | 150 | 157.4 | - |
+| 50 | MD | 535 | 91 | 44 | 200.5 | 73.8 |
+| 50 | LG | 437 | 88 | 44 | 153.1 | - |
+
+## Key Findings
+
+- **Best MD discovery:** Size 1 with 330 new patterns
+- **Best LG discovery:** Size 1 with 234 new patterns
+- **Best model agreement:** Size 50 with 73.8% overlap
+
+## Recommendations
+
+⚠️ **Individual processing preferred**: Aggregation may lose entity boundaries.
+
+### Optimal Strategy
+Use aggregation size of 1 for both models.

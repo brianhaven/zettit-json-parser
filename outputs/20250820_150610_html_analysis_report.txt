@@ -1,0 +1,54 @@
+HTML vs Plain Text Processing Comparison Report
+============================================================
+
+**Analysis Date (PST):** 2025-08-20 15:05:30 PDT
+**Analysis Date (UTC):** 2025-08-20 22:05:30 UTC
+**Documents Analyzed:** 50
+
+## Processing Results Comparison
+
+| Method | Unique Entities | New Patterns | Processing Time (s) |
+|--------|----------------|--------------|--------------------|
+| HTML Processing | 163 | 100 | 28.2 |
+| Plain Text | 180 | 100 | 10.0 |
+
+## Key Improvements
+
+- **HTML-only discoveries:** 8 entities
+- **Improvement rate:** 4.4% more entities
+- **Table-specific entities:** 55 entities
+- **Body-specific entities:** 108 entities
+
+## Sample Improvements
+
+**Example 1:** Antimicrobial Medical Textiles Market, Industry Report, 2030
+- HTML-only entities: North America, Middle East, Saudi Arabia
+- Table entities: Mexico, Canada, India, France, Europe
+
+**Example 2:** Automotive Steel Wheels Market Size & Share Report, 2030
+- HTML-only entities: Middle East & Africa, Saudi Arabia
+- Table entities: Mexico, North America, Canada, Italy, India
+
+**Example 3:** APAC & Middle East Personal Protective Equipment Market Report, 2030
+- HTML-only entities: The Middle East, UAE
+- Table entities: South Korea, Middle East, China, India, Thailand
+
+**Example 4:** Aerostructure Materials Market Size & Share Report, 2030
+- HTML-only entities: Argentina, Middle East & Africa
+- Table entities: South Korea, Mexico, North America, Canada, Italy
+
+**Example 5:** CNC Router Machine Market Size And Share Report, 2030
+- HTML-only entities: Middle East & Africa, UAE, U.S.
+- Table entities: South Africa, Mexico, Canada, India, France
+
+
+## Recommendations
+
+⚠️ **Marginal improvement** (<10% more entities)
+- Consider cost/benefit of implementation complexity
+- **Table extraction is valuable** - captures structured region lists
+
+### Next Steps
+1. Implement HTML processing for batch pattern discovery
+2. Focus on table extraction for structured region data
+3. Test on larger dataset if results are promising

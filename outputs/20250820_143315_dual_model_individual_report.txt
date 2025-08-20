@@ -1,0 +1,124 @@
+Dual-Model Pattern Discovery Analysis Report
+============================================================
+
+**Analysis Date (PST):** 2025-08-20 14:33:15 PDT
+**Analysis Date (UTC):** 2025-08-20 21:33:15 UTC
+**Documents Analyzed:** 200
+**Processing Mode:** Individual documents
+**Existing Patterns in DB:** 131
+
+## Model Performance Comparison
+
+| Metric | en_core_web_md | en_core_web_lg |
+|--------|----------------|----------------|
+| Total Entities Found | 8461 | 6906 |
+| Unique Entities | 585 | 482 |
+| Processing Time (s) | 47.41 | 47.28 |
+| Entities/Second | 178.5 | 146.1 |
+
+## Model Agreement Analysis
+
+- **Entities found by both models:** 318
+- **Entities found by MD only:** 267
+- **Entities found by LG only:** 164
+- **Total unique entities:** 749
+- **Model overlap:** 42.5%
+- **MD precision (vs overlap):** 54.4%
+- **LG precision (vs overlap):** 66.0%
+
+## New Pattern Discovery
+
+- **New patterns (both models):** 251
+- **New patterns (MD only):** 264
+- **New patterns (LG only):** 164
+- **Total new patterns:** 679
+
+## High-Confidence Pattern Recommendations
+
+| Entity | Count | Confidence |
+|--------|-------|------------|
+| scopeU.S. | 100 | HIGH (both models) |
+| Mn Units | 48 | MEDIUM (MD only) |
+| Middle East & | 35 | HIGH (both models) |
+| North America Wheelchair | 33 | MEDIUM (MD only) |
+| the Middle East | 29 | HIGH (both models) |
+| ScopeU.S. | 25 | MEDIUM (MD only) |
+| DevelopmentsIn | 20 | MEDIUM (MD only) |
+| KSA | 19 | HIGH (both models) |
+| Asia Pacific Differential | 18 | HIGH (both models) |
+| Middle East & Africa Robotic | 18 | MEDIUM (MD only) |
+| Middle East & Africa Durable | 17 | HIGH (both models) |
+| South America Robotic | 17 | MEDIUM (MD only) |
+| North America Robotic | 16 | MEDIUM (MD only) |
+| Middle East & Africa Market | 16 | MEDIUM (MD only) |
+| Middle East & Africa Field Service Management Market Absolute | 15 | MEDIUM (MD only) |
+| Middle East & AfricaCountry | 15 | MEDIUM (MD only) |
+| Middle East & Africa Fuel Rail Market | 15 | MEDIUM (MD only) |
+| North America Pulsed Laser Deposition Systems | 13 | MEDIUM (MD only) |
+| the Middle East & Africa | 12 | HIGH (both models) |
+| Region | 12 | MEDIUM (MD only) |
+| Middle East & Africa Online Education Market Absolute Opportunity | 12 | MEDIUM (MD only) |
+| Middle East & Africa Warranty Management Software Market Absolute | 12 | MEDIUM (MD only) |
+| Middle East & Africa Field Service Management | 11 | MEDIUM (MD only) |
+| Europe Robotic | 11 | MEDIUM (MD only) |
+| Nitrile | 11 | MEDIUM (LG only) |
+| North America Market Forecast | 10 | HIGH (both models) |
+| Latin America Market Forecast | 10 | HIGH (both models) |
+| Europe America | 10 | HIGH (both models) |
+| Latin America Market Value Share Analysis | 10 | MEDIUM (MD only) |
+| ArabiaUAESouth Africa | 10 | MEDIUM (LG only) |
+
+## Top 20 Entities by Model
+
+### en_core_web_md
+- Europe: 592
+- China: 567
+- U.S.: 483
+- North America: 462
+- India: 432
+- Germany: 330
+- Latin America: 317
+- Japan: 287
+- Asia Pacific: 287
+- Canada: 272
+- Middle East & Africa: 271
+- Brazil: 250
+- France: 210
+- Mexico: 183
+- Africa: 180
+- UK: 177
+- Spain: 164
+- Italy: 151
+- South Africa: 141
+- America: 130
+
+### en_core_web_lg
+- China: 538
+- Europe: 471
+- U.S.: 442
+- India: 431
+- Germany: 330
+- Asia Pacific: 318
+- Japan: 292
+- North America: 272
+- Canada: 243
+- France: 241
+- Brazil: 238
+- Italy: 196
+- UK: 177
+- Africa: 171
+- Spain: 167
+- Mexico: 163
+- America: 147
+- Latin America: 127
+- South Korea: 118
+- South Africa: 98
+
+## Recommendations
+
+⚠️ **Low model agreement (<70%)**: Consider using both models for comprehensive coverage.
+
+### Next Steps
+1. Review high-confidence patterns for addition to pattern library
+2. Validate patterns with counts >= 3 from both models
+3. Consider running on full dataset if results are promising
