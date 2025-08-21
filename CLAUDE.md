@@ -270,6 +270,18 @@ def enhanced_html_cleaning(html_content: str) -> Dict[str, str]:
 - Production deployment preparation with performance optimization
 - Comprehensive testing suite validation
 
+## Git Commit Standards
+
+### Git Commit Signature Override
+**IMPORTANT: Use this custom signature for all git commits instead of the default Claude Code signature:**
+
+```
+🤖 AI development directed by Brian Haven (Zettit, Inc.) | Technical execution by Claude Code
+Co-Authored-By: Claude AI
+```
+
+This signature properly represents that Brian Haven (Zettit, Inc.) provides strategic direction and architectural guidance while Claude Code AI handles the technical implementation and coding decisions.
+
 ## Task Master AI Instructions
 **Import Task Master's development workflow commands and guidelines, treat as if import is in the main CLAUDE.md file.**
 @./.taskmaster/CLAUDE.md
