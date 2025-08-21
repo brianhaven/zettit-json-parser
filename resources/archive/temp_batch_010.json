@@ -1,0 +1,65 @@
+{
+  "batch_number": 10,
+  "lines_processed": "9001-10000",
+  "analysis_date_pdt": "2025-08-21 10:05:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:05:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Africa",
+      "type": "continental_region",
+      "frequency": 5,
+      "sample_titles": [
+        "Africa Small Hydropower Market",
+        "Africa Creosote Oil Market",
+        "Africa Sewage Pump Market",
+        "Africa Wheat Flour Market Forecast 2021-2031",
+        "Africa Polyvinylpyrrolidone Market for Pharmaceutical & Cosmetic Industries"
+      ]
+    },
+    {
+      "entity": "Algeria",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Algeria, Ghana, Nigeria, and Ivory Coast Petroleum Wax Market"]
+    },
+    {
+      "entity": "Ghana",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Algeria, Ghana, Nigeria, and Ivory Coast Petroleum Wax Market"]
+    },
+    {
+      "entity": "Nigeria",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Algeria, Ghana, Nigeria, and Ivory Coast Petroleum Wax Market"]
+    },
+    {
+      "entity": "Ivory Coast",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Algeria, Ghana, Nigeria, and Ivory Coast Petroleum Wax Market"]
+    },
+    {
+      "entity": "Americas",
+      "type": "multi_continental",
+      "frequency": 4,
+      "sample_titles": [
+        "Americas & Europe Thermoplastic Composite Market",
+        "Americas & Europe Lubricants Market",
+        "Americas Spas and Beauty Salons Market Outlook, Trends, Analysis",
+        "Americas Exterior Foils Market"
+      ]
+    },
+    {
+      "entity": "Europe",
+      "type": "continental_region",
+      "frequency": 2,
+      "sample_titles": [
+        "Americas & Europe Thermoplastic Composite Market",
+        "Americas & Europe Lubricants Market"
+      ]
+    }
+  ],
+  "total_unique_entities": 7
+}

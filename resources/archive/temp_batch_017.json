@@ -1,0 +1,100 @@
+{
+  "batch_number": 17,
+  "lines_processed": "16001-17000",
+  "analysis_date_pdt": "2025-08-21 10:40:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:40:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "EMEA",
+      "full_form": "Europe, Middle East & Africa",
+      "type": "multi_regional",
+      "frequency": 4,
+      "sample_titles": [
+        "EMEA and Asia Pacific Electrical Insulating Rubber Gloves Market",
+        "EMEA Industrial Coatings Market for Mining and Petrochemicals",
+        "EMEA Dismounted Soldier Systems Market",
+        "EMEA Meningitis Diagnostic Testing Market"
+      ]
+    },
+    {
+      "entity": "Asia Pacific",
+      "type": "continental_region",
+      "frequency": 6,
+      "sample_titles": [
+        "EMEA and Asia Pacific Electrical Insulating Rubber Gloves Market",
+        "Europe and Asia Pacific Commercial Fuel Cards Market",
+        "Europe and Asia Pacific Petroleum Dyes Market",
+        "Europe and Asia Pacific Sodium Cyanide Market",
+        "Europe, Asia Pacific, and U.S Silage Film Market"
+      ]
+    },
+    {
+      "entity": "Europe",
+      "type": "continental_region",
+      "frequency": 60,
+      "sample_titles": [
+        "Europe 4 Hob Cooktop Market",
+        "Europe and Africa Waterborne Coatings Market",
+        "Europe and Asia Pacific Commercial Fuel Cards Market",
+        "Europe and North America Construction and Demolition Waste Market",
+        "Europe Barite Market Outlook, 2021 - 2031"
+      ]
+    },
+    {
+      "entity": "Africa",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["Europe and Africa Waterborne Coatings Market"]
+    },
+    {
+      "entity": "North America",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["Europe and North America Construction and Demolition Waste Market"]
+    },
+    {
+      "entity": "U.S",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Europe, Asia Pacific, and U.S Silage Film Market"]
+    },
+    {
+      "entity": "Canada",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Europe & Canada Paving Materials Market"]
+    },
+    {
+      "entity": "Middle East Africa",
+      "type": "multi_regional",
+      "frequency": 1,
+      "sample_titles": ["Middle East Africa Early Production Facility Market"]
+    },
+    {
+      "entity": "Middle East",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["Europe & Middle East Lime Market"]
+    },
+    {
+      "entity": "India",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Europe, India, and Southeast Asia Metallurgical Coke Market"]
+    },
+    {
+      "entity": "Southeast Asia",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["Europe, India, and Southeast Asia Metallurgical Coke Market"]
+    },
+    {
+      "entity": "MEA",
+      "full_form": "Middle East & Africa",
+      "type": "multi_regional",
+      "frequency": 1,
+      "sample_titles": ["Europe and MEA Culture Test for Healthcare-associated Infections Market"]
+    }
+  ],
+  "total_unique_entities": 12
+}

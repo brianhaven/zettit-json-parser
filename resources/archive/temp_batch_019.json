@@ -1,0 +1,72 @@
+{
+  "batch_number": 19,
+  "lines_processed": "18001-19000",
+  "analysis_date_pdt": "2025-08-21 10:50:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:50:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Germany",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "Germany and Spain Continuing Medical Education Market",
+        "Germany, Belgium and Netherlands Laboratory Consumables Market"
+      ]
+    },
+    {
+      "entity": "Spain",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Germany and Spain Continuing Medical Education Market"]
+    },
+    {
+      "entity": "Belgium",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Germany, Belgium and Netherlands Laboratory Consumables Market"]
+    },
+    {
+      "entity": "Netherlands",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Germany, Belgium and Netherlands Laboratory Consumables Market"]
+    },
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 7,
+      "sample_titles": [
+        "Global and Asia Pacific Ethylene Vinyl Acetate Market",
+        "Global and U.S. Magnesium and Derivatives Market",
+        "Global Animal Feed Additives Market Analysis, 2021- 2031",
+        "Global Implantable Medical Devices Market",
+        "Global Distribution System Market"
+      ]
+    },
+    {
+      "entity": "Asia Pacific",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["Global and Asia Pacific Ethylene Vinyl Acetate Market"]
+    },
+    {
+      "entity": "U.S.",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Global and U.S. Magnesium and Derivatives Market"]
+    },
+    {
+      "entity": "Europe",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["Global & Europe Pultrusion Market Forecast 2027"]
+    },
+    {
+      "entity": "Haitian",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Haitian Vetiver Oil Market"]
+    }
+  ],
+  "total_unique_entities": 9
+}

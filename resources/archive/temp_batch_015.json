@@ -1,0 +1,21 @@
+{
+  "batch_number": 15,
+  "lines_processed": "14001-15000",
+  "analysis_date_pdt": "2025-08-21 10:30:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:30:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 1,
+      "sample_titles": ["Global and U.S. Conveying Equipment (Unit Handling, Bulk Handling and Parts & Attachments) Market"]
+    },
+    {
+      "entity": "U.S.",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Global and U.S. Conveying Equipment (Unit Handling, Bulk Handling and Parts & Attachments) Market"]
+    }
+  ],
+  "total_unique_entities": 2
+}

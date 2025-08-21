@@ -1,0 +1,122 @@
+{
+  "batch_number": 1,
+  "lines_processed": "1-1000",
+  "analysis_date_pdt": "2025-08-21 09:30:00 PDT",
+  "analysis_date_utc": "2025-08-21 16:30:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "APAC",
+      "full_form": "Asia Pacific",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["APAC & Middle East Personal Protective Equipment Market Report, 2030"]
+    },
+    {
+      "entity": "Middle East",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["APAC & Middle East Personal Protective Equipment Market Report, 2030"]
+    },
+    {
+      "entity": "Africa",
+      "type": "continental_region", 
+      "frequency": 3,
+      "sample_titles": [
+        "Africa Dewatering Pump Market Size & Share Report, 2030",
+        "Africa Diesel Generator Market Size, Share Report, 2030",
+        "Africa Nonwoven Fabrics Market Size, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "KSA", 
+      "full_form": "Kingdom of Saudi Arabia",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["KSA Cement Market Size, Share And Trends, Report, 2030"]
+    },
+    {
+      "entity": "U.S.",
+      "full_form": "United States",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["U.S. Hand Protection Equipment Market Size, Report, 2030"]
+    },
+    {
+      "entity": "Americas",
+      "type": "multi_continental",
+      "frequency": 8,
+      "sample_titles": [
+        "Americas Pipe Insulation Market Size & Share Report, 2030",
+        "Americas Structural Insulated Panel Market Report, 2021-2028",
+        "Americas Reusable Gloves Market Size & Share Report 2030",
+        "Americas And Europe Polymer Coated Fabrics Market, 2030"
+      ]
+    },
+    {
+      "entity": "Europe",
+      "type": "continental_region",
+      "frequency": 2,
+      "sample_titles": [
+        "Americas And Europe Polymer Coated Fabrics Market, 2030",
+        "Asia And Europe Steel Rebar Market, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "Asia Pacific",
+      "type": "continental_region",
+      "frequency": 25,
+      "sample_titles": [
+        "Asia Pacific Aluminum Extrusion Market, Industry Report, 2030",
+        "Asia Pacific Industrial Fasteners Market Size, Report, 2030",
+        "Asia Pacific Abrasives Market Size, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "Asia",
+      "type": "continental_region",
+      "frequency": 5,
+      "sample_titles": [
+        "Asia And Europe Steel Rebar Market, Industry Report, 2030",
+        "Asia Pacific, Middle East And Africa Emulsifiers Market Report, 2030"
+      ]
+    },
+    {
+      "entity": "ASEAN",
+      "full_form": "Association of Southeast Asian Nations",
+      "type": "trade_bloc",
+      "frequency": 1,
+      "sample_titles": ["ASEAN Ceramics Market Size & Share, Report, 2030"]
+    },
+    {
+      "entity": "Australia",
+      "type": "country_specific",
+      "frequency": 3,
+      "sample_titles": [
+        "Australia And New Zealand Industrial Fasteners Market Report, 2030",
+        "Australia Abrasives Market Size, Industry Report, 2020-2027",
+        "Australia Steel Rebar Market Size, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "New Zealand",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "Australia And New Zealand Industrial Fasteners Market Report, 2030",
+        "Australia & New Zealand Flooring Market Size Report, 2030"
+      ]
+    },
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 4,
+      "sample_titles": [
+        "Global Access Control & Authentication Market, Industry Report, 2025",
+        "Global Acids & Nutrient In Animal Nutrition Market Size Report, 2025",
+        "Global Agro Textile Market Size, Share & Growth Report, 2030",
+        "Global Automotive Composite Market Size Report, 2020-2027"
+      ]
+    }
+  ],
+  "total_unique_entities": 13
+}

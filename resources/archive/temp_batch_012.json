@@ -1,0 +1,33 @@
+{
+  "batch_number": 12,
+  "lines_processed": "11001-12000",
+  "analysis_date_pdt": "2025-08-21 10:15:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:15:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "India",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Aviation Fuel Terminals Market in India"]
+    },
+    {
+      "entity": "Bangladesh",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Bangladesh Corn Oil Market"]
+    },
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 1,
+      "sample_titles": ["Global & U.K. Biomass Boiler Market Insights, 2014-2022"]
+    },
+    {
+      "entity": "U.K.",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Global & U.K. Biomass Boiler Market Insights, 2014-2022"]
+    }
+  ],
+  "total_unique_entities": 4
+}

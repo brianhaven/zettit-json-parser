@@ -1,0 +1,39 @@
+{
+  "merge_summary": {
+    "analysis_date_pdt": "2025-08-20 22:43:47 PDT",
+    "analysis_date_utc": "2025-08-21 05:43:47 UTC",
+    "total_entities_merged": 919,
+    "pattern_libraries_entries_created": 919,
+    "entity_type_breakdown": {
+      "global": 1,
+      "multi_continental": 4,
+      "continental": 6,
+      "sub_regional": 36,
+      "multi_regional": 9,
+      "trade_bloc": 19,
+      "oceanic": 1,
+      "country": 196,
+      "multi_country": 3,
+      "us_state": 49,
+      "us_city": 1,
+      "us_regional": 2,
+      "designation": 1,
+      "market_designation": 33,
+      "historical_country": 9,
+      "us_territory": 6,
+      "canadian_province": 10,
+      "canadian_territory": 3,
+      "chinese_region": 12,
+      "japanese_region": 8,
+      "indian_state": 22,
+      "brazilian_state": 27,
+      "german_state": 16,
+      "uk_region": 4,
+      "french_region": 13,
+      "major_city": 254,
+      "tech_region": 17,
+      "metropolitan_area": 73,
+      "census_region": 84
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "batch_number": 9,
+  "lines_processed": "8001-9000",
+  "analysis_date_pdt": "2025-08-21 10:00:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:00:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 4,
+      "sample_titles": [
+        "Global Weathering Steel Market Size Report, 2019-2025",
+        "Global Wood Chips Market Size, Share, Industry Report, 2019-2025",
+        "Global 3D ICs Market",
+        "Asia Pacific Hexane Market"
+      ]
+    },
+    {
+      "entity": "U.S.",
+      "type": "country_specific",
+      "frequency": 145,
+      "sample_titles": [
+        "U.S. Hydrogen Generation Market, Industry Report, 2030",
+        "U.S. Geothermal Heat Pump Market Size Share Report, 2030",
+        "U.S. Glass Curtain Wall Market Size & Share Report, 2030",
+        "U.S. Industrial Boiler Market Size, Industry Report, 2030",
+        "U.S. Kaolin Market Size And Share, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "US",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "US High Capacity Power Banks Market Size, Industry Report, 2025",
+        "US Liquid Sodium Silicate Market Size, Share, Industry Report, 2024"
+      ]
+    },
+    {
+      "entity": "U.S. and Mexico",
+      "type": "multi_national",
+      "frequency": 1,
+      "sample_titles": ["U.S. and Mexico Yeast Market Size, Share, Industry Report, 2012-2022"]
+    },
+    {
+      "entity": "U.S. And Mexico",
+      "type": "multi_national", 
+      "frequency": 1,
+      "sample_titles": ["U.S. And Mexico Stainless Steel Market Size, Report, 2030"]
+    },
+    {
+      "entity": "U.S. And Mexico",
+      "type": "multi_national",
+      "frequency": 1,
+      "sample_titles": ["U.S. And Mexico Metal Stamping Market Size, Report, 2030"]
+    },
+    {
+      "entity": "Vietnam",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "Vietnam Animal Feed Additives Market Size Report, 2030",
+        "Vietnam Animal Feed Market Size, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "West Africa",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["West Africa Solar PV Panel Market Size, Share, Report 2030"]
+    },
+    {
+      "entity": "Western U.S.",
+      "type": "sub_national",
+      "frequency": 1,
+      "sample_titles": ["Western U.S. Flat Steel Market Size, Industry Report, 2030"]
+    },
+    {
+      "entity": "Australia",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Australia Toys and Games Market - Size, Share & Industry Analysis"]
+    },
+    {
+      "entity": "China",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "China Travel Retail Industry - Trends & Market Size",
+        "China Retail Market - Trends & Size"
+      ]
+    },
+    {
+      "entity": "Europe",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["Europe Travel Retail Market Size | Industry Trends & Forecast Analysis"]
+    },
+    {
+      "entity": "Japan",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Japan Travel Retail Market - Size, Share & Industry Analysis"]
+    },
+    {
+      "entity": "Qatar",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Qatar Retail Market - Companies, Analysis, Industry Overview & Outlook"]
+    },
+    {
+      "entity": "South Korea",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "South Korea Travel Retail Market - Size, Share & Industry Analysis",
+        "South Korea Retail Sector Market Size & Share Analysis - Industry Research Report - Growth Trends"
+      ]
+    },
+    {
+      "entity": "Singapore",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "Retail Market in Singapore - Size, Outlook & Statistics",
+        "Singapore Travel Retail Market Size & Share Analysis - Industry Research Report - Growth Trends"
+      ]
+    },
+    {
+      "entity": "Middle East and Africa",
+      "type": "multi_regional",
+      "frequency": 1,
+      "sample_titles": ["Middle East and Africa Travel Retail Market - Size, Share & Industry Analysis"]
+    },
+    {
+      "entity": "Latin America",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["Latin America Travel Retail Market - Companies, Size & Share"]
+    },
+    {
+      "entity": "North America",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["North America Travel Retail Market Size & Share Analysis - Industry Research Report - Growth Trends"]
+    },
+    {
+      "entity": "APAC",
+      "full_form": "Asia Pacific",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["APAC Travel Retail Market - Companies & Trends"]
+    },
+    {
+      "entity": "United Kingdom",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["United Kingdom Hardware Stores Retail Market Size & Share Analysis - Industry Research Report - Growth Trends"]
+    },
+    {
+      "entity": "Thailand",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Thailand Travel Retail Market Size & Share Analysis - Industry Research Report - Growth Trends"]
+    },
+    {
+      "entity": "United States",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["United States Hardware Stores Retail Market Size & Share Analysis - Industry Research Report - Growth Trends"]
+    },
+    {
+      "entity": "Asia Pacific",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["Asia Pacific Hexane Market"]
+    }
+  ],
+  "total_unique_entities": 23
+}

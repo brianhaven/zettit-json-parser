@@ -1,0 +1,85 @@
+{
+  "batch_number": "7-8",
+  "lines_processed": "6001-8000",
+  "analysis_date_pdt": "2025-08-21 09:55:00 PDT",
+  "analysis_date_utc": "2025-08-21 16:55:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 22,
+      "sample_titles": [
+        "Global Polybutylene Succinate Market Size, Share Report, 2030",
+        "Global Polyvinylidene Fluoride Market Size, PVDF Industry Report 2025",
+        "Global Prepreg Market Size, Share & Growth Report, 2030",
+        "Global Renewable Aviation Fuel Market Size, Industry Report, 2025",
+        "Global Renewable Methanol Market Size & Trends Report, 2030"
+      ]
+    },
+    {
+      "entity": "Qatar",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Qatar Smartphone Market Size, Share & Trends Report 2030"]
+    },
+    {
+      "entity": "Saudi Arabia",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Saudi Arabia Carbon Nanotubes Market, Industry Report 2030"]
+    },
+    {
+      "entity": "Southeast Asia",
+      "type": "sub_regional",
+      "frequency": 5,
+      "sample_titles": [
+        "Southeast Asia Asphalt Shingles Market Share, Industry Report, 2025",
+        "Southeast Asia Biomass Market Size & Share Report, 2030",
+        "Southeast Asia Flame Resistant Fabric For Apparel Market Report, 2030",
+        "Southeast Asia Personal Protective Equipment Market Report",
+        "Southeast Asia Pipes Market Size & Share Report, 2020-2028"
+      ]
+    },
+    {
+      "entity": "U.K.",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["U.K. PPE In Construction Market Size, Industry Report, 2030"]
+    },
+    {
+      "entity": "UK",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["UK Renewable Energy Market Size, Industry Report, 2030"]
+    },
+    {
+      "entity": "UAE",
+      "type": "country_specific",
+      "frequency": 3,
+      "sample_titles": [
+        "UAE Palm Oil Market Size, Share, Industry Analysis Report, 2018-2025",
+        "UAE Property And Community Management Market Report, 2030",
+        "UAE Fire Protection System Market Size, Share Report, 2030"
+      ]
+    },
+    {
+      "entity": "U.S.",
+      "type": "country_specific",
+      "frequency": 65,
+      "sample_titles": [
+        "U.S. Solar PV Market Size, Share & Growth Report, 2030",
+        "U.S. Battery Market Size And Share, Industry Report, 2030",
+        "U.S. Battery Recycling Market Size, Industry Report, 2030",
+        "U.S. Agro Textile Market Size, Share & Trends Report, 2030",
+        "U.S. Aluminum Curtain Walls Market, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "U.S. And Europe",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["U.S. And Europe Outdoor Fabric Market Size Report, 2030"]
+    }
+  ],
+  "total_unique_entities": 9
+}

@@ -1,0 +1,77 @@
+{
+  "batch_number": 3,
+  "lines_processed": "2001-3000",
+  "analysis_date_pdt": "2025-08-21 09:40:00 PDT",
+  "analysis_date_utc": "2025-08-21 16:40:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 12,
+      "sample_titles": [
+        "Global Composite Materials Market Size, Trends, Industry Report, 2025",
+        "Global Consumer Battery Market Size Analysis Report, 2030",
+        "Global Doctor Blade Market Size, Share, Industry Report, 2019-2024",
+        "Global Electrostatic Precipitator Market Size Report, 2025"
+      ]
+    },
+    {
+      "entity": "Costa Rica",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Costa Rica Reflective Insulation Market, Industry Report, 2030"]
+    },
+    {
+      "entity": "EMEA",
+      "full_form": "Europe, Middle East and Africa",
+      "type": "multi_regional",
+      "frequency": 1,
+      "sample_titles": ["EMEA Prestressed Concrete (PC) Wire and Strand Market, 2019-2025"]
+    },
+    {
+      "entity": "Europe",
+      "type": "continental_region",
+      "frequency": 47,
+      "sample_titles": [
+        "Europe Aluminum Die Casting Market, Industry Report, 2030",
+        "Europe Carbon Capture Utilization Market Size Report, 2030",
+        "Europe Building-integrated Photovoltaics Market, Report 2030",
+        "Europe Composites Market Size, Share, Growth Report 2030",
+        "Europe Computer Numerical Control Machine Market Report, 2030"
+      ]
+    },
+    {
+      "entity": "CIS",
+      "full_form": "Commonwealth of Independent States",
+      "type": "trade_bloc",
+      "frequency": 1,
+      "sample_titles": ["Europe, CIS & MENA Sorbitol Market Size Report, 2020-2027"]
+    },
+    {
+      "entity": "MENA",
+      "full_form": "Middle East and North Africa",
+      "type": "multi_regional",
+      "frequency": 1,
+      "sample_titles": ["Europe, CIS & MENA Sorbitol Market Size Report, 2020-2027"]
+    },
+    {
+      "entity": "Americas",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["Europe And Americas Fire Protection Market Report, 2030"]
+    },
+    {
+      "entity": "Asia Pacific",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["Europe & Asia Pacific Polypropylene Pipes Market Report, 2030"]
+    },
+    {
+      "entity": "Middle East",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["Europe & Middle East Composites Market Size Report, 2030"]
+    }
+  ],
+  "total_unique_entities": 9
+}

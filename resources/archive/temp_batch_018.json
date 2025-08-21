@@ -1,0 +1,33 @@
+{
+  "batch_number": 18,
+  "lines_processed": "17001-18000",
+  "analysis_date_pdt": "2025-08-21 10:45:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:45:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 1,
+      "sample_titles": ["Global Fish Oil Market"]
+    },
+    {
+      "entity": "France",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["France Facilities Management Market"]
+    },
+    {
+      "entity": "GCC",
+      "full_form": "Gulf Cooperation Council",
+      "type": "trade_bloc",
+      "frequency": 4,
+      "sample_titles": [
+        "GCC Condiment Sauces (for Hospitality Sector) Market",
+        "GCC Processed Meat Market Forecast 2024",
+        "GCC Molded Plastics Market",
+        "GCC Solar Diesel Hybrid Power Systems Market"
+      ]
+    }
+  ],
+  "total_unique_entities": 3
+}

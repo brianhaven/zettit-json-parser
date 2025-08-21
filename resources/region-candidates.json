@@ -1,0 +1,4144 @@
+{
+  "geographic_entities": [
+    {
+      "category": "ADDITIONAL_COUNTRIES_CURRENT",
+      "entities": [
+        {
+          "term": "Afghanistan",
+          "aliases": ["AF", "Islamic Republic of Afghanistan"],
+          "type": "country"
+        },
+        {
+          "term": "Albania",
+          "aliases": ["AL", "Republic of Albania"],
+          "type": "country"
+        },
+        {
+          "term": "Andorra",
+          "aliases": ["AD", "Principality of Andorra"],
+          "type": "country"
+        },
+        {
+          "term": "Angola",
+          "aliases": ["AO", "Republic of Angola"],
+          "type": "country"
+        },
+        {
+          "term": "Antigua and Barbuda",
+          "aliases": ["AG", "Antigua & Barbuda"],
+          "type": "country"
+        },
+        {
+          "term": "Armenia",
+          "aliases": ["AM", "Republic of Armenia"],
+          "type": "country"
+        },
+        {
+          "term": "Azerbaijan",
+          "aliases": ["AZ", "Republic of Azerbaijan"],
+          "type": "country"
+        },
+        {
+          "term": "Bahamas",
+          "aliases": ["BS", "Commonwealth of the Bahamas", "The Bahamas"],
+          "type": "country"
+        },
+        {
+          "term": "Bahrain",
+          "aliases": ["BH", "Kingdom of Bahrain"],
+          "type": "country"
+        },
+        {
+          "term": "Barbados",
+          "aliases": ["BB"],
+          "type": "country"
+        },
+        {
+          "term": "Belarus",
+          "aliases": ["BY", "Republic of Belarus"],
+          "type": "country"
+        },
+        {
+          "term": "Belize",
+          "aliases": ["BZ"],
+          "type": "country"
+        },
+        {
+          "term": "Benin",
+          "aliases": ["BJ", "Republic of Benin"],
+          "type": "country"
+        },
+        {
+          "term": "Bhutan",
+          "aliases": ["BT", "Kingdom of Bhutan"],
+          "type": "country"
+        },
+        {
+          "term": "Bolivia",
+          "aliases": ["BO", "Plurinational State of Bolivia"],
+          "type": "country"
+        },
+        {
+          "term": "Botswana",
+          "aliases": ["BW", "Republic of Botswana"],
+          "type": "country"
+        },
+        {
+          "term": "Brunei",
+          "aliases": ["BN", "Brunei Darussalam", "Sultanate of Brunei"],
+          "type": "country"
+        },
+        {
+          "term": "Bulgaria",
+          "aliases": ["BG", "Republic of Bulgaria"],
+          "type": "country"
+        },
+        {
+          "term": "Burkina Faso",
+          "aliases": ["BF"],
+          "type": "country"
+        },
+        {
+          "term": "Burundi",
+          "aliases": ["BI", "Republic of Burundi"],
+          "type": "country"
+        },
+        {
+          "term": "Cambodia",
+          "aliases": ["KH", "Kingdom of Cambodia"],
+          "type": "country"
+        },
+        {
+          "term": "Cameroon",
+          "aliases": ["CM", "Republic of Cameroon"],
+          "type": "country"
+        },
+        {
+          "term": "Cape Verde",
+          "aliases": ["CV", "Cabo Verde"],
+          "type": "country"
+        },
+        {
+          "term": "Central African Republic",
+          "aliases": ["CF", "CAR"],
+          "type": "country"
+        },
+        {
+          "term": "Chad",
+          "aliases": ["TD", "Republic of Chad"],
+          "type": "country"
+        },
+        {
+          "term": "Comoros",
+          "aliases": ["KM", "Union of the Comoros"],
+          "type": "country"
+        },
+        {
+          "term": "Democratic Republic of the Congo",
+          "aliases": ["CD", "DRC", "Congo-Kinshasa"],
+          "type": "country"
+        },
+        {
+          "term": "Republic of the Congo",
+          "aliases": ["CG", "Congo", "Congo-Brazzaville"],
+          "type": "country"
+        },
+        {
+          "term": "Cuba",
+          "aliases": ["CU", "Republic of Cuba"],
+          "type": "country"
+        },
+        {
+          "term": "Cyprus",
+          "aliases": ["CY", "Republic of Cyprus"],
+          "type": "country"
+        },
+        {
+          "term": "Czech Republic",
+          "aliases": ["CZ", "Czechia"],
+          "type": "country"
+        },
+        {
+          "term": "Djibouti",
+          "aliases": ["DJ", "Republic of Djibouti"],
+          "type": "country"
+        },
+        {
+          "term": "Dominica",
+          "aliases": ["DM", "Commonwealth of Dominica"],
+          "type": "country"
+        },
+        {
+          "term": "Dominican Republic",
+          "aliases": ["DO"],
+          "type": "country"
+        },
+        {
+          "term": "East Timor",
+          "aliases": ["TL", "Timor-Leste"],
+          "type": "country"
+        },
+        {
+          "term": "Ecuador",
+          "aliases": ["EC", "Republic of Ecuador"],
+          "type": "country"
+        },
+        {
+          "term": "El Salvador",
+          "aliases": ["SV", "Republic of El Salvador"],
+          "type": "country"
+        },
+        {
+          "term": "Equatorial Guinea",
+          "aliases": ["GQ", "Republic of Equatorial Guinea"],
+          "type": "country"
+        },
+        {
+          "term": "Eritrea",
+          "aliases": ["ER", "State of Eritrea"],
+          "type": "country"
+        },
+        {
+          "term": "Estonia",
+          "aliases": ["EE", "Republic of Estonia"],
+          "type": "country"
+        },
+        {
+          "term": "Eswatini",
+          "aliases": ["SZ", "Swaziland", "Kingdom of Eswatini"],
+          "type": "country"
+        },
+        {
+          "term": "Ethiopia",
+          "aliases": ["ET", "Federal Democratic Republic of Ethiopia"],
+          "type": "country"
+        },
+        {
+          "term": "Fiji",
+          "aliases": ["FJ", "Republic of Fiji"],
+          "type": "country"
+        },
+        {
+          "term": "Finland",
+          "aliases": ["FI", "Republic of Finland"],
+          "type": "country"
+        },
+        {
+          "term": "Gabon",
+          "aliases": ["GA", "Gabonese Republic"],
+          "type": "country"
+        },
+        {
+          "term": "Gambia",
+          "aliases": ["GM", "Republic of the Gambia", "The Gambia"],
+          "type": "country"
+        },
+        {
+          "term": "Georgia",
+          "aliases": ["GE"],
+          "type": "country"
+        },
+        {
+          "term": "Grenada",
+          "aliases": ["GD"],
+          "type": "country"
+        },
+        {
+          "term": "Guatemala",
+          "aliases": ["GT", "Republic of Guatemala"],
+          "type": "country"
+        },
+        {
+          "term": "Guinea",
+          "aliases": ["GN", "Republic of Guinea"],
+          "type": "country"
+        },
+        {
+          "term": "Guinea-Bissau",
+          "aliases": ["GW", "Republic of Guinea-Bissau"],
+          "type": "country"
+        },
+        {
+          "term": "Guyana",
+          "aliases": ["GY", "Co-operative Republic of Guyana"],
+          "type": "country"
+        },
+        {
+          "term": "Honduras",
+          "aliases": ["HN", "Republic of Honduras"],
+          "type": "country"
+        },
+        {
+          "term": "Hungary",
+          "aliases": ["HU"],
+          "type": "country"
+        },
+        {
+          "term": "Iceland",
+          "aliases": ["IS", "Republic of Iceland"],
+          "type": "country"
+        },
+        {
+          "term": "Ireland",
+          "aliases": ["IE", "Republic of Ireland"],
+          "type": "country"
+        },
+        {
+          "term": "Israel",
+          "aliases": ["IL", "State of Israel"],
+          "type": "country"
+        },
+        {
+          "term": "Jamaica",
+          "aliases": ["JM"],
+          "type": "country"
+        },
+        {
+          "term": "Jordan",
+          "aliases": ["JO", "Hashemite Kingdom of Jordan"],
+          "type": "country"
+        },
+        {
+          "term": "Kazakhstan",
+          "aliases": ["KZ", "Republic of Kazakhstan"],
+          "type": "country"
+        },
+        {
+          "term": "Kenya",
+          "aliases": ["KE", "Republic of Kenya"],
+          "type": "country"
+        },
+        {
+          "term": "Kiribati",
+          "aliases": ["KI", "Republic of Kiribati"],
+          "type": "country"
+        },
+        {
+          "term": "North Korea",
+          "aliases": ["KP", "DPRK", "Democratic People's Republic of Korea"],
+          "type": "country"
+        },
+        {
+          "term": "Kyrgyzstan",
+          "aliases": ["KG", "Kyrgyz Republic"],
+          "type": "country"
+        },
+        {
+          "term": "Laos",
+          "aliases": ["LA", "Lao PDR", "Lao People's Democratic Republic"],
+          "type": "country"
+        },
+        {
+          "term": "Latvia",
+          "aliases": ["LV", "Republic of Latvia"],
+          "type": "country"
+        },
+        {
+          "term": "Lebanon",
+          "aliases": ["LB", "Lebanese Republic"],
+          "type": "country"
+        },
+        {
+          "term": "Lesotho",
+          "aliases": ["LS", "Kingdom of Lesotho"],
+          "type": "country"
+        },
+        {
+          "term": "Liberia",
+          "aliases": ["LR", "Republic of Liberia"],
+          "type": "country"
+        },
+        {
+          "term": "Libya",
+          "aliases": ["LY", "State of Libya"],
+          "type": "country"
+        },
+        {
+          "term": "Liechtenstein",
+          "aliases": ["LI", "Principality of Liechtenstein"],
+          "type": "country"
+        },
+        {
+          "term": "Lithuania",
+          "aliases": ["LT", "Republic of Lithuania"],
+          "type": "country"
+        },
+        {
+          "term": "Luxembourg",
+          "aliases": ["LU", "Grand Duchy of Luxembourg"],
+          "type": "country"
+        },
+        {
+          "term": "Madagascar",
+          "aliases": ["MG", "Republic of Madagascar"],
+          "type": "country"
+        },
+        {
+          "term": "Malawi",
+          "aliases": ["MW", "Republic of Malawi"],
+          "type": "country"
+        },
+        {
+          "term": "Maldives",
+          "aliases": ["MV", "Republic of Maldives"],
+          "type": "country"
+        },
+        {
+          "term": "Mali",
+          "aliases": ["ML", "Republic of Mali"],
+          "type": "country"
+        },
+        {
+          "term": "Malta",
+          "aliases": ["MT", "Republic of Malta"],
+          "type": "country"
+        },
+        {
+          "term": "Marshall Islands",
+          "aliases": ["MH", "Republic of the Marshall Islands"],
+          "type": "country"
+        },
+        {
+          "term": "Mauritania",
+          "aliases": ["MR", "Islamic Republic of Mauritania"],
+          "type": "country"
+        },
+        {
+          "term": "Mauritius",
+          "aliases": ["MU", "Republic of Mauritius"],
+          "type": "country"
+        },
+        {
+          "term": "Micronesia",
+          "aliases": ["FM", "Federated States of Micronesia"],
+          "type": "country"
+        },
+        {
+          "term": "Moldova",
+          "aliases": ["MD", "Republic of Moldova"],
+          "type": "country"
+        },
+        {
+          "term": "Monaco",
+          "aliases": ["MC", "Principality of Monaco"],
+          "type": "country"
+        },
+        {
+          "term": "Mongolia",
+          "aliases": ["MN"],
+          "type": "country"
+        },
+        {
+          "term": "Montenegro",
+          "aliases": ["ME"],
+          "type": "country"
+        },
+        {
+          "term": "Mozambique",
+          "aliases": ["MZ", "Republic of Mozambique"],
+          "type": "country"
+        },
+        {
+          "term": "Myanmar",
+          "aliases": ["MM", "Burma", "Republic of the Union of Myanmar"],
+          "type": "country"
+        },
+        {
+          "term": "Namibia",
+          "aliases": ["NA", "Republic of Namibia"],
+          "type": "country"
+        },
+        {
+          "term": "Nauru",
+          "aliases": ["NR", "Republic of Nauru"],
+          "type": "country"
+        },
+        {
+          "term": "Nepal",
+          "aliases": ["NP", "Federal Democratic Republic of Nepal"],
+          "type": "country"
+        },
+        {
+          "term": "Nicaragua",
+          "aliases": ["NI", "Republic of Nicaragua"],
+          "type": "country"
+        },
+        {
+          "term": "Niger",
+          "aliases": ["NE", "Republic of Niger"],
+          "type": "country"
+        },
+        {
+          "term": "North Macedonia",
+          "aliases": ["MK", "Republic of North Macedonia", "Macedonia"],
+          "type": "country"
+        },
+        {
+          "term": "Pakistan",
+          "aliases": ["PK", "Islamic Republic of Pakistan"],
+          "type": "country"
+        },
+        {
+          "term": "Palau",
+          "aliases": ["PW", "Republic of Palau"],
+          "type": "country"
+        },
+        {
+          "term": "Panama",
+          "aliases": ["PA", "Republic of Panama"],
+          "type": "country"
+        },
+        {
+          "term": "Papua New Guinea",
+          "aliases": ["PG", "PNG"],
+          "type": "country"
+        },
+        {
+          "term": "Paraguay",
+          "aliases": ["PY", "Republic of Paraguay"],
+          "type": "country"
+        },
+        {
+          "term": "Peru",
+          "aliases": ["PE", "Republic of Peru"],
+          "type": "country"
+        },
+        {
+          "term": "Rwanda",
+          "aliases": ["RW", "Republic of Rwanda"],
+          "type": "country"
+        },
+        {
+          "term": "Saint Kitts and Nevis",
+          "aliases": ["KN", "Saint Kitts & Nevis"],
+          "type": "country"
+        },
+        {
+          "term": "Saint Lucia",
+          "aliases": ["LC"],
+          "type": "country"
+        },
+        {
+          "term": "Saint Vincent and the Grenadines",
+          "aliases": ["VC", "Saint Vincent & the Grenadines"],
+          "type": "country"
+        },
+        {
+          "term": "Samoa",
+          "aliases": ["WS", "Independent State of Samoa"],
+          "type": "country"
+        },
+        {
+          "term": "San Marino",
+          "aliases": ["SM", "Republic of San Marino"],
+          "type": "country"
+        },
+        {
+          "term": "Sao Tome and Principe",
+          "aliases": ["ST", "São Tomé and Príncipe"],
+          "type": "country"
+        },
+        {
+          "term": "Senegal",
+          "aliases": ["SN", "Republic of Senegal"],
+          "type": "country"
+        },
+        {
+          "term": "Seychelles",
+          "aliases": ["SC", "Republic of Seychelles"],
+          "type": "country"
+        },
+        {
+          "term": "Sierra Leone",
+          "aliases": ["SL", "Republic of Sierra Leone"],
+          "type": "country"
+        },
+        {
+          "term": "Slovakia",
+          "aliases": ["SK", "Slovak Republic"],
+          "type": "country"
+        },
+        {
+          "term": "Solomon Islands",
+          "aliases": ["SB"],
+          "type": "country"
+        },
+        {
+          "term": "Somalia",
+          "aliases": ["SO", "Federal Republic of Somalia"],
+          "type": "country"
+        },
+        {
+          "term": "South Sudan",
+          "aliases": ["SS", "Republic of South Sudan"],
+          "type": "country"
+        },
+        {
+          "term": "Sri Lanka",
+          "aliases": ["LK", "Democratic Socialist Republic of Sri Lanka"],
+          "type": "country"
+        },
+        {
+          "term": "Sudan",
+          "aliases": ["SD", "Republic of the Sudan"],
+          "type": "country"
+        },
+        {
+          "term": "Suriname",
+          "aliases": ["SR", "Republic of Suriname"],
+          "type": "country"
+        },
+        {
+          "term": "Syria",
+          "aliases": ["SY", "Syrian Arab Republic"],
+          "type": "country"
+        },
+        {
+          "term": "Tajikistan",
+          "aliases": ["TJ", "Republic of Tajikistan"],
+          "type": "country"
+        },
+        {
+          "term": "Tanzania",
+          "aliases": ["TZ", "United Republic of Tanzania"],
+          "type": "country"
+        },
+        {
+          "term": "Togo",
+          "aliases": ["TG", "Togolese Republic"],
+          "type": "country"
+        },
+        {
+          "term": "Tonga",
+          "aliases": ["TO", "Kingdom of Tonga"],
+          "type": "country"
+        },
+        {
+          "term": "Trinidad and Tobago",
+          "aliases": ["TT", "Trinidad & Tobago"],
+          "type": "country"
+        },
+        {
+          "term": "Turkmenistan",
+          "aliases": ["TM"],
+          "type": "country"
+        },
+        {
+          "term": "Tuvalu",
+          "aliases": ["TV"],
+          "type": "country"
+        },
+        {
+          "term": "Uganda",
+          "aliases": ["UG", "Republic of Uganda"],
+          "type": "country"
+        },
+        {
+          "term": "Uruguay",
+          "aliases": ["UY", "Oriental Republic of Uruguay"],
+          "type": "country"
+        },
+        {
+          "term": "Uzbekistan",
+          "aliases": ["UZ", "Republic of Uzbekistan"],
+          "type": "country"
+        },
+        {
+          "term": "Vanuatu",
+          "aliases": ["VU", "Republic of Vanuatu"],
+          "type": "country"
+        },
+        {
+          "term": "Vatican City",
+          "aliases": ["VA", "Holy See"],
+          "type": "country"
+        },
+        {
+          "term": "Venezuela",
+          "aliases": ["VE", "Bolivarian Republic of Venezuela"],
+          "type": "country"
+        },
+        {
+          "term": "Yemen",
+          "aliases": ["YE", "Republic of Yemen"],
+          "type": "country"
+        },
+        {
+          "term": "Zambia",
+          "aliases": ["ZM", "Republic of Zambia"],
+          "type": "country"
+        },
+        {
+          "term": "Zimbabwe",
+          "aliases": ["ZW", "Republic of Zimbabwe"],
+          "type": "country"
+        }
+      ]
+    },
+    {
+      "category": "HISTORICAL_COUNTRIES_PAST_200_YEARS",
+      "entities": [
+        {
+          "term": "Soviet Union",
+          "aliases": ["USSR", "U.S.S.R.", "Union of Soviet Socialist Republics"],
+          "type": "historical_country"
+        },
+        {
+          "term": "Yugoslavia",
+          "aliases": ["SFRY", "Socialist Federal Republic of Yugoslavia"],
+          "type": "historical_country"
+        },
+        {
+          "term": "Czechoslovakia",
+          "aliases": ["CSSR", "Czecho-Slovakia"],
+          "type": "historical_country"
+        },
+        {
+          "term": "East Germany",
+          "aliases": ["GDR", "German Democratic Republic", "DDR"],
+          "type": "historical_country"
+        },
+        {
+          "term": "West Germany",
+          "aliases": ["FRG", "Federal Republic of Germany", "BRD"],
+          "type": "historical_country"
+        },
+        {
+          "term": "Ottoman Empire",
+          "aliases": ["Ottoman"],
+          "type": "historical_country"
+        },
+        {
+          "term": "Austrian Empire",
+          "aliases": ["Austria-Hungary", "Austro-Hungarian Empire"],
+          "type": "historical_country"
+        },
+        {
+          "term": "Republic of Texas",
+          "aliases": ["Texas Republic"],
+          "type": "historical_country"
+        },
+        {
+          "term": "Confederate States",
+          "aliases": ["CSA", "Confederate States of America", "Confederacy"],
+          "type": "historical_country"
+        }
+      ]
+    },
+    {
+      "category": "US_STATES_COMPLETE",
+      "entities": [
+        {
+          "term": "Alabama",
+          "aliases": ["AL"],
+          "type": "us_state"
+        },
+        {
+          "term": "Alaska",
+          "aliases": ["AK"],
+          "type": "us_state"
+        },
+        {
+          "term": "Arkansas",
+          "aliases": ["AR"],
+          "type": "us_state"
+        },
+        {
+          "term": "Connecticut",
+          "aliases": ["CT"],
+          "type": "us_state"
+        },
+        {
+          "term": "Delaware",
+          "aliases": ["DE"],
+          "type": "us_state"
+        },
+        {
+          "term": "Georgia",
+          "aliases": ["GA"],
+          "type": "us_state"
+        },
+        {
+          "term": "Hawaii",
+          "aliases": ["HI"],
+          "type": "us_state"
+        },
+        {
+          "term": "Idaho",
+          "aliases": ["ID"],
+          "type": "us_state"
+        },
+        {
+          "term": "Illinois",
+          "aliases": ["IL"],
+          "type": "us_state"
+        },
+        {
+          "term": "Iowa",
+          "aliases": ["IA"],
+          "type": "us_state"
+        },
+        {
+          "term": "Kansas",
+          "aliases": ["KS"],
+          "type": "us_state"
+        },
+        {
+          "term": "Kentucky",
+          "aliases": ["KY"],
+          "type": "us_state"
+        },
+        {
+          "term": "Louisiana",
+          "aliases": ["LA"],
+          "type": "us_state"
+        },
+        {
+          "term": "Maine",
+          "aliases": ["ME"],
+          "type": "us_state"
+        },
+        {
+          "term": "Maryland",
+          "aliases": ["MD"],
+          "type": "us_state"
+        },
+        {
+          "term": "Massachusetts",
+          "aliases": ["MA"],
+          "type": "us_state"
+        },
+        {
+          "term": "Minnesota",
+          "aliases": ["MN"],
+          "type": "us_state"
+        },
+        {
+          "term": "Mississippi",
+          "aliases": ["MS"],
+          "type": "us_state"
+        },
+        {
+          "term": "Montana",
+          "aliases": ["MT"],
+          "type": "us_state"
+        },
+        {
+          "term": "Nebraska",
+          "aliases": ["NE"],
+          "type": "us_state"
+        },
+        {
+          "term": "Nevada",
+          "aliases": ["NV"],
+          "type": "us_state"
+        },
+        {
+          "term": "New Hampshire",
+          "aliases": ["NH"],
+          "type": "us_state"
+        },
+        {
+          "term": "New Jersey",
+          "aliases": ["NJ"],
+          "type": "us_state"
+        },
+        {
+          "term": "New Mexico",
+          "aliases": ["NM"],
+          "type": "us_state"
+        },
+        {
+          "term": "North Carolina",
+          "aliases": ["NC"],
+          "type": "us_state"
+        },
+        {
+          "term": "North Dakota",
+          "aliases": ["ND"],
+          "type": "us_state"
+        },
+        {
+          "term": "Ohio",
+          "aliases": ["OH"],
+          "type": "us_state"
+        },
+        {
+          "term": "Oklahoma",
+          "aliases": ["OK"],
+          "type": "us_state"
+        },
+        {
+          "term": "Oregon",
+          "aliases": ["OR"],
+          "type": "us_state"
+        },
+        {
+          "term": "Pennsylvania",
+          "aliases": ["PA"],
+          "type": "us_state"
+        },
+        {
+          "term": "Rhode Island",
+          "aliases": ["RI"],
+          "type": "us_state"
+        },
+        {
+          "term": "South Carolina",
+          "aliases": ["SC"],
+          "type": "us_state"
+        },
+        {
+          "term": "South Dakota",
+          "aliases": ["SD"],
+          "type": "us_state"
+        },
+        {
+          "term": "Tennessee",
+          "aliases": ["TN"],
+          "type": "us_state"
+        },
+        {
+          "term": "Utah",
+          "aliases": ["UT"],
+          "type": "us_state"
+        },
+        {
+          "term": "Vermont",
+          "aliases": ["VT"],
+          "type": "us_state"
+        },
+        {
+          "term": "Virginia",
+          "aliases": ["VA"],
+          "type": "us_state"
+        },
+        {
+          "term": "West Virginia",
+          "aliases": ["WV"],
+          "type": "us_state"
+        },
+        {
+          "term": "Wisconsin",
+          "aliases": ["WI"],
+          "type": "us_state"
+        },
+        {
+          "term": "Wyoming",
+          "aliases": ["WY"],
+          "type": "us_state"
+        },
+        {
+          "term": "District of Columbia",
+          "aliases": ["DC", "Washington DC", "Washington D.C."],
+          "type": "us_territory"
+        },
+        {
+          "term": "Puerto Rico",
+          "aliases": ["PR"],
+          "type": "us_territory"
+        },
+        {
+          "term": "US Virgin Islands",
+          "aliases": ["VI", "U.S. Virgin Islands", "Virgin Islands"],
+          "type": "us_territory"
+        },
+        {
+          "term": "Guam",
+          "aliases": ["GU"],
+          "type": "us_territory"
+        },
+        {
+          "term": "American Samoa",
+          "aliases": ["AS"],
+          "type": "us_territory"
+        },
+        {
+          "term": "Northern Mariana Islands",
+          "aliases": ["MP", "CNMI"],
+          "type": "us_territory"
+        }
+      ]
+    },
+    {
+      "category": "CANADIAN_PROVINCES_TERRITORIES",
+      "entities": [
+        {
+          "term": "Ontario",
+          "aliases": ["ON"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "Quebec",
+          "aliases": ["QC", "Québec"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "British Columbia",
+          "aliases": ["BC"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "Alberta",
+          "aliases": ["AB"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "Manitoba",
+          "aliases": ["MB"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "Saskatchewan",
+          "aliases": ["SK"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "Nova Scotia",
+          "aliases": ["NS"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "New Brunswick",
+          "aliases": ["NB"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "Newfoundland and Labrador",
+          "aliases": ["NL", "Newfoundland & Labrador"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "Prince Edward Island",
+          "aliases": ["PE", "PEI"],
+          "type": "canadian_province"
+        },
+        {
+          "term": "Northwest Territories",
+          "aliases": ["NT", "NWT"],
+          "type": "canadian_territory"
+        },
+        {
+          "term": "Yukon",
+          "aliases": ["YT", "Yukon Territory"],
+          "type": "canadian_territory"
+        },
+        {
+          "term": "Nunavut",
+          "aliases": ["NU"],
+          "type": "canadian_territory"
+        }
+      ]
+    },
+    {
+      "category": "MAJOR_SUBNATIONAL_REGIONS_TOP25_COUNTRIES",
+      "entities": [
+        {
+          "term": "Beijing",
+          "aliases": ["Beijing Municipality"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Shanghai",
+          "aliases": ["Shanghai Municipality"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Guangdong",
+          "aliases": ["Guangdong Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Jiangsu",
+          "aliases": ["Jiangsu Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Shandong",
+          "aliases": ["Shandong Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Zhejiang",
+          "aliases": ["Zhejiang Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Henan",
+          "aliases": ["Henan Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Sichuan",
+          "aliases": ["Sichuan Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Hubei",
+          "aliases": ["Hubei Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Hunan",
+          "aliases": ["Hunan Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Anhui",
+          "aliases": ["Anhui Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Fujian",
+          "aliases": ["Fujian Province"],
+          "type": "chinese_region"
+        },
+        {
+          "term": "Tokyo",
+          "aliases": ["Tokyo Prefecture", "Tokyo Metropolis"],
+          "type": "japanese_region"
+        },
+        {
+          "term": "Osaka",
+          "aliases": ["Osaka Prefecture"],
+          "type": "japanese_region"
+        },
+        {
+          "term": "Kanagawa",
+          "aliases": ["Kanagawa Prefecture"],
+          "type": "japanese_region"
+        },
+        {
+          "term": "Aichi",
+          "aliases": ["Aichi Prefecture"],
+          "type": "japanese_region"
+        },
+        {
+          "term": "Saitama",
+          "aliases": ["Saitama Prefecture"],
+          "type": "japanese_region"
+        },
+        {
+          "term": "Chiba",
+          "aliases": ["Chiba Prefecture"],
+          "type": "japanese_region"
+        },
+        {
+          "term": "Hyogo",
+          "aliases": ["Hyogo Prefecture"],
+          "type": "japanese_region"
+        },
+        {
+          "term": "Hokkaido",
+          "aliases": ["Hokkaido Prefecture"],
+          "type": "japanese_region"
+        },
+        {
+          "term": "Uttar Pradesh",
+          "aliases": ["UP"],
+          "type": "indian_state"
+        },
+        {
+          "term": "Maharashtra",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Bihar",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "West Bengal",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Madhya Pradesh",
+          "aliases": ["MP"],
+          "type": "indian_state"
+        },
+        {
+          "term": "Tamil Nadu",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Rajasthan",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Karnataka",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Gujarat",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Andhra Pradesh",
+          "aliases": ["AP"],
+          "type": "indian_state"
+        },
+        {
+          "term": "Odisha",
+          "aliases": ["Orissa"],
+          "type": "indian_state"
+        },
+        {
+          "term": "Telangana",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Kerala",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Jharkhand",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Assam",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Punjab",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Haryana",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Chhattisgarh",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Jammu and Kashmir",
+          "aliases": ["J&K", "Jammu & Kashmir"],
+          "type": "indian_state"
+        },
+        {
+          "term": "Uttarakhand",
+          "aliases": [],
+          "type": "indian_state"
+        },
+        {
+          "term": "Himachal Pradesh",
+          "aliases": ["HP"],
+          "type": "indian_state"
+        },
+        {
+          "term": "Delhi",
+          "aliases": ["New Delhi", "National Capital Territory of Delhi"],
+          "type": "indian_state"
+        },
+        {
+          "term": "Mato Grosso",
+          "aliases": ["MT"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Pará",
+          "aliases": ["PA"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Amazonas",
+          "aliases": ["AM"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Minas Gerais",
+          "aliases": ["MG"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Bahia",
+          "aliases": ["BA"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Mato Grosso do Sul",
+          "aliases": ["MS"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Goiás",
+          "aliases": ["GO"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Maranhão",
+          "aliases": ["MA"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Rio Grande do Sul",
+          "aliases": ["RS"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Tocantins",
+          "aliases": ["TO"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Piauí",
+          "aliases": ["PI"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "São Paulo",
+          "aliases": ["SP"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Rondônia",
+          "aliases": ["RO"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Roraima",
+          "aliases": ["RR"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Paraná",
+          "aliases": ["PR"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Acre",
+          "aliases": ["AC"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Ceará",
+          "aliases": ["CE"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Amapá",
+          "aliases": ["AP"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Pernambuco",
+          "aliases": ["PE"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Santa Catarina",
+          "aliases": ["SC"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Paraíba",
+          "aliases": ["PB"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Rio Grande do Norte",
+          "aliases": ["RN"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Espírito Santo",
+          "aliases": ["ES"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Rio de Janeiro",
+          "aliases": ["RJ"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Alagoas",
+          "aliases": ["AL"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Sergipe",
+          "aliases": ["SE"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Distrito Federal",
+          "aliases": ["DF", "Brasília"],
+          "type": "brazilian_state"
+        },
+        {
+          "term": "Baden-Württemberg",
+          "aliases": ["BW"],
+          "type": "german_state"
+        },
+        {
+          "term": "Bavaria",
+          "aliases": ["Bayern", "BY"],
+          "type": "german_state"
+        },
+        {
+          "term": "Berlin",
+          "aliases": ["BE"],
+          "type": "german_state"
+        },
+        {
+          "term": "Brandenburg",
+          "aliases": ["BB"],
+          "type": "german_state"
+        },
+        {
+          "term": "Bremen",
+          "aliases": ["HB"],
+          "type": "german_state"
+        },
+        {
+          "term": "Hamburg",
+          "aliases": ["HH"],
+          "type": "german_state"
+        },
+        {
+          "term": "Hesse",
+          "aliases": ["Hessen", "HE"],
+          "type": "german_state"
+        },
+        {
+          "term": "Lower Saxony",
+          "aliases": ["Niedersachsen", "NI"],
+          "type": "german_state"
+        },
+        {
+          "term": "Mecklenburg-Vorpommern",
+          "aliases": ["MV"],
+          "type": "german_state"
+        },
+        {
+          "term": "North Rhine-Westphalia",
+          "aliases": ["Nordrhein-Westfalen", "NRW", "NW"],
+          "type": "german_state"
+        },
+        {
+          "term": "Rhineland-Palatinate",
+          "aliases": ["Rheinland-Pfalz", "RP"],
+          "type": "german_state"
+        },
+        {
+          "term": "Saarland",
+          "aliases": ["SL"],
+          "type": "german_state"
+        },
+        {
+          "term": "Saxony",
+          "aliases": ["Sachsen", "SN"],
+          "type": "german_state"
+        },
+        {
+          "term": "Saxony-Anhalt",
+          "aliases": ["Sachsen-Anhalt", "ST"],
+          "type": "german_state"
+        },
+        {
+          "term": "Schleswig-Holstein",
+          "aliases": ["SH"],
+          "type": "german_state"
+        },
+        {
+          "term": "Thuringia",
+          "aliases": ["Thüringen", "TH"],
+          "type": "german_state"
+        },
+        {
+          "term": "England",
+          "aliases": [],
+          "type": "uk_region"
+        },
+        {
+          "term": "Scotland",
+          "aliases": [],
+          "type": "uk_region"
+        },
+        {
+          "term": "Wales",
+          "aliases": [],
+          "type": "uk_region"
+        },
+        {
+          "term": "Northern Ireland",
+          "aliases": [],
+          "type": "uk_region"
+        },
+        {
+          "term": "Île-de-France",
+          "aliases": [],
+          "type": "french_region"
+        },
+        {
+          "term": "Auvergne-Rhône-Alpes",
+          "aliases": [],
+          "type": "french_region"
+        },
+        {
+          "term": "Hauts-de-France",
+          "aliases": [],
+          "type": "french_region"
+        },
+        {
+          "term": "Nouvelle-Aquitaine",
+          "aliases": [],
+          "type": "french_region"
+        },
+        {
+          "term": "Occitanie",
+          "aliases": [],
+          "type": "french_region"
+        },
+        {
+          "term": "Grand Est",
+          "aliases": [],
+          "type": "french_region"
+        },
+        {
+          "term": "Provence-Alpes-Côte d'Azur",
+          "aliases": ["PACA"],
+          "type": "french_region"
+        },
+        {
+          "term": "Pays de la Loire",
+          "aliases": [],
+          "type": "french_region"
+        },
+        {
+          "term": "Normandy",
+          "aliases": ["Normandie"],
+          "type": "french_region"
+        },
+        {
+          "term": "Centre-Val de Loire",
+          "aliases": [],
+          "type": "french_region"
+        },
+        {
+          "term": "Bourgogne-Franche-Comté",
+          "aliases": [],
+          "type": "french_region"
+        },
+        {
+          "term": "Brittany",
+          "aliases": ["Bretagne"],
+          "type": "french_region"
+        },
+        {
+          "term": "Corsica",
+          "aliases": ["Corse"],
+          "type": "french_region"
+        }
+      ]
+    },
+    {
+      "category": "MAJOR_WORLD_CITIES",
+      "entities": [
+        {
+          "term": "Tokyo",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Delhi",
+          "aliases": ["New Delhi"],
+          "type": "major_city"
+        },
+        {
+          "term": "Shanghai",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Dhaka",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "São Paulo",
+          "aliases": ["Sao Paulo"],
+          "type": "major_city"
+        },
+        {
+          "term": "Cairo",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Mexico City",
+          "aliases": ["Ciudad de México"],
+          "type": "major_city"
+        },
+        {
+          "term": "Beijing",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Mumbai",
+          "aliases": ["Bombay"],
+          "type": "major_city"
+        },
+        {
+          "term": "Osaka",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "New York City",
+          "aliases": ["NYC", "New York"],
+          "type": "major_city"
+        },
+        {
+          "term": "Karachi",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Chongqing",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Istanbul",
+          "aliases": ["Constantinople"],
+          "type": "major_city"
+        },
+        {
+          "term": "Buenos Aires",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Kolkata",
+          "aliases": ["Calcutta"],
+          "type": "major_city"
+        },
+        {
+          "term": "Lagos",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Manila",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Guangzhou",
+          "aliases": ["Canton"],
+          "type": "major_city"
+        },
+        {
+          "term": "Rio de Janeiro",
+          "aliases": ["Rio"],
+          "type": "major_city"
+        },
+        {
+          "term": "Los Angeles",
+          "aliases": ["LA"],
+          "type": "major_city"
+        },
+        {
+          "term": "Moscow",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Kinshasa",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Tianjin",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Paris",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Shenzhen",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Lima",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Chennai",
+          "aliases": ["Madras"],
+          "type": "major_city"
+        },
+        {
+          "term": "Bogotá",
+          "aliases": ["Bogota"],
+          "type": "major_city"
+        },
+        {
+          "term": "Bangkok",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "London",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Hyderabad",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Tehran",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Nanjing",
+          "aliases": ["Nanking"],
+          "type": "major_city"
+        },
+        {
+          "term": "Chicago",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Lahore",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Johannesburg",
+          "aliases": ["Joburg"],
+          "type": "major_city"
+        },
+        {
+          "term": "Ho Chi Minh City",
+          "aliases": ["Saigon"],
+          "type": "major_city"
+        },
+        {
+          "term": "Luanda",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Ahmedabad",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Kuala Lumpur",
+          "aliases": ["KL"],
+          "type": "major_city"
+        },
+        {
+          "term": "Xi'an",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Hong Kong",
+          "aliases": ["HK"],
+          "type": "major_city"
+        },
+        {
+          "term": "Dongguan",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Hangzhou",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Foshan",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Shenyang",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Riyadh",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Baghdad",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Santiago",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Surat",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Madrid",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Suzhou",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Pune",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Harbin",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Houston",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Dallas",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Toronto",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Dar es Salaam",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Miami",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Belo Horizonte",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Singapore",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Philadelphia",
+          "aliases": ["Philly"],
+          "type": "major_city"
+        },
+        {
+          "term": "Phoenix",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "San Antonio",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "San Diego",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Khartoum",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Yangon",
+          "aliases": ["Rangoon"],
+          "type": "major_city"
+        },
+        {
+          "term": "Kaohsiung",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Ankara",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Guadalajara",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Monterrey",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Addis Ababa",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Nairobi",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Salvador",
+          "aliases": ["Salvador da Bahia"],
+          "type": "major_city"
+        },
+        {
+          "term": "Brasília",
+          "aliases": ["Brasilia"],
+          "type": "major_city"
+        },
+        {
+          "term": "Fortaleza",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Surabaya",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "St. Petersburg",
+          "aliases": ["Saint Petersburg"],
+          "type": "major_city"
+        },
+        {
+          "term": "Kyiv",
+          "aliases": ["Kiev"],
+          "type": "major_city"
+        },
+        {
+          "term": "Barcelona",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Bandung",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Rome",
+          "aliases": ["Roma"],
+          "type": "major_city"
+        },
+        {
+          "term": "Medan",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Bekasi",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Algiers",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Casablanca",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Minsk",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Hamburg",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Budapest",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Warsaw",
+          "aliases": ["Warszawa"],
+          "type": "major_city"
+        },
+        {
+          "term": "Vienna",
+          "aliases": ["Wien"],
+          "type": "major_city"
+        },
+        {
+          "term": "Medellín",
+          "aliases": ["Medellin"],
+          "type": "major_city"
+        },
+        {
+          "term": "Phoenix",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Tashkent",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Haifa",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Taichung",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Kumasi",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Ibadan",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Izmir",
+          "aliases": ["Smyrna"],
+          "type": "major_city"
+        },
+        {
+          "term": "Curitiba",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Recife",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Naples",
+          "aliases": ["Napoli"],
+          "type": "major_city"
+        },
+        {
+          "term": "Kampala",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Lusaka",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Mogadishu",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "San Francisco",
+          "aliases": ["SF", "San Fran"],
+          "type": "major_city"
+        },
+        {
+          "term": "Boston",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Seattle",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Washington DC",
+          "aliases": ["Washington D.C.", "DC", "District of Columbia"],
+          "type": "major_city"
+        },
+        {
+          "term": "Atlanta",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Detroit",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Minneapolis",
+          "aliases": ["Minneapolis-St. Paul", "Twin Cities"],
+          "type": "major_city"
+        },
+        {
+          "term": "Denver",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Las Vegas",
+          "aliases": ["Vegas"],
+          "type": "major_city"
+        },
+        {
+          "term": "Nashville",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Austin",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Charlotte",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Columbus",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Indianapolis",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Milwaukee",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Memphis",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Baltimore",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Louisville",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Pittsburgh",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Cleveland",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Cincinnati",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Kansas City",
+          "aliases": ["KC"],
+          "type": "major_city"
+        },
+        {
+          "term": "St. Louis",
+          "aliases": ["Saint Louis"],
+          "type": "major_city"
+        },
+        {
+          "term": "Tampa",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Orlando",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Jacksonville",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Salt Lake City",
+          "aliases": ["SLC"],
+          "type": "major_city"
+        },
+        {
+          "term": "Raleigh",
+          "aliases": ["Raleigh-Durham", "Research Triangle"],
+          "type": "major_city"
+        },
+        {
+          "term": "Sacramento",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "San Jose",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Oakland",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Fresno",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Tucson",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Albuquerque",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "El Paso",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Fort Worth",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Oklahoma City",
+          "aliases": ["OKC"],
+          "type": "major_city"
+        },
+        {
+          "term": "Tulsa",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "New Orleans",
+          "aliases": ["NOLA"],
+          "type": "major_city"
+        },
+        {
+          "term": "Buffalo",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Rochester",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Albany",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Richmond",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Virginia Beach",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Norfolk",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Spokane",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Honolulu",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Anchorage",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Vancouver",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Montreal",
+          "aliases": ["Montréal"],
+          "type": "major_city"
+        },
+        {
+          "term": "Calgary",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Edmonton",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Ottawa",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Winnipeg",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Quebec City",
+          "aliases": ["Québec City"],
+          "type": "major_city"
+        },
+        {
+          "term": "Hamilton",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Kitchener",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "London",
+          "aliases": ["London Ontario"],
+          "type": "major_city"
+        },
+        {
+          "term": "Halifax",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Victoria",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Saskatoon",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Regina",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "St. John's",
+          "aliases": ["Saint John's"],
+          "type": "major_city"
+        },
+        {
+          "term": "Guadalajara",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Puebla",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Tijuana",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "León",
+          "aliases": ["Leon"],
+          "type": "major_city"
+        },
+        {
+          "term": "Juárez",
+          "aliases": ["Ciudad Juárez", "Juarez"],
+          "type": "major_city"
+        },
+        {
+          "term": "Zapopan",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Netzahualcóyotl",
+          "aliases": ["Nezahualcoyotl", "Neza"],
+          "type": "major_city"
+        },
+        {
+          "term": "Mérida",
+          "aliases": ["Merida"],
+          "type": "major_city"
+        },
+        {
+          "term": "Aguascalientes",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Toluca",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Chihuahua",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Morelia",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Saltillo",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Reynosa",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Manchester",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Birmingham",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Liverpool",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Leeds",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Sheffield",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Bristol",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Glasgow",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Edinburgh",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Newcastle",
+          "aliases": ["Newcastle upon Tyne"],
+          "type": "major_city"
+        },
+        {
+          "term": "Nottingham",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Southampton",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Portsmouth",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Leicester",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Coventry",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Cardiff",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Belfast",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Aberdeen",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Dundee",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Swansea",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "York",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Canterbury",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Bath",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Cambridge",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Oxford",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Lyon",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Marseille",
+          "aliases": ["Marseilles"],
+          "type": "major_city"
+        },
+        {
+          "term": "Toulouse",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Nice",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Nantes",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Strasbourg",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Montpellier",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Bordeaux",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Lille",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Rennes",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Reims",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Le Havre",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Saint-Étienne",
+          "aliases": ["Saint-Etienne"],
+          "type": "major_city"
+        },
+        {
+          "term": "Toulon",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Angers",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Grenoble",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Dijon",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Nîmes",
+          "aliases": ["Nimes"],
+          "type": "major_city"
+        },
+        {
+          "term": "Aix-en-Provence",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Munich",
+          "aliases": ["München"],
+          "type": "major_city"
+        },
+        {
+          "term": "Cologne",
+          "aliases": ["Köln"],
+          "type": "major_city"
+        },
+        {
+          "term": "Frankfurt",
+          "aliases": ["Frankfurt am Main"],
+          "type": "major_city"
+        },
+        {
+          "term": "Stuttgart",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Düsseldorf",
+          "aliases": ["Dusseldorf"],
+          "type": "major_city"
+        },
+        {
+          "term": "Dortmund",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Essen",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Leipzig",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Bremen",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Dresden",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Hanover",
+          "aliases": ["Hannover"],
+          "type": "major_city"
+        },
+        {
+          "term": "Nuremberg",
+          "aliases": ["Nürnberg"],
+          "type": "major_city"
+        },
+        {
+          "term": "Duisburg",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Bochum",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Wuppertal",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Bielefeld",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Bonn",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Münster",
+          "aliases": ["Munster"],
+          "type": "major_city"
+        },
+        {
+          "term": "Karlsruhe",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Mannheim",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Augsburg",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Wiesbaden",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Gelsenkirchen",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Mönchengladbach",
+          "aliases": ["Monchengladbach"],
+          "type": "major_city"
+        },
+        {
+          "term": "Braunschweig",
+          "aliases": ["Brunswick"],
+          "type": "major_city"
+        },
+        {
+          "term": "Chemnitz",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Kiel",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Aachen",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Halle",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Magdeburg",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Freiburg",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Krefeld",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Lübeck",
+          "aliases": ["Lubeck"],
+          "type": "major_city"
+        },
+        {
+          "term": "Oberhausen",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Erfurt",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Mainz",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Rostock",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Kassel",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Hagen",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Potsdam",
+          "aliases": [],
+          "type": "major_city"
+        },
+        {
+          "term": "Saarbrücken",
+          "aliases": ["Saarbrucken"],
+          "type": "major_city"
+        },
+        {
+          "term": "Hamm",
+          "aliases": [],
+          "type": "major_city"
+        }
+      ]
+    },
+    {
+      "category": "REGIONAL_AREAS_AND_TECH_HUBS",
+      "entities": [
+        {
+          "term": "Silicon Valley",
+          "aliases": ["The Valley"],
+          "type": "tech_region"
+        },
+        {
+          "term": "Silicon Alley",
+          "aliases": [],
+          "type": "tech_region"
+        },
+        {
+          "term": "Route 128",
+          "aliases": ["Boston's Route 128"],
+          "type": "tech_region"
+        },
+        {
+          "term": "Research Triangle",
+          "aliases": ["RTP", "Research Triangle Park"],
+          "type": "tech_region"
+        },
+        {
+          "term": "Austin Tech Corridor",
+          "aliases": ["Silicon Hills"],
+          "type": "tech_region"
+        },
+        {
+          "term": "Seattle Tech",
+          "aliases": [],
+          "type": "tech_region"
+        },
+        {
+          "term": "Denver Tech Center",
+          "aliases": ["DTC"],
+          "type": "tech_region"
+        },
+        {
+          "term": "Atlanta Tech Square",
+          "aliases": [],
+          "type": "tech_region"
+        },
+        {
+          "term": "Tysons Corner",
+          "aliases": ["Tysons"],
+          "type": "tech_region"
+        },
+        {
+          "term": "Kendall Square",
+          "aliases": [],
+          "type": "tech_region"
+        },
+        {
+          "term": "South Lake Union",
+          "aliases": ["SLU"],
+          "type": "tech_region"
+        },
+        {
+          "term": "SOMA",
+          "aliases": ["South of Market"],
+          "type": "tech_region"
+        },
+        {
+          "term": "Mid-Peninsula",
+          "aliases": [],
+          "type": "tech_region"
+        },
+        {
+          "term": "East Bay",
+          "aliases": [],
+          "type": "tech_region"
+        },
+        {
+          "term": "North Bay",
+          "aliases": [],
+          "type": "tech_region"
+        },
+        {
+          "term": "South Bay",
+          "aliases": [],
+          "type": "tech_region"
+        },
+        {
+          "term": "Peninsula",
+          "aliases": ["The Peninsula"],
+          "type": "tech_region"
+        },
+        {
+          "term": "Greater Boston",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Bay Area",
+          "aliases": ["San Francisco Bay Area", "SF Bay Area"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Los Angeles",
+          "aliases": ["LA Metro", "Greater LA"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Tri-State Area",
+          "aliases": ["New York Tri-State"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "DMV",
+          "aliases": ["DC Metro", "Washington Metro"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Chicagoland",
+          "aliases": ["Greater Chicago"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "South Florida",
+          "aliases": ["SoFla"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "North Texas",
+          "aliases": ["Dallas-Fort Worth", "DFW Metroplex"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Puget Sound",
+          "aliases": ["Greater Seattle"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Rocky Mountain Region",
+          "aliases": ["Front Range"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Twin Cities",
+          "aliases": ["Minneapolis-St. Paul"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Toronto Area",
+          "aliases": ["GTA"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Golden Horseshoe",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "National Capital Region",
+          "aliases": ["NCR Canada"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Lower Mainland",
+          "aliases": ["Greater Vancouver"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Calgary Metropolitan Region",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Edmonton Metropolitan Region",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Montreal",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Quebec City Metropolitan Area",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater London",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Home Counties",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Manchester",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "West Midlands",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "West Yorkshire",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Tyne and Wear",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "South Yorkshire",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Merseyside",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Central Belt",
+          "aliases": ["Scottish Central Belt"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Île-de-France",
+          "aliases": ["Greater Paris"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Rhine-Ruhr",
+          "aliases": ["Ruhr Area", "Ruhrgebiet"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Rhine-Main",
+          "aliases": ["Frankfurt Rhine-Main"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Munich",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Stuttgart Region",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Hamburg Metropolitan Region",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Berlin-Brandenburg",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Cologne Bonn Region",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Hanover-Braunschweig-Göttingen-Wolfsburg",
+          "aliases": ["HBGW"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Central Germany",
+          "aliases": ["Mitteldeutschland"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Tokyo Area",
+          "aliases": ["Tokyo Metropolitan Area", "Kanto Region"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Kansai",
+          "aliases": ["Keihanshin", "Osaka-Kobe-Kyoto"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Chubu",
+          "aliases": ["Tokai Region"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Pearl River Delta",
+          "aliases": ["PRD", "Guangdong-Hong Kong-Macao"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Yangtze River Delta",
+          "aliases": ["YRD", "Shanghai Metropolitan Area"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Beijing-Tianjin-Hebei",
+          "aliases": ["Jing-Jin-Ji", "Capital Economic Circle"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Chengdu-Chongqing",
+          "aliases": ["Twin City Economic Circle"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Central Plains",
+          "aliases": ["Zhongyuan"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Harbin-Changchun",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Shandong Peninsula",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "West Triangle",
+          "aliases": ["Chengdu-Chongqing-Xi'an"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Mid-Yangtze",
+          "aliases": ["Wuhan Metropolitan Area"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Beibu Gulf",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "National Capital Region",
+          "aliases": ["NCR India", "Delhi NCR"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Mumbai Metropolitan Region",
+          "aliases": ["MMR"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Bangalore Metropolitan Area",
+          "aliases": ["Bengaluru Metropolitan Area"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Chennai Metropolitan Area",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Hyderabad Metropolitan Area",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Pune Metropolitan Region",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Kolkata Metropolitan Area",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Ahmedabad Metropolitan Area",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Kochi Metropolitan Area",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Jaipur Metropolitan Area",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater São Paulo",
+          "aliases": ["São Paulo Metropolitan Area"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Rio de Janeiro",
+          "aliases": ["Rio Metropolitan Area"],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Belo Horizonte",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Porto Alegre",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Recife",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Salvador",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Fortaleza",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Brasília",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Curitiba",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Campinas",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Goiânia",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Belém",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "Greater Manaus",
+          "aliases": [],
+          "type": "metropolitan_area"
+        },
+        {
+          "term": "ABCD Region",
+          "aliases": ["Santo André, São Bernardo, São Caetano, Diadema"],
+          "type": "metropolitan_area"
+        }
+      ]
+    },
+    {
+      "category": "US_CENSUS_STATISTICAL_AREAS",
+      "entities": [
+        {
+          "term": "New England",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Northeast Corridor",
+          "aliases": ["NEC", "BosWash"],
+          "type": "census_region"
+        },
+        {
+          "term": "Sun Belt",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Rust Belt",
+          "aliases": ["Manufacturing Belt"],
+          "type": "census_region"
+        },
+        {
+          "term": "Bible Belt",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Great Lakes Region",
+          "aliases": ["Great Lakes States"],
+          "type": "census_region"
+        },
+        {
+          "term": "Mountain West",
+          "aliases": ["Intermountain West"],
+          "type": "census_region"
+        },
+        {
+          "term": "Pacific Northwest",
+          "aliases": ["PNW"],
+          "type": "census_region"
+        },
+        {
+          "term": "Southwest",
+          "aliases": ["American Southwest"],
+          "type": "census_region"
+        },
+        {
+          "term": "Deep South",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Upper Midwest",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Mid-Atlantic",
+          "aliases": ["Middle Atlantic"],
+          "type": "census_region"
+        },
+        {
+          "term": "Southeast",
+          "aliases": ["Southeastern US"],
+          "type": "census_region"
+        },
+        {
+          "term": "Great Plains",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Corn Belt",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Cotton Belt",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Four Corners",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Appalachia",
+          "aliases": ["Appalachian Region"],
+          "type": "census_region"
+        },
+        {
+          "term": "Ozarks",
+          "aliases": ["Ozark Mountains"],
+          "type": "census_region"
+        },
+        {
+          "term": "Mississippi Delta",
+          "aliases": ["Delta Region"],
+          "type": "census_region"
+        },
+        {
+          "term": "Rio Grande Valley",
+          "aliases": ["RGV"],
+          "type": "census_region"
+        },
+        {
+          "term": "Central Valley",
+          "aliases": ["California Central Valley"],
+          "type": "census_region"
+        },
+        {
+          "term": "Inland Empire",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Antelope Valley",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "San Fernando Valley",
+          "aliases": ["The Valley"],
+          "type": "census_region"
+        },
+        {
+          "term": "Orange County",
+          "aliases": ["OC"],
+          "type": "census_region"
+        },
+        {
+          "term": "Ventura County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Coachella Valley",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Imperial Valley",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Napa Valley",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Sonoma County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Marin County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Solano County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Contra Costa County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Alameda County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Santa Clara County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "San Mateo County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Santa Cruz County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Monterey County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "San Luis Obispo County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Santa Barbara County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Kern County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Tulare County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Fresno County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Kings County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Merced County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Stanislaus County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "San Joaquin County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Sacramento County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Yolo County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Solano County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Collin County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Dallas County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Tarrant County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Denton County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Harris County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Fort Bend County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Montgomery County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Travis County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Williamson County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Bexar County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Cook County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "DuPage County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Lake County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Will County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Kane County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "McHenry County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "King County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Snohomish County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Pierce County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Kitsap County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Maricopa County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Pinal County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Clark County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Washoe County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Jefferson County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Adams County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Arapahoe County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Boulder County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Broomfield County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Denver County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Douglas County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Salt Lake County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Utah County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Davis County",
+          "aliases": [],
+          "type": "census_region"
+        },
+        {
+          "term": "Weber County",
+          "aliases": [],
+          "type": "census_region"
+        }
+      ]
+    },
+    {
+      "category": "ADDITIONAL_REGIONS_TRADE_BLOCS",
+      "entities": [
+        {
+          "term": "NAFTA",
+          "aliases": ["North American Free Trade Agreement"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "USMCA",
+          "aliases": ["United States-Mexico-Canada Agreement"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "MERCOSUR",
+          "aliases": ["Mercosul", "Southern Common Market"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "African Union",
+          "aliases": ["AU"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "Arab League",
+          "aliases": ["League of Arab States"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "BRICS",
+          "aliases": ["Brazil, Russia, India, China, South Africa"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "G7",
+          "aliases": ["Group of Seven"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "G20",
+          "aliases": ["Group of Twenty"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "OECD",
+          "aliases": ["Organisation for Economic Co-operation and Development"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "OPEC",
+          "aliases": ["Organization of the Petroleum Exporting Countries"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "APEC",
+          "aliases": ["Asia-Pacific Economic Cooperation"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "CARICOM",
+          "aliases": ["Caribbean Community"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "ECOWAS",
+          "aliases": ["Economic Community of West African States"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "SADC",
+          "aliases": ["Southern African Development Community"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "EAC",
+          "aliases": ["East African Community"],
+          "type": "trade_bloc"
+        },
+        {
+          "term": "Maghreb",
+          "aliases": ["North African Maghreb"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Sahel",
+          "aliases": ["Sahel Region"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Horn of Africa",
+          "aliases": [],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Great Lakes Region",
+          "aliases": ["African Great Lakes"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Levant",
+          "aliases": ["Eastern Mediterranean"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Caucasus",
+          "aliases": ["Caucasus Region"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Balkans",
+          "aliases": ["Balkan Peninsula"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Scandinavia",
+          "aliases": [],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Iberian Peninsula",
+          "aliases": ["Iberia"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "British Isles",
+          "aliases": [],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Benelux",
+          "aliases": ["Belgium, Netherlands, Luxembourg"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Visegrad Group",
+          "aliases": ["V4", "Visegrad Four"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Baltic States",
+          "aliases": ["Baltics"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Indochina",
+          "aliases": ["French Indochina"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Melanesia",
+          "aliases": [],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Polynesia",
+          "aliases": [],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Micronesia",
+          "aliases": [],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Patagonia",
+          "aliases": [],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Amazonia",
+          "aliases": ["Amazon Basin"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Cone Sur",
+          "aliases": ["Southern Cone"],
+          "type": "sub_regional"
+        },
+        {
+          "term": "Andean Region",
+          "aliases": ["Andes"],
+          "type": "sub_regional"
+        }
+      ]
+    },
+    {
+      "category": "MARKET_RESEARCH_SPECIFIC_REGIONS",
+      "entities": [
+        {
+          "term": "Developed Markets",
+          "aliases": ["DM", "Developed Economies"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Emerging Markets",
+          "aliases": ["EM", "Emerging Economies"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Frontier Markets",
+          "aliases": ["FM"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Least Developed Countries",
+          "aliases": ["LDC", "LDCs"],
+          "type": "market_designation"
+        },
+        {
+          "term": "High-Income Countries",
+          "aliases": ["HIC"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Middle-Income Countries",
+          "aliases": ["MIC"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Low-Income Countries",
+          "aliases": ["LIC"],
+          "type": "market_designation"
+        },
+        {
+          "term": "OECD Countries",
+          "aliases": ["OECD"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Non-OECD Countries",
+          "aliases": ["Non-OECD"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Oil-Exporting Countries",
+          "aliases": ["Oil Exporters"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Oil-Importing Countries",
+          "aliases": ["Oil Importers"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Commodity-Exporting Countries",
+          "aliases": ["Commodity Exporters"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Manufacturing-Based Economies",
+          "aliases": ["Manufacturing Economies"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Service-Based Economies",
+          "aliases": ["Service Economies"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Resource-Rich Countries",
+          "aliases": ["Resource Rich"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Landlocked Countries",
+          "aliases": ["Landlocked"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Island Nations",
+          "aliases": ["Island Countries", "Island States"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Small Island Developing States",
+          "aliases": ["SIDS"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Next Eleven",
+          "aliases": ["N-11", "Next 11"],
+          "type": "market_designation"
+        },
+        {
+          "term": "MINT Countries",
+          "aliases": ["MINT", "Mexico, Indonesia, Nigeria, Turkey"],
+          "type": "market_designation"
+        },
+        {
+          "term": "CIVETS",
+          "aliases": ["Colombia, Indonesia, Vietnam, Egypt, Turkey, South Africa"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Tiger Economies",
+          "aliases": ["Asian Tigers", "Four Asian Tigers"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Eurozone",
+          "aliases": ["Euro Area", "Euro Zone"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Non-Eurozone EU",
+          "aliases": ["Non-Euro EU"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Commonwealth Countries",
+          "aliases": ["Commonwealth", "British Commonwealth"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Francophone Countries",
+          "aliases": ["French-speaking Countries"],
+          "type": "market_designation"
+        },
+        {
+          "term": "MENA excluding GCC",
+          "aliases": ["MENA ex-GCC"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Sub-Saharan Africa excluding South Africa",
+          "aliases": ["SSA ex-SA", "SSA excluding SA"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Asia excluding Japan",
+          "aliases": ["Asia ex-Japan"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Asia excluding China",
+          "aliases": ["Asia ex-China"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Europe excluding UK",
+          "aliases": ["Europe ex-UK"],
+          "type": "market_designation"
+        },
+        {
+          "term": "Transition Economies",
+          "aliases": ["Economies in Transition"],
+          "type": "market_designation"
+        }
+      ]
+    }
+  ]
+}

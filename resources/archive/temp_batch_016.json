@@ -1,0 +1,36 @@
+{
+  "batch_number": 16,
+  "lines_processed": "15001-16000",
+  "analysis_date_pdt": "2025-08-21 10:35:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:35:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Latin America",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["Latin America Drilling Fluids Waste Management Market"]
+    },
+    {
+      "entity": "East Asia",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["East Asia Pet Supplements Market"]
+    },
+    {
+      "entity": "East Africa",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["East Africa Baby Diaper Market"]
+    },
+    {
+      "entity": "Egypt",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "Egypt Cardiovascular Drugs Market",
+        "Egypt Diabetes Drugs Market"
+      ]
+    }
+  ],
+  "total_unique_entities": 4
+}

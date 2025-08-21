@@ -1,0 +1,41 @@
+{
+  "batch_number": 14,
+  "lines_processed": "13001-14000",
+  "analysis_date_pdt": "2025-08-21 10:25:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:25:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "China",
+      "type": "country_specific",
+      "frequency": 4,
+      "sample_titles": [
+        "China and South Korea Solvent Recovery Systems Market",
+        "China Marble Market",
+        "China NEV Taxi Market",
+        "China Plasma Protein Therapeutics Market"
+      ]
+    },
+    {
+      "entity": "South Korea",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["China and South Korea Solvent Recovery Systems Market"]
+    },
+    {
+      "entity": "U.S.",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["U.S. Coated Fabrics (Polymer, Rubber and Fabric Backed Wall Coverings) Market"]
+    },
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 2,
+      "sample_titles": [
+        "Global Cell and Gene Therapy Manufacturing Services Market",
+        "Global Collagen and Gelatin Market"
+      ]
+    }
+  ],
+  "total_unique_entities": 4
+}

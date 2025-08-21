@@ -1,0 +1,41 @@
+{
+  "batch_number": 13,
+  "lines_processed": "12001-13000",
+  "analysis_date_pdt": "2025-08-21 10:20:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:20:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Brazilian",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Brazilian Animal Feed Additives Market"]
+    },
+    {
+      "entity": "Brazil",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "Brazil Flavored and Functional Water Market",
+        "Brazil Parenteral Nutrition Market"
+      ]
+    },
+    {
+      "entity": "RHD Countries",
+      "full_form": "Right Hand Drive Countries",
+      "type": "multi_national_group",
+      "frequency": 1,
+      "sample_titles": ["Bus Chassis Market in RHD Countries"]
+    },
+    {
+      "entity": "Canada",
+      "type": "country_specific",
+      "frequency": 3,
+      "sample_titles": [
+        "Canada Home Healthcare Market",
+        "Canada Concrete Floor Coatings Market",
+        "Canada Hosted PBX Market"
+      ]
+    }
+  ],
+  "total_unique_entities": 4
+}

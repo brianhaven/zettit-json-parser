@@ -1,0 +1,68 @@
+{
+  "batch_number": 4,
+  "lines_processed": "3001-4000",
+  "analysis_date_pdt": "2025-08-21 09:45:00 PDT",
+  "analysis_date_utc": "2025-08-21 16:45:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 14,
+      "sample_titles": [
+        "Global Fluid Catalytic Cracking Market Size Report, 2025",
+        "Global Functional Apparel Market Size & Share, Industry Report, 2025",
+        "Global Geotextiles Market Size & Share Analysis Report, 2030",
+        "Global Vehicle Telematics Market Size, Share, Industry Report, 2022"
+      ]
+    },
+    {
+      "entity": "France",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "France Foam Pumps Market Size & Share Report, 2020-2027",
+        "France Digital Signage Market Size & Share Report, 2030"
+      ]
+    },
+    {
+      "entity": "GCC",
+      "full_form": "Gulf Cooperation Council",
+      "type": "trade_bloc",
+      "frequency": 4,
+      "sample_titles": [
+        "GCC Protective Relay Market Size & Share Report, 2030",
+        "GCC Metal Forging Market Size And Share, Report, 2030",
+        "GCC Ceramic Tiles Market Size, Share, Growth Report, 2030",
+        "GCC Specialty Chemicals Market Size, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "Germany",
+      "type": "country_specific",
+      "frequency": 3,
+      "sample_titles": [
+        "Germany Environment Health & Safety Market Report, 2030",
+        "Germany Hand Protection Equipment Market, Industry Report, 2030",
+        "Germany Personal Protective Equipment Market Report, 2030"
+      ]
+    },
+    {
+      "entity": "Gulf Cooperation Council",
+      "type": "trade_bloc",
+      "frequency": 1,
+      "sample_titles": ["Gulf Cooperation Council Activated Carbon Market Size Report, 2025"]
+    },
+    {
+      "entity": "India",
+      "type": "country_specific",
+      "frequency": 4,
+      "sample_titles": [
+        "India Barite Market Size And Share, Industry Report, 2030",
+        "India Ferrosilicon Market Size, Share & Growth Report, 2030",
+        "India Kaolin Market Size And Share, Industry Report, 2030",
+        "India Metal Stamping Market Size, Industry Report, 2030"
+      ]
+    }
+  ],
+  "total_unique_entities": 6
+}

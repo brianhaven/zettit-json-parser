@@ -1,0 +1,219 @@
+{
+  "batch_number": "5-6",
+  "lines_processed": "4001-6000",
+  "analysis_date_pdt": "2025-08-21 09:50:00 PDT",
+  "analysis_date_utc": "2025-08-21 16:50:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 15,
+      "sample_titles": [
+        "Global Infusion Pump Market Size, Share & Trends Report, 2020-2027",
+        "Global Infrared Imaging Market Size & Share Report, 2025",
+        "Global Isosorbide Market Size & Share Report, 2022-2030",
+        "Global Kaempferol Market Size, Share, Growth Report, 2030",
+        "Global Jojoba Oil Derivatives Market Size Report, 2020-2027"
+      ]
+    },
+    {
+      "entity": "India",
+      "type": "country_specific",
+      "frequency": 27,
+      "sample_titles": [
+        "India Education Computing Devices Market Report, 2028",
+        "India Heat Treating Market Size, Share & Trends Report 2030",
+        "India Lithium-ion Battery Market Size, Industry Report, 2030",
+        "India Lithium Market Size And Share, Industry Report, 2030",
+        "India Geosynthetics Market Size, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "Indonesia",
+      "type": "country_specific",
+      "frequency": 3,
+      "sample_titles": [
+        "Indonesia Palm Oil Market Size, Share, Industry Report 2030",
+        "Indonesia Bamboos Market Size Report, 2021-2028",
+        "Indonesia Precast Concrete Market, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "Indian",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Indian Technical Textiles Market Size, Share, Industry Report, 2025"]
+    },
+    {
+      "entity": "Iran",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Iran Palm Oil Market Size, Share, Industry Report, 2025"]
+    },
+    {
+      "entity": "Japan",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Japan Corrugated Board Market Size, Industry Report, 2030"]
+    },
+    {
+      "entity": "Latin America",
+      "type": "sub_regional",
+      "frequency": 2,
+      "sample_titles": [
+        "Latin America Hydronic HVAC Systems Market Report, 2030",
+        "Latin America Maintenance, Repair & Overhaul Market Report, 2020-2028"
+      ]
+    },
+    {
+      "entity": "MEA",
+      "full_form": "Middle East and Africa",
+      "type": "multi_regional",
+      "frequency": 2,
+      "sample_titles": [
+        "MEA Specialty Chemicals Market Size, Industry Report 2030",
+        "MEA Aluminum Extrusion Market Size, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "Mexico",
+      "type": "country_specific",
+      "frequency": 6,
+      "sample_titles": [
+        "Mexico Oil And Gas Market Size, Share & Growth Report 2030",
+        "Mexico Welding Consumables Market Size Report, 2030",
+        "Mexico Mining Market Size, Share, Industry Report, 2030",
+        "Mexico Cleanroom Technology Market Size Report, 2030"
+      ]
+    },
+    {
+      "entity": "Middle East",
+      "type": "sub_regional",
+      "frequency": 7,
+      "sample_titles": [
+        "Middle East Feeder And Distribution Pillar Market, Report, 2030",
+        "Middle East Molded Case Circuit Breakers Market Report, 2030",
+        "Middle East Sea Salt Market Size, Industry Report, 2030",
+        "Middle East Switchgears Market Share & Growth Report, 2030"
+      ]
+    },
+    {
+      "entity": "Middle East & Africa",
+      "type": "multi_regional",
+      "frequency": 2,
+      "sample_titles": [
+        "Middle East & Africa Hydrolyzed Bovine Collagen Market",
+        "Middle East & Africa Palm Oil Market Size & Share Report"
+      ]
+    },
+    {
+      "entity": "Middle East & North Africa",
+      "type": "multi_regional",
+      "frequency": 1,
+      "sample_titles": ["Middle East & North Africa Disposable Gloves Market Report, 2027"]
+    },
+    {
+      "entity": "Morocco",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Morocco Argan Oil Market Size & Share, Industry Report, 2019-2025"]
+    },
+    {
+      "entity": "New England",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["New England Air Compressor Market, Industry Report, 2030"]
+    },
+    {
+      "entity": "North America",
+      "type": "continental_region",
+      "frequency": 76,
+      "sample_titles": [
+        "North America Aerogel Market Size, Industry Report, 2030",
+        "North America 3D Printing Metal Market, Industry Report, 203",
+        "North America Air Compressor Market Size Report, 2030",
+        "North America Air Purifier Market Size & Share Report, 2030",
+        "North America Smart Trash Bin Market, Industry Report, 2030"
+      ]
+    },
+    {
+      "entity": "North And Central America",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["North And Central America Textiles Market Size Report, 2030"]
+    },
+    {
+      "entity": "North America & Asia",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["North America & Asia Aluminum Die Casting Market Report, 2027"]
+    },
+    {
+      "entity": "North America And Australia",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["North America And Australia Silica Market Size, Report, 2030"]
+    },
+    {
+      "entity": "North America And Europe",
+      "type": "multi_continental",
+      "frequency": 2,
+      "sample_titles": [
+        "North America And Europe Metal Powder Market Report, 2030",
+        "North America And Europe PPE Distribution Market Report"
+      ]
+    },
+    {
+      "entity": "North America And EMEA",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["North America And EMEA Ferrosilicon Market Report, 2030"]
+    },
+    {
+      "entity": "North America, Europe And Oceania",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["North America, Europe And Oceania Building And Construction Fasteners Market Report, 2028"]
+    },
+    {
+      "entity": "North America, Europe, And Asia Pacific",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["North America, Europe, And Asia Pacific Air Compressor Market Report 2030"]
+    },
+    {
+      "entity": "North America & Europe",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["North America & Europe Research Department Explosive Market Report"]
+    },
+    {
+      "entity": "North America & Oceania",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["North America & Oceania Industrial Hemp Market Report 2030"]
+    },
+    {
+      "entity": "North American",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["North American Heating Equipment Market Size, Industry Report, 2025"]
+    },
+    {
+      "entity": "Oman",
+      "type": "country_specific",
+      "frequency": 2,
+      "sample_titles": [
+        "Oman Wireless Infrastructure Market Size, Industry Report, 2019-2025",
+        "Oman Industrial Salts Market For Oil & Gas Industry Report, 2020-2027"
+      ]
+    },
+    {
+      "entity": "Philippines",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Philippines E-cigarette And Vape Market Size Report, 2030"]
+    }
+  ],
+  "total_unique_entities": 26
+}

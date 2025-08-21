@@ -1,0 +1,76 @@
+{
+  "batch_number": 2,
+  "lines_processed": "1001-2000", 
+  "analysis_date_pdt": "2025-08-21 09:35:00 PDT",
+  "analysis_date_utc": "2025-08-21 16:35:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "Global",
+      "type": "global_designation",
+      "frequency": 11,
+      "sample_titles": [
+        "Global Automotive Paints Market Share, Size, Industry Report, 2025",
+        "Global Aviation Security Market Size & Trends, Industry Report, 2025",
+        "Global Base Metals Market Size, Industry Report, 2019-2025",
+        "Global Betaine Market Size, Share, Trends, Industry Report, 2025"
+      ]
+    },
+    {
+      "entity": "Brazil",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Brazil Palm Oil Market Size & Share, Industry Report, 2030"]
+    },
+    {
+      "entity": "Canada",
+      "type": "country_specific", 
+      "frequency": 2,
+      "sample_titles": [
+        "Canada Outdoor Air Source Heat Pump Market, Report 2030",
+        "Canada Maintenance, Repair & Overhaul Distribution Market Report, 2028"
+      ]
+    },
+    {
+      "entity": "Central & South America",
+      "type": "multi_regional",
+      "frequency": 1,
+      "sample_titles": ["Central & South America Iron Casting Market Report, 2030"]
+    },
+    {
+      "entity": "Central America",
+      "type": "sub_regional", 
+      "frequency": 1,
+      "sample_titles": ["Central And South America Geosynthetics Market Report, 2030"]
+    },
+    {
+      "entity": "South America", 
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["Central And South America Geosynthetics Market Report, 2030"]
+    },
+    {
+      "entity": "China",
+      "type": "country_specific",
+      "frequency": 4,
+      "sample_titles": [
+        "China Power Tools & Hand Tools Market Report, 2021-2028",
+        "China Stationary Lead Acid Battery Market Size Report, 2030",
+        "China Flame Retardant Apparel Market Size, Report, 2030", 
+        "China Air Purifier Market Size & Share, Industry Report 2030"
+      ]
+    },
+    {
+      "entity": "Colombia",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Colombia Hydrogen Generation Market Size Report, 2030"]
+    },
+    {
+      "entity": "North America",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["North America Car DVR Market Size Analysis Report, 2020"]
+    }
+  ],
+  "total_unique_entities": 9
+}

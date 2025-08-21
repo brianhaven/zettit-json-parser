@@ -1,0 +1,104 @@
+{
+  "batch_number": 11,
+  "lines_processed": "10001-11000",
+  "analysis_date_pdt": "2025-08-21 10:10:00 PDT",
+  "analysis_date_utc": "2025-08-21 17:10:00 UTC",
+  "geographic_entities_found": [
+    {
+      "entity": "ASEAN",
+      "full_form": "Association of Southeast Asian Nations",
+      "type": "trade_bloc",
+      "frequency": 11,
+      "sample_titles": [
+        "ASEAN Biological Optical Microscope Market",
+        "ASEAN Flexible Packaging Market Growth Outlook",
+        "ASEAN Energy Management Digital Solutions Market",
+        "ASEAN Air Plasma Sterilization Machines Market",
+        "ASEAN Pet Healthcare Products Market"
+      ]
+    },
+    {
+      "entity": "Asia Pacific",
+      "type": "continental_region",
+      "frequency": 47,
+      "sample_titles": [
+        "Asia Pacific Air Conditioning System Market",
+        "Asia Pacific Cleanroom Equipment Market",
+        "Asia Pacific Controlled Release Fertilizers Market",
+        "Asia Pacific Automotive BMS Market",
+        "Asia Pacific Industrial Gloves Market Forecast Study 2017 - 2025"
+      ]
+    },
+    {
+      "entity": "Asia & Middle East",
+      "type": "multi_regional",
+      "frequency": 1,
+      "sample_titles": ["Asia & Middle East Polyolefin Catalyst Market"]
+    },
+    {
+      "entity": "Asia, Europe, and South America",
+      "type": "multi_continental",
+      "frequency": 1,
+      "sample_titles": ["Asia, Europe, and South America Anti-aging Market"]
+    },
+    {
+      "entity": "Asia and Middle East",
+      "type": "multi_regional",
+      "frequency": 1,
+      "sample_titles": ["Asia and Middle East FCC Catalyst Market"]
+    },
+    {
+      "entity": "Middle East",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["Asia Pacific and Middle East & Africa Submerged Arc Furnace Market"]
+    },
+    {
+      "entity": "Middle East & Africa",
+      "type": "multi_regional",
+      "frequency": 2,
+      "sample_titles": [
+        "Asia Pacific and Middle East & Africa Submerged Arc Furnace Market",
+        "Middle East & Africa and Asia Pacific Baby Diaper Market"
+      ]
+    },
+    {
+      "entity": "Latin America",
+      "type": "sub_regional",
+      "frequency": 1,
+      "sample_titles": ["Asia Pacific and Latin America Sugar Confectionery Market"]
+    },
+    {
+      "entity": "India",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Asia Pacific & India Granite Market"]
+    },
+    {
+      "entity": "Asia-Pacific",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["Asia-Pacific PCB Compression Molding Press Market"]
+    },
+    {
+      "entity": "APAC",
+      "full_form": "Asia Pacific",
+      "type": "continental_region",
+      "frequency": 1,
+      "sample_titles": ["APAC Pet Food Market"]
+    },
+    {
+      "entity": "Australia and New Zealand",
+      "type": "multi_national",
+      "frequency": 1,
+      "sample_titles": ["Australia and New Zealand Dental Aligners Market"]
+    },
+    {
+      "entity": "Australia",
+      "type": "country_specific",
+      "frequency": 1,
+      "sample_titles": ["Australia Energy-as-a-Service Market"]
+    }
+  ],
+  "total_unique_entities": 13
+}
