@@ -169,6 +169,10 @@ def enhanced_html_cleaning(html_content: str) -> Dict[str, str]:
 
 ### Code Standards
 
+**Python Command Usage:**
+- **IMPORTANT:** Always use `python3` command, not `python` in all bash commands
+- This ensures compatibility with the project's Python environment
+
 **MongoDB Integration:**
 - Use environment variables from `.env` file for connection
 - MongoDB collections for pattern libraries (not static files)

@@ -1,0 +1,30 @@
+# MongoDB and Database
+pymongo==4.6.1
+python-dotenv==1.0.0
+
+# HTML Processing
+beautifulsoup4==4.12.2
+lxml==5.1.0
+
+# NLP and Text Processing
+spacy==3.7.2
+gliner==0.2.7
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.2
+
+# Date and Time
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Logging and Progress
+tqdm==4.66.1
+colorama==0.4.6
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Type Checking
+typing-extensions==4.9.0
