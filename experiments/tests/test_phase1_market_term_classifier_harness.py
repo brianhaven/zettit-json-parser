@@ -92,18 +92,18 @@ class MarketTermClassifierTestHarness:
         """
         logger.info(f"Fetching {self.sample_size} random documents from MongoDB...")
         
-        # Use MongoDB aggregation to get random sample
-        pipeline = [
-            {"$sample": {"size": self.sample_size}},
-            {"$project": {
+        # Use simple find with limit for better performance with large datasets
+        cursor = self.collection.find(
+            {},
+            {
                 "_id": 1,
                 "report_title_short": 1,
                 "report_description_full": 1,
                 "url": 1
-            }}
-        ]
+            }
+        ).limit(self.sample_size)
         
-        documents = list(self.collection.aggregate(pipeline))
+        documents = list(cursor)
         logger.info(f"Fetched {len(documents)} documents for testing")
         
         return documents
