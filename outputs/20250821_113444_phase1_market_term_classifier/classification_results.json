@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "analysis_date_pdt": "2025-08-21 11:34:44 PDT",
+    "analysis_date_utc": "2025-08-21 18:34:44 UTC",
+    "sample_size": 100,
+    "classifier_version": "1.0"
+  },
+  "summary": {
+    "total_documents": 0,
+    "market_for_count": 0,
+    "market_in_count": 0,
+    "standard_count": 0,
+    "ambiguous_count": 0,
+    "market_for_percentage": 0,
+    "market_in_percentage": 0,
+    "standard_percentage": 0,
+    "ambiguous_percentage": 0
+  },
+  "confidence_distribution": {
+    "high (>0.9)": 0,
+    "medium (0.7-0.9)": 0,
+    "low (<0.7)": 0
+  },
+  "pattern_variations": {},
+  "sample_results": {},
+  "full_results": []
+}

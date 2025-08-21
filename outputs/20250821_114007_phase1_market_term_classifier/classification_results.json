@@ -1,0 +1,1461 @@
+{
+  "metadata": {
+    "analysis_date_pdt": "2025-08-21 11:40:07 PDT",
+    "analysis_date_utc": "2025-08-21 18:40:07 UTC",
+    "sample_size": 100,
+    "classifier_version": "1.0"
+  },
+  "summary": {
+    "total_documents": 100,
+    "market_for_count": 0,
+    "market_in_count": 0,
+    "standard_count": 100,
+    "ambiguous_count": 0,
+    "market_for_percentage": 0.0,
+    "market_in_percentage": 0.0,
+    "standard_percentage": 100.0,
+    "ambiguous_percentage": 0.0
+  },
+  "confidence_distribution": {
+    "high (>0.9)": 0,
+    "medium (0.7-0.9)": 100,
+    "low (<0.7)": 0
+  },
+  "pattern_variations": {},
+  "sample_results": {
+    "standard": [
+      {
+        "document_id": "68049bae96ec0c90d2badf00",
+        "original_title": "HPV Decontamination Systems Market",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      },
+      {
+        "document_id": "68049bea96ec0c90d2bae1d1",
+        "original_title": "Lubricant Market",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      },
+      {
+        "document_id": "68049c6596ec0c90d2baec78",
+        "original_title": "Technology Spending on Core Administration in Healthcare Market Insights, 2016-2024",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      },
+      {
+        "document_id": "68a41e70f7fead4d2a161519",
+        "original_title": "Digital Dose Inhaler Market Size, Share Analysis Report 2030",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      },
+      {
+        "document_id": "68049b0096ec0c90d2bad42e",
+        "original_title": "Automotive OEM Key Market",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      },
+      {
+        "document_id": "68049b3896ec0c90d2bad704",
+        "original_title": "Child Resistant Closures Market",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      },
+      {
+        "document_id": "68049bae96ec0c90d2badf65",
+        "original_title": "Image Based Cytometry in Cell Analysis Market",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      },
+      {
+        "document_id": "68a41f48f7fead4d2a161f0d",
+        "original_title": "North America Concrete Crack Injection Resin Market Report, 2030",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      },
+      {
+        "document_id": "68049b7396ec0c90d2badafb",
+        "original_title": "Engineering Plastic Compounds Market",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      },
+      {
+        "document_id": "68049a9496ec0c90d2bacc66",
+        "original_title": "Multi-mode Receiver Market Size And Share Report, 2030",
+        "classification": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "preprocessing": [
+          "whitespace_trimmed",
+          "spaces_normalized",
+          "lowercased_for_matching"
+        ],
+        "notes": "Standard processing - systematic pattern removal approach"
+      }
+    ]
+  },
+  "full_results": [
+    {
+      "document_id": "68049c2796ec0c90d2bae7cb",
+      "original_title": "Power Distribution Unit Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbda3",
+      "original_title": "Synthetic Latex Polymers Market Size & Trends Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a42291c3325a49107cc2dd",
+      "original_title": "Vital Signs Monitoring Devices Market Size Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bacde0",
+      "original_title": "Pre Painted Metal Market Size, Share, Industry Growth Report, 2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badf86",
+      "original_title": "In-vehicle Infotainment Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161980",
+      "original_title": "Hemophilia Market Size And Share, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bad13e",
+      "original_title": "3D Printed Jewelry Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badf01",
+      "original_title": "HSE Consulting and Training Services Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41f48f7fead4d2a161d3b",
+      "original_title": "Medical Videoscope Market Size, Share, Global Industry Report, 2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad1ca",
+      "original_title": "Aerial Target Drones Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41decf7fead4d2a160db5",
+      "original_title": "Agriculture Equipment Market Size And Share Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badf65",
+      "original_title": "Image Based Cytometry in Cell Analysis Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad2fd",
+      "original_title": "ASEAN Air Plasma Sterilization Machines Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad572",
+      "original_title": "Biostimulants Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae6e4",
+      "original_title": "Photonic Integrated Circuits (PIC) Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a42291c3325a49107cc370",
+      "original_title": "Wound Contact Layer Dressing Market Size Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae57b",
+      "original_title": "Oncolytic Virus Immunotherapy Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a160fa2",
+      "original_title": "Austria Hearing Aid Retailers Market Size Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a1616b0",
+      "original_title": "Erythropoietin Drugs Market Size & Share Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c6596ec0c90d2bae963",
+      "original_title": "Rolling Shutter Motor Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad299",
+      "original_title": "Anthocyanin Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baec04",
+      "original_title": "Surface Haptic Technology Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbfd7",
+      "original_title": "U.S. Depyrogenated Sterile Empty Vials Market Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a161079",
+      "original_title": "Barium Carbonate Market Size, Share, Industry Report, 2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41decf7fead4d2a160d0d",
+      "original_title": "3D Camera Market Size, Share, Trends Analysis Report 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049bea96ec0c90d2bae23e",
+      "original_title": "Marine Powerboat Battery Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41f94f7fead4d2a162242",
+      "original_title": "Radiation Oncology Market Size, Share, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41f94f7fead4d2a16216d",
+      "original_title": "Polysilicon Market Size, Share, Growth, Industry Report 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a161140",
+      "original_title": "Brain Implants Market Size & Share, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41f94f7fead4d2a162248",
+      "original_title": "Radiology As A Service Market Size Analysis Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41dbef7fead4d2a160b27",
+      "original_title": "Collateral Ligament Stabilizer System Market Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41f48f7fead4d2a161f0d",
+      "original_title": "North America Concrete Crack Injection Resin Market Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a4113351d98522fff5a3e0",
+      "original_title": "Lignin-based Biopolymers Market Size, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad442",
+      "original_title": "Automotive Rear Occupant Alert System Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41dbef7fead4d2a160b4c",
+      "original_title": "Disinfection Robots Market Size, Share, Growth Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161c6c",
+      "original_title": "Low-code Development Platform Market Size Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c9496ec0c90d2baedd1",
+      "original_title": "U.S. Engineered Quartz Surface Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baeb53",
+      "original_title": "Specialty Fats and Oils Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacab4",
+      "original_title": "High-pressure Die Casting Equipment Market Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41decf7fead4d2a160d9e",
+      "original_title": "Africa Livestock Surface Disinfectant Market Size Report 2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a16102d",
+      "original_title": "Automotive Spark Plug Market Size And Share Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41decf7fead4d2a160d10",
+      "original_title": "3D Gaming Console Market Size, Share, Global Industry Report, 2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bad12d",
+      "original_title": "360° Camera Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baec78",
+      "original_title": "Technology Spending on Core Administration in Healthcare Market Insights, 2016-2024",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b7396ec0c90d2badb41",
+      "original_title": "Ethylene Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad535",
+      "original_title": "Biochips Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a4d96ec0c90d2bac6f0",
+      "original_title": "Automated Fingerprint Identification System (AFIS) Market Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bacf3e",
+      "original_title": "Superplasticizers Market Size, Share, Industry Analysis Report, 2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bacf92",
+      "original_title": "Tight Gas Market Size, Share, Growth Analysis Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae77a",
+      "original_title": "Polypill Products Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049bea96ec0c90d2bae1c5",
+      "original_title": "Low Voltage Battery Management System (BMS) Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad51d",
+      "original_title": "Bio Magnetic Ear Stickers Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bacf71",
+      "original_title": "Automatic Identification System Market Size, Industry Report, 2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad860",
+      "original_title": "Cough Assist Devices Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a4d96ec0c90d2bac7c4",
+      "original_title": "Captive Power Generation Market Size, Global Industry Report, 2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a161141",
+      "original_title": "Global Brain Monitoring Device Market Size Report, 2019-2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad837",
+      "original_title": "Copper and Silver Components in Power and Industrial Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badf00",
+      "original_title": "HPV Decontamination Systems Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacb94",
+      "original_title": "Lightweight Materials Market Size, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a16151c",
+      "original_title": "Digital Forensics Market Size, Share & Growth Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41f48f7fead4d2a162009",
+      "original_title": "Organic Wine Market Size And Share, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41f48f7fead4d2a161fb6",
+      "original_title": "Oncology Clinical Trials Market Size & Share Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badef2",
+      "original_title": "Hot Runner Temperature Controller Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b7396ec0c90d2badb54",
+      "original_title": "Barrier Coated Flexible Paper Packaging Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad8e8",
+      "original_title": "Dental Bearings Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baea94",
+      "original_title": "Smart Hospital Beds Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad459",
+      "original_title": "Automotive Solenoid Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae807",
+      "original_title": "Prepaid Wireless Service Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacc22",
+      "original_title": "Microcellular Plastics Market Size & Growth Report 2019-2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bac9d5",
+      "original_title": "Fluoropolymer Market Size & Share, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad882",
+      "original_title": "Cryogenic Tanks Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a161536",
+      "original_title": "Digital Radar Market Size, Share And Trends Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a1616d3",
+      "original_title": "Europe Bioresorbable Vascular Scaffold Market Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a4113351d98522fff5a403",
+      "original_title": "Nanocoatings Market Size, Share And Growth Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b7396ec0c90d2badafb",
+      "original_title": "Engineering Plastic Compounds Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad249",
+      "original_title": "Alpha Mannosidosis Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a42291c3325a49107cc0ae",
+      "original_title": "U.S. Laboratory Informatics Market, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae83e",
+      "original_title": "Proliferative Diabetic Retinopathy Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad42e",
+      "original_title": "Automotive OEM Key Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad71a",
+      "original_title": "Chlor-alkali Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badd66",
+      "original_title": "Auto-Injectors Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacb9c",
+      "original_title": "Linear Motion Bearing Market Size And Share Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae78b",
+      "original_title": "Polyvinyl Chloride Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bac9ff",
+      "original_title": "Global Functional Apparel Market Size & Share, Industry Report, 2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a161519",
+      "original_title": "Digital Dose Inhaler Market Size, Share Analysis Report 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a42291c3325a49107cc2bb",
+      "original_title": "Virtual Data Room Market Size, Share, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad704",
+      "original_title": "Child Resistant Closures Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbcfa",
+      "original_title": "Sports Medicine Market Size & Share, Industry Report, 2033",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bacee8",
+      "original_title": "Sorting Machines Market Size, Share, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161b75",
+      "original_title": "Isothermal Bags & Containers Market Size, Share, Forecast, 2019-2025",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae52d",
+      "original_title": "North America UV Disinfection System Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae54c",
+      "original_title": "Off-highway Vehicle Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b7396ec0c90d2bad9ac",
+      "original_title": "Docking Station Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacc66",
+      "original_title": "Multi-mode Receiver Market Size And Share Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049bea96ec0c90d2bae1d1",
+      "original_title": "Lubricant Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad18a",
+      "original_title": "Acute Agitation and Aggression Treatment Market",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bad09e",
+      "original_title": "Video Intercom Devices Market Size & Share Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a160f3c",
+      "original_title": "Asia Pacific Kombucha Market Size, Industry Report, 2033",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacb84",
+      "original_title": "Latin America Maintenance, Repair & Overhaul Market Report, 2020-2028",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    },
+    {
+      "document_id": "68049a3e96ec0c90d2bac6c0",
+      "original_title": "Asia Pacific Carbon Dioxide Market, Industry Report, 2030",
+      "classification": "standard",
+      "confidence": 0.9,
+      "matched_pattern": null,
+      "preprocessing": [
+        "whitespace_trimmed",
+        "spaces_normalized",
+        "lowercased_for_matching"
+      ],
+      "notes": "Standard processing - systematic pattern removal approach"
+    }
+  ]
+}

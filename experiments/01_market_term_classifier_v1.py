@@ -14,6 +14,23 @@ from enum import Enum
 from datetime import datetime, timezone
 import pytz
 
+# Import Pattern Library Manager components
+import importlib.util
+import sys
+import os
+
+# Dynamic import for pattern library manager (filename starts with numbers)
+try:
+    pattern_manager_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '00b_pattern_library_manager_v1.py')
+    spec = importlib.util.spec_from_file_location("pattern_library_manager_v1", pattern_manager_path)
+    pattern_module = importlib.util.module_from_spec(spec)
+    sys.modules["pattern_library_manager_v1"] = pattern_module
+    spec.loader.exec_module(pattern_module)
+    PatternLibraryManager = pattern_module.PatternLibraryManager
+    PatternType = pattern_module.PatternType
+except Exception as e:
+    raise ImportError(f"Could not import PatternLibraryManager: {e}") from e
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -65,9 +82,19 @@ class MarketTermClassifier:
         Initialize the Market Term Classifier.
         
         Args:
-            pattern_library_manager: Optional PatternLibraryManager instance for pattern retrieval
+            pattern_library_manager: PatternLibraryManager instance for pattern retrieval.
+                                   If None, will create a new instance automatically.
         """
-        self.pattern_library_manager = pattern_library_manager
+        # Initialize or use provided pattern library manager
+        if pattern_library_manager is None:
+            try:
+                self.pattern_library_manager = PatternLibraryManager()
+                logger.info("Created new PatternLibraryManager instance")
+            except Exception as e:
+                raise RuntimeError(f"Failed to initialize PatternLibraryManager: {e}. Ensure MongoDB is available and MONGODB_URI is set.") from e
+        else:
+            self.pattern_library_manager = pattern_library_manager
+            
         self.classification_stats = {
             'total_processed': 0,
             'market_for': 0,
@@ -76,46 +103,47 @@ class MarketTermClassifier:
             'ambiguous': 0
         }
         
-        # Define core regex patterns
-        self._initialize_patterns()
+        # Initialize pattern variables
+        self.market_for_pattern = None
+        self.market_in_pattern = None
         
-        # Load patterns from library if available
+        # Load patterns from MongoDB - REQUIRED
         self._load_library_patterns()
     
-    def _initialize_patterns(self) -> None:
-        """Initialize simple patterns for market term classification."""
-        
-        # Market for patterns - concatenation processing (~0.2% of dataset)
-        self.market_for_pattern = r'\bmarkets?\s+for\b'  # Matches both "market for" and "markets for"
-        
-        # Market in patterns - context integration processing (~0.1% of dataset)  
-        self.market_in_pattern = r'\bmarkets?\s+in\b'  # Matches both "market in" and "markets in"
-        
-        # Everything else goes to standard processing (~99.7% of dataset)
-        
-        logger.info("Initialized simple market term classification patterns")
-    
     def _load_library_patterns(self) -> None:
-        """Load patterns from MongoDB pattern library if available."""
-        if not self.pattern_library_manager:
-            logger.debug("No pattern library manager provided, using default patterns")
-            return
-        
+        """Load patterns from MongoDB pattern library - REQUIRED."""
         try:
-            from pattern_library_manager_v1 import PatternType
-            
             # Load market term patterns from MongoDB
             market_patterns = self.pattern_library_manager.get_patterns(PatternType.MARKET_TERM)
-            for pattern in market_patterns:
-                if pattern['term'] == 'Market for' and 'pattern' in pattern:
-                    self.market_for_pattern = pattern['pattern']
-                elif pattern['term'] == 'Market in' and 'pattern' in pattern:
-                    self.market_in_pattern = pattern['pattern']
             
-            logger.info("Loaded market term patterns from MongoDB pattern library")
+            if not market_patterns:
+                raise RuntimeError("No market term patterns found in MongoDB pattern_libraries collection")
+            
+            patterns_loaded = 0
+            for pattern in market_patterns:
+                if pattern.get('term') == 'Market for' and pattern.get('pattern'):
+                    # Remove double escaping from MongoDB storage
+                    self.market_for_pattern = pattern['pattern'].replace('\\\\', '\\')
+                    patterns_loaded += 1
+                    logger.debug(f"Loaded Market For pattern: {self.market_for_pattern}")
+                elif pattern.get('term') == 'Market in' and pattern.get('pattern'):
+                    # Remove double escaping from MongoDB storage
+                    self.market_in_pattern = pattern['pattern'].replace('\\\\', '\\')
+                    patterns_loaded += 1
+                    logger.debug(f"Loaded Market In pattern: {self.market_in_pattern}")
+            
+            if not self.market_for_pattern:
+                logger.warning("Market For pattern not found in database")
+            if not self.market_in_pattern:
+                logger.warning("Market In pattern not found in database")
+            
+            if patterns_loaded == 0:
+                raise RuntimeError("No valid market term patterns loaded from database")
+            
+            logger.info(f"Successfully loaded {patterns_loaded} market term patterns from MongoDB")
             
         except Exception as e:
-            logger.warning(f"Could not load patterns from library: {e}")
+            raise RuntimeError(f"Failed to load patterns from MongoDB: {e}") from e
     
     def _get_timestamps(self) -> tuple:
         """Generate PDT and UTC timestamps."""
@@ -179,14 +207,7 @@ class MarketTermClassifier:
         """
         confidence = 0.5  # Base confidence
         
-        if market_type == MarketTermType.NON_MARKET:
-            # Non-market titles get lower confidence if they contain "market"
-            if re.search(r'\bmarket', title.lower()):
-                confidence = 0.3
-            else:
-                confidence = 0.9
-        
-        elif market_type == MarketTermType.AMBIGUOUS:
+        if market_type == MarketTermType.AMBIGUOUS:
             confidence = 0.2  # Very low confidence for ambiguous cases
         
         elif matched_pattern:
@@ -205,7 +226,7 @@ class MarketTermClassifier:
                 else:
                     confidence = 0.85
             
-            elif market_type == MarketTermType.STANDARD_MARKET:
+            elif market_type == MarketTermType.STANDARD:
                 # Higher confidence for common market research terms
                 high_confidence_terms = [
                     'market size', 'market share', 'market analysis', 'market report',
@@ -229,6 +250,10 @@ class MarketTermClassifier:
         Returns:
             Tuple of (is_match, matched_pattern, confidence)
         """
+        if not self.market_for_pattern:
+            logger.debug("No Market For pattern available")
+            return False, None, 0.0
+            
         processed_title, _ = self._preprocess_title(title)
         
         # Check for market for pattern
@@ -250,6 +275,10 @@ class MarketTermClassifier:
         Returns:
             Tuple of (is_match, matched_pattern, confidence)
         """
+        if not self.market_in_pattern:
+            logger.debug("No Market In pattern available")
+            return False, None, 0.0
+            
         processed_title, _ = self._preprocess_title(title)
         
         # Check for market in pattern
@@ -407,8 +436,7 @@ class MarketTermClassifier:
             'total_processed': 0,
             'market_for': 0,
             'market_in': 0,
-            'standard_market': 0,
-            'non_market': 0,
+            'standard': 0,
             'ambiguous': 0
         }
         logger.info("Classification statistics reset")
@@ -528,8 +556,8 @@ def demo_classification():
         print(f"Total Processed: {stats.total_classified}")
         print(f"Market For: {stats.market_for_count} ({stats.market_for_percentage:.2f}%)")
         print(f"Market In: {stats.market_in_count} ({stats.market_in_percentage:.2f}%)")
-        print(f"Standard Market: {stats.standard_market_count} ({stats.standard_market_percentage:.2f}%)")
-        print(f"Non-Market: {stats.non_market_count} ({(stats.non_market_count/stats.total_classified)*100:.2f}%)")
+        print(f"Standard: {stats.standard_count} ({stats.standard_percentage:.2f}%)")
+        print(f"Ambiguous: {stats.ambiguous_count} ({(stats.ambiguous_count/stats.total_classified)*100:.2f}%)")
         
         # Export report
         print("\n3. Detailed Classification Report:")
