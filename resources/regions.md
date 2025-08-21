@@ -1,0 +1,138 @@
+- Africa
+- Algeria
+- Americas
+- ANZ
+- APAC
+- Argentina
+- Arizona
+- ASEAN
+- Asia
+- Asia Pacific
+- Asia-Pacific
+- Australia
+- Australia & New Zealand
+- Australia And New Zealand
+- Australia and New Zealand
+- Austria
+- Bangladesh
+- Belgium
+- Bosnia And Herzegovina
+- Brazil
+- California
+- Can
+- Canada
+- Central & South America
+- Central America
+- Central And South America
+- Chile
+- China
+- Colombia
+- Colorado
+- Costa Rica
+- Croatia
+- Denmark
+- East Africa
+- East Asia
+- Egypt
+- EMEA
+- Europe
+- europe
+- Europe & Asia
+- Europe and Asia
+- Europe, Middle East & Africa
+- Europe, Middle East And Africa
+- Florida
+- France
+- GCC
+- Germany
+- Ghana
+- Global
+- Greece
+- Gulf
+- Gulf Cooperation Council
+- Hong Kong
+- India
+- Indiana
+- Indonesia
+- International
+- Iran
+- Iraq
+- Italy
+- Japan
+- KSA
+- Kuwait
+- LATAM
+- Latin America
+- Malaysia
+- MEA
+- MENA
+- Mexico
+- Michigan
+- Middle East
+- Middle East & Africa
+- Middle East And Africa
+- Middle East and Africa
+- Missouri
+- Morocco
+- Netherlands
+- New York
+- New Zealand
+- Nigeria
+- Nordic
+- Nordic Region
+- Nordic Regions
+- North & South America
+- North Africa
+- North America
+- North america
+- North America & Europe
+- North America And Europe
+- North America and Europe
+- Oceania
+- Oman
+- Philippines
+- Poland
+- Portland
+- Portugal
+- Qatar
+- ROV
+- RoV
+- Rest of World
+- Rest Of World
+- Romania
+- Russia
+- Saudi Arabia
+- Serbia
+- Singapore
+- Slovenia
+- South Africa
+- South America
+- South East Asia
+- South Korea
+- Southeast Asia
+- Southern Europe
+- Spain
+- Sweden
+- Switzerland
+- Taiwan
+- Texas
+- Thailand
+- Tunisia
+- Turkey
+- U.K
+- U.K.
+- U.S
+- U.S.
+- U.S. & Canada
+- U.S. And Canada
+- UAE
+- UK
+- Ukraine
+- United Kingdom
+- United States
+- US
+- Vietnam
+- Washington
+- West Africa
+- Western Europe
+- World

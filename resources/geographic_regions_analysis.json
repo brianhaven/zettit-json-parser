@@ -1,0 +1,531 @@
+{
+  "analysis_metadata": {
+    "analysis_date_pdt": "2025-08-20 06:30:00 PDT",
+    "analysis_date_utc": "2025-08-20 13:30:00 UTC",
+    "source_file": "deathstar.markets_raw.json",
+    "total_file_lines": 58673,
+    "analyzed_sections": [
+      "lines 4000-6000",
+      "lines 15000-17000", 
+      "lines 35000-37000",
+      "lines 10000-12000",
+      "lines 25000-27000"
+    ],
+    "method": "AI-driven geographic entity discovery and deduplication",
+    "total_unique_regions_identified": 47
+  },
+
+  "geographic_regions": [
+    {
+      "type": "continental_region",
+      "primary_term": "Asia Pacific",
+      "aliases": [
+        "APAC",
+        "Asia-Pacific",
+        "Asia & Pacific",
+        "Asia and Pacific"
+      ],
+      "frequency_score": "very_high",
+      "notes": "Most common regional designation in market research titles"
+    },
+    {
+      "type": "continental_region", 
+      "primary_term": "Europe",
+      "aliases": [
+        "European",
+        "EU",
+        "Europe and"
+      ],
+      "frequency_score": "very_high",
+      "notes": "Frequently appears alone or in combinations"
+    },
+    {
+      "type": "continental_region",
+      "primary_term": "North America",
+      "aliases": [
+        "North American",
+        "NA"
+      ],
+      "frequency_score": "high",
+      "notes": "Standard designation for US/Canada market region"
+    },
+    {
+      "type": "continental_region",
+      "primary_term": "Middle East",
+      "aliases": [
+        "Middle East & Africa",
+        "Middle East and Africa",
+        "MEA",
+        "MENA"
+      ],
+      "frequency_score": "high",
+      "notes": "Often combined with Africa in market reports"
+    },
+    {
+      "type": "continental_region",
+      "primary_term": "Africa",
+      "aliases": [
+        "African",
+        "Sub-Saharan Africa"
+      ],
+      "frequency_score": "medium",
+      "notes": "Appears both standalone and combined with Middle East"
+    },
+    {
+      "type": "continental_region",
+      "primary_term": "Latin America",
+      "aliases": [
+        "South America",
+        "Latin American",
+        "South American"
+      ],
+      "frequency_score": "medium",
+      "notes": "Used interchangeably in many market contexts"
+    },
+    {
+      "type": "multi_regional_combination",
+      "primary_term": "EMEA",
+      "aliases": [
+        "Europe, Middle East and Africa",
+        "Europe, Middle East & Africa",
+        "Europe and Middle East",
+        "Europe and Africa"
+      ],
+      "frequency_score": "high",
+      "notes": "Popular enterprise market segmentation"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "United States",
+      "aliases": [
+        "U.S.",
+        "US",
+        "USA",
+        "America",
+        "American"
+      ],
+      "frequency_score": "very_high",
+      "notes": "Most frequently mentioned individual country"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "China",
+      "aliases": [
+        "Chinese",
+        "China Market",
+        "Mainland China"
+      ],
+      "frequency_score": "high",
+      "notes": "Major individual market focus"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "India",
+      "aliases": [
+        "Indian",
+        "India Market"
+      ],
+      "frequency_score": "high",
+      "notes": "Significant standalone market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Japan",
+      "aliases": [
+        "Japanese",
+        "Japan Market"
+      ],
+      "frequency_score": "medium",
+      "notes": "Important Asian market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Australia",
+      "aliases": [
+        "Australian", 
+        "Australia and New Zealand",
+        "Australia & New Zealand"
+      ],
+      "frequency_score": "medium",
+      "notes": "Often combined with New Zealand"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "United Kingdom",
+      "aliases": [
+        "UK",
+        "U.K.",
+        "Britain",
+        "British"
+      ],
+      "frequency_score": "medium",
+      "notes": "Distinct European market post-Brexit"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Germany",
+      "aliases": [
+        "German",
+        "Deutschland"
+      ],
+      "frequency_score": "medium",
+      "notes": "Leading European economy"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Canada",
+      "aliases": [
+        "Canadian"
+      ],
+      "frequency_score": "medium",
+      "notes": "Part of North American market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Brazil",
+      "aliases": [
+        "Brazilian"
+      ],
+      "frequency_score": "medium",
+      "notes": "Largest Latin American market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "South Korea",
+      "aliases": [
+        "Korea",
+        "Korean",
+        "Republic of Korea"
+      ],
+      "frequency_score": "medium",
+      "notes": "Significant Asian technology market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "France",
+      "aliases": [
+        "French"
+      ],
+      "frequency_score": "low",
+      "notes": "Major European market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Italy",
+      "aliases": [
+        "Italian"
+      ],
+      "frequency_score": "low",
+      "notes": "European market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Russia",
+      "aliases": [
+        "Russian",
+        "Russian Federation"
+      ],
+      "frequency_score": "low",
+      "notes": "Emerging European/Asian market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Mexico",
+      "aliases": [
+        "Mexican"
+      ],
+      "frequency_score": "low",
+      "notes": "North American market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Indonesia",
+      "aliases": [
+        "Indonesian"
+      ],
+      "frequency_score": "low",
+      "notes": "Southeast Asian market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Thailand",
+      "aliases": [
+        "Thai"
+      ],
+      "frequency_score": "low",
+      "notes": "Southeast Asian market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Philippines",
+      "aliases": [
+        "Philippine",
+        "Filipino"
+      ],
+      "frequency_score": "low",
+      "notes": "Southeast Asian market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Malaysia",
+      "aliases": [
+        "Malaysian"
+      ],
+      "frequency_score": "low",
+      "notes": "Southeast Asian market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Singapore",
+      "aliases": [
+        "Singaporean"
+      ],
+      "frequency_score": "low",
+      "notes": "Southeast Asian financial hub"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Vietnam",
+      "aliases": [
+        "Vietnamese"
+      ],
+      "frequency_score": "low",
+      "notes": "Emerging Southeast Asian market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Bangladesh",
+      "aliases": [
+        "Bangladeshi"
+      ],
+      "frequency_score": "low",
+      "notes": "South Asian emerging market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "Poland",
+      "aliases": [
+        "Polish"
+      ],
+      "frequency_score": "low",
+      "notes": "Central European market"
+    },
+    {
+      "type": "country_specific",
+      "primary_term": "South Africa",
+      "aliases": [
+        "South African"
+      ],
+      "frequency_score": "medium",
+      "notes": "Leading African economy"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "Southeast Asia",
+      "aliases": [
+        "South East Asia",
+        "SEA"
+      ],
+      "frequency_score": "high",
+      "notes": "Important sub-regional designation"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "ASEAN",
+      "aliases": [
+        "Association of Southeast Asian Nations"
+      ],
+      "frequency_score": "medium",
+      "notes": "Economic bloc designation"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "Central Europe",
+      "aliases": [
+        "Central European"
+      ],
+      "frequency_score": "low",
+      "notes": "European sub-region"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "Eastern Europe",
+      "aliases": [
+        "Eastern European"
+      ],
+      "frequency_score": "low",
+      "notes": "European sub-region"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "Western Europe",
+      "aliases": [
+        "Western European"
+      ],
+      "frequency_score": "low",
+      "notes": "European sub-region"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "Southern Europe",
+      "aliases": [
+        "Southern European"
+      ],
+      "frequency_score": "low",
+      "notes": "European sub-region"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "Northern Europe",
+      "aliases": [
+        "Northern European",
+        "Nordic"
+      ],
+      "frequency_score": "low",
+      "notes": "European sub-region"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "Central Asia",
+      "aliases": [
+        "Central Asian"
+      ],
+      "frequency_score": "low",
+      "notes": "Asian sub-region"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "South Asia",
+      "aliases": [
+        "South Asian"
+      ],
+      "frequency_score": "low",
+      "notes": "Asian sub-region including India"
+    },
+    {
+      "type": "sub_regional",
+      "primary_term": "East Asia",
+      "aliases": [
+        "Eastern Asia",
+        "Northeast Asia"
+      ],
+      "frequency_score": "medium",
+      "notes": "Asian sub-region"
+    },
+    {
+      "type": "global_designation",
+      "primary_term": "Global",
+      "aliases": [
+        "Worldwide",
+        "International",
+        "World"
+      ],
+      "frequency_score": "very_high",
+      "notes": "Universal market designation"
+    },
+    {
+      "type": "emerging_designation",
+      "primary_term": "Emerging Markets",
+      "aliases": [
+        "Emerging Economies",
+        "Developing Markets",
+        "Developing Countries"
+      ],
+      "frequency_score": "medium",
+      "notes": "Economic development classification"
+    },
+    {
+      "type": "economic_grouping",
+      "primary_term": "Developed Markets",
+      "aliases": [
+        "Developed Countries",
+        "Advanced Economies"
+      ],
+      "frequency_score": "low",
+      "notes": "Economic development classification"
+    },
+    {
+      "type": "trade_bloc",
+      "primary_term": "NAFTA",
+      "aliases": [
+        "North American Free Trade Agreement",
+        "USMCA"
+      ],
+      "frequency_score": "low",
+      "notes": "Trade agreement region"
+    },
+    {
+      "type": "trade_bloc",
+      "primary_term": "European Union",
+      "aliases": [
+        "EU",
+        "Eurozone"
+      ],
+      "frequency_score": "medium",
+      "notes": "European economic union"
+    },
+    {
+      "type": "regional_combination",
+      "primary_term": "Asia and Middle East",
+      "aliases": [
+        "Asia & Middle East",
+        "Asia-Middle East"
+      ],
+      "frequency_score": "low",
+      "notes": "Cross-continental grouping"
+    },
+    {
+      "type": "regional_combination",
+      "primary_term": "Europe and Asia Pacific",
+      "aliases": [
+        "Europe & Asia Pacific",
+        "Europe-Asia Pacific"
+      ],
+      "frequency_score": "low",
+      "notes": "Cross-continental grouping"
+    },
+    {
+      "type": "regional_combination",
+      "primary_term": "Americas",
+      "aliases": [
+        "North and South America",
+        "North & South America",
+        "The Americas"
+      ],
+      "frequency_score": "low",
+      "notes": "Combined American continents"
+    }
+  ],
+
+  "analysis_summary": {
+    "total_regions_identified": 47,
+    "high_frequency_regions": [
+      "Asia Pacific",
+      "Global", 
+      "United States",
+      "Europe",
+      "EMEA",
+      "North America",
+      "Middle East",
+      "China",
+      "India"
+    ],
+    "most_common_patterns": [
+      "Continental regions (Asia Pacific, Europe, North America)",
+      "Major individual countries (US, China, India)",
+      "Combined regional designations (EMEA, Middle East & Africa)",
+      "Sub-regional groupings (Southeast Asia, ASEAN)"
+    ],
+    "region_type_distribution": {
+      "continental_region": 6,
+      "country_specific": 22,
+      "sub_regional": 9,
+      "multi_regional_combination": 1,
+      "global_designation": 1,
+      "emerging_designation": 1,
+      "economic_grouping": 1,
+      "trade_bloc": 2,
+      "regional_combination": 4
+    }
+  }
+}

@@ -1,0 +1,614 @@
+{
+  "geographic_entities": [
+    {
+      "term": "Global",
+      "aliases": ["World", "Worldwide", "International"],
+      "type": "global"
+    },
+    {
+      "term": "Americas",
+      "aliases": ["America"],
+      "type": "multi_continental"
+    },
+    {
+      "term": "North America",
+      "aliases": ["North america", "North American", "North American Region", "NA"],
+      "type": "continental"
+    },
+    {
+      "term": "South America",
+      "aliases": [],
+      "type": "continental"
+    },
+    {
+      "term": "Central America",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Latin America",
+      "aliases": ["LATAM"],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Central and South America",
+      "aliases": ["Central & South America", "Central And South America"],
+      "type": "multi_regional"
+    },
+    {
+      "term": "North and South America",
+      "aliases": ["North & South America"],
+      "type": "multi_continental"
+    },
+    {
+      "term": "Caribbean",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Europe",
+      "aliases": ["europe", "European"],
+      "type": "continental"
+    },
+    {
+      "term": "European Union",
+      "aliases": ["EU", "EU Trade", "European Trade", "European Union Trade"],
+      "type": "trade_bloc"
+    },
+    {
+      "term": "Western Europe",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Eastern Europe",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Central Europe",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Southern Europe",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Nordic",
+      "aliases": ["Nordic Region", "Nordic Regions"],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Asia",
+      "aliases": [],
+      "type": "continental"
+    },
+    {
+      "term": "Asia Pacific",
+      "aliases": ["Asia-Pacific", "APAC", "Asia Pacific Region", "APAC Region", "the Asia Pacific"],
+      "type": "multi_regional"
+    },
+    {
+      "term": "East Asia",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Southeast Asia",
+      "aliases": ["South East Asia"],
+      "type": "sub_regional"
+    },
+    {
+      "term": "South Asia",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Central Asia",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Africa",
+      "aliases": [],
+      "type": "continental"
+    },
+    {
+      "term": "North Africa",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "West Africa",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "East Africa",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Sub-Saharan Africa",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Middle East",
+      "aliases": [],
+      "type": "sub_regional"
+    },
+    {
+      "term": "Middle East and Africa",
+      "aliases": ["Middle East & Africa", "Middle East And Africa", "Middle East Africa", "MEA"],
+      "type": "multi_regional"
+    },
+    {
+      "term": "EMEA",
+      "aliases": ["Europe, Middle East & Africa", "Europe, Middle East And Africa", "Europe Middle East & Africa", "Europe Middle East and Africa"],
+      "type": "multi_regional"
+    },
+    {
+      "term": "MENA",
+      "aliases": ["Middle East & North Africa", "Middle East and North Africa"],
+      "type": "multi_regional"
+    },
+    {
+      "term": "Oceania",
+      "aliases": [],
+      "type": "continental"
+    },
+    {
+      "term": "Pacific",
+      "aliases": [],
+      "type": "oceanic"
+    },
+    {
+      "term": "ASEAN",
+      "aliases": ["Association of Southeast Asian Nations"],
+      "type": "trade_bloc"
+    },
+    {
+      "term": "GCC",
+      "aliases": ["Gulf Cooperation Council", "Gulf"],
+      "type": "trade_bloc"
+    },
+    {
+      "term": "CIS",
+      "aliases": [],
+      "type": "trade_bloc"
+    },
+    {
+      "term": "Asia Pacific and India",
+      "aliases": ["Asia Pacific & India"],
+      "type": "multi_regional"
+    },
+    {
+      "term": "Europe and Asia",
+      "aliases": ["Europe & Asia"],
+      "type": "multi_continental"
+    },
+    {
+      "term": "North America and Europe",
+      "aliases": ["North America & Europe", "North America And Europe"],
+      "type": "multi_continental"
+    },
+    {
+      "term": "Southern Europe and Middle East",
+      "aliases": ["Southern Europe & Middle East", "Southern Europe And Middle East"],
+      "type": "multi_regional"
+    },
+    {
+      "term": "United States",
+      "aliases": ["U.S.", "U.S", "US", "USA", "U.S.A.", "United States of America"],
+      "type": "country"
+    },
+    {
+      "term": "Canada",
+      "aliases": ["Can"],
+      "type": "country"
+    },
+    {
+      "term": "Mexico",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "U.S. and Canada",
+      "aliases": ["U.S. & Canada", "U.S. And Canada"],
+      "type": "multi_country"
+    },
+    {
+      "term": "U.S. and Mexico",
+      "aliases": ["U.S. & Mexico", "U.S. And Mexico"],
+      "type": "multi_country"
+    },
+    {
+      "term": "Brazil",
+      "aliases": ["Brazilian"],
+      "type": "country"
+    },
+    {
+      "term": "Argentina",
+      "aliases": ["AR"],
+      "type": "country"
+    },
+    {
+      "term": "Chile",
+      "aliases": ["CL"],
+      "type": "country"
+    },
+    {
+      "term": "Colombia",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Costa Rica",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "United Kingdom",
+      "aliases": ["UK", "U.K.", "U.K", "Britain", "Great Britain"],
+      "type": "country"
+    },
+    {
+      "term": "Germany",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "France",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Italy",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Spain",
+      "aliases": ["ES"],
+      "type": "country"
+    },
+    {
+      "term": "Netherlands",
+      "aliases": ["NL", "Holland"],
+      "type": "country"
+    },
+    {
+      "term": "Belgium",
+      "aliases": ["BE"],
+      "type": "country"
+    },
+    {
+      "term": "Poland",
+      "aliases": ["PL"],
+      "type": "country"
+    },
+    {
+      "term": "Sweden",
+      "aliases": ["SE"],
+      "type": "country"
+    },
+    {
+      "term": "Norway",
+      "aliases": ["NO"],
+      "type": "country"
+    },
+    {
+      "term": "Denmark",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Switzerland",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Austria",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Portugal",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Greece",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Turkey",
+      "aliases": ["TR", "Türkiye"],
+      "type": "country"
+    },
+    {
+      "term": "Russia",
+      "aliases": ["RU", "Russian Federation"],
+      "type": "country"
+    },
+    {
+      "term": "Ukraine",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Romania",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Serbia",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Croatia",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Slovenia",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Bosnia and Herzegovina",
+      "aliases": ["Bosnia And Herzegovina"],
+      "type": "country"
+    },
+    {
+      "term": "China",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Japan",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "South Korea",
+      "aliases": ["Korea"],
+      "type": "country"
+    },
+    {
+      "term": "India",
+      "aliases": ["Indian"],
+      "type": "country"
+    },
+    {
+      "term": "Indonesia",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Thailand",
+      "aliases": ["TH"],
+      "type": "country"
+    },
+    {
+      "term": "Vietnam",
+      "aliases": ["VN"],
+      "type": "country"
+    },
+    {
+      "term": "Singapore",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Malaysia",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Philippines",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Taiwan",
+      "aliases": ["TW", "Chinese Taipei"],
+      "type": "country"
+    },
+    {
+      "term": "Hong Kong",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Bangladesh",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Australia",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "New Zealand",
+      "aliases": ["NZ"],
+      "type": "country"
+    },
+    {
+      "term": "Australia and New Zealand",
+      "aliases": ["Australia & New Zealand", "Australia And New Zealand", "ANZ"],
+      "type": "multi_country"
+    },
+    {
+      "term": "Saudi Arabia",
+      "aliases": ["KSA"],
+      "type": "country"
+    },
+    {
+      "term": "United Arab Emirates",
+      "aliases": ["UAE", "U.A.E."],
+      "type": "country"
+    },
+    {
+      "term": "Kuwait",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Qatar",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Oman",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Iran",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Iraq",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Egypt",
+      "aliases": ["EG"],
+      "type": "country"
+    },
+    {
+      "term": "South Africa",
+      "aliases": ["ZA", "RSA"],
+      "type": "country"
+    },
+    {
+      "term": "Nigeria",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Ghana",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Algeria",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Morocco",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Tunisia",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Ivory Coast",
+      "aliases": [],
+      "type": "country"
+    },
+    {
+      "term": "Haiti",
+      "aliases": ["Haitian"],
+      "type": "country"
+    },
+    {
+      "term": "California",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "Texas",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "Florida",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "New York",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "Michigan",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "Arizona",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "Colorado",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "Indiana",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "Missouri",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "Washington",
+      "aliases": [],
+      "type": "us_state"
+    },
+    {
+      "term": "Portland",
+      "aliases": [],
+      "type": "us_city"
+    },
+    {
+      "term": "New England",
+      "aliases": [],
+      "type": "us_regional"
+    },
+    {
+      "term": "Western U.S.",
+      "aliases": [],
+      "type": "us_regional"
+    },
+    {
+      "term": "Rest of World",
+      "aliases": ["Rest Of World", "ROV", "RoV"],
+      "type": "designation"
+    },
+    {
+      "term": "RHD Countries",
+      "aliases": [],
+      "type": "market_designation"
+    },
+    {
+      "term": "Asia and Middle East",
+      "aliases": ["Asia & Middle East"],
+      "type": "multi_regional"
+    },
+    {
+      "term": "North and Central America",
+      "aliases": ["North & Central America"],
+      "type": "multi_regional"
+    }
+  ]
+}

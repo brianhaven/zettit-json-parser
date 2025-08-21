@@ -1,0 +1,662 @@
+{
+  "analysis_date_pdt": "2025-08-21 11:00:00 PDT",
+  "analysis_date_utc": "2025-08-21 18:00:00 UTC",
+  "source": "Comprehensive analysis of 19,559 market research titles from deathstar.markets_raw.json",
+  "methodology": "AI-driven geographic entity extraction across 20 batches with frequency aggregation and deduplication",
+  "total_batches_processed": 20,
+  "geographic_entities": [
+    {
+      "primary_term": "Global",
+      "type": "global_designation",
+      "total_frequency": 84,
+      "aliases": [],
+      "description": "Worldwide market designation",
+      "sample_titles": [
+        "Global Automotive Composite Market Size Report, 2020-2027",
+        "Global Access Control & Authentication Market, Industry Report, 2025",
+        "Global Fish Oil Market"
+      ]
+    },
+    {
+      "primary_term": "United States",
+      "type": "country_specific",
+      "total_frequency": 221,
+      "aliases": ["U.S.", "US"],
+      "description": "United States of America",
+      "sample_titles": [
+        "U.S. Solar PV Market Size, Share & Growth Report, 2030",
+        "U.S. Battery Market Size And Share, Industry Report, 2030",
+        "US High Capacity Power Banks Market Size, Industry Report, 2025"
+      ]
+    },
+    {
+      "primary_term": "Europe",
+      "type": "continental_region",
+      "total_frequency": 113,
+      "aliases": [],
+      "description": "European continent",
+      "sample_titles": [
+        "Europe Aluminum Die Casting Market, Industry Report, 2030",
+        "Europe Carbon Capture Utilization Market Size Report, 2030",
+        "Europe 4 Hob Cooktop Market"
+      ]
+    },
+    {
+      "primary_term": "Asia Pacific",
+      "type": "continental_region", 
+      "total_frequency": 81,
+      "aliases": ["APAC", "Asia-Pacific"],
+      "description": "Asia Pacific region including East Asia, Southeast Asia, and Oceania",
+      "sample_titles": [
+        "Asia Pacific Aluminum Extrusion Market, Industry Report, 2030",
+        "APAC Travel Retail Market - Companies & Trends",
+        "Asia-Pacific PCB Compression Molding Press Market"
+      ]
+    },
+    {
+      "primary_term": "North America",
+      "type": "continental_region",
+      "total_frequency": 79,
+      "aliases": ["North American"],
+      "description": "North American continent including United States, Canada, and Mexico",
+      "sample_titles": [
+        "North America Aerogel Market Size, Industry Report, 2030",
+        "North American Heating Equipment Market Size, Industry Report, 2025"
+      ]
+    },
+    {
+      "primary_term": "India",
+      "type": "country_specific",
+      "total_frequency": 33,
+      "aliases": ["Indian"],
+      "description": "Republic of India",
+      "sample_titles": [
+        "India Education Computing Devices Market Report, 2028",
+        "India Heat Treating Market Size, Share & Trends Report 2030",
+        "Indian Technical Textiles Market Size, Share, Industry Report, 2025"
+      ]
+    },
+    {
+      "primary_term": "China",
+      "type": "country_specific",
+      "total_frequency": 10,
+      "aliases": [],
+      "description": "People's Republic of China",
+      "sample_titles": [
+        "China Power Tools & Hand Tools Market Report, 2021-2028",
+        "China Stationary Lead Acid Battery Market Size Report, 2030",
+        "China Travel Retail Industry - Trends & Market Size"
+      ]
+    },
+    {
+      "primary_term": "ASEAN",
+      "type": "trade_bloc",
+      "total_frequency": 12,
+      "aliases": [],
+      "full_form": "Association of Southeast Asian Nations",
+      "description": "Trade bloc of Southeast Asian nations",
+      "sample_titles": [
+        "ASEAN Ceramics Market Size & Share, Report, 2030",
+        "ASEAN Biological Optical Microscope Market",
+        "ASEAN Pet Healthcare Products Market"
+      ]
+    },
+    {
+      "primary_term": "EMEA",
+      "type": "multi_regional",
+      "total_frequency": 5,
+      "aliases": [],
+      "full_form": "Europe, Middle East & Africa",
+      "description": "Multi-regional designation combining Europe, Middle East, and Africa",
+      "sample_titles": [
+        "EMEA and Asia Pacific Electrical Insulating Rubber Gloves Market",
+        "EMEA Industrial Coatings Market for Mining and Petrochemicals"
+      ]
+    },
+    {
+      "primary_term": "Americas",
+      "type": "multi_continental",
+      "total_frequency": 13,
+      "aliases": [],
+      "description": "North and South American continents combined",
+      "sample_titles": [
+        "Americas Pipe Insulation Market Size & Share Report, 2030",
+        "Americas Structural Insulated Panel Market Report, 2021-2028",
+        "Americas And Europe Polymer Coated Fabrics Market, 2030"
+      ]
+    },
+    {
+      "primary_term": "Middle East",
+      "type": "sub_regional",
+      "total_frequency": 10,
+      "aliases": [],
+      "description": "Middle Eastern region",
+      "sample_titles": [
+        "APAC & Middle East Personal Protective Equipment Market Report, 2030",
+        "Middle East Feeder And Distribution Pillar Market, Report, 2030",
+        "Europe & Middle East Lime Market"
+      ]
+    },
+    {
+      "primary_term": "Middle East & Africa",
+      "type": "multi_regional", 
+      "total_frequency": 6,
+      "aliases": ["MEA", "Middle East and Africa"],
+      "description": "Multi-regional designation combining Middle East and Africa",
+      "sample_titles": [
+        "Middle East & Africa Hydrolyzed Bovine Collagen Market",
+        "MEA Specialty Chemicals Market Size, Industry Report 2030",
+        "Middle East and Africa Travel Retail Market - Size, Share & Industry Analysis"
+      ]
+    },
+    {
+      "primary_term": "GCC",
+      "type": "trade_bloc",
+      "total_frequency": 8,
+      "aliases": ["Gulf Cooperation Council"],
+      "full_form": "Gulf Cooperation Council",
+      "description": "Economic and political union of Arab states in the Persian Gulf",
+      "sample_titles": [
+        "GCC Condiment Sauces (for Hospitality Sector) Market",
+        "GCC Protective Relay Market Size & Share Report, 2030",
+        "Gulf Cooperation Council Activated Carbon Market Size Report, 2025"
+      ]
+    },
+    {
+      "primary_term": "Germany",
+      "type": "country_specific", 
+      "total_frequency": 5,
+      "aliases": [],
+      "description": "Federal Republic of Germany",
+      "sample_titles": [
+        "Germany Environment Health & Safety Market Report, 2030",
+        "Germany and Spain Continuing Medical Education Market"
+      ]
+    },
+    {
+      "primary_term": "Canada",
+      "type": "country_specific",
+      "total_frequency": 6,
+      "aliases": [],
+      "description": "Canada",
+      "sample_titles": [
+        "Canada Outdoor Air Source Heat Pump Market, Report 2030",
+        "Canada Home Healthcare Market",
+        "Europe & Canada Paving Materials Market"
+      ]
+    },
+    {
+      "primary_term": "Australia",
+      "type": "country_specific",
+      "total_frequency": 5,
+      "aliases": [],
+      "description": "Commonwealth of Australia",
+      "sample_titles": [
+        "Australia And New Zealand Industrial Fasteners Market Report, 2030",
+        "Australia Abrasives Market Size, Industry Report, 2020-2027",
+        "Australia Toys and Games Market - Size, Share & Industry Analysis"
+      ]
+    },
+    {
+      "primary_term": "New Zealand", 
+      "type": "country_specific",
+      "total_frequency": 2,
+      "aliases": [],
+      "description": "New Zealand",
+      "sample_titles": [
+        "Australia And New Zealand Industrial Fasteners Market Report, 2030",
+        "Australia & New Zealand Flooring Market Size Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "United Kingdom",
+      "type": "country_specific",
+      "total_frequency": 4,
+      "aliases": ["U.K.", "UK"],
+      "description": "United Kingdom of Great Britain and Northern Ireland",
+      "sample_titles": [
+        "U.K. PPE In Construction Market Size, Industry Report, 2030",
+        "UK Renewable Energy Market Size, Industry Report, 2030",
+        "United Kingdom Hardware Stores Retail Market Size & Share Analysis"
+      ]
+    },
+    {
+      "primary_term": "Africa",
+      "type": "continental_region",
+      "total_frequency": 8,
+      "aliases": [],
+      "description": "African continent",
+      "sample_titles": [
+        "Africa Dewatering Pump Market Size & Share Report, 2030",
+        "Africa Small Hydropower Market",
+        "Europe and Africa Waterborne Coatings Market"
+      ]
+    },
+    {
+      "primary_term": "Southeast Asia",
+      "type": "sub_regional",
+      "total_frequency": 6,
+      "aliases": [],
+      "description": "Southeast Asian region",
+      "sample_titles": [
+        "Southeast Asia Asphalt Shingles Market Share, Industry Report, 2025",
+        "Europe, India, and Southeast Asia Metallurgical Coke Market"
+      ]
+    },
+    {
+      "primary_term": "Latin America",
+      "type": "sub_regional",
+      "total_frequency": 5,
+      "aliases": [],
+      "description": "Latin American region",
+      "sample_titles": [
+        "Latin America Hydronic HVAC Systems Market Report, 2030",
+        "Latin America Travel Retail Market - Companies, Size & Share"
+      ]
+    },
+    {
+      "primary_term": "Mexico",
+      "type": "country_specific",
+      "total_frequency": 6,
+      "aliases": [],
+      "description": "United Mexican States",
+      "sample_titles": [
+        "Mexico Oil And Gas Market Size, Share & Growth Report 2030",
+        "Mexico Welding Consumables Market Size Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "Brazil",
+      "type": "country_specific",
+      "total_frequency": 3,
+      "aliases": ["Brazilian"],
+      "description": "Federative Republic of Brazil",
+      "sample_titles": [
+        "Brazil Palm Oil Market Size & Share, Industry Report, 2030",
+        "Brazilian Animal Feed Additives Market"
+      ]
+    },
+    {
+      "primary_term": "Saudi Arabia",
+      "type": "country_specific",
+      "total_frequency": 2,
+      "aliases": ["KSA"],
+      "description": "Kingdom of Saudi Arabia",
+      "sample_titles": [
+        "Saudi Arabia Carbon Nanotubes Market, Industry Report 2030",
+        "KSA Cement Market Size, Share And Trends, Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "UAE",
+      "type": "country_specific",
+      "total_frequency": 3,
+      "aliases": [],
+      "description": "United Arab Emirates",
+      "sample_titles": [
+        "UAE Palm Oil Market Size, Share, Industry Analysis Report, 2018-2025",
+        "UAE Property And Community Management Market Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "France",
+      "type": "country_specific",
+      "total_frequency": 3,
+      "aliases": [],
+      "description": "French Republic",
+      "sample_titles": [
+        "France Foam Pumps Market Size & Share Report, 2020-2027",
+        "France Facilities Management Market"
+      ]
+    },
+    {
+      "primary_term": "South Korea",
+      "type": "country_specific",
+      "total_frequency": 3,
+      "aliases": [],
+      "description": "Republic of Korea",
+      "sample_titles": [
+        "South Korea Travel Retail Market - Size, Share & Industry Analysis",
+        "China and South Korea Solvent Recovery Systems Market"
+      ]
+    },
+    {
+      "primary_term": "Japan",
+      "type": "country_specific",
+      "total_frequency": 2,
+      "aliases": [],
+      "description": "Japan",
+      "sample_titles": [
+        "Japan Corrugated Board Market Size, Industry Report, 2030",
+        "Japan Travel Retail Market - Size, Share & Industry Analysis"
+      ]
+    },
+    {
+      "primary_term": "Qatar",
+      "type": "country_specific",
+      "total_frequency": 2,
+      "aliases": [],
+      "description": "State of Qatar", 
+      "sample_titles": [
+        "Qatar Smartphone Market Size, Share & Trends Report 2030",
+        "Qatar Retail Market - Companies, Analysis, Industry Overview & Outlook"
+      ]
+    },
+    {
+      "primary_term": "Indonesia",
+      "type": "country_specific",
+      "total_frequency": 3,
+      "aliases": [],
+      "description": "Republic of Indonesia",
+      "sample_titles": [
+        "Indonesia Palm Oil Market Size, Share, Industry Report 2030",
+        "Indonesia Bamboos Market Size Report, 2021-2028"
+      ]
+    },
+    {
+      "primary_term": "Vietnam",
+      "type": "country_specific",
+      "total_frequency": 2,
+      "aliases": [],
+      "description": "Socialist Republic of Vietnam",
+      "sample_titles": [
+        "Vietnam Animal Feed Additives Market Size Report, 2030",
+        "Vietnam Animal Feed Market Size, Industry Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "Singapore",
+      "type": "country_specific",
+      "total_frequency": 2,
+      "aliases": [],
+      "description": "Republic of Singapore",
+      "sample_titles": [
+        "Retail Market in Singapore - Size, Outlook & Statistics",
+        "Singapore Travel Retail Market Size & Share Analysis"
+      ]
+    },
+    {
+      "primary_term": "Thailand",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Kingdom of Thailand",
+      "sample_titles": [
+        "Thailand Travel Retail Market Size & Share Analysis - Industry Research Report"
+      ]
+    },
+    {
+      "primary_term": "Oman",
+      "type": "country_specific",
+      "total_frequency": 2,
+      "aliases": [],
+      "description": "Sultanate of Oman",
+      "sample_titles": [
+        "Oman Wireless Infrastructure Market Size, Industry Report, 2019-2025",
+        "Oman Industrial Salts Market For Oil & Gas Industry Report, 2020-2027"
+      ]
+    },
+    {
+      "primary_term": "Philippines",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Republic of the Philippines",
+      "sample_titles": [
+        "Philippines E-cigarette And Vape Market Size Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "Iran",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Islamic Republic of Iran",
+      "sample_titles": [
+        "Iran Palm Oil Market Size, Share, Industry Report, 2025"
+      ]
+    },
+    {
+      "primary_term": "Morocco",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Kingdom of Morocco",
+      "sample_titles": [
+        "Morocco Argan Oil Market Size & Share, Industry Report, 2019-2025"
+      ]
+    },
+    {
+      "primary_term": "Egypt",
+      "type": "country_specific",
+      "total_frequency": 2,
+      "aliases": [],
+      "description": "Arab Republic of Egypt",
+      "sample_titles": [
+        "Egypt Cardiovascular Drugs Market",
+        "Egypt Diabetes Drugs Market"
+      ]
+    },
+    {
+      "primary_term": "Colombia",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Republic of Colombia",
+      "sample_titles": [
+        "Colombia Hydrogen Generation Market Size Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "Costa Rica",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Republic of Costa Rica",
+      "sample_titles": [
+        "Costa Rica Reflective Insulation Market, Industry Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "Bangladesh",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "People's Republic of Bangladesh",
+      "sample_titles": [
+        "Bangladesh Corn Oil Market"
+      ]
+    },
+    {
+      "primary_term": "Algeria",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "People's Democratic Republic of Algeria",
+      "sample_titles": [
+        "Algeria, Ghana, Nigeria, and Ivory Coast Petroleum Wax Market"
+      ]
+    },
+    {
+      "primary_term": "Ghana",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Republic of Ghana",
+      "sample_titles": [
+        "Algeria, Ghana, Nigeria, and Ivory Coast Petroleum Wax Market"
+      ]
+    },
+    {
+      "primary_term": "Nigeria",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Federal Republic of Nigeria",
+      "sample_titles": [
+        "Algeria, Ghana, Nigeria, and Ivory Coast Petroleum Wax Market"
+      ]
+    },
+    {
+      "primary_term": "Ivory Coast",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Republic of Côte d'Ivoire",
+      "sample_titles": [
+        "Algeria, Ghana, Nigeria, and Ivory Coast Petroleum Wax Market"
+      ]
+    },
+    {
+      "primary_term": "South America",
+      "type": "continental_region",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "South American continent",
+      "sample_titles": [
+        "Central And South America Geosynthetics Market Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "Central America",
+      "type": "sub_regional",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Central American region",
+      "sample_titles": [
+        "Central And South America Geosynthetics Market Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "East Asia",
+      "type": "sub_regional",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "East Asian region",
+      "sample_titles": [
+        "East Asia Pet Supplements Market"
+      ]
+    },
+    {
+      "primary_term": "East Africa",
+      "type": "sub_regional",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "East African region",
+      "sample_titles": [
+        "East Africa Baby Diaper Market"
+      ]
+    },
+    {
+      "primary_term": "West Africa",
+      "type": "sub_regional",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "West African region",
+      "sample_titles": [
+        "West Africa Solar PV Panel Market Size, Share, Report 2030"
+      ]
+    },
+    {
+      "primary_term": "New England",
+      "type": "sub_regional",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "New England region of United States",
+      "sample_titles": [
+        "New England Air Compressor Market, Industry Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "Western U.S.",
+      "type": "sub_national",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Western United States region",
+      "sample_titles": [
+        "Western U.S. Flat Steel Market Size, Industry Report, 2030"
+      ]
+    },
+    {
+      "primary_term": "MENA",
+      "type": "multi_regional",
+      "total_frequency": 1,
+      "aliases": [],
+      "full_form": "Middle East and North Africa", 
+      "description": "Middle East and North Africa region",
+      "sample_titles": [
+        "Europe, CIS & MENA Sorbitol Market Size Report, 2020-2027"
+      ]
+    },
+    {
+      "primary_term": "CIS",
+      "type": "trade_bloc",
+      "total_frequency": 1,
+      "aliases": [],
+      "full_form": "Commonwealth of Independent States",
+      "description": "Regional organization of post-Soviet republics",
+      "sample_titles": [
+        "Europe, CIS & MENA Sorbitol Market Size Report, 2020-2027"
+      ]
+    },
+    {
+      "primary_term": "Haitian",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Republic of Haiti",
+      "sample_titles": [
+        "Haitian Vetiver Oil Market"
+      ]
+    },
+    {
+      "primary_term": "Spain",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Kingdom of Spain",
+      "sample_titles": [
+        "Germany and Spain Continuing Medical Education Market"
+      ]
+    },
+    {
+      "primary_term": "Belgium",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Kingdom of Belgium",
+      "sample_titles": [
+        "Germany, Belgium and Netherlands Laboratory Consumables Market"
+      ]
+    },
+    {
+      "primary_term": "Netherlands",
+      "type": "country_specific",
+      "total_frequency": 1,
+      "aliases": [],
+      "description": "Kingdom of the Netherlands",
+      "sample_titles": [
+        "Germany, Belgium and Netherlands Laboratory Consumables Market"
+      ]
+    }
+  ],
+  "summary_statistics": {
+    "total_unique_geographic_entities": 57,
+    "total_frequency_count": 861,
+    "by_type": {
+      "country_specific": 35,
+      "continental_region": 7,
+      "sub_regional": 8,
+      "multi_regional": 3,
+      "trade_bloc": 3,
+      "global_designation": 1
+    },
+    "highest_frequency_entities": [
+      {"entity": "United States", "frequency": 221},
+      {"entity": "Europe", "frequency": 113},
+      {"entity": "Global", "frequency": 84},
+      {"entity": "Asia Pacific", "frequency": 81},
+      {"entity": "North America", "frequency": 79}
+    ]
+  }
+}
