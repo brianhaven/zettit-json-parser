@@ -1,0 +1,306 @@
+{
+  "format_patterns": {
+    "terminal_comma": [
+      {
+        "title": "Coiled Tubing Market Size & Share Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Anticoagulant Rodenticides Market, Industry Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "U.S. Microbiology And Bacterial Culture Media Market, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Direct Methanol Fuel Cell Market Size, DMFC Industry Report, 2025",
+        "raw_match": ", 2025",
+        "extracted_date": "2025",
+        "confidence": 0.95
+      },
+      {
+        "title": "Medical Sensors Market Size, Share & Growth Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Advanced Phase Change Materials Market Size Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "India Bovine Artificial Insemination Market Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Glycerol Monostearate Emulsifiers Market Size Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Clinical Nutrition Market Size, Share & Trends Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Remote Healthcare Market Size, Industry Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      }
+    ],
+    "embedded_format": [
+      {
+        "title": "Pharmaceutical Contract Sales Organizations Market Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Grid-scale Battery Storage Market Size, Industry Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Plantable Packaging Market Size, Share, Trends Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Construction Equipment Rental Market, Industry Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Solar Control Glass Market Size, Share, Industry Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Cloud Information Technology Service Management Market Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "U.S. Personal Mobility Devices Market, Industry Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Queue Management System Market Size, Share Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Cancer Diagnostics Market Size, Share, Industry Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Rapid Tests Market Size, Share & Growth Analysis Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      }
+    ],
+    "range_format": [
+      {
+        "title": "Artificial Intelligence Market Insights, 2020-2030",
+        "raw_match": ", 2020-2030",
+        "extracted_date": "2020-2030",
+        "confidence": 0.98
+      },
+      {
+        "title": "Continuous Manufacturing Market In Pharmaceuticals & Biopharmaceuticals Report, 2021-2027",
+        "raw_match": ", 2021-2027",
+        "extracted_date": "2021-2027",
+        "confidence": 0.98
+      },
+      {
+        "title": "Hermetic Packaging Market Share Analysis, Industry Report, 2025-2030",
+        "raw_match": ", 2025-2030",
+        "extracted_date": "2025-2030",
+        "confidence": 0.98
+      },
+      {
+        "title": "U.S. Acute Hospital Care Market Size Report, 2022-2030",
+        "raw_match": ", 2022-2030",
+        "extracted_date": "2022-2030",
+        "confidence": 0.98
+      },
+      {
+        "title": "Saudi Arabia Medical Disposables Market Report, 2021-2028",
+        "raw_match": ", 2021-2028",
+        "extracted_date": "2021-2028",
+        "confidence": 0.98
+      },
+      {
+        "title": "Adrenocorticotropic Hormone [ACTH] Market Trends, 2021-2031",
+        "raw_match": ", 2021-2031",
+        "extracted_date": "2021-2031",
+        "confidence": 0.98
+      },
+      {
+        "title": "Contact Tracing Technology Market Report, 2021-2028",
+        "raw_match": ", 2021-2028",
+        "extracted_date": "2021-2028",
+        "confidence": 0.98
+      },
+      {
+        "title": "Hydrocarbon Solvents Market Analysis, 2020-2030",
+        "raw_match": ", 2020-2030",
+        "extracted_date": "2020-2030",
+        "confidence": 0.98
+      },
+      {
+        "title": "Ceramic And Natural Stone Tiles Market Report, 2021-2028",
+        "raw_match": ", 2021-2028",
+        "extracted_date": "2021-2028",
+        "confidence": 0.98
+      },
+      {
+        "title": "Global Sodium Hypochlorite Market Size Report, 2020-2027",
+        "raw_match": ", 2020-2027",
+        "extracted_date": "2020-2027",
+        "confidence": 0.98
+      }
+    ],
+    "bracket_format": [
+      {
+        "title": "Agricultural Packaging Market Size & Share [2023 Report]",
+        "raw_match": "[2023 Report]",
+        "extracted_date": "2023",
+        "confidence": 0.9
+      },
+      {
+        "title": "Elevator And Escalator Market Size & Share [2023 Report]",
+        "raw_match": "[2023 Report]",
+        "extracted_date": "2023",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "confidence_distribution": {
+    "terminal_comma": {
+      "count": 505,
+      "avg_confidence": 0.9499999999999922,
+      "min_confidence": 0.95,
+      "max_confidence": 0.95
+    },
+    "embedded_format": {
+      "count": 57,
+      "avg_confidence": 0.8500000000000008,
+      "min_confidence": 0.85,
+      "max_confidence": 0.85
+    },
+    "range_format": {
+      "count": 20,
+      "avg_confidence": 0.9800000000000002,
+      "min_confidence": 0.98,
+      "max_confidence": 0.98
+    },
+    "bracket_format": {
+      "count": 2,
+      "avg_confidence": 0.9,
+      "min_confidence": 0.9,
+      "max_confidence": 0.9
+    }
+  },
+  "pattern_variations": {
+    "terminal_comma": {
+      "unique_patterns": [
+        ", 2033",
+        ", 2022",
+        ", 2028",
+        ", 2025",
+        ", 2040",
+        ", 2027",
+        ", 2030",
+        ", Report 2030",
+        ", 2023"
+      ],
+      "pattern_frequency": {
+        ", 2030": 443,
+        ", 2025": 34,
+        ", 2033": 9,
+        ", 2023": 1,
+        ", 2022": 3,
+        ", 2028": 11,
+        ", 2027": 2,
+        ", Report 2030": 1,
+        ", 2040": 1
+      }
+    },
+    "embedded_format": {
+      "unique_patterns": [
+        "Report 2028",
+        "Report 2027",
+        "Report 2030",
+        "Outlook 2031",
+        "Forecast 2026",
+        "Report 2033"
+      ],
+      "pattern_frequency": {
+        "Report 2030": 51,
+        "Forecast 2026": 1,
+        "Report 2028": 1,
+        "Outlook 2031": 1,
+        "Report 2027": 1,
+        "Report 2033": 2
+      }
+    },
+    "range_format": {
+      "unique_patterns": [
+        ", 2021-2028",
+        ", 2021-2031",
+        ", 2021 - 2031",
+        ", 2022-2030",
+        ", 2025-2030",
+        ", 2020-2030",
+        ", 2022 - 2030",
+        ", 2021-2027",
+        ", 2020-2027"
+      ],
+      "pattern_frequency": {
+        ", 2020-2030": 2,
+        ", 2021-2027": 1,
+        ", 2025-2030": 1,
+        ", 2022-2030": 2,
+        ", 2021-2028": 7,
+        ", 2021-2031": 2,
+        ", 2020-2027": 3,
+        ", 2021 - 2031": 1,
+        ", 2022 - 2030": 1
+      }
+    },
+    "bracket_format": {
+      "unique_patterns": [
+        "[2023 Report]"
+      ],
+      "pattern_frequency": {
+        "[2023 Report]": 2
+      }
+    }
+  }
+}

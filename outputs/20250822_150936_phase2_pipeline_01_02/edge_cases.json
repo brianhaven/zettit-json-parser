@@ -1,0 +1,2008 @@
+{
+  "metadata": {
+    "total_edge_cases": 400,
+    "description": "Titles that failed date extraction and require pattern analysis"
+  },
+  "edge_cases": [
+    {
+      "title": "Floor Paints Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Helium-3 Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Composite Material Testing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Transcriptomics Technologies Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bilirubin Meters Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Sun Protective Clothing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "AI-Optimized Smart Factories Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Isostatic Pressing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "U.S. Medical Plastic Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "PBAT [Polybutylene Adipate Terephthalate] Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Lyophilized Injectable Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Electric Pruning Shears Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Single-Cell Analysis Transcriptomics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Textile Chemicals Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Laser Diode Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "mRNA Vaccine Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "High Nickel Cathode Materials Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Laboratory Water Purifier Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Intelligent Assistant Embedded Consumer Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Chronic Idiopathic Constipation Treatment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Power Transmission Towers and Cables Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "ZDDP Additives Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Electric Wire Rope Hoist Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Diagnostic Testing of STDs Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Glass Alternative Materials Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Spoon in Lid Packaging Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Tallow Fatty Acids (Saturated, Polyunsaturated, and Monounsaturated) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Refinery Process Chemicals Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Automotive Window and Exterior Sealing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Linen Yarn Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Telescopic Channel/ Runner Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Endosurgery Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Rheumatology Therapeutics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Water Softener Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Gas Analyzers Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Digital Inks Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Pharmaceutical Contract Sales Outsourcing [CSO] Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Structural Health Monitoring Market Analysis",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "IPTV Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Needle Free Drug Delivery Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Chromium Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Hyperbaric Oxygen Therapy Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Heart Valve Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Ceramic and Porcelain Tiles Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Asthma Treatment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Propanol Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Master Data Management (MDM) BPO Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Epoxy Composites Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Electrical Submersible Pumps (ESPs) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Sub-slab Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Non-invasive Brain Stimulation System Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "BCD Power IC Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "North America Toilet Paper Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Diamond Jewelry Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Cough Hypersensitivity Syndrome Treatment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Proliferative Diabetic Retinopathy Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Hematology Diagnostics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "SMT Equipment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Wire & Cable Materials Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Sterilization Equipment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Thailand Hot-dip Galvanization Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Household Composters Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Aniline Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Dental Apex Locator Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "HVAC and Refrigeration (HVACR) Systems Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Hemp Protein Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Acrylic Acid Esters Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Elevators Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Healthcare API Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Government Biometrics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Europe and Asia Pacific Sodium Cyanide Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "North America And Europe PPE Distribution Market Report",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Adhesives and Tapes Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Neurological Disorder Drugs Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Industrial Sludge Treatment Chemicals (Flocculants, Coagulants, Disinfectants and Other Process Chemicals) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Telematics Market for Off-highway Vehicles",
+      "classification": "market_for",
+      "reason": "No date found"
+    },
+    {
+      "title": "Medical Packaging Films Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Redox Flow Battery Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Blister Packaging Equipment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Waterproofing Admixture Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "North America Soups Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Luxury Cruise Tourism Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Transcatheter Embolization and Occlusion Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Lionâ€™s Mane Mushroom Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Prenatal and New-born Genetic Testing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Recycled Metal Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Osteoarthritis Drugs Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Africa Small Hydropower Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Advanced Persistent Threat Protection Market Size Report",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Humic Acid Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "UV Filter Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bone Growth Stimulators Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Vanilla Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Multiparametric In-vitro Cardiotoxicity Testing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Europe Molecular Diagnostics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Hernia Repair Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Blood Collection Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Agriculture Lighting Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Plasma Cutting Machine Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Fuel Additives Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "North America Travel Retail Market Size & Share Analysis - Industry Research Report - Growth Trends",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Medical Plastics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Industrial Hand Tools Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Health Caregiving Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "AI in Oil and Gas Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Furniture & Home Furnishing Store Market Size & Share Analysis - Industry Research Report - Growth Trends",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Extruded Plastics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Hair Wax Stick Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Europe Industrial Gear Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Food Sorting Machines Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Enteric Disease Testing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Rubber Fitness Flooring Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Silicon Alloys Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Autoinjectors Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Automotive 3D Map System Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Synthetic Zeolite Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "CIS (Russia, Ukraine, Others) MDI (Methyl Diphenyl Diisocyanate) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Skincare Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Finishing Lines Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Acute Intermittent Porphyria Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Ship Repair and Maintenance Services Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Zinc-manganese Oxide Printed Battery Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Gemcitabine HCL Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Spatial Genomics & Transcriptomics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Mammography Systems Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "RF Passive Components Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Wood Vinegar Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "North America Video Access Control Services Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Prefilled Syringe Small Molecule Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "eClinical Solutions Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Thailand Hot-dip Galvanized Steel Products Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Personal Mobility Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Linear Low-density Polyethylene Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Fully Automatic Coffee Machine Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "AI-based Chemical Manufacturing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Metal-clad Cable Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Offshore Lubricants Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Commercial Food Warming & Holding Equipment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Women Intimate Care Wipes Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Whirlpool Turbine Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Textured Pea Protein Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Printed Antenna Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Automotive End-Point Authentication Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Thailand Travel Retail Market Size & Share Analysis - Industry Research Report - Growth Trends",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "North America Plantation Shutters Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Ferroelectric RAM Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Feed Intermediate Chemicals Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Haptic Technology Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bone Wax Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Vanillin Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Technology Spending on Revenue Cycle Management Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Tetrasodium Glutamate Diacetate Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Array Instruments Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Polyaluminum Chloride Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Dental Night Guard Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Wireless Microphone Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bag-in-box Packaging Machine Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Medical Membrane Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Human Papillomavirus Vaccine Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bio-based Acrylonitrile Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Mineral Processing Equipment Market for Mining Industry",
+      "classification": "market_for",
+      "reason": "No date found"
+    },
+    {
+      "title": "Smart Food Packaging Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Prostate Cancer Screening Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Aerospace Valves Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Flexible PVC Films Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Healthcare Contract Development and Manufacturing Organization Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Organic Tortilla Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Automotive Active Health Monitoring System Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Global LTE Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Solid Surface Materials Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Mattress Topper Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Peracetic Acid Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Penicillin G Acylase Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Waterproof Makeup Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Non-athletic Footwear Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Passion Fruit Peel Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Lithium Tantalate Crystal Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Specialty Fuel Additives Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Electric Vehicle Charge Air Cooler Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Lithium-ion Battery Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Mattress and Mattress Component Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Automotive Decorative Interior Trim Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Plant Derived Sugar and Synthetic Sugar Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Spring Water Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "NEV Taxi Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Calcium Hydride Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Aquafeed Additives Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Canada Hosted PBX Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Dissolvable Frac Plug Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "China Marble Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Meal Kit Delivery Services Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "RF Signal Chain Components Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "ASEAN Pet Healthcare Products Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Diabetes Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Ultraviolet Germicidal Irradiation Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Meningitis Treatment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bottled Water Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Meal Kit Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Anesthesia Gas Blender Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Clinical Trial Packaging Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Poly Coated Paper Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bath Bomb Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Aluminum Cans Recycling Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Automotive Crankshaft Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Gas Turbine Upgrades For Performance Enhancement Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Stand-Up Pouches Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Airborne Weapon System Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Middle East & Africa (MEA) Mining, Material Handling & Mineral Processing Equipment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Micron Filters Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Cold Plunge Pool Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Blood Testing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Budesonide Inhaler Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Drilling Equipment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Cerebrospinal Fluid Drainage Catheter Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "UV Absorbers Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Cooling Tower Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Wearable Heart Monitoring Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Gaming Hardware Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Radiant Cooling and Heating Systems Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "High Voltage Solid-state Transformer Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Combined Heat and Power [CHP] Installation Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Controlled Substance Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Private Healthcare Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Autotransfusion Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Wearable Pulse Oximeters Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Paint Remover Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Europe Plastic Packaging Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "L-lactide Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Cloud Workload Protection Platform [CWPP] Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Isomalt Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Microcar Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Alagille Syndrome (ALGS) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Baby Diapers Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Asset and Wealth Management Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Orthodontic Equipment and Consumables Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Land Incineration Plants Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Viral Inactivation Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Luxury and Premium Mattress Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Adhesives & Sealants Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Acrylic Emulsions Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Driving Footwear Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Yarn Lubricants Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Free-to-air (FTA) Service Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Plastic Processing Equipment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "U.S., Europe, Middle East & Africa, and Asia Pacific TOC Water Analyzer Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Warehouse Freight Elevators Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Sustainable Materials for E-bikes Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Non-Invasive Cancer Diagnostics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Shoulder Replacement Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Southeast Asia Feminine Hygiene Wash Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Painting Masking Tapes Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "U.S. Ambulatory Cardiac Monitoring Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Medical Imaging Information System Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Anal Fistula Treatment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Cold Storage Equipment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Hip Replacement Implants Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "U.S. Specialty Printing Consumables Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "U.S. Outdoor Fabric Market Size, Share & Growth Report",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Coated Endotracheal Tube Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Multilayer Ceramic Capacitor (MLCC) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Oral Rehydration Solution [ORS] Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Point of Sale (PoS) Receipt Printer Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Coin Cells Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Wind Powered Water Pumps Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "5G Smart Antenna Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Textile Machinery Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "North America Vapor Barrier Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Mesenchymal Stem Cells Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bio-Based Surfactants Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Connected Living Room Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Wheat Germ Oil Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "UV Adhesives Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "D-amino Acid Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "RF Phase Shifter Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Vehicle Periodic Maintenance Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Polyvinylpyrrolidone (PVP) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Silicon Wafer Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Asia Pacific Medical Tourism Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Portable Oxygen Concentrators Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Supervisory Control and Data Acquisition (SCADA) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Secure Web Gateway Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "RTC (Real-time Clock) IC Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Garbage Trucks Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Wireless Earphone Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Asia Pacific Air Conditioning System Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "A2 Milk Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Alfalfa Protein Concentrate Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bare Metal Cloud Service Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Halal and Kosher Empty Capsules Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Virtual Private Server Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Precision Electric Motors (Brushless) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Tea Processing Machine Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Intervertebral Implants Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Fault Detection and Classification (FDC) Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "On-demand Transportation Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Red Biotechnology Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Impregnation Sealants Market for Electronics",
+      "classification": "market_for",
+      "reason": "No date found"
+    },
+    {
+      "title": "Europe Roller Shades or Blinds Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "X-ray Mirror Lens Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Sleeping Bag Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Air Bearing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Active Wound Care Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Thyristor Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Aerosol Cans Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Hearing Protection Equipment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Beef Protein Powder Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Medical Connectors Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "AI in Oncology Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Virtual PBX Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Castor Oil Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Digital Audio Workstations [DAWs] Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Oxygen Therapy Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Textile Bags Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Non-vascular Stents Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Inulin and Fructooligosaccharide Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Respiratory Disposables Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Capric Acid Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Pharmaceutical Chemicals Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Turpentine Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "North America Residential Outdoor Gas Fire Pits Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "UV Protection Patches Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Aseptic Packaging Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Hair Fragrance Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Blow Fill Seal (BFS) Technology Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Indirect Calorimeter Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Dredging Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Downhole Tools Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Cloud Application Security & Vulnerability Management Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Antibacterial Glass Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Biogas Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Vacuum Capacitor Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Atipamezole Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Gene Vector Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "3D Bioprinting Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Neurotoxin Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Conditioning Agent Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Turkey Marine Lubricants Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Ink Additives Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Nano-magnetic Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Advanced Commercial Laundry Machines Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Power Purchase Agreement Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Garage Door Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Zinc-manganese Oxide Batteries Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Tanktwo String Cell Battery Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "East Asia Pet Supplements Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Transparent Solar Cells Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Exocrine Pancreatic Insufficiency (EPI) Therapeutics and Diagnostics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Welding Consumables Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Real-time (Graphics and Video) Rendering Solutions Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Sinusitis Treatment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Mass Flow Controller Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Starch Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Aerospace Plastics Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Copper Clad Laminates Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Oil & Gas Downhole Cables Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Gynecological Devices Market Insights",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Rock Drilling Tools Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Positive Airway Pressure Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Night Creams Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Aesthetic Services Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Electric Submersible Cables Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Optic Nerve Disorders Treatment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Automated Guided Vehicle [AGV] Fleet Management Platform Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Electronic Toll Collection System Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Nuclear Imaging Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Sodium Cocoyl Glutamate Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Graphite Electrodes Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Peppermint Tea Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Bruise Treatment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Butterfly Pea Flower Tea Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "In-display Fingerprint Sensors Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Sweeteners Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Drinking Fountains Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Household Mosaic Tiles Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Human Microbiome Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "COVID-19 Vaccines-Production Capacity & Development Timeline",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Residential Mini Split Air Conditioning Systems Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Medical Loupes Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Weather Monitoring Solutions and Services Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Silicon-based Anode Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Immunoprotein Diagnostic Testing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Europe Online Adult Entertainment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Veterinary Imaging Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Disposable Gloves Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Solar Highway Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Graphene Composites Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Retinitis Pigmentosa Treatment Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Smart Manufacturing Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Continuous Positive Airway Pressure (CPAP) Interface Devices Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Dairy Blends Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Light Diffusion Materials Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Wheelbarrow Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Advanced Energy Storage Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Smart Parking Technologies Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Laptop Bag Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Recycled PET (r-PET) Bottles Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "HVAC Relay Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Behavioral Health Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Mechanical Mine Clearance System Market",
+      "classification": "standard",
+      "reason": "No date found"
+    },
+    {
+      "title": "Amino Acid Market",
+      "classification": "standard",
+      "reason": "No date found"
+    }
+  ]
+}

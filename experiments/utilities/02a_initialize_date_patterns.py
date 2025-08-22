@@ -6,9 +6,22 @@ Populates the pattern_libraries collection with date extraction patterns.
 """
 
 import os
+import sys
 import logging
 from dotenv import load_dotenv
-from pattern_library_manager_v1 import PatternLibraryManager, PatternType
+import importlib.util
+
+# Dynamic import for pattern library manager (filename starts with numbers)
+try:
+    pattern_manager_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '00b_pattern_library_manager_v1.py')
+    spec = importlib.util.spec_from_file_location("pattern_library_manager_v1", pattern_manager_path)
+    pattern_module = importlib.util.module_from_spec(spec)
+    sys.modules["pattern_library_manager_v1"] = pattern_module
+    spec.loader.exec_module(pattern_module)
+    PatternLibraryManager = pattern_module.PatternLibraryManager
+    PatternType = pattern_module.PatternType
+except Exception as e:
+    raise ImportError(f"Could not import PatternLibraryManager: {e}") from e
 
 # Configure logging
 logging.basicConfig(

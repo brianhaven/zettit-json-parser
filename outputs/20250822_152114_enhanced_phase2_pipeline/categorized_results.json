@@ -1,0 +1,334 @@
+{
+  "metadata": {
+    "total_documents": 1000,
+    "categories": {
+      "successful_extractions": 0,
+      "no_dates_present": 21,
+      "dates_missed": 0,
+      "processing_errors": 0
+    },
+    "generation_time": "2025-08-22T22:21:14.760553"
+  },
+  "categorized_results": {
+    "successful_extractions": [],
+    "no_dates_present": [
+      {
+        "title": "Clutch Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Automotive Fuel Rail Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Automotive VVT System Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Thin Wafers Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Wheelchair Accessible Vehicle Converters Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Coated Casing Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Coding and Marking System Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Automotive Lubricants After Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Nephrology and Urology Devices Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Differential Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Durable Medical Equipment Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Warranty Management Software Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Automotive Flywheel Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Patient Handling Equipment Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Robotic Wheelchairs Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Magnetic Ink Character Recognition (MICR) Devices Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Pulsed Laser Deposition Systems Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Rubber Gloves Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Battery Management System Market Size & Share Report",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Europe Electronic Contract Manufacturing And Design Services Market",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      },
+      {
+        "title": "Electric Vehicle Battery Recycling Market Size Report",
+        "market_classification": "MarketTermType.STANDARD",
+        "extraction_result": {
+          "extracted_date_range": null,
+          "format_type": "DateFormat.NO_NUMERIC_CONTENT",
+          "confidence": 1.0,
+          "matched_pattern": null,
+          "raw_match": null,
+          "has_numeric_content": false,
+          "numeric_values_found": [],
+          "categorization": "no_dates_present",
+          "notes": "No numeric content detected - no dates expected"
+        }
+      }
+    ],
+    "dates_missed": [],
+    "processing_errors": []
+  }
+}

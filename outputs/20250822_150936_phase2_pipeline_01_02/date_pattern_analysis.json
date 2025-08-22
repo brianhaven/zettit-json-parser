@@ -1,0 +1,342 @@
+{
+  "format_patterns": {
+    "terminal_comma": [
+      {
+        "title": "Solar Cooker Market Size, Share, Industry Trends Report, 2025",
+        "raw_match": ", 2025",
+        "extracted_date": "2025",
+        "confidence": 0.95
+      },
+      {
+        "title": "Audiology Devices Market Size, Share, Industry Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Texture Paints Market Size, Share And Growth Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Travel Insurance Market Size, Share & Trends Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Polymethacrylimide Foam Market Size, Industry Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Composite Concrete Deck Market Size & Share Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Lung Cancer Diagnostics Market Size, Share Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "AI Governance Market Size, Share & Trends Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Pharmaceutical Grade Lactose Market Size Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      },
+      {
+        "title": "Bioadhesive Wound Care Market Size & Share Report, 2030",
+        "raw_match": ", 2030",
+        "extracted_date": "2030",
+        "confidence": 0.95
+      }
+    ],
+    "range_format": [
+      {
+        "title": "Bitcoin Market Size, Share & Analysis Report, 2022-2030",
+        "raw_match": ", 2022-2030",
+        "extracted_date": "2022-2030",
+        "confidence": 0.98
+      },
+      {
+        "title": "COVID-19 Impact On Civil Aviation Industry Report, 2021-2028",
+        "raw_match": ", 2021-2028",
+        "extracted_date": "2021-2028",
+        "confidence": 0.98
+      },
+      {
+        "title": "Europe Serine Proteases Market Size Report, 2022 - 2030",
+        "raw_match": ", 2022 - 2030",
+        "extracted_date": "2022-2030",
+        "confidence": 0.98
+      },
+      {
+        "title": "Americas Structural Insulated Panel Market Report, 2021-2028",
+        "raw_match": ", 2021-2028",
+        "extracted_date": "2021-2028",
+        "confidence": 0.98
+      },
+      {
+        "title": "Oman Industrial Salts Market For Oil & Gas Industry Report, 2020-2027",
+        "raw_match": ", 2020-2027",
+        "extracted_date": "2020-2027",
+        "confidence": 0.98
+      },
+      {
+        "title": "Asia Pacific Medical Device Cleaning Market Report 2021-2028",
+        "raw_match": "2021-2028",
+        "extracted_date": "2021-2028",
+        "confidence": 0.98
+      },
+      {
+        "title": "Connected Motorcycle Market Size & Share Report 2020-2027",
+        "raw_match": "2020-2027",
+        "extracted_date": "2020-2027",
+        "confidence": 0.98
+      },
+      {
+        "title": "Global Film Dressing Market Size & Share Report, 2022-2030",
+        "raw_match": ", 2022-2030",
+        "extracted_date": "2022-2030",
+        "confidence": 0.98
+      },
+      {
+        "title": "Adrenocorticotropic Hormone [ACTH] Market Trends, 2021-2031",
+        "raw_match": ", 2021-2031",
+        "extracted_date": "2021-2031",
+        "confidence": 0.98
+      },
+      {
+        "title": "Can Seamers Market Size & Share Report, 2020-2028",
+        "raw_match": ", 2020-2028",
+        "extracted_date": "2020-2028",
+        "confidence": 0.98
+      }
+    ],
+    "embedded_format": [
+      {
+        "title": "Pet Food Market Growth Analysis, 2019 - 2029",
+        "raw_match": "2029",
+        "extracted_date": "2029",
+        "confidence": 0.85
+      },
+      {
+        "title": "U.S. Non-invasive Aesthetic Treatment Market, Industry Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Hepatitis E Diagnostic Tests Market Forecast Report, 2019-2027",
+        "raw_match": "2027",
+        "extracted_date": "2027",
+        "confidence": 0.85
+      },
+      {
+        "title": "Eye Care Services Market Size, Share, Industry Report 2033",
+        "raw_match": "Report 2033",
+        "extracted_date": "2033",
+        "confidence": 0.85
+      },
+      {
+        "title": "Data Center Equipment Market Size, Share, Industry Report, 2019-2025",
+        "raw_match": "2025",
+        "extracted_date": "2025",
+        "confidence": 0.85
+      },
+      {
+        "title": "Veterinary Drugs Market Insights, 2016-2024",
+        "raw_match": "2024",
+        "extracted_date": "2024",
+        "confidence": 0.85
+      },
+      {
+        "title": "Industrial Diamond Market Size, Share, Industry Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Fats And Oils Market Size, Share, Industry Report, 2019-2025",
+        "raw_match": "2025",
+        "extracted_date": "2025",
+        "confidence": 0.85
+      },
+      {
+        "title": "Nasal Drug Delivery Technology Market Size Analysis Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      },
+      {
+        "title": "Companion Animal Vaccines Market Size, Share Report 2030",
+        "raw_match": "Report 2030",
+        "extracted_date": "2030",
+        "confidence": 0.85
+      }
+    ],
+    "bracket_format": [
+      {
+        "title": "Digital Badges Market Size, Share And Trends [2023 Report]",
+        "raw_match": "[2023 Report]",
+        "extracted_date": "2023",
+        "confidence": 0.9
+      },
+      {
+        "title": "Broadcast Equipment Market Size And Share [2023 Report]",
+        "raw_match": "[2023 Report]",
+        "extracted_date": "2023",
+        "confidence": 0.9
+      },
+      {
+        "title": "Offshore Decommissioning Market Size, Share [2023 Report]",
+        "raw_match": "[2023 Report]",
+        "extracted_date": "2023",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "confidence_distribution": {
+    "terminal_comma": {
+      "count": 479,
+      "avg_confidence": 0.9499999999999924,
+      "min_confidence": 0.95,
+      "max_confidence": 0.95
+    },
+    "range_format": {
+      "count": 33,
+      "avg_confidence": 0.9800000000000003,
+      "min_confidence": 0.98,
+      "max_confidence": 0.98
+    },
+    "embedded_format": {
+      "count": 85,
+      "avg_confidence": 0.8500000000000002,
+      "min_confidence": 0.85,
+      "max_confidence": 0.85
+    },
+    "bracket_format": {
+      "count": 3,
+      "avg_confidence": 0.9,
+      "min_confidence": 0.9,
+      "max_confidence": 0.9
+    }
+  },
+  "pattern_variations": {
+    "terminal_comma": {
+      "unique_patterns": [
+        ", 2020",
+        ", 2025",
+        ", 2028",
+        ", 2033",
+        ", 2035",
+        ", 2031",
+        ", 2022",
+        ", 2030",
+        ", 2027",
+        ", 2024",
+        ", 2040",
+        ", Report 2030"
+      ],
+      "pattern_frequency": {
+        ", 2025": 46,
+        ", 2030": 401,
+        ", 2033": 12,
+        ", 2028": 3,
+        ", 2031": 1,
+        ", 2027": 5,
+        ", 2020": 1,
+        ", 2022": 4,
+        ", 2040": 1,
+        ", 2024": 2,
+        ", Report 2030": 1,
+        ", 2035": 2
+      }
+    },
+    "range_format": {
+      "unique_patterns": [
+        ", 2020-2027",
+        "2020-2027",
+        ", 2022-2031",
+        ", 2022 - 2030",
+        ", 2021-2031",
+        ", 2020-2028",
+        "2021-2031",
+        ", 2020-2030",
+        "2022-2031",
+        "2021-2028",
+        ", 2021-2028",
+        "2020 - 2030",
+        ", 2022-2030",
+        ", 2021 - 2031"
+      ],
+      "pattern_frequency": {
+        ", 2022-2030": 8,
+        ", 2021-2028": 5,
+        ", 2022 - 2030": 1,
+        ", 2020-2027": 8,
+        "2021-2028": 1,
+        "2020-2027": 1,
+        ", 2021-2031": 2,
+        ", 2020-2028": 1,
+        ", 2021 - 2031": 1,
+        "2021-2031": 1,
+        "2020 - 2030": 1,
+        ", 2022-2031": 1,
+        "2022-2031": 1,
+        ", 2020-2030": 1
+      }
+    },
+    "embedded_format": {
+      "unique_patterns": [
+        "Report 2033",
+        "Report 2025",
+        "Market 2030",
+        "2025",
+        "Forecast 2026",
+        "Report 2030",
+        "2029",
+        "2026",
+        "2024",
+        "2023",
+        "Forecast 2024",
+        "Outlook 2031",
+        "2027"
+      ],
+      "pattern_frequency": {
+        "2029": 1,
+        "Report 2030": 41,
+        "2027": 5,
+        "Report 2033": 1,
+        "2025": 17,
+        "2024": 4,
+        "2023": 3,
+        "Report 2025": 5,
+        "Forecast 2026": 1,
+        "Market 2030": 2,
+        "2026": 3,
+        "Outlook 2031": 1,
+        "Forecast 2024": 1
+      }
+    },
+    "bracket_format": {
+      "unique_patterns": [
+        "[2023 Report]"
+      ],
+      "pattern_frequency": {
+        "[2023 Report]": 3
+      }
+    }
+  }
+}

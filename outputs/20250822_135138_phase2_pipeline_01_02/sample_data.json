@@ -1,0 +1,1108 @@
+{
+  "metadata": {
+    "sample_size": 50,
+    "description": "Random sample of pipeline results for manual quality review"
+  },
+  "samples": [
+    {
+      "document_id": "68049b0096ec0c90d2bad1ca",
+      "title": "Aerial Target Drones Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c9496ec0c90d2baed10",
+      "title": "Tooling Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae506",
+      "title": "North America Organic Fertilizers Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049a9496ec0c90d2baca69",
+      "title": "Glycerol Monostearate Emulsifiers Market Size Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c6596ec0c90d2bae934",
+      "title": "RF Signal Chain Components Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a161171",
+      "title": "Broadcasting And Cable TV Market, Industry Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c9496ec0c90d2baed9b",
+      "title": "Underfill Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baeccb",
+      "title": "Thermic Fluids Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a4114051d98522fff5a420",
+      "title": "Organosilicon Polymers Market Size, Industry Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bacdae",
+      "title": "Polychlorotrifluoroethylene Market Size & Share Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049bea96ec0c90d2bae303",
+      "title": "Metastatic Bone Disease Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049a3496ec0c90d2bac621",
+      "title": "Advanced Ceramic Additives Market Size, Share Report 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "embedded_format",
+        "confidence": 0.85,
+        "matched_pattern": "\\bReport\\s+(\\d{4})\\s*$",
+        "raw_match": "Report 2030",
+        "notes": "Embedded format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bad0c2",
+      "title": "Waterproof Tapes Market Size, Share & Growth Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baecbf",
+      "title": "Thermal Cameras Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a160fd1",
+      "title": "Automotive Artificial Intelligence Market, Industry Report 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "embedded_format",
+        "confidence": 0.85,
+        "matched_pattern": "\\bReport\\s+(\\d{4})\\s*$",
+        "raw_match": "Report 2030",
+        "notes": "Embedded format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a16192f",
+      "title": "Healthcare Automatic Identification And Data Capture Market Report, 2028",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2028",
+        "start_year": 2028,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2028",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a16168e",
+      "title": "Enterprise Information Archiving Market Size Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badf34",
+      "title": "Hydrogen Peroxide Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae5f5",
+      "title": "Outdoor Heating Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacca4",
+      "title": "Non-woven Abrasives Market Size And Share Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacc37",
+      "title": "Middle East Feeder And Distribution Pillar Market, Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161cd1",
+      "title": "Marketing Technology Market Size, Industry Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049bae96ec0c90d2bade22",
+      "title": "Healthcare Contract Research Outsourcing Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161c1e",
+      "title": "Licensed Sports Merchandise Market, Industry Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a16113b",
+      "title": "Brachytherapy Market Size, Share & Trends Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a1618f7",
+      "title": "Green Technology & Sustainability Market Size Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049a3e96ec0c90d2bac68b",
+      "title": "Anchors And Grouts Market Size, Industry Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41f48f7fead4d2a162001",
+      "title": "Oral Sleep Apnea Devices Market Size & Share Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a1612c9",
+      "title": "Clinical Trials Support Services Market, Industry Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a1615c3",
+      "title": "E-Book Market Size, Share, Growth, Global Industry Report, 2019-2025",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049b7396ec0c90d2badc1d",
+      "title": "FPGA Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad2d1",
+      "title": "Application Development and Deployment Software Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbe1e",
+      "title": "Tissue Sectioning Market Size, Global Industry Report, 2027",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2027",
+        "start_year": 2027,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2027",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad636",
+      "title": "Calcium Nitrate Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad7af",
+      "title": "Commercial Perlite Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacc24",
+      "title": "Microcontroller Socket Market Size And Share Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baec1e",
+      "title": "Surgical Staplers Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41dd2f7fead4d2a160cdc",
+      "title": "U.S. Regulatory Affairs Market Size, Industry Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41f48f7fead4d2a161d9f",
+      "title": "Microneedling Market Size & Share Report, 2021-2028",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2021-2028",
+        "start_year": 2021,
+        "end_year": 2028,
+        "format_type": "range_format",
+        "confidence": 0.98,
+        "matched_pattern": ",\\s*(\\d{4})\\s*[-–—]\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2021-2028",
+        "notes": "Range format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161a4d",
+      "title": "In-dash Navigation System Market Size, Share Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41efef7fead4d2a1619e2",
+      "title": "Human Augmentation Market Size And Share Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baebda",
+      "title": "Submarine Power Cable Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae5bf",
+      "title": "Organic Beer Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049bea96ec0c90d2bae2e5",
+      "title": "Metal and Ceramic Injection Molding Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049a3496ec0c90d2bac5f0",
+      "title": "Durable Medical Equipment Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad6f5",
+      "title": "Chelated Iron Agriculture Micronutrient Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a1617d5",
+      "title": "Fixed Voice Market Size, Share & Trends Report, 2028",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2028",
+        "start_year": 2028,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2028",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68a41dd2f7fead4d2a160c92",
+      "title": "Spinal Pumps Market Size, Share & Trends Report, 2030",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": "2030",
+        "start_year": 2030,
+        "end_year": null,
+        "format_type": "terminal_comma",
+        "confidence": 0.95,
+        "matched_pattern": ",\\s*(\\d{4})\\s*$",
+        "raw_match": ", 2030",
+        "notes": "Terminal comma format"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae532",
+      "title": "North America Video Access Control Services Market",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae557",
+      "title": "Offshore Wind Energy Market Forecast 2014 - 2022",
+      "description": "",
+      "classification_result": {
+        "market_term_type": "standard",
+        "confidence": 0.9,
+        "matched_pattern": null,
+        "processing_notes": "Standard processing - systematic pattern removal approach"
+      },
+      "date_extraction_result": {
+        "extracted_date_range": null,
+        "start_year": null,
+        "end_year": null,
+        "format_type": "unknown",
+        "confidence": 0.0,
+        "matched_pattern": null,
+        "raw_match": null,
+        "notes": "No date patterns detected"
+      },
+      "error": null
+    }
+  ]
+}

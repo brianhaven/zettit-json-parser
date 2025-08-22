@@ -1,0 +1,412 @@
+{
+  "dates_missed_analysis": [],
+  "no_dates_analysis": [
+    {
+      "title": "Clutch Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Automotive Fuel Rail Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Automotive VVT System Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Thin Wafers Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Wheelchair Accessible Vehicle Converters Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Coated Casing Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Coding and Marking System Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Automotive Lubricants After Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Nephrology and Urology Devices Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Differential Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Durable Medical Equipment Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Warranty Management Software Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Automotive Flywheel Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Patient Handling Equipment Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Robotic Wheelchairs Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Magnetic Ink Character Recognition (MICR) Devices Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Pulsed Laser Deposition Systems Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Rubber Gloves Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Battery Management System Market Size & Share Report",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Europe Electronic Contract Manufacturing And Design Services Market",
+      "numeric_values": [],
+      "has_numeric_content": false
+    },
+    {
+      "title": "Electric Vehicle Battery Recycling Market Size Report",
+      "numeric_values": [],
+      "has_numeric_content": false
+    }
+  ],
+  "success_patterns": [
+    {
+      "title": "Antimicrobial Medical Textiles Market, Industry Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Automotive Steel Wheels Market Size & Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "APAC & Middle East Personal Protective Equipment Market Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Aerostructure Materials Market Size & Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Ammunition Market Size, Share And Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "CNC Router Machine Market Size And Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Bioceramics Market Size, Share And Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Cryogenic Pump Market Size & Share, Industry Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Automotive Timing Belt Market Size And Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Desalting And Buffer Exchange Market Size Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Clean-In-Place Market Size, Share & Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Extreme Ultraviolet Lithography Market Size Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Flexographic Printing Machine Market Size Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Gasoline Direct Injection Market Size & Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Docks Market Size, Share, Growth & Trends Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Energy Efficient Windows Market Size & Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Environmental Remediation Market Size, Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Electric Submersible Pumps Market Size, Share Report 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.EMBEDDED_FORMAT",
+      "matched_pattern": "\\bReport\\s+(\\d{4})\\s*$"
+    },
+    {
+      "title": "Medical Alloys Market Size, Share & Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Industrial Hose Market Size, Share & Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Linear Slides Market Size, Share & Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Glass Fiber Reinforced Gypsum Market Size Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "KSA Cement Market Size, Share And Trends, Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Industrial Vending Machine Market, Industry Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "HDPE And LLDPE Geomembrane Market Size Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Laser Debonding Equipment Market, Industry Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Metal Aerosol Can Market Size, Share & Trends Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Nanocomposites Market Size, Share & Trends Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Metal Keystock Market Size, Share & Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Metrology Equipment Market Size, Industry Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Metal Feeler Gauge Market Size And Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Pervious Pavement Market Size, Share, Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Nanoclay Reinforcement Market Size & Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Microspheres Market Size, Share And Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Piston Market Size, Share & Trends Analysis Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Torque Vectoring Market Size, Share & Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Power Quality Measurement Equipment Market Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Soil Testing Equipment Market Size And Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Refrigerated Air Dryer Market Size & Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "U.S. Hand Protection Equipment Market Size, Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Water Quality Sensor Market Size And Share Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Torque Converter Market Size, Share & Growth Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Needle Coke Market Insights, 2031",
+      "extracted_date": "2031",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Car Electrical Products Market Analysis, Outlook 2031",
+      "extracted_date": "2031",
+      "format_type": "DateFormat.EMBEDDED_FORMAT",
+      "matched_pattern": "\\bOutlook\\s+(\\d{4})\\b"
+    },
+    {
+      "title": "Online Education Market Insights, 2021-2031",
+      "extracted_date": "2021-2031",
+      "format_type": "DateFormat.RANGE_FORMAT",
+      "matched_pattern": ",\\s*(\\d{4})\\s*[-\u2013\u2014]\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Field Service Management Market Insights, 2021-2031",
+      "extracted_date": "2021-2031",
+      "format_type": "DateFormat.RANGE_FORMAT",
+      "matched_pattern": ",\\s*(\\d{4})\\s*[-\u2013\u2014]\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "1,3 Propanediol Market Size, Share & Trends Report, 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Global Access Control & Authentication Market, Industry Report, 2025",
+      "extracted_date": "2025",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "Global Acids & Nutrient In Animal Nutrition Market Size Report, 2025",
+      "extracted_date": "2025",
+      "format_type": "DateFormat.TERMINAL_COMMA",
+      "matched_pattern": ",\\s*(\\d{4})\\s*$"
+    },
+    {
+      "title": "3D Printing Metal Market Size & Share, Industry Report 2030",
+      "extracted_date": "2030",
+      "format_type": "DateFormat.EMBEDDED_FORMAT",
+      "matched_pattern": "\\bReport\\s+(\\d{4})\\s*$"
+    }
+  ]
+}
