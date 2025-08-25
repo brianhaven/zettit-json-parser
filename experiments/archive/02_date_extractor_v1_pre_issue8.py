@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 
 """
-Enhanced Date Extractor with Bracket Format Preservation
-Fixes GitHub Issue #8: Preserves report type words when removing date patterns.
-
-Key Enhancement: For bracket patterns like [2023 Report], extracts "2023" but preserves "Report".
+Enhanced Date Extractor with Numeric Pre-filtering
+Distinguishes between titles with no dates vs titles with unextracted dates.
 """
 
 import re
@@ -45,7 +43,7 @@ class DateFormat(Enum):
 
 @dataclass
 class EnhancedDateExtractionResult:
-    """Enhanced result of date extraction with bracket format preservation."""
+    """Enhanced result of date extraction with numeric pre-filtering."""
     title: str
     extracted_date_range: Optional[str]
     start_year: Optional[int]
@@ -57,18 +55,15 @@ class EnhancedDateExtractionResult:
     has_numeric_content: bool
     numeric_values_found: List[str]
     categorization: str  # "success", "no_dates_present", "dates_missed"
-    # NEW: Enhanced bracket format support
-    preserved_words: List[str]  # Words to preserve when removing date pattern
-    cleaned_title: str  # Title with date removed but important words preserved
     notes: Optional[str] = None
 
 class EnhancedDateExtractor:
     """
-    Enhanced Date Extraction System with bracket format preservation.
+    Enhanced Date Extraction System with numeric pre-filtering.
     
-    Key enhancement for GitHub Issue #8:
-    - For bracket patterns like [2023 Report], extracts "2023" but preserves "Report"
-    - Provides cleaned_title that preserves important words for downstream processing
+    Distinguishes between:
+    - Titles with no dates (not failures)
+    - Titles with dates that we failed to extract (actual failures)
     """
     
     def __init__(self, pattern_library_manager):
@@ -91,24 +86,16 @@ class EnhancedDateExtractor:
             'potential_years': re.compile(r'\b(202[0-9]|203[0-9]|204[0-9]|195[0-9]|196[0-9]|197[0-9]|198[0-9]|199[0-9])\b')  # Extended year range
         }
         
-        # Bracket preservation patterns - words that should be preserved when removing brackets
-        self.preservation_words = {
-            'report_types': ['report', 'analysis', 'study', 'update', 'edition', 'survey', 'review', 'outlook'],
-            'market_terms': ['market', 'industry', 'segment', 'sector']
-        }
-        
         # Statistics tracking
         self.extraction_stats = {
             'total_processed': 0,
             'successful_extractions': 0,
             'no_dates_present': 0,
             'dates_missed': 0,
-            'has_numeric_but_no_date': 0,
-            'bracket_preservations': 0  # NEW: Track bracket word preservations
+            'has_numeric_but_no_date': 0
         }
         
         logger.info(f"Enhanced Date Extractor initialized with {len(self.date_patterns)} patterns")
-        logger.info(f"Bracket preservation enabled for {sum(len(words) for words in self.preservation_words.values())} word types")
     
     def _load_date_patterns(self) -> Dict[str, List[Dict]]:
         """Load date patterns from MongoDB, organized by format type."""
@@ -178,82 +165,15 @@ class EnhancedDateExtractor:
         
         return has_numeric_content, numeric_values, analysis
     
-    def _extract_preservation_words(self, raw_match: str, format_type: str) -> List[str]:
-        """
-        Extract words from the raw match that should be preserved.
-        
-        For bracket/parentheses patterns, identify important words that should be kept
-        when removing the date pattern.
-        
-        Args:
-            raw_match: The full matched text (e.g., "[2023 Report]")
-            format_type: The pattern format type
-            
-        Returns:
-            List of words to preserve
-        """
-        if format_type != 'bracket_format':
-            return []
-        
-        # Extract words from bracket/parentheses content
-        # Remove brackets/parentheses and years, keep meaningful words
-        content = re.sub(r'[\[\]()]', '', raw_match)  # Remove brackets/parentheses
-        content = re.sub(r'\b\d{4}\b', '', content)   # Remove years
-        content = re.sub(r'\s+', ' ', content).strip()  # Clean spaces
-        
-        preserved = []
-        if content:
-            words = content.lower().split()
-            for word in words:
-                # Check if word should be preserved
-                for word_category, preservation_list in self.preservation_words.items():
-                    if word in preservation_list:
-                        preserved.append(word.title())  # Preserve with proper capitalization
-                        break
-        
-        return preserved
-    
-    def _create_cleaned_title(self, title: str, raw_match: str, preserved_words: List[str]) -> str:
-        """
-        Create a cleaned title with date pattern removed but important words preserved.
-        
-        Args:
-            title: Original title
-            raw_match: The matched date pattern text
-            preserved_words: Words to preserve from the pattern
-            
-        Returns:
-            Cleaned title with preserved words
-        """
-        if not raw_match:
-            return title
-        
-        # Remove the raw match
-        cleaned = title.replace(raw_match, '').strip()
-        
-        # Add preserved words back
-        if preserved_words:
-            preserved_text = ' '.join(preserved_words)
-            if cleaned:
-                cleaned = f"{cleaned} {preserved_text}"
-            else:
-                cleaned = preserved_text
-        
-        # Clean up spacing and punctuation
-        cleaned = re.sub(r'\s+', ' ', cleaned).strip()
-        cleaned = re.sub(r'[,\.]+$', '', cleaned)  # Remove trailing punctuation
-        
-        return cleaned
-    
     def extract(self, title: str) -> EnhancedDateExtractionResult:
         """
-        Extract date information from title with enhanced bracket format preservation.
+        Extract date information from title with enhanced categorization.
         
         Args:
             title: Input title text
             
         Returns:
-            EnhancedDateExtractionResult with detailed analysis and bracket preservation
+            EnhancedDateExtractionResult with detailed analysis
         """
         self.extraction_stats['total_processed'] += 1
         
@@ -275,37 +195,17 @@ class EnhancedDateExtractor:
                 has_numeric_content=False,
                 numeric_values_found=numeric_values,
                 categorization="no_dates_present",
-                preserved_words=[],
-                cleaned_title=title,
                 notes="No numeric content detected - no dates expected"
             )
         
         # Step 3: Try to extract dates using existing patterns
         extraction_result = self._try_extract_with_patterns(title)
         
-        # Step 4: Handle bracket format preservation
-        preserved_words = []
-        if extraction_result['raw_match'] and extraction_result['format_type'] == DateFormat.BRACKET_FORMAT:
-            preserved_words = self._extract_preservation_words(
-                extraction_result['raw_match'], 
-                'bracket_format'
-            )
-            if preserved_words:
-                self.extraction_stats['bracket_preservations'] += 1
-        
-        # Step 5: Create cleaned title with preservation
-        cleaned_title = self._create_cleaned_title(
-            title,
-            extraction_result['raw_match'],
-            preserved_words
-        )
-        
-        # Step 6: Categorize the result
+        # Step 4: Categorize the result
         if extraction_result['extracted_date_range']:
             self.extraction_stats['successful_extractions'] += 1
             categorization = "success"
-            preservation_note = f" (preserved: {', '.join(preserved_words)})" if preserved_words else ""
-            notes = f"Successfully extracted date using {extraction_result['format_type']} pattern{preservation_note}"
+            notes = f"Successfully extracted date using {extraction_result['format_type']} pattern"
         else:
             # Has numeric content but no date extracted - potential pattern gap
             if analysis['has_four_digit_years'] or analysis['has_potential_years']:
@@ -329,8 +229,6 @@ class EnhancedDateExtractor:
             has_numeric_content=has_numeric_content,
             numeric_values_found=numeric_values,
             categorization=categorization,
-            preserved_words=preserved_words,
-            cleaned_title=cleaned_title,
             notes=notes
         )
     
@@ -387,7 +285,7 @@ class EnhancedDateExtractor:
         }
     
     def get_stats(self) -> Dict[str, int]:
-        """Get extraction statistics including bracket preservations."""
+        """Get extraction statistics."""
         return self.extraction_stats.copy()
     
     def close_connection(self):
@@ -396,37 +294,33 @@ class EnhancedDateExtractor:
             self.pattern_library_manager.close_connection()
 
 if __name__ == "__main__":
-    # Test the enhanced extractor with bracket format preservation
+    # Test the enhanced extractor
     from dotenv import load_dotenv
     load_dotenv()
     
     pattern_manager = PatternLibraryManager()
     extractor = EnhancedDateExtractor(pattern_manager)
     
-    # Test cases including the failing GitHub Issue #8 case
+    # Test cases
     test_titles = [
-        "Automatic Weapons Market Size And Share [2023 Report]",  # GitHub Issue #8
+        "Floor Paints Market",  # No dates
+        "Helium-3 Market",  # No dates
         "AI Technology Market Size Report, 2030",  # Clear date
         "Healthcare Market 2025-2030",  # Range
-        "Some Market Analysis [2024 Study]",  # Bracket with Study
+        "Some Market Report [2024]",  # Bracket
         "Technology Overview",  # No numbers at all
         "Component Analysis Part 3",  # Numbers but not dates
-        "Market Research [2023 Edition]",  # Edition variant
-        "Industry Survey (2024 Update)",  # Parentheses variant
     ]
     
-    print("🔧 Enhanced Date Extractor with Bracket Preservation Test Results:")
-    print("=" * 80)
+    print("Enhanced Date Extractor Test Results:")
+    print("=" * 60)
     
     for title in test_titles:
         result = extractor.extract(title)
         print(f"Title: {title}")
         print(f"  Result: {result.categorization}")
         print(f"  Extracted: {result.extracted_date_range}")
-        print(f"  Format: {result.format_type}")
-        print(f"  Raw Match: {result.raw_match}")
-        print(f"  Preserved Words: {result.preserved_words}")
-        print(f"  Cleaned Title: {result.cleaned_title}")
+        print(f"  Numeric values: {result.numeric_values_found}")
         print(f"  Notes: {result.notes}")
         print()
     
