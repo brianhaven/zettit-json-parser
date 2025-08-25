@@ -1,0 +1,47 @@
+Phase 3 Failed Report Type Extractions
+Analysis Date (PDT): 2025-08-24 23:48:05 PDT
+Analysis Date (UTC): 2025-08-25 06:48:05 UTC
+================================================================================
+
+Total Failed Extractions: 5
+
+Original: Nanocapsules Market for Cosmetics
+After Date Removal: Nanocapsules Market for Cosmetics
+Date Extracted: None
+Market Term: market_for
+Remaining for Analysis: Nanocapsules Market for Cosmetics
+Notes: Market term: market_for, Date extraction: no_dates_present, Report type: unknown
+----------------------------------------
+
+Original: Water Treatment Chemicals Market For Geothermal Power Report, 2030
+After Date Removal: Water Treatment Chemicals Market For Geothermal Power Report
+Date Extracted: 2030
+Market Term: market_for
+Remaining for Analysis: Water Treatment Chemicals Market For Geothermal Power Report
+Notes: Market term: market_for, Date extraction: success, Report type: unknown
+----------------------------------------
+
+Original: Ultra High Voltage SiC Power Device Market for HVDC Transmission
+After Date Removal: Ultra High Voltage SiC Power Device Market for HVDC Transmission
+Date Extracted: None
+Market Term: market_for
+Remaining for Analysis: Ultra High Voltage SiC Power Device Market for HVDC Transmission
+Notes: Market term: market_for, Date extraction: no_dates_present, Report type: unknown
+----------------------------------------
+
+Original: Automatic Weapons Market Size And Share [2023 Report]
+After Date Removal: Automatic Weapons Market Size And Share
+Date Extracted: 2023
+Market Term: standard
+Remaining for Analysis: Automatic Weapons Market Size And Share
+Notes: Market term: standard, Date extraction: success, Report type: unknown
+----------------------------------------
+
+Original: PET Foam Market for Structural Composites
+After Date Removal: PET Foam Market for Structural Composites
+Date Extracted: None
+Market Term: market_for
+Remaining for Analysis: PET Foam Market for Structural Composites
+Notes: Market term: market_for, Date extraction: no_dates_present, Report type: unknown
+----------------------------------------
+

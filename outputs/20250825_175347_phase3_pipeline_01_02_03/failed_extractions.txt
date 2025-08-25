@@ -1,0 +1,79 @@
+Phase 3 Failed Report Type Extractions
+Analysis Date (PDT): 2025-08-25 10:53:47 PDT
+Analysis Date (UTC): 2025-08-25 17:53:47 UTC
+================================================================================
+
+Total Failed Extractions: 9
+
+Original: Outbound TeleMarket
+After Date Removal: Outbound TeleMarket
+Date Extracted: None
+Market Term: standard
+Remaining for Analysis: Outbound TeleMarket
+Notes: Market term: standard, Date extraction: no_dates_present, Report type: unknown
+----------------------------------------
+
+Original: Radiofrequency Identification (RFID) Market in Healthcare
+After Date Removal: Radiofrequency Identification (RFID) Market in Healthcare
+Date Extracted: None
+Market Term: market_in
+Remaining for Analysis: Radiofrequency Identification (RFID) Market in Healthcare
+Notes: Market term: market_in, Date extraction: no_dates_present, Report type: unknown
+----------------------------------------
+
+Original: Emerging Lighting Technology Market by Color Temperature
+After Date Removal: Emerging Lighting Technology Market by Color Temperature
+Date Extracted: None
+Market Term: standard
+Remaining for Analysis: Emerging Lighting Technology Market by Color Temperature
+Notes: Market term: standard, Date extraction: no_dates_present, Report type: unknown
+----------------------------------------
+
+Original: China E-commerce Market Size And Share [2023 Report]
+After Date Removal: China E-commerce Market Size And Share
+Date Extracted: 2023
+Market Term: standard
+Remaining for Analysis: China E-commerce Market Size And Share
+Notes: Market term: standard, Date extraction: success, Report type: unknown
+----------------------------------------
+
+Original: Agricultural Inoculants Market Size And Share [2023 Report]
+After Date Removal: Agricultural Inoculants Market Size And Share
+Date Extracted: 2023
+Market Term: standard
+Remaining for Analysis: Agricultural Inoculants Market Size And Share
+Notes: Market term: standard, Date extraction: success, Report type: unknown
+----------------------------------------
+
+Original: Retail Industry in Australia - Analysis & Statistics
+After Date Removal: Retail Industry in Australia - Analysis & Statistics
+Date Extracted: None
+Market Term: standard
+Remaining for Analysis: Retail Industry in Australia - Analysis & Statistics
+Notes: Market term: standard, Date extraction: no_dates_present, Report type: unknown
+----------------------------------------
+
+Original: Amino Acids Market for Agronomic Applications
+After Date Removal: Amino Acids Market for Agronomic Applications
+Date Extracted: None
+Market Term: market_for
+Remaining for Analysis: Amino Acids Market for Agronomic Applications
+Notes: Market term: market_for, Date extraction: no_dates_present, Report type: unknown
+----------------------------------------
+
+Original: Specialty Medical Chairs Market Size And Share Report 2030
+After Date Removal: Specialty Medical Chairs Market Size And Share
+Date Extracted: 2030
+Market Term: standard
+Remaining for Analysis: Specialty Medical Chairs Market Size And Share
+Notes: Market term: standard, Date extraction: success, Report type: unknown
+----------------------------------------
+
+Original: Water Treatment Chemicals Market For Geothermal Power Report, 2030
+After Date Removal: Water Treatment Chemicals Market For Geothermal Power Report
+Date Extracted: 2030
+Market Term: market_for
+Remaining for Analysis: Water Treatment Chemicals Market For Geothermal Power Report
+Notes: Market term: market_for, Date extraction: success, Report type: unknown
+----------------------------------------
+

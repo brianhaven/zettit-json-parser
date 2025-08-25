@@ -1,0 +1,31 @@
+Phase 3 Failed Report Type Extractions
+Analysis Date (PDT): 2025-08-25 00:24:36 PDT
+Analysis Date (UTC): 2025-08-25 07:24:36 UTC
+================================================================================
+
+Total Failed Extractions: 3
+
+Original: Retail Market in Singapore - Size, Outlook & Statistics
+After Date Removal: Retail Market in Singapore - Size, Outlook & Statistics
+Date Extracted: None
+Market Term: market_in
+Remaining for Analysis: Retail Market in Singapore - Size, Outlook & Statistics
+Notes: Market term: market_in, Date extraction: no_dates_present, Report type: skipped (market_in)
+----------------------------------------
+
+Original: Decorative Concrete Market Size And Share [2023 Report]
+After Date Removal: Decorative Concrete Market Size And Share
+Date Extracted: 2023
+Market Term: standard
+Remaining for Analysis: Decorative Concrete Market Size And Share
+Notes: Market term: standard, Date extraction: success, Report type: unknown
+----------------------------------------
+
+Original: U.S. Industrial Ethanol Market Size Trends Report, 2019-2025
+After Date Removal: U.S. Industrial Ethanol Market Size Trends Report
+Date Extracted: 2019-2025
+Market Term: standard
+Remaining for Analysis: U.S. Industrial Ethanol Market Size Trends Report
+Notes: Market term: standard, Date extraction: success, Report type: unknown
+----------------------------------------
+

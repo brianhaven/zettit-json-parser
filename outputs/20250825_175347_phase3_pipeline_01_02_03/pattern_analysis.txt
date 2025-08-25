@@ -1,0 +1,44 @@
+Phase 3 Pattern Analysis Report
+Analysis Date (PDT): 2025-08-25 10:53:47 PDT
+Analysis Date (UTC): 2025-08-25 17:53:47 UTC
+================================================================================
+
+Failed Extractions Analysis
+Total Failed Extractions: 9
+
+Potential Report Type Words Found in Failed Extractions:
+- market: 7 occurrences (77.8%)
+- industry: 1 occurrences (11.1%)
+- analysis: 1 occurrences (11.1%)
+- statistics: 1 occurrences (11.1%)
+- report: 1 occurrences (11.1%)
+
+Sample Failed Extractions for Pattern Development:
+------------------------------------------------------------
+Title: Outbound TeleMarket
+Market Type: standard
+
+Title: Radiofrequency Identification (RFID) Market in Healthcare
+Market Type: market_in
+
+Title: Emerging Lighting Technology Market by Color Temperature
+Market Type: standard
+
+Title: China E-commerce Market Size And Share
+Market Type: standard
+
+Title: Agricultural Inoculants Market Size And Share
+Market Type: standard
+
+Title: Retail Industry in Australia - Analysis & Statistics
+Market Type: standard
+
+Title: Amino Acids Market for Agronomic Applications
+Market Type: market_for
+
+Title: Specialty Medical Chairs Market Size And Share
+Market Type: standard
+
+Title: Water Treatment Chemicals Market For Geothermal Power Report
+Market Type: market_for
+

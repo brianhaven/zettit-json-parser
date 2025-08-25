@@ -1,0 +1,29 @@
+Phase 3 Pattern Analysis Report
+Analysis Date (PDT): 2025-08-24 23:48:05 PDT
+Analysis Date (UTC): 2025-08-25 06:48:05 UTC
+================================================================================
+
+Failed Extractions Analysis
+Total Failed Extractions: 5
+
+Potential Report Type Words Found in Failed Extractions:
+- market: 5 occurrences (100.0%)
+- report: 1 occurrences (20.0%)
+
+Sample Failed Extractions for Pattern Development:
+------------------------------------------------------------
+Title: Nanocapsules Market for Cosmetics
+Market Type: market_for
+
+Title: Water Treatment Chemicals Market For Geothermal Power Report
+Market Type: market_for
+
+Title: Ultra High Voltage SiC Power Device Market for HVDC Transmission
+Market Type: market_for
+
+Title: Automatic Weapons Market Size And Share
+Market Type: standard
+
+Title: PET Foam Market for Structural Composites
+Market Type: market_for
+

@@ -1,0 +1,26 @@
+Phase 3 Pattern Analysis Report
+Analysis Date (PDT): 2025-08-25 00:24:36 PDT
+Analysis Date (UTC): 2025-08-25 07:24:36 UTC
+================================================================================
+
+Failed Extractions Analysis
+Total Failed Extractions: 3
+
+Potential Report Type Words Found in Failed Extractions:
+- market: 3 occurrences (100.0%)
+- outlook: 1 occurrences (33.3%)
+- statistics: 1 occurrences (33.3%)
+- trends: 1 occurrences (33.3%)
+- report: 1 occurrences (33.3%)
+
+Sample Failed Extractions for Pattern Development:
+------------------------------------------------------------
+Title: Retail Market in Singapore - Size, Outlook & Statistics
+Market Type: market_in
+
+Title: Decorative Concrete Market Size And Share
+Market Type: standard
+
+Title: U.S. Industrial Ethanol Market Size Trends Report
+Market Type: standard
+
