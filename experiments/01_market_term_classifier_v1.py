@@ -40,16 +40,20 @@ logger = logging.getLogger(__name__)
 
 class MarketTermType(Enum):
     """Enumeration of market term classification types."""
-    MARKET_FOR = "market_for"
-    MARKET_IN = "market_in"
     STANDARD = "standard"
     AMBIGUOUS = "ambiguous"
+    
+    @classmethod
+    def create_dynamic_type(cls, term_name: str) -> str:
+        """Create a dynamic market term type from database term."""
+        # Convert "Market for" -> "market_for", "Market by" -> "market_by", etc.
+        return term_name.lower().replace(" ", "_")
 
 @dataclass
 class ClassificationResult:
     """Result of market term classification."""
     title: str
-    market_type: MarketTermType
+    market_type: str  # Changed to string to support dynamic types
     confidence: float
     matched_pattern: Optional[str]
     preprocessing_applied: List[str]
@@ -59,22 +63,18 @@ class ClassificationResult:
 class ClassificationStats:
     """Statistics for classification results."""
     total_classified: int
-    market_for_count: int
-    market_in_count: int
     standard_count: int
     ambiguous_count: int
-    market_for_percentage: float
-    market_in_percentage: float
     standard_percentage: float
+    market_term_stats: Dict[str, Dict[str, Any]]  # Dynamic market term statistics
 
 class MarketTermClassifier:
     """
     Market Term Classification System for market research titles.
     
-    Classifies titles into three main categories:
-    - Market for patterns (~0.2% of dataset)
-    - Market in patterns (~0.1% of dataset)
-    - Standard market patterns (~99.7% of dataset)
+    Dynamically loads market term patterns from database and classifies titles:
+    - Market-specific patterns (market_for, market_in, market_by, etc.) - loaded from database
+    - Standard market patterns (everything else) - ~99% of dataset
     """
     
     def __init__(self, pattern_library_manager=None):
@@ -95,23 +95,22 @@ class MarketTermClassifier:
         else:
             self.pattern_library_manager = pattern_library_manager
             
+        # Dynamic market term patterns loaded from database
+        self.market_term_patterns = {}  # {term_name: pattern_regex}
+        self.available_market_types = set()  # Dynamic set of available types
+        
+        # Initialize statistics with standard and ambiguous, market terms added dynamically
         self.classification_stats = {
             'total_processed': 0,
-            'market_for': 0,
-            'market_in': 0,
             'standard': 0,
             'ambiguous': 0
         }
-        
-        # Initialize pattern variables
-        self.market_for_pattern = None
-        self.market_in_pattern = None
         
         # Load patterns from MongoDB - REQUIRED
         self._load_library_patterns()
     
     def _load_library_patterns(self) -> None:
-        """Load patterns from MongoDB pattern library - REQUIRED."""
+        """Load patterns from MongoDB pattern library dynamically - REQUIRED."""
         try:
             # Load market term patterns from MongoDB
             market_patterns = self.pattern_library_manager.get_patterns(PatternType.MARKET_TERM)
@@ -121,26 +120,32 @@ class MarketTermClassifier:
             
             patterns_loaded = 0
             for pattern in market_patterns:
-                if pattern.get('term') == 'Market for' and pattern.get('pattern'):
+                term = pattern.get('term')
+                pattern_regex = pattern.get('pattern')
+                active = pattern.get('active', True)
+                
+                if term and pattern_regex and active:
                     # Remove double escaping from MongoDB storage
-                    self.market_for_pattern = pattern['pattern'].replace('\\\\', '\\')
+                    clean_pattern = pattern_regex.replace('\\\\', '\\')
+                    
+                    # Store pattern with term name as key
+                    self.market_term_patterns[term] = clean_pattern
+                    
+                    # Create dynamic market type and add to available types
+                    market_type = MarketTermType.create_dynamic_type(term)
+                    self.available_market_types.add(market_type)
+                    
+                    # Initialize statistics counter for this market type
+                    self.classification_stats[market_type] = 0
+                    
                     patterns_loaded += 1
-                    logger.debug(f"Loaded Market For pattern: {self.market_for_pattern}")
-                elif pattern.get('term') == 'Market in' and pattern.get('pattern'):
-                    # Remove double escaping from MongoDB storage
-                    self.market_in_pattern = pattern['pattern'].replace('\\\\', '\\')
-                    patterns_loaded += 1
-                    logger.debug(f"Loaded Market In pattern: {self.market_in_pattern}")
-            
-            if not self.market_for_pattern:
-                logger.warning("Market For pattern not found in database")
-            if not self.market_in_pattern:
-                logger.warning("Market In pattern not found in database")
+                    logger.debug(f"Loaded pattern '{term}': {clean_pattern} -> {market_type}")
             
             if patterns_loaded == 0:
                 raise RuntimeError("No valid market term patterns loaded from database")
             
             logger.info(f"Successfully loaded {patterns_loaded} market term patterns from MongoDB")
+            logger.info(f"Available market types: {sorted(self.available_market_types)}")
             
         except Exception as e:
             raise RuntimeError(f"Failed to load patterns from MongoDB: {e}") from e
@@ -192,7 +197,7 @@ class MarketTermClassifier:
         
         return processed_title_lower, preprocessing_steps
     
-    def _calculate_confidence(self, title: str, market_type: MarketTermType, 
+    def _calculate_confidence(self, title: str, market_type: str, 
                              matched_pattern: Optional[str]) -> float:
         """
         Calculate confidence score for classification.
@@ -207,26 +212,21 @@ class MarketTermClassifier:
         """
         confidence = 0.5  # Base confidence
         
-        if market_type == MarketTermType.AMBIGUOUS:
+        if market_type == "ambiguous":
             confidence = 0.2  # Very low confidence for ambiguous cases
         
         elif matched_pattern:
             # Higher confidence for specific pattern matches
-            if market_type == MarketTermType.MARKET_FOR:
-                # Check if pattern is very specific
-                if re.search(r'\bmarket\s+for\s+[a-zA-Z]', title.lower()):
+            if market_type in self.available_market_types:
+                # Market-specific pattern match (market_for, market_in, market_by, etc.)
+                # Check if pattern has context after the market term
+                market_term_match = re.search(r'\bmarket\s+\w+\s+[a-zA-Z]', title.lower())
+                if market_term_match:
                     confidence = 0.95
                 else:
                     confidence = 0.85
             
-            elif market_type == MarketTermType.MARKET_IN:
-                # Check if pattern is very specific
-                if re.search(r'\bmarket\s+in\s+[a-zA-Z]', title.lower()):
-                    confidence = 0.95
-                else:
-                    confidence = 0.85
-            
-            elif market_type == MarketTermType.STANDARD:
+            elif market_type == "standard":
                 # Higher confidence for common market research terms
                 high_confidence_terms = [
                     'market size', 'market share', 'market analysis', 'market report',
@@ -240,65 +240,38 @@ class MarketTermClassifier:
         
         return round(confidence, 3)
     
-    def is_market_for_pattern(self, title: str) -> Tuple[bool, Optional[str], float]:
+    def check_market_term_patterns(self, title: str) -> List[Tuple[str, str, float]]:
         """
-        Check if title matches 'Market for' pattern.
+        Check title against all loaded market term patterns.
         
         Args:
             title: Title to check
             
         Returns:
-            Tuple of (is_match, matched_pattern, confidence)
+            List of tuples: (term_name, market_type, confidence) for all matches
         """
-        if not self.market_for_pattern:
-            logger.debug("No Market For pattern available")
-            return False, None, 0.0
-            
+        matches = []
         processed_title, _ = self._preprocess_title(title)
         
-        # Check for market for pattern
-        match = re.search(self.market_for_pattern, processed_title, re.IGNORECASE)
-        if match:
-            confidence = 0.95  # High confidence for exact pattern match
-            logger.debug(f"Market for pattern matched in '{title}'")
-            return True, self.market_for_pattern, confidence
+        for term_name, pattern in self.market_term_patterns.items():
+            match = re.search(pattern, processed_title, re.IGNORECASE)
+            if match:
+                market_type = MarketTermType.create_dynamic_type(term_name)
+                confidence = 0.95  # High confidence for exact pattern match
+                matches.append((term_name, market_type, confidence))
+                logger.debug(f"Pattern '{term_name}' matched in '{title}' -> {market_type}")
         
-        return False, None, 0.0
-    
-    def is_market_in_pattern(self, title: str) -> Tuple[bool, Optional[str], float]:
-        """
-        Check if title matches 'Market in' pattern.
-        
-        Args:
-            title: Title to check
-            
-        Returns:
-            Tuple of (is_match, matched_pattern, confidence)
-        """
-        if not self.market_in_pattern:
-            logger.debug("No Market In pattern available")
-            return False, None, 0.0
-            
-        processed_title, _ = self._preprocess_title(title)
-        
-        # Check for market in pattern
-        match = re.search(self.market_in_pattern, processed_title, re.IGNORECASE)
-        if match:
-            confidence = 0.95  # High confidence for exact pattern match
-            logger.debug(f"Market in pattern matched in '{title}'")
-            return True, self.market_in_pattern, confidence
-        
-        return False, None, 0.0
+        return matches
     
     
     def classify(self, title: str) -> ClassificationResult:
         """
         Classify a market research title into market term categories.
         
-        Simple classification:
-        1. Check for "Market for" pattern (~0.2% of dataset)
-        2. Check for "Market in" pattern (~0.1% of dataset)  
-        3. Everything else goes to standard processing (~99.7% of dataset)
+        Dynamic classification:
+        1. Check against all loaded market term patterns from database
+        2. Handle multiple matches as ambiguous cases
+        3. Everything else goes to standard processing (~99% of dataset)
         
         Args:
             title: Title to classify
@@ -309,7 +282,7 @@ class MarketTermClassifier:
         if not title or not title.strip():
             return ClassificationResult(
                 title=title,
-                market_type=MarketTermType.STANDARD,
+                market_type="standard",
                 confidence=0.9,
                 matched_pattern=None,
                 preprocessing_applied=[],
@@ -321,53 +294,51 @@ class MarketTermClassifier:
         # Track processing
         self.classification_stats['total_processed'] += 1
         
-        # Check for specific patterns first
-        is_market_for, for_pattern, for_confidence = self.is_market_for_pattern(title)
-        is_market_in, in_pattern, in_confidence = self.is_market_in_pattern(title)
+        # Check against all loaded market term patterns
+        pattern_matches = self.check_market_term_patterns(title)
         
-        # Determine classification
-        if is_market_for and is_market_in:
-            # Ambiguous case - both patterns match (very rare)
+        # Determine classification based on matches
+        if len(pattern_matches) > 1:
+            # Ambiguous case - multiple patterns match (very rare)
             self.classification_stats['ambiguous'] += 1
+            matched_terms = [match[0] for match in pattern_matches]
             return ClassificationResult(
                 title=title,
-                market_type=MarketTermType.AMBIGUOUS,
+                market_type="ambiguous",
                 confidence=0.2,
-                matched_pattern=f"Both: {for_pattern}, {in_pattern}",
+                matched_pattern=f"Multiple: {', '.join(matched_terms)}",
                 preprocessing_applied=preprocessing_steps,
-                notes="Title matches both 'market for' and 'market in' patterns - needs manual review"
+                notes=f"Title matches multiple market term patterns - needs manual review: {matched_terms}"
             )
         
-        elif is_market_for:
-            # Market for pattern (~0.2% of dataset)
-            self.classification_stats['market_for'] += 1
+        elif len(pattern_matches) == 1:
+            # Single market term pattern match
+            term_name, market_type, confidence = pattern_matches[0]
+            self.classification_stats[market_type] += 1
+            
+            # Determine processing notes based on market type
+            if market_type == "market_for":
+                notes = "Requires concatenation processing"
+            elif market_type in ["market_in", "market_by"]:
+                notes = f"Requires context integration processing for {term_name.lower()}"
+            else:
+                notes = f"Market term pattern detected: {term_name}"
+            
             return ClassificationResult(
                 title=title,
-                market_type=MarketTermType.MARKET_FOR,
-                confidence=for_confidence,
-                matched_pattern=for_pattern,
+                market_type=market_type,
+                confidence=confidence,
+                matched_pattern=self.market_term_patterns[term_name],
                 preprocessing_applied=preprocessing_steps,
-                notes="Requires concatenation processing"
-            )
-        
-        elif is_market_in:
-            # Market in pattern (~0.1% of dataset)
-            self.classification_stats['market_in'] += 1
-            return ClassificationResult(
-                title=title,
-                market_type=MarketTermType.MARKET_IN,
-                confidence=in_confidence,
-                matched_pattern=in_pattern,
-                preprocessing_applied=preprocessing_steps,
-                notes="Requires context integration processing"
+                notes=notes
             )
         
         else:
-            # Everything else - standard processing (~99.7% of dataset)
+            # No market term patterns match - standard processing (~99% of dataset)
             self.classification_stats['standard'] += 1
             return ClassificationResult(
                 title=title,
-                market_type=MarketTermType.STANDARD,
+                market_type="standard",
                 confidence=0.9,
                 matched_pattern=None,
                 preprocessing_applied=preprocessing_steps,
@@ -410,35 +381,42 @@ class MarketTermClassifier:
         if total == 0:
             return ClassificationStats(
                 total_classified=0,
-                market_for_count=0,
-                market_in_count=0,
                 standard_count=0,
                 ambiguous_count=0,
-                market_for_percentage=0.0,
-                market_in_percentage=0.0,
-                standard_percentage=0.0
+                standard_percentage=0.0,
+                market_term_stats={}
             )
+        
+        # Build dynamic market term statistics
+        market_term_stats = {}
+        for market_type in self.available_market_types:
+            count = self.classification_stats.get(market_type, 0)
+            percentage = round((count / total) * 100, 3) if total > 0 else 0.0
+            market_term_stats[market_type] = {
+                'count': count,
+                'percentage': percentage
+            }
         
         return ClassificationStats(
             total_classified=total,
-            market_for_count=self.classification_stats['market_for'],
-            market_in_count=self.classification_stats['market_in'],
             standard_count=self.classification_stats['standard'],
             ambiguous_count=self.classification_stats['ambiguous'],
-            market_for_percentage=round((self.classification_stats['market_for'] / total) * 100, 3),
-            market_in_percentage=round((self.classification_stats['market_in'] / total) * 100, 3),
-            standard_percentage=round((self.classification_stats['standard'] / total) * 100, 3)
+            standard_percentage=round((self.classification_stats['standard'] / total) * 100, 3),
+            market_term_stats=market_term_stats
         )
     
     def reset_statistics(self) -> None:
         """Reset classification statistics."""
         self.classification_stats = {
             'total_processed': 0,
-            'market_for': 0,
-            'market_in': 0,
             'standard': 0,
             'ambiguous': 0
         }
+        
+        # Reset counters for all dynamic market types
+        for market_type in self.available_market_types:
+            self.classification_stats[market_type] = 0
+            
         logger.info("Classification statistics reset")
     
     def export_classification_report(self, filename: Optional[str] = None) -> str:
@@ -454,6 +432,18 @@ class MarketTermClassifier:
         pdt_time, utc_time, _ = self._get_timestamps()
         stats = self.get_classification_statistics()
         
+        # Build market term distribution section dynamically
+        market_term_lines = []
+        total_market_terms = 0
+        for market_type, data in stats.market_term_stats.items():
+            count = data['count']
+            percentage = data['percentage']
+            term_name = market_type.replace('_', ' ').title()
+            market_term_lines.append(f"    - {term_name:<20} {count:6,} ({percentage:6.3f}%)")
+            total_market_terms += count
+        
+        market_term_section = '\n'.join(market_term_lines) if market_term_lines else "    - No market term patterns detected"
+        
         report = f"""Market Term Classification Report
 {'='*50}
 Analysis Date (PDT): {pdt_time}
@@ -464,23 +454,24 @@ Classification Summary:
   Total Titles Processed: {stats.total_classified:,}
   
   Market Term Distribution:
-    - Market For Patterns:    {stats.market_for_count:6,} ({stats.market_for_percentage:6.3f}%)
-    - Market In Patterns:     {stats.market_in_count:6,} ({stats.market_in_percentage:6.3f}%)
+{market_term_section}
     - Standard Processing:    {stats.standard_count:6,} ({stats.standard_percentage:6.3f}%)
     - Ambiguous Cases:        {stats.ambiguous_count:6,} ({(stats.ambiguous_count/stats.total_classified)*100:6.3f}%)
 
 Expected vs Actual Distribution:
-  Market For:  Expected ~0.2%, Actual {stats.market_for_percentage:.3f}%
-  Market In:   Expected ~0.1%, Actual {stats.market_in_percentage:.3f}%
-  Standard:    Expected ~99.7%, Actual {stats.standard_percentage:.3f}%
+  Market Terms: Expected ~0.3%, Actual {(total_market_terms/stats.total_classified)*100:.3f}%
+  Standard:     Expected ~99.7%, Actual {stats.standard_percentage:.3f}%
 
 Classification Performance:
-  Specific Patterns Detected: {stats.market_for_count + stats.market_in_count:,}
+  Specific Patterns Detected: {total_market_terms:,}
   Standard Processing Rate:   {stats.standard_percentage:.2f}%
   
 Classification Quality:
   Ambiguous Cases:         {(stats.ambiguous_count/stats.total_classified)*100:.3f}%
   Standard Processing:     {stats.standard_percentage:.2f}%
+
+Available Market Term Patterns:
+{chr(10).join(f"  - {term}: {pattern}" for term, pattern in self.market_term_patterns.items())}
 """
         
         if filename:
@@ -509,6 +500,11 @@ def demo_classification():
         "Technology Market in Asia Pacific, 2025-2030",
         "Market in China for Consumer Electronics",
         
+        # Market by patterns
+        "Emerging Lighting Technology Market by Color Temperature",
+        "Global Software Market by Deployment Type",
+        "Healthcare Market by Service Type Analysis",
+        
         # Standard market patterns
         "Global Artificial Intelligence Market Size & Share Report, 2030",
         "APAC Personal Protective Equipment Market Analysis",
@@ -535,10 +531,10 @@ def demo_classification():
         print("\n1. Individual Classification Examples:")
         print("-" * 40)
         
-        for title in sample_titles[:6]:  # Show first 6 examples
+        for title in sample_titles[:9]:  # Show first 9 examples (3 each type)
             result = classifier.classify(title)
             print(f"Title: {title[:60]}...")
-            print(f"  Type: {result.market_type.value}")
+            print(f"  Type: {result.market_type}")
             print(f"  Confidence: {result.confidence:.3f}")
             print(f"  Pattern: {result.matched_pattern}")
             print(f"  Notes: {result.notes}")
@@ -554,8 +550,12 @@ def demo_classification():
         stats = classifier.get_classification_statistics()
         
         print(f"Total Processed: {stats.total_classified}")
-        print(f"Market For: {stats.market_for_count} ({stats.market_for_percentage:.2f}%)")
-        print(f"Market In: {stats.market_in_count} ({stats.market_in_percentage:.2f}%)")
+        
+        # Show dynamic market term statistics
+        for market_type, data in stats.market_term_stats.items():
+            term_name = market_type.replace('_', ' ').title()
+            print(f"{term_name}: {data['count']} ({data['percentage']:.2f}%)")
+            
         print(f"Standard: {stats.standard_count} ({stats.standard_percentage:.2f}%)")
         print(f"Ambiguous: {stats.ambiguous_count} ({(stats.ambiguous_count/stats.total_classified)*100:.2f}%)")
         
