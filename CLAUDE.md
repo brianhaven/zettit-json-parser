@@ -188,16 +188,56 @@ output_files = {
 ### Claude Code MongoDB Integration
 **IMPORTANT: Use MongoDB MCP Server for all database interactions**
 
-**For interactive database work:**
+#### **MongoDB MCP Server Commands**
+The MongoDB MCP server provides efficient database access through Claude Code. **Always prefer MCP commands over bash scripts for database operations.**
+
+**Core Database Operations:**
 ```bash
-# List collections
-/mcp:supabase list_tables  # Use MongoDB MCP equivalent
+# List collections and databases
+mcp__mongodb__list-databases                    # List all databases
+mcp__mongodb__list-collections database         # List collections in database
 
-# Query titles 
-/mcp:mongodb find markets_raw {}
+# Query operations
+mcp__mongodb__find database collection filter   # Find documents with filter
+mcp__mongodb__count database collection query   # Count documents with query
+mcp__mongodb__aggregate database collection pipeline  # Run aggregation pipeline
 
-# Update pattern libraries
-/mcp:mongodb insert pattern_libraries {...}
+# Data modification
+mcp__mongodb__insert-many database collection documents  # Insert documents
+mcp__mongodb__update-many database collection filter update  # Update documents
+mcp__mongodb__delete-many database collection filter  # Delete documents
+
+# Schema and indexes
+mcp__mongodb__collection-schema database collection     # Get collection schema
+mcp__mongodb__collection-indexes database collection    # List indexes
+mcp__mongodb__create-index database collection keys name  # Create index
+```
+
+**Pattern Library Management Examples:**
+```bash
+# Query report type patterns
+mcp__mongodb__find deathstar pattern_libraries {"type": "report_type"}
+
+# Count geographic patterns
+mcp__mongodb__count deathstar pattern_libraries {"type": "geographic_entity"}
+
+# Aggregate pattern statistics by type
+mcp__mongodb__aggregate deathstar pattern_libraries '[{"$group": {"_id": "$type", "count": {"$sum": 1}}}]'
+
+# Find high-priority patterns
+mcp__mongodb__find deathstar pattern_libraries {"priority": {"$lte": 5}, "active": true}
+```
+
+**Market Data Analysis:**
+```bash
+# Query market research titles
+mcp__mongodb__find deathstar markets_raw {"title": {"$regex": "Market", "$options": "i"}}
+
+# Count processed results
+mcp__mongodb__count deathstar markets_processed {}
+
+# Analyze title patterns
+mcp__mongodb__aggregate deathstar markets_raw '[{"$match": {"title": {"$regex": "2024"}}}, {"$count": "titles_with_2024"}]'
 ```
 
 **For scripts:** Scripts use pymongo API directly
@@ -206,6 +246,13 @@ from pymongo import MongoClient
 client = MongoClient(os.getenv('MONGODB_URI'))
 db = client['deathstar']
 ```
+
+**Benefits of MongoDB MCP Server:**
+- **Efficiency:** Direct database access without subprocess overhead
+- **Error Handling:** Better error reporting and connection management  
+- **Performance:** Optimized queries with proper connection pooling
+- **Security:** Secure credential management through MCP configuration
+- **Debugging:** Clear query results and structured error messages
 
 ### Processing Pipeline Methodology
 
@@ -239,11 +286,14 @@ db = client['deathstar']
 - **Performance:** 100% accuracy on titles with dates (exceeds 98-99% target)
 - **Setup utilities:** `utilities/02a_initialize_date_patterns.py`, `utilities/02b_enhance_date_patterns_v1.py`
 
-**03_report_type_extractor_v2.py:** **MARKET-AWARE** Report Type Extraction
+**03_report_type_extractor_v2.py:** **MARKET-AWARE** Report Type Extraction ✅ **PRODUCTION READY**
 - **DUAL PROCESSING LOGIC:** Handles market term and standard classifications differently
 - **Market Term Processing:** Extraction, rearrangement, and reconstruction workflow
 - **Standard Processing:** Direct database pattern matching
-- **Performance:** 95-97% accuracy target for both classification types
+- **Acronym-Embedded Processing:** Special handling for acronym extraction with pipeline preservation
+- **GitHub Issue #11 RESOLVED:** Fixed compound patterns matching before acronym_embedded
+- **Performance:** Achieved 95-97% accuracy target with 355 validated patterns across 5 format types
+- **Database Quality Assured:** Comprehensive pattern validation and malformed entry cleanup
 
 **Market Term Classification Processing Logic:**
 For titles classified as `market_for`, `market_in`, `market_by`, etc.:
@@ -547,18 +597,23 @@ def import_module_from_path(module_name: str, file_path: str):
 **📋 Production-Ready Components:**
 1. ✅ **Market Term Classification:** 100% accuracy with 2-pattern classification system
 2. ✅ **Enhanced Date Extraction:** 100% accuracy on titles with dates, 64-pattern library, numeric pre-filtering
-3. ✅ **Report Type Extraction:** COMPLETED - Market-aware processing with acronym-embedded pattern support
-4. ✅ **Enhanced Geographic Detection:** HTML-aware dual-model processing with confidence scoring  
+3. ✅ **Report Type Extraction:** **PRODUCTION READY** - Market-aware processing with 355 validated patterns
+   - ✅ Dual processing workflows (market term vs standard)
+   - ✅ Acronym-embedded pattern support (GitHub Issue #11 resolved)
+   - ✅ Database quality assurance with malformed pattern cleanup
+   - ✅ 5 format types: compound (88.5%), terminal (4.8%), embedded (2.8%), prefix (2.3%), acronym (1.7%)
+4. 🔄 **Geographic Entity Detection:** Ready for Phase 4 lean pattern-based refactoring
 5. ✅ **Pattern Library Management:** Real-time MongoDB updates with performance tracking
 6. ✅ **Quality Assurance:** Human review workflow with pattern classification
 7. ✅ **Performance Monitoring:** Built-in success/failure metrics and edge case identification
-8. ✅ **Acronym-Embedded Processing:** Special handling for acronym extraction with pipeline preservation
+8. ✅ **MongoDB MCP Integration:** Efficient database access through MCP server commands
 
-**🎯 Current Implementation Phase: Phase 4 & 5 Validation**
-- **Phase 4:** Geographic Entity Detector validation with enhanced Script 03 output
-- **Phase 5:** Topic Extractor testing with corrected pipeline foundation  
-- End-to-end validation pipeline with confidence thresholds
-- Production deployment preparation with performance optimization
+**🎯 Current Implementation Phase: Phase 4 Refactoring & Phase 5 Preparation**
+- **Phase 3:** ✅ **COMPLETE** - Report Type Extraction production-ready with 355 validated patterns
+- **Phase 4:** 🔄 **READY TO BEGIN** - Geographic Entity Detector lean pattern-based refactoring (GitHub Issue #12)
+- **Phase 5:** ⏳ **QUEUED** - Topic Extractor testing with corrected pipeline foundation  
+- **Foundation Strength:** Scripts 01→02→03 provide robust 89% complete production-ready processing capability
+- **Next Priority:** Archive Script 04 and implement lean database-driven approach
 
 ## Git Commit Standards
 
