@@ -1,0 +1,36 @@
+Acronym Pattern Coverage Test Results
+Analysis Date (PDT): 2025-08-26 06:30:02 PDT
+Analysis Date (UTC): 2025-08-26 06:30:02 UTC
+============================================================
+
+📊 PATTERN COVERAGE SUMMARY:
+• Patterns Loaded from Database: 6
+• Patterns Tested: 6
+• Patterns Successful: 0
+• Coverage Rate: 0.0%
+
+🔤 INDIVIDUAL PATTERN RESULTS:
+1. ❌ FAILED: Market Size, [ACRONYM] Industry Report
+   Pattern: \bMarket\s+Size,\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])
+   Base Type: Market Size, Industry Report
+
+2. ❌ FAILED: Market Size & Share, [ACRONYM] Industry Report
+   Pattern: \bMarket\s+Size\s*&\s*Share,\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])
+   Base Type: Market Size & Share, Industry Report
+
+3. ❌ FAILED: Market, [ACRONYM] Industry Report
+   Pattern: \bMarket,\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])
+   Base Type: Market, Industry Report
+
+4. ❌ FAILED: Market Size, Share, [ACRONYM] Industry Report
+   Pattern: \bMarket\s+Size,\s+Share,\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])
+   Base Type: Market Size, Share, Industry Report
+
+5. ❌ FAILED: Market Size, Share, Global [ACRONYM] Industry Report
+   Pattern: \bMarket\s+Size,\s+Share,\s+Global\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])
+   Base Type: Market Size, Share, Global Industry Report
+
+6. ❌ FAILED: Market Report, [ACRONYM] Industry
+   Pattern: \bMarket\s+Report,\s+\d{4},\s+([A-Z]{2,6})\s+Industry(?:\s*$|[,.])
+   Base Type: Market Report
+

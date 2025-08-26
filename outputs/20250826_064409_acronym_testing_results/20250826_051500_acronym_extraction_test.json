@@ -1,0 +1,171 @@
+{
+  "test_metadata": {
+    "test_date": "2025-08-26 05:15:00 UTC",
+    "titles_tested": 9,
+    "acronym_patterns_loaded": 6,
+    "successful_matches": 7
+  },
+  "pattern_definitions": [
+    {
+      "_id": "68ad4c2f4751c5c7d6f43440",
+      "type": "report_type",
+      "term": "Market Size, [ACRONYM] Industry Report",
+      "pattern": "\\bMarket\\s+Size,\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+      "format_type": "acronym_embedded",
+      "base_type": "Market Size, Industry Report",
+      "extraction_logic": "capture_acronym_to_pipeline",
+      "confidence_weight": 0.85,
+      "active": true,
+      "success_count": 0,
+      "failure_count": 0,
+      "created_date": "2025-08-26 05:15:00",
+      "last_updated": "2025-08-26 05:15:00",
+      "notes": "Enhanced pattern for extracting industry acronyms while preserving base report type"
+    },
+    {
+      "_id": "68ad4c2f4751c5c7d6f43441",
+      "type": "report_type",
+      "term": "Market Size & Share, [ACRONYM] Industry Report",
+      "pattern": "\\bMarket\\s+Size\\s*&\\s*Share,\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+      "format_type": "acronym_embedded",
+      "base_type": "Market Size & Share, Industry Report",
+      "extraction_logic": "capture_acronym_to_pipeline",
+      "confidence_weight": 0.85,
+      "active": true,
+      "success_count": 0,
+      "failure_count": 0,
+      "created_date": "2025-08-26 05:15:00",
+      "last_updated": "2025-08-26 05:15:00",
+      "notes": "Enhanced pattern for Market Size & Share with embedded acronyms"
+    },
+    {
+      "_id": "68ad4c2f4751c5c7d6f43442",
+      "type": "report_type",
+      "term": "Market, [ACRONYM] Industry Report",
+      "pattern": "\\bMarket,\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+      "format_type": "acronym_embedded",
+      "base_type": "Market, Industry Report",
+      "extraction_logic": "capture_acronym_to_pipeline",
+      "confidence_weight": 0.85,
+      "active": true,
+      "success_count": 0,
+      "failure_count": 0,
+      "created_date": "2025-08-26 05:15:00",
+      "last_updated": "2025-08-26 05:15:00",
+      "notes": "Enhanced pattern for simple Market with embedded acronyms"
+    },
+    {
+      "_id": "68ad4c2f4751c5c7d6f43443",
+      "type": "report_type",
+      "term": "Market Size, Share, [ACRONYM] Industry Report",
+      "pattern": "\\bMarket\\s+Size,\\s+Share,\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+      "format_type": "acronym_embedded",
+      "base_type": "Market Size, Share, Industry Report",
+      "extraction_logic": "capture_acronym_to_pipeline",
+      "confidence_weight": 0.85,
+      "active": true,
+      "success_count": 0,
+      "failure_count": 0,
+      "created_date": "2025-08-26 05:15:00",
+      "last_updated": "2025-08-26 05:15:00",
+      "notes": "Enhanced pattern for Market Size, Share with embedded acronyms"
+    },
+    {
+      "_id": "68ad4c2f4751c5c7d6f43444",
+      "type": "report_type",
+      "term": "Market Size, Share, Global [ACRONYM] Industry Report",
+      "pattern": "\\bMarket\\s+Size,\\s+Share,\\s+Global\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+      "format_type": "acronym_embedded",
+      "base_type": "Market Size, Share, Global Industry Report",
+      "extraction_logic": "capture_acronym_to_pipeline",
+      "confidence_weight": 0.85,
+      "active": true,
+      "success_count": 0,
+      "failure_count": 0,
+      "created_date": "2025-08-26 05:15:00",
+      "last_updated": "2025-08-26 05:15:00",
+      "notes": "Enhanced pattern for Global Industry Report with embedded acronyms"
+    },
+    {
+      "_id": "68ad4c2f4751c5c7d6f43445",
+      "type": "report_type",
+      "term": "Market Report, [ACRONYM] Industry",
+      "pattern": "\\bMarket\\s+Report,\\s+\\d{4},\\s+([A-Z]{2,6})\\s+Industry(?:\\s*$|[,.])",
+      "format_type": "acronym_embedded",
+      "base_type": "Market Report",
+      "extraction_logic": "capture_acronym_to_pipeline",
+      "confidence_weight": 0.85,
+      "active": true,
+      "success_count": 0,
+      "failure_count": 0,
+      "created_date": "2025-08-26 05:15:00",
+      "last_updated": "2025-08-26 05:15:00",
+      "notes": "Enhanced pattern for Market Report with year and embedded acronyms"
+    }
+  ],
+  "test_results": [
+    {
+      "original_title": "Directed Energy Weapons Market Size, DEW Industry Report, 2025",
+      "title_after_date_removal": "Directed Energy Weapons Market Size, DEW Industry Report",
+      "matched_pattern_term": "Market Size, [ACRONYM] Industry Report",
+      "extracted_acronym": "DEW",
+      "base_report_type": "Market Size, Industry Report",
+      "pipeline_forward_text": "Directed Energy Weapons (DEW)",
+      "confidence": 0.85
+    },
+    {
+      "original_title": "Direct Methanol Fuel Cell Market Size, DMFC Industry Report, 2025",
+      "title_after_date_removal": "Direct Methanol Fuel Cell Market Size, DMFC Industry Report",
+      "matched_pattern_term": "Market Size, [ACRONYM] Industry Report",
+      "extracted_acronym": "DMFC",
+      "base_report_type": "Market Size, Industry Report",
+      "pipeline_forward_text": "Direct Methanol Fuel Cell (DMFC)",
+      "confidence": 0.85
+    },
+    {
+      "original_title": "Dynamic Random Access Memory Market, DRAM Industry Report, 2025",
+      "title_after_date_removal": "Dynamic Random Access Memory Market, DRAM Industry Report",
+      "matched_pattern_term": "Market, [ACRONYM] Industry Report",
+      "extracted_acronym": "DRAM",
+      "base_report_type": "Market, Industry Report",
+      "pipeline_forward_text": "Dynamic Random Access Memory (DRAM)",
+      "confidence": 0.85
+    },
+    {
+      "original_title": "Fatty Methyl Ester Sulfonate Market, FMES Industry Report, 2018-2025",
+      "title_after_date_removal": "Fatty Methyl Ester Sulfonate Market, FMES Industry Report",
+      "matched_pattern_term": "Market, [ACRONYM] Industry Report",
+      "extracted_acronym": "FMES",
+      "base_report_type": "Market, Industry Report",
+      "pipeline_forward_text": "Fatty Methyl Ester Sulfonate (FMES)",
+      "confidence": 0.85
+    },
+    {
+      "original_title": "Fluorinated Ethylene Propylene Market Size, FEP Industry Report, 2025",
+      "title_after_date_removal": "Fluorinated Ethylene Propylene Market Size, FEP Industry Report",
+      "matched_pattern_term": "Market Size, [ACRONYM] Industry Report",
+      "extracted_acronym": "FEP",
+      "base_report_type": "Market Size, Industry Report",
+      "pipeline_forward_text": "Fluorinated Ethylene Propylene (FEP)",
+      "confidence": 0.85
+    },
+    {
+      "original_title": "Gas To Liquids Market Size, Share, Global GTL Industry Report, 2025",
+      "title_after_date_removal": "Gas To Liquids Market Size, Share, Global GTL Industry Report",
+      "matched_pattern_term": "Market Size, Share, Global [ACRONYM] Industry Report",
+      "extracted_acronym": "GTL",
+      "base_report_type": "Market Size, Share, Global Industry Report",
+      "pipeline_forward_text": "Gas To Liquids (GTL)",
+      "confidence": 0.85
+    },
+    {
+      "original_title": "Polyvinyl Chloride Membrane Market Size, PVC Industry Report, 2025",
+      "title_after_date_removal": "Polyvinyl Chloride Membrane Market Size, PVC Industry Report",
+      "matched_pattern_term": "Market Size, [ACRONYM] Industry Report",
+      "extracted_acronym": "PVC",
+      "base_report_type": "Market Size, Industry Report",
+      "pipeline_forward_text": "Polyvinyl Chloride Membrane (PVC)",
+      "confidence": 0.85
+    }
+  ]
+}

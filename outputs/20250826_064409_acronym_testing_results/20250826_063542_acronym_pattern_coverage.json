@@ -1,0 +1,317 @@
+{
+  "analysis_metadata": {
+    "analysis_date_pdt": "2025-08-26 06:35:42 PDT",
+    "analysis_date_utc": "2025-08-26 06:35:42 UTC",
+    "test_type": "acronym_pattern_coverage_validation",
+    "total_patterns_tested": 6,
+    "successful_patterns": 0
+  },
+  "pattern_coverage_results": [
+    {
+      "pattern_info": {
+        "_id": "68ad4c2f4751c5c7d6f43440",
+        "type": "report_type",
+        "term": "Market Size, [ACRONYM] Industry Report",
+        "pattern": "\\bMarket\\s+Size,\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+        "format_type": "acronym_embedded",
+        "base_type": "Market Size, Industry Report",
+        "extraction_logic": "capture_acronym_to_pipeline",
+        "confidence_weight": 0.85,
+        "active": true,
+        "success_count": 0,
+        "failure_count": 0,
+        "created_date": "2025-08-26 05:15:00",
+        "last_updated": "2025-08-26 05:15:00",
+        "notes": "Enhanced pattern for extracting industry acronyms while preserving base report type"
+      },
+      "expected_base_type": "Market Size, Industry Report",
+      "test_results": [
+        {
+          "original_title": "Directed Energy Weapons Market Size, DEW Industry Report, 2025",
+          "title_no_date": "Directed Energy Weapons Market Size, DEW Industry Report",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Directed Energy Weapons Market Size, DEW Industry Report",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        },
+        {
+          "original_title": "Fluorinated Ethylene Propylene Market Size, FEP Industry Report, 2025",
+          "title_no_date": "Fluorinated Ethylene Propylene Market Size, FEP Industry Report",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Fluorinated Ethylene Propylene Market Size, FEP Industry Report",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        },
+        {
+          "original_title": "Test Technology Market Size, TTM Industry Report, 2025",
+          "title_no_date": "Test Technology Market Size, TTM Industry Report",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Test Technology Market Size, TTM Industry Report",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        }
+      ],
+      "pattern_successful": false
+    },
+    {
+      "pattern_info": {
+        "_id": "68ad4c2f4751c5c7d6f43441",
+        "type": "report_type",
+        "term": "Market Size & Share, [ACRONYM] Industry Report",
+        "pattern": "\\bMarket\\s+Size\\s*&\\s*Share,\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+        "format_type": "acronym_embedded",
+        "base_type": "Market Size & Share, Industry Report",
+        "extraction_logic": "capture_acronym_to_pipeline",
+        "confidence_weight": 0.85,
+        "active": true,
+        "success_count": 0,
+        "failure_count": 0,
+        "created_date": "2025-08-26 05:15:00",
+        "last_updated": "2025-08-26 05:15:00",
+        "notes": "Enhanced pattern for Market Size & Share with embedded acronyms"
+      },
+      "expected_base_type": "Market Size & Share, Industry Report",
+      "test_results": [
+        {
+          "original_title": "Test Technology Market Report, 2025, TTM Industry, 2025",
+          "title_no_date": "Test Technology Market Report, 2025, TTM Industry",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Test Technology Market Report, 2025, TTM Industry",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        },
+        {
+          "original_title": "Sample Business Market Report, 2024, SBM Industry, 2024",
+          "title_no_date": "Sample Business Market Report, 2024, SBM Industry",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Sample Business Market Report, 2024, SBM Industry",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        }
+      ],
+      "pattern_successful": false
+    },
+    {
+      "pattern_info": {
+        "_id": "68ad4c2f4751c5c7d6f43442",
+        "type": "report_type",
+        "term": "Market, [ACRONYM] Industry Report",
+        "pattern": "\\bMarket,\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+        "format_type": "acronym_embedded",
+        "base_type": "Market, Industry Report",
+        "extraction_logic": "capture_acronym_to_pipeline",
+        "confidence_weight": 0.85,
+        "active": true,
+        "success_count": 0,
+        "failure_count": 0,
+        "created_date": "2025-08-26 05:15:00",
+        "last_updated": "2025-08-26 05:15:00",
+        "notes": "Enhanced pattern for simple Market with embedded acronyms"
+      },
+      "expected_base_type": "Market, Industry Report",
+      "test_results": [
+        {
+          "original_title": "Dynamic Random Access Memory Market, DRAM Industry Report, 2025",
+          "title_no_date": "Dynamic Random Access Memory Market, DRAM Industry Report",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Dynamic Random Access Memory Market, DRAM Industry Report",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        },
+        {
+          "original_title": "Fatty Methyl Ester Sulfonate Market, FMES Industry Report, 2025",
+          "title_no_date": "Fatty Methyl Ester Sulfonate Market, FMES Industry Report",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Fatty Methyl Ester Sulfonate Market, FMES Industry Report",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        },
+        {
+          "original_title": "Test Technology Market, TTM Industry Report, 2025",
+          "title_no_date": "Test Technology Market, TTM Industry Report",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Test Technology Market, TTM Industry Report",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        }
+      ],
+      "pattern_successful": false
+    },
+    {
+      "pattern_info": {
+        "_id": "68ad4c2f4751c5c7d6f43443",
+        "type": "report_type",
+        "term": "Market Size, Share, [ACRONYM] Industry Report",
+        "pattern": "\\bMarket\\s+Size,\\s+Share,\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+        "format_type": "acronym_embedded",
+        "base_type": "Market Size, Share, Industry Report",
+        "extraction_logic": "capture_acronym_to_pipeline",
+        "confidence_weight": 0.85,
+        "active": true,
+        "success_count": 0,
+        "failure_count": 0,
+        "created_date": "2025-08-26 05:15:00",
+        "last_updated": "2025-08-26 05:15:00",
+        "notes": "Enhanced pattern for Market Size, Share with embedded acronyms"
+      },
+      "expected_base_type": "Market Size, Share, Industry Report",
+      "test_results": [
+        {
+          "original_title": "Test Technology Market Report, 2025, TTM Industry, 2025",
+          "title_no_date": "Test Technology Market Report, 2025, TTM Industry",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Test Technology Market Report, 2025, TTM Industry",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        },
+        {
+          "original_title": "Sample Business Market Report, 2024, SBM Industry, 2024",
+          "title_no_date": "Sample Business Market Report, 2024, SBM Industry",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Sample Business Market Report, 2024, SBM Industry",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        }
+      ],
+      "pattern_successful": false
+    },
+    {
+      "pattern_info": {
+        "_id": "68ad4c2f4751c5c7d6f43444",
+        "type": "report_type",
+        "term": "Market Size, Share, Global [ACRONYM] Industry Report",
+        "pattern": "\\bMarket\\s+Size,\\s+Share,\\s+Global\\s+([A-Z]{2,6})\\s+Industry\\s+Report(?:\\s*$|[,.])",
+        "format_type": "acronym_embedded",
+        "base_type": "Market Size, Share, Global Industry Report",
+        "extraction_logic": "capture_acronym_to_pipeline",
+        "confidence_weight": 0.85,
+        "active": true,
+        "success_count": 0,
+        "failure_count": 0,
+        "created_date": "2025-08-26 05:15:00",
+        "last_updated": "2025-08-26 05:15:00",
+        "notes": "Enhanced pattern for Global Industry Report with embedded acronyms"
+      },
+      "expected_base_type": "Market Size, Share, Global Industry Report",
+      "test_results": [
+        {
+          "original_title": "Gas To Liquids Market Size, Share, Global GTL Industry Report, 2025",
+          "title_no_date": "Gas To Liquids Market Size, Share, Global GTL Industry Report",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Gas To Liquids Market Size, Share, Global GTL Industry Report",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        },
+        {
+          "original_title": "Test Technology Market Size, Share, Global TTM Industry Report, 2025",
+          "title_no_date": "Test Technology Market Size, Share, Global TTM Industry Report",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Test Technology Market Size, Share, Global TTM Industry Report",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        }
+      ],
+      "pattern_successful": false
+    },
+    {
+      "pattern_info": {
+        "_id": "68ad4c2f4751c5c7d6f43445",
+        "type": "report_type",
+        "term": "Market Report, [ACRONYM] Industry",
+        "pattern": "\\bMarket\\s+Report,\\s+\\d{4},\\s+([A-Z]{2,6})\\s+Industry(?:\\s*$|[,.])",
+        "format_type": "acronym_embedded",
+        "base_type": "Market Report",
+        "extraction_logic": "capture_acronym_to_pipeline",
+        "confidence_weight": 0.85,
+        "active": true,
+        "success_count": 0,
+        "failure_count": 0,
+        "created_date": "2025-08-26 05:15:00",
+        "last_updated": "2025-08-26 05:15:00",
+        "notes": "Enhanced pattern for Market Report with year and embedded acronyms"
+      },
+      "expected_base_type": "Market Report",
+      "test_results": [
+        {
+          "original_title": "Test Technology Market Report, 2025, TTM Industry, 2025",
+          "title_no_date": "Test Technology Market Report, 2025, TTM Industry",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Test Technology Market Report, 2025, TTM Industry",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        },
+        {
+          "original_title": "Sample Business Market Report, 2024, SBM Industry, 2024",
+          "title_no_date": "Sample Business Market Report, 2024, SBM Industry",
+          "extracted_report_type": "",
+          "final_report_type": "",
+          "pipeline_forward_text": "Sample Business Market Report, 2024, SBM Industry",
+          "extracted_acronym": null,
+          "confidence": 0.9,
+          "format_type": "compound_type",
+          "success": false,
+          "is_acronym_match": false
+        }
+      ],
+      "pattern_successful": false
+    }
+  ],
+  "summary": {
+    "patterns_loaded": 6,
+    "patterns_tested": 6,
+    "patterns_successful": 0,
+    "coverage_rate": "0.0%"
+  }
+}
