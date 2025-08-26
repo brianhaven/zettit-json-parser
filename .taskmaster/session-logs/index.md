@@ -33,6 +33,17 @@ Systematic pattern-matching solution for extracting structured information from 
 - **Technical Innovation**: Enhanced date extractor with comprehensive validation framework
 - **Next Steps**: Begin Phase 3 Report Type Extractor pipeline integration (01→02→03)
 
+### 2025-08-26: CRITICAL ARCHITECTURAL DISCOVERY - Market-Aware Processing Gap ⚠️
+- **Session File**: [session-20250826_023622.md](./session-20250826_023622.md)
+- **Duration**: ~2 hours
+- **Focus**: Discovery of critical architectural gap in Script 03 - Missing market-aware processing logic
+- **Critical Issue**: Script 03 completely missing market-aware processing workflow (extraction→rearrangement→reconstruction)
+- **Key Discovery**: All titles incorrectly processed through unified database matching instead of differentiated workflows
+- **Blocking Impact**: Issues #4, #5, and Phases 4-5 blocked pending GitHub Issue #10 resolution
+- **Documentation Enhanced**: Added comprehensive market-aware vs standard processing specifications to CLAUDE.md
+- **GitHub Issue Created**: Issue #10 with detailed implementation requirements
+- **Next Steps**: URGENT - Implement market-aware processing logic in Script 03 before proceeding
+
 ## Quick Links
 - [Current Tasks Status](../../.taskmaster/tasks/tasks.json)
 - [Testing Strategy](../../source-docs/prompt-pipeline-step-refinement.md)
@@ -40,16 +51,23 @@ Systematic pattern-matching solution for extracting structured information from 
 - [Latest Test Results](../../outputs/20250821_120439_phase1_market_term_classifier/)
 
 ## Statistics
-- **Total Sessions**: 3
-- **Tasks Completed**: 9/15 (60.0%) with all Task 9 subtasks complete
-- **Pipeline Components**: 7/7 (100%)
-- **Pattern Libraries Built**: 3/4 (Market Term + Date + Geographic complete, Report Type ready for Phase 3)
+- **Total Sessions**: 4
+- **Tasks Completed**: 8/15 (53.3%) with Task 9 in-progress (all subtasks complete)
+- **Pipeline Components**: 7/7 (100%) - BUT Script 03 requires architectural redesign
+- **Pattern Libraries Built**: 3/4 (Market Term + Date + Geographic complete, Report Type needs market-aware logic)
 - **Phase 1 Success**: 100% accuracy achieved on 2,000 real documents
 - **Phase 2 Success**: 100% accuracy achieved on 4,000 real documents (4 validation runs)
+- **Critical Blocker Identified**: Market-aware processing gap in Script 03
 
-## Next Session Focus
-Begin Phase 3 of systematic testing:
-1. Create pipeline test harness using 01→02→03 (Market Term → Date → Report Type)
-2. Process 500-1000 titles through report type extraction pipeline
-3. Build comprehensive report type pattern library in MongoDB
-4. Target >95% accuracy for report type extraction patterns
+## URGENT Next Session Focus
+**PRIORITY 1 - GitHub Issue #10 (CRITICAL BLOCKER):**
+1. **Implement market-aware processing logic in Script 03**
+   - Add market term extraction methods ("Market for X", "Market in Y")
+   - Build title rearrangement workflow (move market terms to end)
+   - Implement reconstruction functionality with proper positioning
+   - Create dual processing paths (standard vs market-aware)
+
+**PRIORITY 2 - Unblock downstream phases:**
+2. Resolve GitHub Issues #4 and #5 (Scripts 04/05 market term compatibility)
+3. Resume Phase 4-5 systematic testing with validated pipeline architecture
+4. Scale testing to 1000 titles with proper market-aware processing
