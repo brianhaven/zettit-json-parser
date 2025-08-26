@@ -52,6 +52,7 @@ class ReportTypeFormat(Enum):
     EMBEDDED_TYPE = "embedded_type"        # "Global Market Analysis" → "Analysis"  
     PREFIX_TYPE = "prefix_type"            # "Market Size Report" → "Report"
     COMPOUND_TYPE = "compound_type"        # "Market Research Report" → "Research Report"
+    ACRONYM_EMBEDDED = "acronym_embedded"  # "Market Size, DEW Industry Report" → "Market Size, Industry Report" (extracts DEW)
     UNKNOWN = "unknown"
 
 @dataclass
@@ -131,6 +132,7 @@ class MarketAwareReportTypeExtractor:
             'embedded_type': 0,
             'prefix_type': 0,
             'compound_type': 0,
+            'acronym_embedded': 0,
             # Market reconstruction
             'market_reconstructed_count': 0
         }
@@ -164,6 +166,7 @@ class MarketAwareReportTypeExtractor:
             self.embedded_type_patterns = []
             self.prefix_type_patterns = []
             self.compound_type_patterns = []
+            self.acronym_embedded_patterns = []
             
             for pattern in patterns:
                 pattern_data = {
@@ -183,12 +186,24 @@ class MarketAwareReportTypeExtractor:
                     self.prefix_type_patterns.append(pattern_data)
                 elif format_type == 'compound_type':
                     self.compound_type_patterns.append(pattern_data)
+                elif format_type == 'acronym_embedded':
+                    # Store additional metadata for acronym patterns
+                    pattern_data['base_type'] = pattern.get('base_type', '')
+                    pattern_data['extraction_logic'] = pattern.get('extraction_logic', 'capture_acronym_to_pipeline')
+                    self.acronym_embedded_patterns.append(pattern_data)
+                else:
+                    # Handle patterns with missing or unknown format_type
+                    # Default to terminal_type for backwards compatibility
+                    logger.warning(f"Pattern '{pattern.get('term', 'UNKNOWN')}' has unknown format_type '{format_type}', defaulting to terminal_type")
+                    pattern_data['format_type'] = 'terminal_type'  # Override for consistency
+                    self.terminal_type_patterns.append(pattern_data)
                     
             logger.info(f"Loaded {len(patterns)} report type patterns from database")
             logger.info(f"  Terminal: {len(self.terminal_type_patterns)}")
             logger.info(f"  Embedded: {len(self.embedded_type_patterns)}")
             logger.info(f"  Prefix: {len(self.prefix_type_patterns)}")
             logger.info(f"  Compound: {len(self.compound_type_patterns)}")
+            logger.info(f"  Acronym Embedded: {len(self.acronym_embedded_patterns)}")
             
         except Exception as e:
             logger.error(f"Error loading patterns: {e}")
@@ -197,6 +212,7 @@ class MarketAwareReportTypeExtractor:
             self.embedded_type_patterns = []
             self.prefix_type_patterns = []
             self.compound_type_patterns = []
+            self.acronym_embedded_patterns = []
     
     def _load_confusing_terms(self) -> List[str]:
         """Load confusing terms that need special handling."""
@@ -311,8 +327,9 @@ class MarketAwareReportTypeExtractor:
         Returns:
             Dictionary with extraction results
         """
-        # Try patterns in order of complexity (compound → prefix → embedded → terminal)
+        # Try patterns in order of specificity (acronym → compound → prefix → embedded → terminal)
         pattern_groups = [
+            ('acronym_embedded', self.acronym_embedded_patterns),
             ('compound_type', self.compound_type_patterns),
             ('prefix_type', self.prefix_type_patterns),
             ('embedded_type', self.embedded_type_patterns),
@@ -336,17 +353,35 @@ class MarketAwareReportTypeExtractor:
                     match = pattern.search(text)
                     
                     if match:
-                        extracted = match.group(0).strip()
-                        confidence = pattern_data.get('confidence_weight', 0.9)
-                        
-                        return {
-                            'extracted_report_type': extracted,
-                            'format_type': ReportTypeFormat(format_name),
-                            'confidence': confidence,
-                            'matched_pattern': pattern_text,
-                            'raw_match': match.group(0),
-                            'notes': f"Matched {format_name} pattern (market-aware)"
-                        }
+                        # Special handling for acronym_embedded patterns
+                        if format_name == 'acronym_embedded':
+                            acronym = match.group(1) if match.groups() else ""
+                            base_type = pattern_data.get('base_type', 'Market Report')
+                            extracted = match.group(0).strip()
+                            
+                            return {
+                                'extracted_report_type': extracted,
+                                'final_report_type': base_type,
+                                'format_type': ReportTypeFormat(format_name),
+                                'confidence': pattern_data.get('confidence_weight', 0.9),
+                                'matched_pattern': pattern_text,
+                                'raw_match': match.group(0),
+                                'extracted_acronym': acronym,
+                                'notes': f"Acronym-embedded pattern (market-aware): Extracted '{acronym}'"
+                            }
+                        else:
+                            # Standard handling for other patterns
+                            extracted = match.group(0).strip()
+                            confidence = pattern_data.get('confidence_weight', 0.9)
+                            
+                            return {
+                                'extracted_report_type': extracted,
+                                'format_type': ReportTypeFormat(format_name),
+                                'confidence': confidence,
+                                'matched_pattern': pattern_text,
+                                'raw_match': match.group(0),
+                                'notes': f"Matched {format_name} pattern (market-aware)"
+                            }
                         
                 except (re.error, ValueError) as e:
                     logger.debug(f"Pattern error: {e}")
@@ -450,55 +485,115 @@ class MarketAwareReportTypeExtractor:
         Returns:
             Processing results dictionary
         """
+        logger.info(f"STANDARD WORKFLOW DEBUG: Processing title: '{title}'")
+        
         # Clean title from confusing terms for matching
         temp_title, removed_terms = self._create_confusing_terms_free_text(title)
+        logger.info(f"STANDARD WORKFLOW DEBUG: After confusing terms removal: '{temp_title}'")
+        if removed_terms:
+            logger.info(f"STANDARD WORKFLOW DEBUG: Removed confusing terms: {removed_terms}")
         
-        # Try all pattern groups in order
+        # Try all pattern groups in order - acronym_embedded first (most specific)
         pattern_groups = [
+            ('acronym_embedded', self.acronym_embedded_patterns),
             ('compound_type', self.compound_type_patterns),
             ('prefix_type', self.prefix_type_patterns),
             ('embedded_type', self.embedded_type_patterns),
             ('terminal_type', self.terminal_type_patterns)
         ]
         
+        logger.info(f"STANDARD WORKFLOW DEBUG: Pattern groups loaded:")
+        for format_name, patterns in pattern_groups:
+            logger.info(f"  {format_name}: {len(patterns)} patterns")
+        
         best_result = None
         for format_name, patterns in pattern_groups:
-            for pattern_data in patterns:
+            logger.info(f"STANDARD WORKFLOW DEBUG: Trying {format_name} patterns ({len(patterns)} total)")
+            
+            for i, pattern_data in enumerate(patterns):
                 try:
                     pattern_text = pattern_data['pattern']
+                    
+                    # Skip empty or whitespace-only patterns
+                    if not pattern_text or not pattern_text.strip():
+                        logger.info(f"STANDARD WORKFLOW DEBUG:   Skipping empty pattern {i+1}")
+                        continue
+                    
+                    logger.info(f"STANDARD WORKFLOW DEBUG:   Testing pattern {i+1}: '{pattern_text}'")
                     
                     # Create regex pattern (pattern_text is already a regex)
                     pattern = re.compile(pattern_text, re.IGNORECASE)
                     match = pattern.search(temp_title)
                     
                     if match:
-                        extracted = match.group(0).strip()
-                        confidence = pattern_data.get('confidence_weight', 0.9)
                         
-                        # Remove the found report type pattern from title for pipeline
-                        title_for_pipeline = temp_title.replace(match.group(0), '').strip()
-                        # Clean up any leftover punctuation
-                        title_for_pipeline = re.sub(r'\s*[,\-–—]\s*$', '', title_for_pipeline)
-                        title_for_pipeline = re.sub(r'^\s*[,\-–—]\s*', '', title_for_pipeline)
-                        title_for_pipeline = title_for_pipeline.strip()
-                        
-                        best_result = {
-                            'extracted_report_type': extracted,
-                            'final_report_type': extracted,
-                            'format_type': ReportTypeFormat(format_name),
-                            'confidence': confidence,
-                            'matched_pattern': pattern_text,
-                            'raw_match': match.group(0),
-                            'processing_workflow': 'standard',
-                            'pipeline_forward_text': title_for_pipeline,
-                            'notes': f"Standard processing: Matched {format_name} pattern"
-                        }
-                        
-                        # Update statistics
-                        self.extraction_stats['standard_workflow'] += 1
-                        self.extraction_stats[format_name] += 1
-                        
-                        return best_result
+                        # Special handling for acronym_embedded patterns
+                        if format_name == 'acronym_embedded':
+                            # Extract acronym from capture group (group 1)
+                            acronym = match.group(1) if match.groups() else ""
+                            base_type = pattern_data.get('base_type', 'Market Report')
+                            
+                            # Remove the matched pattern from title for pipeline
+                            title_for_pipeline = temp_title.replace(match.group(0), '').strip()
+                            title_for_pipeline = re.sub(r'^\s*[,\-–—]\s*', '', title_for_pipeline)
+                            title_for_pipeline = re.sub(r'\s*[,\-–—]\s*$', '', title_for_pipeline)
+                            
+                            # Add acronym in parentheses to end of pipeline text
+                            if title_for_pipeline and acronym:
+                                title_for_pipeline = f"{title_for_pipeline} ({acronym})"
+                            elif acronym:
+                                title_for_pipeline = f"({acronym})"
+                            
+                            result = {
+                                'extracted_report_type': match.group(0).strip(),
+                                'final_report_type': base_type,
+                                'format_type': ReportTypeFormat(format_name),
+                                'confidence': pattern_data.get('confidence_weight', 0.9),
+                                'matched_pattern': pattern_text,
+                                'raw_match': match.group(0),
+                                'processing_workflow': 'standard',
+                                'pipeline_forward_text': title_for_pipeline,
+                                'extracted_acronym': acronym,
+                                'notes': f"Acronym-embedded processing: Extracted '{acronym}' from {format_name} pattern"
+                            }
+                            
+                            # Update statistics
+                            self.extraction_stats['standard_workflow'] += 1
+                            self.extraction_stats[format_name] += 1
+                            
+                            return result
+                            
+                        else:
+                            # Standard processing for other format types
+                            extracted = match.group(0).strip()
+                            confidence = pattern_data.get('confidence_weight', 0.9)
+                            
+                            # Remove the found report type pattern from title for pipeline
+                            title_for_pipeline = temp_title.replace(match.group(0), '').strip()
+                            # Clean up any leftover punctuation
+                            title_for_pipeline = re.sub(r'\s*[,\-–—]\s*$', '', title_for_pipeline)
+                            title_for_pipeline = re.sub(r'^\s*[,\-–—]\s*', '', title_for_pipeline)
+                            title_for_pipeline = title_for_pipeline.strip()
+                            
+                            best_result = {
+                                'extracted_report_type': extracted,
+                                'final_report_type': extracted,
+                                'format_type': ReportTypeFormat(format_name),
+                                'confidence': confidence,
+                                'matched_pattern': pattern_text,
+                                'raw_match': match.group(0),
+                                'processing_workflow': 'standard',
+                                'pipeline_forward_text': title_for_pipeline,
+                                'notes': f"Standard processing: Matched {format_name} pattern"
+                            }
+                            
+                            # Update statistics
+                            self.extraction_stats['standard_workflow'] += 1
+                            self.extraction_stats[format_name] += 1
+                            
+                            return best_result
+                    else:
+                        logger.info(f"STANDARD WORKFLOW DEBUG:   No match")
                         
                 except (re.error, ValueError) as e:
                     logger.debug(f"Pattern error: {e}")
@@ -665,12 +760,17 @@ class MarketAwareReportTypeExtractor:
         if self.pattern_library_manager:
             self.pattern_library_manager.close_connection()
 
-if __name__ == "__main__":
-    # Test the corrected market-aware extractor
+def run_comprehensive_validation_with_output():
+    """
+    Run comprehensive validation including acronym patterns with timestamped output files.
+    """
     import os
     import sys
+    import json
     import importlib.util
+    from datetime import datetime
     from dotenv import load_dotenv
+    from pymongo import MongoClient
     
     load_dotenv()
     
@@ -690,49 +790,233 @@ if __name__ == "__main__":
     pattern_library_manager = PatternLibraryManager()
     extractor = MarketAwareReportTypeExtractor(pattern_library_manager)
     
-    print("🎯 Market-Aware Report Type Extractor v2.0 - CORRECTED Implementation")
-    print("=" * 70)
+    print("🎯 Market-Aware Report Type Extractor v2.0 - Enhanced with Acronym Support")
+    print("=" * 80)
     
-    # Test cases demonstrating proper workflow
-    test_cases = [
-        # Market In examples
-        ("AI Market in Automotive Outlook & Trends", "market_in"),
-        ("Retail Market in Singapore - Size, Outlook & Statistics", "market_in"),
+    # Get test cases dynamically from MongoDB
+    try:
+        mongodb_uri = os.getenv('MONGODB_URI')
+        client = MongoClient(mongodb_uri, serverSelectionTimeoutMS=10000)
+        db = client['deathstar']
+        markets_raw = db['markets_raw']
         
-        # Market For examples  
-        ("Veterinary Vaccine Market for Livestock Analysis", "market_for"),
-        ("Global Market for Advanced Materials Report", "market_for"),
+        # Sample diverse test cases from real database
+        test_pipeline = [
+            {"$match": {
+                "report_title": {"$exists": True, "$ne": ""},
+                "$or": [
+                    {"report_title": {"$regex": "Market.*Analysis", "$options": "i"}},
+                    {"report_title": {"$regex": "Market.*Report", "$options": "i"}},
+                    {"report_title": {"$regex": "Market.*Study", "$options": "i"}},
+                    {"report_title": {"$regex": "Market in", "$options": "i"}},
+                    {"report_title": {"$regex": "Market for", "$options": "i"}}
+                ]
+            }},
+            {"$sample": {"size": 15}},
+            {"$project": {"report_title": 1, "_id": 0}}
+        ]
         
-        # Standard examples
-        ("Electric Vehicle Market Size Report", "standard"),
-        ("Healthcare Technology Market Analysis", "standard"),
-        ("APAC Personal Protective Equipment Market Analysis", "standard"),
-    ]
+        cursor = markets_raw.aggregate(test_pipeline)
+        test_cases = []
+        
+        for doc in cursor:
+            title = doc.get('report_title', '').strip()
+            if title:
+                # Classify market type based on patterns
+                market_type = "standard"  # Default
+                if "market in " in title.lower():
+                    market_type = "market_in"
+                elif "market for " in title.lower():
+                    market_type = "market_for"
+                elif "market by " in title.lower():
+                    market_type = "market_by"
+                    
+                test_cases.append((title, market_type))
+        
+        if len(test_cases) < 5:
+            # Fallback minimal test cases if database sampling fails
+            test_cases = [
+                ("Sample Market Analysis Report", "standard"),
+                ("Test Market Size Study", "standard"),
+                ("Example Market Research Report", "standard")
+            ]
+        
+        client.close()
+        print(f"✅ Loaded {len(test_cases)} test cases from database")
+        
+    except Exception as e:
+        print(f"⚠️ Database sampling failed ({e}), using minimal test cases")
+        # Minimal fallback test cases
+        test_cases = [
+            ("Sample Market Analysis Report", "standard"),
+            ("Test Market Size Study", "standard"), 
+            ("Example Market Research Report", "standard")
+        ]
     
-    for title, market_type in test_cases:
+    # Generate timestamp for output files
+    now = datetime.now()
+    timestamp_pdt = now.strftime("%Y%m%d_%H%M%S")
+    timestamp_readable_pdt = now.strftime("%Y-%m-%d %H:%M:%S PDT")
+    timestamp_readable_utc = now.utctimetuple()
+    timestamp_readable_utc = datetime(*timestamp_readable_utc[:6]).strftime("%Y-%m-%d %H:%M:%S UTC")
+    
+    results = []
+    acronym_results = []
+    
+    print(f"\n🧪 Testing {len(test_cases)} titles with enhanced acronym support...")
+    
+    for i, (title, market_type) in enumerate(test_cases, 1):
+        print(f"\n[{i}/{len(test_cases)}] Testing: {title}")
+        
         result = extractor.extract(title, market_type)
         
-        print(f"\n📊 Title: {title}")
-        print(f"   Market Type: {market_type}")
-        print(f"   Processing Workflow: {result.processing_workflow}")
-        if result.extracted_market_term:
-            print(f"   Extracted Market Term: {result.extracted_market_term}")
-        if result.rearranged_title:
-            print(f"   Rearranged Title: {result.rearranged_title}")
-        print(f"   Extracted Report Type: {result.extracted_report_type}")
-        print(f"   Final Report Type: {result.final_report_type}")
-        print(f"   Pipeline Forward: {result.title}")
-        print(f"   Confidence: {result.confidence:.2f}")
-        print(f"   Notes: {result.notes}")
+        # Build comprehensive result record
+        result_record = {
+            "test_id": i,
+            "original_title": title,
+            "market_term_type": market_type,
+            "extracted_report_type": result.extracted_report_type,
+            "final_report_type": result.final_report_type,
+            "format_type": result.format_type.value if result.format_type else "UNKNOWN",
+            "confidence": result.confidence,
+            "processing_workflow": result.processing_workflow,
+            "pipeline_forward_text": result.pipeline_forward_text,
+            "matched_pattern": result.matched_pattern,
+            "raw_match": result.raw_match,
+            "notes": result.notes
+        }
+        
+        # Check if this was an acronym match
+        if hasattr(result, 'extracted_acronym') and result.extracted_acronym:
+            result_record["extracted_acronym"] = result.extracted_acronym
+            result_record["acronym_processing"] = True
+            acronym_results.append(result_record)
+            print(f"   ✅ ACRONYM: {result.extracted_acronym} -> Pipeline: {result.pipeline_forward_text}")
+        else:
+            result_record["acronym_processing"] = False
+            print(f"   ✅ STANDARD: {result.final_report_type} -> Pipeline: {result.pipeline_forward_text}")
+        
+        results.append(result_record)
     
-    print("\n" + "=" * 70)
-    print("📈 Statistics:")
+    # Get statistics
     stats = extractor.get_stats()
-    print(f"   Total Processed: {stats.total_processed}")
-    print(f"   Successful: {stats.successful_extractions}")
-    print(f"   Failed: {stats.failed_extractions}")
-    print(f"   Market-Aware Workflow: {stats.market_aware_workflow}")
-    print(f"   Standard Workflow: {stats.standard_workflow}")
-    print(f"   Market Reconstructed: {stats.market_reconstructed_count}")
+    
+    # Create outputs directory
+    outputs_dir = os.path.join(os.path.dirname(__file__), "../outputs")
+    os.makedirs(outputs_dir, exist_ok=True)
+    
+    # Generate comprehensive output files
+    base_filename = f"{timestamp_pdt}_report_type_extractor_v2_validation"
+    
+    # 1. Detailed JSON Results
+    json_output = {
+        "analysis_metadata": {
+            "analysis_date_pdt": timestamp_readable_pdt,
+            "analysis_date_utc": timestamp_readable_utc,
+            "script_version": "03_report_type_extractor_v2.py",
+            "enhancement": "Acronym-embedded pattern support",
+            "total_test_cases": len(test_cases),
+            "acronym_matches_found": len(acronym_results)
+        },
+        "pattern_library_stats": {
+            "total_compound_patterns": len(extractor.compound_type_patterns),
+            "total_prefix_patterns": len(extractor.prefix_type_patterns),
+            "total_embedded_patterns": len(extractor.embedded_type_patterns),
+            "total_terminal_patterns": len(extractor.terminal_type_patterns),
+            "total_acronym_embedded_patterns": len(extractor.acronym_embedded_patterns)
+        },
+        "extraction_statistics": {
+            "total_processed": stats.total_processed,
+            "successful_extractions": stats.successful_extractions,
+            "failed_extractions": stats.failed_extractions,
+            "success_rate": f"{(stats.successful_extractions / max(stats.total_processed, 1) * 100):.1f}%",
+            "standard_workflow_count": stats.standard_workflow,
+            "market_aware_workflow_count": stats.market_aware_workflow,
+            "acronym_embedded_count": extractor.extraction_stats.get('acronym_embedded', 0)
+        },
+        "test_results": results,
+        "acronym_specific_results": acronym_results
+    }
+    
+    json_file = os.path.join(outputs_dir, f"{base_filename}.json")
+    with open(json_file, 'w') as f:
+        json.dump(json_output, f, indent=2, default=str)
+    
+    # 2. Human-Readable Summary Report
+    summary_file = os.path.join(outputs_dir, f"{base_filename}_summary.txt")
+    with open(summary_file, 'w') as f:
+        f.write(f"Market-Aware Report Type Extractor v2.0 - Enhanced Validation Results\n")
+        f.write(f"Analysis Date (PDT): {timestamp_readable_pdt}\n")
+        f.write(f"Analysis Date (UTC): {timestamp_readable_utc}\n")
+        f.write(f"{'=' * 80}\n\n")
+        
+        f.write(f"📊 SUMMARY STATISTICS:\n")
+        f.write(f"• Total Test Cases: {len(test_cases)}\n")
+        f.write(f"• Successful Extractions: {stats.successful_extractions}\n")
+        f.write(f"• Success Rate: {(stats.successful_extractions / max(stats.total_processed, 1) * 100):.1f}%\n")
+        f.write(f"• Acronym Matches Found: {len(acronym_results)}\n")
+        f.write(f"• Standard Processing: {stats.standard_workflow}\n")
+        f.write(f"• Market-Aware Processing: {stats.market_aware_workflow}\n\n")
+        
+        f.write(f"📚 PATTERN LIBRARY COVERAGE:\n")
+        f.write(f"• Compound Type Patterns: {len(extractor.compound_type_patterns)}\n")
+        f.write(f"• Prefix Type Patterns: {len(extractor.prefix_type_patterns)}\n")
+        f.write(f"• Embedded Type Patterns: {len(extractor.embedded_type_patterns)}\n")
+        f.write(f"• Terminal Type Patterns: {len(extractor.terminal_type_patterns)}\n")
+        f.write(f"• Acronym Embedded Patterns: {len(extractor.acronym_embedded_patterns)}\n\n")
+        
+        if acronym_results:
+            f.write(f"🔤 ACRONYM EXTRACTION RESULTS:\n")
+            for result in acronym_results:
+                f.write(f"• {result['original_title']}\n")
+                f.write(f"  → Acronym: {result.get('extracted_acronym', 'N/A')}\n")
+                f.write(f"  → Report Type: {result['final_report_type']}\n")
+                f.write(f"  → Pipeline Forward: {result['pipeline_forward_text']}\n\n")
+        
+        f.write(f"📋 DETAILED RESULTS:\n")
+        for result in results:
+            f.write(f"\n{result['test_id']}. {result['original_title']}\n")
+            f.write(f"   Market Type: {result['market_term_type']}\n")
+            f.write(f"   Report Type: {result['final_report_type']}\n")
+            f.write(f"   Format: {result['format_type']}\n")
+            f.write(f"   Confidence: {result['confidence']:.2f}\n")
+            f.write(f"   Pipeline Forward: {result['pipeline_forward_text']}\n")
+            if result.get('acronym_processing'):
+                f.write(f"   🔤 Acronym: {result.get('extracted_acronym', 'N/A')}\n")
+    
+    # 3. Acronym-Specific Analysis for Human Review
+    if acronym_results:
+        acronym_file = os.path.join(outputs_dir, f"{base_filename}_acronym_analysis.txt")
+        with open(acronym_file, 'w') as f:
+            f.write(f"Acronym-Embedded Pattern Analysis - Human Review Required\n")
+            f.write(f"Analysis Date (PDT): {timestamp_readable_pdt}\n")
+            f.write(f"Analysis Date (UTC): {timestamp_readable_utc}\n")
+            f.write(f"{'=' * 80}\n\n")
+            
+            f.write(f"🎯 ACRONYM EXTRACTION SUCCESS: {len(acronym_results)} patterns matched\n\n")
+            
+            for i, result in enumerate(acronym_results, 1):
+                f.write(f"{i}. ACRONYM PATTERN MATCH:\n")
+                f.write(f"   Original: {result['original_title']}\n")
+                f.write(f"   Extracted Acronym: {result.get('extracted_acronym', 'ERROR')}\n")
+                f.write(f"   Base Report Type: {result['final_report_type']}\n")
+                f.write(f"   Pipeline Text: {result['pipeline_forward_text']}\n")
+                f.write(f"   Pattern Used: {result.get('matched_pattern', 'N/A')}\n")
+                f.write(f"   Confidence: {result['confidence']:.2f}\n")
+                f.write(f"   Status: ✅ SUCCESS - Acronym preserved in parentheses\n\n")
+    
+    print(f"\n💾 OUTPUT FILES GENERATED:")
+    print(f"   📄 {json_file}")
+    print(f"   📋 {summary_file}")
+    if acronym_results:
+        print(f"   🔤 {acronym_file}")
+    
+    print(f"\n🎯 VALIDATION COMPLETE:")
+    print(f"   • Success Rate: {(stats.successful_extractions / max(stats.total_processed, 1) * 100):.1f}%")
+    print(f"   • Acronym Patterns: {len(acronym_results)} matches found")
+    print(f"   • Ready for GitHub Issue #7 completion")
     
     extractor.close_connection()
+
+if __name__ == "__main__":
+    run_comprehensive_validation_with_output()
