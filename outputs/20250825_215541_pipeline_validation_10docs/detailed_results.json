@@ -1,0 +1,372 @@
+{
+  "test_metadata": {
+    "analysis_date_pdt": "2025-08-25 21:55:48 PDT",
+    "analysis_date_utc": "2025-08-26 04:55:48 UTC",
+    "document_count": 10,
+    "requested_count": 10,
+    "pipeline_version": "01\u219202\u219203"
+  },
+  "success_rates": {
+    "market_classification": 100.0,
+    "date_extraction": 100.0,
+    "report_type_extraction": 100.0,
+    "full_pipeline": 100.0
+  },
+  "success_counts": {
+    "market_classification": 10,
+    "date_extraction": 10,
+    "report_type_extraction": 10,
+    "full_pipeline": 10
+  },
+  "detailed_results": [
+    {
+      "document_id": "68049b3896ec0c90d2bad6a0",
+      "original_title": "Cash-in Transit Bags Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Cash-in Transit Bags Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Cash-in Transit Bags"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbdb6",
+      "original_title": "Tallow Market Size, Share And Trends, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Tallow Market Size, Share And Trends, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share And Trends, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Tallow"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae7c8",
+      "original_title": "Powder Metallurgy Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Powder Metallurgy Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Powder Metallurgy"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a1612a9",
+      "original_title": "Clear Aligners Market Size & Share, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Clear Aligners Market Size & Share, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Clear Aligners"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbcc2",
+      "original_title": "Space Robotics Market Size & Share Analysis Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Space Robotics Market Size & Share Analysis Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Analysis Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Space Robotics"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bad107",
+      "original_title": "China Travel Retail Industry - Trends & Market Size",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "China Travel Retail Industry - Trends & Market Size",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "China Travel Retail Industry - Trends &"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bace67",
+      "original_title": "Selective Catalytic Reduction Market, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Selective Catalytic Reduction Market, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Selective Catalytic Reduction"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad59b",
+      "original_title": "Blood Pressure Cuffs Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Blood Pressure Cuffs Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Blood Pressure Cuffs"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41dd2f7fead4d2a160ce5",
+      "original_title": "Varicose Veins Treatment Market Size & Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Varicose Veins Treatment Market Size & Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Varicose Veins Treatment"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a161498",
+      "original_title": "Deck Planning Software Market Size & Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Deck Planning Software Market Size & Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Deck Planning Software"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    }
+  ],
+  "summary_statistics": {
+    "market_type_distribution": {
+      "standard": 10
+    },
+    "date_extraction_statuses": {
+      "no_dates_present": 4,
+      "success": 6
+    },
+    "report_type_distribution": {
+      "Market": 3,
+      "Market Size, Share And Trends, Industry Report": 1,
+      "Market Size & Share, Industry Report": 1,
+      "Market Size & Share Analysis Report": 1,
+      "Market Size": 1,
+      "Market, Industry Report": 1,
+      "Market Size & Share Report": 2
+    },
+    "total_unique_report_types": 7
+  }
+}

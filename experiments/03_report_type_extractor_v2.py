@@ -475,6 +475,13 @@ class MarketAwareReportTypeExtractor:
                         extracted = match.group(0).strip()
                         confidence = pattern_data.get('confidence_weight', 0.9)
                         
+                        # Remove the found report type pattern from title for pipeline
+                        title_for_pipeline = temp_title.replace(match.group(0), '').strip()
+                        # Clean up any leftover punctuation
+                        title_for_pipeline = re.sub(r'\s*[,\-–—]\s*$', '', title_for_pipeline)
+                        title_for_pipeline = re.sub(r'^\s*[,\-–—]\s*', '', title_for_pipeline)
+                        title_for_pipeline = title_for_pipeline.strip()
+                        
                         best_result = {
                             'extracted_report_type': extracted,
                             'final_report_type': extracted,
@@ -483,7 +490,7 @@ class MarketAwareReportTypeExtractor:
                             'matched_pattern': pattern_text,
                             'raw_match': match.group(0),
                             'processing_workflow': 'standard',
-                            'pipeline_forward_text': title,
+                            'pipeline_forward_text': title_for_pipeline,
                             'notes': f"Standard processing: Matched {format_name} pattern"
                         }
                         

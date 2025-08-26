@@ -1,0 +1,3364 @@
+{
+  "test_metadata": {
+    "analysis_date_pdt": "2025-08-25 21:42:32 PDT",
+    "analysis_date_utc": "2025-08-26 04:42:32 UTC",
+    "document_count": 100,
+    "requested_count": 100,
+    "pipeline_version": "01\u219202\u219203"
+  },
+  "success_rates": {
+    "market_classification": 100.0,
+    "date_extraction": 100.0,
+    "report_type_extraction": 100.0,
+    "full_pipeline": 100.0
+  },
+  "success_counts": {
+    "market_classification": 100,
+    "date_extraction": 100,
+    "report_type_extraction": 100,
+    "full_pipeline": 100
+  },
+  "detailed_results": [
+    {
+      "document_id": "68a41e70f7fead4d2a161357",
+      "original_title": "Competitive Local Exchange Carrier Market, CLEC Industry Report, 2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2025",
+          "title_after_removal": "Competitive Local Exchange Carrier Market, CLEC Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Competitive Local Exchange Carrier Market, CLEC Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baea74",
+      "original_title": "Connected (Smart) Street Lighting Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Connected (Smart) Street Lighting Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Connected (Smart) Street Lighting Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badd85",
+      "original_title": "Lignosulfonates Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Lignosulfonates Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Lignosulfonates Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacba1",
+      "original_title": "Liquefied Petroleum Gas Market Size & Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Liquefied Petroleum Gas Market Size & Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Liquefied Petroleum Gas Market Size & Share Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a42291c3325a49107cc0fc",
+      "original_title": "U.S. Minimal Residual Disease Testing Market Report, 2033",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2033",
+          "title_after_removal": "U.S. Minimal Residual Disease Testing Market Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Report",
+          "processing_workflow": "standard",
+          "confidence": 0.92,
+          "notes": "Standard processing: Matched terminal_type pattern",
+          "title_for_next_stage": "U.S. Minimal Residual Disease Testing Market Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b7396ec0c90d2bad9af",
+      "original_title": "Document Shredding Service Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Document Shredding Service Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Document Shredding Service Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbce9",
+      "original_title": "Global Spinal Implant Market Size, Share, Industry Report, 2019-2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2019-2025",
+          "title_after_removal": "Global Spinal Implant Market Size, Share, Industry Report",
+          "format_type": "range_format",
+          "confidence": 0.98,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*[-\u2013\u2014]\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Global Spinal Implant Market Size, Share, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bae96ec0c90d2bae079",
+      "original_title": "Ion Beam Technology Market Analysis, Outlook 2027",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2027",
+          "title_after_removal": "Ion Beam Technology Market Analysis",
+          "format_type": "embedded_format",
+          "confidence": 0.88,
+          "extraction_status": "success",
+          "notes": "Matched: \\bOutlook\\s+(\\d{4})\\b, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Analysis",
+          "processing_workflow": "standard",
+          "confidence": 0.92,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Ion Beam Technology Market Analysis"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a42291c3325a49107cc1e7",
+      "original_title": "U.S. Truck Bed Accessories Market, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "U.S. Truck Bed Accessories Market, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "U.S. Truck Bed Accessories Market, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bad112",
+      "original_title": "Electronics Retailing Market Size & Share Analysis - Industry Research Report - Growth Trends",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Electronics Retailing Market Size & Share Analysis - Industry Research Report - Growth Trends",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Analysis - Industry Research Report - Growth Trends",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Electronics Retailing Market Size & Share Analysis - Industry Research Report - Growth Trends"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a1615d4",
+      "original_title": "Earthmoving Equipment Market Size, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Earthmoving Equipment Market Size, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.95,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Earthmoving Equipment Market Size, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad27e",
+      "original_title": "Anatomic Pathology Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Anatomic Pathology Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Anatomic Pathology Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badd6a",
+      "original_title": "Biomass Boiler Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Biomass Boiler Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Biomass Boiler Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161b3e",
+      "original_title": "Internet Security Market Size & Share, Global Industry Report, 2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2025",
+          "title_after_removal": "Internet Security Market Size & Share, Global Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share, Global Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Internet Security Market Size & Share, Global Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad41a",
+      "original_title": "Automotive Lead-acid Battery Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Automotive Lead-acid Battery Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Automotive Lead-acid Battery Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbf78",
+      "original_title": "U.S. Cath Labs Market Size & Share Analysis Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "U.S. Cath Labs Market Size & Share Analysis Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Analysis Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "U.S. Cath Labs Market Size & Share Analysis Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a1616ac",
+      "original_title": "Equine Artificial Insemination Market Size Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Equine Artificial Insemination Market Size Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size Report",
+          "processing_workflow": "standard",
+          "confidence": 0.93,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Equine Artificial Insemination Market Size Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161c1c",
+      "original_title": "Leukemia Therapeutics Market Size, Share, Industry Report, 2019-2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2019-2025",
+          "title_after_removal": "Leukemia Therapeutics Market Size, Share, Industry Report",
+          "format_type": "range_format",
+          "confidence": 0.98,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*[-\u2013\u2014]\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Leukemia Therapeutics Market Size, Share, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41dbef7fead4d2a160b78",
+      "original_title": "Fluoroscopy Systems Market Size, Share And Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Fluoroscopy Systems Market Size, Share And Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share And Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Fluoroscopy Systems Market Size, Share And Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c9496ec0c90d2baef53",
+      "original_title": "Wood Flooring Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Wood Flooring Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Wood Flooring Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacb9a",
+      "original_title": "Linear Actuator Market Size, Share And Growth Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Linear Actuator Market Size, Share And Growth Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share And Growth Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Linear Actuator Market Size, Share And Growth Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baeab8",
+      "original_title": "Smart Thermostat Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Smart Thermostat Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Smart Thermostat Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae53a",
+      "original_title": "Nucleic Acid Extraction Instruments & Reagents Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Nucleic Acid Extraction Instruments & Reagents Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Nucleic Acid Extraction Instruments & Reagents Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41f94f7fead4d2a162449",
+      "original_title": "Software-defined Wide Area Network Market Size Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Software-defined Wide Area Network Market Size Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size Report",
+          "processing_workflow": "standard",
+          "confidence": 0.93,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Software-defined Wide Area Network Market Size Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a4114051d98522fff5a462",
+      "original_title": "Post-consumer Recycled Plastics Market Size Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Post-consumer Recycled Plastics Market Size Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size Report",
+          "processing_workflow": "standard",
+          "confidence": 0.93,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Post-consumer Recycled Plastics Market Size Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad7c6",
+      "original_title": "Composite Cans Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Composite Cans Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Composite Cans Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad7dd",
+      "original_title": "Concrete Floor Coatings Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Concrete Floor Coatings Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Concrete Floor Coatings Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41efef7fead4d2a1619d5",
+      "original_title": "Hospital Stretchers Market Size, Share, Growth Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Hospital Stretchers Market Size, Share, Growth Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share, Growth Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Hospital Stretchers Market Size, Share, Growth Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049a3496ec0c90d2bac600",
+      "original_title": "2D Barcode Reader Market Size, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "2D Barcode Reader Market Size, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.95,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "2D Barcode Reader Market Size, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a161299",
+      "original_title": "Cholangitis Market Size, Share, Trends, Global Industry Report, 2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2025",
+          "title_after_removal": "Cholangitis Market Size, Share, Trends, Global Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Global Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.91,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Cholangitis Market Size, Share, Trends, Global Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a16146e",
+      "original_title": "Data Centric Security Market Size And Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Data Centric Security Market Size And Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size And Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Data Centric Security Market Size And Share Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a4113351d98522fff5a3ff",
+      "original_title": "Molded Fiber Packaging Market Size, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Molded Fiber Packaging Market Size, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.95,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Molded Fiber Packaging Market Size, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161a09",
+      "original_title": "Hydrogel Dressing Market Size & Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Hydrogel Dressing Market Size & Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Hydrogel Dressing Market Size & Share Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41f48f7fead4d2a161f4f",
+      "original_title": "North America Non-invasive Aesthetic Treatment Market Report, 2028",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2028",
+          "title_after_removal": "North America Non-invasive Aesthetic Treatment Market Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Report",
+          "processing_workflow": "standard",
+          "confidence": 0.92,
+          "notes": "Standard processing: Matched terminal_type pattern",
+          "title_for_next_stage": "North America Non-invasive Aesthetic Treatment Market Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad26a",
+      "original_title": "Americas Spas and Beauty Salons Market Outlook, Trends, Analysis",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Americas Spas and Beauty Salons Market Outlook, Trends, Analysis",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Outlook, Trends, Analysis",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Americas Spas and Beauty Salons Market Outlook, Trends, Analysis"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad361",
+      "original_title": "Asthma Monitoring Devices Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Asthma Monitoring Devices Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Asthma Monitoring Devices Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bacfb4",
+      "original_title": "Truck Racks Market Size, Share And Growth Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Truck Racks Market Size, Share And Growth Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share And Growth Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Truck Racks Market Size, Share And Growth Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bea96ec0c90d2bae43b",
+      "original_title": "Natural Fragrance Ingredients Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Natural Fragrance Ingredients Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Natural Fragrance Ingredients Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a1614f5",
+      "original_title": "Diagnostic Dermatology Imaging Devices Market Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Diagnostic Dermatology Imaging Devices Market Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Report",
+          "processing_workflow": "standard",
+          "confidence": 0.92,
+          "notes": "Standard processing: Matched terminal_type pattern",
+          "title_for_next_stage": "Diagnostic Dermatology Imaging Devices Market Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41f94f7fead4d2a162385",
+      "original_title": "Silicone Derivative Market Size, Share & Growth Report 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Silicone Derivative Market Size, Share & Growth",
+          "format_type": "embedded_format",
+          "confidence": 0.86,
+          "extraction_status": "success",
+          "notes": "Matched: \\bReport\\s+(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share & Growth",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Silicone Derivative Market Size, Share & Growth"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41f48f7fead4d2a161feb",
+      "original_title": "Ophthalmic Drugs Market Size, Share, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Ophthalmic Drugs Market Size, Share, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Ophthalmic Drugs Market Size, Share, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad858",
+      "original_title": "Cosmetic Lasers Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Cosmetic Lasers Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Cosmetic Lasers Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baea19",
+      "original_title": "Silicon Anode Lithium-ion Battery Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Silicon Anode Lithium-ion Battery Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Silicon Anode Lithium-ion Battery Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161b31",
+      "original_title": "Internet of Nano Things Market Size, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Internet of Nano Things Market Size, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.95,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Internet of Nano Things Market Size, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b7396ec0c90d2bada31",
+      "original_title": "Edible Packaging Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Edible Packaging Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Edible Packaging Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41f94f7fead4d2a162319",
+      "original_title": "Saudi Arabia Heritage Tourism Market, Industry Report, 2033",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2033",
+          "title_after_removal": "Saudi Arabia Heritage Tourism Market, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Saudi Arabia Heritage Tourism Market, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41efef7fead4d2a1619f4",
+      "original_title": "Huntington\u2019s Disease Treatment Market Size Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Huntington\u2019s Disease Treatment Market Size Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size Report",
+          "processing_workflow": "standard",
+          "confidence": 0.93,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Huntington\u2019s Disease Treatment Market Size Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacb38",
+      "original_title": "Inertial Navigation System Market Size, Share [2023 Report]",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2023",
+          "title_after_removal": "Inertial Navigation System Market Size, Share Report",
+          "format_type": "bracket_format",
+          "confidence": 0.92,
+          "extraction_status": "success",
+          "notes": "Matched: \\[(\\d{4})\\s*Report\\], Preserved: ['Report']"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Inertial Navigation System Market Size, Share Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a161605",
+      "original_title": "Electric Motorcycle Market Size, Share, Growth Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Electric Motorcycle Market Size, Share, Growth Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share, Growth Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Electric Motorcycle Market Size, Share, Growth Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41efef7fead4d2a161d03",
+      "original_title": "Medical Elastomers Market Size, Share, Growth Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Medical Elastomers Market Size, Share, Growth Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share, Growth Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Medical Elastomers Market Size, Share, Growth Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a16167b",
+      "original_title": "Enhanced Gas Recovery Market Size, Global Industry Report, 2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2025",
+          "title_after_removal": "Enhanced Gas Recovery Market Size, Global Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Global Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Enhanced Gas Recovery Market Size, Global Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bea96ec0c90d2bae4d6",
+      "original_title": "North America Direct-to-Consumer Laboratory Testing Market Insights, 2021-2031",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2021-2031",
+          "title_after_removal": "North America Direct-to-Consumer Laboratory Testing Market Insights",
+          "format_type": "range_format",
+          "confidence": 0.98,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*[-\u2013\u2014]\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Insights",
+          "processing_workflow": "standard",
+          "confidence": 0.82,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "North America Direct-to-Consumer Laboratory Testing Market Insights"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad5eb",
+      "original_title": "Breast Tape Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Breast Tape Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Breast Tape Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049a6196ec0c90d2bac8fa",
+      "original_title": "Electronics Recycling Market Size, Share, Industry Report, 2019-2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2019-2025",
+          "title_after_removal": "Electronics Recycling Market Size, Share, Industry Report",
+          "format_type": "range_format",
+          "confidence": 0.98,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*[-\u2013\u2014]\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Electronics Recycling Market Size, Share, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41decf7fead4d2a160e00",
+      "original_title": "Alkyl Amines Market Size, Share, Trends, Global Industry Report, 2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2025",
+          "title_after_removal": "Alkyl Amines Market Size, Share, Trends, Global Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Global Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.91,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Alkyl Amines Market Size, Share, Trends, Global Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a161920",
+      "original_title": "Hardware In The Loop Market Size & Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Hardware In The Loop Market Size & Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Hardware In The Loop Market Size & Share Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a161765",
+      "original_title": "Exocrine Pancreatic Insufficiency Diagnostics Market Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Exocrine Pancreatic Insufficiency Diagnostics Market Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Report",
+          "processing_workflow": "standard",
+          "confidence": 0.92,
+          "notes": "Standard processing: Matched terminal_type pattern",
+          "title_for_next_stage": "Exocrine Pancreatic Insufficiency Diagnostics Market Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41f94f7fead4d2a162173",
+      "original_title": "Polyurethane Foam Market Size, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Polyurethane Foam Market Size, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.95,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Polyurethane Foam Market Size, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a42291c3325a49107cc198",
+      "original_title": "U.S. Rhinoplasty Market Size & Share, Industry Report 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "U.S. Rhinoplasty Market Size & Share, Industry",
+          "format_type": "embedded_format",
+          "confidence": 0.86,
+          "extraction_status": "success",
+          "notes": "Matched: \\bReport\\s+(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share,",
+          "processing_workflow": "standard",
+          "confidence": 0.91,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "U.S. Rhinoplasty Market Size & Share, Industry"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baeafc",
+      "original_title": "Solar Cell Films Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Solar Cell Films Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Solar Cell Films Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a160ef3",
+      "original_title": "Artificial Intelligence In Remote Patient Monitoring Market Report 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Artificial Intelligence In Remote Patient Monitoring Market",
+          "format_type": "embedded_format",
+          "confidence": 0.86,
+          "extraction_status": "success",
+          "notes": "Matched: \\bReport\\s+(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Artificial Intelligence In Remote Patient Monitoring Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a4114051d98522fff5a499",
+      "original_title": "Technical Textile Chemicals Market Size, Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Technical Textile Chemicals Market Size, Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Technical Textile Chemicals Market Size, Share Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a42291c3325a49107cc0b1",
+      "original_title": "U.S. Large And Small-scale Bioprocessing Market Report, 2033",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2033",
+          "title_after_removal": "U.S. Large And Small-scale Bioprocessing Market Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Report",
+          "processing_workflow": "standard",
+          "confidence": 0.92,
+          "notes": "Standard processing: Matched terminal_type pattern",
+          "title_for_next_stage": "U.S. Large And Small-scale Bioprocessing Market Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a161507",
+      "original_title": "Diethylene Glycol Monobutyl Ether Market Size, Industry Report, 2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2025",
+          "title_after_removal": "Diethylene Glycol Monobutyl Ether Market Size, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.95,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Diethylene Glycol Monobutyl Ether Market Size, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bad04f",
+      "original_title": "U.S. Outdoor Living Structures Market, Industry Report 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "U.S. Outdoor Living Structures Market, Industry",
+          "format_type": "embedded_format",
+          "confidence": 0.86,
+          "extraction_status": "success",
+          "notes": "Matched: \\bReport\\s+(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market, Industry",
+          "processing_workflow": "standard",
+          "confidence": 0.91,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "U.S. Outdoor Living Structures Market, Industry"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a160f5d",
+      "original_title": "Asia Pacific Video Streaming Market, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Asia Pacific Video Streaming Market, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Asia Pacific Video Streaming Market, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbe39",
+      "original_title": "Trade Management Software Market Size Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Trade Management Software Market Size Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size Report",
+          "processing_workflow": "standard",
+          "confidence": 0.93,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Trade Management Software Market Size Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bae96ec0c90d2badf62",
+      "original_title": "IGBT and Super Junction MOSFET Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "IGBT and Super Junction MOSFET Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "IGBT and Super Junction MOSFET Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c9496ec0c90d2baeecd",
+      "original_title": "Water Soluble Films Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Water Soluble Films Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Water Soluble Films Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baeb36",
+      "original_title": "South Africa Printing Inks Market Analysis 2021-2031",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2021-2031",
+          "title_after_removal": "South Africa Printing Inks Market Analysis",
+          "format_type": "range_format",
+          "confidence": 0.9,
+          "extraction_status": "success",
+          "notes": "Matched: \\b(\\d{4})\\s*[-\u2013\u2014]\\s*(\\d{4})\\b, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Analysis",
+          "processing_workflow": "standard",
+          "confidence": 0.92,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "South Africa Printing Inks Market Analysis"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049a6196ec0c90d2bac954",
+      "original_title": "Europe Melt Blown Fabric Market Size & Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Europe Melt Blown Fabric Market Size & Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Europe Melt Blown Fabric Market Size & Share Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae6d2",
+      "original_title": "PHO Oils Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "PHO Oils Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "PHO Oils Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049a6196ec0c90d2bac98d",
+      "original_title": "Ferrous Scrap Recycling Market Size & Trends Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Ferrous Scrap Recycling Market Size & Trends Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Trends Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Ferrous Scrap Recycling Market Size & Trends Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad50d",
+      "original_title": "Bio Alcohol Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Bio Alcohol Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Bio Alcohol Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baeaac",
+      "original_title": "Smart Planter Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Smart Planter Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Smart Planter Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bae96ec0c90d2bae096",
+      "original_title": "Iron Sulfate and Iron Chlorosulfate Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Iron Sulfate and Iron Chlorosulfate Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Iron Sulfate and Iron Chlorosulfate Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a160ff8",
+      "original_title": "Automotive Engine Encapsulation Market Size Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Automotive Engine Encapsulation Market Size Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size Report",
+          "processing_workflow": "standard",
+          "confidence": 0.93,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Automotive Engine Encapsulation Market Size Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bea96ec0c90d2bae155",
+      "original_title": "Lidding Films Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Lidding Films Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Lidding Films Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b0096ec0c90d2bad3aa",
+      "original_title": "Automotive AC Compressor Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Automotive AC Compressor Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Automotive AC Compressor Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bacd99",
+      "original_title": "Plant Cell Culture Equipment Market Size, Industry Report, 2018-2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2018-2025",
+          "title_after_removal": "Plant Cell Culture Equipment Market Size, Industry Report",
+          "format_type": "range_format",
+          "confidence": 0.98,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*[-\u2013\u2014]\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.95,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Plant Cell Culture Equipment Market Size, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a4224ec3325a49107cbe1e",
+      "original_title": "Tissue Sectioning Market Size, Global Industry Report, 2027",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2027",
+          "title_after_removal": "Tissue Sectioning Market Size, Global Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Global Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Tissue Sectioning Market Size, Global Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad7a4",
+      "original_title": "Commercial Air Conditioning Systems (VRF) Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Commercial Air Conditioning Systems (VRF) Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Commercial Air Conditioning Systems (VRF) Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41eb6f7fead4d2a161611",
+      "original_title": "Electric Trucks Market Size & Share, Industry Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Electric Trucks Market Size & Share, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Electric Trucks Market Size & Share, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c2796ec0c90d2bae56e",
+      "original_title": "Oleyl Erucate Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Oleyl Erucate Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Oleyl Erucate Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049c6596ec0c90d2baeb6d",
+      "original_title": "Spinal Trauma Devices Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Spinal Trauma Devices Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Spinal Trauma Devices Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b7396ec0c90d2badb40",
+      "original_title": "Ethylene Bis Stearamide Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Ethylene Bis Stearamide Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Ethylene Bis Stearamide Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad72f",
+      "original_title": "Chronic Obstructive Pulmonary Disease (COPD) Treatment Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Chronic Obstructive Pulmonary Disease (COPD) Treatment Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Chronic Obstructive Pulmonary Disease (COPD) Treatment Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e70f7fead4d2a161346",
+      "original_title": "Commercial Vehicle Remote Diagnostics Market Report 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Commercial Vehicle Remote Diagnostics Market",
+          "format_type": "embedded_format",
+          "confidence": 0.86,
+          "extraction_status": "success",
+          "notes": "Matched: \\bReport\\s+(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Commercial Vehicle Remote Diagnostics Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049ac996ec0c90d2bad0e7",
+      "original_title": "Wireless Display Market Size, Share & Growth Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Wireless Display Market Size, Share & Growth Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share & Growth Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Wireless Display Market Size, Share & Growth Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41efef7fead4d2a1619c3",
+      "original_title": "Home Networking Devices Market Size & Share, Industry Report, 2025",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2025",
+          "title_after_removal": "Home Networking Devices Market Size & Share, Industry Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share, Industry Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Home Networking Devices Market Size & Share, Industry Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bae96ec0c90d2bade39",
+      "original_title": "Healthcare Facility Management Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Healthcare Facility Management Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Healthcare Facility Management Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b7396ec0c90d2bada78",
+      "original_title": "Electrical Submersible Pumps (ESPs) Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Electrical Submersible Pumps (ESPs) Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Electrical Submersible Pumps (ESPs) Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049a9496ec0c90d2bacaac",
+      "original_title": "Herbal Extract Market Size, Share & Growth Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Herbal Extract Market Size, Share & Growth Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Share & Growth Report",
+          "processing_workflow": "standard",
+          "confidence": 0.94,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Herbal Extract Market Size, Share & Growth Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b3896ec0c90d2bad944",
+      "original_title": "Digital Audio Workstations [DAWs] Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Digital Audio Workstations [DAWs] Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Digital Audio Workstations [DAWs] Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049bea96ec0c90d2bae20f",
+      "original_title": "Makeup Base Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Makeup Base Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Makeup Base Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049b7396ec0c90d2bad9c0",
+      "original_title": "Downstream Processing Market",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": null,
+          "title_after_removal": "Downstream Processing Market",
+          "format_type": "no_numeric_content",
+          "confidence": 1.0,
+          "extraction_status": "no_dates_present",
+          "notes": "Matched: None, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market",
+          "processing_workflow": "standard",
+          "confidence": 0.96,
+          "notes": "Standard processing: Matched embedded_type pattern",
+          "title_for_next_stage": "Downstream Processing Market"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41f48f7fead4d2a161e2a",
+      "original_title": "Monoclonal Antibodies Market Size & Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Monoclonal Antibodies Market Size & Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Monoclonal Antibodies Market Size & Share Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41e2df7fead4d2a161154",
+      "original_title": "Brazil Veterinary Medicine Market Size, Industry Report 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Brazil Veterinary Medicine Market Size, Industry",
+          "format_type": "embedded_format",
+          "confidence": 0.86,
+          "extraction_status": "success",
+          "notes": "Matched: \\bReport\\s+(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size, Industry",
+          "processing_workflow": "standard",
+          "confidence": 0.88,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Brazil Veterinary Medicine Market Size, Industry"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68049a6196ec0c90d2bac83c",
+      "original_title": "Cold Climate Heat Pump Market Size & Share Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Cold Climate Heat Pump Market Size & Share Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Share Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Cold Climate Heat Pump Market Size & Share Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    },
+    {
+      "document_id": "68a41f94f7fead4d2a1622db",
+      "original_title": "Robotic Nurse Assistant Market Size & Growth Report, 2030",
+      "pipeline_results": {
+        "market_classification": {
+          "market_type": "standard",
+          "confidence": 0.9,
+          "matched_pattern": null,
+          "notes": "Standard processing - systematic pattern removal approach"
+        },
+        "date_extraction": {
+          "extracted_date": "2030",
+          "title_after_removal": "Robotic Nurse Assistant Market Size & Growth Report",
+          "format_type": "terminal_comma",
+          "confidence": 0.95,
+          "extraction_status": "success",
+          "notes": "Matched: ,\\s*(\\d{4})\\s*$, Preserved: []"
+        },
+        "report_type_extraction": {
+          "final_report_type": "Market Size & Growth Report",
+          "processing_workflow": "standard",
+          "confidence": 0.9,
+          "notes": "Standard processing: Matched compound_type pattern",
+          "title_for_next_stage": "Robotic Nurse Assistant Market Size & Growth Report"
+        }
+      },
+      "errors": [],
+      "success_flags": {
+        "market_classification": true,
+        "date_extraction": true,
+        "report_type_extraction": true
+      }
+    }
+  ],
+  "summary_statistics": {
+    "market_type_distribution": {
+      "standard": 100
+    },
+    "date_extraction_statuses": {
+      "success": 62,
+      "no_dates_present": 38
+    },
+    "report_type_distribution": {
+      "Industry Report": 1,
+      "Market": 38,
+      "Market Size & Share Report": 6,
+      "Market Report": 5,
+      "Market Size, Share, Industry Report": 4,
+      "Market Analysis": 2,
+      "Market, Industry Report": 3,
+      "Market Size & Share Analysis - Industry Research Report - Growth Trends": 1,
+      "Market Size, Industry Report": 7,
+      "Market Size & Share, Global Industry Report": 1,
+      "Market Size & Share Analysis Report": 1,
+      "Market Size Report": 6,
+      "Market Size, Share And Report": 1,
+      "Market Size, Share And Growth Report": 2,
+      "Market Size, Share, Growth Report": 3,
+      "Global Industry Report": 2,
+      "Market Size And Share Report": 1,
+      "Market Outlook, Trends, Analysis": 1,
+      "Market Size, Share & Growth": 1,
+      "Market Size, Share Report": 2,
+      "Market Size, Global Industry Report": 2,
+      "Market Insights": 1,
+      "Market Size & Share,": 1,
+      "Market, Industry": 1,
+      "Market Size & Trends Report": 1,
+      "Market Size & Share, Industry Report": 2,
+      "Market Size, Share & Growth Report": 2,
+      "Market Size, Industry": 1,
+      "Market Size & Growth Report": 1
+    },
+    "total_unique_report_types": 29
+  }
+}
