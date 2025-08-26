@@ -1,20 +1,26 @@
 #!/usr/bin/env python3
 
 """
-Market-Aware Report Type Extraction System v1.0
-Enhanced report type extraction with market term context awareness.
-Addresses GitHub Issue #3 for market-aware detection.
+Market-Aware Report Type Extraction System v2.0
+Enhanced report type extraction with CORRECT market term processing logic.
+Addresses GitHub Issue #10 for proper market-aware detection workflow.
 
 Key Features:
-- Market term type awareness (standard, market_for, market_in)
-- Context-specific pattern matching based on market type
-- Automatic "Market" prepending for market_for and market_in types
-- Enhanced word order handling for different market contexts
+- Market term type awareness (standard, market_for, market_in, market_by)
+- CORRECT extraction→rearrangement→reconstruction workflow for market terms
+- Different processing paths for market term vs standard titles
+- Database-driven pattern matching with proper context handling
+
+Processing Logic:
+- Market Term Titles: Extract → Rearrange → Match → Reconstruct
+- Standard Titles: Direct database pattern matching
 
 Created for Market Research Title Parser project.
 """
 
 import re
+import os
+import importlib.util
 import logging
 from typing import Dict, List, Optional, Tuple, Any, Union
 from dataclasses import dataclass
@@ -55,15 +61,18 @@ class MarketAwareReportTypeResult:
     original_title: str
     market_term_type: str  # Changed to string to support dynamic types
     extracted_report_type: Optional[str]
-    final_report_type: Optional[str]  # With Market prepended if needed
+    final_report_type: Optional[str]
     normalized_report_type: Optional[str]
     format_type: ReportTypeFormat
     confidence: float
     matched_pattern: Optional[str]
     raw_match: Optional[str]
     date_removed_title: Optional[str]
-    market_prepended: bool = False  # NEW: Track if Market was prepended
-    context_analysis: Optional[str] = None  # NEW: Context-specific analysis
+    market_prepended: bool = False
+    context_analysis: Optional[str] = None
+    processing_workflow: Optional[str] = None  # NEW: Track which workflow was used
+    rearranged_title: Optional[str] = None     # NEW: Track rearranged version
+    extracted_market_term: Optional[str] = None # NEW: Track extracted market term
     notes: Optional[str] = None
 
 @dataclass
@@ -76,40 +85,35 @@ class MarketAwareExtractionStats:
     standard_processed: int
     market_for_processed: int
     market_in_processed: int
+    market_by_processed: int
+    # By processing workflow
+    market_aware_workflow: int
+    standard_workflow: int
     # By format type
     terminal_type: int
     embedded_type: int
     prefix_type: int
     compound_type: int
-    # Market prepending stats
-    market_prepended_count: int
-    market_for_prepended: int
-    market_in_prepended: int
+    # Market reconstruction stats
+    market_reconstructed_count: int
 
 class MarketAwareReportTypeExtractor:
     """
-    Market-Aware Report Type Extraction System.
+    Market-Aware Report Type Extraction System with CORRECT Processing Logic.
     
-    Enhanced version that:
-    1. Accepts market_term_type context
-    2. Adapts pattern matching based on market type
-    3. Prepends 'Market' for market_for and market_in types
-    4. Handles different word orders in market contexts
+    Implements proper workflow:
+    1. For market term titles: Extract → Rearrange → Match → Reconstruct
+    2. For standard titles: Direct database pattern matching
     """
     
     def __init__(self, pattern_library_manager):
-        """
-        Initialize the Market-Aware Report Type Extractor.
-        
-        Args:
-            pattern_library_manager: PatternLibraryManager instance (REQUIRED)
-        """
-        if not pattern_library_manager:
-            raise ValueError("PatternLibraryManager is required")
-        
+        """Initialize with pattern library manager."""
         self.pattern_library_manager = pattern_library_manager
         
-        # Enhanced statistics tracking
+        # Load patterns from database
+        self._load_patterns()
+        
+        # Initialize statistics
         self.extraction_stats = {
             'total_processed': 0,
             'successful_extractions': 0,
@@ -118,452 +122,420 @@ class MarketAwareReportTypeExtractor:
             'standard_processed': 0,
             'market_for_processed': 0,
             'market_in_processed': 0,
+            'market_by_processed': 0,
+            # By processing workflow
+            'market_aware_workflow': 0,
+            'standard_workflow': 0,
             # By format type
             'terminal_type': 0,
             'embedded_type': 0,
             'prefix_type': 0,
             'compound_type': 0,
-            # Market prepending stats
-            'market_prepended_count': 0,
-            'market_for_prepended': 0,
-            'market_in_prepended': 0
+            # Market reconstruction
+            'market_reconstructed_count': 0
         }
         
-        # Initialize pattern lists
-        self.terminal_type_patterns = []
-        self.embedded_type_patterns = []
-        self.prefix_type_patterns = []
-        self.compound_type_patterns = []
-        self.confusing_term_patterns = []  # NEW: Confusing term patterns
+        # Load confusing terms
+        self.confusing_terms = self._load_confusing_terms()
         
-        # Load patterns from database
-        self._load_library_patterns()
-        
-        # Market context patterns - special handling for market types
-        self.market_context_indicators = {
-            'market_in_separators': [' in ', ' In '],  # "Market in Singapore"
-            'market_for_separators': [' for ', ' For '],  # "Market for Advanced Materials"
-            'report_indicators': ['report', 'analysis', 'study', 'outlook', 'statistics', 'trends', 'size', 'share'],
-            'dash_patterns': [' - ', ' – ', ' — '],  # "- Size, Outlook & Statistics"
-        }
-        
-        # Context-specific patterns for market_for and market_in
-        # REMOVED: Hardcoded context patterns - now using database patterns exclusively
-        
-        # Report type normalizations
-        self.report_type_normalizations = {}
-        self._load_normalizations()
-        
-        # Cache available market types to prevent repeated database queries
-        self._available_market_types_cache = None
-        
-        logger.info(f"Market-Aware Report Type Extractor initialized")
-        logger.info(f"Loaded {len(self.compound_type_patterns)} compound patterns")
-        logger.info(f"Loaded {len(self.terminal_type_patterns)} terminal patterns")
-        logger.info(f"Market context indicators: {len(self.market_context_indicators)} categories")
+        # Load market types from database
+        self.available_market_types = self._get_available_market_types()
+        logger.info(f"Available market types from database: {self.available_market_types}")
     
-    def _load_library_patterns(self) -> None:
-        """Load report type patterns from MongoDB pattern library."""
+    def _load_patterns(self):
+        """Load report type patterns from database."""
         try:
-            # Import PatternType dynamically
-            import importlib.util
-            import sys
-            import os
+            # Dynamic import of PatternType from the pattern library manager
+            pattern_manager_path = os.path.join(os.path.dirname(__file__), '00b_pattern_library_manager_v1.py')
+            spec = importlib.util.spec_from_file_location("pattern_manager", pattern_manager_path)
+            pattern_manager_module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(pattern_manager_module)
+            PatternType = pattern_manager_module.PatternType
             
-            # Dynamic import for pattern library manager (filename starts with numbers)
-            pattern_manager_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '00b_pattern_library_manager_v1.py')
-            spec = importlib.util.spec_from_file_location("pattern_library_manager_v1", pattern_manager_path)
-            pattern_module = importlib.util.module_from_spec(spec)
-            sys.modules["pattern_library_manager_v1"] = pattern_module
-            spec.loader.exec_module(pattern_module)
-            PatternType = pattern_module.PatternType
+            # Get database patterns
+            if hasattr(self.pattern_library_manager, 'get_patterns'):
+                patterns = self.pattern_library_manager.get_patterns(PatternType.REPORT_TYPE, active_only=True)
+            else:
+                # Fallback for older version
+                patterns = []
+                
+            # Organize patterns by format type
+            self.terminal_type_patterns = []
+            self.embedded_type_patterns = []
+            self.prefix_type_patterns = []
+            self.compound_type_patterns = []
             
-            # Load report type patterns from MongoDB by category
-            report_patterns = self.pattern_library_manager.get_patterns(PatternType.REPORT_TYPE)
-            
-            if not report_patterns:
-                raise RuntimeError("No report type patterns found in MongoDB pattern_libraries collection.")
-            
-            # Load confusing term patterns from MongoDB
-            confusing_patterns = self.pattern_library_manager.get_patterns(PatternType.CONFUSING_TERM)
-            
-            # Organize report type patterns by format type
-            for pattern in report_patterns:
-                if not pattern.get('active', True):
-                    continue
+            for pattern in patterns:
+                pattern_data = {
+                    'pattern': pattern.get('pattern', ''),  # Use 'pattern' field, not 'term'
+                    'term': pattern.get('term', ''),        # Also store term for reference
+                    'confidence_weight': pattern.get('confidence_weight', 0.9),
+                    'format_type': pattern.get('format_type', 'unknown')
+                }
+                
+                # Categorize by format_type (exact match)
+                format_type = pattern.get('format_type', '').lower()
+                if format_type == 'terminal_type':
+                    self.terminal_type_patterns.append(pattern_data)
+                elif format_type == 'embedded_type':
+                    self.embedded_type_patterns.append(pattern_data)
+                elif format_type == 'prefix_type':
+                    self.prefix_type_patterns.append(pattern_data)
+                elif format_type == 'compound_type':
+                    self.compound_type_patterns.append(pattern_data)
                     
-                format_type = pattern.get('format_type', '')
-                pattern_regex = pattern.get('pattern', '')
-                
-                if not pattern_regex:
-                    continue
-                
-                try:
-                    # Test pattern compilation
-                    re.compile(pattern_regex)
-                    
-                    # Add to appropriate category
-                    if format_type == 'terminal_type':
-                        self.terminal_type_patterns.append(pattern)
-                    elif format_type == 'embedded_type':
-                        self.embedded_type_patterns.append(pattern)
-                    elif format_type == 'prefix_type':
-                        self.prefix_type_patterns.append(pattern)
-                    elif format_type == 'compound_type':
-                        self.compound_type_patterns.append(pattern)
-                        
-                except re.error as e:
-                    logger.warning(f"Invalid regex pattern '{pattern_regex}': {e}")
-                    continue
-            
-            # Organize confusing term patterns
-            for pattern in confusing_patterns:
-                if not pattern.get('active', True):
-                    continue
-                    
-                pattern_regex = pattern.get('pattern', '')
-                
-                if not pattern_regex:
-                    continue
-                
-                try:
-                    # Test pattern compilation
-                    re.compile(pattern_regex, re.IGNORECASE)
-                    self.confusing_term_patterns.append(pattern)
-                        
-                except re.error as e:
-                    logger.warning(f"Invalid confusing term regex pattern '{pattern_regex}': {e}")
-                    continue
-            
-            logger.info(f"Successfully loaded patterns from MongoDB:")
-            logger.info(f"  - Terminal type: {len(self.terminal_type_patterns)} patterns")
-            logger.info(f"  - Embedded type: {len(self.embedded_type_patterns)} patterns")
-            logger.info(f"  - Prefix type: {len(self.prefix_type_patterns)} patterns")
-            logger.info(f"  - Compound type: {len(self.compound_type_patterns)} patterns")
-            logger.info(f"  - Confusing terms: {len(self.confusing_term_patterns)} patterns")
+            logger.info(f"Loaded {len(patterns)} report type patterns from database")
+            logger.info(f"  Terminal: {len(self.terminal_type_patterns)}")
+            logger.info(f"  Embedded: {len(self.embedded_type_patterns)}")
+            logger.info(f"  Prefix: {len(self.prefix_type_patterns)}")
+            logger.info(f"  Compound: {len(self.compound_type_patterns)}")
             
         except Exception as e:
-            logger.error(f"Failed to load report type patterns: {e}")
-            raise RuntimeError(f"Could not initialize report type patterns: {e}")
+            logger.error(f"Error loading patterns: {e}")
+            # Initialize empty if load fails
+            self.terminal_type_patterns = []
+            self.embedded_type_patterns = []
+            self.prefix_type_patterns = []
+            self.compound_type_patterns = []
     
-    def _load_normalizations(self) -> None:
-        """Load report type normalizations (fallback for now)."""
-        # Basic normalizations - could be loaded from database later
-        self.report_type_normalizations = {
-            'analysis': 'Analysis',
-            'report': 'Report', 
-            'study': 'Study',
-            'outlook': 'Outlook',
-            'trends': 'Trends',
-            'statistics': 'Statistics'
-        }
-    
-    def _create_confusing_terms_free_text(self, title: str) -> Tuple[str, List[str]]:
-        """
-        Create a temporary version of the title with confusing terms removed for report type extraction.
-        
-        IMPORTANT: This does NOT modify the original title - it creates a temporary version
-        for report type pattern matching only. The original title with confusing terms 
-        is preserved for downstream pipeline steps (especially topic extraction).
-        
-        Args:
-            title: Title to create confusing-terms-free version from
-            
-        Returns:
-            (temp_title_for_extraction, removed_confusing_terms)
-        """
-        if not title or not self.confusing_term_patterns:
-            return title, []
-        
-        temp_title = title
-        removed_terms = []
-        
-        for pattern_data in self.confusing_term_patterns:
-            try:
-                term_name = pattern_data.get('term', 'Unknown')
-                pattern_regex = pattern_data.get('pattern', '')
-                
-                if not pattern_regex:
-                    continue
-                
-                # Compile pattern with case-insensitive flag
-                pattern = re.compile(pattern_regex, re.IGNORECASE)
-                matches = pattern.findall(temp_title)
-                
-                if matches:
-                    # Remove all matches of this confusing term from temp version only
-                    temp_title = pattern.sub('', temp_title)
-                    
-                    # Track what was removed for logging
-                    if isinstance(matches[0], tuple):
-                        # Patterns with groups - take first group or full match
-                        removed_terms.extend([match[0] if match[0] else str(match) for match in matches])
-                    else:
-                        removed_terms.extend(matches)
-                    
-            except re.error as e:
-                logger.debug(f"Confusing term pattern error for '{pattern_data.get('term', 'Unknown')}': {e}")
-                continue
-        
-        # Clean up extra whitespace and punctuation after removals in temp version
-        if removed_terms:
-            temp_title = re.sub(r'\s+', ' ', temp_title).strip()
-            temp_title = re.sub(r'^[,\s-]+|[,\s-]+$', '', temp_title)  # Remove leading/trailing punctuation
-            temp_title = re.sub(r'\s+', ' ', temp_title).strip()  # Final cleanup
-        
-        return temp_title, removed_terms
-    
-    def _get_available_market_types(self) -> set:
-        """
-        Get available market term types from database dynamically with caching.
-        
-        Returns:
-            Set of available market types (e.g., {"market_for", "market_in", "market_by"})
-        """
-        # Return cached result if available
-        if self._available_market_types_cache is not None:
-            return self._available_market_types_cache
-        
+    def _load_confusing_terms(self) -> List[str]:
+        """Load confusing terms that need special handling."""
         try:
-            # Import PatternType here to avoid circular imports
-            import importlib.util
-            import sys
-            import os
+            # Dynamic import of PatternType 
+            pattern_manager_path = os.path.join(os.path.dirname(__file__), '00b_pattern_library_manager_v1.py')
+            spec = importlib.util.spec_from_file_location("pattern_manager", pattern_manager_path)
+            pattern_manager_module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(pattern_manager_module)
+            PatternType = pattern_manager_module.PatternType
             
-            # Dynamic import for pattern library manager
-            pattern_manager_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '00b_pattern_library_manager_v1.py')
-            spec = importlib.util.spec_from_file_location("pattern_library_manager_v1", pattern_manager_path)
-            pattern_module = importlib.util.module_from_spec(spec)
-            sys.modules["pattern_library_manager_v1"] = pattern_module
-            spec.loader.exec_module(pattern_module)
-            PatternType = pattern_module.PatternType
-            
-            # FIXED: Use shared pattern manager instead of creating new connection
-            market_patterns = self.pattern_library_manager.get_patterns(PatternType.MARKET_TERM)
-            
-            available_types = set()
-            for pattern in market_patterns:
-                term = pattern.get('term')
-                active = pattern.get('active', True)
-                
-                if term and active:
-                    # Convert "Market for" -> "market_for", etc.
-                    market_type = MarketTermType.create_dynamic_type(term)
-                    available_types.add(market_type)
-            
-            logger.debug(f"Loaded market types from database: {available_types}")
-            # Cache the result for future calls
-            self._available_market_types_cache = available_types
-            return available_types
-            
+            if hasattr(self.pattern_library_manager, 'get_patterns'):
+                patterns = self.pattern_library_manager.get_patterns(PatternType.CONFUSING_TERM, active_only=True)
+                return [p.get('term', '') for p in patterns if p.get('term')]
+            return []
         except Exception as e:
-            logger.error(f"Failed to load market types from database: {e}")
-            # Fallback to empty set - will treat everything as standard
-            # Cache the fallback result too
-            self._available_market_types_cache = set()
-            return set()
+            logger.error(f"Error loading confusing terms: {e}")
+            return []
     
-    def _try_standard_pattern_extraction(self, text: str) -> Dict:
+    def _get_available_market_types(self) -> List[str]:
+        """Get available market types from database."""
+        try:
+            # Dynamic import of PatternType 
+            pattern_manager_path = os.path.join(os.path.dirname(__file__), '00b_pattern_library_manager_v1.py')
+            spec = importlib.util.spec_from_file_location("pattern_manager", pattern_manager_path)
+            pattern_manager_module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(pattern_manager_module)
+            PatternType = pattern_manager_module.PatternType
+            
+            if hasattr(self.pattern_library_manager, 'get_patterns'):
+                patterns = self.pattern_library_manager.get_patterns(PatternType.MARKET_TERM, active_only=True)
+                # Convert to format: "market_for", "market_in", "market_by"
+                market_types = []
+                for p in patterns:
+                    term = p.get('term', '')
+                    if term:
+                        # Convert "Market for" -> "market_for"
+                        market_type = term.lower().replace(' ', '_')
+                        market_types.append(market_type)
+                return market_types
+            return []
+        except Exception as e:
+            logger.error(f"Error loading market types: {e}")
+            return []
+    
+    def _extract_market_term_from_title(self, title: str, market_type: str) -> Tuple[str, str, str]:
         """
-        Try to extract report type using standard database patterns.
-        First tries patterns as-is, then tries patterns without "Market" prefix as fallback.
+        Extract the market term from the title based on market type.
         
         Args:
-            text: Text to extract from
+            title: Original title with market term
+            market_type: Type of market term (market_for, market_in, market_by)
+            
+        Returns:
+            (extracted_market_term, remaining_title, pipeline_forward_text)
+        """
+        # Convert market_type back to phrase: "market_for" -> "Market for"
+        market_phrase = market_type.replace('_', ' ').title()
+        
+        # Find the market term in the title
+        pattern = rf'\b{re.escape(market_phrase)}\s+([^,\-–—]+?)(?:[,\-–—]|$)'
+        match = re.search(pattern, title, re.IGNORECASE)
+        
+        if match:
+            # Extract the full market term phrase (e.g., "Market in Automotive")
+            full_market_term = match.group(0).rstrip(',\-–— ')
+            market_context = match.group(1).strip()  # e.g., "Automotive"
+            
+            # Remove the market term from title to get remaining text
+            remaining_title = title[:match.start()] + title[match.end():]
+            remaining_title = remaining_title.strip(' ,\-–—')
+            
+            # Create pipeline forward text (topic/region stays with market context)
+            # e.g., "AI in Automotive" or "AI for Livestock"
+            prefix_part = title[:match.start()].strip()
+            if prefix_part:
+                connector_word = market_phrase.split()[-1].lower()  # "for", "in", "by"
+                pipeline_forward = f"{prefix_part} {connector_word} {market_context}"
+            else:
+                pipeline_forward = market_context
+            
+            return full_market_term, remaining_title, pipeline_forward
+        
+        # If no clear pattern match, return title as-is
+        return "", title, title
+    
+    def _rearrange_title_for_matching(self, title: str, extracted_market_term: str) -> str:
+        """
+        Rearrange title by moving market term to end for pattern matching.
+        
+        Args:
+            title: Title with market term removed
+            extracted_market_term: The extracted market term
+            
+        Returns:
+            Rearranged title for pattern matching
+        """
+        if not title:
+            return extracted_market_term
+        
+        # Append market term at the end for pattern matching
+        # This allows patterns to match against the rearranged structure
+        return f"{title} {extracted_market_term}".strip()
+    
+    def _search_report_patterns_without_market(self, text: str) -> Dict[str, Any]:
+        """
+        Search for report type patterns in text, ignoring "Market" prefix requirement.
+        
+        Args:
+            text: Text to search for patterns
             
         Returns:
             Dictionary with extraction results
         """
-        extraction_methods = [
+        # Try patterns in order of complexity (compound → prefix → embedded → terminal)
+        pattern_groups = [
             ('compound_type', self.compound_type_patterns),
-            ('terminal_type', self.terminal_type_patterns),
             ('prefix_type', self.prefix_type_patterns),
             ('embedded_type', self.embedded_type_patterns),
+            ('terminal_type', self.terminal_type_patterns)
         ]
         
-        # First pass: Try patterns as-is
-        for format_name, patterns in extraction_methods:
+        for format_name, patterns in pattern_groups:
             for pattern_data in patterns:
                 try:
-                    pattern = re.compile(pattern_data['pattern'])
+                    pattern_text = pattern_data['pattern']
+                    
+                    # Create regex pattern (handle database pattern format)
+                    # Remove any "Market" prefix requirement for market term matching
+                    modified_pattern = pattern_text
+                    if modified_pattern.startswith('\\bMarket\\s+'):
+                        # Remove Market prefix from regex pattern
+                        modified_pattern = modified_pattern[12:]  # Remove "\bMarket\s+" prefix
+                    
+                    # Create regex (pattern_text is already a regex)
+                    pattern = re.compile(modified_pattern, re.IGNORECASE)
                     match = pattern.search(text)
                     
                     if match:
-                        # Extract the report type from the match
-                        # Extract the report type from full match (not captured group)
-                        # This ensures we get "Market Size Report" not just "Report"
                         extracted = match.group(0).strip()
+                        confidence = pattern_data.get('confidence_weight', 0.9)
                         
-                        confidence = pattern_data.get('confidence_weight', 0.8)
-                        
-                        # Return first successful match (highest priority patterns first)
                         return {
                             'extracted_report_type': extracted,
                             'format_type': ReportTypeFormat(format_name),
                             'confidence': confidence,
-                            'matched_pattern': pattern_data['pattern'],
+                            'matched_pattern': pattern_text,
                             'raw_match': match.group(0),
-                            'notes': f"Matched {format_name} pattern"
+                            'notes': f"Matched {format_name} pattern (market-aware)"
                         }
                         
                 except (re.error, ValueError) as e:
                     logger.debug(f"Pattern error: {e}")
                     continue
         
-        # Second pass: Try Market-prefixed patterns without the Market requirement
-        # This handles cases like "Aftermarket Size & Share Report" where "Aftermarket" is removed
-        # and we want to match "Size & Share Report" against "Market Size & Share Report" patterns
-        # IMPORTANT: Process compound patterns first to match more complex phrases before simple ones
-        reordered_methods = [
-            ('compound_type', self.compound_type_patterns),  # Most complex first
-            ('prefix_type', self.prefix_type_patterns),
-            ('embedded_type', self.embedded_type_patterns),
-            ('terminal_type', self.terminal_type_patterns),  # Simplest last
-        ]
-        
-        for format_name, patterns in reordered_methods:
-            for pattern_data in patterns:
-                try:
-                    pattern_regex = pattern_data['pattern']
-                    
-                    # Check if this pattern starts with Market requirement
-                    if '\\bMarket\\s+' in pattern_regex or '\\bmarket\\s+' in pattern_regex:
-                        # Create a variant without the Market prefix requirement
-                        modified_pattern = pattern_regex.replace('\\bMarket\\s+', '', 1)
-                        modified_pattern = modified_pattern.replace('\\bmarket\\s+', '', 1)
-                        
-                        pattern = re.compile(modified_pattern, re.IGNORECASE)
-                        match = pattern.search(text)
-                        
-                        if match:
-                            # Extract the report type from full match (not captured group)
-                            # This ensures we get "Size & Share Report" not just "Report"
-                            extracted = match.group(0).strip()
-                            
-                            # Slightly lower confidence for fallback matches
-                            confidence = pattern_data.get('confidence_weight', 0.8) * 0.9
-                            
-                            return {
-                                'extracted_report_type': extracted,
-                                'format_type': ReportTypeFormat(format_name),
-                                'confidence': confidence,
-                                'matched_pattern': f"{pattern_data['pattern']} (without Market prefix)",
-                                'raw_match': match.group(0),
-                                'notes': f"Matched {format_name} pattern (Market prefix removed for confusing term handling)"
-                            }
-                        
-                except (re.error, ValueError) as e:
-                    logger.debug(f"Pattern error (Market fallback): {e}")
-                    continue
-        
-        # No patterns matched
         return {
             'extracted_report_type': None,
             'format_type': ReportTypeFormat.UNKNOWN,
             'confidence': 0.0,
             'matched_pattern': None,
             'raw_match': None,
-            'notes': 'No patterns matched (including Market prefix fallback)'
+            'notes': 'No patterns matched in market-aware search'
         }
     
-    def _analyze_market_context(self, title: str, market_term_type: MarketTermType) -> Tuple[str, str]:
+    def _reconstruct_report_type_with_market(self, extracted_type: str, market_term: str) -> str:
         """
-        Analyze title based on market term type context.
+        Reconstruct the final report type with proper market term positioning.
         
         Args:
-            title: Title to analyze
-            market_term_type: Market term classification
+            extracted_type: The extracted report type pattern
+            market_term: The original market term (e.g., "Market in Automotive")
             
         Returns:
-            (analysis_region, context_notes)
-        """
-        context_notes = []
-        analysis_region = title
-        
-        if market_term_type == MarketTermType.MARKET_IN:
-            # For "Market in X" - look for patterns after the region
-            context_notes.append("market_in type: analyzing post-region patterns")
-            for separator in self.market_context_indicators['market_in_separators']:
-                if separator in title.lower():
-                    parts = title.split(separator, 1)
-                    if len(parts) == 2:
-                        analysis_region = parts[1].strip()
-                        context_notes.append(f"Focusing on region portion: '{analysis_region}'")
-                        break
-                        
-        elif market_term_type == MarketTermType.MARKET_FOR:
-            # For "Market for X" - look for patterns after the topic
-            context_notes.append("market_for type: analyzing post-topic patterns")
-            for separator in self.market_context_indicators['market_for_separators']:
-                if separator in title.lower():
-                    parts = title.split(separator, 1)
-                    if len(parts) == 2:
-                        analysis_region = parts[1].strip()
-                        context_notes.append(f"Focusing on topic portion: '{analysis_region}'")
-                        break
-        else:
-            context_notes.append("standard type: analyzing full title")
-        
-        return analysis_region, "; ".join(context_notes)
-    
-    def _should_prepend_market(self, market_term_type: MarketTermType, extracted_type: str) -> bool:
-        """
-        Determine if 'Market' should be prepended to extracted report type.
-        
-        Args:
-            market_term_type: Market term classification
-            extracted_type: The extracted report type
-            
-        Returns:
-            True if 'Market' should be prepended
+            Reconstructed report type with market term
         """
         if not extracted_type:
-            return False
+            # If no pattern found, extract just "Market" from market term
+            if market_term and market_term.lower().startswith('market'):
+                return "Market"
+            return None
         
-        # Only prepend for market_for and market_in types
-        if market_term_type not in [MarketTermType.MARKET_FOR, MarketTermType.MARKET_IN]:
-            return False
-        
-        # Don't prepend if 'Market' is already present
+        # If extracted type already contains "Market", return as-is
         if 'market' in extracted_type.lower():
-            return False
+            return extracted_type
         
-        return True
+        # Otherwise, prepend "Market" to the extracted type
+        return f"Market {extracted_type}"
     
-    def _create_final_report_type(self, extracted_type: str, market_term_type: MarketTermType) -> Tuple[str, bool]:
+    def _process_market_aware_workflow(self, title: str, market_type: str) -> Dict[str, Any]:
         """
-        Create the final report type with Market prepending if needed.
+        Process market term titles using extraction→rearrangement→reconstruction workflow.
         
         Args:
-            extracted_type: The extracted report type
-            market_term_type: Market term classification
+            title: Title to process (dates already removed)
+            market_type: Type of market term (market_for, market_in, market_by)
             
         Returns:
-            (final_report_type, was_prepended)
+            Processing results dictionary
         """
-        if not extracted_type:
-            return extracted_type, False
+        # Step 1: Extract market term from title
+        market_term, remaining_title, pipeline_forward = self._extract_market_term_from_title(title, market_type)
         
-        should_prepend = self._should_prepend_market(market_term_type, extracted_type)
+        if not market_term:
+            # Couldn't extract market term, fall back to standard processing
+            logger.warning(f"Could not extract market term from '{title}' with type '{market_type}'")
+            return self._process_standard_workflow(title)
         
-        if should_prepend:
-            # Prepend 'Market' with proper spacing
-            if extracted_type.startswith(('-', '–', '—')):
-                final_type = f"Market {extracted_type}"
-            else:
-                final_type = f"Market {extracted_type}"
-            return final_type, True
+        logger.debug(f"Extracted market term: '{market_term}' from '{title}'")
+        logger.debug(f"Remaining title: '{remaining_title}'")
+        logger.debug(f"Pipeline forward: '{pipeline_forward}'")
         
-        return extracted_type, False
+        # Step 2: Rearrange title for pattern matching (move market term to end)
+        rearranged_title = self._rearrange_title_for_matching(remaining_title, market_term)
+        logger.debug(f"Rearranged for matching: '{rearranged_title}'")
+        
+        # Step 3: Search for report type patterns (without Market prefix requirement)
+        result = self._search_report_patterns_without_market(remaining_title)
+        
+        # Step 4: Reconstruct final report type with market term
+        final_type = self._reconstruct_report_type_with_market(
+            result.get('extracted_report_type'), 
+            market_term
+        )
+        
+        # Update statistics
+        self.extraction_stats['market_aware_workflow'] += 1
+        if final_type:
+            self.extraction_stats['market_reconstructed_count'] += 1
+        
+        return {
+            'extracted_report_type': result.get('extracted_report_type'),
+            'final_report_type': final_type,
+            'format_type': result.get('format_type', ReportTypeFormat.UNKNOWN),
+            'confidence': result.get('confidence', 0.9 if final_type else 0.0),
+            'matched_pattern': result.get('matched_pattern'),
+            'raw_match': result.get('raw_match'),
+            'processing_workflow': 'market_aware',
+            'rearranged_title': rearranged_title,
+            'extracted_market_term': market_term,
+            'pipeline_forward_text': pipeline_forward,
+            'notes': f"Market-aware processing: {result.get('notes', '')}"
+        }
+    
+    def _process_standard_workflow(self, title: str) -> Dict[str, Any]:
+        """
+        Process standard titles using direct database pattern matching.
+        
+        Args:
+            title: Title to process (dates already removed)
+            
+        Returns:
+            Processing results dictionary
+        """
+        # Clean title from confusing terms for matching
+        temp_title, removed_terms = self._create_confusing_terms_free_text(title)
+        
+        # Try all pattern groups in order
+        pattern_groups = [
+            ('compound_type', self.compound_type_patterns),
+            ('prefix_type', self.prefix_type_patterns),
+            ('embedded_type', self.embedded_type_patterns),
+            ('terminal_type', self.terminal_type_patterns)
+        ]
+        
+        best_result = None
+        for format_name, patterns in pattern_groups:
+            for pattern_data in patterns:
+                try:
+                    pattern_text = pattern_data['pattern']
+                    
+                    # Create regex pattern (pattern_text is already a regex)
+                    pattern = re.compile(pattern_text, re.IGNORECASE)
+                    match = pattern.search(temp_title)
+                    
+                    if match:
+                        extracted = match.group(0).strip()
+                        confidence = pattern_data.get('confidence_weight', 0.9)
+                        
+                        best_result = {
+                            'extracted_report_type': extracted,
+                            'final_report_type': extracted,
+                            'format_type': ReportTypeFormat(format_name),
+                            'confidence': confidence,
+                            'matched_pattern': pattern_text,
+                            'raw_match': match.group(0),
+                            'processing_workflow': 'standard',
+                            'pipeline_forward_text': title,
+                            'notes': f"Standard processing: Matched {format_name} pattern"
+                        }
+                        
+                        # Update statistics
+                        self.extraction_stats['standard_workflow'] += 1
+                        self.extraction_stats[format_name] += 1
+                        
+                        return best_result
+                        
+                except (re.error, ValueError) as e:
+                    logger.debug(f"Pattern error: {e}")
+                    continue
+        
+        # No match found
+        self.extraction_stats['standard_workflow'] += 1
+        return {
+            'extracted_report_type': None,
+            'final_report_type': None,
+            'format_type': ReportTypeFormat.UNKNOWN,
+            'confidence': 0.0,
+            'matched_pattern': None,
+            'raw_match': None,
+            'processing_workflow': 'standard',
+            'pipeline_forward_text': title,
+            'notes': 'No patterns matched in standard processing'
+        }
+    
+    def _create_confusing_terms_free_text(self, text: str) -> Tuple[str, List[str]]:
+        """Remove confusing terms from text for pattern matching."""
+        removed_terms = []
+        clean_text = text
+        
+        for term in self.confusing_terms:
+            if term.lower() in clean_text.lower():
+                # Remove the term
+                pattern = re.compile(rf'\b{re.escape(term)}\b', re.IGNORECASE)
+                clean_text = pattern.sub('', clean_text).strip()
+                removed_terms.append(term)
+        
+        # Clean up extra spaces
+        clean_text = ' '.join(clean_text.split())
+        
+        return clean_text, removed_terms
     
     def extract(self, title: str, market_term_type: str = "standard", 
                 original_title: str = None, date_extractor=None) -> MarketAwareReportTypeResult:
         """
-        Extract report type with market term context awareness.
+        Extract report type with CORRECT market-aware processing logic.
         
-        CORRECTED APPROACH based on user feedback:
-        - For market_in, market_for, market_by: "Market" IS the report type
-        - For standard titles: use database pattern matching
+        Processing Logic (GitHub Issue #10):
+        - Market Term Titles: Extract → Rearrange → Match → Reconstruct
+        - Standard Titles: Direct database pattern matching
         
         Args:
             title: Title to extract from (potentially with dates already removed)
@@ -589,89 +561,80 @@ class MarketAwareReportTypeExtractor:
                 date_removed_title=None,
                 market_prepended=False,
                 context_analysis="Empty or whitespace-only title",
+                processing_workflow=None,
+                rearranged_title=None,
+                extracted_market_term=None,
                 notes="Empty or whitespace-only title"
             )
         
         # Track processing stats
         self.extraction_stats['total_processed'] += 1
         
-        # Use database pattern matching for ALL titles, with market context awareness
-        # CRITICAL: Create confusing-terms-free version for pattern matching only
-        # The original title is preserved for downstream pipeline steps  
-        temp_title_for_extraction, removed_confusing_terms = self._create_confusing_terms_free_text(title)
+        # Update market type stats
+        if market_term_type == 'standard':
+            self.extraction_stats['standard_processed'] += 1
+        elif market_term_type == 'market_for':
+            self.extraction_stats['market_for_processed'] += 1
+        elif market_term_type == 'market_in':
+            self.extraction_stats['market_in_processed'] += 1
+        elif market_term_type == 'market_by':
+            self.extraction_stats['market_by_processed'] += 1
         
-        # Use the temporary cleaned version for report type pattern matching
-        best_result = self._try_standard_pattern_extraction(temp_title_for_extraction)
+        # CRITICAL: Choose processing workflow based on market term type
+        if market_term_type in self.available_market_types:
+            # Use market-aware workflow for market term titles
+            logger.info(f"Processing '{title}' with MARKET-AWARE workflow (type: {market_term_type})")
+            result = self._process_market_aware_workflow(title, market_term_type)
+            context_analysis = f"Market-aware processing ({market_term_type}): Extract→Rearrange→Match→Reconstruct"
+        else:
+            # Use standard workflow for standard titles
+            logger.info(f"Processing '{title}' with STANDARD workflow")
+            result = self._process_standard_workflow(title)
+            context_analysis = "Standard processing: Direct database pattern matching"
         
-        # Handle special case: for market_for/market_in/market_by, if no specific patterns found,
-        # default to "Market" as the report type (business logic requirement)
-        available_market_types = self._get_available_market_types()
-        if (market_term_type in available_market_types and 
-            not best_result.get('extracted_report_type')):
-            best_result = {
-                'extracted_report_type': 'Market',
-                'format_type': ReportTypeFormat.EMBEDDED_TYPE,
-                'confidence': 0.95,
-                'matched_pattern': f'Market term classification: {market_term_type}',
-                'raw_match': 'Market',
-                'notes': f'Default Market extraction for {market_term_type}'
-            }
-        
-        if best_result.get('extracted_report_type'):
+        # Update success/failure stats
+        if result.get('final_report_type'):
             self.extraction_stats['successful_extractions'] += 1
         else:
             self.extraction_stats['failed_extractions'] += 1
         
-        # Create normalized version
-        final_type = best_result.get('extracted_report_type')
-        normalized_type = self._normalize_report_type(final_type) if final_type else None
-        
-        # Build context analysis with confusing terms info
-        context_analysis = "Database-driven pattern matching"
-        if market_term_type in available_market_types:
-            context_analysis += f" with {market_term_type} context"
-        if removed_confusing_terms:
-            context_analysis += f" (confusing terms excluded: {', '.join(removed_confusing_terms)})"
-        
-        notes = f"Market type: {market_term_type}; {best_result.get('notes', 'Database pattern matching')}"
-        if removed_confusing_terms:
-            notes += f"; Confusing terms excluded from extraction: {', '.join(removed_confusing_terms)}"
-        
+        # Build final result
         return MarketAwareReportTypeResult(
-            title=title,  # IMPORTANT: Return original title, not temp version
+            title=result.get('pipeline_forward_text', title),  # Use pipeline forward text
             original_title=original_title or title,
             market_term_type=market_term_type,
-            extracted_report_type=best_result.get('extracted_report_type'),
-            final_report_type=final_type,
-            normalized_report_type=normalized_type,
-            format_type=best_result.get('format_type', ReportTypeFormat.UNKNOWN),
-            confidence=best_result.get('confidence', 0.0),
-                matched_pattern=best_result.get('matched_pattern'),
-                raw_match=best_result.get('raw_match'),
-                date_removed_title=title,  # IMPORTANT: Preserve original title for downstream steps
-                market_prepended=False,
-                context_analysis=context_analysis,
-                notes=notes
-            )
-    
-    # REMOVED: _try_context_patterns method - now using database patterns exclusively
+            extracted_report_type=result.get('extracted_report_type'),
+            final_report_type=result.get('final_report_type'),
+            normalized_report_type=self._normalize_report_type(result.get('final_report_type')),
+            format_type=result.get('format_type', ReportTypeFormat.UNKNOWN),
+            confidence=result.get('confidence', 0.0),
+            matched_pattern=result.get('matched_pattern'),
+            raw_match=result.get('raw_match'),
+            date_removed_title=title,
+            market_prepended=False,  # We reconstruct, not prepend
+            context_analysis=context_analysis,
+            processing_workflow=result.get('processing_workflow'),
+            rearranged_title=result.get('rearranged_title'),
+            extracted_market_term=result.get('extracted_market_term'),
+            notes=result.get('notes', '')
+        )
     
     def _normalize_report_type(self, report_type: str) -> str:
-        """Normalize report type using loaded normalizations."""
+        """Normalize report type for consistency."""
         if not report_type:
             return report_type
         
-        # Apply normalizations
-        normalized = report_type
-        for key, value in self.report_type_normalizations.items():
-            if key.lower() in report_type.lower():
-                normalized = normalized.replace(key, value)
-                break
+        # Basic normalization
+        normalized = report_type.strip()
+        
+        # Ensure consistent capitalization for "Market"
+        if normalized.lower().startswith('market'):
+            normalized = 'Market' + normalized[6:]
         
         return normalized
     
     def get_stats(self) -> MarketAwareExtractionStats:
-        """Get market-aware extraction statistics."""
+        """Get extraction statistics."""
         stats = self.extraction_stats
         return MarketAwareExtractionStats(
             total_processed=stats['total_processed'],
@@ -680,13 +643,14 @@ class MarketAwareReportTypeExtractor:
             standard_processed=stats['standard_processed'],
             market_for_processed=stats['market_for_processed'],
             market_in_processed=stats['market_in_processed'],
+            market_by_processed=stats.get('market_by_processed', 0),
+            market_aware_workflow=stats.get('market_aware_workflow', 0),
+            standard_workflow=stats.get('standard_workflow', 0),
             terminal_type=stats['terminal_type'],
             embedded_type=stats['embedded_type'],
             prefix_type=stats['prefix_type'],
             compound_type=stats['compound_type'],
-            market_prepended_count=stats['market_prepended_count'],
-            market_for_prepended=stats['market_for_prepended'],
-            market_in_prepended=stats['market_in_prepended']
+            market_reconstructed_count=stats.get('market_reconstructed_count', 0)
         )
     
     def close_connection(self):
@@ -695,7 +659,7 @@ class MarketAwareReportTypeExtractor:
             self.pattern_library_manager.close_connection()
 
 if __name__ == "__main__":
-    # Test the market-aware extractor
+    # Test the corrected market-aware extractor
     import os
     import sys
     import importlib.util
@@ -715,44 +679,53 @@ if __name__ == "__main__":
         print(f"Could not import PatternLibraryManager: {e}")
         sys.exit(1)
     
-    # Test cases from GitHub Issue #3
+    # Initialize components
+    pattern_library_manager = PatternLibraryManager()
     extractor = MarketAwareReportTypeExtractor(pattern_library_manager)
     
+    print("🎯 Market-Aware Report Type Extractor v2.0 - CORRECTED Implementation")
+    print("=" * 70)
+    
+    # Test cases demonstrating proper workflow
     test_cases = [
         # Market In examples
-        ("Retail Market in Singapore - Size, Outlook & Statistics", MarketTermType.MARKET_IN),
-        ("Artificial Intelligence (AI) Market in Automotive", MarketTermType.MARKET_IN),
+        ("AI Market in Automotive Outlook & Trends", "market_in"),
+        ("Retail Market in Singapore - Size, Outlook & Statistics", "market_in"),
         
         # Market For examples  
-        ("Global Market for Advanced Materials Analysis, 2030", MarketTermType.MARKET_FOR),
-        ("Market for Electric Vehicles Report", MarketTermType.MARKET_FOR),
+        ("Veterinary Vaccine Market for Livestock Analysis", "market_for"),
+        ("Global Market for Advanced Materials Report", "market_for"),
         
         # Standard examples
-        ("Electric Vehicle Market Size Report, 2025", MarketTermType.STANDARD),
-        ("Healthcare Technology Market Analysis", MarketTermType.STANDARD),
+        ("Electric Vehicle Market Size Report", "standard"),
+        ("Healthcare Technology Market Analysis", "standard"),
+        ("APAC Personal Protective Equipment Market Analysis", "standard"),
     ]
-    
-    print("🎯 Market-Aware Report Type Extractor Test Results")
-    print("=" * 70)
     
     for title, market_type in test_cases:
         result = extractor.extract(title, market_type)
         
-        print(f"Title: {title}")
-        print(f"  Market Type: {market_type.value}")
-        print(f"  Extracted: {result.extracted_report_type}")
-        print(f"  Final: {result.final_report_type}")
-        print(f"  Market Prepended: {result.market_prepended}")
-        print(f"  Context: {result.context_analysis}")
-        print(f"  Confidence: {result.confidence}")
-        print()
+        print(f"\n📊 Title: {title}")
+        print(f"   Market Type: {market_type}")
+        print(f"   Processing Workflow: {result.processing_workflow}")
+        if result.extracted_market_term:
+            print(f"   Extracted Market Term: {result.extracted_market_term}")
+        if result.rearranged_title:
+            print(f"   Rearranged Title: {result.rearranged_title}")
+        print(f"   Extracted Report Type: {result.extracted_report_type}")
+        print(f"   Final Report Type: {result.final_report_type}")
+        print(f"   Pipeline Forward: {result.title}")
+        print(f"   Confidence: {result.confidence:.2f}")
+        print(f"   Notes: {result.notes}")
     
-    print("Statistics:")
+    print("\n" + "=" * 70)
+    print("📈 Statistics:")
     stats = extractor.get_stats()
-    print(f"  Total Processed: {stats.total_processed}")
-    print(f"  Successful: {stats.successful_extractions}")
-    print(f"  Market Prepended: {stats.market_prepended_count}")
-    print(f"  Market For Prepended: {stats.market_for_prepended}")
-    print(f"  Market In Prepended: {stats.market_in_prepended}")
+    print(f"   Total Processed: {stats.total_processed}")
+    print(f"   Successful: {stats.successful_extractions}")
+    print(f"   Failed: {stats.failed_extractions}")
+    print(f"   Market-Aware Workflow: {stats.market_aware_workflow}")
+    print(f"   Standard Workflow: {stats.standard_workflow}")
+    print(f"   Market Reconstructed: {stats.market_reconstructed_count}")
     
     extractor.close_connection()
