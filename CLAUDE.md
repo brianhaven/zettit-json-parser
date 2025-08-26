@@ -8,19 +8,160 @@ A systematic pattern-matching solution that extracts structured information (top
 
 ## Development Standards
 
-### Script Organization
+### Script Organization & Directory Structure
 
-**Processing Pipeline (`/experiments/`):**
-- **00-04 numbered scripts:** Main processing pipeline in execution order
-- **00a-03a initialization scripts:** Setup and pattern library management
-- **Pattern discovery:** Human-review workflow for pattern enhancement
+**CRITICAL: All development follows this mandatory directory structure:**
 
-**Supporting Directories:**
-- **`/experiments/tests/`:** Development, testing, and validation scripts
+#### **Main Processing Scripts (`/experiments/`)**
+- **00-07 numbered scripts:** Main processing pipeline components in execution order
+- **00a-03a initialization scripts:** Setup and pattern library management  
+- **Pattern discovery scripts:** Human-review workflow for pattern enhancement
+- **All main scripts must be developed in `/experiments/` directory**
+
+#### **Test Scripts (`/experiments/tests/`)**
+- **ALL test scripts must be stored in `/experiments/tests/` directory**
+- Test scripts use systematic naming: `test_{script_name}_{version}.py`
+- Test scripts must include proper import path handling for parent directory modules
+- Examples: `test_03_market_aware_pipeline_v2.py`, `test_phase1_market_term_classifier_harness.py`
+
+#### **Output Directory (`/outputs/`)**
+- **ALL script outputs must be stored in `/outputs/` directory**
+- Each script run creates a new timestamped subdirectory: `/outputs/{YYYYMMDD_HHMMSS}_{TYPE}/`
+- Output files within subdirectory use descriptive names (no timestamp prefix needed)
+- Examples: `/outputs/20250825_044253_phase3_pipeline_01_02_03/`, `/outputs/20250821_120439_phase1_market_term_classifier/`
+
+#### **Supporting Directories:**
 - **`/experiments/archive/`:** Legacy and experimental approaches
-- **`/experiments/utilities/`:** One-time setup and migration scripts
-- **`/outputs/`:** All script outputs with timestamp format `{YYYYMMDD_HHMMSS}_{TYPE}`
+- **`/experiments/utilities/`:** One-time setup and migration scripts  
 - **`/resources/`:** Static data files and mappings
+
+### Import Path Management
+
+**CRITICAL: All scripts must handle imports correctly based on their location:**
+
+#### **For Test Scripts in `/experiments/tests/`:**
+```python
+import sys
+import os
+
+# Add parent directory to path for imports
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Dynamic import pattern for main scripts
+import importlib.util
+
+def import_module_from_path(module_name: str, file_path: str):
+    """Import a module from a file path."""
+    spec = importlib.util.spec_from_file_location(module_name, file_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+# Import main scripts from parent directory
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+pattern_lib = import_module_from_path("pattern_library_manager_v1", 
+                                    os.path.join(parent_dir, "00b_pattern_library_manager_v1.py"))
+```
+
+#### **For Main Scripts in `/experiments/`:**
+```python
+import importlib.util
+import sys
+import os
+
+# Dynamic import for same-directory modules
+try:
+    pattern_manager_path = os.path.join(os.path.dirname(__file__), "00b_pattern_library_manager_v1.py")
+    spec = importlib.util.spec_from_file_location("pattern_library_manager_v1", pattern_manager_path)
+    pattern_module = importlib.util.module_from_spec(spec)
+    sys.modules["pattern_library_manager_v1"] = pattern_module
+    spec.loader.exec_module(pattern_module)
+    PatternLibraryManager = pattern_module.PatternLibraryManager
+except Exception as e:
+    logger.error(f"Failed to import PatternLibraryManager: {e}")
+```
+
+### Output Directory Creation Standards
+
+**CRITICAL: All scripts must create outputs using this standard pattern:**
+
+#### **For Test Scripts:**
+```python
+import pytz
+from datetime import datetime
+from pathlib import Path
+
+def create_output_directory(script_name: str) -> str:
+    """Create timestamped output directory using absolute paths."""
+    # Get absolute path to outputs directory (from /experiments/tests/ to /outputs/)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    experiments_dir = os.path.dirname(script_dir)  
+    project_root = os.path.dirname(experiments_dir)
+    outputs_dir = os.path.join(project_root, 'outputs')
+    
+    # Create timestamp in Pacific Time
+    pdt = pytz.timezone('America/Los_Angeles')
+    timestamp = datetime.now(pdt).strftime('%Y%m%d_%H%M%S')
+    
+    # Create timestamped subdirectory
+    output_dir = os.path.join(outputs_dir, f"{timestamp}_{script_name}")
+    os.makedirs(output_dir, exist_ok=True)
+    
+    return output_dir
+```
+
+#### **For Main Scripts:**
+```python
+def create_output_directory(script_name: str) -> str:
+    """Create timestamped output directory from experiments directory."""
+    # Create outputs directory relative to current script location
+    timestamp = datetime.now(pytz.timezone('America/Los_Angeles')).strftime('%Y%m%d_%H%M%S')
+    output_dir = f"../outputs/{timestamp}_{script_name}"
+    os.makedirs(output_dir, exist_ok=True)
+    return output_dir
+```
+
+### Path Convention Guidelines
+
+**CRITICAL: Follow these absolute path conventions to avoid errors:**
+
+#### **Common Path Issues to Avoid:**
+1. **Never use relative paths** like `../experiments/` from test scripts - use absolute paths  
+2. **Never hardcode paths** - always calculate paths dynamically from `__file__`
+3. **Always verify parent directory navigation** - test scripts need to go up 2 levels to reach project root
+4. **Always create output directories** before writing files - use `os.makedirs(output_dir, exist_ok=True)`
+
+#### **Standard Path Calculations:**
+```python
+# For test scripts in /experiments/tests/
+script_dir = os.path.dirname(os.path.abspath(__file__))           # /experiments/tests/
+experiments_dir = os.path.dirname(script_dir)                     # /experiments/  
+project_root = os.path.dirname(experiments_dir)                   # /
+outputs_dir = os.path.join(project_root, 'outputs')              # /outputs/
+
+# For main scripts in /experiments/
+script_dir = os.path.dirname(os.path.abspath(__file__))           # /experiments/
+project_root = os.path.dirname(script_dir)                        # /
+outputs_dir = os.path.join(project_root, 'outputs')              # /outputs/
+```
+
+#### **Validated Output Directory Patterns:**
+- **From test scripts:** Use absolute path calculation (see code above)
+- **From main scripts:** Use relative path `../outputs/` (validated working pattern)
+- **Always include descriptive script name** in output directory name
+- **Always include Pacific Time timestamp** for consistency
+
+#### **File Organization Within Output Directories:**
+```python
+# Standard output file patterns
+output_files = {
+    'summary_report.md': 'Main analysis summary with dual timestamps',
+    'detailed_results.json': 'Complete processing results data', 
+    'failed_extractions.txt': 'Cases that failed processing',
+    'pattern_analysis.txt': 'Pattern matching analysis',
+    'pipeline_results.json': 'Full pipeline output data'
+}
+```
 
 ### Output File Requirements
 
@@ -270,9 +411,43 @@ def enhanced_html_cleaning(html_content: str) -> Dict[str, str]:
 
 ### Code Standards
 
-**Python Command Usage:**
-- **IMPORTANT:** Always use `python3` command, not `python` in all bash commands
-- This ensures compatibility with the project's Python environment
+#### **Python Command Requirements**
+**CRITICAL: Always use `python3` command, never `python`**
+- All bash commands must use `python3` for script execution
+- This ensures compatibility with the project's Python environment  
+- Examples: `python3 test_03_market_aware_pipeline_v2.py`, `python3 01_market_term_classifier_v1.py`
+
+#### **Script Development Standards**
+**All scripts must follow these mandatory patterns:**
+
+1. **Shebang Line:** Always include `#!/usr/bin/env python3` at the top
+2. **Logging Configuration:** Include comprehensive logging setup
+3. **Error Handling:** Implement try/catch blocks for all major operations
+4. **Dynamic Imports:** Use `importlib.util` for cross-script imports (never static imports)
+5. **Output Generation:** Always create timestamped output directories and files
+6. **Documentation:** Include detailed docstrings and inline comments for complex logic
+
+#### **Module Import Standards**
+```python
+# CORRECT: Dynamic imports using importlib.util
+import importlib.util
+
+def import_module_from_path(module_name: str, file_path: str):
+    spec = importlib.util.spec_from_file_location(module_name, file_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+# INCORRECT: Static imports (will fail due to directory structure)
+# from experiments.01_market_term_classifier_v1 import MarketTermClassifier
+```
+
+#### **Database Connection Management**
+**CRITICAL: Use shared PatternLibraryManager instances**
+- All components must share a single PatternLibraryManager instance
+- Never create multiple MongoDB connections in the same script
+- Use database connection caching for performance
+- Follow the proven pattern from working test scripts
 
 **MongoDB Integration:**
 - Use environment variables from `.env` file for connection
