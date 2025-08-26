@@ -1,0 +1,165 @@
+Market-Aware Report Type Extractor v2 - Detailed Analysis
+Analysis Date (PDT): 2025-08-25 17:13:48 PDT
+Analysis Date (UTC): 2025-08-26 00:13:48 UTC
+================================================================================
+
+Test #1: Metal Finishing Chemicals Market Size & Share Report, 2025
+  Market Type: standard (conf: 0.900)
+  Date: 2025
+  Cleaned: Metal Finishing Chemicals Market Size & Share Report
+  Report Type: 'Market Size & Share Report' (conf: 0.900)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #2: Portable Generator Market Size, Share, Industry Report 2030
+  Market Type: standard (conf: 0.900)
+  Date: 2030
+  Cleaned: Portable Generator Market Size, Share, Industry
+  Report Type: 'Market Size, Share, Industry' (conf: 0.910)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #3: Clamp-on Ultrasonic Flowmeter Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Clamp-on Ultrasonic Flowmeter Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #4: Polar Polymers Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Polar Polymers Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #5: Cardiovascular Digital Solutions Market Share Report, 2030
+  Market Type: standard (conf: 0.900)
+  Date: 2030
+  Cleaned: Cardiovascular Digital Solutions Market Share Report
+  Report Type: 'Report' (conf: 0.930)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #6: Powered Surgical Instruments Market Size Report, 2030
+  Market Type: standard (conf: 0.900)
+  Date: 2030
+  Cleaned: Powered Surgical Instruments Market Size Report
+  Report Type: 'Report' (conf: 0.930)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #7: Dyestuff (Black Color) Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Dyestuff (Black Color) Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #8: Webtoons Market Size, Share & Trends Analysis Report 2030
+  Market Type: standard (conf: 0.900)
+  Date: 2030
+  Cleaned: Webtoons Market Size, Share & Trends Analysis
+  Report Type: 'Analysis' (conf: 0.900)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #9: Cloud Compliance Market Size, Share, Industry Report, 2030
+  Market Type: standard (conf: 0.900)
+  Date: 2030
+  Cleaned: Cloud Compliance Market Size, Share, Industry Report
+  Report Type: 'Market Size, Share, Industry Report' (conf: 0.900)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #10: Chronic Total Occlusion Devices Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Chronic Total Occlusion Devices Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #11: Orthopaedic Bracing Devices Market Size, Global Industry Report, 2025
+  Market Type: standard (conf: 0.900)
+  Date: 2025
+  Cleaned: Orthopaedic Bracing Devices Market Size, Global Industry Report
+  Report Type: 'Market Size, Global Industry Report' (conf: 0.900)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #12: Absorbent Mats Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Absorbent Mats Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #13: Waste to energy Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Waste to energy Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #14: Wind Turbine Inspection Drones Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Wind Turbine Inspection Drones Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #15: Pediatric Perfusion Products Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Pediatric Perfusion Products Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #16: Gas Pooling Mechanism Market Size, Global Industry Report, 2022
+  Market Type: standard (conf: 0.900)
+  Date: 2022
+  Cleaned: Gas Pooling Mechanism Market Size, Global Industry Report
+  Report Type: 'Market Size, Global Industry Report' (conf: 0.900)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #17: Valve Positioners Market Size And Share Report, 2030
+  Market Type: standard (conf: 0.900)
+  Date: 2030
+  Cleaned: Valve Positioners Market Size And Share Report
+  Report Type: 'Report' (conf: 0.940)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #18: Pigmentation Disorder Treatment Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Pigmentation Disorder Treatment Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #19: Alcoholic Beverage Bottle Recycling Market
+  Market Type: standard (conf: 0.900)
+  Date: None
+  Cleaned: Alcoholic Beverage Bottle Recycling Market
+  Report Type: 'Market' (conf: 0.960)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #20: U.S. Teleradiology Market Size, Share & Trends Report, 2030
+  Market Type: standard (conf: 0.900)
+  Date: 2030
+  Cleaned: U.S. Teleradiology Market Size, Share & Trends Report
+  Report Type: 'Market Size, Share & Trends Report' (conf: 0.900)
+  Context: Standard processing: pattern matching
+  Success: ✅
+

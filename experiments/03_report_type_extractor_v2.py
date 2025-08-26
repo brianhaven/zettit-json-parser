@@ -148,28 +148,7 @@ class MarketAwareReportTypeExtractor:
         }
         
         # Context-specific patterns for market_for and market_in
-        self.context_patterns = {
-            # Patterns that work well on isolated context regions
-            'standalone_report_words': [
-                r'\banalysis\b',
-                r'\breport\b', 
-                r'\bstudy\b',
-                r'\boutlook\b',
-                r'\bstatistics\b',
-                r'\btrends\b'
-            ],
-            'dash_suffix_patterns': [
-                r'[-–—]\s*size[,\s]*outlook[,\s]*&?\s*statistics',
-                r'[-–—]\s*size[,\s]*share[,\s]*&?\s*trends',
-                r'[-–—]\s*analysis[,\s]*&?\s*outlook',
-                r'[-–—]\s*market\s+size[,\s]*&?\s*share'
-            ],
-            'compound_context_patterns': [
-                r'\bsize\s*[,&]\s*share\b',
-                r'\bsize\s*[,&]\s*outlook\b',
-                r'\boutlook\s*[,&]\s*statistics\b'
-            ]
-        }
+        # REMOVED: Hardcoded context patterns - now using database patterns exclusively
         
         # Report type normalizations
         self.report_type_normalizations = {}
@@ -457,12 +436,9 @@ class MarketAwareReportTypeExtractor:
                         match = pattern.search(text)
                         
                         if match:
-                            # Extract the report type from the match
-                            groups = match.groups()
-                            if groups:
-                                extracted = groups[0].strip()
-                            else:
-                                extracted = match.group(0).strip()
+                            # Extract the report type from full match (not captured group)
+                            # This ensures we get "Size & Share Report" not just "Report"
+                            extracted = match.group(0).strip()
                             
                             # Slightly lower confidence for fallback matches
                             confidence = pattern_data.get('confidence_weight', 0.8) * 0.9
@@ -619,74 +595,57 @@ class MarketAwareReportTypeExtractor:
         # Track processing stats
         self.extraction_stats['total_processed'] += 1
         
-        # CORRECTED LOGIC: Check if this is a market term context
-        available_market_types = self._get_available_market_types()  # Load from database
+        # Use database pattern matching for ALL titles, with market context awareness
+        # CRITICAL: Create confusing-terms-free version for pattern matching only
+        # The original title is preserved for downstream pipeline steps  
+        temp_title_for_extraction, removed_confusing_terms = self._create_confusing_terms_free_text(title)
         
-        if market_term_type in available_market_types:
-            # For market_in, market_for, market_by: "Market" IS the report type
-            extracted_report_type = "Market"
-            final_report_type = "Market"
-            normalized_report_type = "Market"
-            confidence = 0.95  # High confidence for direct market term extraction
-            context_analysis = f"Market term context: {market_term_type} -> Market is the report type"
-            notes = f"Market type: {market_term_type}; Direct Market extraction"
-            
+        # Use the temporary cleaned version for report type pattern matching
+        best_result = self._try_standard_pattern_extraction(temp_title_for_extraction)
+        
+        # Handle special case: for market_for/market_in/market_by, if no specific patterns found,
+        # default to "Market" as the report type (business logic requirement)
+        available_market_types = self._get_available_market_types()
+        if (market_term_type in available_market_types and 
+            not best_result.get('extracted_report_type')):
+            best_result = {
+                'extracted_report_type': 'Market',
+                'format_type': ReportTypeFormat.EMBEDDED_TYPE,
+                'confidence': 0.95,
+                'matched_pattern': f'Market term classification: {market_term_type}',
+                'raw_match': 'Market',
+                'notes': f'Default Market extraction for {market_term_type}'
+            }
+        
+        if best_result.get('extracted_report_type'):
             self.extraction_stats['successful_extractions'] += 1
-            
-            return MarketAwareReportTypeResult(
-                title=title,
-                original_title=original_title or title,
-                market_term_type=market_term_type,
-                extracted_report_type=extracted_report_type,
-                final_report_type=final_report_type,
-                normalized_report_type=normalized_report_type,
-                format_type=ReportTypeFormat.EMBEDDED_TYPE,  # Market is embedded in the classification
-                confidence=confidence,
-                matched_pattern=f"Market term classification: {market_term_type}",
-                raw_match="Market",
-                date_removed_title=title,
-                market_prepended=False,  # Not prepended, it IS the report type
-                context_analysis=context_analysis,
-                notes=notes
-            )
-        
         else:
-            # For standard titles: use database pattern matching with confusing terms excluded
-            
-            # CRITICAL: Create confusing-terms-free version for pattern matching only
-            # The original title is preserved for downstream pipeline steps
-            temp_title_for_extraction, removed_confusing_terms = self._create_confusing_terms_free_text(title)
-            
-            # Use the temporary cleaned version for report type pattern matching
-            best_result = self._try_standard_pattern_extraction(temp_title_for_extraction)
-            
-            if best_result.get('extracted_report_type'):
-                self.extraction_stats['successful_extractions'] += 1
-            else:
-                self.extraction_stats['failed_extractions'] += 1
-            
-            # Create normalized version
-            final_type = best_result.get('extracted_report_type')
-            normalized_type = self._normalize_report_type(final_type) if final_type else None
-            
-            # Build context analysis with confusing terms info
-            context_analysis = f"Standard processing: pattern matching"
-            if removed_confusing_terms:
-                context_analysis += f" (confusing terms excluded: {', '.join(removed_confusing_terms)})"
-            
-            notes = f"Market type: {market_term_type}; {best_result.get('notes', 'Standard pattern matching')}"
-            if removed_confusing_terms:
-                notes += f"; Confusing terms excluded from extraction: {', '.join(removed_confusing_terms)}"
-            
-            return MarketAwareReportTypeResult(
-                title=title,  # IMPORTANT: Return original title, not temp version
-                original_title=original_title or title,
-                market_term_type=market_term_type,
-                extracted_report_type=best_result.get('extracted_report_type'),
-                final_report_type=final_type,
-                normalized_report_type=normalized_type,
-                format_type=best_result.get('format_type', ReportTypeFormat.UNKNOWN),
-                confidence=best_result.get('confidence', 0.0),
+            self.extraction_stats['failed_extractions'] += 1
+        
+        # Create normalized version
+        final_type = best_result.get('extracted_report_type')
+        normalized_type = self._normalize_report_type(final_type) if final_type else None
+        
+        # Build context analysis with confusing terms info
+        context_analysis = "Database-driven pattern matching"
+        if market_term_type in available_market_types:
+            context_analysis += f" with {market_term_type} context"
+        if removed_confusing_terms:
+            context_analysis += f" (confusing terms excluded: {', '.join(removed_confusing_terms)})"
+        
+        notes = f"Market type: {market_term_type}; {best_result.get('notes', 'Database pattern matching')}"
+        if removed_confusing_terms:
+            notes += f"; Confusing terms excluded from extraction: {', '.join(removed_confusing_terms)}"
+        
+        return MarketAwareReportTypeResult(
+            title=title,  # IMPORTANT: Return original title, not temp version
+            original_title=original_title or title,
+            market_term_type=market_term_type,
+            extracted_report_type=best_result.get('extracted_report_type'),
+            final_report_type=final_type,
+            normalized_report_type=normalized_type,
+            format_type=best_result.get('format_type', ReportTypeFormat.UNKNOWN),
+            confidence=best_result.get('confidence', 0.0),
                 matched_pattern=best_result.get('matched_pattern'),
                 raw_match=best_result.get('raw_match'),
                 date_removed_title=title,  # IMPORTANT: Preserve original title for downstream steps
@@ -695,161 +654,7 @@ class MarketAwareReportTypeExtractor:
                 notes=notes
             )
     
-    def _try_pattern_extraction(self, text: str, market_term_type: MarketTermType = MarketTermType.STANDARD) -> Dict:
-        """
-        Try to extract report type using all pattern categories with market context awareness.
-        
-        Args:
-            text: Text to extract from
-            market_term_type: Market term context for specialized handling
-            
-        Returns:
-            Dictionary with extraction results
-        """
-        # First try context-specific patterns for market_for and market_in
-        if market_term_type in [MarketTermType.MARKET_FOR, MarketTermType.MARKET_IN]:
-            context_result = self._try_context_patterns(text)
-            if context_result['extracted_report_type']:
-                return context_result
-        
-        # Fallback to standard database patterns
-        extraction_methods = [
-            ('compound_type', self.compound_type_patterns),
-            ('terminal_type', self.terminal_type_patterns),
-            ('prefix_type', self.prefix_type_patterns),
-            ('embedded_type', self.embedded_type_patterns),
-        ]
-        
-        best_result = {
-            'extracted_report_type': None,
-            'format_type': ReportTypeFormat.UNKNOWN,
-            'confidence': 0.0,
-            'matched_pattern': None,
-            'raw_match': None,
-            'notes': 'No patterns matched'
-        }
-        
-        for format_name, patterns in extraction_methods:
-            for pattern_data in patterns:
-                try:
-                    pattern = re.compile(pattern_data['pattern'])
-                    match = pattern.search(text)
-                    
-                    if match:
-                        # Extract the report type from the match
-                        # Extract the report type from full match (not captured group)
-                        # This ensures we get "Market Size Report" not just "Report"
-                        extracted = match.group(0).strip()
-                        
-                        confidence = pattern_data.get('confidence_weight', 0.8)
-                        
-                        # Return first successful match (highest priority patterns first)
-                        self.extraction_stats[format_name] += 1
-                        return {
-                            'extracted_report_type': extracted,
-                            'format_type': ReportTypeFormat(format_name),
-                            'confidence': confidence,
-                            'matched_pattern': pattern_data['pattern'],
-                            'raw_match': match.group(0),
-                            'notes': f"Matched {format_name} pattern"
-                        }
-                        
-                except (re.error, ValueError) as e:
-                    logger.debug(f"Pattern error: {e}")
-                    continue
-        
-        return best_result
-    
-    def _try_context_patterns(self, text: str) -> Dict:
-        """
-        Try context-specific patterns for market_for and market_in types.
-        
-        Args:
-            text: Text to extract from (focused region)
-            
-        Returns:
-            Dictionary with extraction results
-        """
-        # Try dash suffix patterns first (most specific)
-        for pattern_text in self.context_patterns['dash_suffix_patterns']:
-            try:
-                pattern = re.compile(pattern_text, re.IGNORECASE)
-                match = pattern.search(text)
-                
-                if match:
-                    # Extract and clean the matched text
-                    raw_match = match.group(0)
-                    # Remove leading dash and clean up
-                    extracted = re.sub(r'^[-–—]\s*', '', raw_match)
-                    extracted = re.sub(r'[,&]\s*', ' & ', extracted)  # Normalize separators
-                    extracted = extracted.strip().title()
-                    
-                    return {
-                        'extracted_report_type': extracted,
-                        'format_type': ReportTypeFormat.EMBEDDED_TYPE,
-                        'confidence': 0.85,
-                        'matched_pattern': pattern_text,
-                        'raw_match': raw_match,
-                        'notes': 'Matched context dash pattern'
-                    }
-                    
-            except re.error:
-                continue
-        
-        # Try compound context patterns
-        for pattern_text in self.context_patterns['compound_context_patterns']:
-            try:
-                pattern = re.compile(pattern_text, re.IGNORECASE)
-                match = pattern.search(text)
-                
-                if match:
-                    extracted = match.group(0)
-                    # Normalize the compound pattern
-                    extracted = re.sub(r'[,&]\s*', ' & ', extracted)
-                    extracted = extracted.strip().title()
-                    
-                    return {
-                        'extracted_report_type': extracted,
-                        'format_type': ReportTypeFormat.COMPOUND_TYPE,
-                        'confidence': 0.80,
-                        'matched_pattern': pattern_text,
-                        'raw_match': match.group(0),
-                        'notes': 'Matched context compound pattern'
-                    }
-                    
-            except re.error:
-                continue
-        
-        # Try standalone report words
-        for pattern_text in self.context_patterns['standalone_report_words']:
-            try:
-                pattern = re.compile(pattern_text, re.IGNORECASE)
-                match = pattern.search(text)
-                
-                if match:
-                    extracted = match.group(0).strip().title()
-                    
-                    return {
-                        'extracted_report_type': extracted,
-                        'format_type': ReportTypeFormat.EMBEDDED_TYPE,
-                        'confidence': 0.75,
-                        'matched_pattern': pattern_text,
-                        'raw_match': match.group(0),
-                        'notes': 'Matched standalone report word'
-                    }
-                    
-            except re.error:
-                continue
-        
-        # No context patterns matched
-        return {
-            'extracted_report_type': None,
-            'format_type': ReportTypeFormat.UNKNOWN,
-            'confidence': 0.0,
-            'matched_pattern': None,
-            'raw_match': None,
-            'notes': 'No context patterns matched'
-        }
+    # REMOVED: _try_context_patterns method - now using database patterns exclusively
     
     def _normalize_report_type(self, report_type: str) -> str:
         """Normalize report type using loaded normalizations."""

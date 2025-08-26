@@ -1,0 +1,167 @@
+Enhanced Market-Aware Extractor Test Report
+Analysis Date (PDT): 2025-08-25 16:18:17 PDT
+Analysis Date (UTC): 2025-08-25 23:18:17 UTC
+============================================================
+
+DETAILED RESULTS:
+
+Test #1: Dental Restorative Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Dental Restorative Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #2: Boswellia Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Boswellia Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #3: Nerve Monitoring Devices Market Size & Share Report, 2030
+  Market Term: standard (conf: 0.90)
+  Date Extracted: 2030
+  Cleaned Title: Nerve Monitoring Devices Market Size & Share Report
+  Report Type: 'Market Size & Share Report' (conf: 0.90)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #4: Pizza Box Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Pizza Box Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #5: Fertilizer Catalyst Market Size & Share, Industry Report 2030
+  Market Term: standard (conf: 0.90)
+  Date Extracted: 2030
+  Cleaned Title: Fertilizer Catalyst Market Size & Share, Industry
+  Report Type: 'Market Size & Share,' (conf: 0.91)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #6: Labels Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Labels Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #7: Anchors And Grouts Market Size, Industry Report, 2030
+  Market Term: standard (conf: 0.90)
+  Date Extracted: 2030
+  Cleaned Title: Anchors And Grouts Market Size, Industry Report
+  Report Type: 'Report' (conf: 0.95)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #8: Freelance Platforms Market Size, Industry Report, 2030
+  Market Term: standard (conf: 0.90)
+  Date Extracted: 2030
+  Cleaned Title: Freelance Platforms Market Size, Industry Report
+  Report Type: 'Report' (conf: 0.95)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #9: Arcade Games Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Arcade Games Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #10: Sintered Steel Market Size, Share Report, 2020-2027
+  Market Term: standard (conf: 0.90)
+  Date Extracted: 2020-2027
+  Cleaned Title: Sintered Steel Market Size, Share Report
+  Report Type: 'Market Size, Share Report' (conf: 0.90)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #11: Linear Motor Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Linear Motor Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #12: CAR-T Cell Therapy Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: CAR-T Cell Therapy Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #13: Global Oxygen Scavengers Market Size Report, 2018-2025
+  Market Term: standard (conf: 0.90)
+  Date Extracted: 2018-2025
+  Cleaned Title: Global Oxygen Scavengers Market Size Report
+  Report Type: 'Report' (conf: 0.93)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #14: Crude Steel Market Size, Share & Trends, Global Industry Report, 2025
+  Market Term: standard (conf: 0.90)
+  Date Extracted: 2025
+  Cleaned Title: Crude Steel Market Size, Share & Trends, Global Industry Report
+  Report Type: 'Market Size, Share & Trends, Global Industry Report' (conf: 0.90)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #15: Microcatheter Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Microcatheter Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #16: COPD & Asthma Therapeutics Market, Industry Report, 2030
+  Market Term: standard (conf: 0.90)
+  Date Extracted: 2030
+  Cleaned Title: COPD & Asthma Therapeutics Market, Industry Report
+  Report Type: 'Report' (conf: 0.94)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #17: Asia Pacific Amino Acids Market Size, Industry Report, 2030
+  Market Term: standard (conf: 0.90)
+  Date Extracted: 2030
+  Cleaned Title: Asia Pacific Amino Acids Market Size, Industry Report
+  Report Type: 'Report' (conf: 0.95)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #18: Rubber Bonding Adhesives Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Rubber Bonding Adhesives Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #19: Advanced Television Systems Committee (ATSC) Broadcast Systems & Services Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Advanced Television Systems Committee (ATSC) Broadcast Systems & Services Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+
+Test #20: Integrated Passive Device Market
+  Market Term: standard (conf: 0.90)
+  Date Extracted: None
+  Cleaned Title: Integrated Passive Device Market
+  Report Type: 'Market' (conf: 0.96)
+  Context: Standard processing: pattern matching
+  Success: ✅
+

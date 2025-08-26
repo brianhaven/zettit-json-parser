@@ -98,12 +98,34 @@ db = client['deathstar']
 - **Performance:** 100% accuracy on titles with dates (exceeds 98-99% target)
 - **Setup utilities:** `utilities/02a_initialize_date_patterns.py`, `utilities/02b_enhance_date_patterns_v1.py`
 
-**03_report_type_extractor_v1.py:** Report Type Extraction
-- Extracts complete report type phrases including "Market"
-- Pattern library approach with MongoDB storage
-- Systematic pattern matching for "Market Size", "Market Analysis", etc.
-- Performance: 95-97% accuracy target
-- **03a_initialize_report_patterns.py:** Setup report type pattern library
+**03_report_type_extractor_v2.py:** **MARKET-AWARE** Report Type Extraction
+- **DUAL PROCESSING LOGIC:** Handles market term and standard classifications differently
+- **Market Term Processing:** Extraction, rearrangement, and reconstruction workflow
+- **Standard Processing:** Direct database pattern matching
+- **Performance:** 95-97% accuracy target for both classification types
+
+**Market Term Classification Processing Logic:**
+For titles classified as `market_for`, `market_in`, `market_by`, etc.:
+1. **Extract "Market"** from the market term phrase ("Market in" → extract "Market")
+2. **Preserve connector context** ("in Automotive" remains for pipeline)
+3. **Search for report type patterns** in remaining text **excluding "Market" prefix**
+4. **Reconstruct final report type** by prepending extracted "Market" to found pattern
+5. **Example:** "AI Market in Automotive Outlook & Trends" becomes:
+   - Extracted: "Market" + "Outlook & Trends" = **"Market Outlook & Trends"** (report type)
+   - Pipeline forward: "AI in Automotive" (for geographic/topic extraction)
+
+**Standard Classification Processing Logic:**
+For titles classified as `standard`:
+1. **Direct pattern matching** using complete database patterns
+2. **No rearrangement needed** - process title as-is after date removal
+3. **Example:** "APAC PPE Market Analysis" → **"Market Analysis"** (complete match)
+4. **Pipeline forward:** "APAC PPE" (for geographic/topic extraction)
+
+**Key Architecture:**
+- **Database-driven patterns exclusively** - no hardcoded patterns
+- **Dynamic market type loading** from MongoDB pattern_libraries collection
+- **Market prefix handling** for non-Market patterns during market term processing
+- **Confidence scoring** differentiated by processing type
 
 **04_geographic_entity_detector_v1.py:** **ENHANCED** Geographic Entity Detection
 - **HTML Processing Innovation:** BeautifulSoup parsing prevents concatenation artifacts
@@ -154,10 +176,86 @@ def enhanced_html_cleaning(html_content: str) -> Dict[str, str]:
 }
 ```
 
-**Processing philosophy:** Systematic removal approach
-- Remove known patterns in order (dates, report types, geographic regions)
-- What remains IS the topic (regardless of internal punctuation)
-- Track performance metrics in MongoDB for continuous improvement
+### Complete Pipeline Processing Flow
+
+**CRITICAL:** The processing logic differs significantly between market term and standard classifications.
+
+#### **Market Term Classification Pipeline Flow**
+
+**Example:** "Artificial Intelligence (AI) Market in Automotive Outlook & Trends, 2025-2035"
+
+**Stage 1 - Market Term Classification (01_market_term_classifier_v1.py):**
+- Input: "Artificial Intelligence (AI) Market in Automotive Outlook & Trends, 2025-2035"
+- Detection: "Market in" pattern found in database
+- Classification: `market_in`
+- Output: Same title + `market_in` classification
+
+**Stage 2 - Date Extraction (02_date_extractor_v1.py):**
+- Input: "Artificial Intelligence (AI) Market in Automotive Outlook & Trends, 2025-2035"
+- Detection: "2025-2035" matches date range patterns
+- Extraction: Date = "2025-2035"
+- Output: "Artificial Intelligence (AI) Market in Automotive Outlook & Trends" + date
+
+**Stage 3 - Market-Aware Report Type Extraction (03_report_type_extractor_v2.py):**
+- Input: "Artificial Intelligence (AI) Market in Automotive Outlook & Trends" + `market_in`
+- **Market Term Processing Logic:**
+  1. **Extract "Market"** from "Market in" phrase
+  2. **Preserve "in Automotive"** for next pipeline stage
+  3. **Search remaining text** for report patterns **without "Market" prefix**
+  4. **Find "Outlook & Trends"** in database patterns (excluding Market prefix)
+  5. **Reconstruct:** "Market" + "Outlook & Trends" = **"Market Outlook & Trends"**
+- Output: Report type = "Market Outlook & Trends", Pipeline forward = "Artificial Intelligence (AI) in Automotive"
+
+**Stage 4 - Geographic Entity Detection (04_geographic_entity_detector_v1.py):**
+- Input: "Artificial Intelligence (AI) in Automotive"
+- Detection: "Automotive" may be classified as industry/context (not geographic)
+- Output: Pipeline forward = "Artificial Intelligence (AI) in Automotive" (no geographic regions found)
+
+**Stage 5 - Topic Extraction (05_topic_extractor_v1.py):**
+- Input: "Artificial Intelligence (AI) in Automotive"
+- Processing: No dates, report types, or regions to remove
+- Output: topic = "Artificial Intelligence (AI) in Automotive", topicName = "artificial-intelligence-ai-in-automotive"
+
+#### **Standard Classification Pipeline Flow**
+
+**Example:** "APAC Personal Protective Equipment Market Analysis, 2024-2029"
+
+**Stage 1 - Market Term Classification (01_market_term_classifier_v1.py):**
+- Input: "APAC Personal Protective Equipment Market Analysis, 2024-2029"
+- Detection: No market term patterns found ("Market Analysis" is standard)
+- Classification: `standard`
+- Output: Same title + `standard` classification
+
+**Stage 2 - Date Extraction (02_date_extractor_v1.py):**
+- Input: "APAC Personal Protective Equipment Market Analysis, 2024-2029"
+- Detection: "2024-2029" matches date range patterns
+- Extraction: Date = "2024-2029"
+- Output: "APAC Personal Protective Equipment Market Analysis" + date
+
+**Stage 3 - Standard Report Type Extraction (03_report_type_extractor_v2.py):**
+- Input: "APAC Personal Protective Equipment Market Analysis" + `standard`
+- **Standard Processing Logic:**
+  1. **Direct pattern matching** on complete remaining title
+  2. **Find "Market Analysis"** in database patterns (complete match)
+  3. **No rearrangement needed**
+- Output: Report type = "Market Analysis", Pipeline forward = "APAC Personal Protective Equipment"
+
+**Stage 4 - Geographic Entity Detection (04_geographic_entity_detector_v1.py):**
+- Input: "APAC Personal Protective Equipment"
+- Detection: "APAC" found in geographic patterns
+- Extraction: Region = "APAC"
+- Output: Pipeline forward = "Personal Protective Equipment"
+
+**Stage 5 - Topic Extraction (05_topic_extractor_v1.py):**
+- Input: "Personal Protective Equipment"
+- Processing: Systematic removal complete - this IS the topic
+- Output: topic = "Personal Protective Equipment", topicName = "personal-protective-equipment"
+
+**Processing philosophy:** 
+- **Market terms:** Extraction, rearrangement, and reconstruction
+- **Standard titles:** Systematic removal in sequence (dates, report types, regions)
+- **What remains IS the topic** (regardless of internal punctuation)
+- **Track performance metrics** in MongoDB for continuous improvement
 
 ### Extracted Field Standards
 
