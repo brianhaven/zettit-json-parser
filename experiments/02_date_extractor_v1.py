@@ -353,9 +353,28 @@ class EnhancedDateExtractor:
                         if format_type == 'range_format' and len(groups) >= 2:
                             start_year = int(groups[0]) if groups[0] else None
                             end_year = int(groups[1]) if groups[1] else None
+                            
+                            # Year range validation (2005-2049) - lenient single-number approach
+                            # At least one number must be in the valid year range
+                            valid_range = False
+                            if start_year and 2005 <= start_year <= 2049:
+                                valid_range = True
+                            if end_year and 2005 <= end_year <= 2049:
+                                valid_range = True
+                            
+                            if not valid_range:
+                                # Neither number is in valid year range - skip this match
+                                continue
+                            
                             extracted_date = f"{start_year}-{end_year}"
                         elif len(groups) >= 1 and groups[0]:
                             year = int(groups[0])
+                            
+                            # Single year validation (2005-2049)
+                            if not (2005 <= year <= 2049):
+                                # Year is not in valid range - skip this match
+                                continue
+                            
                             start_year = end_year = year
                             extracted_date = str(year)
                         else:

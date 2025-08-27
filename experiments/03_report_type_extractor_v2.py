@@ -203,7 +203,7 @@ class MarketAwareReportTypeExtractor:
             # Secondary sort by pattern length (longer patterns first within same priority)
             # This ensures complete patterns match before partial ones
             def sort_patterns(pattern_list):
-                return sorted(pattern_list, key=lambda x: (x.get('priority', 5), -len(x.get('term', ''))))
+                return sorted(pattern_list, key=lambda x: (x.get('priority', 5), -len(x.get('pattern', ''))))
             
             self.terminal_type_patterns = sort_patterns(self.terminal_type_patterns)
             self.embedded_type_patterns = sort_patterns(self.embedded_type_patterns)
