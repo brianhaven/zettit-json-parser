@@ -1,0 +1,362 @@
+# Report Type Patterns - One Line Format
+# Format: priority|format_type|term|pattern|normalized_form
+# Generated from MongoDB pattern_libraries collection
+
+None|acronym_embedded|Market Report, [ACRONYM] Industry|\bMarket\s+Report,\s+\d{4},\s+([A-Z]{2,6})\s+Industry(?:\s*$|[,.])|None
+None|acronym_embedded|Market Size & Share, [ACRONYM] Industry Report|\bMarket\s+Size\s*&\s*Share,\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])|None
+None|acronym_embedded|Market Size, Share, Global [ACRONYM] Industry Report|\bMarket\s+Size,\s+Share,\s+Global\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])|None
+None|acronym_embedded|Market Size, Share, [ACRONYM] Industry Report|\bMarket\s+Size,\s+Share,\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])|None
+None|acronym_embedded|Market Size, [ACRONYM] Industry Report|\bMarket\s+Size,\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])|None
+None|compound_type|Market Trends & Growth Opportunities|\bMarket\s+Trends\s*&\s*Growth\s+Opportunities(?:\s*$|[,.])|None
+None|acronym_embedded|Market, [ACRONYM] Industry Report|\bMarket,\s+([A-Z]{2,6})\s+Industry\s+Report(?:\s*$|[,.])|None
+None|compound_type|Trends & Growth Opportunities|\bTrends\s*&\s*Growth\s+Opportunities(?:\s*$|[,.])|None
+None|compound_type|Trends & Market Size|\bTrends\s*&\s*Market\s+Size(?:\s*$|[,.])|None
+1|compound_type|Manual Review #100: Market Share, Industry Report|\bMarket\s+Share,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #103: Market Size & Share [ Global Report]|\bMarket\s+Size\s*&\s*Share\s+\[\s+Global\s+Report\](?:\s*$|[,.])|Report
+1|compound_type|Manual Review #105: Market Size & Share, Global Industry Trends Report|\bMarket\s+Size\s*&\s*Share,\s+Global\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #108: Market Size, Share, Industry Trend Report|\bMarket\s+Size,\s+Share,\s+Industry\s+Trend\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #109: Market Size & Trends, Global Industry Report|\bMarket\s+Size\s*&\s*Trends,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #10: Market Size, Share, Industry Report|\bMarket\s+Size,\s+Share,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #112: Market Size, Industry Trend Report|\bMarket\s+Size,\s+Industry\s+Trend\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #113: Market Size And Share [ Global Report]|\bMarket\s+Size\s+(?:And|&)\s+Share\s+\[\s+Global\s+Report\](?:\s*$|[,.])|Report
+1|compound_type|Manual Review #115: Market Size, Trends & Growth Report|\bMarket\s+Size,\s+Trends\s*&\s*Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #119: Market Share, Insights|\bMarket\s+Share,\s+Insights(?:\s*$|[,.])|Insights
+1|compound_type|Manual Review #11: Market Size, Share & Trends Report|\bMarket\s+Size,\s+Share\s*&\s*Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #121: Market, Global Industry Report|\bMarket\s+,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #122: Market Share & Trends Report|\bMarket\s+Share\s*&\s*Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #124: Market Size And Trends, Industry Report|\bMarket\s+Size\s+(?:And|&)\s+Trends,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #126: Market Size, Share, And Growth Report|\bMarket\s+Size,\s+Share,\s+(?:And|&)\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #127: Market Share, Global Industry Report|\bMarket\s+Share,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #128: Market Size, Industry Trends Report|\bMarket\s+Size,\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #12: Market Size, Share Report|\bMarket\s+Size,\s+Share\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #135: Market Size & Share, Global Report|\bMarket\s+Size\s*&\s*Share,\s+Global\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #136: Market Size, Share, Trends And Growth Report|\bMarket\s+Size,\s+Share,\s+Trends\s+(?:And|&)\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #138: Market Size, Share, Global Industry Growth Report|\bMarket\s+Size,\s+Share,\s+Global\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #139: Market Size, Share, Trend Report|\bMarket\s+Size,\s+Share,\s+Trend\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #13: Market Size, Share And Growth Report|\bMarket\s+Size,\s+Share\s+(?:And|&)\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #140: Market Size, Share And Trends, Industry Report|\bMarket\s+Size,\s+Share\s+(?:And|&)\s+Trends,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #141: Market Trends & Growth Report|\bMarket\s+Trends\s*&\s*Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #143: Market Size, Trends Report|\bMarket\s+Size,\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #146: Market Trends, Industry Report|\bMarket\s+Trends,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #147: Market Share, Size, Industry Report|\bMarket\s+Share,\s+Size,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #148: Market Size, Growth, Global Industry Report|\bMarket\s+Size,\s+Growth,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #14: Market Size And Share, Industry Report|\bMarket\s+Size\s+(?:And|&)\s+Share,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #152: Market Size, Share, & Growth Report|\bMarket\s+Size,\s+Share,\s*&\s*Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #156: Market Share, Trends, Global Industry Report|\bMarket\s+Share,\s+Trends,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #157: Market Size, Growth, Industry Report|\bMarket\s+Size,\s+Growth,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #15: Market Size, Share, Global Industry Report|\bMarket\s+Size,\s+Share,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #161: Market Size, Growth & Trends Report|\bMarket\s+Size,\s+Growth\s*&\s*Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #164: Market Size, Share, Growth And Trends Report|\bMarket\s+Size,\s+Share,\s+Growth\s+(?:And|&)\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #16: Market Size, Global Industry Report|\bMarket\s+Size,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #173: Market Report Size|\bMarket\s+Report\s+Size(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #176: Market Size, Share And Growth, Industry Report|\bMarket\s+Size,\s+Share\s+(?:And|&)\s+Growth,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #177: Market Size, Share & Trends, Industry Growth Report|\bMarket\s+Size,\s+Share\s*&\s*Trends,\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #179: Market Size & Share Growth Report|\bMarket\s+Size\s*&\s*Share\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #17: Market Size, Share, Growth Report|\bMarket\s+Size,\s+Share,\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #184: Market Size, Share & Trend Report|\bMarket\s+Size,\s+Share\s*&\s*Trend\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #185: Market Share, Growth & Trends Report|\bMarket\s+Share,\s+Growth\s*&\s*Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #188: Market Size, Industry Growth Report|\bMarket\s+Size,\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #189: Market Size, Share [ Global Report]|\bMarket\s+Size,\s+Share\s+\[\s+Global\s+Report\](?:\s*$|[,.])|Report
+1|compound_type|Manual Review #192: Market Size, Share And Trends, Report|\bMarket\s+Size,\s+Share\s+(?:And|&)\s+Trends,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #193: Market Size & Share, Global Industry Growth Report|\bMarket\s+Size\s*&\s*Share,\s+Global\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #194: Market Growth, Industry Report|\bMarket\s+Growth,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #197: Market Size, Global Industry Growth|\bMarket\s+Size,\s+Global\s+Industry\s+Growth(?:\s*$|[,.])|Growth
+1|compound_type|Manual Review #198: Market Size, Value, Global Industry Trends Report|\bMarket\s+Size,\s+Value,\s+Global\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #201: Market Volume & Share Report|\bMarket\s+Volume\s*&\s*Share\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #203: Market Size and Trends Report|\bMarket\s+Size\s+and\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #205: Market Size, Share, Global Industry Trend Report|\bMarket\s+Size,\s+Share,\s+Global\s+Industry\s+Trend\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #207: Market Size, Trends, Industry Research Report|\bMarket\s+Size,\s+Trends,\s+Industry\s+Research\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #209: Market Size By Product, Industry Report|\bMarket\s+Size\s+By\s+Product,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #212: Market Size, And Share, Industry Report|\bMarket\s+Size,\s+(?:And|&)\s+Share,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #213: Market Size, Research Report|\bMarket\s+Size,\s+Research\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #214: Market Size And Share, Trends Report|\bMarket\s+Size\s+(?:And|&)\s+Share,\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #218: Market Size, Share, Industry Research Report|\bMarket\s+Size,\s+Share,\s+Industry\s+Research\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #222: Market Size, Share & Growth, Industy Report|\bMarket\s+Size,\s+Share\s*&\s*Growth,\s+Industy\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #224: Market Size, Global Report|\bMarket\s+Size,\s+Global\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #234: Market - Share, Trends & Size|\bMarket\s*-\s*\s+Share,\s+Trends\s*&\s*Size(?:\s*$|[,.])|Trends
+1|compound_type|Manual Review #236: Market - Trends & Size|\bMarket\s*-\s*\s+Trends\s*&\s*Size(?:\s*$|[,.])|Trends
+1|compound_type|Manual Review #237: Market - Size, Trends & Research Report|\bMarket\s*-\s*\s+Size,\s+Trends\s*&\s*Research\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #238: Market - Companies, Size & Share|\bMarket\s*-\s*\s+Companies,\s+Size\s*&\s*Share(?:\s*$|[,.])|Size
+1|compound_type|Manual Review #239: Market - Companies & Trends|\bMarket\s*-\s*\s+Companies\s*&\s*Trends(?:\s*$|[,.])|Trends
+1|compound_type|Manual Review #241: Market Demand, Research Insights|\bMarket\s+Demand,\s+Research\s+Insights(?:\s*$|[,.])|Insights
+1|compound_type|Manual Review #249: Market Share & Share, Industry Report|\bMarket\s+Share\s*&\s*Share,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #24: Market, Report|\bMarket\s+,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #250: Market Size & Share, Indsutry Report|\bMarket\s+Size\s*&\s*Share,\s+Indsutry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #251: Market Size, Share, Growth And Trends By|\bMarket\s+Size,\s+Share,\s+Growth\s+(?:And|&)\s+Trends\s+By(?:\s*$|[,.])|Trends
+1|compound_type|Manual Review #252: Market Size, Share And Report|\bMarket\s+Size,\s+Share\s+(?:And|&)\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #253: Market Size And Growth Report|\bMarket\s+Size\s+(?:And|&)\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #254: Market Size,Share, Report|\bMarket\s+Size,Share,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #258: Market Growth And Trends Report|\bMarket\s+Growth\s+(?:And|&)\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #25: Market Size, Share And Trends Report|\bMarket\s+Size,\s+Share\s+(?:And|&)\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #263: Market Size & Growth, Industry Trends Report|\bMarket\s+Size\s*&\s*Growth,\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #264: Market Size, Share [Global Report]|\bMarket\s+Size,\s+Share\s+\[Global\s+Report\](?:\s*$|[,.])|Report
+1|compound_type|Manual Review #266: Market Size, Global Industry Growth Report|\bMarket\s+Size,\s+Global\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #267: Market Growth & Trends|\bMarket\s+Growth\s*&\s*Trends(?:\s*$|[,.])|Trends
+1|compound_type|Manual Review #269: Market Sze Report|\bMarket\s+Sze\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #270: Market Size, Share Trends Report|\bMarket\s+Size,\s+Share\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #271: Market Growth, Industry Trends Report|\bMarket\s+Growth,\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #273: Market Size, Share, Indsutry Report|\bMarket\s+Size,\s+Share,\s+Indsutry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #274: Market Size & Share, Growth Report|\bMarket\s+Size\s*&\s*Share,\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #276: Market Size, Industry Repot|\bMarket\s+Size,\s+Industry\s+Repot(?:\s*$|[,.])|Size
+1|compound_type|Manual Review #277: Market Size Reports|\bMarket\s+Size\s+Reports(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #281: Market Size & Share, Growth, Global Industry Report|\bMarket\s+Size\s*&\s*Share,\s+Growth,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #282: Market Trends, Industry Growth Report|\bMarket\s+Trends,\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #283: Market Sizes & Trends Report|\bMarket\s+Sizes\s*&\s*Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #288: Market Size, Share & Growth Market|\bMarket\s+Size,\s+Share\s*&\s*Growth(?:\s*$|[,.])|Growth
+1|compound_type|Manual Review #289: Market Size, Share & Growth, Report|\bMarket\s+Size,\s+Share\s*&\s*Growth,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #290: Market Size, Growth, Report|\bMarket\s+Size,\s+Growth,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #292: Market Size, , Industry Report|\bMarket\s+Size,\s+,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #29: Market Size, Report|\bMarket\s+Size,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #300: Market Size , Industry Report|\bMarket\s+Size\s+,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #302: Market Share, Share, Growth|\bMarket\s+Share,\s+Share,\s+Growth(?:\s*$|[,.])|Growth
+1|compound_type|Manual Review #306: Market Size, Share, Industy Report|\bMarket\s+Size,\s+Share,\s+Industy\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #307: Market Size & Size, Global Industry Report|\bMarket\s+Size\s*&\s*Size,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #309: Market Size, Industry Research Report|\bMarket\s+Size,\s+Industry\s+Research\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #310: Market Size, Share & Growth [ Global Report]|\bMarket\s+Size,\s+Share\s*&\s*Growth\s+\[\s+Global\s+Report\](?:\s*$|[,.])|Report
+1|compound_type|Manual Review #311: Market Share & Share Report|\bMarket\s+Share\s*&\s*Share\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #313: Market Size, Share & Trends [ Global Report]|\bMarket\s+Size,\s+Share\s*&\s*Trends\s+\[\s+Global\s+Report\](?:\s*$|[,.])|Report
+1|compound_type|Manual Review #316: Market Share, Trends Report|\bMarket\s+Share,\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #317: Market Size & Trend Report|\bMarket\s+Size\s*&\s*Trend\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #318: Market Size, Revenue, Industry Report|\bMarket\s+Size,\s+Revenue,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #31: Market Size, Share & Trends, Industry Report|\bMarket\s+Size,\s+Share\s*&\s*Trends,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #320: Market Share, Industry Trends Report|\bMarket\s+Share,\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #321: Market Size, Share, Trends And Report|\bMarket\s+Size,\s+Share,\s+Trends\s+(?:And|&)\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #322: Market Size, Share Global Industry Report|\bMarket\s+Size,\s+Share\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #323: Market Size, Value, Growth Report|\bMarket\s+Size,\s+Value,\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #324: Market Report Report|\bMarket\s+Report\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #325: Market Size & Share, Growth, Industry Report|\bMarket\s+Size\s*&\s*Share,\s+Growth,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #327: Market Size,, Industry Report|\bMarket\s+Size,,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #328: Market Size, Trends, Global Industry Report|\bMarket\s+Size,\s+Trends,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #331: Market Size & Trends, Report|\bMarket\s+Size\s*&\s*Trends,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #333: Market Size And Growth, Report|\bMarket\s+Size\s+(?:And|&)\s+Growth,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #335: Market Size & Share, Report Industry|\bMarket\s+Size\s*&\s*Share,\s+Report\s+Industry(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #338: Market Share, Trends, Industry Report|\bMarket\s+Share,\s+Trends,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #339: Market Size, Industrial Report|\bMarket\s+Size,\s+Industrial\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #341: Market Size Worth $11.36 Billion By|\bMarket\s+Size\s+Worth\s+\$[\d,.]+\s+(?:Billion|Million|Trillion)\s+By(?:\s*$|[,.])|Size Worth $ Amount By
+1|compound_type|Manual Review #34: Market Size & Growth Report|\bMarket\s+Size\s*&\s*Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #38: Market Size & Share, Global Industry Report|\bMarket\s+Size\s*&\s*Share,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #39: Market Size, Share, Growth & Trends Report|\bMarket\s+Size,\s+Share,\s+Growth\s*&\s*Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #3: Market Size, Industry Report|\bMarket\s+Size,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #41: Market Size, Share & Growth, Industry Report|\bMarket\s+Size,\s+Share\s*&\s*Growth,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #46: Market Size & Trends Report|\bMarket\s+Size\s*&\s*Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #4: Market Size & Share Report|\bMarket\s+Size\s*&\s*Share\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #52: Market Size And Share, Report|\bMarket\s+Size\s+(?:And|&)\s+Share,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #55: Market Size, Share, Trends & Growth Report|\bMarket\s+Size,\s+Share,\s+Trends\s*&\s*Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #56: Market Size, Share & Trends, Global Industry Report|\bMarket\s+Size,\s+Share\s*&\s*Trends,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #59: Market Size, Share, Trends Report|\bMarket\s+Size,\s+Share,\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #6: Market, Industry Report|\bMarket\s*,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #70: Market Size & Share, Report|\bMarket\s+Size\s*&\s*Share,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #71: Market Size & Trends, Industry Report|\bMarket\s+Size\s*&\s*Trends,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #76: Market Size, Global Industry Trends Report|\bMarket\s+Size,\s+Global\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #77: Market Growth Outlook|\bMarket\s+Growth\s+Outlook(?:\s*$|[,.])|Outlook
+1|compound_type|Manual Review #7: Market Size, Share & Growth Report|\bMarket\s+Size,\s+Share\s*&\s*Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #80: Market Share & Growth Report|\bMarket\s+Share\s*&\s*Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #81: Market Size, Trends, Industry Report|\bMarket\s+Size,\s+Trends,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #82: Market Size, Share, Report|\bMarket\s+Size,\s+Share,\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #86: Market Size & Share, Industry Growth Report|\bMarket\s+Size\s*&\s*Share,\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #92: Market Size, Share, Industry Trends Report|\bMarket\s+Size,\s+Share,\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #94: Market Size, Share, Industry Growth Report|\bMarket\s+Size,\s+Share,\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #96: Market Size & Share, Industry Trends Report|\bMarket\s+Size\s*&\s*Share,\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #99: Market Size, Share, Global Industry Trends Report|\bMarket\s+Size,\s+Share,\s+Global\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Manual Review #9: Market Size & Share, Industry Report|\bMarket\s+Size\s*&\s*Share,\s+Industry\s+Report(?:\s*$|[,.])|Report
+1|compound_type|Market Analysis Terminal|\bMarket,?\s+(Analysis)(?:\s*$|[,.])|Analysis
+1|compound_type|Market Industry Report|\bMarket,\s+Industry\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+1|terminal_type|Market Report|\bMarket[,\s]*\s*(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+1|terminal_type|Market Report Terminal|\bMarket\s+(Report)\s*$|Report
+1|embedded_type|Market Research Embedded|\bMarket\s+(Research)\b|Research
+1|compound_type|Market Research Report|\bMarket\s+(Research\s+Report)\b|Research Report
+1|prefix_type|Market Share Report Terminal|\bMarket\s+Share,?\s+(Report)(?:\s*$|[,.])|Report
+1|compound_type|Market Size And Share Report|\bMarket\s+Size\s+And\s+Share\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+1|compound_type|Market Size Industry Report|\bMarket\s+Size,\s+Industry\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+1|prefix_type|Market Size Report Terminal|\bMarket\s+Size,?\s+(Report)(?:\s*$|[,.])|Report
+1|compound_type|Market Size Share Growth Report|\bMarket\s+Size,\s+Share\s*&\s*Growth\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+1|compound_type|Market Size Share Report|\bMarket\s+Size,?\s+Share,?\s*&?\s*Growth?\s*(Report)(?:\s*$|[,.])|Report
+1|prefix_type|Report Prefix|^(Report):\s*|Report
+2|prefix_type|Analysis Prefix|^(Analysis):\s*|Analysis
+2|terminal_type|Analysis Terminal|\b(Analysis)\s*$|Analysis
+2|compound_type|Global Industry Report|\bGlobal\s+Industry\s+(Report)(?:\s*$|[,.])|Report
+2|embedded_type|Industry Analysis Embedded|\bIndustry\s+(Analysis)\b|Analysis
+2|compound_type|Industry Analysis Terminal|\bIndustry,?\s+(Analysis)(?:\s*$|[,.])|Analysis
+2|compound_type|Industry Intelligence Report|\bIndustry\s+(Intelligence\s+Report)\b|Intelligence Report
+2|compound_type|Industry Report Terminal|\bIndustry,?\s+(Report)(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #101: Market Size, Global Industry Analysis Report|\bMarket\s+Size,\s+Global\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #110: Market Size, Share And Growth Analysis Report|\bMarket\s+Size,\s+Share\s+(?:And|&)\s+Growth\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #114: Market Share Analysis, Industry Report|\bMarket\s+Share\s+Analysis,\s+Industry\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #118: Market - Size, Share & Industry Analysis|\bMarket\s*-\s*\s+Size,\s+Share\s*&\s*Industry\s+Analysis(?:\s*$|[,.])|Analysis
+2|compound_type|Manual Review #120: Market Analysis till|\bMarket\s+Analysis\s+till(?:\s*$|[,.])|Analysis
+2|compound_type|Manual Review #130: Market Size & Trends, Industry Analysis Report|\bMarket\s+Size\s*&\s*Trends,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #132: Market Size, Share & Forecast Report|\bMarket\s+Size,\s+Share\s*&\s*Forecast\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #133: Market Analysis, Industry Report|\bMarket\s+Analysis,\s+Industry\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #137: Market (Forecast, )|\bMarket\s+\(Forecast,\s+\)(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #145: Market Size & Size, Industry Analysis Report|\bMarket\s+Size\s*&\s*Size,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #150: Market Share & Growth Analysis Report|\bMarket\s+Share\s*&\s*Growth\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #151: Market Trends & Growth Analysis Report|\bMarket\s+Trends\s*&\s*Growth\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #154: Market Size, Share And Analysis Report|\bMarket\s+Size,\s+Share\s+(?:And|&)\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #163: Market Size, Share, Trends Forecast|\bMarket\s+Size,\s+Share,\s+Trends\s+Forecast(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #167: Market Global Forecast|\bMarket\s+Global\s+Forecast(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #168: Market Growth Forecast|\bMarket\s+Growth\s+Forecast(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #170: Market Share, Analysis, Forecast|\bMarket\s+Share,\s+Analysis,\s+Forecast(?:\s*$|[,.])|Analysis
+2|compound_type|Manual Review #174: Market Size, Share & Trends, Industry Analysis Report|\bMarket\s+Size,\s+Share\s*&\s*Trends,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #180: Market Size, Analysis, Industry Report|\bMarket\s+Size,\s+Analysis,\s+Industry\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #181: Market Size And Analysis Report|\bMarket\s+Size\s+(?:And|&)\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #186: Market Size, Share & Analysis, Industry Report|\bMarket\s+Size,\s+Share\s*&\s*Analysis,\s+Industry\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #190: Market Size, Trends, Industry Analysis Report|\bMarket\s+Size,\s+Trends,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #199: Market Size, Growth, Global Industry Analysis Report|\bMarket\s+Size,\s+Growth,\s+Global\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #204: Market Size, Forecast Report|\bMarket\s+Size,\s+Forecast\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #206: Market Size, Growth, Industry Analysis Report|\bMarket\s+Size,\s+Growth,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #219: Market Size, Share, Statistics & Analysis|\bMarket\s+Size,\s+Share,\s+Statistics\s*&\s*Analysis(?:\s*$|[,.])|Analysis
+2|compound_type|Manual Review #220: Market Share, Industry Growth Analysis Report|\bMarket\s+Share,\s+Industry\s+Growth\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #223: Market Size, Share & Trend Analysis Report|\bMarket\s+Size,\s+Share\s*&\s*Trend\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #229: Market Size & Share, Global Industry Analysis Report|\bMarket\s+Size\s*&\s*Share,\s+Global\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #230: Market Size | Industry Trends & Forecast Analysis|\bMarket\s+Size\s*\|\s*\s+Industry\s+Trends\s*&\s*Forecast\s+Analysis(?:\s*$|[,.])|Analysis
+2|compound_type|Manual Review #231: Market Growth | Industry Analysis, Size & Forecast Report|\bMarket\s+Growth\s*\|\s*\s+Industry\s+Analysis,\s+Size\s*&\s*Forecast\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #232: Market Trends | Industry Analysis, Size & Growth Report|\bMarket\s+Trends\s*\|\s*\s+Industry\s+Analysis,\s+Size\s*&\s*Growth\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #233: Market Report | Industry Analysis, Size & Forecast Overview|\bMarket\s+Report\s*\|\s*\s+Industry\s+Analysis,\s+Size\s*&\s*Forecast\s+Overview(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #235: Market - Companies, Analysis, Industry Overview & Outlook|\bMarket\s*-\s*\s+Companies,\s+Analysis,\s+Industry\s+Overview\s*&\s*Outlook(?:\s*$|[,.])|Analysis
+2|compound_type|Manual Review #240: Market Insights, Forecast|\bMarket\s+Insights,\s+Forecast(?:\s*$|[,.])|Insights
+2|compound_type|Manual Review #243: Market Analysis, Forecast Report|\bMarket\s+Analysis,\s+Forecast\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #244: Market Analysis, Outlook|\bMarket\s+Analysis,\s+Outlook(?:\s*$|[,.])|Analysis
+2|compound_type|Manual Review #245: Market Trends (Forecast )|\\bMarket\\s+Trends\\s*(?:\\([^)]*Forecast[^)]*\\)|Forecast)(?:[^,]*)?(?:\\s*$|[,.])|Forecast
+2|compound_type|Manual Review #246: Market Analysis, Report|\bMarket\s+Analysis,\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #247: Market Forecast -|\bMarket\s+Forecast\s+\s*-\s*(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #248: Market Trends, Forecast|\bMarket\s+Trends,\s+Forecast(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #255: Market Size, Trends & Growth Analysis|\bMarket\s+Size,\s+Trends\s*&\s*Growth\s+Analysis(?:\s*$|[,.])|Analysis
+2|compound_type|Manual Review #256: Market Size, Share Forecast Report|\bMarket\s+Size,\s+Share\s+Forecast\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #259: Market Size, Share, Forecast Report|\bMarket\s+Size,\s+Share,\s+Forecast\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #260: Market Size, Analysis, Global Industry Report|\bMarket\s+Size,\s+Analysis,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #261: Market Size & Analysis, Global Industry Report|\bMarket\s+Size\s*&\s*Analysis,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #265: Market Size, Share Analysis, Report|\bMarket\s+Size,\s+Share\s+Analysis,\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #272: Market Share, Size, Industry Analysis Report|\bMarket\s+Share,\s+Size,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #275: Market Share & Trend Analysis Report|\bMarket\s+Share\s*&\s*Trend\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #278: Market Analysis, Industry Trends Report|\bMarket\s+Analysis,\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #279: Market Size Analysis, Report|\bMarket\s+Size\s+Analysis,\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #286: Market Share Analysis & Growth Report|\bMarket\s+Share\s+Analysis\s*&\s*Growth\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #293: Market Size, Growth, Industry Forecast Report|\bMarket\s+Size,\s+Growth,\s+Industry\s+Forecast\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #298: Market Size & Growth Report Analysis|\bMarket\s+Size\s*&\s*Growth\s+Report\s+Analysis(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #301: Market Size & Growth Forecast Report|\bMarket\s+Size\s*&\s*Growth\s+Forecast\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #303: Market Share & Trends Analysis Report|\bMarket\s+Share\s*&\s*Trends\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #304: Market Share & Size Analysis Report|\bMarket\s+Share\s*&\s*Size\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #305: Market Size, Share & Trends, Industry Growth Forecast|\bMarket\s+Size,\s+Share\s*&\s*Trends,\s+Industry\s+Growth\s+Forecast(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #30: Market Size & Share Analysis Report|\bMarket\s+Size\s*&\s*Share\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #312: Market Size & Forecast Report|\bMarket\s+Size\s*&\s*Forecast\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #332: Market Size & Analysis Report|\bMarket\s+Size\s*&\s*Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #334: Market Size And Share Analysis, Report|\bMarket\s+Size\s+(?:And|&)\s+Share\s+Analysis,\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #33: Market Size, Share & Growth Analysis Report|\bMarket\s+Size,\s+Share\s*&\s*Growth\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #44: Market Size, Share & Trends Analysis Report|\bMarket\s+Size,\s+Share\s*&\s*Trends\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #48: Market Size & Share, Industry Analysis Report|\bMarket\s+Size\s*&\s*Share,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #51: Market Size, Share, Industry Analysis Report|\bMarket\s+Size,\s+Share,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #54: Market Size, Industry Analysis Report|\bMarket\s+Size,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #57: Market Size, Share, Growth Analysis Report|\bMarket\s+Size,\s+Share,\s+Growth\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #58: Market Size & Trends Analysis Report|\bMarket\s+Size\s*&\s*Trends\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #61: Market Growth, Forecast|\bMarket\s+Growth,\s+Forecast(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #63: Market Outlook, Trends, Analysis|\bMarket\s+Outlook,\s+Trends,\s+Analysis(?:\s*$|[,.])|Analysis
+2|compound_type|Manual Review #64: Market Size & Share Analysis - Industry Research Report - Gr|\bMarket\s+Size\s*&\s*Share\s+Analysis\s*-\s*\s+Industry\s+Research\s+Report\s*-\s*\s+Growth\s+Trends(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #65: Market (Forecast )|\bMarket\s+Forecast(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #69: Market Size, Share, Global Industry Analysis Report|\bMarket\s+Size,\s+Share,\s+Global\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #78: Market, Forecast|\bMarket\s+,\s+Forecast(?:\s*$|[,.])|Forecast
+2|compound_type|Manual Review #79: Market Size And Share Analysis Report|\bMarket\s+Size\s+(?:And|&)\s+Share\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #83: Market Size, Share & Analysis Report|\bMarket\s+Size,\s+Share\s*&\s*Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #85: Market Size, Share, Trends Analysis Report|\bMarket\s+Size,\s+Share,\s+Trends\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #87: Market Size, Share Analysis Report|\bMarket\s+Size,\s+Share\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Manual Review #88: Market Size & Growth Analysis Report|\bMarket\s+Size\s*&\s*Growth\s+Analysis\s+Report(?:\s*$|[,.])|Report
+2|compound_type|Market Analysis Report|\bMarket\s+(Analysis\s+Report)(?:\s*$|[,.])|Analysis Report
+2|terminal_type|Market Growth|\bMarket\s+(Growth)(?:\s*$|[,.])|Growth
+2|compound_type|Market Growth Report|\bMarket\s+(Growth\s+Report)(?:\s*$|[,.])|Growth Report
+2|compound_type|Market Industry Terminal|\bMarket,\s+Industry(?:\s*$|[,.])|?:\s*$|[,.]
+2|terminal_type|Market Insights|\bMarket\s+(Insights)(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Share|\bMarket\s+(Share)(?:\s*$|[,.])|Share
+2|compound_type|Market Share Analysis Report|\bMarket\s+Share\s+(Analysis\s+Report)(?:\s*$|[,.])|Analysis Report
+2|prefix_type|Market Share Report|\bMarket\s+(Share\s+Report)(?:\s*$|[,.])|Share Report
+2|embedded_type|Market Share Terminal|\bMarket\s+(Share)(?:\s*$|[,.])|Share
+2|compound_type|Market Size Analysis Report|\bMarket\s+Size\s+(Analysis\s+Report)(?:\s*$|[,.])|Analysis Report
+2|compound_type|Market Size Global Industry Report|\bMarket\s+Size,\s+Global\s+Industry\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Size Share And Growth Report|\bMarket\s+Size,\s+Share\s+And\s+Growth\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Size Share And Trends Report|\bMarket\s+Size,\s+Share\s+And\s+Trends\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Size Share Global Industry Report|\bMarket\s+Size,\s+Share,\s+Global\s+Industry\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Size Share Industry Report|\bMarket\s+Size\s*&\s*Share,\s+Industry\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Size Share Industry Terminal|\bMarket\s+Size,\s+Share,\s+Industry(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Size Share Terminal|\bMarket\s+Size\s*&\s*Share(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Size Share Terminal2|\bMarket\s+Size,\s+Share(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Size Share Trends Report|\bMarket\s+Size,\s+Share\s*&\s*Trends\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+2|embedded_type|Market Size Terminal|\bMarket\s+Size(?:\s*$|[,.])|?:\s*$|[,.]
+2|compound_type|Market Size Trends Report|\bMarket\s+Size\s*&\s*Trends\s+(Report)(?:\s*$|[,.])|Report
+2|compound_type|Market Trends Report|\bMarket\s+(Trends\s+Report)(?:\s*$|[,.])|Trends Report
+3|compound_type|Industry Trends Terminal|\bIndustry,?\s+(Trends)(?:\s*$|[,.])|Trends
+3|compound_type|Manual Review #107: Market Size, Share, Trends, Report|\bMarket\s+Size,\s+Share,\s+Trends,\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #116: Market Size, Share, Trends, Industry Analysis Report|\bMarket\s+Size,\s+Share,\s+Trends,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #129: Market Size, Share, Trends, Growth Report|\bMarket\s+Size,\s+Share,\s+Trends,\s+Growth\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #144: Market Size, Share, Growth, Industry Trends|\bMarket\s+Size,\s+Share,\s+Growth,\s+Industry\s+Trends(?:\s*$|[,.])|Trends
+3|compound_type|Manual Review #149: Market Size, Share, Analysis, Industry Report|\bMarket\s+Size,\s+Share,\s+Analysis,\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #155: Market Share, Size, Trends, Global Industry Report|\bMarket\s+Share,\s+Size,\s+Trends,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #159: Market Size, Share, Growth, Industry Analysis Report|\bMarket\s+Size,\s+Share,\s+Growth,\s+Industry\s+Analysis\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #165: Market Size, Share, Trends, Industry Growth Report|\bMarket\s+Size,\s+Share,\s+Trends,\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #178: Market Size, Share, Growth, Global Industry Report|\bMarket\s+Size,\s+Share,\s+Growth,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #187: Market Size, Share, Trend, Industry Report|\bMarket\s+Size,\s+Share,\s+Trend,\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #196: Market Size, Share, Trends, Global Industry Growth Report|\bMarket\s+Size,\s+Share,\s+Trends,\s+Global\s+Industry\s+Growth\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #200: Market Size, Share, Growth, Industry Trends Report|\bMarket\s+Size,\s+Share,\s+Growth,\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #202: Market Size, Trends, Share, Global Industry Report|\bMarket\s+Size,\s+Trends,\s+Share,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #216: Market Size, Share, Trend, Industry Research|\bMarket\s+Size,\s+Share,\s+Trend,\s+Industry\s+Research(?:\s*$|[,.])|Size
+3|compound_type|Manual Review #217: Market Trends, Share, Size, Industry Report|\bMarket\s+Trends,\s+Share,\s+Size,\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #329: Market Size, Share, Growth, Trends, Report|\bMarket\s+Size,\s+Share,\s+Growth,\s+Trends,\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #330: Market Size, Share, Growth, Report|\bMarket\s+Size,\s+Share,\s+Growth,\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #337: Market Size, Share, Growth, Global Industry Trends Report|\bMarket\s+Size,\s+Share,\s+Growth,\s+Global\s+Industry\s+Trends\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #45: Market Size, Share, Trends, Global Industry Report|\bMarket\s+Size,\s+Share,\s+Trends,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #49: Market Size, Share, Trends, Industry Report|\bMarket\s+Size,\s+Share,\s+Trends,\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #53: Market Size, Share, Growth, Industry Report|\bMarket\s+Size,\s+Share,\s+Growth,\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #72: Market Size, Share, Growth, Trends Report|\bMarket\s+Size,\s+Share,\s+Growth,\s+Trends\s+Report(?:\s*$|[,.])|Report
+3|compound_type|Manual Review #93: Market Size, Share, Trend, Global Industry Report|\bMarket\s+Size,\s+Share,\s+Trend,\s+Global\s+Industry\s+Report(?:\s*$|[,.])|Report
+3|terminal_type|Market Analysis|\bMarket\s+(Analysis)(?:\s*$|[,.])|?:\s*$|[,.]
+3|terminal_type|Market Forecast|\bMarket\s+(Forecast)(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Forecast Analysis Report|\bMarket\s+(Forecast\s+Analysis\s+Report)(?:\s*$|[,.])|Forecast Analysis Report
+3|compound_type|Market Forecast Report|\bMarket\s+(Forecast\s+Report)(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Forecast Study|\bMarket\s+(Forecast\s+Study)(?:\s*$|[,.])|Forecast Study
+3|compound_type|Market Growth Analysis|\bMarket\s+(Growth\s+Analysis)(?:\s*$|[,.])|Growth Analysis
+3|compound_type|Market Growth Analysis Report|\bMarket\s+(Growth\s+Analysis\s+Report)(?:\s*$|[,.])|Growth Analysis Report
+3|embedded_type|Market Intelligence Embedded|\bMarket\s+(Intelligence)\b|Intelligence
+3|terminal_type|Market Outlook|\bMarket\s+(Outlook)(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Outlook Trends Analysis|\bMarket\s+(Outlook,\s+Trends,\s+Analysis)(?:\s*$|[,.])|Outlook, Trends, Analysis
+3|compound_type|Market Size Growth Report|\bMarket\s+Size\s*&\s*Growth\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Size Industry Terminal|\bMarket\s+Size,\s+Industry(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Size Report|\bMarket\s+Size\s+(Report)\b|Size Report
+3|compound_type|Market Size Share Analysis Report|\bMarket\s+Size\s*&\s*Share\s+(Analysis\s+Report)(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Size Share Growth Analysis Report|\bMarket\s+Size,\s+Share\s*&\s*Growth\s+(Analysis\s+Report)(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Size Share Growth Industry Report|\bMarket\s+Size,\s+Share\s*&\s*Growth,\s+Industry\s+(Report)(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Size Share Growth Terminal|\bMarket\s+Size,\s+Share,\s+Growth(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Size Share Trends Analysis Report|\bMarket\s+Size,\s+Share\s*&\s*Trends\s+(Analysis\s+Report)(?:\s*$|[,.])|?:\s*$|[,.]
+3|terminal_type|Market Trends|\bMarket\s+(Trends)(?:\s*$|[,.])|?:\s*$|[,.]
+3|compound_type|Market Trends Analysis|\bMarket\s+(Trends\s+Analysis)(?:\s*$|[,.])|Trends Analysis
+3|compound_type|Market Trends Analysis Report|\bMarket\s+(Trends\s+Analysis\s+Report)(?:\s*$|[,.])|Trends Analysis Report
+3|compound_type|Market Trends Terminal|\bMarket,?\s+(Trends)(?:\s*$|[,.])|Trends
+3|compound_type|Size Growth Report|\bSize,?\s*&?\s*Growth\s+(Report)(?:\s*$|[,.])|Report
+3|compound_type|Size Share Analysis|\bSize,?\s+Share,?\s+(Analysis)(?:\s*$|[,.])|Analysis
+3|prefix_type|Study Prefix|^(Study):\s*|Study
+3|terminal_type|Study Terminal|\b(Study)\s*$|Study
+4|compound_type|Market Data Terminal|\bMarket,?\s+(Data)(?:\s*$|[,.])|Data
+4|compound_type|Market Forecast Format|\bMarket\s+\(Forecast\s*\)(?:\s*$|[,.])|?:\s*$|[,.]
+4|embedded_type|Market Insights Embedded|\bMarket\s+(Insights)\b|Insights
+4|compound_type|Market Research Terminal|\bMarket,?\s+(Research)(?:\s*$|[,.])|Research
+4|compound_type|Market Share Analysis|\bMarket\s+Share\s+(Analysis)\b|Share Analysis
+4|compound_type|Market Size I Industry Report Typo|\bMarket\s+Size\s+I\s+(Industry\s+Report)(?:\s*$|[,.])|I Industry Report
+4|compound_type|Market Size Industrial Report Typo|\bMarket\s+Size,\s+(Industrial\s+Report)(?:\s*$|[,.])|Industrial Report
+4|compound_type|Market Size Share Analysis Industry Research Report Growth Trends|\bMarket\s+Size\s*&\s*Share\s+Analysis\s*-\s*Industry\s+Research\s+Report\s*-\s*Growth\s+Trends(?:\s*$|[,.])|?:\s*$|[,.]
+4|compound_type|Market Size Worth Dollar Amount|\bMarket\s+Size\s+Worth\s+\$[\d,.]+\s+(?:Billion|Million|Trillion)\s+By(?:\s*$|[,.])|Size Worth $ Amount
+4|prefix_type|Research Prefix|^(Research):\s*|Research
+4|terminal_type|Research Terminal|\b(Research)\s*$|Research
+5|embedded_type|Market Assessment Embedded|\bMarket\s+(Assessment)\b|Assessment
+5|compound_type|Market Intelligence Terminal|\bMarket,?\s+(Intelligence)(?:\s*$|[,.])|Intelligence
+5|prefix_type|Market Report Prefix|^Market\s+(Report):\s*|Report
+5|terminal_type|Outlook Terminal|\b(Outlook)\s*$|Outlook
+5|compound_type|Research Study|\b(Research\s+Study)\b|Research Study
+6|terminal_type|Forecast Terminal|\b(Forecast)\s*$|Forecast
+6|compound_type|Market Forecast Terminal|\bMarket,?\s+(Forecast)(?:\s*$|[,.])|Forecast
+6|compound_type|Market Overview|\bMarket\s+(Overview)\b|Overview
+6|embedded_type|Market Trends Embedded|\bMarket\s+(Trends)\b|Trends
+7|terminal_type|Intelligence Terminal|\b(Intelligence)\s*$|Intelligence
+7|embedded_type|Market Overview Embedded|\bMarket\s+(Overview)\b|Overview
+8|terminal_type|Insights Terminal|\b(Insights)\s*$|Insights
+9|terminal_type|Assessment Terminal|\b(Assessment)\s*$|Assessment
+10|embedded_type|Market Terminal|\bMarket\s*$|Market
+10|terminal_type|Overview Terminal|\b(Overview)\s*$|Overview
+45|None|Industry Outlook & Trends|\bIndustry\s+Outlook\s*&\s*Trends(?:\s*$|[,.])|None
+50|None|Market Size Study|\bMarket\s+Size\s+Study(?:\s*$|[,.])|None
+60|None|Growth Analysis|\bGrowth\s+Analysis(?:\s*$|[,.])|None

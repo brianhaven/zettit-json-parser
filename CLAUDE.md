@@ -803,6 +803,63 @@ Co-Authored-By: Claude AI
 
 This signature properly represents that Brian Haven (Zettit, Inc.) provides strategic direction and architectural guidance while Claude Code AI handles the technical implementation and coding decisions.
 
+## TODO TOOL SAFETY RULES
+
+**🚨 CRITICAL: Prevent accidental todo list clearing while enabling safe viewing**
+
+### TodoWrite Tool Usage Policy
+
+**TodoWrite can be used safely for BOTH viewing and modifying todos with these rules:**
+
+#### **✅ SAFE Viewing Pattern:**
+When user asks to "show todos", "view todos", "what are the pending todos", or "what's next":
+- **DO:** Call TodoWrite with the current todos to display them 
+- **NEVER:** Pass an empty array `[]` or modified todo list just to view
+- **Pattern:** Only call TodoWrite if you have the current todo state to preserve
+
+#### **✅ SAFE Modification Pattern:**  
+When user asks to add, remove, or update specific todos:
+- **DO:** Call TodoWrite with the intentional changes
+- **CONFIRM:** State exactly what changes will be made before calling
+- **VERIFY:** Ensure the todo array includes existing todos plus modifications
+
+#### **❌ FORBIDDEN Patterns:**
+```python
+# NEVER do this when user asks to view todos:
+TodoWrite(todos=[])  # This CLEARS all todos!
+
+# NEVER pass empty or partial arrays unless intentionally clearing:
+TodoWrite(todos=[new_todo_only])  # This LOSES existing todos!
+```
+
+#### **🔄 Correct Viewing Approach:**
+```python
+# When user asks "show me todos" and you don't have current state:
+# Explain: "I don't have the current todo state loaded. Let me help you check them another way or add new ones."
+
+# When you have current todo state:
+# Call TodoWrite with existing todos to display them safely
+TodoWrite(todos=current_todos_preserved)
+```
+
+### Error Prevention Protocol
+
+**BEFORE any TodoWrite call:**
+1. **Identify intent:** Is this to view, add, remove, or modify?
+2. **Preserve existing:** Never lose existing todos unless explicitly asked to remove them
+3. **State changes:** Clearly explain what the TodoWrite call will do
+4. **Verify array:** Ensure the todos array contains all intended todos
+
+### Recovery Protocol
+
+**If todos are accidentally cleared:**
+1. Immediately apologize and acknowledge the error
+2. Explain that todos cannot be recovered from context  
+3. Help recreate important todos from conversation history if possible
+4. Learn from the mistake to prevent future occurrences
+
+**This policy enables safe todo viewing while preventing accidental data loss.**
+
 ## Task Master AI Instructions
 **Import Task Master's development workflow commands and guidelines, treat as if import is in the main CLAUDE.md file.**
 @./.taskmaster/CLAUDE.md

@@ -1,0 +1,18 @@
+MongoDB Export Summary
+====================
+
+Export Date (PDT): 2025-08-26 23:34:30 PDT
+Export Date (UTC): 2025-08-27 06:34:30 UTC
+Database: deathstar
+Collection: pattern_libraries
+Total Documents: 1928
+Backup File: pattern_libraries_backup_20250826_233429.json
+
+Document Type Breakdown:
+  MARKET_TERM: 4 documents
+  REPORT_TYPE: 569 documents
+  confusing_term: 4 documents
+  date_pattern: 64 documents
+  geographic_entity: 926 documents
+  market_term: 3 documents
+  report_type: 358 documents
