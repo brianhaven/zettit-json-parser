@@ -109,10 +109,22 @@ Market research report titles contain valuable structured data that needs to be 
 /
 ├── mongo-connection-test.py          # MongoDB connectivity validation
 ├── /experiments/                     # Development scripts with versions
+│   ├── README.md                    # Pipeline scripts documentation
+│   ├── 01_market_term_classifier_v1.py
+│   ├── 02_date_extractor_v1.py      
+│   ├── 03_report_type_extractor_v2.py
+│   ├── 04_geographic_entity_detector_v2.py
+│   ├── 05_topic_extractor_v1.py
+│   └── /tests/                      # Validation and test scripts
 ├── /outputs/                        # Timestamped analysis results
-├── /documentation/                   # Permanent documentation
+├── /documentation/                   # Modular documentation system
+│   ├── claude-component-integration.md      # Integration patterns
+│   ├── claude-pre-development-analysis.md  # Error prevention guides
+│   ├── claude-mongodb-integration.md       # Database architecture
+│   ├── claude-pipeline-components.md       # Component details
+│   └── claude-development-standards.md     # Coding standards
 ├── /resources/                       # Data files and exports
-├── CLAUDE.md                        # Development standards
+├── CLAUDE.md                        # Main development guide (optimized)
 └── README.md                        # Project overview
 ```
 
@@ -141,12 +153,20 @@ python experiments/title_pattern_discovery_v1.py
 
 ## Development Standards
 
-### Output File Format
-All analysis outputs include dual timestamps:
-```
-**Analysis Date (PDT):** 2025-08-19 15:30:45 PDT  
-**Analysis Date (UTC):** 2025-08-19 22:30:45 UTC
-```
+**For detailed development guidelines, see the modular documentation system:**
+- **Main Guide**: `CLAUDE.md` - Optimized overview with @ references to modular docs
+- **Component Integration**: `documentation/claude-component-integration.md` - Current class names and method signatures
+- **Pre-Development Analysis**: `documentation/claude-pre-development-analysis.md` - Error prevention patterns
+- **MongoDB Integration**: `documentation/claude-mongodb-integration.md` - Database architecture and MCP commands
+
+### Quick Reference - Current Components (2025-08-27):
+| Script | Class Name | Method | Initialization |
+|--------|------------|--------|----------------|
+| 01 | `MarketTermClassifier` | `classify(title)` | `PatternLibraryManager` (optional) |
+| 02 | `EnhancedDateExtractor` | `extract(title)` | `PatternLibraryManager` (required) |
+| 03 | `MarketAwareReportTypeExtractor` | `extract(title, market_term_type)` | `PatternLibraryManager` (required) |
+| 04 v2 | `GeographicEntityDetector` | `extract_geographic_entities(text)` | Raw collection |
+| 05 | `TopicExtractor` | `extract(title)` | `PatternLibraryManager` |
 
 ### Processing Philosophy
 **"Systematic Removal"**: Remove known patterns (dates, report types, regions) systematically using MongoDB-based libraries. What remains IS the topic, regardless of internal punctuation or special characters.
@@ -166,11 +186,19 @@ All analysis outputs include dual timestamps:
   - **GitHub Issue #11 Resolved**: Fixed acronym-embedded pattern processing
   - **Market-Aware Processing**: Dual workflows for different title classifications
   - **Database Quality Assured**: Comprehensive pattern validation and cleanup
+- **Phase 4 Ready**: 🔄 Geographic Entity Detection ready for lean pattern-based refactoring
 - **Enhanced Categorization**: 21 titles correctly identified as having no dates (not failures)
 - **Pattern Libraries**: 64 date patterns + 355 report type patterns across multiple format types
 - **Geographic Coverage**: ~9% of titles contain regional information  
 - **Topic Preservation**: Complete technical compound retention
 - **Overall Success Rate**: Exceeding 95-98% target accuracy (89% complete processing foundation)
+
+### Latest Improvements (August 27, 2025):
+- **Documentation Optimization**: CLAUDE.md reduced from 866 to 182 lines (79% reduction)
+- **Modular Documentation**: 7 focused documentation files with @ reference system
+- **Integration Error Prevention**: Comprehensive guides to prevent common debugging cycles
+- **Component Verification**: Current class names and method signatures validated
+- **Pre-Development Analysis**: Enhanced error prevention patterns and verification commands
 
 ## Sample Processing Results
 
@@ -195,10 +223,19 @@ All analysis outputs include dual timestamps:
 ## Contributing
 
 Development follows systematic library-building approach:
-1. Identify new edge cases through analysis
-2. Enhance libraries with discovered patterns  
-3. Validate improvements against known datasets
-4. Maintain backwards compatibility through versioning
+1. **Follow Pre-Development Analysis**: Reference `documentation/claude-pre-development-analysis.md` to verify current class names and method signatures before creating scripts
+2. **Use Component Integration Guide**: Reference `documentation/claude-component-integration.md` for correct initialization patterns and common error prevention
+3. **Identify new edge cases** through analysis and testing
+4. **Enhance libraries** with discovered patterns through MongoDB pattern_libraries collection
+5. **Validate improvements** against known datasets with comprehensive test coverage
+6. **Maintain backwards compatibility** through versioning and proper migration paths
+
+### Development Workflow:
+1. **Review current documentation** (CLAUDE.md and modular @ references)
+2. **Verify component signatures** using provided grep commands
+3. **Follow integration patterns** from verified examples
+4. **Test thoroughly** before committing changes
+5. **Update documentation** as needed to maintain accuracy
 
 ## License
 

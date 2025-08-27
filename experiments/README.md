@@ -27,14 +27,21 @@ These scripts should be run in numerical order for complete market research titl
 - **Performance:** Achieved 95-97% accuracy target with production-ready reliability
 
 ### 4. Enhanced Geographic Entity Detection
-`04_geographic_entity_detector_v1.py` - **BREAKTHROUGH:** Dual spaCy model validation with HTML processing
+`04_geographic_entity_detector_v2.py` - **ENHANCED:** Dual spaCy model validation with HTML processing
+- **Current Version:** v2 with lean architecture using raw MongoDB collections
+- **Class Name:** `GeographicEntityDetector` (verified 2025-08-27)
+- **Method:** `extract_geographic_entities(text)` (NOT `extract()`)
 - **HTML Processing Innovation:** BeautifulSoup parsing prevents concatenation artifacts
 - **Dual Model Validation:** en_core_web_md + en_core_web_lg provides 31% more discoveries
 - **Table Data Extraction:** Structured region data from HTML descriptions
 - **Cross-Model Confidence Scoring:** Validates patterns across both models
+- **Status:** Ready for Phase 4 lean pattern-based refactoring (GitHub Issue #12)
 
 ### 5. Topic Extraction and Normalization
 `05_topic_extractor_v1.py` - **READY FOR TESTING:** Systematic removal approach for final topic extraction
+- **Class Name:** `TopicExtractor` (verified 2025-08-27)
+- **Method:** `extract(title)` (standardized with other components)
+- **Initialization:** Requires `PatternLibraryManager` instance
 - **Systematic Removal:** Remove all known patterns (dates, report types, regions) in sequence
 - **What remains IS the topic:** Preserves technical compounds regardless of internal punctuation
 - **Normalization:** Create `topicName` while preserving original in `topic`
@@ -68,6 +75,29 @@ Development and validation scripts moved to maintain clean organization:
 - `test_market_classifier_v1.py` - Market term classification validation
 - `test_geographic_detector_v1.py` - Geographic detection accuracy testing
 - `test_pattern_manager_v1.py` - Pattern library manager validation
+
+## Component Integration Information
+
+**CRITICAL:** Before creating test scripts or integrating components, reference the updated documentation:
+- **Main Documentation:** `../CLAUDE.md` (with @ references to modular docs)
+- **Integration Guide:** `../documentation/claude-component-integration.md`
+- **Pre-Development Analysis:** `../documentation/claude-pre-development-analysis.md`
+
+### Current Verified Component Details (2025-08-27):
+
+| Script | Class Name | Initialization | Main Method |
+|--------|------------|---------------|-------------|
+| 01 | `MarketTermClassifier` | `(pattern_library_manager=None)` | `classify(title)` |
+| 02 | `EnhancedDateExtractor` | `(pattern_library_manager)` REQUIRED | `extract(title)` |
+| 03 | `MarketAwareReportTypeExtractor` | `(pattern_library_manager)` REQUIRED | `extract(title, market_term_type)` |
+| 04 v2 | `GeographicEntityDetector` | `(patterns_collection)` RAW | `extract_geographic_entities(text)` |
+| 05 | `TopicExtractor` | `(pattern_library_manager)` | `extract(title)` |
+
+**Important Notes:**
+- Scripts 01-03 use `PatternLibraryManager` (legacy architecture)
+- Script 04+ uses raw MongoDB collections (lean architecture)
+- All result objects use `.title` for cleaned text (NOT `.remaining_text`)
+- PatternLibraryManager requires connection string: `PatternLibraryManager(os.getenv('MONGODB_URI'))`
 
 ## Processing Philosophy
 
@@ -158,9 +188,18 @@ All scripts generate dual-timestamp outputs:
 - **Performance Target:** Achieve >96% accuracy with lean approach
 - **Pipeline Foundation:** Scripts 01→02→03 provide robust 89% complete processing capability
 
+### 📋 **Latest Updates (August 27, 2025)**
+**Documentation & Integration Improvements:**
+- ✅ **CLAUDE.md optimized** - Reduced from 866 to 182 lines (79% reduction) with modular @ references
+- ✅ **Component integration guide updated** with verified class names and method signatures
+- ✅ **Pre-development analysis enhanced** with specific error prevention patterns
+- ✅ **Current component verification** completed for all pipeline scripts (2025-08-27)
+- ✅ **Common integration errors documented** with correct alternatives to prevent debugging cycles
+
 ### 📋 **Recent Critical Resolutions**
 - **GitHub Issue #11:** Fixed compound patterns matching before acronym_embedded (August 26, 2025)
 - **ReportTypeFormat Enum:** Added missing `ACRONYM_EMBEDDED` value for proper result object creation
 - **Control Flow Structure:** Fixed duplicate match blocks preventing acronym pattern returns
 - **Pattern Priority:** Corrected both pattern_groups arrays (lines 330 & 472) for proper first-match-wins behavior
 - **Database Cleanup:** Removed malformed patterns and validated all pattern library entries
+- **Documentation Modularization:** Split large CLAUDE.md into focused, maintainable documentation files
