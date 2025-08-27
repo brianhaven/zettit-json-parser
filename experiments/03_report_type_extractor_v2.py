@@ -286,7 +286,9 @@ class MarketAwareReportTypeExtractor:
         market_phrase = market_type.replace('_', ' ').title()
         
         # Find the market term in the title
-        pattern = rf'\b{re.escape(market_phrase)}\s+([^,\-–—]+?)(?:[,\-–—]|$)'
+        # FIXED: Allow hyphens within market context (e.g., "Off-highway Vehicles")
+        # Only exclude commas as proper terminators, allow hyphens for compound words
+        pattern = rf'\b{re.escape(market_phrase)}\s+([^,]+?)(?:[,]|$)'
         match = re.search(pattern, title, re.IGNORECASE)
         
         if match:
