@@ -298,27 +298,35 @@ def test_lean_pipeline(test_quantity: int = 9):
         for result in standard_terms:
             f.write(f"{result['original_title']}\n")
     
-    # 2) Extracted dates file
+    # 2) Extracted dates file (deduplicated)
     dates_file = os.path.join(output_dir, "extracted_dates.txt")
-    with open(dates_file, 'w') as f:
-        f.write("Extracted Dates\n")
-        f.write(f"Analysis Date (PDT): {timestamp['pst']}\n")
-        f.write("=" * 50 + "\n\n")
-        
-        for result in results:
-            if result['extracted_forecast_date_range']:
-                f.write(f"{result['extracted_forecast_date_range']}\n")
+    unique_dates = set()
+    for result in results:
+        if result['extracted_forecast_date_range']:
+            unique_dates.add(result['extracted_forecast_date_range'])
     
-    # 3) Extracted report types file
-    report_types_file = os.path.join(output_dir, "extracted_report_types.txt")
-    with open(report_types_file, 'w') as f:
-        f.write("Extracted Report Types\n")
+    with open(dates_file, 'w') as f:
+        f.write("Extracted Dates (Deduplicated)\n")
         f.write(f"Analysis Date (PDT): {timestamp['pst']}\n")
         f.write("=" * 50 + "\n\n")
         
-        for result in results:
-            if result['extracted_report_type']:
-                f.write(f"{result['extracted_report_type']}\n")
+        for date in sorted(unique_dates):
+            f.write(f"{date}\n")
+    
+    # 3) Extracted report types file (deduplicated)
+    report_types_file = os.path.join(output_dir, "extracted_report_types.txt")
+    unique_report_types = set()
+    for result in results:
+        if result['extracted_report_type']:
+            unique_report_types.add(result['extracted_report_type'])
+    
+    with open(report_types_file, 'w') as f:
+        f.write("Extracted Report Types (Deduplicated)\n")
+        f.write(f"Analysis Date (PDT): {timestamp['pst']}\n")
+        f.write("=" * 50 + "\n\n")
+        
+        for report_type in sorted(unique_report_types):
+            f.write(f"{report_type}\n")
     
     # 4) Extracted regions file (deduplicated)
     regions_file = os.path.join(output_dir, "extracted_regions_deduplicated.txt")

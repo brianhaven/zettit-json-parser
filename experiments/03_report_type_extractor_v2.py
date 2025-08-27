@@ -172,6 +172,7 @@ class MarketAwareReportTypeExtractor:
                 pattern_data = {
                     'pattern': pattern.get('pattern', ''),  # Use 'pattern' field, not 'term'
                     'term': pattern.get('term', ''),        # Also store term for reference
+                    'priority': pattern.get('priority', 5),  # Preserve MongoDB priority ordering
                     'confidence_weight': pattern.get('confidence_weight', 0.9),
                     'format_type': pattern.get('format_type', 'unknown')
                 }
@@ -198,12 +199,24 @@ class MarketAwareReportTypeExtractor:
                     pattern_data['format_type'] = 'terminal_type'  # Override for consistency
                     self.terminal_type_patterns.append(pattern_data)
                     
+            # Sort each pattern group by priority (lower number = higher priority)
+            # Secondary sort by pattern length (longer patterns first within same priority)
+            # This ensures complete patterns match before partial ones
+            def sort_patterns(pattern_list):
+                return sorted(pattern_list, key=lambda x: (x.get('priority', 5), -len(x.get('term', ''))))
+            
+            self.terminal_type_patterns = sort_patterns(self.terminal_type_patterns)
+            self.embedded_type_patterns = sort_patterns(self.embedded_type_patterns)
+            self.prefix_type_patterns = sort_patterns(self.prefix_type_patterns)
+            self.compound_type_patterns = sort_patterns(self.compound_type_patterns)
+            self.acronym_embedded_patterns = sort_patterns(self.acronym_embedded_patterns)
+            
             logger.info(f"Loaded {len(patterns)} report type patterns from database")
-            logger.info(f"  Terminal: {len(self.terminal_type_patterns)}")
-            logger.info(f"  Embedded: {len(self.embedded_type_patterns)}")
-            logger.info(f"  Prefix: {len(self.prefix_type_patterns)}")
-            logger.info(f"  Compound: {len(self.compound_type_patterns)}")
-            logger.info(f"  Acronym Embedded: {len(self.acronym_embedded_patterns)}")
+            logger.info(f"  Terminal: {len(self.terminal_type_patterns)} (sorted by priority)")
+            logger.info(f"  Embedded: {len(self.embedded_type_patterns)} (sorted by priority)")
+            logger.info(f"  Prefix: {len(self.prefix_type_patterns)} (sorted by priority)")
+            logger.info(f"  Compound: {len(self.compound_type_patterns)} (sorted by priority)")
+            logger.info(f"  Acronym Embedded: {len(self.acronym_embedded_patterns)} (sorted by priority)")
             
         except Exception as e:
             logger.error(f"Error loading patterns: {e}")
