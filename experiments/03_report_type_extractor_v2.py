@@ -332,13 +332,16 @@ class MarketAwareReportTypeExtractor:
     
     def _search_report_patterns_without_market(self, text: str) -> Dict[str, Any]:
         """
-        Search for report type patterns in text, ignoring "Market" prefix requirement.
+        Search for report type patterns in text (excluding Market-based patterns).
+        
+        First pass of two-pass market-aware processing. Looks for non-Market report patterns.
+        If none found, calling code should fallback to appending "Market" and retry.
         
         Args:
-            text: Text to search for patterns
+            text: Text to search for patterns (e.g., "High Voltage Relays")
             
         Returns:
-            Dictionary with extraction results
+            Dictionary with extraction results or clear "no patterns found" indicator
         """
         # Try patterns in order of specificity (acronym → compound → prefix → embedded → terminal)
         pattern_groups = [
@@ -456,18 +459,39 @@ class MarketAwareReportTypeExtractor:
         logger.debug(f"Remaining title: '{remaining_title}'")
         logger.debug(f"Pipeline forward: '{pipeline_forward}'")
         
-        # Step 2: Rearrange title for pattern matching (move market term to end)
-        rearranged_title = self._rearrange_title_for_matching(remaining_title, market_term)
-        logger.debug(f"Rearranged for matching: '{rearranged_title}'")
-        
-        # Step 3: Search for report type patterns (without Market prefix requirement)
+        # Step 2: First pass - search for non-Market report patterns in remaining text
+        logger.debug(f"First pass: searching for patterns in '{remaining_title}'")
         result = self._search_report_patterns_without_market(remaining_title)
         
-        # Step 4: Reconstruct final report type with market term
-        final_type = self._reconstruct_report_type_with_market(
-            result.get('extracted_report_type'), 
-            market_term
-        )
+        # Step 3: Check if first pass found any patterns
+        if result.get('extracted_report_type'):
+            # Found patterns - reconstruct with market term
+            logger.debug(f"First pass SUCCESS: found pattern '{result.get('extracted_report_type')}'")
+            final_type = self._reconstruct_report_type_with_market(
+                result.get('extracted_report_type'), 
+                market_term
+            )
+            rearranged_title = self._rearrange_title_for_matching(remaining_title, market_term)
+        else:
+            # Step 4: No patterns found - fallback to two-pass approach
+            logger.debug(f"First pass failed - no patterns in '{remaining_title}', trying fallback")
+            
+            # Fallback: append extracted "Market" to end of remaining text  
+            fallback_text = f"{remaining_title} Market".strip()
+            logger.debug(f"Fallback text: '{fallback_text}'")
+            
+            # Second pass: run standard extraction on fallback text
+            fallback_result = self._process_standard_workflow(fallback_text)
+            
+            if fallback_result.get('final_report_type'):
+                logger.debug(f"Second pass SUCCESS: found '{fallback_result.get('final_report_type')}'")
+                result = fallback_result
+                final_type = fallback_result.get('final_report_type')
+                rearranged_title = fallback_text
+            else:
+                logger.debug("Second pass also failed - no report type found")
+                final_type = None
+                rearranged_title = remaining_title
         
         # Update statistics
         self.extraction_stats['market_aware_workflow'] += 1
