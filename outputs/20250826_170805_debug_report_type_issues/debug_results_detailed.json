@@ -1,0 +1,210 @@
+[
+  {
+    "case": {
+      "original": "Graphite Market Size, Share, Growth, Industry Report, 2030",
+      "after_date_removal": "Graphite Market Size, Share, Growth, Industry Report",
+      "expected_report": "Market Size, Share, Growth, Industry Report",
+      "actual_report": "Industry Report",
+      "actual_topic": "Graphite Market Size, Share, Growth"
+    },
+    "text_analyzed": "Graphite Market Size, Share, Growth, Industry Report",
+    "total_matches": 5,
+    "matches": [
+      {
+        "term": "Industry Report Terminal",
+        "priority": 2,
+        "pattern": "\\bIndustry,?\\s+(Report)(?:\\s*$|[,.])",
+        "match_text": "Industry Report",
+        "groups": [
+          "Report"
+        ]
+      },
+      {
+        "term": "Market Size Terminal",
+        "priority": 2,
+        "pattern": "\\bMarket\\s+Size(?:\\s*$|[,.])",
+        "match_text": "Market Size,",
+        "groups": []
+      },
+      {
+        "term": "Market Size Share Terminal2",
+        "priority": 2,
+        "pattern": "\\bMarket\\s+Size,\\s+Share(?:\\s*$|[,.])",
+        "match_text": "Market Size, Share,",
+        "groups": []
+      },
+      {
+        "term": "Market Size Share Growth Terminal",
+        "priority": 3,
+        "pattern": "\\bMarket\\s+Size,\\s+Share,\\s+Growth(?:\\s*$|[,.])",
+        "match_text": "Market Size, Share, Growth,",
+        "groups": []
+      },
+      {
+        "term": "Manual Review #53: Market Size, Share, Growth, Industry Report",
+        "priority": 3,
+        "pattern": "\\bMarket\\s+Size,\\s+Share,\\s+Growth,\\s+Industry\\s+Report(?:\\s*$|[,.])",
+        "match_text": "Market Size, Share, Growth, Industry Report",
+        "groups": []
+      }
+    ],
+    "first_match": {
+      "term": "Industry Report Terminal",
+      "priority": 2,
+      "pattern": "\\bIndustry,?\\s+(Report)(?:\\s*$|[,.])",
+      "match_text": "Industry Report",
+      "groups": [
+        "Report"
+      ]
+    }
+  },
+  {
+    "case": {
+      "original": "Isophorone Market Size, Share, Growth Analysis Report, 2030",
+      "after_date_removal": "Isophorone Market Size, Share, Growth Analysis Report",
+      "expected_report": "Market Size, Share, Growth Analysis Report",
+      "actual_report": "Market Size, Share,",
+      "actual_topic": "Isophorone  Growth Analysis Report"
+    },
+    "text_analyzed": "Isophorone Market Size, Share, Growth Analysis Report",
+    "total_matches": 3,
+    "matches": [
+      {
+        "term": "Market Size Terminal",
+        "priority": 2,
+        "pattern": "\\bMarket\\s+Size(?:\\s*$|[,.])",
+        "match_text": "Market Size,",
+        "groups": []
+      },
+      {
+        "term": "Market Size Share Terminal2",
+        "priority": 2,
+        "pattern": "\\bMarket\\s+Size,\\s+Share(?:\\s*$|[,.])",
+        "match_text": "Market Size, Share,",
+        "groups": []
+      },
+      {
+        "term": "Manual Review #57: Market Size, Share, Growth Analysis Report",
+        "priority": 2,
+        "pattern": "\\bMarket\\s+Size,\\s+Share,\\s+Growth\\s+Analysis\\s+Report(?:\\s*$|[,.])",
+        "match_text": "Market Size, Share, Growth Analysis Report",
+        "groups": []
+      }
+    ],
+    "first_match": {
+      "term": "Market Size Terminal",
+      "priority": 2,
+      "pattern": "\\bMarket\\s+Size(?:\\s*$|[,.])",
+      "match_text": "Market Size,",
+      "groups": []
+    }
+  },
+  {
+    "case": {
+      "original": "High-speed Camera Market Size, Share, Growth Report 2030",
+      "after_date_removal": "High-speed Camera Market Size, Share, Growth Report",
+      "expected_report": "Market Size, Share, Growth Report",
+      "actual_report": "Market Size, Share,",
+      "actual_topic": "High-speed Camera  Growth"
+    },
+    "text_analyzed": "High-speed Camera Market Size, Share, Growth Report",
+    "total_matches": 4,
+    "matches": [
+      {
+        "term": "Market Size Share Report",
+        "priority": 1,
+        "pattern": "\\bMarket\\s+Size,?\\s+Share,?\\s*&?\\s*Growth?\\s*(Report)(?:\\s*$|[,.])",
+        "match_text": "Market Size, Share, Growth Report",
+        "groups": [
+          "Report"
+        ]
+      },
+      {
+        "term": "Manual Review #17: Market Size, Share, Growth Report",
+        "priority": 1,
+        "pattern": "\\bMarket\\s+Size,\\s+Share,\\s+Growth\\s+Report(?:\\s*$|[,.])",
+        "match_text": "Market Size, Share, Growth Report",
+        "groups": []
+      },
+      {
+        "term": "Market Size Terminal",
+        "priority": 2,
+        "pattern": "\\bMarket\\s+Size(?:\\s*$|[,.])",
+        "match_text": "Market Size,",
+        "groups": []
+      },
+      {
+        "term": "Market Size Share Terminal2",
+        "priority": 2,
+        "pattern": "\\bMarket\\s+Size,\\s+Share(?:\\s*$|[,.])",
+        "match_text": "Market Size, Share,",
+        "groups": []
+      }
+    ],
+    "first_match": {
+      "term": "Market Size Share Report",
+      "priority": 1,
+      "pattern": "\\bMarket\\s+Size,?\\s+Share,?\\s*&?\\s*Growth?\\s*(Report)(?:\\s*$|[,.])",
+      "match_text": "Market Size, Share, Growth Report",
+      "groups": [
+        "Report"
+      ]
+    }
+  },
+  {
+    "case": {
+      "original": "Hydraulic Fracturing Market Analysis, Industry Report, 2024",
+      "after_date_removal": "Hydraulic Fracturing Market Analysis, Industry Report",
+      "expected_report": "Market Analysis, Industry Report",
+      "actual_report": "Market Analysis,",
+      "actual_topic": "Hydraulic Fracturing  Industry Report"
+    },
+    "text_analyzed": "Hydraulic Fracturing Market Analysis, Industry Report",
+    "total_matches": 4,
+    "matches": [
+      {
+        "term": "Market Analysis Terminal",
+        "priority": 1,
+        "pattern": "\\bMarket,?\\s+(Analysis)(?:\\s*$|[,.])",
+        "match_text": "Market Analysis,",
+        "groups": [
+          "Analysis"
+        ]
+      },
+      {
+        "term": "Industry Report Terminal",
+        "priority": 2,
+        "pattern": "\\bIndustry,?\\s+(Report)(?:\\s*$|[,.])",
+        "match_text": "Industry Report",
+        "groups": [
+          "Report"
+        ]
+      },
+      {
+        "term": "Manual Review #133: Market Analysis, Industry Report",
+        "priority": 2,
+        "pattern": "\\bMarket\\s+Analysis,\\s+Industry\\s+Report(?:\\s*$|[,.])",
+        "match_text": "Market Analysis, Industry Report",
+        "groups": []
+      },
+      {
+        "term": "Market Analysis",
+        "priority": 3,
+        "pattern": "\\bMarket\\s+(Analysis)(?:\\s*$|[,.])",
+        "match_text": "Market Analysis,",
+        "groups": [
+          "Analysis"
+        ]
+      }
+    ],
+    "first_match": {
+      "term": "Market Analysis Terminal",
+      "priority": 1,
+      "pattern": "\\bMarket,?\\s+(Analysis)(?:\\s*$|[,.])",
+      "match_text": "Market Analysis,",
+      "groups": [
+        "Analysis"
+      ]
+    }
+  }
+]

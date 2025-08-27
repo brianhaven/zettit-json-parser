@@ -1,0 +1,63 @@
+Phase 4 Successful Geographic Extractions
+Analysis Date (PDT): 2025-08-26 11:33:13 PDT
+Analysis Date (UTC): 2025-08-26 18:33:13 UTC
+================================================================================
+
+Total Successful Extractions: 8
+
+Original: APAC Personal Protective Equipment
+Extracted Regions: Asia Pacific
+Remaining Text: Personal Protective Equipment
+Confidence: 0.850
+Processing Notes: Pattern 'Asia Pacific': 1 matches
+----------------------------------------
+
+Original: North America Europe Automotive Technology
+Extracted Regions: North America, Europe
+Remaining Text: Automotive Technology
+Confidence: 0.900
+Processing Notes: Pattern 'North America': 1 matches; Pattern 'Europe': 1 matches
+----------------------------------------
+
+Original: Middle East & Africa Healthcare Systems
+Extracted Regions: Middle East, Africa
+Remaining Text: Healthcare Systems
+Confidence: 0.900
+Processing Notes: Pattern 'Middle East': 1 matches; Pattern 'Africa': 1 matches
+----------------------------------------
+
+Original: Asia Pacific and Latin America Energy Solutions
+Extracted Regions: Latin America, Asia Pacific
+Remaining Text: Energy Solutions
+Confidence: 0.900
+Processing Notes: Pattern 'Latin America': 1 matches; Pattern 'Asia Pacific': 1 matches
+----------------------------------------
+
+Original: Europe, Middle East and Africa Financial Services
+Extracted Regions: Middle East, Africa
+Remaining Text: Financial Services
+Confidence: 0.900
+Processing Notes: Pattern 'Middle East': 1 matches; Pattern 'Africa': 1 matches
+----------------------------------------
+
+Original: Global Semiconductor Manufacturing
+Extracted Regions: Global
+Remaining Text: Semiconductor Manufacturing
+Confidence: 0.850
+Processing Notes: Pattern 'Global': 1 matches
+----------------------------------------
+
+Original: United States Canada Mexico Trade
+Extracted Regions: Mexico, United States, Canada
+Remaining Text: Trade
+Confidence: 0.950
+Processing Notes: Pattern 'Mexico': 1 matches; Pattern 'United States': 1 matches; Pattern 'Canada': 1 matches
+----------------------------------------
+
+Original: Southeast Asia Manufacturing Trends
+Extracted Regions: Southeast Asia
+Remaining Text: Manufacturing Trends
+Confidence: 0.850
+Processing Notes: Pattern 'Southeast Asia': 1 matches
+----------------------------------------
+

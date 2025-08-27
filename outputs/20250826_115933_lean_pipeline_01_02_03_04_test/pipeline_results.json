@@ -1,0 +1,15 @@
+{
+  "timestamp_pst": "2025-08-26 11:59:33 PDT",
+  "timestamp_utc": "2025-08-26 18:59:33 UTC",
+  "test_config": {
+    "approach": "lean_pattern_based_pipeline",
+    "pipeline_stages": [
+      "01_market_classification",
+      "02_date_extraction",
+      "03_report_type",
+      "04_geographic_lean"
+    ],
+    "test_cases": 9
+  },
+  "results": []
+}

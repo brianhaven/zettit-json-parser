@@ -1,0 +1,75 @@
+{
+  "timestamp_pst": "2025-08-26 12:01:54 PDT",
+  "timestamp_utc": "2025-08-26 19:01:54 UTC",
+  "test_config": {
+    "approach": "lean_pattern_based_pipeline",
+    "pipeline_stages": [
+      "01_market_classification",
+      "02_date_extraction",
+      "03_report_type",
+      "04_geographic_lean"
+    ],
+    "test_cases": 9
+  },
+  "results": [
+    {
+      "test_case": 4,
+      "original_title": "Artificial Intelligence (AI) Market in Automotive Industry Outlook & Trends, 2024-2028",
+      "market_term_type": "market_in",
+      "extracted_forecast_date_range": "2024-2028",
+      "extracted_report_type": "",
+      "extracted_regions": [],
+      "topic": "Artificial Intelligence (AI) Market in Automotive Industry Outlook & Trends",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 0.98,
+        "report_type": 0.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Requires context integration processing for market in",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 5,
+      "original_title": "Machine Learning Market for Healthcare Applications Growth Analysis, 2025-2032",
+      "market_term_type": "market_for",
+      "extracted_forecast_date_range": "2025-2032",
+      "extracted_report_type": "",
+      "extracted_regions": [],
+      "topic": "Machine Learning Market for Healthcare Applications Growth Analysis",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 0.98,
+        "report_type": 0.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Requires concatenation processing",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 9,
+      "original_title": "Southeast Asia Manufacturing Automation Technology Market Analysis Terminal, 2026",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2026",
+      "extracted_report_type": "",
+      "extracted_regions": [
+        "Southeast Asia"
+      ],
+      "topic": "Manufacturing Automation Technology Market Analysis Terminal",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'Southeast Asia': 1 matches"
+      }
+    }
+  ]
+}

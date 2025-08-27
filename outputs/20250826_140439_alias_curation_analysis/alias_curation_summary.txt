@@ -1,0 +1,134 @@
+Geographic Pattern Alias Curation Analysis Summary
+Analysis Date: 2025-08-26 14:04:55 PDT
+============================================================
+
+Dataset: 19558 market research titles
+Total aliases analyzed: 302
+
+CURATION RECOMMENDATIONS:
+  Deprecate (likely business terms): 4
+  Review (uncertain): 279
+  Keep (likely geographic): 19
+
+TOP PROBLEMATIC ALIASES (likely business terms):
+--------------------------------------------------
+'LI' -> Liechtenstein
+  Matches: 2
+  Business likelihood: 0.90
+  Recommendation: DEPRECATE
+  Sample: Metal Li-based Battery Casing Market Size Report, 2030
+
+'AC' -> Acre
+  Matches: 5
+  Business likelihood: 0.80
+  Recommendation: DEPRECATE
+  Sample: Electric AC Motors Market Size, Share, Industry Report, 2030
+
+'BI' -> Burundi
+  Matches: 3
+  Business likelihood: 0.73
+  Recommendation: DEPRECATE
+  Sample: Bi-axially Oriented Polypropylene (BOPP) Market
+
+'DC' -> Washington DC
+  Matches: 12
+  Business likelihood: 0.73
+  Recommendation: DEPRECATE
+  Sample: Brushless DC Motor Market Size, Industry Report, 2030
+
+'TV' -> Tuvalu
+  Matches: 14
+  Business likelihood: 0.61
+  Recommendation: REVIEW
+  Sample: 4K TV Market Size, Share, Trends & Growth Report, 2030
+
+'CD' -> Democratic Republic of the Congo
+  Matches: 1
+  Business likelihood: 0.40
+  Recommendation: REVIEW
+  Sample: Circular Dichroism (CD) Spectrometers Market
+
+'GM' -> Gambia
+  Matches: 2
+  Business likelihood: 0.40
+  Recommendation: REVIEW
+  Sample: GM Cryocoolers Market Size, Share & Trends Report, 2030
+
+'Can' -> Canada
+  Matches: 5
+  Business likelihood: 0.25
+  Recommendation: KEEP
+  Sample: Metal Aerosol Can Market Size, Share & Trends Report, 2030
+
+'CAR' -> Central African Republic
+  Matches: 46
+  Business likelihood: 0.19
+  Recommendation: KEEP
+  Sample: Car Electrical Products Market Analysis, Outlook 2031
+
+'KSA' -> Saudi Arabia
+  Matches: 2
+  Business likelihood: 0.15
+  Recommendation: REVIEW
+  Sample: KSA Cement Market Size, Share And Trends, Report, 2030
+
+'LATAM' -> Latin America
+  Matches: 1
+  Business likelihood: 0.15
+  Recommendation: REVIEW
+  Sample: LATAM Adalimumab Market
+
+'Gulf' -> GCC
+  Matches: 1
+  Business likelihood: 0.15
+  Recommendation: REVIEW
+  Sample: Gulf Cooperation Council Activated Carbon Market Size Report, 2025
+
+'US' -> United States
+  Matches: 4
+  Business likelihood: 0.15
+  Recommendation: REVIEW
+  Sample: US High Capacity Power Banks Market Size, Industry Report, 2025
+
+'U.S' -> United States
+  Matches: 1122
+  Business likelihood: 0.15
+  Recommendation: KEEP
+  Sample: U.S. Hand Protection Equipment Market Size, Report, 2030
+
+'APAC' -> Asia Pacific
+  Matches: 11
+  Business likelihood: 0.15
+  Recommendation: KEEP
+  Sample: APAC & Middle East Personal Protective Equipment Market Report, 2030
+
+'UK' -> United Kingdom
+  Matches: 32
+  Business likelihood: 0.15
+  Recommendation: KEEP
+  Sample: UK Renewable Energy Market Size, Industry Report, 2030
+
+'U.K' -> United Kingdom
+  Matches: 17
+  Business likelihood: 0.15
+  Recommendation: KEEP
+  Sample: U.K. PPE In Construction Market Size, Industry Report, 2030
+
+'Korea' -> South Korea
+  Matches: 15
+  Business likelihood: 0.15
+  Recommendation: KEEP
+  Sample: South Korea Travel Retail Market - Size, Share & Industry Analysis
+
+'World' -> Global
+  Matches: 1
+  Business likelihood: 0.15
+  Recommendation: REVIEW
+  Sample: Real World Evidence Solutions Market Size Report, 2030
+
+'EMEA' -> Europe, Middle East and Africa
+  Matches: 11
+  Business likelihood: 0.15
+  Recommendation: KEEP
+  Sample: EMEA Prestressed Concrete (PC) Wire and Strand Market, 2019-2025
+

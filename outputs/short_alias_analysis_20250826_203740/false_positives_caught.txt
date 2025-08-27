@@ -1,0 +1,324 @@
+False Positives Successfully Caught by New Logic
+Analysis Date: 2025-08-26 20:37:40 PDT
+============================================================
+
+Total: 238 cases
+
+
+COMMON WORD BLACKLIST: 'TO' (63 cases):
+----------------------------------------
+  'To' in: Less Than Or Equal To 5 mm² Pressure Sensor Market Report, 2030
+    Would resolve to: Tonga
+    Context: ...Less Than Or Equal [To] 5 mm² Pressure Sens...
+
+  'To' in: Coal To Liquid Market Size & Share, Industry Report, 2030
+    Would resolve to: Tonga
+    Context: ...Coal [To] Liquid Market Size ...
+
+  'To' in: Direct To Shape Printer Market Size, Industry Report, 2030
+    Would resolve to: Tonga
+    Context: ...Direct [To] Shape Printer Marke...
+
+  'to' in: Europe Waste to Energy Market Size & Share Report, 2030
+    Would resolve to: Tonga
+    Context: ...Europe Waste [to] Energy Market Size ...
+
+  'To' in: Gas To Liquids Market Size, Share, Global GTL Industry Report, 2025
+    Would resolve to: Tonga
+    Context: ...Gas [To] Liquids Market Size...
+
+  'To' in: Plastic To Fuel Market Size, Share & Growth Report, 2030
+    Would resolve to: Tonga
+    Context: ...Plastic [To] Fuel Market Size, S...
+
+  'to' in: Power-to-Gas Market Size, Share & Trends Report, 2030
+    Would resolve to: Tonga
+    Context: ...Power-[to]-Gas Market Size, Sh...
+
+  'to' in: Vehicle-to-grid Technology Market, Industry Report, 2030
+    Would resolve to: Tonga
+    Context: ...Vehicle-[to]-grid Technology Mar...
+
+  'To' in: Waste To Diesel Market Size & Share, Industry Report, 2030
+    Would resolve to: Tonga
+    Context: ...Waste [To] Diesel Market Size ...
+
+  'To' in: Waste To Energy Market Size, Share & Trends Report, 2030
+    Would resolve to: Tonga
+    Context: ...Waste [To] Energy Market Size,...
+
+    ... and 53 more similar cases
+
+
+COMMON WORD BLACKLIST: 'OR' (4 cases):
+----------------------------------------
+  'Or' in: Less Than Or Equal To 5 mm² Pressure Sensor Market Report, 2030
+    Would resolve to: Oregon
+    Context: ...Less Than [Or] Equal To 5 mm² Pres...
+
+  'or' in: Automatic or Autonomous Emergency Braking (AEB) Market Outlook 2025
+    Would resolve to: Oregon
+    Context: ...Automatic [or] Autonomous Emergenc...
+
+  'or' in: Europe Roller Shades or Blinds Market
+    Would resolve to: Oregon
+    Context: ...urope Roller Shades [or] Blinds Market...
+
+  'or' in: Log Cabin or Log Home Market
+    Would resolve to: Oregon
+    Context: ...Log Cabin [or] Log Home Market...
+
+
+COMMON WORD BLACKLIST: 'ON' (59 cases):
+----------------------------------------
+  'On' in: Bag On Valve Products Market Size, Share, Industry Report, 2019-2025
+    Would resolve to: Ontario
+    Context: ...Bag [On] Valve Products Mark...
+
+  'on' in: Chip-on-Board LED Market Size, Industry Report, 2030
+    Would resolve to: Ontario
+    Context: ...Chip-[on]-Board LED Market Si...
+
+  'On' in: Liquid Crystal On Silicon Market Size, LCoS Industry Report, 2025
+    Would resolve to: Ontario
+    Context: ...Liquid Crystal [On] Silicon Market Size...
+
+  'on' in: Silicon on Insulator Market Size, Share, SOI Industry Report, 2025
+    Would resolve to: Ontario
+    Context: ...Silicon [on] Insulator Market Si...
+
+  'On' in: Automotive On-board Diagnostics Market
+    Would resolve to: Ontario
+    Context: ...Automotive [On]-board Diagnostics M...
+
+  'on' in: Bag-on-valve Technology Market
+    Would resolve to: Ontario
+    Context: ...Bag-[on]-valve Technology Ma...
+
+  'on' in: Bag-on-valve Technology Market
+    Would resolve to: Ontario
+    Context: ...Bag-[on]-valve Technology Ma...
+
+  'on' in: Clamp-on Ultrasonic Flowmeter Market
+    Would resolve to: Ontario
+    Context: ...Clamp-[on] Ultrasonic Flowmete...
+
+  'on' in: GaN on Silicon Technology Market
+    Would resolve to: Ontario
+    Context: ...GaN [on] Silicon Technology ...
+
+  'on' in: GaN on Diamond Semiconductor Substrates Market
+    Would resolve to: Ontario
+    Context: ...GaN [on] Diamond Semiconduct...
+
+    ... and 49 more similar cases
+
+
+COMMON WORD BLACKLIST: 'AS' (75 cases):
+----------------------------------------
+  'As' in: Energy Storage As A Service Market, Industry Report, 2030
+    Would resolve to: American Samoa
+    Context: ...Energy Storage [As] A Service Market, I...
+
+  'As' in: Energy As A Service Market Size, Industry Report, 2030
+    Would resolve to: American Samoa
+    Context: ...Energy [As] A Service Market Si...
+
+  'As' in: Equipment As A Service Market Size & Share Report, 2030
+    Would resolve to: American Samoa
+    Context: ...Equipment [As] A Service Market Si...
+
+  'As' in: Supply Chain As A Service (SCaaS) Market Size Report 2030
+    Would resolve to: American Samoa
+    Context: ...Supply Chain [As] A Service (SCaaS) M...
+
+  'As' in: Water Treatment As A Service Market Report, 2021-2028
+    Would resolve to: American Samoa
+    Context: ...Water Treatment [As] A Service Market Re...
+
+  'as' in: Albumin (as Excipient) Market
+    Would resolve to: American Samoa
+    Context: ...Albumin ([as] Excipient) Market...
+
+  'as' in: Australia Energy-as-a-Service Market
+    Would resolve to: American Samoa
+    Context: ...Australia Energy-[as]-a-Service Market...
+
+  'as' in: Cyber security as a Service Market
+    Would resolve to: American Samoa
+    Context: ...Cyber security [as] a Service Market...
+
+  'as' in: Data Protection as a Service (DPaaS) Market
+    Would resolve to: American Samoa
+    Context: ...Data Protection [as] a Service (DPaaS) M...
+
+  'as' in: Disaster Recovery as a Service (DRaaS) Market
+    Would resolve to: American Samoa
+    Context: ...Disaster Recovery [as] a Service (DRaaS) M...
+
+    ... and 65 more similar cases
+
+
+COMMON WORD BLACKLIST: 'UP' (9 cases):
+----------------------------------------
+  'up' in: Head-up Display Market Size, Share & Trends Report, 2030
+    Would resolve to: Uttar Pradesh
+    Context: ...Head-[up] Display Market Size...
+
+  'Up' in: Automotive Augmented Reality Head-Up Display (AR-HUD) Market
+    Would resolve to: Uttar Pradesh
+    Context: ...mented Reality Head-[Up] Display (AR-HUD) Ma...
+
+  'up' in: Automotive Head-up Display (HUD) Market
+    Would resolve to: Uttar Pradesh
+    Context: ...Automotive Head-[up] Display (HUD) Marke...
+
+  'Up' in: Generator [Up to 100 kVA] Market
+    Would resolve to: Uttar Pradesh
+    Context: ...Generator [[Up] to 100 kVA] Market...
+
+  'up' in: Head-up Display Market Outlook, Trends, Analysis
+    Would resolve to: Uttar Pradesh
+    Context: ...Head-[up] Display Market Outl...
+
+  'Up' in: Stand-Up Pouches Market
+    Would resolve to: Uttar Pradesh
+    Context: ...Stand-[Up] Pouches Market...
+
+  'up' in: Stand-up Pouches Market Size, Share, Industry Report, 2030
+    Would resolve to: Uttar Pradesh
+    Context: ...Stand-[up] Pouches Market Size...
+
+  'up' in: UAE Health Check-up Market Size, Industry Report, 2030
+    Would resolve to: Uttar Pradesh
+    Context: ...UAE Health Check-[up] Market Size, Indust...
+
+  'up' in: UK Health Check-up Market Size And Share Report, 2030
+    Would resolve to: Uttar Pradesh
+    Context: ...UK Health Check-[up] Market Size And Sha...
+
+
+COMMON WORD BLACKLIST: 'BY' (14 cases):
+----------------------------------------
+  'By' in: Imaging Chemicals Market Size By Product, Industry Report, 2018-2025
+    Would resolve to: Belarus
+    Context: ...emicals Market Size [By] Product, Industry R...
+
+  'by' in: Bathroom Products Market Demand, Research Insights by 2031
+    Would resolve to: Belarus
+    Context: ..., Research Insights [by] 2031...
+
+  'By' in: Drive-By-Wire Market
+    Would resolve to: Belarus
+    Context: ...Drive-[By]-Wire Market...
+
+  'By' in: Edible Oil Co-Products and By-Products Market
+    Would resolve to: Belarus
+    Context: ...Oil Co-Products and [By]-Products Market...
+
+  'by' in: Emerging Lighting Technology Market by Color Temperature
+    Would resolve to: Belarus
+    Context: ...g Technology Market [by] Color Temperature...
+
+  'by' in: Flexible Power Plants Powered by Medium Speed Generators (300-1200 rpm) Market
+    Would resolve to: Belarus
+    Context: ...ower Plants Powered [by] Medium Speed Genera...
+
+  'By' in: Human Papillomavirus (By Drug Class and Applications) and Cytomegalovirus (By Drug Type and Applications) Therapeutics Market
+    Would resolve to: Belarus
+    Context: ...man Papillomavirus ([By] Drug Class and Appl...
+
+  'By' in: Human Papillomavirus (By Drug Class and Applications) and Cytomegalovirus (By Drug Type and Applications) Therapeutics Market
+    Would resolve to: Belarus
+    Context: ...nd Cytomegalovirus ([By] Drug Type and Appli...
+
+  'by' in: Water and Wastewater Pipes Market Trends, Forecast by 2031
+    Would resolve to: Belarus
+    Context: ...et Trends, Forecast [by] 2031...
+
+  'By' in: Dentures Market Size, Share, Growth And Trends By 2030
+    Would resolve to: Belarus
+    Context: ..., Growth And Trends [By] 2030...
+
+    ... and 4 more similar cases
+
+
+COMMON WORD BLACKLIST: 'US' (4 cases):
+----------------------------------------
+  'US' in: US High Capacity Power Banks Market Size, Industry Report, 2025
+    Would resolve to: United States
+    Context: ...[US] High Capacity Power...
+
+  'US' in: US Liquid Sodium Silicate Market Size, Share, Industry Report, 2024
+    Would resolve to: United States
+    Context: ...[US] Liquid Sodium Silic...
+
+  'US' in: US Industrial Boilers Market
+    Would resolve to: United States
+    Context: ...[US] Industrial Boilers ...
+
+  'US' in: US Knee Implant Market Forecast Report, 2016-2024
+    Would resolve to: United States
+    Context: ...[US] Knee Implant Market...
+
+
+COMMON WORD BLACKLIST: 'AD' (2 cases):
+----------------------------------------
+  'Ad' in: Digital Ad Spending Market
+    Would resolve to: Andorra
+    Context: ...Digital [Ad] Spending Market...
+
+  'Ad' in: Free Ad-supported Streaming TV Market Size Report, 2030
+    Would resolve to: Andorra
+    Context: ...Free [Ad]-supported Streaming...
+
+
+SUSPICIOUS VERY SHORT MATCH CONTEXT (1 cases):
+----------------------------------------
+  'BI' in: Healthcare BI Platform Market
+    Would resolve to: Burundi
+    Context: ...Healthcare [BI] Platform Market...
+
+
+COMMON WORD BLACKLIST: 'ID' (2 cases):
+----------------------------------------
+  'ID' in: ID card printers Market
+    Would resolve to: Idaho
+    Context: ...[ID] card printers Marke...
+
+  'ID' in: ID Card Printer and Media Market
+    Would resolve to: Idaho
+    Context: ...[ID] Card Printer and Me...
+
+
+COMMON WORD BLACKLIST: 'GO' (2 cases):
+----------------------------------------
+  'Go' in: On-the-Go Breakfast Packaging Market
+    Would resolve to: Goiás
+    Context: ...On-the-[Go] Breakfast Packaging...
+
+  'go' in: On-the-go Breakfast Packaging Market Size, Industry Report, 2027
+    Would resolve to: Goiás
+    Context: ...On-the-[go] Breakfast Packaging...
+
+
+COMMON WORD BLACKLIST: 'DO' (1 cases):
+----------------------------------------
+  'Do' in: Do-it-yourself (DIY) Retail Product Market
+    Would resolve to: Dominican Republic
+    Context: ...[Do]-it-yourself (DIY) R...
+
+
+COMMON WORD BLACKLIST: 'HI' (1 cases):
+----------------------------------------
+  'Hi' in: Hi-Tech Medical Devices Market Size & Share Report, 2030
+    Would resolve to: Hawaii
+    Context: ...[Hi]-Tech Medical Device...
+
+
+COMMON WORD BLACKLIST: 'NO' (1 cases):
+----------------------------------------
+  'No' in: No-code AI Platform Market Size And Share Report, 2030
+    Would resolve to: Norway
+    Context: ...[No]-code AI Platform Ma...
+

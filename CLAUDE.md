@@ -180,7 +180,7 @@ output_files = {
 
 ### Database Strategy
 **MongoDB Atlas serves as both data source and pattern library storage:**
-- **Primary data:** `markets_raw` collection (19,558+ titles)
+- **Primary data:** `markets_raw` collection (19,558+ titles) - field: `report_title_short`
 - **Pattern libraries:** `pattern_libraries` collection with real-time updates
 - **Processed results:** `markets_processed` collection for output tracking
 - **Performance metrics:** Built-in success/failure tracking
@@ -231,13 +231,13 @@ mcp__mongodb__find deathstar pattern_libraries {"priority": {"$lte": 5}, "active
 **Market Data Analysis:**
 ```bash
 # Query market research titles
-mcp__mongodb__find deathstar markets_raw {"title": {"$regex": "Market", "$options": "i"}}
+mcp__mongodb__find deathstar markets_raw {"report_title_short": {"$regex": "Market", "$options": "i"}}
 
 # Count processed results
 mcp__mongodb__count deathstar markets_processed {}
 
 # Analyze title patterns
-mcp__mongodb__aggregate deathstar markets_raw '[{"$match": {"title": {"$regex": "2024"}}}, {"$count": "titles_with_2024"}]'
+mcp__mongodb__aggregate deathstar markets_raw '[{"$match": {"report_title_short": {"$regex": "2024"}}}, {"$count": "titles_with_2024"}]'
 ```
 
 **For scripts:** Scripts use pymongo API directly
@@ -461,21 +461,197 @@ def enhanced_html_cleaning(html_content: str) -> Dict[str, str]:
 
 ### Code Standards
 
+#### **Component Initialization & Integration Standards**
+**CRITICAL: Follow these mandatory patterns when creating test scripts and integrating pipeline components:**
+
+**📋 Quick Reference:** See @experiments/tests/PIPELINE_INTEGRATION_REFERENCE.md for condensed integration patterns and class name verification commands.
+
+##### **Script Component Initialization Patterns**
+
+**ALL Scripts (01-07) - Consistent Architecture:**
+- **MANDATORY: All scripts must use PatternLibraryManager** for database consistency
+- **Initialization Pattern:**
+```python
+# Import PatternLibraryManager
+pattern_manager = import_module_from_path("pattern_library_manager",
+                                        os.path.join(parent_dir, "00b_pattern_library_manager_v1.py"))
+
+# Initialize with connection string (not collection)
+pattern_lib_manager = pattern_manager.PatternLibraryManager(os.getenv('MONGODB_URI'))
+
+# Initialize ALL components with PatternLibraryManager
+market_classifier = script01.MarketTermClassifier(pattern_lib_manager)
+date_extractor = script02.EnhancedDateExtractor(pattern_lib_manager)
+report_extractor = script03.MarketAwareReportTypeExtractor(pattern_lib_manager)
+geo_detector = script04.GeographicEntityDetector(pattern_lib_manager)  # UPDATED: Must use PatternLibraryManager
+topic_extractor = script05.TopicExtractor(pattern_lib_manager)         # ALL scripts follow this pattern
+```
+
+**DEPRECATED Approach (DO NOT USE):**
+```python
+# ❌ WRONG: Direct MongoDB collection usage
+client = MongoClient(os.getenv('MONGODB_URI'))
+patterns_collection = client['deathstar']['pattern_libraries']
+geo_detector = script04.GeographicEntityDetector(patterns_collection)
+```
+
+##### **Current Component Class Names (MANDATORY REFERENCE)**
+**ALWAYS verify class names before creating test scripts:**
+
+| Script | Current Class Name | Legacy/Incorrect Names |
+|--------|-------------------|------------------------|
+| 01 | `MarketTermClassifier` | ✓ (unchanged) |
+| 02 | `EnhancedDateExtractor` | ❌ `DateExtractor` |
+| 03 | `MarketAwareReportTypeExtractor` | ❌ `ReportTypeExtractor` |
+| 04 v2 | `GeographicEntityDetector` | ✓ (lean architecture) |
+| 05 | `TopicExtractor` | (to be confirmed) |
+
+##### **Common Integration Errors to Avoid**
+
+**❌ NEVER DO:**
+```python
+# Wrong: Raw collection to Scripts 01-03
+market_classifier = script01.MarketTermClassifier(patterns_collection)
+
+# Wrong: Collection to PatternLibraryManager
+pattern_lib_manager = pattern_manager.PatternLibraryManager(patterns_collection)
+
+# Wrong: Outdated class names
+date_extractor = script02.DateExtractor(pattern_lib_manager)
+report_extractor = script03.ReportTypeExtractor(pattern_lib_manager)
+```
+
+**✅ CORRECT PATTERNS:**
+```python
+# Correct: PatternLibraryManager for Scripts 01-03
+pattern_lib_manager = pattern_manager.PatternLibraryManager(os.getenv('MONGODB_URI'))
+market_classifier = script01.MarketTermClassifier(pattern_lib_manager)
+
+# Correct: Current class names
+date_extractor = script02.EnhancedDateExtractor(pattern_lib_manager)
+report_extractor = script03.MarketAwareReportTypeExtractor(pattern_lib_manager)
+
+# Correct: Raw collection for Script 04+
+geo_detector = script04.GeographicEntityDetector(patterns_collection)
+```
+
+##### **Test Script Development Checklist**
+**Before running any pipeline test, verify:**
+
+1. ✅ **Component Initialization**: Scripts 01-03 use PatternLibraryManager, Scripts 04+ use raw collection
+2. ✅ **Class Name Verification**: Use `grep "^class " script_name.py` to verify current class names  
+3. ✅ **Import Path Validation**: Ensure all module imports use correct absolute paths
+4. ✅ **MongoDB Connection**: Use connection string for PatternLibraryManager, collection for lean components
+5. ✅ **Architecture Consistency**: Don't mix initialization patterns within same script
+
+##### **Pipeline Component Architecture Summary**
+```
+Scripts 01-03 (Legacy): MongoDB URI → PatternLibraryManager → Component
+Script 04+ (Lean):      MongoDB URI → Raw Collection → Component
+```
+
 #### **Python Command Requirements**
 **CRITICAL: Always use `python3` command, never `python`**
 - All bash commands must use `python3` for script execution
 - This ensures compatibility with the project's Python environment  
 - Examples: `python3 test_03_market_aware_pipeline_v2.py`, `python3 01_market_term_classifier_v1.py`
 
-#### **Script Development Standards**
-**All scripts must follow these mandatory patterns:**
+#### **Pre-Development Analysis Requirements**
+**MANDATORY: Before creating or modifying any scripts, Claude Code MUST perform this analysis sequence:**
 
-1. **Shebang Line:** Always include `#!/usr/bin/env python3` at the top
-2. **Logging Configuration:** Include comprehensive logging setup
-3. **Error Handling:** Implement try/catch blocks for all major operations
-4. **Dynamic Imports:** Use `importlib.util` for cross-script imports (never static imports)
-5. **Output Generation:** Always create timestamped output directories and files
-6. **Documentation:** Include detailed docstrings and inline comments for complex logic
+##### **1. Script Component Discovery & Analysis**
+**Before writing any code, ALWAYS:**
+```bash
+# Discover available scripts and their purposes
+ls experiments/*.py | grep -E "^[0-9]"
+
+# Analyze class structures in target scripts
+grep "^class " experiments/01_market_term_classifier_v1.py
+grep "^class " experiments/02_date_extractor_v1.py
+grep "^class " experiments/03_report_type_extractor_v2.py
+grep "^class " experiments/04_geographic_entity_detector_v2.py
+
+# Identify key methods and initialization patterns
+grep "def __init__" experiments/script_name.py
+grep "def extract\|def classify\|def process" experiments/script_name.py
+```
+
+##### **2. Architecture Pattern Identification**
+**Determine which architecture pattern each script follows:**
+- **Scripts 01-03:** Legacy architecture requiring `PatternLibraryManager`
+- **Script 04+:** Lean architecture using raw MongoDB collections
+- **Mixed Scripts:** Verify initialization requirements before integration
+
+##### **3. Method Signature Analysis**
+**Before calling any methods, verify signatures:**
+```python
+# Check method parameters and return types
+# Read method docstrings and parameter expectations
+# Identify required vs optional parameters
+```
+
+##### **4. Integration Compatibility Check**
+**Before integrating multiple scripts:**
+- Verify all components use compatible initialization patterns
+- Check that output from one script matches input expectations of the next
+- Validate that all required dependencies are available
+
+##### **5. Pattern Library Dependencies**
+**Identify what patterns each script requires:**
+```bash
+# Check pattern types used by each script
+grep "PatternType\|pattern.*type\|get_patterns" experiments/script_name.py
+```
+
+##### **6. Pipeline Data Flow Analysis**
+**Before integrating pipeline components, understand the data contracts:**
+```python
+# Analyze input/output data structures
+# Example: What does each script expect as input?
+market_result = classifier.classify_market_term(title)  # Returns: dict with 'market_term_type', 'confidence'
+date_result = extractor.extract_date(remaining_title)   # Returns: dict with 'extracted_forecast_date_range', 'remaining_title'
+report_result = extractor.extract_report_type(text, market_type)  # Returns: dict with 'extracted_report_type', 'pipeline_forward_text'
+geo_result = detector.extract_geographic_entities(text)  # Returns: GeographicExtractionResult object with .extracted_regions, .remaining_text
+
+# Understand the pipeline flow
+# Title → Market Classification → Date Extraction → Report Type → Geographic → Topic
+# Each stage removes its component and passes remaining text to next stage
+```
+
+##### **7. Method Contract Verification**
+**Before calling methods, verify expected parameters and return values:**
+```bash
+# Read method docstrings to understand contracts
+grep -A 10 "def extract_geographic_entities" experiments/04_geographic_entity_detector_v2.py
+grep -A 10 "def classify_market_term" experiments/01_market_term_classifier_v1.py
+grep -A 10 "def extract_report_type" experiments/03_report_type_extractor_v2.py
+
+# Check return type patterns
+grep -A 5 "return " experiments/script_name.py
+```
+
+#### **Mandatory Pre-Development Analysis Protocol**
+**Claude Code MUST demonstrate completion of the 7-step analysis above before creating or modifying any scripts. This includes:**
+
+- **Documentation of Findings:** Show output of grep commands and analysis results
+- **Architecture Decision Justification:** Explain which patterns to use and why
+- **Integration Plan:** Document how components will interact and data will flow
+- **Risk Identification:** Highlight potential compatibility issues before coding
+
+**❌ DO NOT:** Write code first and fix errors through trial-and-error
+**✅ DO:** Understand the system architecture, then write correct code from the start
+
+#### **Script Development Standards**
+**All scripts must follow these mandatory patterns AFTER completing pre-development analysis:**
+
+1. **Pre-Analysis Completion:** Must complete all 7 steps above before coding
+2. **Shebang Line:** Always include `#!/usr/bin/env python3` at the top
+3. **Logging Configuration:** Include comprehensive logging setup
+4. **Error Handling:** Implement try/catch blocks for all major operations
+5. **Dynamic Imports:** Use `importlib.util` for cross-script imports (never static imports)
+6. **Verified Integration:** Use only verified class names and initialization patterns
+7. **Output Generation:** Always create timestamped output directories and files
+8. **Documentation:** Include detailed docstrings and inline comments for complex logic
 
 #### **Module Import Standards**
 ```python

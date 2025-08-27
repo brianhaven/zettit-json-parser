@@ -1,0 +1,19 @@
+Short Alias Filtering Analysis Summary
+Analysis Date: 2025-08-26 20:37:40 PDT
+============================================================
+
+Dataset: 19,558 titles analyzed
+Total short alias matches found: 1,588
+
+RESULTS BREAKDOWN:
+  False Positives Caught: 238 (GOOD)
+  Legitimate Matches Preserved: 1,350 (GOOD)
+  Legitimate Matches Lost: 0 (NEEDS TUNING)
+  New False Positives: 0 (BAD)
+  Unchanged Results: 0 (NEUTRAL)
+
+EFFECTIVENESS METRICS:
+  Improvements: 238
+  Regressions: 0
+  Net Benefit: 238
+  Improvement Rate: 15.0%
