@@ -524,13 +524,13 @@ class MarketAwareReportTypeExtractor:
         Returns:
             Processing results dictionary
         """
-        logger.info(f"STANDARD WORKFLOW DEBUG: Processing title: '{title}'")
+        logger.debug(f"STANDARD WORKFLOW DEBUG: Processing title: '{title}'")
         
         # Clean title from confusing terms for matching
         temp_title, removed_terms = self._create_confusing_terms_free_text(title)
-        logger.info(f"STANDARD WORKFLOW DEBUG: After confusing terms removal: '{temp_title}'")
+        logger.debug(f"STANDARD WORKFLOW DEBUG: After confusing terms removal: '{temp_title}'")
         if removed_terms:
-            logger.info(f"STANDARD WORKFLOW DEBUG: Removed confusing terms: {removed_terms}")
+            logger.debug(f"STANDARD WORKFLOW DEBUG: Removed confusing terms: {removed_terms}")
         
         # Try all pattern groups in order - acronym_embedded first (most specific)
         pattern_groups = [
@@ -541,13 +541,13 @@ class MarketAwareReportTypeExtractor:
             ('terminal_type', self.terminal_type_patterns)
         ]
         
-        logger.info(f"STANDARD WORKFLOW DEBUG: Pattern groups loaded:")
+        logger.debug(f"STANDARD WORKFLOW DEBUG: Pattern groups loaded:")
         for format_name, patterns in pattern_groups:
-            logger.info(f"  {format_name}: {len(patterns)} patterns")
+            logger.debug(f"  {format_name}: {len(patterns)} patterns")
         
         best_result = None
         for format_name, patterns in pattern_groups:
-            logger.info(f"STANDARD WORKFLOW DEBUG: Trying {format_name} patterns ({len(patterns)} total)")
+            logger.debug(f"STANDARD WORKFLOW DEBUG: Trying {format_name} patterns ({len(patterns)} total)")
             
             for i, pattern_data in enumerate(patterns):
                 try:
@@ -555,10 +555,10 @@ class MarketAwareReportTypeExtractor:
                     
                     # Skip empty or whitespace-only patterns
                     if not pattern_text or not pattern_text.strip():
-                        logger.info(f"STANDARD WORKFLOW DEBUG:   Skipping empty pattern {i+1}")
+                        logger.debug(f"STANDARD WORKFLOW DEBUG:   Skipping empty pattern {i+1}")
                         continue
                     
-                    logger.info(f"STANDARD WORKFLOW DEBUG:   Testing pattern {i+1}: '{pattern_text}'")
+                    logger.debug(f"STANDARD WORKFLOW DEBUG:   Testing pattern {i+1}: '{pattern_text}'")
                     
                     # Create regex pattern (pattern_text is already a regex)
                     pattern = re.compile(pattern_text, re.IGNORECASE)
@@ -632,7 +632,7 @@ class MarketAwareReportTypeExtractor:
                             
                             return best_result
                     else:
-                        logger.info(f"STANDARD WORKFLOW DEBUG:   No match")
+                        logger.debug(f"STANDARD WORKFLOW DEBUG:   No match")
                         
                 except (re.error, ValueError) as e:
                     logger.debug(f"Pattern error: {e}")

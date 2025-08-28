@@ -30,8 +30,8 @@ from pymongo import MongoClient
 
 load_dotenv()
 
-# Setup logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Setup logging - WARNING level for performance testing
+logging.basicConfig(level=logging.WARNING, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 def import_module_from_path(module_name: str, file_path: str):
