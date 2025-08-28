@@ -1,0 +1,83 @@
+{
+  "execution_time_pdt": "2025-08-27 21:59:38 PDT",
+  "execution_time_utc": "2025-08-28 04:59:38 UTC",
+  "plan_summary": {
+    "total_duplicates": 13,
+    "category_a_preserve": 3,
+    "category_b_consolidate": 3,
+    "category_c_remove": 3,
+    "category_d_investigate": 4
+  },
+  "category_c_results": {
+    "patterns_processed": 3,
+    "documents_removed": 3,
+    "errors": []
+  },
+  "category_b_results": {
+    "patterns_processed": 3,
+    "documents_consolidated": 3,
+    "errors": []
+  },
+  "validation_results": {
+    "remaining_duplicate_patterns": 7,
+    "total_remaining_documents": 15,
+    "remaining_patterns": [
+      {
+        "_id": "\\bMarket\\s+Report(?:\\s*$|[,.])",
+        "count": 3,
+        "terms": [
+          "Report",
+          "Market Report"
+        ]
+      },
+      {
+        "_id": "\\bMarket\\s+(Overview)\\b",
+        "count": 2,
+        "terms": [
+          "Market Overview"
+        ]
+      },
+      {
+        "_id": "\\bMarket\\s+Size,\\ Share,\\ Global\\ Industry\\ Report(?:\\s*$|[,.])",
+        "count": 2,
+        "terms": [
+          "market Size, Share, Global Industry Report",
+          "Market Size, Share, Global Industry Report"
+        ]
+      },
+      {
+        "_id": "\\bMarket\\s+Size(?:\\s*$|[,.])",
+        "count": 2,
+        "terms": [
+          "Market Size"
+        ]
+      },
+      {
+        "_id": "\\bMarket\\s+Forecast(?:\\s*$|[,.])",
+        "count": 2,
+        "terms": [
+          "Market Forecast",
+          "Market (Forecast )"
+        ]
+      },
+      {
+        "_id": "\\bMarket\\s+Size\\s+Worth\\s+\\$[\\d,.]+\\s+(?:Billion|Million|Trillion)\\s+By(?:\\s*$|[,.])",
+        "count": 2,
+        "terms": [
+          "Market Size Worth $11.36 Billion By",
+          "Market Size Worth Dollar Amount"
+        ]
+      },
+      {
+        "_id": "\\bMarket\\s+(Share)(?:\\s*$|[,.])",
+        "count": 2,
+        "terms": [
+          "Market Share"
+        ]
+      }
+    ]
+  },
+  "overall_success": true,
+  "backup_exported": true,
+  "backup_export_location": "../backups/database"
+}

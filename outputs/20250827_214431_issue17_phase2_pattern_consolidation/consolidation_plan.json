@@ -1,0 +1,857 @@
+{
+  "summary": {
+    "total_duplicates": 13,
+    "category_a_preserve": 3,
+    "category_b_consolidate": 3,
+    "category_c_remove": 3,
+    "category_d_investigate": 4
+  },
+  "actions": {
+    "A_PRESERVE": [
+      {
+        "pattern": "\\bMarket\\s+(Share)(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Share",
+          "Market Share"
+        ],
+        "unique_terms": [
+          "Market Share"
+        ],
+        "format_types": [
+          "compound_type",
+          "embedded_type"
+        ],
+        "unique_format_types": [
+          "embedded_type",
+          "compound_type"
+        ],
+        "priorities": [
+          2,
+          2
+        ],
+        "unique_priorities": [
+          2
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          ""
+        ],
+        "documents": [
+          {
+            "id": "68ac01abae89218809914d4d",
+            "term": "Market Share",
+            "format_type": "compound_type",
+            "priority": 2,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:24:43.214000"
+          },
+          {
+            "id": "68ac01abae89218809914d4e",
+            "term": "Market Share",
+            "format_type": "embedded_type",
+            "priority": 2,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:24:43.264000"
+          }
+        ],
+        "category": "A",
+        "category_reason": "Same term with different format types - legitimate variations",
+        "action": "Preserve all entries - different format types serve different matching purposes"
+      },
+      {
+        "pattern": "\\bMarket\\s+(Overview)\\b",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Overview",
+          "Market Overview"
+        ],
+        "unique_terms": [
+          "Market Overview"
+        ],
+        "format_types": [
+          "compound_type",
+          "embedded_type"
+        ],
+        "unique_format_types": [
+          "embedded_type",
+          "compound_type"
+        ],
+        "priorities": [
+          6,
+          7
+        ],
+        "unique_priorities": [
+          6,
+          7
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          ""
+        ],
+        "documents": [
+          {
+            "id": "68a55f7c4e5428803b7a32cd",
+            "term": "Market Overview",
+            "format_type": "compound_type",
+            "priority": 6,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-20 05:39:08.499000"
+          },
+          {
+            "id": "68a55f7c4e5428803b7a32cf",
+            "term": "Market Overview",
+            "format_type": "embedded_type",
+            "priority": 7,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-20 05:39:08.698000"
+          }
+        ],
+        "category": "A",
+        "category_reason": "Same term with different format types - legitimate variations",
+        "action": "Preserve all entries - different format types serve different matching purposes"
+      },
+      {
+        "pattern": "\\bMarket\\s+Size(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Size",
+          "Market Size"
+        ],
+        "unique_terms": [
+          "Market Size"
+        ],
+        "format_types": [
+          "embedded_type",
+          "terminal_type"
+        ],
+        "unique_format_types": [
+          "embedded_type",
+          "terminal_type"
+        ],
+        "priorities": [
+          2,
+          1
+        ],
+        "unique_priorities": [
+          1,
+          2
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          "Added from comprehensive approved pattern audit - Phase 3.6"
+        ],
+        "documents": [
+          {
+            "id": "68abf52690258f76493c1c03",
+            "term": "Market Size",
+            "format_type": "embedded_type",
+            "priority": 2,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 05:31:18.446000"
+          },
+          {
+            "id": "68ac0c8431cfe206799526cb",
+            "term": "Market Size",
+            "format_type": "terminal_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern audit - Phase 3.6",
+            "created_date": "2025-08-25 07:11:00.833000"
+          }
+        ],
+        "category": "A",
+        "category_reason": "Same term with different format types - legitimate variations",
+        "action": "Preserve all entries - different format types serve different matching purposes"
+      }
+    ],
+    "B_CONSOLIDATE": [
+      {
+        "pattern": "\\bMarket\\s+Growth\\s+Forecast(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Growth Forecast",
+          "Market Growth Forecast"
+        ],
+        "unique_terms": [
+          "Market Growth Forecast"
+        ],
+        "format_types": [
+          "compound_type",
+          "compound_type"
+        ],
+        "unique_format_types": [
+          "compound_type"
+        ],
+        "priorities": [
+          2,
+          1
+        ],
+        "unique_priorities": [
+          1,
+          2
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          "Added from comprehensive approved pattern audit - Phase 3.6"
+        ],
+        "documents": [
+          {
+            "id": "68ac03f1aa1aa6a04eaf74ef",
+            "term": "Market Growth Forecast",
+            "format_type": "compound_type",
+            "priority": 2,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:34:25.837000"
+          },
+          {
+            "id": "68ac0c8d31cfe2067995271c",
+            "term": "Market Growth Forecast",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern audit - Phase 3.6",
+            "created_date": "2025-08-25 07:11:09.211000"
+          }
+        ],
+        "category": "B",
+        "category_reason": "Same pattern with conflicting priorities - consolidation needed",
+        "action": "Consolidate to single entry with priority 1 (lowest wins)"
+      },
+      {
+        "pattern": "\\bMarket\\s+Size,\\s+Share(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Size, Share",
+          "Market Size, Share"
+        ],
+        "unique_terms": [
+          "Market Size, Share"
+        ],
+        "format_types": [
+          "compound_type",
+          "compound_type"
+        ],
+        "unique_format_types": [
+          "compound_type"
+        ],
+        "priorities": [
+          2,
+          1
+        ],
+        "unique_priorities": [
+          1,
+          2
+        ],
+        "active_statuses": [
+          false,
+          true
+        ],
+        "unique_active": [
+          false,
+          true
+        ],
+        "notes": [
+          "DEACTIVATED: Overly broad pattern causing partial matches. Pattern matches 'Market Size, Share,' without requiring complete report type, breaking systematic removal pipeline. See GitHub Issue #13.",
+          "Added from comprehensive approved pattern audit - Phase 3.6"
+        ],
+        "documents": [
+          {
+            "id": "68abf52690258f76493c1c04",
+            "term": "Market Size, Share",
+            "format_type": "compound_type",
+            "priority": 2,
+            "active": false,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "DEACTIVATED: Overly broad pattern causing partial matches. Pattern matches 'Market Size, Share,' without requiring complete report type, breaking systematic removal pipeline. See GitHub Issue #13.",
+            "created_date": "2025-08-25 05:31:18.496000"
+          },
+          {
+            "id": "68ac0c8a31cfe20679952703",
+            "term": "Market Size, Share",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern audit - Phase 3.6",
+            "created_date": "2025-08-25 07:11:06.552000"
+          }
+        ],
+        "category": "B",
+        "category_reason": "Same pattern with conflicting priorities - consolidation needed",
+        "action": "Consolidate to single entry with priority 1 (lowest wins)"
+      },
+      {
+        "pattern": "\\bMarket\\s+Global\\s+Forecast(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Global Forecast",
+          "Market Global Forecast"
+        ],
+        "unique_terms": [
+          "Market Global Forecast"
+        ],
+        "format_types": [
+          "compound_type",
+          "compound_type"
+        ],
+        "unique_format_types": [
+          "compound_type"
+        ],
+        "priorities": [
+          2,
+          1
+        ],
+        "unique_priorities": [
+          1,
+          2
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          "Added from comprehensive approved pattern audit - Phase 3.6"
+        ],
+        "documents": [
+          {
+            "id": "68ac03f1aa1aa6a04eaf74ee",
+            "term": "Market Global Forecast",
+            "format_type": "compound_type",
+            "priority": 2,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:34:25.787000"
+          },
+          {
+            "id": "68ac0c9a31cfe206799527a0",
+            "term": "Market Global Forecast",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern audit - Phase 3.6",
+            "created_date": "2025-08-25 07:11:22.647000"
+          }
+        ],
+        "category": "B",
+        "category_reason": "Same pattern with conflicting priorities - consolidation needed",
+        "action": "Consolidate to single entry with priority 1 (lowest wins)"
+      }
+    ],
+    "C_REMOVE": [
+      {
+        "pattern": "\\bMarket\\s+Size,\\s+Share,\\s+Industry\\s+Report(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Size, Share, Industry Report",
+          "Market Size, Share, Industry Report"
+        ],
+        "unique_terms": [
+          "Market Size, Share, Industry Report"
+        ],
+        "format_types": [
+          "compound_type",
+          "compound_type"
+        ],
+        "unique_format_types": [
+          "compound_type"
+        ],
+        "priorities": [
+          1,
+          1
+        ],
+        "unique_priorities": [
+          1
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          "Added from comprehensive approved pattern audit - Phase 3.6"
+        ],
+        "documents": [
+          {
+            "id": "68ac03ecaa1aa6a04eaf7481",
+            "term": "Market Size, Share, Industry Report",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:34:20.016000"
+          },
+          {
+            "id": "68ac0c8631cfe206799526da",
+            "term": "Market Size, Share, Industry Report",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern audit - Phase 3.6",
+            "created_date": "2025-08-25 07:11:02.336000"
+          }
+        ],
+        "category": "C",
+        "category_reason": "Exact duplicates - same term, format_type, priority, active status",
+        "action": "Remove duplicate entries, keep one"
+      },
+      {
+        "pattern": "\\bMarket\\s+Growth\\s+Outlook(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Growth Outlook",
+          "Market Growth Outlook"
+        ],
+        "unique_terms": [
+          "Market Growth Outlook"
+        ],
+        "format_types": [
+          "compound_type",
+          "compound_type"
+        ],
+        "unique_format_types": [
+          "compound_type"
+        ],
+        "priorities": [
+          1,
+          1
+        ],
+        "unique_priorities": [
+          1
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          "Added from comprehensive approved pattern audit - Phase 3.6"
+        ],
+        "documents": [
+          {
+            "id": "68ac03eeaa1aa6a04eaf74aa",
+            "term": "Market Growth Outlook",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:34:22.212000"
+          },
+          {
+            "id": "68ac0c8d31cfe2067995271a",
+            "term": "Market Growth Outlook",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern audit - Phase 3.6",
+            "created_date": "2025-08-25 07:11:09"
+          }
+        ],
+        "category": "C",
+        "category_reason": "Exact duplicates - same term, format_type, priority, active status",
+        "action": "Remove duplicate entries, keep one"
+      },
+      {
+        "pattern": "\\bMarket\\s+Size,\\s+Share\\s+Report(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Size, Share Report",
+          "Market Size, Share Report"
+        ],
+        "unique_terms": [
+          "Market Size, Share Report"
+        ],
+        "format_types": [
+          "compound_type",
+          "compound_type"
+        ],
+        "unique_format_types": [
+          "compound_type"
+        ],
+        "priorities": [
+          1,
+          1
+        ],
+        "unique_priorities": [
+          1
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          "Added from comprehensive approved pattern audit - Phase 3.6"
+        ],
+        "documents": [
+          {
+            "id": "68ac03ecaa1aa6a04eaf7483",
+            "term": "Market Size, Share Report",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:34:20.117000"
+          },
+          {
+            "id": "68ac0c8631cfe206799526d8",
+            "term": "Market Size, Share Report",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern audit - Phase 3.6",
+            "created_date": "2025-08-25 07:11:02.135000"
+          }
+        ],
+        "category": "C",
+        "category_reason": "Exact duplicates - same term, format_type, priority, active status",
+        "action": "Remove duplicate entries, keep one"
+      }
+    ],
+    "D_INVESTIGATE": [
+      {
+        "pattern": "\\bMarket\\s+Report(?:\\s*$|[,.])",
+        "duplicate_count": 3,
+        "terms": [
+          "Market Report",
+          "Report",
+          "Market Report"
+        ],
+        "unique_terms": [
+          "Market Report",
+          "Report"
+        ],
+        "format_types": [
+          "terminal_type",
+          "terminal_type",
+          "compound_type"
+        ],
+        "unique_format_types": [
+          "compound_type",
+          "terminal_type"
+        ],
+        "priorities": [
+          1,
+          1,
+          1
+        ],
+        "unique_priorities": [
+          1
+        ],
+        "active_statuses": [
+          true,
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "Added from comprehensive approved pattern audit - Phase 3.6",
+          "Added from Issue #6 pattern validation",
+          "Added from Issue #6 pattern validation"
+        ],
+        "documents": [
+          {
+            "id": "68ac0c8231cfe206799526b1",
+            "term": "Market Report",
+            "format_type": "terminal_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern audit - Phase 3.6",
+            "created_date": "2025-08-25 07:10:58.216000"
+          },
+          {
+            "id": "68aca3ee474ab778b5621ccf",
+            "term": "Report",
+            "format_type": "terminal_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from Issue #6 pattern validation",
+            "created_date": "2025-08-25 17:57:02.063000"
+          },
+          {
+            "id": "68aca3ee474ab778b5621cd0",
+            "term": "Market Report",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from Issue #6 pattern validation",
+            "created_date": "2025-08-25 17:57:02.169000"
+          }
+        ],
+        "category": "D",
+        "category_reason": "Complex case with multiple terms and format types",
+        "action": "Deep investigation required - possible pattern design issues"
+      },
+      {
+        "pattern": "\\bMarket\\s+Forecast(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market (Forecast )",
+          "Market Forecast"
+        ],
+        "unique_terms": [
+          "Market Forecast",
+          "Market (Forecast )"
+        ],
+        "format_types": [
+          "compound_type",
+          "compound_type"
+        ],
+        "unique_format_types": [
+          "compound_type"
+        ],
+        "priorities": [
+          2,
+          1
+        ],
+        "unique_priorities": [
+          1,
+          2
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          "Added from comprehensive approved pattern audit - Phase 3.6"
+        ],
+        "documents": [
+          {
+            "id": "68ac03edaa1aa6a04eaf74a4",
+            "term": "Market (Forecast )",
+            "format_type": "compound_type",
+            "priority": 2,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:34:21.875000"
+          },
+          {
+            "id": "68ac0c8431cfe206799526c6",
+            "term": "Market Forecast",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern audit - Phase 3.6",
+            "created_date": "2025-08-25 07:11:00.338000"
+          }
+        ],
+        "category": "D",
+        "category_reason": "Different terms sharing same regex pattern - may indicate pattern collision",
+        "action": "Investigate if pattern is too broad or terms should be separate patterns"
+      },
+      {
+        "pattern": "\\bMarket\\s+Size\\s+Worth\\s+\\$[\\d,.]+\\s+(?:Billion|Million|Trillion)\\s+By(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Size Worth Dollar Amount",
+          "Market Size Worth $11.36 Billion By"
+        ],
+        "unique_terms": [
+          "Market Size Worth $11.36 Billion By",
+          "Market Size Worth Dollar Amount"
+        ],
+        "format_types": [
+          "compound_type",
+          "compound_type"
+        ],
+        "unique_format_types": [
+          "compound_type"
+        ],
+        "priorities": [
+          4,
+          1
+        ],
+        "unique_priorities": [
+          1,
+          4
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "",
+          ""
+        ],
+        "documents": [
+          {
+            "id": "68ac01abae89218809914d4f",
+            "term": "Market Size Worth Dollar Amount",
+            "format_type": "compound_type",
+            "priority": 4,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:24:43.315000"
+          },
+          {
+            "id": "68ac03f8aa1aa6a04eaf7576",
+            "term": "Market Size Worth $11.36 Billion By",
+            "format_type": "compound_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "created_date": "2025-08-25 06:34:32.885000"
+          }
+        ],
+        "category": "D",
+        "category_reason": "Different terms sharing same regex pattern - may indicate pattern collision",
+        "action": "Investigate if pattern is too broad or terms should be separate patterns"
+      },
+      {
+        "pattern": "\\bMarket\\s+Size,\\ Share,\\ Global\\ Industry\\ Report(?:\\s*$|[,.])",
+        "duplicate_count": 2,
+        "terms": [
+          "Market Size, Share, Global Industry Report",
+          "market Size, Share, Global Industry Report"
+        ],
+        "unique_terms": [
+          "Market Size, Share, Global Industry Report",
+          "market Size, Share, Global Industry Report"
+        ],
+        "format_types": [
+          "terminal_type",
+          "terminal_type"
+        ],
+        "unique_format_types": [
+          "terminal_type"
+        ],
+        "priorities": [
+          1,
+          1
+        ],
+        "unique_priorities": [
+          1
+        ],
+        "active_statuses": [
+          true,
+          true
+        ],
+        "unique_active": [
+          true
+        ],
+        "notes": [
+          "Added from comprehensive approved pattern list (GitHub Issue #6)",
+          "Added from comprehensive approved pattern list (GitHub Issue #6)"
+        ],
+        "documents": [
+          {
+            "id": "68aca68f5341a759fb4c3055",
+            "term": "Market Size, Share, Global Industry Report",
+            "format_type": "terminal_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern list (GitHub Issue #6)",
+            "created_date": "2025-08-25 18:08:15.372000"
+          },
+          {
+            "id": "68aca68f5341a759fb4c30b1",
+            "term": "market Size, Share, Global Industry Report",
+            "format_type": "terminal_type",
+            "priority": 1,
+            "active": true,
+            "success_count": 0,
+            "failure_count": 0,
+            "notes": "Added from comprehensive approved pattern list (GitHub Issue #6)",
+            "created_date": "2025-08-25 18:08:15.373000"
+          }
+        ],
+        "category": "D",
+        "category_reason": "Different terms sharing same regex pattern - may indicate pattern collision",
+        "action": "Investigate if pattern is too broad or terms should be separate patterns"
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "rollback_method": "restore_from_backup",
+  "backup_collection_name": "pattern_libraries_backup_20250827_215350",
+  "alternative_rollback": {
+    "method": "individual_document_restoration",
+    "documents_to_restore": [
+      {
+        "id": "68ac0c8631cfe206799526da",
+        "term": "Market Size, Share, Industry Report",
+        "priority": 1,
+        "format_type": "compound_type",
+        "pattern_regex": "\\bMarket\\s+Size,\\s+Share,\\s+Industry\\s+Report(?:\\s*$|[,.])"
+      },
+      {
+        "id": "68ac0c8d31cfe2067995271a",
+        "term": "Market Growth Outlook",
+        "priority": 1,
+        "format_type": "compound_type",
+        "pattern_regex": "\\bMarket\\s+Growth\\s+Outlook(?:\\s*$|[,.])"
+      },
+      {
+        "id": "68ac0c8631cfe206799526d8",
+        "term": "Market Size, Share Report",
+        "priority": 1,
+        "format_type": "compound_type",
+        "pattern_regex": "\\bMarket\\s+Size,\\s+Share\\s+Report(?:\\s*$|[,.])"
+      },
+      {
+        "id": "68ac03f1aa1aa6a04eaf74ef",
+        "term": "Market Growth Forecast",
+        "priority": 2,
+        "format_type": "compound_type",
+        "pattern_regex": "\\bMarket\\s+Growth\\s+Forecast(?:\\s*$|[,.])"
+      },
+      {
+        "id": "68abf52690258f76493c1c04",
+        "term": "Market Size, Share",
+        "priority": 2,
+        "format_type": "compound_type",
+        "pattern_regex": "\\bMarket\\s+Size,\\s+Share(?:\\s*$|[,.])"
+      },
+      {
+        "id": "68ac03f1aa1aa6a04eaf74ee",
+        "term": "Market Global Forecast",
+        "priority": 2,
+        "format_type": "compound_type",
+        "pattern_regex": "\\bMarket\\s+Global\\s+Forecast(?:\\s*$|[,.])"
+      }
+    ]
+  },
+  "validation_queries": [
+    {
+      "purpose": "Count report_type patterns",
+      "query": {
+        "type": "report_type"
+      },
+      "operation": "count"
+    },
+    {
+      "purpose": "Find remaining duplicates",
+      "aggregation": [
+        {
+          "$match": {
+            "type": "report_type"
+          }
+        },
+        {
+          "$group": {
+            "_id": "$pattern",
+            "count": {
+              "$sum": 1
+            }
+          }
+        },
+        {
+          "$match": {
+            "count": {
+              "$gt": 1
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "backup_created": true,
+  "backup_timestamp": "2025-08-27 21:53:50 PDT"
+}

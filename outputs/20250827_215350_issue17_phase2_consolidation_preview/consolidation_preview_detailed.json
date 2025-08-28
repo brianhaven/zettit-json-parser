@@ -1,0 +1,169 @@
+{
+  "preview_time_pdt": "2025-08-27 21:53:50 PDT",
+  "preview_time_utc": "2025-08-28 04:53:50 UTC",
+  "plan_summary": {
+    "total_duplicates": 13,
+    "category_a_preserve": 3,
+    "category_b_consolidate": 3,
+    "category_c_remove": 3,
+    "category_d_investigate": 4
+  },
+  "previews": [
+    {
+      "category": "C_REMOVE",
+      "description": "Exact duplicate removal - safest operations",
+      "patterns": [
+        {
+          "pattern_regex": "\\bMarket\\s+Size,\\s+Share,\\s+Industry\\s+Report(?:\\s*$|[,.])",
+          "duplicate_count": 2,
+          "action_summary": "Keep oldest document, remove 1 duplicates",
+          "document_to_keep": {
+            "id": "68ac03ecaa1aa6a04eaf7481",
+            "term": "Market Size, Share, Industry Report",
+            "priority": 1,
+            "format_type": "compound_type",
+            "created_date": "2025-08-25 06:34:20.016000",
+            "reason": "Oldest document (most established)"
+          },
+          "documents_to_remove": [
+            {
+              "id": "68ac0c8631cfe206799526da",
+              "term": "Market Size, Share, Industry Report",
+              "priority": 1,
+              "format_type": "compound_type",
+              "created_date": "2025-08-25 07:11:02.336000",
+              "reason": "Duplicate of older entry"
+            }
+          ]
+        },
+        {
+          "pattern_regex": "\\bMarket\\s+Growth\\s+Outlook(?:\\s*$|[,.])",
+          "duplicate_count": 2,
+          "action_summary": "Keep oldest document, remove 1 duplicates",
+          "document_to_keep": {
+            "id": "68ac03eeaa1aa6a04eaf74aa",
+            "term": "Market Growth Outlook",
+            "priority": 1,
+            "format_type": "compound_type",
+            "created_date": "2025-08-25 06:34:22.212000",
+            "reason": "Oldest document (most established)"
+          },
+          "documents_to_remove": [
+            {
+              "id": "68ac0c8d31cfe2067995271a",
+              "term": "Market Growth Outlook",
+              "priority": 1,
+              "format_type": "compound_type",
+              "created_date": "2025-08-25 07:11:09",
+              "reason": "Duplicate of older entry"
+            }
+          ]
+        },
+        {
+          "pattern_regex": "\\bMarket\\s+Size,\\s+Share\\s+Report(?:\\s*$|[,.])",
+          "duplicate_count": 2,
+          "action_summary": "Keep oldest document, remove 1 duplicates",
+          "document_to_keep": {
+            "id": "68ac03ecaa1aa6a04eaf7483",
+            "term": "Market Size, Share Report",
+            "priority": 1,
+            "format_type": "compound_type",
+            "created_date": "2025-08-25 06:34:20.117000",
+            "reason": "Oldest document (most established)"
+          },
+          "documents_to_remove": [
+            {
+              "id": "68ac0c8631cfe206799526d8",
+              "term": "Market Size, Share Report",
+              "priority": 1,
+              "format_type": "compound_type",
+              "created_date": "2025-08-25 07:11:02.135000",
+              "reason": "Duplicate of older entry"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "B_CONSOLIDATE",
+      "description": "Priority conflict resolution - lowest priority wins",
+      "patterns": [
+        {
+          "pattern_regex": "\\bMarket\\s+Growth\\s+Forecast(?:\\s*$|[,.])",
+          "duplicate_count": 2,
+          "priority_conflict": "Priorities [1, 2] -> Consolidate to 1",
+          "action_summary": "Consolidate to priority 1, remove 1 duplicates",
+          "document_to_keep": {
+            "id": "68ac0c8d31cfe2067995271c",
+            "term": "Market Growth Forecast",
+            "current_priority": 1,
+            "consolidated_priority": 1,
+            "format_type": "compound_type",
+            "created_date": "2025-08-25 07:11:09.211000",
+            "changes": "Priority will be updated, notes will be added about consolidation"
+          },
+          "documents_to_remove": [
+            {
+              "id": "68ac03f1aa1aa6a04eaf74ef",
+              "term": "Market Growth Forecast",
+              "priority": 2,
+              "format_type": "compound_type",
+              "created_date": "2025-08-25 06:34:25.837000",
+              "reason": "Higher priority (2) loses to 1"
+            }
+          ]
+        },
+        {
+          "pattern_regex": "\\bMarket\\s+Size,\\s+Share(?:\\s*$|[,.])",
+          "duplicate_count": 2,
+          "priority_conflict": "Priorities [1, 2] -> Consolidate to 1",
+          "action_summary": "Consolidate to priority 1, remove 1 duplicates",
+          "document_to_keep": {
+            "id": "68ac0c8a31cfe20679952703",
+            "term": "Market Size, Share",
+            "current_priority": 1,
+            "consolidated_priority": 1,
+            "format_type": "compound_type",
+            "created_date": "2025-08-25 07:11:06.552000",
+            "changes": "Priority will be updated, notes will be added about consolidation"
+          },
+          "documents_to_remove": [
+            {
+              "id": "68abf52690258f76493c1c04",
+              "term": "Market Size, Share",
+              "priority": 2,
+              "format_type": "compound_type",
+              "created_date": "2025-08-25 05:31:18.496000",
+              "reason": "Higher priority (2) loses to 1"
+            }
+          ]
+        },
+        {
+          "pattern_regex": "\\bMarket\\s+Global\\s+Forecast(?:\\s*$|[,.])",
+          "duplicate_count": 2,
+          "priority_conflict": "Priorities [1, 2] -> Consolidate to 1",
+          "action_summary": "Consolidate to priority 1, remove 1 duplicates",
+          "document_to_keep": {
+            "id": "68ac0c9a31cfe206799527a0",
+            "term": "Market Global Forecast",
+            "current_priority": 1,
+            "consolidated_priority": 1,
+            "format_type": "compound_type",
+            "created_date": "2025-08-25 07:11:22.647000",
+            "changes": "Priority will be updated, notes will be added about consolidation"
+          },
+          "documents_to_remove": [
+            {
+              "id": "68ac03f1aa1aa6a04eaf74ee",
+              "term": "Market Global Forecast",
+              "priority": 2,
+              "format_type": "compound_type",
+              "created_date": "2025-08-25 06:34:25.787000",
+              "reason": "Higher priority (2) loses to 1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
