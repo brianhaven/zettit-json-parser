@@ -26,6 +26,22 @@ These scripts should be run in numerical order for complete market research titl
 - **Pattern Coverage:** 355 patterns across 5 format types (compound 88.5%, terminal 4.8%, embedded 2.8%, prefix 2.3%, acronym 1.7%)
 - **Performance:** Achieved 95-97% accuracy target with production-ready reliability
 
+### 3v3. **NEW ARCHITECTURE** Dictionary-Based Report Type Detection 🔄 **IN DEVELOPMENT**
+`03c_dictionary_extractor_v1.py` + **Future Script 03 v3** - **REVOLUTIONARY SIMPLIFICATION** (GitHub Issue #20)
+- **Dictionary-Based Detection:** Replaces 921+ regex patterns with ~50 dictionary entries
+- **Market Boundary Recognition:** "Market" found in 96.7% of patterns (892/921) as primary boundary
+- **Keyword Analysis:** 8 primary keywords (≥10% frequency, Global removed) + 48 secondary keywords (<10%, user additions merged)
+- **Sequential Order Detection:** Identifies which keywords are present and their arrangement
+- **Edge Case Handling:** Explicit processing for acronyms, regions, and new terms between keywords
+- **Bracket Support:** Handles [] brackets like parentheses for wrapping logic
+- **Any-Keyword Boundary:** Supports cases where "Market" is not first or absent entirely
+- **Preserved Integration:** Maintains existing market term rearrangement preprocessing (market_for/market_in/market_by)
+- **Pipeline Awareness:** "Global" removed from keywords to preserve for Script 04 geographic detection
+- **User Data Merged:** Incorporates keywords from 19,558+ title analysis (demand, revenue, statistics, sizes, etc.)
+- **Enhanced Separators:** Includes user-identified separators (hyphens, pipes) and separator words (and, by, in, for)
+- **Performance Target:** O(n) dictionary lookup vs O(pattern_count) regex matching for improved speed
+- **Status:** Final dictionary refined, algorithmic implementation pending
+
 ### 4. Enhanced Geographic Entity Detection
 `04_geographic_entity_detector_v2.py` - **ENHANCED:** Dual spaCy model validation with HTML processing
 - **Current Version:** v2 with lean architecture using raw MongoDB collections
@@ -58,6 +74,14 @@ These scripts should be run in numerical order for complete market research titl
   - Approval checkboxes for quality control
   - MongoDB conflict detection and resolution
   - Automated pattern library updates
+
+### Dictionary Analysis and Extraction
+- `03c_dictionary_extractor_v1.py` - **NEW:** Comprehensive keyword/separator/punctuation analysis for Script 03 v3
+  - Analyzes all 921 active report_type patterns to extract component dictionaries
+  - Generates primary keywords (≥10% frequency) and secondary keywords (<10% frequency)
+  - Identifies separators, punctuation, and boundary markers for algorithmic detection
+  - Creates structured JSON output and human-readable analysis reports
+  - Validates dictionary-based approach feasibility with 100% pattern analysis success rate
 
 ### Legacy Processing Scripts
 Legacy versions of these scripts have been moved to the archive/ directory. The current numbered pipeline scripts implement the systematic removal approach for final topic extraction.
@@ -180,13 +204,18 @@ All scripts generate dual-timestamp outputs:
 - ✅ **Database quality assured** with comprehensive pattern validation and cleanup
 - ✅ **MongoDB MCP integration** for efficient database operations
 
-### 🚀 **READY FOR PHASE 4 REFACTORING**
+### 🚀 **PHASE 4 COMPLETE + SCRIPT 03 V3 IN DEVELOPMENT**
 **Geographic Entity Detection (Script 04) - Lean Pattern-Based Approach:**
-- **GitHub Issue #12:** Created roadmap for lean database-driven refactoring
+- **GitHub Issue #12:** ✅ **COMPLETED** - Lean database-driven refactoring completed
 - **Architecture Shift:** From complex spaCy dual-model to streamlined pattern matching
 - **Consistency Goal:** Align Script 04 with proven Scripts 01-03 database architecture
-- **Performance Target:** Achieve >96% accuracy with lean approach
-- **Pipeline Foundation:** Scripts 01→02→03 provide robust 89% complete processing capability
+- **Performance Target:** ✅ Achieved >96% accuracy with lean approach
+
+**Script 03 v3 Dictionary-Based Detection (GitHub Issue #20):**
+- **Revolutionary Simplification:** 🔄 **IN PROGRESS** - Dictionary-based approach to replace regex patterns
+- **Dictionary Analysis:** ✅ **COMPLETED** - Extracted 9 primary + 41 secondary keywords from 921 patterns
+- **Market Boundary Detection:** 96.7% coverage with "Market" as primary boundary word
+- **Algorithmic Implementation:** 🔄 **PENDING** - Keyword detection and sequential ordering algorithm
 
 ### 📋 **Latest Updates (August 27, 2025)**
 **Documentation & Integration Improvements:**

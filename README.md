@@ -78,7 +78,7 @@ Market research report titles contain valuable structured data that needs to be 
 ### MongoDB-First Systematic Processing
 1. ✅ **Market Term Classification**: Separate special patterns ("Market for"/"Market in") from standard titles - **100% accuracy**
 2. ✅ **Enhanced Date Extraction**: Numeric pre-filtering with 64-pattern library (`extracted_forecast_date_range`) - **100% accuracy on titles with dates**
-3. **Report Type Processing**: ✅ **PRODUCTION READY** - Market-aware processing with 355 validated patterns (`extracted_report_type`)
+3. **Report Type Processing**: ✅ **PRODUCTION READY** - Market-aware processing with 355 validated patterns + **NEW v3 Dictionary-Based Detection** (`extracted_report_type`)
 4. **Geographic Entity Detection**: Compound-priority matching from MongoDB libraries (`extracted_regions`)
 5. **Topic Extraction**: Preserve complete technical compounds (`topic` and `topicName`)
 
@@ -91,7 +91,7 @@ Market research report titles contain valuable structured data that needs to be 
 - **Geographic Entities**: 363+ regions, countries, acronyms with compound-first processing
 - **Market Term Exceptions**: Handle "After Market", "Marketplace", edge cases
 - **Date Pattern Recognition**: Standard, bracketed, and embedded date formats
-- **Report Type Standardization**: 355 validated patterns across 5 format types
+- **Report Type Standardization**: 355 validated patterns across 5 format types + **Enhanced Dictionary-Based v3 Detection**
 
 ## Key Features
 
@@ -113,6 +113,7 @@ Market research report titles contain valuable structured data that needs to be 
 │   ├── 01_market_term_classifier_v1.py
 │   ├── 02_date_extractor_v1.py      
 │   ├── 03_report_type_extractor_v2.py
+│   ├── 03c_dictionary_extractor_v1.py  # NEW: Dictionary analysis for v3
 │   ├── 04_geographic_entity_detector_v2.py
 │   ├── 05_topic_extractor_v1.py
 │   └── /tests/                      # Validation and test scripts
@@ -186,6 +187,7 @@ python experiments/title_pattern_discovery_v1.py
   - **GitHub Issue #11 Resolved**: Fixed acronym-embedded pattern processing
   - **Market-Aware Processing**: Dual workflows for different title classifications
   - **Database Quality Assured**: Comprehensive pattern validation and cleanup
+  - **NEW Script 03 v3**: 🔄 Dictionary-based detection approach (GitHub Issue #20) - simplifies 921 patterns to 8 primary + 48 secondary keywords (Global preserved for Script 04)
 - **Phase 4 Ready**: 🔄 Geographic Entity Detection ready for lean pattern-based refactoring
 - **Enhanced Categorization**: 21 titles correctly identified as having no dates (not failures)
 - **Pattern Libraries**: 64 date patterns + 355 report type patterns across multiple format types
