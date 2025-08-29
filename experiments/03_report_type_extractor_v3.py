@@ -209,8 +209,9 @@ class DictionaryBasedReportTypeExtractor:
     
     def detect_keywords_in_title(self, title: str) -> DictionaryKeywordResult:
         """
-        Dictionary-based keyword detection with Market boundary recognition.
+        Enhanced dictionary-based keyword detection with precise punctuation and separator detection.
         O(n) performance vs O(pattern_count) regex matching.
+        ENHANCEMENT: Task 3v3.8 - Advanced separator detection between keywords for improved reconstruction.
         """
         start_time = datetime.now()
         
@@ -218,60 +219,76 @@ class DictionaryBasedReportTypeExtractor:
         title_lower = title.lower()
         words = title.split()
         
-        # Find keyword matches with positions
+        # Find keyword matches with precise positions and boundaries
         keywords_found = []
         sequence = []
+        keyword_positions = {}  # Track exact positions for separator detection
         
         # Check for Market boundary (96.7% coverage)
         market_boundary_detected = False
         if self.market_primary_keyword and self.market_primary_keyword.lower() in title_lower:
             market_boundary_detected = True
-            # Find position
-            for i, word in enumerate(words):
-                if word.lower() == self.market_primary_keyword.lower():
-                    keywords_found.append(self.market_primary_keyword)
-                    sequence.append((self.market_primary_keyword, i))
-                    break
+            # Find precise position and boundaries
+            match = re.search(rf'\b{re.escape(self.market_primary_keyword)}\b', title, re.IGNORECASE)
+            if match:
+                keywords_found.append(self.market_primary_keyword)
+                word_pos = len(title[:match.start()].split()) - 1
+                sequence.append((self.market_primary_keyword, word_pos))
+                keyword_positions[self.market_primary_keyword] = {
+                    'start': match.start(),
+                    'end': match.end(),
+                    'word_pos': word_pos
+                }
         
-        # Check primary keywords (database-driven)
+        # Check primary keywords (database-driven) with precise boundary detection
         for keyword in self.primary_keywords:
             if keyword.lower() != "market":  # Already handled above
-                if keyword.lower() in title_lower:
+                # Use word boundary matching for precision
+                pattern = rf'\b{re.escape(keyword)}\b'
+                match = re.search(pattern, title, re.IGNORECASE)
+                if match:
                     keywords_found.append(keyword)
-                    # Find position
-                    for i, word in enumerate(words):
-                        if keyword.lower() in word.lower():
-                            sequence.append((keyword, i))
-                            break
+                    word_pos = len(title[:match.start()].split()) - 1
+                    sequence.append((keyword, word_pos))
+                    keyword_positions[keyword] = {
+                        'start': match.start(),
+                        'end': match.end(),
+                        'word_pos': word_pos
+                    }
         
-        # Check secondary keywords
+        # Check secondary keywords with precise boundary detection
         for keyword in self.secondary_keywords:
-            if keyword.lower() in title_lower:
+            pattern = rf'\b{re.escape(keyword)}\b'
+            match = re.search(pattern, title, re.IGNORECASE)
+            if match:
                 keywords_found.append(keyword)
-                # Find position  
-                for i, word in enumerate(words):
-                    if keyword.lower() in word.lower():
-                        sequence.append((keyword, i))
-                        break
+                word_pos = len(title[:match.start()].split()) - 1
+                sequence.append((keyword, word_pos))
+                keyword_positions[keyword] = {
+                    'start': match.start(),
+                    'end': match.end(),
+                    'word_pos': word_pos
+                }
         
         # Sort sequence by position
         sequence.sort(key=lambda x: x[1])
         
-        # Detect separators between keywords
-        separators_found = []
-        for separator in self.separators:
-            if separator in title:
-                separators_found.append(separator)
+        # ENHANCEMENT: Advanced separator and punctuation detection between keywords
+        separators_found, boundary_markers_found = self._detect_separators_between_keywords(
+            title, keyword_positions, sequence
+        )
         
         # Calculate coverage and confidence
         total_frequency = sum(self.keyword_frequencies.get(kw, 0) for kw in keywords_found)
         coverage_percentage = (len(keywords_found) / max(len(self.primary_keywords + self.secondary_keywords), 1)) * 100
         
-        # Base confidence on Market boundary detection and keyword density
+        # Enhanced confidence calculation with separator detection bonus
         confidence = 0.0
         if market_boundary_detected:
             confidence += 0.4  # 40% for Market boundary
-        confidence += min(0.6, len(keywords_found) * 0.1)  # Up to 60% for keywords
+        confidence += min(0.5, len(keywords_found) * 0.1)  # Up to 50% for keywords
+        if separators_found:
+            confidence += 0.1  # 10% bonus for separator detection (improved reconstruction)
         
         processing_time = (datetime.now() - start_time).total_seconds() * 1000
         self.stats['processing_time_total'] += processing_time
@@ -280,19 +297,99 @@ class DictionaryBasedReportTypeExtractor:
             keywords_found=keywords_found,
             sequence=sequence,
             separators=separators_found,
-            boundary_markers=[],  # TODO: Implement in next task
+            boundary_markers=boundary_markers_found,
             market_boundary_detected=market_boundary_detected,
             coverage_percentage=coverage_percentage,
             confidence=confidence
         )
         
-        logger.debug(f"Dictionary detection: {len(keywords_found)} keywords, {coverage_percentage:.1f}% coverage, {confidence:.2f} confidence")
+        logger.debug(f"Enhanced dictionary detection: {len(keywords_found)} keywords, {len(separators_found)} separators, {coverage_percentage:.1f}% coverage, {confidence:.2f} confidence")
         return result
+    
+    def _detect_separators_between_keywords(self, title: str, keyword_positions: Dict, sequence: List[Tuple[str, int]]) -> Tuple[List[str], List[str]]:
+        """
+        TASK 3v3.8: Advanced separator and punctuation detection between keywords.
+        Analyzes text between detected keywords to identify separators for improved reconstruction.
+        
+        Args:
+            title: Original title text
+            keyword_positions: Dict mapping keyword to position info {start, end, word_pos}
+            sequence: List of (keyword, word_position) tuples in order
+        
+        Returns:
+            Tuple of (separators_found, boundary_markers_found)
+        """
+        separators_found = []
+        boundary_markers_found = []
+        
+        if len(sequence) < 2:
+            # Single keyword - check for basic separators in title
+            for separator in self.separators:
+                if separator in title:
+                    separators_found.append(separator)
+            return separators_found, boundary_markers_found
+        
+        # Analyze text between consecutive keywords
+        for i in range(len(sequence) - 1):
+            current_keyword = sequence[i][0]
+            next_keyword = sequence[i + 1][0]
+            
+            if current_keyword not in keyword_positions or next_keyword not in keyword_positions:
+                continue
+            
+            # Get text between keywords
+            current_end = keyword_positions[current_keyword]['end']
+            next_start = keyword_positions[next_keyword]['start']
+            
+            if current_end < next_start:
+                between_text = title[current_end:next_start]
+                
+                # Detect separators from database patterns
+                for separator in self.separators:
+                    if separator in between_text:
+                        if separator not in separators_found:
+                            separators_found.append(separator)
+                
+                # Detect boundary markers from database patterns
+                for marker in self.boundary_markers:
+                    if marker in between_text:
+                        if marker not in boundary_markers_found:
+                            boundary_markers_found.append(marker)
+                
+                # Detect common punctuation patterns not in database
+                punctuation_patterns = [
+                    r'\s*,\s*',           # Comma with optional spaces
+                    r'\s*&\s*',           # Ampersand with optional spaces  
+                    r'\s*and\s*',         # "and" with optional spaces
+                    r'\s*-\s*',           # Dash with optional spaces
+                    r'\s*\|\s*',          # Pipe with optional spaces
+                    r'\s*:\s*',           # Colon with optional spaces
+                    r'\s*;\s*'            # Semicolon with optional spaces
+                ]
+                
+                for pattern in punctuation_patterns:
+                    if re.search(pattern, between_text, re.IGNORECASE):
+                        # Extract the actual separator (without spaces)
+                        match = re.search(pattern, between_text, re.IGNORECASE)
+                        if match:
+                            actual_sep = match.group().strip()
+                            if actual_sep and actual_sep not in separators_found:
+                                separators_found.append(actual_sep)
+        
+        # Sort separators by frequency of occurrence (most common first)
+        separator_counts = {}
+        for sep in separators_found:
+            separator_counts[sep] = title.count(sep)
+        
+        separators_found = sorted(separators_found, key=lambda x: separator_counts.get(x, 0), reverse=True)
+        
+        logger.debug(f"Separator detection: found {separators_found} between {len(sequence)} keywords")
+        return separators_found, boundary_markers_found
     
     def reconstruct_report_type_from_keywords(self, dictionary_result: DictionaryKeywordResult, title: str) -> Optional[str]:
         """
-        Reconstruct report type from detected keywords and separators.
-        Implements sequential keyword ordering detection algorithm.
+        Enhanced reconstruction using detected keywords and separators.
+        ENHANCEMENT: Task 3v3.8 - Uses detected separators for accurate reconstruction.
         """
         if not dictionary_result.keywords_found:
             return None
@@ -308,16 +405,91 @@ class DictionaryBasedReportTypeExtractor:
             if keyword != self.market_primary_keyword:  # Avoid duplicates
                 report_type_parts.append(keyword)
         
-        # Join with most common separator (space by default)
-        primary_separator = " "
-        if dictionary_result.separators:
-            # Use most common separator from title
-            primary_separator = dictionary_result.separators[0]
+        # ENHANCEMENT: Intelligent separator selection based on detected patterns
+        primary_separator = self._select_optimal_separator(dictionary_result, title)
         
+        # Reconstruct using optimal separator
         reconstructed = primary_separator.join(report_type_parts)
         
-        logger.debug(f"Reconstructed report type: '{reconstructed}' from keywords: {dictionary_result.keywords_found}")
+        # Post-processing: Clean up common patterns
+        reconstructed = self._clean_reconstructed_type(reconstructed, dictionary_result)
+        
+        logger.debug(f"Enhanced reconstruction: '{reconstructed}' using separator '{primary_separator}' from keywords: {dictionary_result.keywords_found}")
         return reconstructed
+    
+    def _select_optimal_separator(self, dictionary_result: DictionaryKeywordResult, title: str) -> str:
+        """
+        TASK 3v3.8: Select optimal separator based on detected patterns and context.
+        """
+        # Default separator
+        default_separator = " "
+        
+        if not dictionary_result.separators:
+            return default_separator
+        
+        # Use most frequent separator if multiple detected
+        primary_separator = dictionary_result.separators[0]  # Already sorted by frequency
+        
+        # Handle common separator patterns
+        separator_mappings = {
+            ",": " ",           # Comma becomes space for readability
+            " & ": " ",         # Ampersand becomes space
+            "&": " ",           # Standalone ampersand becomes space
+            " and ": " ",       # "and" becomes space
+            "and": " ",         # Standalone "and" becomes space  
+            "|": " ",           # Pipe becomes space
+            " - ": " ",         # Dash with spaces becomes space
+            "-": " "            # Standalone dash becomes space
+        }
+        
+        # Apply separator mapping for readability
+        if primary_separator in separator_mappings:
+            mapped_separator = separator_mappings[primary_separator]
+            logger.debug(f"Mapped separator '{primary_separator}' to '{mapped_separator}' for readability")
+            return mapped_separator
+        
+        # Special case: If title has "Market Size & Analysis" format, preserve space
+        if "Market" in title and ("&" in primary_separator or "and" in primary_separator.lower()):
+            return " "
+        
+        # Use detected separator as-is if no mapping needed
+        return primary_separator if primary_separator else default_separator
+    
+    def _clean_reconstructed_type(self, reconstructed: str, dictionary_result: DictionaryKeywordResult) -> str:
+        """
+        TASK 3v3.8: Clean and normalize reconstructed report type.
+        """
+        if not reconstructed:
+            return reconstructed
+        
+        # Remove excessive spaces
+        cleaned = re.sub(r'\s+', ' ', reconstructed).strip()
+        
+        # Fix common patterns
+        patterns_to_fix = [
+            (r'\bMarket\s+Market\b', 'Market'),           # Remove duplicate "Market"
+            (r'\bReport\s+Report\b', 'Report'),           # Remove duplicate "Report" 
+            (r'\bAnalysis\s+Analysis\b', 'Analysis'),     # Remove duplicate "Analysis"
+            (r'\bStudy\s+Study\b', 'Study'),              # Remove duplicate "Study"
+        ]
+        
+        for pattern, replacement in patterns_to_fix:
+            cleaned = re.sub(pattern, replacement, cleaned, flags=re.IGNORECASE)
+        
+        # Capitalize first letter of each significant word
+        words = cleaned.split()
+        significant_words = []
+        for word in words:
+            if word.lower() not in ['and', 'or', 'of', 'in', 'on', 'at', 'by', 'for']:
+                significant_words.append(word.capitalize())
+            else:
+                significant_words.append(word.lower())
+        
+        # Re-capitalize first word always
+        if significant_words:
+            significant_words[0] = significant_words[0].capitalize()
+        
+        return ' '.join(significant_words)
     
     def extract_market_term_workflow(self, title: str, market_term_type: str) -> Tuple[str, Optional[str], Optional[str]]:
         """
