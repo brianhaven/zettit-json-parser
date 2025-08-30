@@ -56,8 +56,9 @@ class DictionaryKeywordResult:
     separators: List[str]
     boundary_markers: List[str]
     market_boundary_detected: bool
-    coverage_percentage: float
-    confidence: float
+    market_boundary_position: Optional[int] = None  # Position of Market keyword in sequence
+    coverage_percentage: float = 0.0
+    confidence: float = 0.0
     
     # TASK 3v3.9: Edge case detection fields (v2 pattern-based)
     edge_cases: Optional[Dict[str, List[str]]] = None
@@ -361,12 +362,21 @@ class DictionaryBasedReportTypeExtractor:
         processing_time = (datetime.now() - start_time).total_seconds() * 1000
         self.stats['processing_time_total'] += processing_time
         
+        # Find market boundary position in sequence
+        market_boundary_position = None
+        if market_boundary_detected:
+            for i, (keyword, pos) in enumerate(sequence):
+                if keyword.lower() == 'market':
+                    market_boundary_position = i
+                    break
+        
         result = DictionaryKeywordResult(
             keywords_found=keywords_found,
             sequence=sequence,
             separators=separators_found,
             boundary_markers=boundary_markers_found,
             market_boundary_detected=market_boundary_detected,
+            market_boundary_position=market_boundary_position,
             coverage_percentage=coverage_percentage,
             confidence=confidence,
             # TASK 3v3.9: Edge case detection results (v2 pattern-based)
@@ -667,7 +677,12 @@ class DictionaryBasedReportTypeExtractor:
     
     def extract_market_term_workflow(self, title: str, market_term_type: str) -> Tuple[str, Optional[str], Optional[str]]:
         """
-        Extract market term and preserve context (from v2 compatibility).
+        TASK 3v3.10: Extract market term using DATABASE patterns (not hardcoded).
+        
+        Script 01 already classified the title as market_for/market_in/market_by/standard.
+        This method uses that classification to extract the market term for report type detection
+        using the SAME patterns from the database that Script 01 used.
+        
         Returns: (remaining_title, market_prefix, market_context)
         """
         market_prefix = None
@@ -676,59 +691,143 @@ class DictionaryBasedReportTypeExtractor:
         
         logger.debug(f"Market term extraction input: title='{title}', type='{market_term_type}'")
         
-        # Market term extraction logic (preserved from v2)
+        # Standard titles don't need market term extraction
+        if market_term_type == "standard":
+            return remaining_title, market_prefix, market_context
+        
+        # Load the actual pattern from database that Script 01 used for classification
         if market_term_type in ["market_for", "market_in", "market_by"]:
-            # Extract "Market" and preserve connector context
-            if market_term_type == "market_for":
-                # Look for "Market for X" pattern - be more specific about what constitutes the entity
-                # Pattern to match: Market for [Entity] where Entity is usually 2-3 words max
-                market_match = re.search(r'\bMarket\s+for\s+([A-Za-z\s]{2,30})(?=\s+[A-Z][a-z]+|,|\s+[0-9]|$)', title, re.IGNORECASE)
-                if not market_match:
-                    # Fallback: simpler pattern for short entities
-                    market_match = re.search(r'\bMarket\s+for\s+([A-Za-z\s]+?)(?=\s+[A-Z][a-z]+.*[A-Z]|,|$)', title, re.IGNORECASE)
+            try:
+                # Access database directly since PatternLibraryManager expects PatternType enum
+                # Convert market_term_type back to database format
+                # "market_for" -> "Market for", "market_in" -> "Market in", etc.
+                # Only capitalize the first word ("Market"), keep others lowercase
+                parts = market_term_type.split('_')
+                database_term = parts[0].capitalize() + ' ' + parts[1] if len(parts) > 1 else parts[0].capitalize()
                 
-                if market_match:
+                collection = self.pattern_library_manager.collection
+                query = {
+                    "type": "market_term",
+                    "term": database_term,
+                    "active": True
+                }
+                market_patterns = list(collection.find(query))
+                logger.debug(f"Searching for database term: '{database_term}' (from {market_term_type})")
+                logger.debug(f"Query: {query}")
+                logger.debug(f"Found {len(market_patterns)} matching patterns")
+                
+                if not market_patterns:
+                    logger.warning(f"No pattern found in database for market type '{market_term_type}'")
+                    # Try simplified extraction based on type
+                    return self._fallback_market_extraction(title, market_term_type)
+                
+                # Use the database pattern for detection and create extraction logic
+                pattern_data = market_patterns[0]
+                pattern_regex = pattern_data.get('pattern', '')
+                
+                if not pattern_regex:
+                    logger.warning(f"Pattern missing regex for market type '{market_term_type}'")
+                    return self._fallback_market_extraction(title, market_term_type)
+                
+                # Clean double escaping from MongoDB storage
+                clean_pattern = pattern_regex.replace('\\\\', '\\')
+                
+                # Apply the database pattern for boundary detection
+                match = re.search(clean_pattern, title, re.IGNORECASE)
+                if match:
                     market_prefix = "Market"
-                    entity = market_match.group(1).strip()
-                    market_context = f"for {entity}"
-                    # Remove only "Market for Entity" part, preserve the rest
-                    pattern_to_remove = f"Market\\s+for\\s+{re.escape(entity)}"
-                    remaining_title = re.sub(pattern_to_remove, '', title, flags=re.IGNORECASE).strip()
-                    logger.debug(f"market_for match: entity='{entity}', context='{market_context}', remaining='{remaining_title}'")
                     
-            elif market_term_type == "market_in":
-                # Look for "Market in X" pattern - be specific about entity boundaries
-                market_match = re.search(r'\bMarket\s+in\s+([A-Za-z\s]{2,30})(?=\s+[A-Z][a-z]+|,|\s+[0-9]|$)', title, re.IGNORECASE)
-                if not market_match:
-                    # Fallback pattern
-                    market_match = re.search(r'\bMarket\s+in\s+([A-Za-z\s]+?)(?=\s+[A-Z][a-z]+.*[A-Z]|,|$)', title, re.IGNORECASE)
-                
-                if market_match:
-                    market_prefix = "Market"
-                    entity = market_match.group(1).strip()
-                    market_context = f"in {entity}"
-                    # Remove only "Market in Entity" part, preserve the rest
-                    pattern_to_remove = f"Market\\s+in\\s+{re.escape(entity)}"
-                    remaining_title = re.sub(pattern_to_remove, '', title, flags=re.IGNORECASE).strip()
-                    logger.debug(f"market_in match: entity='{entity}', context='{market_context}', remaining='{remaining_title}'")
+                    # The database patterns are simple boundaries (\bmarket\s+for\b)
+                    # We need to extract what comes after the market term
+                    matched_text = match.group(0)  # e.g., "Market for"
                     
-            elif market_term_type == "market_by":
-                market_match = re.search(r'\bMarket\s+by\s+([^,]+?)(\s+[A-Z][a-z]+.*)?(?:,|$)', title, re.IGNORECASE)
-                if not market_match:
-                    market_match = re.search(r'\bMarket\s+by\s+(.+)', title, re.IGNORECASE)
-                
-                if market_match:
-                    market_prefix = "Market"
-                    market_context = f"by {market_match.group(1).strip()}"
-                    # Remove the entire "Market by X" phrase, keep the rest
-                    remaining_title = re.sub(r'\bMarket\s+by\s+[^,]+,?\s*', '', title, flags=re.IGNORECASE).strip()
-                    logger.debug(f"market_by match: context='{market_context}', remaining after removal='{remaining_title}'")
-            
-            # Clean multiple spaces and punctuation
-            remaining_title = re.sub(r'\s+', ' ', remaining_title).strip()
-            remaining_title = re.sub(r'^[,\s]+|[,\s]+$', '', remaining_title)
+                    # Find the position after the match
+                    match_end = match.end()
+                    
+                    # Extract everything after the market term until comma or end
+                    remaining_part = title[match_end:].strip()
+                    
+                    # Look for the entity between the market term and report type words or comma
+                    # Stop at common report type indicators
+                    report_indicators = r'(Analysis|Report|Study|Forecast|Outlook|Trends|Market|Size|Share|Growth|Industry)'
+                    entity_pattern = rf'^(.*?)(?:\s+{report_indicators}|\s*,|$)'
+                    entity_match = re.search(entity_pattern, remaining_part, re.IGNORECASE)
+                    if entity_match:
+                        entity = entity_match.group(1).strip()
+                        
+                        # Get connector word from market type
+                        connector = market_term_type.split('_')[1]  # 'for', 'in', 'by'
+                        market_context = f"{connector} {entity}" if entity else connector
+                        
+                        # Remove the entire market term phrase from title
+                        # Find the full phrase including the entity
+                        full_phrase_pattern = rf'\b{re.escape(matched_text)}\s+{re.escape(entity)}(?:\s*,|\s|$)'
+                        remaining_title = re.sub(full_phrase_pattern, '', title, count=1, flags=re.IGNORECASE).strip()
+                        
+                        # Clean up any leftover punctuation
+                        remaining_title = re.sub(r'^[,\s\-–—]+|[,\s\-–—]+$', '', remaining_title).strip()
+                        remaining_title = re.sub(r'\s+', ' ', remaining_title)
+                        
+                        logger.debug(f"{market_term_type} extraction: matched='{matched_text}', entity='{entity}', context='{market_context}', remaining='{remaining_title}'")
+                        
+                        return remaining_title, market_prefix, market_context
+                    else:
+                        # No entity found after market term
+                        logger.warning(f"No entity found after {market_term_type} in: {title}")
+                        return self._fallback_market_extraction(title, market_term_type)
+                else:
+                    # Pattern didn't match - use fallback
+                    logger.debug(f"Database pattern didn't match for '{market_term_type}', using fallback")
+                    return self._fallback_market_extraction(title, market_term_type)
+                    
+            except Exception as e:
+                logger.error(f"Error loading market term pattern: {e}")
+                return self._fallback_market_extraction(title, market_term_type)
         
         logger.debug(f"Market term extraction final: prefix='{market_prefix}', context='{market_context}', remaining='{remaining_title}'")
+        return remaining_title, market_prefix, market_context
+    
+    def _fallback_market_extraction(self, title: str, market_term_type: str) -> Tuple[str, Optional[str], Optional[str]]:
+        """
+        Fallback extraction when database patterns are unavailable.
+        Uses simple regex based on market term type.
+        """
+        market_prefix = None
+        market_context = None
+        remaining_title = title
+        
+        if market_term_type == "market_for":
+            # Simple extraction for "Market for X"
+            match = re.search(r'\bMarket\s+for\s+([^,]+?)(?:\s+[A-Z][a-z]+|\s*[,.]|$)', title, re.IGNORECASE)
+            if match:
+                market_prefix = "Market"
+                entity = match.group(1).strip()
+                market_context = f"for {entity}"
+                remaining_title = title.replace(match.group(0), '').strip()
+                
+        elif market_term_type == "market_in":
+            # Simple extraction for "Market in X"
+            match = re.search(r'\bMarket\s+in\s+([^,]+?)(?:\s+[A-Z][a-z]+|\s*[,.]|$)', title, re.IGNORECASE)
+            if match:
+                market_prefix = "Market"
+                entity = match.group(1).strip()
+                market_context = f"in {entity}"
+                remaining_title = title.replace(match.group(0), '').strip()
+                
+        elif market_term_type == "market_by":
+            # Simple extraction for "Market by X"
+            match = re.search(r'\bMarket\s+by\s+([^,]+?)(?:\s+[A-Z][a-z]+|\s*[,.]|$)', title, re.IGNORECASE)
+            if match:
+                market_prefix = "Market"
+                entity = match.group(1).strip()
+                market_context = f"by {entity}"
+                remaining_title = title.replace(match.group(0), '').strip()
+        
+        # Clean up remaining title
+        remaining_title = re.sub(r'^[,\s\-–—]+|[,\s\-–—]+$', '', remaining_title).strip()
+        remaining_title = re.sub(r'\s+', ' ', remaining_title)
+        
+        logger.debug(f"Fallback extraction for {market_term_type}: remaining='{remaining_title}'")
         return remaining_title, market_prefix, market_context
     
     def v2_pattern_fallback(self, title: str, market_term_type: str = "standard") -> Optional[str]:
