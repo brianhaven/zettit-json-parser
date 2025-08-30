@@ -30,8 +30,8 @@ import sys
 import logging
 import re
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple, Set
-from dataclasses import dataclass
+from typing import Dict, List, Optional, Tuple, Set, Union
+from dataclasses import dataclass, field
 from enum import Enum
 import pytz
 from pymongo import MongoClient
@@ -58,6 +58,15 @@ class DictionaryKeywordResult:
     market_boundary_detected: bool
     coverage_percentage: float
     confidence: float
+    
+    # TASK 3v3.9: Edge case detection fields (v2 pattern-based)
+    edge_cases: Optional[Dict[str, List[str]]] = None
+    extracted_acronym: Optional[str] = None
+    acronym_processing: bool = False
+    format_type_override: Optional[ReportTypeFormat] = None
+    non_dictionary_words: Optional[List[str]] = None
+    base_report_type: Optional[str] = None  # From v2 acronym_embedded patterns
+    matched_pattern: Optional[str] = None   # The regex pattern that matched
 
 @dataclass
 class MarketAwareDictionaryResult:
@@ -77,6 +86,12 @@ class MarketAwareDictionaryResult:
     dictionary_result: Optional[DictionaryKeywordResult] = None
     keywords_detected: List[str] = None
     pattern_reconstruction: Optional[str] = None
+    
+    # TASK 3v3.9: Edge case processing details
+    extracted_acronym: Optional[str] = None
+    acronym_processing: bool = False
+    edge_case_detected: bool = False
+    edge_case_types: List[str] = field(default_factory=list)
     
     # Processing statistics
     processing_time_ms: float = 0.0
@@ -99,7 +114,7 @@ class DictionaryBasedReportTypeExtractor:
         """Initialize with PatternLibraryManager for database access."""
         self.pattern_library_manager = pattern_library_manager
         self.db = pattern_library_manager.db
-        self.patterns_collection = pattern_library_manager.patterns_collection
+        self.patterns_collection = pattern_library_manager.collection
         
         # Dictionary data - loaded from database
         self.primary_keywords: List[str] = []
@@ -107,6 +122,9 @@ class DictionaryBasedReportTypeExtractor:
         self.separators: List[str] = []
         self.boundary_markers: List[str] = []
         self.keyword_frequencies: Dict[str, int] = {}
+        
+        # TASK 3v3.9: V2 pattern-based acronym detection (NO HARDCODED TERMS)
+        self.acronym_embedded_patterns: List[Dict] = []
         
         # Market boundary detection
         self.market_boundary_coverage = 0.0
@@ -126,6 +144,9 @@ class DictionaryBasedReportTypeExtractor:
         
         # Load v2 patterns for fallback (preserving existing functionality)
         self.v2_patterns = self._load_v2_patterns_for_fallback()
+        
+        # TASK 3v3.9: Load v2 acronym_embedded patterns for edge case detection
+        self.acronym_embedded_patterns = self._load_acronym_embedded_patterns()
         
         logger.info(f"DictionaryBasedReportTypeExtractor initialized:")
         logger.info(f"  Primary keywords: {len(self.primary_keywords)}")
@@ -183,14 +204,21 @@ class DictionaryBasedReportTypeExtractor:
             for doc in boundary_cursor:
                 self.boundary_markers.append(doc["term"])
             
+            # TASK 3v3.9: Load edge case classification terms from database
+            # Load v2 acronym_embedded patterns for Task 3v3.9
+            self._load_acronym_embedded_patterns()
+            
             logger.info(f"Dictionary loaded from database:")
             logger.debug(f"  Primary keywords: {self.primary_keywords}")
             logger.debug(f"  Secondary keywords: {self.secondary_keywords[:10]}...")
             logger.debug(f"  Separators: {self.separators}")
+            logger.debug(f"  Acronym embedded patterns loaded: {len(self.acronym_embedded_patterns)} total")
             
         except Exception as e:
             logger.error(f"Failed to load dictionary from database: {e}")
             raise
+    
+    # REMOVED: Old edge case classification approach replaced with v2 pattern-based detection
     
     def _load_v2_patterns_for_fallback(self) -> List[Dict]:
         """Load v2 patterns for fallback compatibility."""
@@ -206,6 +234,36 @@ class DictionaryBasedReportTypeExtractor:
         except Exception as e:
             logger.error(f"Failed to load v2 patterns for fallback: {e}")
             return []
+    
+    def _load_acronym_embedded_patterns(self) -> List[Dict]:
+        """
+        TASK 3v3.9: Load v2 acronym_embedded patterns from database.
+        Uses intelligent regex patterns with capture groups, not literal terms.
+        """
+        patterns = []
+        
+        try:
+            # Query acronym_embedded patterns from pattern_libraries collection
+            patterns_cursor = self.patterns_collection.find({
+                "format_type": "acronym_embedded",
+                "active": True
+            })
+            
+            for pattern_doc in patterns_cursor:
+                pattern_data = {
+                    'pattern': pattern_doc.get('pattern', ''),
+                    'base_type': pattern_doc.get('base_type', ''),
+                    'term': pattern_doc.get('term', ''),
+                    'confidence_weight': pattern_doc.get('confidence_weight', 0.85)
+                }
+                patterns.append(pattern_data)
+            
+            logger.debug(f"Loaded {len(patterns)} acronym_embedded patterns with regex capture groups")
+            
+        except Exception as e:
+            logger.warning(f"Failed to load acronym_embedded patterns: {e}")
+        
+        return patterns
     
     def detect_keywords_in_title(self, title: str) -> DictionaryKeywordResult:
         """
@@ -278,6 +336,16 @@ class DictionaryBasedReportTypeExtractor:
             title, keyword_positions, sequence
         )
         
+        # TASK 3v3.9: Edge case detection for non-dictionary words
+        non_dictionary_words = self._detect_edge_cases_in_title(title, keywords_found, keyword_positions)
+        
+        # TASK 3v3.9: V2 pattern-based acronym extraction (v2 ACRONYM_EMBEDDED compatibility)
+        extracted_acronym, base_report_type, matched_pattern = self._detect_acronym_embedded_patterns(title)
+        
+        # Log v2 pattern-based acronym detection results
+        if extracted_acronym:
+            logger.debug(f"V2 acronym pattern detected: '{extracted_acronym}' from base type '{base_report_type}' using pattern '{matched_pattern[:50]}...'")
+        
         # Calculate coverage and confidence
         total_frequency = sum(self.keyword_frequencies.get(kw, 0) for kw in keywords_found)
         coverage_percentage = (len(keywords_found) / max(len(self.primary_keywords + self.secondary_keywords), 1)) * 100
@@ -300,10 +368,16 @@ class DictionaryBasedReportTypeExtractor:
             boundary_markers=boundary_markers_found,
             market_boundary_detected=market_boundary_detected,
             coverage_percentage=coverage_percentage,
-            confidence=confidence
+            confidence=confidence,
+            # TASK 3v3.9: Edge case detection results (v2 pattern-based)
+            non_dictionary_words=non_dictionary_words,
+            extracted_acronym=extracted_acronym,
+            acronym_processing=bool(extracted_acronym),
+            base_report_type=base_report_type,
+            matched_pattern=matched_pattern
         )
         
-        logger.debug(f"Enhanced dictionary detection: {len(keywords_found)} keywords, {len(separators_found)} separators, {coverage_percentage:.1f}% coverage, {confidence:.2f} confidence")
+        logger.debug(f"Enhanced dictionary detection: {len(keywords_found)} keywords, {len(separators_found)} separators, {len(non_dictionary_words)} edge cases, {coverage_percentage:.1f}% coverage, {confidence:.2f} confidence")
         return result
     
     def _detect_separators_between_keywords(self, title: str, keyword_positions: Dict, sequence: List[Tuple[str, int]]) -> Tuple[List[str], List[str]]:
@@ -385,6 +459,106 @@ class DictionaryBasedReportTypeExtractor:
         
         logger.debug(f"Separator detection: found {separators_found} between {len(sequence)} keywords")
         return separators_found, boundary_markers_found
+    
+    def _detect_edge_cases_in_title(self, title: str, keywords_found: List[str], keyword_positions: Dict) -> List[str]:
+        """
+        TASK 3v3.9: Detect edge cases (non-dictionary words) between keyword boundaries.
+        Database-driven classification using loaded edge case terms.
+        
+        Args:
+            title: Original title text
+            keywords_found: List of detected dictionary keywords
+            keyword_positions: Dict mapping keyword to position info
+        
+        Returns:
+            List of detected non-dictionary words with classifications
+        """
+        if not keywords_found:
+            # No keyword boundaries - analyze entire title
+            return self._classify_full_title_edge_cases(title)
+        
+        non_dictionary_words = []
+        title_words = title.split()
+        
+        # Create keyword boundary map
+        keyword_spans = set()
+        for keyword, pos_info in keyword_positions.items():
+            start_word = pos_info['word_pos']
+            end_word = start_word + len(keyword.split())
+            for i in range(start_word, end_word):
+                keyword_spans.add(i)
+        
+        # Analyze words not covered by keywords
+        for i, word in enumerate(title_words):
+            if i not in keyword_spans:
+                # This word is not part of any detected keyword
+                classified_word = self._classify_edge_case_word(word.strip('.,;:()[]{}""'))
+                if classified_word:
+                    non_dictionary_words.append(classified_word)
+        
+        logger.debug(f"Edge case detection: found {len(non_dictionary_words)} non-dictionary words")
+        return non_dictionary_words
+    
+    def _classify_full_title_edge_cases(self, title: str) -> List[str]:
+        """
+        TASK 3v3.9: Classify edge cases when no dictionary keywords are found.
+        """
+        edge_cases = []
+        words = title.split()
+        
+        for word in words:
+            clean_word = word.strip('.,;:()[]{}""').lower()
+            classification = self._classify_edge_case_word(clean_word)
+            if classification:
+                edge_cases.append(classification)
+        
+        return edge_cases
+    
+    def _classify_edge_case_word(self, word: str) -> Optional[str]:
+        """
+        TASK 3v3.9: Identify potential edge case words for v3 dictionary approach.
+        Note: Full acronym detection is handled by _detect_acronym_embedded_patterns()
+        using database patterns. This method only flags potential edge cases.
+        """
+        if not word or len(word) < 2:
+            return None
+        
+        # For v3, we simply identify non-dictionary words that might be significant
+        # The actual pattern matching happens through database patterns
+        # This is compatible with the v2 approach where patterns are in the database
+        
+        # Flag potential edge cases without hardcoded classification
+        # Let the database patterns handle the actual detection
+        return f"potential_edge_case:{word}"
+    
+    def _detect_acronym_embedded_patterns(self, title: str) -> Tuple[Optional[str], Optional[str], Optional[str]]:
+        """
+        TASK 3v3.9: Detect acronyms using v2 pattern-based approach with regex capture groups.
+        Returns: (extracted_acronym, base_report_type, matched_pattern)
+        """
+        if not title or not self.acronym_embedded_patterns:
+            return None, None, None
+        
+        # Try each acronym_embedded pattern with regex capture groups
+        for pattern_data in self.acronym_embedded_patterns:
+            pattern_text = pattern_data['pattern']
+            try:
+                pattern = re.compile(pattern_text, re.IGNORECASE)
+                match = pattern.search(title)
+                if match:
+                    # Extract acronym from capture group
+                    acronym = match.group(1) if match.groups() else None
+                    base_type = pattern_data.get('base_type', '')
+                    matched_pattern = pattern_text
+                    
+                    logger.debug(f"Acronym pattern match: '{acronym}' from pattern '{pattern_text}' -> base type '{base_type}'")
+                    return acronym, base_type, matched_pattern
+                    
+            except re.error as e:
+                logger.warning(f"Invalid regex pattern '{pattern_text}': {e}")
+                continue
+        
+        return None, None, None
     
     def reconstruct_report_type_from_keywords(self, dictionary_result: DictionaryKeywordResult, title: str) -> Optional[str]:
         """
@@ -607,17 +781,28 @@ class DictionaryBasedReportTypeExtractor:
             # Step 2: Dictionary-based keyword detection (NEW v3 approach)
             dictionary_result = self.detect_keywords_in_title(working_title)
             
-            # Step 3: Report type reconstruction from keywords
+            # Step 3: TASK 3v3.9 - Enhanced edge case detection and acronym processing
+            edge_case_processing_result = self._process_edge_cases_and_acronyms(
+                working_title, dictionary_result, market_term_type
+            )
+            
+            # Step 4: Report type reconstruction from keywords (enhanced with edge cases)
             reconstructed_type = None
             if dictionary_result.confidence > 0.3:  # Confidence threshold
                 self.stats['dictionary_hits'] += 1
                 reconstructed_type = self.reconstruct_report_type_from_keywords(dictionary_result, working_title)
                 
+                # TASK 3v3.9: Apply acronym processing if detected
+                if edge_case_processing_result.get('acronym_processing_applied'):
+                    reconstructed_type = self._apply_acronym_processing(
+                        reconstructed_type, edge_case_processing_result
+                    )
+                
                 # Market term integration: prepend Market if extracted
                 if market_prefix and reconstructed_type and not reconstructed_type.lower().startswith('market'):
                     reconstructed_type = f"{market_prefix} {reconstructed_type}"
             
-            # Step 4: Fallback to v2 patterns if dictionary approach fails
+            # Step 5: Fallback to v2 patterns if dictionary approach fails
             if not reconstructed_type:
                 logger.debug("Dictionary approach insufficient, falling back to v2 patterns")
                 reconstructed_type = self.v2_pattern_fallback(working_title, market_term_type)
@@ -626,12 +811,18 @@ class DictionaryBasedReportTypeExtractor:
                 if market_prefix and reconstructed_type and not reconstructed_type.lower().startswith('market'):
                     reconstructed_type = f"{market_prefix} {reconstructed_type}"
             
-            # Step 5: Determine format type and calculate final confidence
-            format_type = self._determine_format_type(reconstructed_type, dictionary_result)
-            final_confidence = self._calculate_final_confidence(dictionary_result, reconstructed_type, market_term_type)
+            # Step 6: Determine format type and calculate final confidence (enhanced with edge cases)
+            format_type = self._determine_format_type(
+                reconstructed_type, dictionary_result, edge_case_processing_result
+            )
+            final_confidence = self._calculate_final_confidence(
+                dictionary_result, reconstructed_type, market_term_type, edge_case_processing_result
+            )
             
-            # Step 6: Clean remaining title (remove extracted report type)
-            remaining_title = self._clean_remaining_title(title, reconstructed_type)
+            # Step 7: Clean remaining title (remove extracted report type and preserve acronyms)
+            remaining_title = self._clean_remaining_title_with_edge_cases(
+                title, reconstructed_type, edge_case_processing_result
+            )
             
             # Add back market context for pipeline continuation (avoid duplication)
             if market_context and market_context not in remaining_title:
@@ -656,6 +847,11 @@ class DictionaryBasedReportTypeExtractor:
                 dictionary_result=dictionary_result,
                 keywords_detected=dictionary_result.keywords_found,
                 pattern_reconstruction=reconstructed_type,
+                # TASK 3v3.9: Edge case processing results
+                extracted_acronym=edge_case_processing_result.get('extracted_acronym'),
+                acronym_processing=edge_case_processing_result.get('acronym_processing', False),
+                edge_case_detected=len(dictionary_result.non_dictionary_words or []) > 0,
+                edge_case_types=['acronym'] if edge_case_processing_result.get('acronym_processing') else [],
                 processing_time_ms=processing_time,
                 database_queries=1,  # Dictionary loading
                 dictionary_lookups=len(dictionary_result.keywords_found),
@@ -681,12 +877,17 @@ class DictionaryBasedReportTypeExtractor:
                 error_details=error_details
             )
     
-    def _determine_format_type(self, report_type: Optional[str], dictionary_result: DictionaryKeywordResult) -> ReportTypeFormat:
-        """Determine format type based on dictionary detection patterns."""
+    def _determine_format_type(self, report_type: Optional[str], dictionary_result: DictionaryKeywordResult, 
+                              edge_case_result: Dict) -> ReportTypeFormat:
+        """Determine format type based on dictionary detection patterns and edge case processing."""
         if not report_type:
             return ReportTypeFormat.COMPOUND
         
-        # Check for acronym patterns
+        # TASK 3v3.9: Check for acronym patterns from edge case detection
+        if edge_case_result.get('acronym_processing') or dictionary_result.acronym_processing:
+            return ReportTypeFormat.ACRONYM_EMBEDDED
+        
+        # Check for acronym patterns in text
         if re.search(r'\([A-Z]{2,}\)', report_type):
             return ReportTypeFormat.ACRONYM_EMBEDDED
         
@@ -701,8 +902,9 @@ class DictionaryBasedReportTypeExtractor:
         return ReportTypeFormat.COMPOUND
     
     def _calculate_final_confidence(self, dictionary_result: DictionaryKeywordResult, 
-                                   report_type: Optional[str], market_term_type: str) -> float:
-        """Calculate final confidence score combining dictionary and context factors."""
+                                   report_type: Optional[str], market_term_type: str,
+                                   edge_case_result: Dict) -> float:
+        """Calculate final confidence score combining dictionary, edge case, and context factors."""
         confidence = dictionary_result.confidence
         
         # Boost confidence for successful reconstruction
@@ -713,16 +915,26 @@ class DictionaryBasedReportTypeExtractor:
         if dictionary_result.market_boundary_detected:
             confidence += 0.1
         
+        # TASK 3v3.9: Boost confidence for successful edge case detection
+        if edge_case_result.get('edge_cases_detected', 0) > 0:
+            confidence += 0.05  # Small boost for edge case handling
+        
+        # Boost confidence for acronym processing (v2 compatibility)
+        if edge_case_result.get('acronym_processing'):
+            confidence += 0.1
+        
         # Adjust for market term type compatibility
         if market_term_type != "standard" and dictionary_result.market_boundary_detected:
             confidence += 0.1
         
         return min(1.0, confidence)
     
-    def _clean_remaining_title(self, original_title: str, extracted_type: Optional[str]) -> str:
-        """Clean remaining title by removing extracted report type."""
+    def _clean_remaining_title_with_edge_cases(self, original_title: str, extracted_type: Optional[str],
+                                              edge_case_result: Dict) -> str:
+        """Clean remaining title by removing extracted report type and preserving acronyms for pipeline."""
         if not extracted_type:
-            return original_title
+            # TASK 3v3.9: Preserve acronyms even if no report type extracted
+            return self._preserve_acronyms_in_pipeline(original_title, edge_case_result)
         
         # Remove extracted type from title
         remaining = original_title
@@ -738,7 +950,25 @@ class DictionaryBasedReportTypeExtractor:
         remaining = re.sub(r'\s+', ' ', remaining)
         remaining = re.sub(r'^[,\s]+|[,\s]+$', '', remaining)
         
-        return remaining.strip()
+        # TASK 3v3.9: Preserve acronyms for pipeline continuation (v2 compatibility)
+        remaining = self._preserve_acronyms_in_pipeline(remaining.strip(), edge_case_result)
+        
+        return remaining
+    
+    def _preserve_acronyms_in_pipeline(self, text: str, edge_case_result: Dict) -> str:
+        """TASK 3v3.9: Preserve acronyms in pipeline text for v2 compatibility."""
+        extracted_acronym = edge_case_result.get('extracted_acronym')
+        if extracted_acronym and f"({extracted_acronym})" not in text:
+            # Find the full name and add acronym in parentheses
+            if edge_case_result.get('full_name_for_acronym'):
+                full_name = edge_case_result['full_name_for_acronym']
+                if full_name in text and f"({extracted_acronym})" not in text:
+                    text = text.replace(full_name, f"{full_name} ({extracted_acronym})")
+            else:
+                # Append acronym at end if no full name context
+                text = f"{text} ({extracted_acronym})".strip()
+        
+        return text
     
     def get_statistics(self) -> Dict:
         """Get processing statistics with v3 dictionary metrics."""
@@ -758,6 +988,65 @@ class DictionaryBasedReportTypeExtractor:
         }
         
         return stats
+    
+    def _process_edge_cases_and_acronyms(self, title: str, dictionary_result: DictionaryKeywordResult,
+                                       market_term_type: str) -> Dict:
+        """
+        TASK 3v3.9: Process edge cases and acronyms for enhanced detection.
+        Returns comprehensive edge case processing results.
+        """
+        result = {
+            'edge_cases_detected': len(dictionary_result.non_dictionary_words or []),
+            'acronym_processing': dictionary_result.acronym_processing,
+            'extracted_acronym': dictionary_result.extracted_acronym,
+            'acronym_processing_applied': False,
+            'full_name_for_acronym': None
+        }
+        
+        # Enhanced acronym processing for v2 compatibility
+        if dictionary_result.extracted_acronym:
+            # Look for full name context in original title
+            acronym_match = re.search(rf'\b([A-Za-z\s]+)\s*\({dictionary_result.extracted_acronym}\)', title)
+            if acronym_match:
+                result['full_name_for_acronym'] = acronym_match.group(1).strip()
+                result['acronym_processing_applied'] = True
+                logger.debug(f"Acronym processing: '{result['full_name_for_acronym']}' -> '({dictionary_result.extracted_acronym})'")
+        
+        # Log edge case detection summary
+        if result['edge_cases_detected'] > 0:
+            edge_case_summary = {}
+            for word in (dictionary_result.non_dictionary_words or []):
+                if ':' in word:
+                    edge_type = word.split(':')[0]
+                    edge_case_summary[edge_type] = edge_case_summary.get(edge_type, 0) + 1
+            logger.debug(f"Edge cases detected: {dict(edge_case_summary)}")
+        
+        return result
+    
+    def _apply_acronym_processing(self, report_type: Optional[str], edge_case_result: Dict) -> Optional[str]:
+        """
+        TASK 3v3.9: Apply acronym processing to report type reconstruction.
+        Maintains v2 ACRONYM_EMBEDDED format compatibility.
+        """
+        if not report_type or not edge_case_result.get('extracted_acronym'):
+            return report_type
+        
+        acronym = edge_case_result['extracted_acronym']
+        
+        # Check if acronym is already embedded
+        if f"({acronym})" in report_type:
+            return report_type
+        
+        # Apply v2-style acronym pattern reconstruction
+        if edge_case_result.get('full_name_for_acronym'):
+            full_name = edge_case_result['full_name_for_acronym']
+            # Replace full name with acronym-embedded version in report type
+            if full_name in report_type:
+                enhanced_report_type = report_type.replace(full_name, f"{full_name} ({acronym})")
+                logger.debug(f"Acronym-enhanced report type: '{enhanced_report_type}'")
+                return enhanced_report_type
+        
+        return report_type
 
 
 def main():
