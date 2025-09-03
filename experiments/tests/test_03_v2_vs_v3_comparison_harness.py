@@ -223,7 +223,7 @@ def run_pipeline_through_version(test_cases: List[Dict], version: str, output_di
             result['extracted_regions'] = geo_result.extracted_regions if geo_result else []
             result['geo_confidence'] = geo_result.confidence_score if geo_result else 1.0
             if geo_result and geo_result.extracted_regions:
-                current_title = geo_result.remaining_text
+                current_title = geo_result.title  # Fixed: use .title instead of .remaining_text
                 logger.debug(f"Stage 4 - Regions: {geo_result.extracted_regions}")
             else:
                 logger.debug("Stage 4 - No geographic regions found")
