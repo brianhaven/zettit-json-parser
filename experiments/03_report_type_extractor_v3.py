@@ -925,7 +925,18 @@ class DictionaryBasedReportTypeExtractor:
             
             # Add back market context for pipeline continuation (avoid duplication)
             if market_context and market_context not in remaining_title:
-                remaining_title = f"{remaining_title} {market_context}".strip()
+                # Check for partial duplication (e.g., context contains words already in title)
+                context_words = market_context.lower().split()
+                title_words = remaining_title.lower().split()
+                
+                # Only add if not already present in some form
+                context_already_present = any(
+                    all(word in title_words for word in context_words[i:i+2]) 
+                    for i in range(len(context_words)-1)
+                ) if len(context_words) > 1 else context_words[0] in title_words
+                
+                if not context_already_present:
+                    remaining_title = f"{remaining_title} {market_context}".strip()
             
             # Calculate processing time
             processing_time = (datetime.now() - start_time).total_seconds() * 1000
@@ -1045,9 +1056,25 @@ class DictionaryBasedReportTypeExtractor:
         for keyword in self.primary_keywords + self.secondary_keywords:
             remaining = re.sub(rf'\b{re.escape(keyword)}\b', '', remaining, flags=re.IGNORECASE)
         
-        # Clean up spacing and punctuation
+        # Enhanced cleanup for dangling separators and punctuation
         remaining = re.sub(r'\s+', ' ', remaining)
-        remaining = re.sub(r'^[,\s]+|[,\s]+$', '', remaining)
+        
+        # Remove dangling separators and punctuation at start/end
+        remaining = re.sub(r'^[,\s&\-–—\|;:]+|[,\s&\-–—\|;:]+$', '', remaining)
+        
+        # Remove internal dangling separators (e.g., "word , &" -> "word")
+        remaining = re.sub(r'\s*,\s*&\s*$', '', remaining)
+        remaining = re.sub(r'\s*&\s*,\s*$', '', remaining)
+        remaining = re.sub(r'\s*,\s*$', '', remaining)
+        remaining = re.sub(r'\s*&\s*$', '', remaining)
+        remaining = re.sub(r'\s*\|\s*$', '', remaining)
+        
+        # Clean up excessive punctuation combinations
+        remaining = re.sub(r'[,&\-–—\|;:]{2,}', ' ', remaining)
+        
+        # Final spacing cleanup
+        remaining = re.sub(r'\s+', ' ', remaining)
+        remaining = remaining.strip()
         
         # TASK 3v3.9: Preserve acronyms for pipeline continuation (v2 compatibility)
         remaining = self._preserve_acronyms_in_pipeline(remaining.strip(), edge_case_result)
