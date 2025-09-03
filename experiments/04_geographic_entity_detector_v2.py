@@ -50,10 +50,10 @@ logger = logging.getLogger(__name__)
 class GeographicExtractionResult:
     """Result object for geographic entity extraction."""
     
-    def __init__(self, extracted_regions: List[str] = None, remaining_text: str = "", 
+    def __init__(self, extracted_regions: List[str] = None, title: str = "", 
                  confidence_score: float = 0.0, processing_notes: str = ""):
         self.extracted_regions = extracted_regions or []
-        self.remaining_text = remaining_text
+        self.title = title  # Standardized: changed from remaining_text to title for consistency
         self.confidence_score = confidence_score
         self.processing_notes = processing_notes
 
@@ -160,23 +160,23 @@ class GeographicEntityDetector:
         logger.debug(f"Built pattern for '{pattern.term}' (priority {pattern.priority}): {regex_pattern}")
         return regex_pattern
     
-    def extract_geographic_entities(self, remaining_text: str) -> GeographicExtractionResult:
+    def extract_geographic_entities(self, title: str) -> GeographicExtractionResult:
         """
         Extract geographic entities using priority-based pattern matching.
         Consistent with Scripts 01-03 systematic removal approach.
         """
-        if not remaining_text or not remaining_text.strip():
+        if not title or not title.strip():
             return GeographicExtractionResult(
                 extracted_regions=[],
-                remaining_text="",
+                title="",
                 confidence_score=1.0,
                 processing_notes="Empty input text"
             )
         
-        logger.info(f"Processing text: {remaining_text[:100]}...")
+        logger.info(f"Processing text: {title[:100]}...")
         
         extracted_regions = []
-        working_text = remaining_text.strip()
+        working_text = title.strip()
         processing_notes = []
         
         # Process patterns in priority order (complex → simple)
@@ -220,7 +220,7 @@ class GeographicEntityDetector:
         
         # Calculate confidence score
         confidence_score = self.calculate_confidence_score(
-            original_text=remaining_text,
+            original_text=title,
             extracted_regions=extracted_regions,
             remaining_text=working_text
         )
@@ -230,7 +230,7 @@ class GeographicEntityDetector:
         
         result = GeographicExtractionResult(
             extracted_regions=extracted_regions,
-            remaining_text=working_text,
+            title=working_text,
             confidence_score=confidence_score,
             processing_notes="; ".join(processing_notes)
         )
