@@ -1,0 +1,1205 @@
+{
+  "v2_results": [
+    {
+      "test_case": 1,
+      "original_title": "Rice Straw Market for Silica Production",
+      "version": "v2",
+      "market_term_type": "market_for",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Rice Straw for Silica Production",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 2,
+      "original_title": "Indonesia Self-adhesive Vinyl Films Market Forecast 2027",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2027",
+      "date_confidence": 0.87,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Indonesia"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Self-adhesive Vinyl Films",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.87,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 3,
+      "original_title": "Tablet Hardness Testers Market Forecast Report, 2021-2031",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2021-2031",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Forecast Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Tablet Hardness Testers",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 4,
+      "original_title": "EMEA Industrial Coatings Market for Mining and Petrochemicals",
+      "version": "v2",
+      "market_term_type": "market_for",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Europe, Middle East and Africa"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Industrial Coatings for Mining and Petrochemicals",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 5,
+      "original_title": "Heel Incision Devices Market Insights, 2020-2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2020-2030",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Heel Incision Devices  Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 6,
+      "original_title": "Ampoules and Syringes Market Forecast Analysis Report",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market Forecast Analysis Report",
+      "report_confidence": 0.86,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Ampoules and Syringes",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.86,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 7,
+      "original_title": "Thin Film Material Market Size, Share, Industry Analysis Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share,",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Thin Film Material  Industry Analysis Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 8,
+      "original_title": "Graphene Market Size, Share, Trends & Growth Report 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.6,
+      "extracted_report_type": "Market Size, Share, Trends & Growth Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Graphene",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 9,
+      "original_title": "U.S. Atherectomy Devices Market Size, Share, Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share, Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "United States"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Atherectomy Devices",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 10,
+      "original_title": "Capsule Endoscopy Market Size, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Industry Report",
+      "report_confidence": 0.95,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Capsule Endoscopy",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.95,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 11,
+      "original_title": "Power System Analysis Software Market Outlook",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Power System Analysis Software  Outlook",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 12,
+      "original_title": "Switzerland Hearing Aid Retailers Market Size Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 0.93,
+      "extracted_regions": [
+        "Switzerland"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Hearing Aid Retailers",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.93,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 13,
+      "original_title": "Propane Market Size, Share, Global Industry Report, 2018-2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size, Share, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Propane",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 14,
+      "original_title": "Viral Clearance Market Size, Share, Global Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Viral Clearance",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 15,
+      "original_title": "Spoil Detection Based Smart Label Market Size, Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Industry Report",
+      "report_confidence": 0.95,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Spoil Detection Based Smart Label",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.95,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 16,
+      "original_title": "Rabies Diagnostics Market Size & Share, Industry Report, 2019-2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size & Share, Industry Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Rabies Diagnostics",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 17,
+      "original_title": "Asset Management System Market Size, Global Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Asset Management System",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 18,
+      "original_title": "Europe PGM Catalyst Market Size & Share Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size & Share Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "PGM Catalyst",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 19,
+      "original_title": "Toluene Diisocyanate Market Size & Share, TDI Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size & Share, TDI Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Toluene Diisocyanate (TDI)",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 20,
+      "original_title": "Solar District Heating Market Size & Share Report, 2019-2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size & Share Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Solar District Heating",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 21,
+      "original_title": "Mining Equipment Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Mining Equipment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 22,
+      "original_title": "Cable Management System Market Size, Share Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Cable Management System",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 23,
+      "original_title": "B2B2C Insurance Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 0.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "B2B2C Insurance",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 24,
+      "original_title": "Port Equipment Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Port Equipment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 25,
+      "original_title": "Voice Communication Control System Market Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Voice Communication Control System",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    }
+  ],
+  "v3_results": [
+    {
+      "test_case": 1,
+      "original_title": "Rice Straw Market for Silica Production",
+      "version": "v3",
+      "market_term_type": "market_for",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "",
+      "report_confidence": 0.15000000000000002,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Rice Straw Market for Silica Production",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.15000000000000002,
+        "geographic_extraction": 0.8
+      },
+      "success": false,
+      "error": null
+    },
+    {
+      "test_case": 2,
+      "original_title": "Indonesia Self-adhesive Vinyl Films Market Forecast 2027",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2027",
+      "date_confidence": 0.87,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [
+        "Indonesia"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Self-adhesive Vinyl Films",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.87,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 3,
+      "original_title": "Tablet Hardness Testers Market Forecast Report, 2021-2031",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2021-2031",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Forecast Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Tablet Hardness Testers",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 4,
+      "original_title": "EMEA Industrial Coatings Market for Mining and Petrochemicals",
+      "version": "v3",
+      "market_term_type": "market_for",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "",
+      "report_confidence": 0.15000000000000002,
+      "extracted_regions": [
+        "Europe, Middle East and Africa"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Industrial Coatings Market for Mining and Petrochemicals",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.15000000000000002,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 5,
+      "original_title": "Heel Incision Devices Market Insights, 2020-2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2020-2030",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Heel Incision Devices",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 6,
+      "original_title": "Ampoules and Syringes Market Forecast Analysis Report",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market and Forecast Analysis Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Ampoules Syringes",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 7,
+      "original_title": "Thin Film Material Market Size, Share, Industry Analysis Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Analysis Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Thin Film Material",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 8,
+      "original_title": "Graphene Market Size, Share, Trends & Growth Report 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.6,
+      "extracted_report_type": "Market Size Share Trends Growth Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Graphene",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 9,
+      "original_title": "U.S. Atherectomy Devices Market Size, Share, Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "United States"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Atherectomy Devices",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 10,
+      "original_title": "Capsule Endoscopy Market Size, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Capsule Endoscopy",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 11,
+      "original_title": "Power System Analysis Software Market Outlook",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market Analysis Outlook",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Power System Software",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 12,
+      "original_title": "Switzerland Hearing Aid Retailers Market Size Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Switzerland"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Hearing Aid Retailers",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 13,
+      "original_title": "Propane Market Size, Share, Global Industry Report, 2018-2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Propane, Glo",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 14,
+      "original_title": "Viral Clearance Market Size, Share, Global Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Viral Clearance, Glo",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 15,
+      "original_title": "Spoil Detection Based Smart Label Market Size, Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Spoil Detection Based Smart Label",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 16,
+      "original_title": "Rabies Diagnostics Market Size & Share, Industry Report, 2019-2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Rabies Diagnostics",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 17,
+      "original_title": "Asset Management System Market Size, Global Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Asset Management System",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 18,
+      "original_title": "Europe PGM Catalyst Market Size & Share Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "PGM Catalyst",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 19,
+      "original_title": "Toluene Diisocyanate Market Size & Share, TDI Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Toluene Diisocyanate & , TDI (TDI)",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 20,
+      "original_title": "Solar District Heating Market Size & Share Report, 2019-2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size Share Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Solar District Heating",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 21,
+      "original_title": "Mining Equipment Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Mining Equipment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 22,
+      "original_title": "Cable Management System Market Size, Share Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Cable Management System",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 23,
+      "original_title": "B2B2C Insurance Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 0.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "B2B2C Insurance",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 24,
+      "original_title": "Port Equipment Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Port Equipment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 25,
+      "original_title": "Voice Communication Control System Market Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Voice Communication Control System",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    }
+  ],
+  "v2_analysis": {
+    "total_cases": 25,
+    "successful_extractions": 25,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "issues_detected": [],
+    "patterns_found": {
+      "market_for": 2,
+      "report_type: Market": 8,
+      "standard": 23,
+      "report_type: Market Forecast Report": 1,
+      "report_type: Market Forecast Analysis Report": 1,
+      "report_type: Market Size, Share,": 1,
+      "report_type: Market Size, Share, Trends & Growth Report": 1,
+      "report_type: Market Size, Share, Report": 1,
+      "report_type: Market Size, Industry Report": 2,
+      "report_type: Market Size Report": 1,
+      "report_type: Market Size, Share, Global Industry Report": 2,
+      "report_type: Market Size & Share, Industry Report": 1,
+      "report_type: Market Size, Global Industry Report": 1,
+      "report_type: Market Size & Share Report": 2,
+      "report_type: Market Size & Share, TDI Industry Report": 1,
+      "report_type: Market Size, Share Report": 1,
+      "report_type: Market Report": 1
+    },
+    "version": "v2"
+  },
+  "v3_analysis": {
+    "total_cases": 25,
+    "successful_extractions": 24,
+    "failed_extractions": 1,
+    "success_rate": 96.0,
+    "issues_detected": [
+      {
+        "title": "Rice Straw Market for Silica Production",
+        "error": null,
+        "market_type": "market_for",
+        "test_case_id": 1
+      }
+    ],
+    "patterns_found": {
+      "standard": 23,
+      "report_type: Market": 4,
+      "report_type: Market Forecast Report": 1,
+      "market_for": 1,
+      "report_type: Market Insights": 1,
+      "report_type: Market and Forecast Analysis Report": 1,
+      "report_type: Market Size Share Industry Analysis Report": 1,
+      "report_type: Market Size Share Trends Growth Report": 1,
+      "report_type: Market Size Share Report": 4,
+      "report_type: Market Size Industry Report": 3,
+      "report_type: Market Analysis Outlook": 1,
+      "report_type: Market Size Report": 1,
+      "report_type: Market Size Share Industry Report": 4,
+      "report_type: Market Report": 1
+    },
+    "version": "v3"
+  },
+  "test_metadata": {
+    "timestamp": {
+      "pst": "2025-09-02 22:20:51 PDT",
+      "utc": "2025-09-03 05:20:51 UTC",
+      "filename": "20250902_222051"
+    },
+    "test_quantity": 25,
+    "output_directory": "/home/ec2-user/zettit/services/json-parser/outputs/20250902_222051_script03_v2_vs_v3_comparison"
+  }
+}

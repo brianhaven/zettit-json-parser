@@ -59,6 +59,7 @@ class DictionaryKeywordResult:
     market_boundary_position: Optional[int] = None  # Position of Market keyword in sequence
     coverage_percentage: float = 0.0
     confidence: float = 0.0
+    keyword_positions: Optional[Dict] = None  # Precise keyword positions for cleanup
     
     # TASK 3v3.9: Edge case detection fields (v2 pattern-based)
     edge_cases: Optional[Dict[str, List[str]]] = None
@@ -266,6 +267,83 @@ class DictionaryBasedReportTypeExtractor:
         
         return patterns
     
+    def _find_keyword_with_wrapping(self, keyword: str, title: str) -> Optional[Dict]:
+        """
+        TASK 3v3.15: Enhanced keyword detection with bracket/parentheses wrapping support.
+        
+        Detects keywords in three scenarios (prioritizes wrapped keywords):
+        1. Wrapped in brackets: "Market [Size & Share] Report" 
+        2. Wrapped in parentheses: "Market (Growth Analysis) Report"
+        3. Normal word boundary: "Market Size Report"
+        
+        Args:
+            keyword: Keyword to search for
+            title: Title text to search in
+            
+        Returns:
+            Dict with match details or None if not found
+        """
+        escaped_keyword = re.escape(keyword)
+        
+        # PRIORITY 1: Check for wrapped in brackets [keyword] or [keyword phrase]
+        bracket_pattern = rf'\[([^[\]]*\b{escaped_keyword}\b[^[\]]*)\]'
+        bracket_match = re.search(bracket_pattern, title, re.IGNORECASE)
+        if bracket_match:
+            # Find the actual keyword position within the brackets
+            bracket_content = bracket_match.group(1)
+            keyword_in_bracket = re.search(rf'\b{escaped_keyword}\b', bracket_content, re.IGNORECASE)
+            if keyword_in_bracket:
+                # Calculate absolute position in title
+                bracket_start = bracket_match.start()
+                keyword_start_in_bracket = keyword_in_bracket.start()
+                absolute_start = bracket_start + 1 + keyword_start_in_bracket  # +1 for opening bracket
+                
+                return {
+                    'start': absolute_start,
+                    'end': absolute_start + len(keyword),
+                    'wrapped': True,
+                    'wrap_chars': '[]',
+                    'wrapped_content': bracket_content,
+                    'wrapper_start': bracket_start,
+                    'wrapper_end': bracket_match.end()
+                }
+        
+        # PRIORITY 2: Check for wrapped in parentheses (keyword) or (keyword phrase)  
+        paren_pattern = rf'\(([^()]*\b{escaped_keyword}\b[^()]*)\)'
+        paren_match = re.search(paren_pattern, title, re.IGNORECASE)
+        if paren_match:
+            # Find the actual keyword position within the parentheses
+            paren_content = paren_match.group(1)
+            keyword_in_paren = re.search(rf'\b{escaped_keyword}\b', paren_content, re.IGNORECASE)
+            if keyword_in_paren:
+                # Calculate absolute position in title
+                paren_start = paren_match.start()
+                keyword_start_in_paren = keyword_in_paren.start()
+                absolute_start = paren_start + 1 + keyword_start_in_paren  # +1 for opening parenthesis
+                
+                return {
+                    'start': absolute_start,
+                    'end': absolute_start + len(keyword),
+                    'wrapped': True,
+                    'wrap_chars': '()',
+                    'wrapped_content': paren_content,
+                    'wrapper_start': paren_start,
+                    'wrapper_end': paren_match.end()
+                }
+        
+        # PRIORITY 3: Normal word boundary detection (fallback)
+        normal_pattern = rf'\b{escaped_keyword}\b'
+        normal_match = re.search(normal_pattern, title, re.IGNORECASE)
+        if normal_match:
+            return {
+                'start': normal_match.start(),
+                'end': normal_match.end(),
+                'wrapped': False,
+                'wrap_chars': None
+            }
+        
+        return None
+    
     def detect_keywords_in_title(self, title: str) -> DictionaryKeywordResult:
         """
         Enhanced dictionary-based keyword detection with precise punctuation and separator detection.
@@ -283,50 +361,53 @@ class DictionaryBasedReportTypeExtractor:
         sequence = []
         keyword_positions = {}  # Track exact positions for separator detection
         
-        # Check for Market boundary (96.7% coverage)
+        # Check for Market boundary (96.7% coverage) with bracket/parentheses wrapping detection
         market_boundary_detected = False
         if self.market_primary_keyword and self.market_primary_keyword.lower() in title_lower:
             market_boundary_detected = True
-            # Find precise position and boundaries
-            match = re.search(rf'\b{re.escape(self.market_primary_keyword)}\b', title, re.IGNORECASE)
+            # Use enhanced wrapping detection for Market keyword
+            match = self._find_keyword_with_wrapping(self.market_primary_keyword, title)
             if match:
                 keywords_found.append(self.market_primary_keyword)
-                word_pos = len(title[:match.start()].split()) - 1
+                word_pos = len(title[:match['start']].split()) - 1
                 sequence.append((self.market_primary_keyword, word_pos))
                 keyword_positions[self.market_primary_keyword] = {
-                    'start': match.start(),
-                    'end': match.end(),
-                    'word_pos': word_pos
+                    'start': match['start'],
+                    'end': match['end'],
+                    'word_pos': word_pos,
+                    'wrapped': match['wrapped'],
+                    'wrap_chars': match['wrap_chars']
                 }
         
-        # Check primary keywords (database-driven) with precise boundary detection
+        # Check primary keywords (database-driven) with bracket/parentheses wrapping detection
         for keyword in self.primary_keywords:
             if keyword.lower() != "market":  # Already handled above
-                # Use word boundary matching for precision
-                pattern = rf'\b{re.escape(keyword)}\b'
-                match = re.search(pattern, title, re.IGNORECASE)
+                match = self._find_keyword_with_wrapping(keyword, title)
                 if match:
                     keywords_found.append(keyword)
-                    word_pos = len(title[:match.start()].split()) - 1
+                    word_pos = len(title[:match['start']].split()) - 1
                     sequence.append((keyword, word_pos))
                     keyword_positions[keyword] = {
-                        'start': match.start(),
-                        'end': match.end(),
-                        'word_pos': word_pos
+                        'start': match['start'],
+                        'end': match['end'],
+                        'word_pos': word_pos,
+                        'wrapped': match['wrapped'],
+                        'wrap_chars': match['wrap_chars']
                     }
         
-        # Check secondary keywords with precise boundary detection
+        # Check secondary keywords with bracket/parentheses wrapping detection
         for keyword in self.secondary_keywords:
-            pattern = rf'\b{re.escape(keyword)}\b'
-            match = re.search(pattern, title, re.IGNORECASE)
+            match = self._find_keyword_with_wrapping(keyword, title)
             if match:
                 keywords_found.append(keyword)
-                word_pos = len(title[:match.start()].split()) - 1
+                word_pos = len(title[:match['start']].split()) - 1
                 sequence.append((keyword, word_pos))
                 keyword_positions[keyword] = {
-                    'start': match.start(),
-                    'end': match.end(),
-                    'word_pos': word_pos
+                    'start': match['start'],
+                    'end': match['end'],
+                    'word_pos': word_pos,
+                    'wrapped': match['wrapped'],
+                    'wrap_chars': match['wrap_chars']
                 }
         
         # Sort sequence by position
@@ -379,6 +460,7 @@ class DictionaryBasedReportTypeExtractor:
             market_boundary_position=market_boundary_position,
             coverage_percentage=coverage_percentage,
             confidence=confidence,
+            keyword_positions=keyword_positions,  # Add keyword positions for cleanup
             # TASK 3v3.9: Edge case detection results (v2 pattern-based)
             non_dictionary_words=non_dictionary_words,
             extracted_acronym=extracted_acronym,
@@ -584,9 +666,16 @@ class DictionaryBasedReportTypeExtractor:
         if dictionary_result.market_boundary_detected and self.market_primary_keyword:
             report_type_parts.append(self.market_primary_keyword)
         
-        # Add other keywords in sequence order
+        # Add other keywords in sequence order - only include keywords from report type phrase
+        # Only include keywords that come AFTER Market keyword (not just non-negative positions)
+        market_position = -1
         for keyword, position in dictionary_result.sequence:
-            if keyword != self.market_primary_keyword:  # Avoid duplicates
+            if keyword == self.market_primary_keyword:
+                market_position = position
+                break
+                
+        for keyword, position in dictionary_result.sequence:
+            if keyword != self.market_primary_keyword and position > market_position:  # Only keywords after Market
                 report_type_parts.append(keyword)
         
         # ENHANCEMENT: Intelligent separator selection based on detected patterns
@@ -910,6 +999,11 @@ class DictionaryBasedReportTypeExtractor:
                 if market_prefix and reconstructed_type and not reconstructed_type.lower().startswith('market'):
                     reconstructed_type = f"{market_prefix} {reconstructed_type}"
             
+            # CRITICAL V2 COMPATIBILITY: Market term fallback - if no patterns found, still return "Market"
+            if not reconstructed_type and market_prefix and market_term_type != "standard":
+                logger.debug(f"No patterns found for market term title, using market prefix: '{market_prefix}'")
+                reconstructed_type = market_prefix  # This should be "Market"
+            
             # Step 6: Determine format type and calculate final confidence (enhanced with edge cases)
             format_type = self._determine_format_type(
                 reconstructed_type, dictionary_result, edge_case_processing_result
@@ -920,7 +1014,7 @@ class DictionaryBasedReportTypeExtractor:
             
             # Step 7: Clean remaining title (remove extracted report type and preserve acronyms)
             remaining_title = self._clean_remaining_title_with_edge_cases(
-                title, reconstructed_type, edge_case_processing_result
+                title, reconstructed_type, edge_case_processing_result, dictionary_result
             )
             
             # Add back market context for pipeline continuation (avoid duplication)
@@ -1040,7 +1134,7 @@ class DictionaryBasedReportTypeExtractor:
         return min(1.0, confidence)
     
     def _clean_remaining_title_with_edge_cases(self, original_title: str, extracted_type: Optional[str],
-                                              edge_case_result: Dict) -> str:
+                                              edge_case_result: Dict, dictionary_result: DictionaryKeywordResult) -> str:
         """Clean remaining title by removing extracted report type and preserving acronyms for pipeline."""
         if not extracted_type:
             # TASK 3v3.9: Preserve acronyms even if no report type extracted
@@ -1049,12 +1143,11 @@ class DictionaryBasedReportTypeExtractor:
         # Remove extracted type from title
         remaining = original_title
         
-        # Remove exact matches
-        remaining = re.sub(re.escape(extracted_type), '', remaining, flags=re.IGNORECASE)
+        # ENHANCED: Remove original phrase components based on keyword positions
+        remaining = self._remove_original_phrase_from_title(original_title, dictionary_result)
         
-        # Remove individual keywords
-        for keyword in self.primary_keywords + self.secondary_keywords:
-            remaining = re.sub(rf'\b{re.escape(keyword)}\b', '', remaining, flags=re.IGNORECASE)
+        # CRITICAL: No individual keyword removal needed - the complete phrase extraction above handles everything
+        # This preserves legitimate content words like "And", "Data", "CT", "Global" when they're part of topics
         
         # Enhanced cleanup for dangling separators and punctuation
         remaining = re.sub(r'\s+', ' ', remaining)
@@ -1114,6 +1207,46 @@ class DictionaryBasedReportTypeExtractor:
         }
         
         return stats
+
+    def _remove_original_phrase_from_title(self, title: str, dictionary_result: DictionaryKeywordResult) -> str:
+        """
+        Remove the original phrase components from title based on keyword positions.
+        This handles cases where reconstructed report type differs from original phrase.
+        
+        Args:
+            title: Original title
+            dictionary_result: Dictionary detection result with keyword positions
+            
+        Returns:
+            Title with original phrase components removed
+        """
+        if not dictionary_result.keywords_found:
+            return title
+            
+        # Get all keyword positions sorted by start position
+        positions = []
+        for keyword in dictionary_result.keywords_found:
+            if keyword in dictionary_result.keyword_positions:
+                pos_info = dictionary_result.keyword_positions[keyword]
+                positions.append((pos_info['start'], pos_info['end'], keyword))
+        
+        if not positions:
+            return title
+            
+        # Sort by start position
+        positions.sort()
+        
+        # Find the span from first to last keyword (inclusive of separators and non-dictionary words)
+        first_start = positions[0][0]
+        last_end = positions[-1][1]
+        
+        # Remove the complete phrase span
+        remaining = title[:first_start] + title[last_end:]
+        
+        # Clean up extra spaces
+        remaining = re.sub(r'\s+', ' ', remaining).strip()
+        
+        return remaining
     
     def _process_edge_cases_and_acronyms(self, title: str, dictionary_result: DictionaryKeywordResult,
                                        market_term_type: str) -> Dict:

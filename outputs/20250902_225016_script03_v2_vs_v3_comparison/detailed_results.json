@@ -1,0 +1,1202 @@
+{
+  "v2_results": [
+    {
+      "test_case": 1,
+      "original_title": "PET Foam Market for Structural Composites",
+      "version": "v2",
+      "market_term_type": "market_for",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "PET Foam for Structural Composites",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 2,
+      "original_title": "Middle East & North Africa Diesel Generator Market in Telecom Industry 2027",
+      "version": "v2",
+      "market_term_type": "market_in",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "2027",
+      "date_confidence": 0.6,
+      "extracted_report_type": "or",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "North Africa",
+        "Middle East"
+      ],
+      "geo_confidence": 0.9,
+      "topic": "Diesel Generator in Telecom Industry",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 0.6,
+        "report_type": 0.9,
+        "geographic_extraction": 0.9
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 3,
+      "original_title": "Antiviral Drugs Market Insights, 2016-2024",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2016-2024",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Antiviral Drugs  Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 4,
+      "original_title": "Flexographic Inks Market Forecast 2017 - 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2017-2025",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Forecast",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Flexographic Inks",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 5,
+      "original_title": "Europe Baby Drinks (Infant Formula, Baby Juice) Market Forecast 2015 - 2021",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2015-2021",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Forecast",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Baby Drinks (Infant Formula, Baby Juice)",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 6,
+      "original_title": "Digital Signature Market Forecast 2017 - 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2017-2025",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Forecast",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Digital Signature",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 7,
+      "original_title": "Edge AI Accelerator Market Size, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Industry Report",
+      "report_confidence": 0.95,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Edge AI Accelerator",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.95,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 8,
+      "original_title": "Smart Infrastructure Market Size, Share, Growth Report 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.6,
+      "extracted_report_type": "Market Size, Share, Growth Report",
+      "report_confidence": 0.94,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Smart Infrastructure",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 0.94,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 9,
+      "original_title": "U.S. Chiropractic Market Size, Share & Trends Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share & Trends Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "United States"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Chiropractic",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 10,
+      "original_title": "Dairy Herd Management Market Size & Share Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size & Share Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Dairy Herd Management",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 11,
+      "original_title": "Biological Wastewater Treatment Market Size Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 0.93,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Biological Wastewater Treatment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.93,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 12,
+      "original_title": "Ultralight And Light Aircraft Market Size & Share Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size & Share Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Ultralight And Light Aircraft",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 13,
+      "original_title": "Fiber Cement Rainscreen Panels Market Size, Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Industry Report",
+      "report_confidence": 0.95,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Fiber Cement Rainscreen Panels",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.95,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 14,
+      "original_title": "Polyethyleneimine Market Size, Share, Global Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Polyethyleneimine",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 15,
+      "original_title": "Strontium Market Outlook, 2016-2024",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2016-2024",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Strontium  Outlook",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 16,
+      "original_title": "Viral Clearance Market Size, Share, Global Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Viral Clearance",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 17,
+      "original_title": "Touchless Sensing Market Size, Share, Global Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Touchless Sensing",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 18,
+      "original_title": "Data Capture Hardware In Retail Market Size Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Industry Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Data Capture Hardware In Retail Market Size",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 19,
+      "original_title": "Lactic Acid Market Size, Share, Growth, Trends Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share, Growth,",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Lactic Acid  Trends Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 20,
+      "original_title": "Nickel Mining Market Size, Share & Growth Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share & Growth Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Nickel Mining",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 21,
+      "original_title": "Sol-Gel Processing Market Size, Share, Global Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Sol-Gel Processing",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 22,
+      "original_title": "Chemical Protective Gloves Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Chemical Protective Gloves",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 23,
+      "original_title": "U.S. Customer Relationship Management Market Size Report",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 0.93,
+      "extracted_regions": [
+        "United States"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Customer Relationship Management",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.93,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 24,
+      "original_title": "Underground Mining Equipment Market Size Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 0.93,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Underground Mining Equipment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.93,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 25,
+      "original_title": "Soft Starter Market Size, Share And Growth Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share And Growth Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Soft Starter",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    }
+  ],
+  "v3_results": [
+    {
+      "test_case": 1,
+      "original_title": "PET Foam Market for Structural Composites",
+      "version": "v3",
+      "market_term_type": "market_for",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.35000000000000003,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "PET Foam for Structural Composites",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.35000000000000003,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 2,
+      "original_title": "Middle East & North Africa Diesel Generator Market in Telecom Industry 2027",
+      "version": "v3",
+      "market_term_type": "market_in",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "2027",
+      "date_confidence": 0.6,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.45,
+      "extracted_regions": [
+        "North Africa",
+        "Middle East"
+      ],
+      "geo_confidence": 0.9,
+      "topic": "Diesel Generator in Telecom",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 0.6,
+        "report_type": 0.45,
+        "geographic_extraction": 0.9
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 3,
+      "original_title": "Antiviral Drugs Market Insights, 2016-2024",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2016-2024",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Antiviral Drugs",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 4,
+      "original_title": "Flexographic Inks Market Forecast 2017 - 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2017-2025",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Forecast",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Flexographic Inks",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 5,
+      "original_title": "Europe Baby Drinks (Infant Formula, Baby Juice) Market Forecast 2015 - 2021",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2015-2021",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Forecast",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Baby Drinks (Infant Formula, Baby Juice)",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 6,
+      "original_title": "Digital Signature Market Forecast 2017 - 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2017-2025",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Forecast",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Digital Signature",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 7,
+      "original_title": "Edge AI Accelerator Market Size, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Edge AI Accelerator",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 8,
+      "original_title": "Smart Infrastructure Market Size, Share, Growth Report 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.6,
+      "extracted_report_type": "Market Size Share Growth Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Smart Infrastructure",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 9,
+      "original_title": "U.S. Chiropractic Market Size, Share & Trends Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Trends Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "United States"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Chiropractic",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 10,
+      "original_title": "Dairy Herd Management Market Size & Share Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Dairy Herd Management",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 11,
+      "original_title": "Biological Wastewater Treatment Market Size Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Biological Wastewater Treatment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 12,
+      "original_title": "Ultralight And Light Aircraft Market Size & Share Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market and Size Share Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Ultralight Light Aircraft",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 13,
+      "original_title": "Fiber Cement Rainscreen Panels Market Size, Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Fiber Cement Rainscreen Panels",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 14,
+      "original_title": "Polyethyleneimine Market Size, Share, Global Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Polyethyleneimine, Glo",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 15,
+      "original_title": "Strontium Market Outlook, 2016-2024",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2016-2024",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Outlook",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Strontium",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 16,
+      "original_title": "Viral Clearance Market Size, Share, Global Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Viral Clearance, Glo",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 17,
+      "original_title": "Touchless Sensing Market Size, Share, Global Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Touchless Sensing, Glo",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 18,
+      "original_title": "Data Capture Hardware In Retail Market Size Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Data Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Capture Hardware In Retail",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 19,
+      "original_title": "Lactic Acid Market Size, Share, Growth, Trends Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Growth Trends Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Lactic Acid",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 20,
+      "original_title": "Nickel Mining Market Size, Share & Growth Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Growth Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Nickel Mining",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 21,
+      "original_title": "Sol-Gel Processing Market Size, Share, Global Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Sol-Gel Processing, Glo",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 22,
+      "original_title": "Chemical Protective Gloves Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Chemical Protective Gloves",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 23,
+      "original_title": "U.S. Customer Relationship Management Market Size Report",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "United States"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Customer Relationship Management",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 24,
+      "original_title": "Underground Mining Equipment Market Size Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Underground Mining Equipment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 25,
+      "original_title": "Soft Starter Market Size, Share And Growth Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share and Growth Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Soft Starter",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    }
+  ],
+  "v2_analysis": {
+    "total_cases": 25,
+    "successful_extractions": 25,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "issues_detected": [],
+    "patterns_found": {
+      "market_for": 1,
+      "report_type: Market": 4,
+      "market_in": 1,
+      "report_type: or": 1,
+      "standard": 23,
+      "report_type: Market Forecast": 3,
+      "report_type: Market Size, Industry Report": 2,
+      "report_type: Market Size, Share, Growth Report": 1,
+      "report_type: Market Size, Share & Trends Report": 1,
+      "report_type: Market Size & Share Report": 2,
+      "report_type: Market Size Report": 3,
+      "report_type: Market Size, Share, Global Industry Report": 4,
+      "report_type: Industry Report": 1,
+      "report_type: Market Size, Share, Growth,": 1,
+      "report_type: Market Size, Share & Growth Report": 1,
+      "report_type: Market Size, Share And Growth Report": 1
+    },
+    "version": "v2"
+  },
+  "v3_analysis": {
+    "total_cases": 25,
+    "successful_extractions": 25,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "issues_detected": [],
+    "patterns_found": {
+      "market_for": 1,
+      "report_type: Market": 3,
+      "market_in": 1,
+      "standard": 23,
+      "report_type: Market Insights": 1,
+      "report_type: Market Forecast": 3,
+      "report_type: Market Size Industry Report": 2,
+      "report_type: Market Size Share Growth Report": 2,
+      "report_type: Market Size Share Trends Report": 1,
+      "report_type: Market Size Share Report": 1,
+      "report_type: Market Size Report": 3,
+      "report_type: Market and Size Share Report": 1,
+      "report_type: Market Size Share Industry Report": 4,
+      "report_type: Market Outlook": 1,
+      "report_type: Market Data Size Industry Report": 1,
+      "report_type: Market Size Share Growth Trends Report": 1,
+      "report_type: Market Size Share and Growth Report": 1
+    },
+    "version": "v3"
+  },
+  "test_metadata": {
+    "timestamp": {
+      "pst": "2025-09-02 22:50:16 PDT",
+      "utc": "2025-09-03 05:50:16 UTC",
+      "filename": "20250902_225016"
+    },
+    "test_quantity": 25,
+    "output_directory": "/home/ec2-user/zettit/services/json-parser/outputs/20250902_225016_script03_v2_vs_v3_comparison"
+  }
+}

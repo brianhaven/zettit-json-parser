@@ -1,0 +1,1194 @@
+{
+  "v2_results": [
+    {
+      "test_case": 1,
+      "original_title": "High Purity Quartz Sand Market for UVC Lighting",
+      "version": "v2",
+      "market_term_type": "market_for",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "y",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "High Purity Quartz Sand for UVC Lighting",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 2,
+      "original_title": "Global & U.K. Biomass Boiler Market Insights, 2014-2022",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2014-2022",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Global",
+        "United Kingdom"
+      ],
+      "geo_confidence": 0.9,
+      "topic": "Biomass Boiler Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.9
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 3,
+      "original_title": "IBM Bluemix Services Market Insights, 2018 - 2026",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2026",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "IBM Bluemix Services  Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 4,
+      "original_title": "Wireless Mesh Network Market Forecast Report, 2020 - 2027",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2020-2027",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Forecast Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Wireless Mesh Network",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 5,
+      "original_title": "Europe Direct-to-Consumer Laboratory Testing Market Insights, 2021-2031",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2021-2031",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Direct-to-Consumer Laboratory Testing Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 6,
+      "original_title": "Medical Dynamometer Market Forecast Report, 2018-2026",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2026",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Forecast Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Medical Dynamometer",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 7,
+      "original_title": "Rigid Endoscopes Market Size, Share & Growth Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share & Growth Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Rigid Endoscopes",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 8,
+      "original_title": "Continuous Manufacturing For Small Molecule APIs Market Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Continuous Manufacturing For Small Molecule APIs",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 9,
+      "original_title": "Thailand Legal Cannabis Market Size, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Industry Report",
+      "report_confidence": 0.95,
+      "extracted_regions": [
+        "Thailand"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Legal Cannabis",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.95,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 10,
+      "original_title": "Sucrose Esters Market Size, Share And Growth Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share And Growth Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Sucrose Esters",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 11,
+      "original_title": "Nitrogen Trifluoride And Fluorine Gas Market Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Nitrogen Trifluoride And Fluorine Gas",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 12,
+      "original_title": "Spatial Computing Market Size, Share & Trends Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share & Trends Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Spatial Computing",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 13,
+      "original_title": "Patient Warming Devices Market Outlook, 2016-2024",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2016-2024",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Patient Warming Devices  Outlook",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 14,
+      "original_title": "Global Medical Thermometer Market Size Report, 2020-2027",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2020-2027",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 0.93,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Medical Thermometer",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.93,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 15,
+      "original_title": "Europe Bridal Gown Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Bridal Gown",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 16,
+      "original_title": "Global Cosmetic Skin Care Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Cosmetic Skin Care",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 17,
+      "original_title": "Botanicals Market Size, Share, Global Industry Report, 2019-2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size, Share, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Botanicals",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 18,
+      "original_title": "Touchable Holographic Display Market Size, Industry Report, 2019-2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size, Industry Report",
+      "report_confidence": 0.95,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Touchable Holographic Display",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.95,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 19,
+      "original_title": "Augmented Reality In E-Commerce Market Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.7000000000000001,
+      "topic": "Augmented Reality In E-Commerce",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.7000000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 20,
+      "original_title": "Electric Lunchbox Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Electric Lunchbox",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 21,
+      "original_title": "RF Microneedling Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "RF Microneedling",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 22,
+      "original_title": "Network Attached Storage Market Size & Share, Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size & Share, Industry Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Network Attached Storage",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 23,
+      "original_title": "U.S. Gluten-free Products Market Size, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Industry Report",
+      "report_confidence": 0.95,
+      "extracted_regions": [
+        "United States"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Gluten-free Products",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.95,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 24,
+      "original_title": "Sports Medicine Devices Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Sports Medicine Devices",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 25,
+      "original_title": "Tele-consulting Services Market Size, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Industry Report",
+      "report_confidence": 0.95,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Tele-consulting Services",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.95,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    }
+  ],
+  "v3_results": [
+    {
+      "test_case": 1,
+      "original_title": "High Purity Quartz Sand Market for UVC Lighting",
+      "version": "v3",
+      "market_term_type": "market_for",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.35000000000000003,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "High Purity Quartz Sand Market for UVC Lighting",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.35000000000000003,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 2,
+      "original_title": "Global & U.K. Biomass Boiler Market Insights, 2014-2022",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2014-2022",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global",
+        "United Kingdom"
+      ],
+      "geo_confidence": 0.9,
+      "topic": "Biomass Boiler",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.9
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 3,
+      "original_title": "IBM Bluemix Services Market Insights, 2018 - 2026",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2026",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "IBM Bluemix Services",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 4,
+      "original_title": "Wireless Mesh Network Market Forecast Report, 2020 - 2027",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2020-2027",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Forecast Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Wireless Mesh Network",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 5,
+      "original_title": "Europe Direct-to-Consumer Laboratory Testing Market Insights, 2021-2031",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2021-2031",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Direct-to-Consumer Laboratory Testing",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 6,
+      "original_title": "Medical Dynamometer Market Forecast Report, 2018-2026",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2026",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Forecast Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Medical Dynamometer",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 7,
+      "original_title": "Rigid Endoscopes Market Size, Share & Growth Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Growth Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Rigid Endoscopes",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 8,
+      "original_title": "Continuous Manufacturing For Small Molecule APIs Market Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Continuous Manufacturing For Small Molecule APIs",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 9,
+      "original_title": "Thailand Legal Cannabis Market Size, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Thailand"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Legal Cannabis",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 10,
+      "original_title": "Sucrose Esters Market Size, Share And Growth Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Growth Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Sucrose Esters",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 11,
+      "original_title": "Nitrogen Trifluoride And Fluorine Gas Market Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Nitrogen Trifluoride And Fluorine Gas",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 12,
+      "original_title": "Spatial Computing Market Size, Share & Trends Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Trends Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Spatial Computing",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 13,
+      "original_title": "Patient Warming Devices Market Outlook, 2016-2024",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2016-2024",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Outlook",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Patient Warming Devices",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 14,
+      "original_title": "Global Medical Thermometer Market Size Report, 2020-2027",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2020-2027",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Medical Thermometer",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 15,
+      "original_title": "Europe Bridal Gown Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Bridal Gown",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 16,
+      "original_title": "Global Cosmetic Skin Care Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Cosmetic Skin Care",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 17,
+      "original_title": "Botanicals Market Size, Share, Global Industry Report, 2019-2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Botanicals",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 18,
+      "original_title": "Touchable Holographic Display Market Size, Industry Report, 2019-2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Touchable Holographic Display",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 19,
+      "original_title": "Augmented Reality In E-Commerce Market Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.7000000000000001,
+      "topic": "Augmented Reality In E-Commerce",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.7000000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 20,
+      "original_title": "Electric Lunchbox Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Electric Lunchbox",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 21,
+      "original_title": "RF Microneedling Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "RF Microneedling",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 22,
+      "original_title": "Network Attached Storage Market Size & Share, Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Network Attached Storage",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 23,
+      "original_title": "U.S. Gluten-free Products Market Size, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "United States"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Gluten-free Products",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 24,
+      "original_title": "Sports Medicine Devices Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Sports Medicine Devices",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 25,
+      "original_title": "Tele-consulting Services Market Size, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Tele-consulting Services",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    }
+  ],
+  "v2_analysis": {
+    "total_cases": 25,
+    "successful_extractions": 25,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "issues_detected": [],
+    "patterns_found": {
+      "market_for": 1,
+      "report_type: y": 1,
+      "standard": 24,
+      "report_type: Market": 9,
+      "report_type: Market Forecast Report": 2,
+      "report_type: Market Size, Share & Growth Report": 1,
+      "report_type: Market Report": 3,
+      "report_type: Market Size, Industry Report": 4,
+      "report_type: Market Size, Share And Growth Report": 1,
+      "report_type: Market Size, Share & Trends Report": 1,
+      "report_type: Market Size Report": 1,
+      "report_type: Market Size, Share, Global Industry Report": 1,
+      "report_type: Market Size & Share, Industry Report": 1
+    },
+    "version": "v2"
+  },
+  "v3_analysis": {
+    "total_cases": 25,
+    "successful_extractions": 25,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "issues_detected": [],
+    "patterns_found": {
+      "market_for": 1,
+      "report_type: Market": 6,
+      "standard": 24,
+      "report_type: Market Insights": 3,
+      "report_type: Market Forecast Report": 2,
+      "report_type: Market Size Share Growth Report": 2,
+      "report_type: Market Report": 3,
+      "report_type: Market Size Industry Report": 4,
+      "report_type: Market Size Share Trends Report": 1,
+      "report_type: Market Outlook": 1,
+      "report_type: Market Size Report": 1,
+      "report_type: Market Size Share Industry Report": 2
+    },
+    "version": "v3"
+  },
+  "test_metadata": {
+    "timestamp": {
+      "pst": "2025-09-03 00:45:24 PDT",
+      "utc": "2025-09-03 07:45:24 UTC",
+      "filename": "20250903_004524"
+    },
+    "test_quantity": 25,
+    "output_directory": "/home/ec2-user/zettit/services/json-parser/outputs/20250903_004524_script03_v2_vs_v3_comparison"
+  }
+}

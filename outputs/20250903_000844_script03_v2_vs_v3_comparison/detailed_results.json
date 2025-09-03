@@ -1,0 +1,1187 @@
+{
+  "v2_results": [
+    {
+      "test_case": 1,
+      "original_title": "Digital Signature Market Forecast 2018 - 2026",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2026",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Forecast",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Digital Signature",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 2,
+      "original_title": "High Pulsed Power Market in Well Intervention",
+      "version": "v2",
+      "market_term_type": "market_in",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "High Pulsed Power in Well Intervention",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 3,
+      "original_title": "Stretch Marks Treatment Market Insights, 2017-2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2017-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Stretch Marks Treatment  Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 4,
+      "original_title": "Antiviral Drugs Market Insights, 2016-2024",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2016-2024",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Antiviral Drugs  Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 5,
+      "original_title": "Food Safety Testing Market Insights,2020-2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2020-2030",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Food Safety Testing  Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 6,
+      "original_title": "Serum-free Media Market Insights, 2021-2031",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2021-2031",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Serum-free Media  Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 7,
+      "original_title": "Cargo Shipping Market Size, Share, Global Industry Report, 2019-2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size, Share, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Cargo Shipping",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 8,
+      "original_title": "Smart Water Meters Market Size, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Industry Report",
+      "report_confidence": 0.95,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Smart Water Meters",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.95,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 9,
+      "original_title": "Uveitis Treatment Market Size, Share, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share, Industry Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Uveitis Treatment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 10,
+      "original_title": "Gamma Oryzanol Market Size, Share, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share, Industry Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Gamma Oryzanol",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 11,
+      "original_title": "North America Human Capital Management Market, Report 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.92,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "North America"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Human Capital Management",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.92,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 12,
+      "original_title": "Europe In Vitro Fertilization Market, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market, Industry Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "In Vitro Fertilization",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 13,
+      "original_title": "Ethylene Butyl Acrylate Market Size, Global Industry Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Global Industry Report",
+      "report_confidence": 0.85,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Ethylene Butyl Acrylate",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.85,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 14,
+      "original_title": "Reinsurance Market Share, Insights 2018 - 2026",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2026",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Share, Insights",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Reinsurance",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 15,
+      "original_title": "Bio-based Emulsion Polymers Market Size, Share, Industry Report 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.6,
+      "extracted_report_type": "Market Size, Share, Industry Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Bio-based Emulsion Polymers",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 16,
+      "original_title": "Global Allantoin Market Size, Share, Trend Report 2012-2022",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2012-2022",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Size, Share, Trend Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Allantoin",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 17,
+      "original_title": "Islamic Clothing Market Size, Share & Trends Report, 2025",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size, Share & Trends Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Islamic Clothing",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 18,
+      "original_title": "Global Conductive Ink Market Size & Share Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size & Share Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Conductive Ink",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 19,
+      "original_title": "Maternity Wear Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Maternity Wear",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 20,
+      "original_title": "Geothermal Heat Pumps Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Geothermal Heat Pumps",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 21,
+      "original_title": "Position and Proximity Sensors Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Position and Proximity Sensors",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 22,
+      "original_title": "Solar Cable Market Size And Share, Industry Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size And Share, Industry Report",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Solar Cable",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 23,
+      "original_title": "Guillain-Barre Syndrome Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Guillain-Barre Syndrome",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 24,
+      "original_title": "Immune Health Supplements Market Size Report, 2030",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 0.93,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Immune Health Supplements",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.93,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 25,
+      "original_title": "Handheld Drug Detector Market",
+      "version": "v2",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Handheld Drug Detector",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    }
+  ],
+  "v3_results": [
+    {
+      "test_case": 1,
+      "original_title": "Digital Signature Market Forecast 2018 - 2026",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2026",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Forecast Forecast",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Digital Signature Market Forecast",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 2,
+      "original_title": "High Pulsed Power Market in Well Intervention",
+      "version": "v3",
+      "market_term_type": "market_in",
+      "market_confidence": 0.95,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.35000000000000003,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "High Pulsed Power in Well Intervention",
+      "confidence_scores": {
+        "market_classification": 0.95,
+        "date_extraction": 1.0,
+        "report_type": 0.35000000000000003,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 3,
+      "original_title": "Stretch Marks Treatment Market Insights, 2017-2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2017-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Stretch Marks Treatment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 4,
+      "original_title": "Antiviral Drugs Market Insights, 2016-2024",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2016-2024",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Antiviral Drugs",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 5,
+      "original_title": "Food Safety Testing Market Insights,2020-2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2020-2030",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Food Safety Testing",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 6,
+      "original_title": "Serum-free Media Market Insights, 2021-2031",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2021-2031",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Serum-free Media",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 7,
+      "original_title": "Cargo Shipping Market Size, Share, Global Industry Report, 2019-2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Cargo Shipping Market Size, Share Industry Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 8,
+      "original_title": "Smart Water Meters Market Size, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Smart Water Meters Market Size, Industry Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 9,
+      "original_title": "Uveitis Treatment Market Size, Share, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Uveitis Treatment Market Size, Share, Industry Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 10,
+      "original_title": "Gamma Oryzanol Market Size, Share, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Gamma Oryzanol Market Size, Share, Industry Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 11,
+      "original_title": "North America Human Capital Management Market, Report 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.92,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [
+        "North America"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Human Capital Management",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.92,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 12,
+      "original_title": "Europe In Vitro Fertilization Market, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Europe"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "In Vitro Fertilization Market, Industry Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 13,
+      "original_title": "Ethylene Butyl Acrylate Market Size, Global Industry Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Ethylene Butyl Acrylate Market Size Industry Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 14,
+      "original_title": "Reinsurance Market Share, Insights 2018 - 2026",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2018-2026",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Share Insights",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Reinsurance Market Share, Insights",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 15,
+      "original_title": "Bio-based Emulsion Polymers Market Size, Share, Industry Report 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.6,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Bio-based Emulsion Polymers Market Size, Share, Industry Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 16,
+      "original_title": "Global Allantoin Market Size, Share, Trend Report 2012-2022",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2012-2022",
+      "date_confidence": 0.9,
+      "extracted_report_type": "Market Size Share Trend Trend Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Allantoin Market Size, Share, Trend Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.9,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 17,
+      "original_title": "Islamic Clothing Market Size, Share & Trends Report, 2025",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2025",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Trends Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Islamic Clothing Market Size, Share & Trends Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 18,
+      "original_title": "Global Conductive Ink Market Size & Share Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [
+        "Global"
+      ],
+      "geo_confidence": 0.8500000000000001,
+      "topic": "Conductive Ink Market Size Share Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 19,
+      "original_title": "Maternity Wear Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Maternity Wear",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 20,
+      "original_title": "Geothermal Heat Pumps Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Geothermal Heat Pumps",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 21,
+      "original_title": "Position and Proximity Sensors Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Position and Proximity Sensors",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 22,
+      "original_title": "Solar Cable Market Size And Share, Industry Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Share Industry Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Solar Cable Market Size And Share, Industry Report",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 23,
+      "original_title": "Guillain-Barre Syndrome Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Guillain-Barre Syndrome",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 24,
+      "original_title": "Immune Health Supplements Market Size Report, 2030",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Size Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Immune Health Supplements",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    },
+    {
+      "test_case": 25,
+      "original_title": "Handheld Drug Detector Market",
+      "version": "v3",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_forecast_date_range": "",
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.9500000000000001,
+      "extracted_regions": [],
+      "geo_confidence": 0.8,
+      "topic": "Handheld Drug Detector",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.9500000000000001,
+        "geographic_extraction": 0.8
+      },
+      "success": true,
+      "error": null
+    }
+  ],
+  "v2_analysis": {
+    "total_cases": 25,
+    "successful_extractions": 25,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "issues_detected": [],
+    "patterns_found": {
+      "standard": 24,
+      "report_type: Market Forecast": 1,
+      "market_in": 1,
+      "report_type: Market": 11,
+      "report_type: Market Size, Share, Global Industry Report": 1,
+      "report_type: Market Size, Industry Report": 1,
+      "report_type: Market Size, Share, Industry Report": 3,
+      "report_type: Market, Industry Report": 1,
+      "report_type: Market Size, Global Industry Report": 1,
+      "report_type: Market Share, Insights": 1,
+      "report_type: Market Size, Share, Trend Report": 1,
+      "report_type: Market Size, Share & Trends Report": 1,
+      "report_type: Market Size & Share Report": 1,
+      "report_type: Market Size And Share, Industry Report": 1,
+      "report_type: Market Size Report": 1
+    },
+    "version": "v2"
+  },
+  "v3_analysis": {
+    "total_cases": 25,
+    "successful_extractions": 25,
+    "failed_extractions": 0,
+    "success_rate": 100.0,
+    "issues_detected": [],
+    "patterns_found": {
+      "standard": 24,
+      "report_type: Market Forecast Forecast": 1,
+      "market_in": 1,
+      "report_type: Market": 7,
+      "report_type: Market Insights": 4,
+      "report_type: Market Size Share Industry Report": 5,
+      "report_type: Market Size Industry Report": 2,
+      "report_type: Market Industry Report": 1,
+      "report_type: Market Share Insights": 1,
+      "report_type: Market Size Share Trend Trend Report": 1,
+      "report_type: Market Size Share Trends Report": 1,
+      "report_type: Market Size Share Report": 1,
+      "report_type: Market Size Report": 1
+    },
+    "version": "v3"
+  },
+  "test_metadata": {
+    "timestamp": {
+      "pst": "2025-09-03 00:08:44 PDT",
+      "utc": "2025-09-03 07:08:44 UTC",
+      "filename": "20250903_000844"
+    },
+    "test_quantity": 25,
+    "output_directory": "/home/ec2-user/zettit/services/json-parser/outputs/20250903_000844_script03_v2_vs_v3_comparison"
+  }
+}
