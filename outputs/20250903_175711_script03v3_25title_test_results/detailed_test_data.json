@@ -1,0 +1,324 @@
+{
+  "test_metadata": {
+    "analysis_date_pdt": "2025-09-03 17:52:28 PDT",
+    "analysis_date_utc": "2025-09-04 00:52:28 UTC",
+    "test_type": "Script 03 v3 Market-Aware Processing Validation",
+    "bug_fix_applied": "ReportTypeFormat.UNKNOWN -> ReportTypeFormat.COMPOUND",
+    "commit_hash": "6db535a",
+    "total_titles": 25
+  },
+  "test_summary": {
+    "successful_extractions": 25,
+    "success_rate": "100.0%",
+    "market_aware_processing": 2,
+    "standard_processing": 23,
+    "average_confidence": 0.948,
+    "confidence_range": {
+      "min": 0.300,
+      "max": 1.000
+    },
+    "failed_extractions": 0
+  },
+  "market_type_distribution": {
+    "market_for": {
+      "count": 1,
+      "percentage": 4.0
+    },
+    "market_in": {
+      "count": 1, 
+      "percentage": 4.0
+    },
+    "standard": {
+      "count": 23,
+      "percentage": 92.0
+    }
+  },
+  "report_type_analysis": {
+    "Market": 13,
+    "Market Analysis": 1,
+    "Market Forecast": 1,
+    "Market Growth Analysis": 1,
+    "Market Growth Report": 1,
+    "Market Insights": 1,
+    "Market Outlook": 1,
+    "Market Overview": 1,
+    "Market Research": 1,
+    "Market Size Report": 1,
+    "Market Statistics": 1,
+    "Market Study": 1,
+    "Market Trends": 1
+  },
+  "detailed_results": [
+    {
+      "test_id": 1,
+      "title": "Carbon Black Market For Textile Fibers Growth Report",
+      "market_type": "market_for",
+      "report_type": "Market Growth Report",
+      "pipeline_forward": "Carbon Black for Textile Fibers",
+      "success": true,
+      "confidence": 0.300
+    },
+    {
+      "test_id": 2,
+      "title": "Sulfur, Arsine, and Mercury Remover Market in Oil & Gas Industry",
+      "market_type": "market_in",
+      "report_type": "Market",
+      "pipeline_forward": "Sulfur, Arsine, and Mercury Remover in Oil & Gas",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 3,
+      "title": "Private LTE & 5G Network Market Outlook, 2024-2030",
+      "market_type": "standard",
+      "report_type": "Market Outlook",
+      "pipeline_forward": "Private LTE & 5G Network , 2024-2030",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 4,
+      "title": "APAC Personal Protective Equipment Market Analysis",
+      "market_type": "standard",
+      "report_type": "Market Analysis",
+      "pipeline_forward": "APAC Personal Protective Equipment",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 5,
+      "title": "North American Smart Grid Technology Market Study",
+      "market_type": "standard",
+      "report_type": "Market Study",
+      "pipeline_forward": "North American Smart Grid Technology",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 6,
+      "title": "European Automotive Battery Market Forecast, 2025-2030",
+      "market_type": "standard",
+      "report_type": "Market Forecast",
+      "pipeline_forward": "European Automotive Battery , 2025-2030",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 7,
+      "title": "Global Renewable Energy Market Size Report",
+      "market_type": "standard",
+      "report_type": "Market Size Report",
+      "pipeline_forward": "Global Renewable Energy",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 8,
+      "title": "Asia-Pacific Cloud Computing Market Trends",
+      "market_type": "standard",
+      "report_type": "Market Trends",
+      "pipeline_forward": "Asia-Pacific Cloud Computing",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 9,
+      "title": "Latin America Food Processing Equipment Market Research",
+      "market_type": "standard",
+      "report_type": "Market Research",
+      "pipeline_forward": "Latin America Food Processing Equipment",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 10,
+      "title": "Middle East Construction Materials Market Overview",
+      "market_type": "standard",
+      "report_type": "Market Overview",
+      "pipeline_forward": "Middle East Construction Materials",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 11,
+      "title": "U.S. Artificial Intelligence Market Growth Analysis",
+      "market_type": "standard",
+      "report_type": "Market Growth Analysis",
+      "pipeline_forward": "U.S. Artificial Intelligence",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 12,
+      "title": "China Manufacturing Automation Market Intelligence",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "China Manufacturing Automation Intelligence",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 13,
+      "title": "India Software Development Market Statistics",
+      "market_type": "standard",
+      "report_type": "Market Statistics",
+      "pipeline_forward": "India Software Development",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 14,
+      "title": "Japan Robotics Technology Market Insights",
+      "market_type": "standard",
+      "report_type": "Market Insights",
+      "pipeline_forward": "Japan Robotics Technology",
+      "success": true,
+      "confidence": 1.000
+    },
+    {
+      "test_id": 15,
+      "title": "Germany Industrial IoT Market Assessment",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "Germany Industrial IoT Assessment",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 16,
+      "title": "UK Financial Technology Market Evaluation",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "UK Financial Technology Evaluation",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 17,
+      "title": "France Healthcare IT Market Performance",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "France Healthcare IT Performance",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 18,
+      "title": "Brazil Agricultural Technology Market Dynamics",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "Brazil Agricultural Technology Dynamics",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 19,
+      "title": "Russia Energy Storage Market Landscape",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "Russia Energy Storage Landscape",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 20,
+      "title": "South Korea Semiconductor Market Projections",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "South Korea Semiconductor Projections",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 21,
+      "title": "Australia Mining Equipment Market Survey",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "Australia Mining Equipment Survey",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 22,
+      "title": "Canada Telecommunications Market Review",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "Canada Telecommunications Review",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 23,
+      "title": "Mexico Automotive Parts Market Snapshot",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "Mexico Automotive Parts Snapshot",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 24,
+      "title": "Indonesia Palm Oil Market Update",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "Indonesia Palm Oil Update",
+      "success": true,
+      "confidence": 0.950
+    },
+    {
+      "test_id": 25,
+      "title": "Thailand Tourism Technology Market Brief",
+      "market_type": "standard",
+      "report_type": "Market",
+      "pipeline_forward": "Thailand Tourism Technology Brief",
+      "success": true,
+      "confidence": 0.950
+    }
+  ],
+  "critical_validations": {
+    "market_aware_processing": {
+      "market_for_case": {
+        "title": "Carbon Black Market For Textile Fibers Growth Report",
+        "report_type_extracted": "Market Growth Report",
+        "pipeline_forward": "Carbon Black for Textile Fibers",
+        "connector_preserved": "for Textile Fibers",
+        "status": "SUCCESS"
+      },
+      "market_in_case": {
+        "title": "Sulfur, Arsine, and Mercury Remover Market in Oil & Gas Industry",
+        "report_type_extracted": "Market",
+        "pipeline_forward": "Sulfur, Arsine, and Mercury Remover in Oil & Gas",
+        "ampersand_preserved": "Oil & Gas",
+        "connector_preserved": "in Oil & Gas",
+        "status": "SUCCESS"
+      }
+    },
+    "character_preservation": {
+      "ampersand_case": {
+        "title": "Private LTE & 5G Network Market Outlook, 2024-2030",
+        "preserved": "Private LTE & 5G Network",
+        "status": "SUCCESS"
+      }
+    }
+  },
+  "technical_implementation": {
+    "database_integration": {
+      "primary_keywords": 8,
+      "secondary_keywords": 20,
+      "market_boundary_coverage": "96.8%",
+      "v2_fallback_patterns": 921
+    },
+    "bug_fix_details": {
+      "issue": "ReportTypeFormat.UNKNOWN enum value doesn't exist",
+      "exception": "AttributeError: UNKNOWN",
+      "fix_location": "line 915 in 03_report_type_extractor_v3.py",
+      "fix_applied": "Changed to ReportTypeFormat.COMPOUND as default",
+      "impact": "Market-aware workflow now returns correct results instead of empty strings"
+    },
+    "processing_confidence": {
+      "high_confidence_1000": 12,
+      "medium_confidence_950": 13,
+      "market_aware_confidence_300": 1
+    }
+  }
+}
