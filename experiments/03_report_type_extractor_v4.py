@@ -366,9 +366,9 @@ class PureDictionaryReportTypeExtractor:
             if keyword != self.market_primary_keyword and i > market_position:
                 report_type_parts.append(keyword)
         
-        # If no Market boundary, include all keywords
+        # If no Market boundary, include all keywords EXCEPT Market
         if not dictionary_result.market_boundary_detected:
-            report_type_parts = [keyword for keyword, pos in dictionary_result.sequence]
+            report_type_parts = [keyword for keyword, pos in dictionary_result.sequence if keyword != "Market"]
         
         # ISSUE #21 FIX: Enhanced reconstruction with proper separator handling
         if len(report_type_parts) == 1:
@@ -612,10 +612,13 @@ class PureDictionaryReportTypeExtractor:
         if not dictionary_result.keywords_found:
             return ""
         
-        # Get all keywords in sequence order
+        # Get all keywords in sequence order, EXCLUDING Market
         report_type_parts = []
         for keyword, position in dictionary_result.sequence:
-            report_type_parts.append(keyword)
+            # Issue #21 fix - exclude "Market" keyword from reconstruction
+            # This will be added back in _reconstruct_report_type_with_market
+            if keyword != "Market":
+                report_type_parts.append(keyword)
         
         # ISSUE #21 FIX: Enhanced separator selection and reconstruction
         if len(report_type_parts) == 1:
