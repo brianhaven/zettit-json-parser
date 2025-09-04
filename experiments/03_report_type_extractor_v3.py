@@ -30,7 +30,7 @@ import sys
 import logging
 import re
 from datetime import datetime
-from typing import Dict, List, Optional, Tuple, Set, Union
+from typing import Dict, List, Optional, Tuple, Set, Union, Any
 from dataclasses import dataclass, field
 from enum import Enum
 import pytz
@@ -764,119 +764,286 @@ class DictionaryBasedReportTypeExtractor:
         
         return ' '.join(significant_words)
     
-    def extract_market_term_workflow(self, title: str, market_term_type: str) -> Tuple[str, Optional[str], Optional[str]]:
+    def extract_market_term_workflow(self, title: str, market_term_type: str) -> Tuple[str, str, str]:
         """
-        TASK 3v3.10: Extract market term using DATABASE patterns (not hardcoded).
+        TASK 3v3.20: Implement correct 7-step market-aware processing workflow from v2.
         
-        Script 01 already classified the title as market_for/market_in/market_by/standard.
-        This method uses that classification to extract the market term for report type detection
-        using the SAME patterns from the database that Script 01 used.
+        This implements the proven logic from v2 that correctly handles market term extraction,
+        rearrangement, and reconstruction for proper topic preservation.
         
-        Returns: (remaining_title, market_prefix, market_context)
+        Returns: (extracted_market_term, remaining_title, pipeline_forward_text)
         """
-        market_prefix = None
-        market_context = None
-        remaining_title = title
-        
-        logger.debug(f"Market term extraction input: title='{title}', type='{market_term_type}'")
+        logger.debug(f"Market-aware workflow input: title='{title}', type='{market_term_type}'")
         
         # Standard titles don't need market term extraction
         if market_term_type == "standard":
-            return remaining_title, market_prefix, market_context
+            return "", title, title
         
-        # Load the actual pattern from database that Script 01 used for classification
-        if market_term_type in ["market_for", "market_in", "market_by"]:
-            try:
-                # Access database directly since PatternLibraryManager expects PatternType enum
-                # Convert market_term_type back to database format
-                # "market_for" -> "Market for", "market_in" -> "Market in", etc.
-                # Only capitalize the first word ("Market"), keep others lowercase
-                parts = market_term_type.split('_')
-                database_term = parts[0].capitalize() + ' ' + parts[1] if len(parts) > 1 else parts[0].capitalize()
-                
-                collection = self.pattern_library_manager.collection
-                query = {
-                    "type": "market_term",
-                    "term": database_term,
-                    "active": True
-                }
-                market_patterns = list(collection.find(query))
-                logger.debug(f"Searching for database term: '{database_term}' (from {market_term_type})")
-                logger.debug(f"Query: {query}")
-                logger.debug(f"Found {len(market_patterns)} matching patterns")
-                
-                if not market_patterns:
-                    logger.warning(f"No pattern found in database for market type '{market_term_type}'")
-                    # Try simplified extraction based on type
-                    return self._fallback_market_extraction(title, market_term_type)
-                
-                # Use the database pattern for detection and create extraction logic
-                pattern_data = market_patterns[0]
-                pattern_regex = pattern_data.get('pattern', '')
-                
-                if not pattern_regex:
-                    logger.warning(f"Pattern missing regex for market type '{market_term_type}'")
-                    return self._fallback_market_extraction(title, market_term_type)
-                
-                # Clean double escaping from MongoDB storage
-                clean_pattern = pattern_regex.replace('\\\\', '\\')
-                
-                # Apply the database pattern for boundary detection
-                match = re.search(clean_pattern, title, re.IGNORECASE)
-                if match:
-                    market_prefix = "Market"
-                    
-                    # The database patterns are simple boundaries (\bmarket\s+for\b)
-                    # We need to extract what comes after the market term
-                    matched_text = match.group(0)  # e.g., "Market for"
-                    
-                    # Find the position after the match
-                    match_end = match.end()
-                    
-                    # Extract everything after the market term until comma or end
-                    remaining_part = title[match_end:].strip()
-                    
-                    # Look for the entity between the market term and report type words or comma
-                    # Stop at common report type indicators
-                    report_indicators = r'(Analysis|Report|Study|Forecast|Outlook|Trends|Market|Size|Share|Growth|Industry)'
-                    entity_pattern = rf'^(.*?)(?:\s+{report_indicators}|\s*,|$)'
-                    entity_match = re.search(entity_pattern, remaining_part, re.IGNORECASE)
-                    if entity_match:
-                        entity = entity_match.group(1).strip()
-                        
-                        # Get connector word from market type
-                        connector = market_term_type.split('_')[1]  # 'for', 'in', 'by'
-                        market_context = f"{connector} {entity}" if entity else connector
-                        
-                        # Remove the entire market term phrase from title
-                        # Find the full phrase including the entity
-                        full_phrase_pattern = rf'\b{re.escape(matched_text)}\s+{re.escape(entity)}(?:\s*,|\s|$)'
-                        remaining_title = re.sub(full_phrase_pattern, '', title, count=1, flags=re.IGNORECASE).strip()
-                        
-                        # Clean up any leftover punctuation
-                        remaining_title = re.sub(r'^[,\s\-–—]+|[,\s\-–—]+$', '', remaining_title).strip()
-                        remaining_title = re.sub(r'\s+', ' ', remaining_title)
-                        
-                        logger.debug(f"{market_term_type} extraction: matched='{matched_text}', entity='{entity}', context='{market_context}', remaining='{remaining_title}'")
-                        
-                        return remaining_title, market_prefix, market_context
-                    else:
-                        # No entity found after market term
-                        logger.warning(f"No entity found after {market_term_type} in: {title}")
-                        return self._fallback_market_extraction(title, market_term_type)
-                else:
-                    # Pattern didn't match - use fallback
-                    logger.debug(f"Database pattern didn't match for '{market_term_type}', using fallback")
-                    return self._fallback_market_extraction(title, market_term_type)
-                    
-            except Exception as e:
-                logger.error(f"Error loading market term pattern: {e}")
-                return self._fallback_market_extraction(title, market_term_type)
+        # Step 1: Extract market term from title (from v2 logic)
+        market_term, remaining_title, pipeline_forward = self._extract_market_term_from_title_v3(title, market_term_type)
         
-        logger.debug(f"Market term extraction final: prefix='{market_prefix}', context='{market_context}', remaining='{remaining_title}'")
-        return remaining_title, market_prefix, market_context
+        if not market_term:
+            # Couldn't extract market term, return original title
+            logger.warning(f"Could not extract market term from '{title}' with type '{market_term_type}'")
+            return "", title, title
+        
+        logger.debug(f"Extracted market term: '{market_term}' from '{title}'")
+        logger.debug(f"Remaining title: '{remaining_title}'")
+        logger.debug(f"Pipeline forward: '{pipeline_forward}'")
+        
+        return market_term, remaining_title, pipeline_forward
     
-    def _fallback_market_extraction(self, title: str, market_term_type: str) -> Tuple[str, Optional[str], Optional[str]]:
+    def _extract_market_term_from_title_v3(self, title: str, market_type: str) -> Tuple[str, str, str]:
+        """
+        Extract the market term from the title based on market type (adapted from v2).
+        
+        Args:
+            title: Original title with market term
+            market_type: Type of market term (market_for, market_in, market_by)
+            
+        Returns:
+            (extracted_market_term, remaining_title, pipeline_forward_text)
+        """
+        # Convert market_type back to phrase: "market_for" -> "Market for"
+        market_phrase = market_type.replace('_', ' ').title()
+        
+        # Find the market term in the title, but stop at report type keywords
+        # FIXED: Stop at report type keywords to avoid over-extraction
+        report_keywords = r'(?:Analysis|Report|Study|Forecast|Outlook|Trends|Market|Size|Share|Growth|Industry)'
+        pattern = rf'\b{re.escape(market_phrase)}\s+([^,]*?)(?=\s+{report_keywords}|,|$)'
+        match = re.search(pattern, title, re.IGNORECASE)
+        
+        if match:
+            # Extract the market term phrase (e.g., "Market in Oil & Gas")
+            full_market_term = match.group(0).rstrip(',\-–— ')
+            market_context = match.group(1).strip()  # e.g., "Oil & Gas"
+            
+            # Get the remaining text: prefix + report type keywords that follow
+            prefix_part = title[:match.start()].strip()
+            after_market_part = title[match.end():].strip()
+            
+            # Combine prefix and the report keywords part for remaining title
+            if prefix_part and after_market_part:
+                remaining_title = f"{prefix_part} {after_market_part}"
+            elif prefix_part:
+                remaining_title = prefix_part
+            elif after_market_part:
+                remaining_title = after_market_part
+            else:
+                remaining_title = ""
+            
+            remaining_title = remaining_title.strip(' ,\-–—')
+            
+            # Create pipeline forward text (topic/region stays with market context)
+            # e.g., "AI in Oil & Gas" or "Carbon Black for Textile Fibers"
+            if prefix_part:
+                connector_word = market_phrase.split()[-1].lower()  # "for", "in", "by"
+                pipeline_forward = f"{prefix_part} {connector_word} {market_context}"
+            else:
+                pipeline_forward = market_context
+            
+            return full_market_term, remaining_title, pipeline_forward
+        
+        # If no clear pattern match, return title as-is
+        return "", title, title
+    
+    def _process_market_aware_workflow_v3(self, title: str, market_type: str) -> Dict[str, Any]:
+        """
+        Process market term titles using extraction→rearrangement→reconstruction workflow.
+        Adapted from v2 with v3 dictionary integration.
+        
+        Args:
+            title: Title to process (dates already removed)
+            market_type: Type of market term (market_for, market_in, market_by)
+            
+        Returns:
+            Processing results dictionary
+        """
+        # Step 1: Extract market term from title
+        market_term, remaining_title, pipeline_forward = self.extract_market_term_workflow(title, market_type)
+        
+        if not market_term:
+            # Couldn't extract market term, fall back to standard processing
+            logger.warning(f"Could not extract market term from '{title}' with type '{market_type}'")
+            return self._process_standard_workflow_v3(title)
+        
+        logger.debug(f"Extracted market term: '{market_term}' from '{title}'")
+        logger.debug(f"Remaining title: '{remaining_title}'")
+        logger.debug(f"Pipeline forward: '{pipeline_forward}'")
+        
+        # Step 2: First pass - search for non-Market report patterns in remaining text
+        logger.debug(f"First pass: searching for patterns in '{remaining_title}'")
+        result = self._search_report_patterns_without_market_v3(remaining_title)
+        
+        # Step 3: Check if first pass found any patterns
+        if result.get('extracted_report_type'):
+            # Found patterns - reconstruct with market term
+            logger.debug(f"First pass SUCCESS: found pattern '{result.get('extracted_report_type')}'")
+            final_type = self._reconstruct_report_type_with_market_v3(
+                result.get('extracted_report_type'), 
+                market_term
+            )
+        else:
+            # Step 4: No patterns found - fallback to two-pass approach
+            logger.debug(f"First pass failed - no patterns in '{remaining_title}', trying fallback")
+            
+            # Fallback: append extracted "Market" to end of remaining text  
+            fallback_text = f"{remaining_title} Market".strip()
+            logger.debug(f"Fallback text: '{fallback_text}'")
+            
+            # Second pass: run standard extraction on fallback text
+            fallback_result = self._process_standard_workflow_v3(fallback_text)
+            
+            if fallback_result.get('extracted_report_type'):
+                logger.debug(f"Second pass SUCCESS: found '{fallback_result.get('extracted_report_type')}'")
+                result = fallback_result
+                final_type = fallback_result.get('extracted_report_type')
+            else:
+                logger.debug("Second pass also failed - no report type found")
+                final_type = None
+        
+        # Update statistics
+        if not hasattr(self, 'extraction_stats'):
+            self.extraction_stats = {}
+        self.extraction_stats['market_aware_workflow'] = self.extraction_stats.get('market_aware_workflow', 0) + 1
+        if final_type:
+            self.extraction_stats['market_reconstructed_count'] = self.extraction_stats.get('market_reconstructed_count', 0) + 1
+        
+        return {
+            'extracted_report_type': final_type,  # Return the reconstructed final type
+            'final_report_type': final_type,
+            'format_type': result.get('format_type', ReportTypeFormat.COMPOUND),
+            'confidence': result.get('confidence', 0.9 if final_type else 0.0),
+            'matched_pattern': result.get('matched_pattern'),
+            'raw_match': result.get('raw_match'),
+            'processing_workflow': 'market_aware',
+            'extracted_market_term': market_term,
+            'pipeline_forward_text': pipeline_forward,
+            'notes': f"Market-aware processing: {result.get('notes', '')}"
+        }
+    
+    def _process_standard_workflow_v3(self, title: str) -> Dict[str, Any]:
+        """
+        Process standard titles using dictionary-based detection with v2 fallback.
+        """
+        # Dictionary-based keyword detection
+        dictionary_result = self.detect_keywords_in_title(title)
+        
+        # Edge case detection and acronym processing
+        edge_case_processing_result = self._process_edge_cases_and_acronyms(
+            title, dictionary_result, "standard"
+        )
+        
+        # Report type reconstruction from keywords
+        reconstructed_type = None
+        if dictionary_result.confidence > 0.3:  # Confidence threshold
+            self.stats['dictionary_hits'] += 1
+            reconstructed_type = self.reconstruct_report_type_from_keywords(dictionary_result, title)
+            
+            # Apply acronym processing if detected
+            if edge_case_processing_result.get('acronym_processing_applied'):
+                reconstructed_type = self._apply_acronym_processing(
+                    reconstructed_type, edge_case_processing_result
+                )
+        
+        # Fallback to v2 patterns if dictionary approach fails
+        if not reconstructed_type:
+            logger.debug("Dictionary approach insufficient, falling back to v2 patterns")
+            reconstructed_type = self.v2_pattern_fallback(title, "standard")
+        
+        return {
+            'extracted_report_type': reconstructed_type,
+            'final_report_type': reconstructed_type,
+            'format_type': self._determine_format_type(
+                reconstructed_type, dictionary_result, edge_case_processing_result
+            ),
+            'confidence': self._calculate_final_confidence(
+                dictionary_result, reconstructed_type, "standard", edge_case_processing_result
+            ),
+            'processing_workflow': 'standard'
+        }
+    
+    def _search_report_patterns_without_market_v3(self, title: str) -> Dict[str, Any]:
+        """
+        Search for report type patterns in text WITHOUT requiring "Market" keyword.
+        This is the key to the v2 market-aware workflow.
+        """
+        # Use dictionary detection but exclude "Market" from reconstruction
+        dictionary_result = self.detect_keywords_in_title(title)
+        
+        if dictionary_result.confidence > 0.3:
+            # Reconstruct without market boundary constraint
+            reconstructed = self._reconstruct_without_market_boundary(dictionary_result, title)
+            
+            return {
+                'extracted_report_type': reconstructed,
+                'confidence': dictionary_result.confidence,
+                'format_type': ReportTypeFormat.COMPOUND,
+                'notes': f"Found {len(dictionary_result.keywords_found)} keywords without Market"
+            }
+        
+        # Fallback to v2 pattern matching
+        fallback_result = self.v2_pattern_fallback(title, "standard")
+        if fallback_result:
+            return {
+                'extracted_report_type': fallback_result,
+                'confidence': 0.8,
+                'format_type': ReportTypeFormat.COMPOUND,
+                'notes': "Found via v2 pattern fallback"
+            }
+        
+        return {}
+    
+    def _reconstruct_without_market_boundary(self, dictionary_result: DictionaryKeywordResult, title: str) -> str:
+        """
+        Reconstruct report type from keywords WITHOUT requiring Market boundary.
+        """
+        if not dictionary_result.keywords_found:
+            return ""
+        
+        # Get all keywords in sequence order
+        report_type_parts = []
+        for keyword, position in dictionary_result.sequence:
+            report_type_parts.append(keyword)
+        
+        # Select optimal separator
+        primary_separator = self._select_optimal_separator(dictionary_result, title)
+        
+        # Reconstruct
+        reconstructed = primary_separator.join(report_type_parts)
+        
+        # Clean up
+        reconstructed = self._clean_reconstructed_type(reconstructed, dictionary_result)
+        
+        logger.debug(f"Reconstructed without Market boundary: '{reconstructed}' from keywords: {dictionary_result.keywords_found}")
+        return reconstructed
+    
+    def _reconstruct_report_type_with_market_v3(self, extracted_type: str, market_term: str) -> str:
+        """
+        Reconstruct the final report type with proper market term positioning.
+        Adapted from v2 logic.
+        
+        Args:
+            extracted_type: The extracted report type pattern
+            market_term: The original market term (e.g., "Market in Automotive")
+            
+        Returns:
+            Reconstructed report type with market term
+        """
+        if not extracted_type:
+            # If no pattern found, extract just "Market" from market term
+            if market_term and market_term.lower().startswith('market'):
+                return "Market"
+            return None
+        
+        # If extracted type already contains "Market", return as-is
+        if 'market' in extracted_type.lower():
+            return extracted_type
+        
+        # Otherwise, prepend "Market" to the extracted type
+        return f"Market {extracted_type}"
+    
+    def _fallback_market_extraction(self, title: str, market_term_type: str) -> Tuple[str, str, str]:
         """
         Fallback extraction when database patterns are unavailable.
         Uses simple regex based on market term type.
@@ -958,79 +1125,78 @@ class DictionaryBasedReportTypeExtractor:
         logger.debug(f"Processing title: '{title}' (type: {market_term_type})")
         
         try:
-            # Step 1: Market term extraction and preprocessing (preserved from v2)
-            working_title = title
+            # Initialize common variables
             market_prefix = None
             market_context = None
+            edge_case_processing_result = {}
+            dictionary_result = None
             
+            # Step 1: Market-aware workflow (following v2 proven logic)
             if market_term_type != "standard":
-                working_title, market_prefix, market_context = self.extract_market_term_workflow(title, market_term_type)
-            
-            # Step 2: Dictionary-based keyword detection (NEW v3 approach)
-            dictionary_result = self.detect_keywords_in_title(working_title)
-            
-            # Step 3: TASK 3v3.9 - Enhanced edge case detection and acronym processing
-            edge_case_processing_result = self._process_edge_cases_and_acronyms(
-                working_title, dictionary_result, market_term_type
-            )
-            
-            # Step 4: Report type reconstruction from keywords (enhanced with edge cases)
-            reconstructed_type = None
-            if dictionary_result.confidence > 0.3:  # Confidence threshold
-                self.stats['dictionary_hits'] += 1
-                reconstructed_type = self.reconstruct_report_type_from_keywords(dictionary_result, working_title)
+                # Use v2-style market-aware processing
+                result = self._process_market_aware_workflow_v3(title, market_term_type)
+                reconstructed_type = result.get('extracted_report_type')  # FIXED: Use correct key
+                working_title = result.get('pipeline_forward_text', title)
+                market_prefix = result.get('extracted_market_term', '').split()[0] if result.get('extracted_market_term') else None
+                # Create placeholder dictionary result for compatibility
+                dictionary_result = DictionaryKeywordResult(
+                    keywords_found=[], sequence=[], separators=[], boundary_markers=[],
+                    market_boundary_detected=bool(market_prefix), confidence=result.get('confidence', 0.0)
+                )
+            else:
+                # Step 2: Standard processing - dictionary-based keyword detection
+                dictionary_result = self.detect_keywords_in_title(title)
                 
-                # TASK 3v3.9: Apply acronym processing if detected
-                if edge_case_processing_result.get('acronym_processing_applied'):
-                    reconstructed_type = self._apply_acronym_processing(
-                        reconstructed_type, edge_case_processing_result
-                    )
+                # Step 3: Edge case detection and acronym processing
+                edge_case_processing_result = self._process_edge_cases_and_acronyms(
+                    title, dictionary_result, market_term_type
+                )
                 
-                # Market term integration: prepend Market if extracted
-                if market_prefix and reconstructed_type and not reconstructed_type.lower().startswith('market'):
-                    reconstructed_type = f"{market_prefix} {reconstructed_type}"
-            
-            # Step 5: Fallback to v2 patterns if dictionary approach fails
-            if not reconstructed_type:
-                logger.debug("Dictionary approach insufficient, falling back to v2 patterns")
-                reconstructed_type = self.v2_pattern_fallback(working_title, market_term_type)
+                # Step 4: Report type reconstruction from keywords
+                reconstructed_type = None
+                if dictionary_result.confidence > 0.3:  # Confidence threshold
+                    self.stats['dictionary_hits'] += 1
+                    reconstructed_type = self.reconstruct_report_type_from_keywords(dictionary_result, title)
+                    
+                    # Apply acronym processing if detected
+                    if edge_case_processing_result.get('acronym_processing_applied'):
+                        reconstructed_type = self._apply_acronym_processing(
+                            reconstructed_type, edge_case_processing_result
+                        )
                 
-                # Market term integration for fallback
-                if market_prefix and reconstructed_type and not reconstructed_type.lower().startswith('market'):
-                    reconstructed_type = f"{market_prefix} {reconstructed_type}"
-            
-            # CRITICAL V2 COMPATIBILITY: Market term fallback - if no patterns found, still return "Market"
-            if not reconstructed_type and market_prefix and market_term_type != "standard":
-                logger.debug(f"No patterns found for market term title, using market prefix: '{market_prefix}'")
-                reconstructed_type = market_prefix  # This should be "Market"
-            
-            # Step 6: Determine format type and calculate final confidence (enhanced with edge cases)
-            format_type = self._determine_format_type(
-                reconstructed_type, dictionary_result, edge_case_processing_result
-            )
-            final_confidence = self._calculate_final_confidence(
-                dictionary_result, reconstructed_type, market_term_type, edge_case_processing_result
-            )
-            
-            # Step 7: Clean remaining title (remove extracted report type and preserve acronyms)
-            remaining_title = self._clean_remaining_title_with_edge_cases(
-                title, reconstructed_type, edge_case_processing_result, dictionary_result
-            )
-            
-            # Add back market context for pipeline continuation (avoid duplication)
-            if market_context and market_context not in remaining_title:
-                # Check for partial duplication (e.g., context contains words already in title)
-                context_words = market_context.lower().split()
-                title_words = remaining_title.lower().split()
+                # Step 5: Fallback to v2 patterns if dictionary approach fails
+                if not reconstructed_type:
+                    logger.debug("Dictionary approach insufficient, falling back to v2 patterns")
+                    reconstructed_type = self.v2_pattern_fallback(title, market_term_type)
                 
-                # Only add if not already present in some form
-                context_already_present = any(
-                    all(word in title_words for word in context_words[i:i+2]) 
-                    for i in range(len(context_words)-1)
-                ) if len(context_words) > 1 else context_words[0] in title_words
+                working_title = title
+            
+            # Step 6: Determine format type and calculate final confidence
+            if market_term_type != "standard" and 'result' in locals():
+                # For market-aware processing, get values from workflow result
+                format_type = result.get('format_type', ReportTypeFormat.COMPOUND)
+                final_confidence = result.get('confidence', 0.9 if reconstructed_type else 0.0)
                 
-                if not context_already_present:
-                    remaining_title = f"{remaining_title} {market_context}".strip()
+                # Use pipeline forward text as remaining title (preserves connectors/entities)
+                remaining_title = working_title
+            else:
+                # For standard processing, use dictionary results
+                dictionary_result = self.detect_keywords_in_title(working_title)
+                edge_case_processing_result = self._process_edge_cases_and_acronyms(
+                    working_title, dictionary_result, market_term_type
+                )
+                
+                format_type = self._determine_format_type(
+                    reconstructed_type, dictionary_result, edge_case_processing_result
+                )
+                final_confidence = self._calculate_final_confidence(
+                    dictionary_result, reconstructed_type, market_term_type, edge_case_processing_result
+                )
+                
+                # Step 7: Clean remaining title (remove extracted report type and preserve acronyms)
+                remaining_title = self._clean_remaining_title_with_edge_cases(
+                    title, reconstructed_type, edge_case_processing_result, dictionary_result
+                )
             
             # Calculate processing time
             processing_time = (datetime.now() - start_time).total_seconds() * 1000
