@@ -1,5 +1,27 @@
 # MongoDB-First Architecture
 
+## ⚠️ CRITICAL DATABASE-FIRST RULE
+
+**🚫 NEVER HARDCODE KEYWORDS, TERMS, OR PATTERNS IN SCRIPTS**
+
+**✅ ALL KEYWORDS, TERMS, AND PATTERNS MUST BE STORED IN AND RETRIEVED FROM THE DATABASE**
+
+This is a **mandatory architectural requirement** for the Zettit JSON Parser project:
+
+- **NO hardcoded lists** of keywords in Python scripts
+- **NO static pattern arrays** or dictionaries in code
+- **NO inline regex patterns** for business logic
+- **ALL pattern data** must come from `pattern_libraries` collection
+- **ALL business rules** must be database-driven and configurable
+- **ALL keyword matching** must query MongoDB collections
+
+**Rationale:**
+- **Real-time updates:** Pattern libraries can be updated without code deployment
+- **A/B testing:** Different pattern sets can be tested dynamically
+- **Performance tracking:** Database tracks success/failure rates per pattern
+- **Maintainability:** Business logic separated from implementation code
+- **Scalability:** New patterns added through database, not code changes
+
 ## Database Strategy
 **MongoDB Atlas serves as both data source and pattern library storage:**
 - **Primary data:** `markets_raw` collection (19,558+ titles) - field: `report_title_short`

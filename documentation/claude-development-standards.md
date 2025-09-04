@@ -52,6 +52,7 @@
 5. **Verified Integration:** Use only verified class names and initialization patterns
 6. **Output Generation:** Always create timestamped output directories and files
 7. **Documentation:** Include detailed docstrings and inline comments for complex logic
+8. **🚫 DATABASE-FIRST RULE:** NO hardcoded keywords, terms, or patterns in scripts - ALL data must come from MongoDB collections
 
 ## Dependencies
 - `pymongo` for MongoDB connectivity
