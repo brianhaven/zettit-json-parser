@@ -370,16 +370,29 @@ class PureDictionaryReportTypeExtractor:
         if not dictionary_result.market_boundary_detected:
             report_type_parts = [keyword for keyword, pos in dictionary_result.sequence]
         
-        # Select optimal separator - PRESERVE "&" and "and"
-        primary_separator = self._select_optimal_separator(dictionary_result, title)
-        
-        # Reconstruct using optimal separator
-        reconstructed = primary_separator.join(report_type_parts)
+        # ISSUE #21 FIX: Enhanced reconstruction with proper separator handling
+        if len(report_type_parts) == 1:
+            # Single keyword - return as-is
+            reconstructed = report_type_parts[0]
+        elif '&' in dictionary_result.separators:
+            # Special handling for & separator
+            reconstructed = ' & '.join(report_type_parts)
+        elif 'and' in dictionary_result.separators:
+            # Special handling for 'and' separator
+            if len(report_type_parts) == 2:
+                reconstructed = ' and '.join(report_type_parts)
+            else:
+                # Multiple keywords with 'and' - use for last separator
+                all_but_last = ' '.join(report_type_parts[:-1])
+                reconstructed = f"{all_but_last} and {report_type_parts[-1]}"
+        else:
+            # Standard space separator
+            reconstructed = ' '.join(report_type_parts)
         
         # Post-processing cleanup
         reconstructed = self._clean_reconstructed_type(reconstructed, dictionary_result)
         
-        logger.debug(f"Reconstructed: '{reconstructed}' using separator '{primary_separator}' from keywords: {dictionary_result.keywords_found}")
+        logger.debug(f"Reconstructed: '{reconstructed}' from keywords: {dictionary_result.keywords_found}, separators: {dictionary_result.separators}")
         return reconstructed
     
     def _select_optimal_separator(self, dictionary_result: DictionaryKeywordResult, title: str) -> str:
@@ -479,7 +492,7 @@ class PureDictionaryReportTypeExtractor:
     
     def _extract_market_term_from_title(self, title: str, market_type: str) -> Tuple[str, str, str]:
         """
-        Extract market term from title - Issue #21 fix for pipeline truncation.
+        Extract market term from title - Issue #21 fix for proper extraction boundaries.
         
         Args:
             title: Original title with market term
@@ -491,43 +504,42 @@ class PureDictionaryReportTypeExtractor:
         # Convert market_type to phrase: "market_for" -> "Market for"
         market_phrase = market_type.replace('_', ' ').title()
         
-        # ISSUE #21 FIX: Enhanced pattern to capture complete context including commas
-        # Stop at report type keywords but capture everything including commas and "and"
-        report_keywords = r'(?:Analysis|Report|Study|Forecast|Outlook|Trends|Market|Size|Share|Growth|Industry)'
+        # ISSUE #21 FIX: More precise pattern to avoid capturing report type keywords
+        # Only capture the market context, stop BEFORE report type keywords
+        report_keywords = r'(?:Analysis|Report|Study|Forecast|Outlook|Trends|Size|Share|Growth|Industry)'
         
-        # Updated pattern to capture complete phrases including commas and conjunctions
-        pattern = rf'\b{re.escape(market_phrase)}\s+([^,]*(?:,\s*[^,]*)*?)(?=\s+{report_keywords}|$)'
+        # Enhanced pattern: capture market context but stop before report keywords
+        # This will capture "Market in Oil & Gas" but NOT "Market in Oil & Gas Industry"
+        pattern = rf'\b{re.escape(market_phrase)}\s+([^,]*?)(?=\s+{report_keywords}|\s*,\s*{report_keywords}|$)'
         match = re.search(pattern, title, re.IGNORECASE)
         
         if match:
-            # Extract the complete market term phrase
-            full_market_term = match.group(0).rstrip(',\-–— ')
+            # Extract the market term phrase 
+            full_market_term = match.group(0).strip()
             market_context = match.group(1).strip()  # Everything after "Market for/in/by"
             
-            # Get remaining text: prefix + report type keywords that follow
+            # Get remaining text: prefix + everything after market term
             prefix_part = title[:match.start()].strip()
             after_market_part = title[match.end():].strip()
             
-            # Combine prefix and report keywords for remaining title
-            if prefix_part and after_market_part:
-                remaining_title = f"{prefix_part} {after_market_part}"
-            elif prefix_part:
-                remaining_title = prefix_part
-            elif after_market_part:
-                remaining_title = after_market_part
-            else:
-                remaining_title = ""
+            # Build remaining title for report type extraction
+            remaining_parts = []
+            if prefix_part:
+                remaining_parts.append(prefix_part)
+            if after_market_part:
+                remaining_parts.append(after_market_part)
             
-            remaining_title = remaining_title.strip(' ,\-–—')
+            remaining_title = ' '.join(remaining_parts).strip(' ,\-–—')
             
-            # Create pipeline forward text - ISSUE #21 FIX: preserve complete context
+            # Create pipeline forward text - ISSUE #21 FIX: preserve complete context  
             if prefix_part:
                 connector_word = market_phrase.split()[-1].lower()  # "for", "in", "by"
-                # PRESERVE COMPLETE CONTEXT including commas and "and"
+                # Preserve complete context including commas and conjunctions
                 pipeline_forward = f"{prefix_part} {connector_word} {market_context}"
             else:
                 pipeline_forward = market_context
             
+            logger.debug(f"Market extraction: '{full_market_term}' -> remaining: '{remaining_title}' -> pipeline: '{pipeline_forward}'")
             return full_market_term, remaining_title, pipeline_forward
         
         # If no pattern match, return title as-is
@@ -592,7 +604,10 @@ class PureDictionaryReportTypeExtractor:
         }
     
     def _reconstruct_without_market_boundary(self, dictionary_result: DictionaryKeywordResult, title: str) -> str:
-        """Reconstruct report type from keywords WITHOUT requiring Market boundary."""
+        """
+        Reconstruct report type from keywords WITHOUT requiring Market boundary.
+        Issue #21 fix - properly preserve separators like '&' and 'and'.
+        """
         if not dictionary_result.keywords_found:
             return ""
         
@@ -601,15 +616,31 @@ class PureDictionaryReportTypeExtractor:
         for keyword, position in dictionary_result.sequence:
             report_type_parts.append(keyword)
         
-        # Select optimal separator
-        primary_separator = self._select_optimal_separator(dictionary_result, title)
-        
-        # Reconstruct
-        reconstructed = primary_separator.join(report_type_parts)
+        # ISSUE #21 FIX: Enhanced separator selection and reconstruction
+        if len(report_type_parts) == 1:
+            # Single keyword - return as-is
+            reconstructed = report_type_parts[0]
+        else:
+            # Multiple keywords - use detected separators intelligently
+            if '&' in dictionary_result.separators:
+                # Special handling for & separator
+                reconstructed = ' & '.join(report_type_parts)
+            elif 'and' in dictionary_result.separators:
+                # Special handling for 'and' separator
+                if len(report_type_parts) == 2:
+                    reconstructed = ' and '.join(report_type_parts)
+                else:
+                    # Multiple keywords with 'and' - use for last separator
+                    all_but_last = ', '.join(report_type_parts[:-1])
+                    reconstructed = f"{all_but_last} and {report_type_parts[-1]}"
+            else:
+                # Standard space separator
+                reconstructed = ' '.join(report_type_parts)
         
         # Clean up
         reconstructed = self._clean_reconstructed_type(reconstructed, dictionary_result)
         
+        logger.debug(f"Reconstructed without Market: '{reconstructed}' from keywords: {dictionary_result.keywords_found}")
         return reconstructed
     
     def _reconstruct_report_type_with_market(self, extracted_type: str, market_term: str) -> str:
