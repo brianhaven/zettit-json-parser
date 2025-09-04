@@ -504,13 +504,14 @@ class PureDictionaryReportTypeExtractor:
         # Convert market_type to phrase: "market_for" -> "Market for"
         market_phrase = market_type.replace('_', ' ').title()
         
-        # ISSUE #21 FIX: More precise pattern to avoid capturing report type keywords
-        # Only capture the market context, stop BEFORE report type keywords
-        report_keywords = r'(?:Analysis|Report|Study|Forecast|Outlook|Trends|Size|Share|Growth|Industry)'
+        # ISSUE #21 FIX: Capture market context without consuming report keywords
+        # Extract market context but PRESERVE report keywords for reconstruction
+        # Match everything up to common report patterns but don't consume them
         
-        # Enhanced pattern: capture market context but stop before report keywords
-        # This will capture "Market in Oil & Gas" but NOT "Market in Oil & Gas Industry"
-        pattern = rf'\b{re.escape(market_phrase)}\s+([^,]*?)(?=\s+{report_keywords}|\s*,\s*{report_keywords}|$)'
+        # Enhanced pattern: capture just the market context but PRESERVE all database keywords
+        # Build comprehensive lookahead from ALL database keywords to ensure none are consumed
+        all_keywords_pattern = '|'.join([re.escape(kw) for kw in self.all_keywords if kw != 'Market'])
+        pattern = rf'\b{re.escape(market_phrase)}\s+([^,]*?)(?=\s+(?:{all_keywords_pattern})|$)'
         match = re.search(pattern, title, re.IGNORECASE)
         
         if match:
