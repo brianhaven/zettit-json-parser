@@ -1,0 +1,81 @@
+{
+  "test_metadata": {
+    "test_date": "2025-09-04 00:08:37 PDT",
+    "test_quantity": 5,
+    "actual_tests": 5,
+    "success_rate": 100.0,
+    "extractor_version": "v4_issue_21_fixes"
+  },
+  "test_results": [
+    {
+      "test_case": 1,
+      "original_title": "GaN Substrate Market",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_date_range": null,
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.6,
+      "extracted_regions": [],
+      "region_confidence": 0.0,
+      "final_topic": "GaN Substrate",
+      "processing_successful": true
+    },
+    {
+      "test_case": 2,
+      "original_title": "Fiber Optic Test Equipment Market, Industry Report, 2030",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_date_range": "2030",
+      "date_confidence": 0.95,
+      "extracted_report_type": "Market Industry Report",
+      "report_confidence": 0.8,
+      "extracted_regions": [],
+      "region_confidence": 0.0,
+      "final_topic": "Fiber Optic Test Equipment , 2030",
+      "processing_successful": true
+    },
+    {
+      "test_case": 3,
+      "original_title": "Stud Welding Machine Market",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_date_range": null,
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.6,
+      "extracted_regions": [],
+      "region_confidence": 0.0,
+      "final_topic": "Stud Welding Machine",
+      "processing_successful": true
+    },
+    {
+      "test_case": 4,
+      "original_title": "Women Intimate Care Wipes Market",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_date_range": null,
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.6,
+      "extracted_regions": [],
+      "region_confidence": 0.0,
+      "final_topic": "Women Intimate Care Wipes",
+      "processing_successful": true
+    },
+    {
+      "test_case": 5,
+      "original_title": "Lipophilic Dyes Market",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_date_range": null,
+      "date_confidence": 1.0,
+      "extracted_report_type": "Market",
+      "report_confidence": 0.6,
+      "extracted_regions": [],
+      "region_confidence": 0.0,
+      "final_topic": "Lipophilic Dyes",
+      "processing_successful": true
+    }
+  ]
+}

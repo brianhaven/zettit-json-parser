@@ -1,0 +1,611 @@
+{
+  "test_metadata": {
+    "test_date": "2025-09-04 00:05:58 PDT",
+    "test_quantity": 100,
+    "actual_tests": 100,
+    "success_rate": 0.0,
+    "extractor_version": "v4_issue_21_fixes"
+  },
+  "test_results": [
+    {
+      "test_case": 1,
+      "original_title": "North America Smart Parking System Market Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 2,
+      "original_title": "Snail Beauty Products Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 3,
+      "original_title": "EMEA Dental Service Organization Market Size Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 4,
+      "original_title": "Potassium-ion Battery Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 5,
+      "original_title": "In-store Analytics Market Size, Share & Growth Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 6,
+      "original_title": "Ultracapacitors Market Size & Share, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 7,
+      "original_title": "Single Lead ECG Equipment Market Size, Industry Report, 2019-2025",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 8,
+      "original_title": "Mycotoxin Binders Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 9,
+      "original_title": "Extended Text Labels Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 10,
+      "original_title": "China Small Molecule CDMO Market Size Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 11,
+      "original_title": "Equipment As A Service Market Size & Share Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 12,
+      "original_title": "Wound Irrigation Systems Market Size, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 13,
+      "original_title": "U.S. Concierge Medicine Market Size, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 14,
+      "original_title": "Bamboos Market Size, Share, Growth, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 15,
+      "original_title": "Organic Rheology Modifiers Market Size, Share Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 16,
+      "original_title": "Bronchitis Treatment Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 17,
+      "original_title": "Granulator Machines Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 18,
+      "original_title": "Healthcare Data Collection And Labeling Market Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 19,
+      "original_title": "Ablation Technologies Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 20,
+      "original_title": "Electric Vehicle Brushless DC Motors Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 21,
+      "original_title": "Floating Solar Panels Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 22,
+      "original_title": "AI in Tourism Market Size & Share, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 23,
+      "original_title": "Polyurethane Processing Machine Market Size Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 24,
+      "original_title": "RF Plasma Generator Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 25,
+      "original_title": "Montelukast Sodium Market Size And Share Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 26,
+      "original_title": "Wafer Level Packaging Market Size And Share Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 27,
+      "original_title": "Foot Care Tools Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 28,
+      "original_title": "Ultra High Voltage SiC Power Device Market for HVDC Transmission",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 29,
+      "original_title": "Aerial Imaging Market Growth Analysis Report 2017 - 2025",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 30,
+      "original_title": "Open Source Services Market Size & Share Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 31,
+      "original_title": "Perfluoroalkoxy Alkane Market Share Analysis Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 32,
+      "original_title": "Whole Genome Bisulfite Sequencing Market Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 33,
+      "original_title": "Dredging Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 34,
+      "original_title": "Cloud Application Security & Vulnerability Management Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 35,
+      "original_title": "Cardiology Information System Market Size, Industry Report, 2020-2027",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 36,
+      "original_title": "Unified Threat Management Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 37,
+      "original_title": "Anime Streaming Services Market Size, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 38,
+      "original_title": "U.S. DNA Manufacturing Market Size, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 39,
+      "original_title": "Recycled PET Flakes Market Share & Trends Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 40,
+      "original_title": "Casting and Splinting Market Size, Share Report, 2019-2025",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 41,
+      "original_title": "Automotive Bumpers Market Size, Global Industry Trends Report, 2025",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 42,
+      "original_title": "Power Purchase Agreement Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 43,
+      "original_title": "Sodium Antimonate Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 44,
+      "original_title": "N-Ethyl-2-Pyrrolidone Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 45,
+      "original_title": "Sand Control Systems Market Size & Share, Industry Report, 2019-2025",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 46,
+      "original_title": "Aerogel Market Size, Share & Growth Analysis Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 47,
+      "original_title": "Fabric Filter Market Size And Share, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 48,
+      "original_title": "Soda Maker Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 49,
+      "original_title": "Gypsum Board Market Size & Share Analysis Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 50,
+      "original_title": "Aluminum Flat Products Market Size & Share Report, 2020-2027",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 51,
+      "original_title": "North America Scar Treatment Market Size, Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 52,
+      "original_title": "Heat Exchangers Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 53,
+      "original_title": "Colposcope Market Size And Share, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 54,
+      "original_title": "Ultra Mobile Devices (UMD) Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 55,
+      "original_title": "5G Towers and Cables Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 56,
+      "original_title": "Bio-based Oil Derived Products Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 57,
+      "original_title": "Adrenocorticotropic Hormone [ACTH] Market Trends, 2021-2031",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 58,
+      "original_title": "U.S. Anhydrous Hydrogen Fluoride Market Size Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 59,
+      "original_title": "Aquafeed Additives Market Size, Share & Growth Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 60,
+      "original_title": "Semiconductor Production Equipment Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 61,
+      "original_title": "Saudi Arabia Wearable Medical Devices Market, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 62,
+      "original_title": "Ethylene Glycols Market Size, Share & Growth Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 63,
+      "original_title": "Asia Pacific Master Data Management Market, Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 64,
+      "original_title": "Database Security Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 65,
+      "original_title": "Chile Extracorporeal Shock Wave Lithotripsy Market Report, 2028",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 66,
+      "original_title": "Basin, Bowl, And Cup Market Size Report, 2021-2028",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 67,
+      "original_title": "Solar Cell Market Size, Share & Growth Analysis Report 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 68,
+      "original_title": "India Fluoropolymer Market Size, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 69,
+      "original_title": "Implantable Drug Delivery Devices Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 70,
+      "original_title": "Europe Dehumidifier Market Size And Share, Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 71,
+      "original_title": "Thermal Energy Flow Metering Solutions Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 72,
+      "original_title": "India Lithium-ion Battery Market Size, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 73,
+      "original_title": "Advanced Wind Turbine Blade Materials Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 74,
+      "original_title": "Green Silica Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 75,
+      "original_title": "Implantable Medical Devices Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 76,
+      "original_title": "UV-absorbing Chemicals for Cosmetics Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 77,
+      "original_title": "Enterprise Resource Planning Market Size, Share, Industry Report 2025",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 78,
+      "original_title": "Hexane Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 79,
+      "original_title": "India Membrane Bioreactor Market, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 80,
+      "original_title": "Cold Storage Market Size & Share, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 81,
+      "original_title": "Allergy Diagnostics And Therapeutics Market Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 82,
+      "original_title": "Narrow Range Ethoxylates Market Size, Share Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 83,
+      "original_title": "Healthcare CMO Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 84,
+      "original_title": "Hydraulic Fracturing Market Analysis, Industry Report, 2024",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 85,
+      "original_title": "Baby Proofing Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 86,
+      "original_title": "Lignin Market for Carbon Fiber and Carbon Nanofiber",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 87,
+      "original_title": "Wireless Power Transmission Market Size, Share, Industry Report 2025",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 88,
+      "original_title": "Anesthesia And Respiratory Devices Market Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 89,
+      "original_title": "Thermal Barrier Coatings Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 90,
+      "original_title": "Aerospace Insulation Market Size, Industry Report, 2027",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 91,
+      "original_title": "Personal Mobility Devices Market Size, Share Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 92,
+      "original_title": "Subsea Boosting System Market Size, Industry Report, 2019-2025",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 93,
+      "original_title": "Cognitive Disorders Treatment Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 94,
+      "original_title": "Hemodynamic Monitoring Systems Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 95,
+      "original_title": "Immersive Training Market Size, Share, Industry Report 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 96,
+      "original_title": "ZDDP Additives Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 97,
+      "original_title": "Dredging Equipment Market Size And Share Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 98,
+      "original_title": "Modular Construction Market Size, Industry Report, 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 99,
+      "original_title": "Europe Transportation Management Systems Market Report 2030",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 100,
+      "original_title": "Transplant Diagnostics Market",
+      "error": "'ClassificationResult' object has no attribute 'market_term_type'",
+      "processing_successful": false
+    }
+  ]
+}
