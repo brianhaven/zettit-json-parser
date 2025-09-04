@@ -46,7 +46,31 @@ except Exception as e:
 
 ## Output Directory Creation Standards
 
-### For Test Scripts:
+### NEW ORGANIZED APPROACH (2025-09+):
+**ALL scripts should now use the standardized output directory manager:**
+
+```python
+from experiments.utilities.output_directory_manager import create_organized_output_directory, create_output_file_header
+
+def create_output_directory(script_name: str) -> str:
+    """Create organized output directory with YYYY/MM/DD structure."""
+    return create_organized_output_directory(script_name)
+
+def create_file_header(script_name: str, description: str = "") -> str:
+    """Create standardized file header with dual timestamps."""
+    return create_output_file_header(script_name, description)
+```
+
+**Benefits of New Approach:**
+- **Organized Structure**: `outputs/YYYY/MM/DD/YYYYMMDD_HHMMSS_script_name/`
+- **Auto-Detection**: Automatically detects project root from any script location
+- **Consistent Timestamps**: Pacific Time with dual PDT/UTC headers
+- **Legacy Compatibility**: Works from main scripts, test scripts, and utilities
+
+### LEGACY PATTERNS (Pre-2025-09):
+**These patterns are deprecated but documented for reference:**
+
+### For Test Scripts (DEPRECATED):
 ```python
 import pytz
 from datetime import datetime
@@ -71,7 +95,7 @@ def create_output_directory(script_name: str) -> str:
     return output_dir
 ```
 
-### For Main Scripts:
+### For Main Scripts (DEPRECATED):
 ```python
 def create_output_directory(script_name: str) -> str:
     """Create timestamped output directory from experiments directory."""
