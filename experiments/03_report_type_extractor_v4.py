@@ -350,38 +350,27 @@ class PureDictionaryReportTypeExtractor:
         if not dictionary_result.keywords_found:
             return None
         
-        logger.debug(f"DEBUG RECONSTRUCT: market_boundary_detected={dictionary_result.market_boundary_detected}, keywords={dictionary_result.keywords_found}")
-        logger.debug(f"DEBUG RECONSTRUCT: sequence={dictionary_result.sequence}")
-        
         # Build report type parts from sequence
         report_type_parts = []
         
         # Add Market if detected (primary boundary marker)
         if dictionary_result.market_boundary_detected and self.market_primary_keyword:
             report_type_parts.append(self.market_primary_keyword)
-            logger.debug(f"DEBUG RECONSTRUCT: Added Market due to boundary detection")
         
         # Add other keywords in sequence order after Market's TEXT POSITION
         market_text_position = -1
         for keyword, text_pos in dictionary_result.sequence:
-            logger.debug(f"DEBUG RECONSTRUCT: Checking sequence item: keyword='{keyword}', text_pos={text_pos}")
             if keyword == self.market_primary_keyword:
                 market_text_position = text_pos
                 break
-        logger.debug(f"DEBUG RECONSTRUCT: market_text_position={market_text_position}")
             
         for i, (keyword, text_position) in enumerate(dictionary_result.sequence):
-            logger.debug(f"DEBUG RECONSTRUCT: Loop check keyword='{keyword}' at text_pos={text_position}, market_text_pos={market_text_position}")
             if keyword != self.market_primary_keyword and text_position > market_text_position:
                 report_type_parts.append(keyword)
-                logger.debug(f"DEBUG RECONSTRUCT: Added keyword '{keyword}' at text_pos {text_position} (after market text_pos {market_text_position})")
-            else:
-                logger.debug(f"DEBUG RECONSTRUCT: Skipped keyword '{keyword}' - failed condition check")
         
         # If no Market boundary, include all keywords EXCEPT Market
         if not dictionary_result.market_boundary_detected:
             report_type_parts = [keyword for keyword, pos in dictionary_result.sequence if keyword != "Market"]
-            logger.debug(f"DEBUG RECONSTRUCT: No boundary, filtered keywords: {report_type_parts}")
         
         # ISSUE #21 FIX: Enhanced reconstruction with proper separator handling
         if len(report_type_parts) == 1:

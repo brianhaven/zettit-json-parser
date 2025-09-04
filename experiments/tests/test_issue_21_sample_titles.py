@@ -131,9 +131,9 @@ def main():
         pattern_manager = import_module_from_path("pattern_library_manager",
                                                 os.path.join(parent_dir, "00b_pattern_library_manager_v1.py"))
         
-        # Load Script 03 v3
-        script03_v3 = import_module_from_path("report_type_extractor_v3",
-                                            os.path.join(parent_dir, "03_report_type_extractor_v3.py"))
+        # Load Script 03 v4
+        script03_v4 = import_module_from_path("report_type_extractor_v4",
+                                            os.path.join(parent_dir, "03_report_type_extractor_v4.py"))
         
         print("✓ Successfully imported required modules")
         
@@ -147,9 +147,9 @@ def main():
         load_dotenv()
         
         pattern_lib_manager = pattern_manager.PatternLibraryManager(os.getenv('MONGODB_URI'))
-        report_extractor = script03_v3.DictionaryBasedReportTypeExtractor(pattern_lib_manager)
+        report_extractor = script03_v4.PureDictionaryReportTypeExtractor(pattern_lib_manager)
         
-        print("✓ Successfully initialized Script 03 v3 DictionaryBasedReportTypeExtractor")
+        print("✓ Successfully initialized Script 03 v4 PureDictionaryReportTypeExtractor")
         
     except Exception as e:
         print(f"✗ Failed to initialize components: {e}")
