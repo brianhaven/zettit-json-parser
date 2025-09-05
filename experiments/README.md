@@ -134,12 +134,51 @@ Development and validation scripts moved to maintain clean organization:
 6. **Dual-model validation** provides enhanced pattern discovery and confidence scoring
 7. **Human review workflow** enables continuous pattern library enhancement
 
-## Output Standards
+## Organized Output Directory Manager
 
-All scripts generate dual-timestamp outputs:
-- **Filename format:** `{YYYYMMDD_HHMMSS}_{TYPE}.{ext}` (Pacific Time)
-- **File headers:** Include both PDT/PST and UTC timestamps
-- **Output directory:** `/outputs/` with structured naming
+**ALL scripts now use the standardized organized output directory manager (`00c_output_directory_manager_v1.py`):**
+
+### Output Structure
+- **Organized Hierarchy:** `outputs/YYYY/MM/DD/YYYYMMDD_HHMMSS_script_name/`
+- **Auto-Detection:** Automatically detects project root from any script location
+- **Legacy Compatibility:** Works from main scripts, test scripts, and utilities
+
+### Integration Pattern
+All main scripts (01-07) now include:
+```python
+# Dynamic import of organized output directory manager
+_spec = importlib.util.spec_from_file_location("output_dir_manager", 
+    os.path.join(os.path.dirname(__file__), "00c_output_directory_manager_v1.py"))
+_output_module = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_output_module)
+create_organized_output_directory = _output_module.create_organized_output_directory
+create_output_file_header = _output_module.create_output_file_header
+```
+
+### Usage in Scripts
+```python
+# Create organized output directory
+output_dir = create_organized_output_directory("script_name_demo")
+
+# Create standardized file headers
+header = create_output_file_header("script_name", "Description of output")
+```
+
+### Output Standards
+- **Timestamp Format:** Pacific Time (PDT/PST) in both directory names and headers
+- **File Headers:** Dual timestamps (Pacific Time and UTC) with script metadata
+- **Directory Structure:** Hierarchical YYYY/MM/DD organization for easy navigation
+- **Consistent API:** Same function signatures across all script implementations
+
+### Phase 1 Integration Status ✅ **COMPLETE**
+- ✅ **Script 01**: Market classifier with organized demo output
+- ✅ **Script 02**: Date extractor with placeholder output functionality  
+- ✅ **Script 03 v4**: Production-ready with organized output (already integrated)
+- ✅ **Script 04 v2**: Lean approach with organized output (already integrated)
+- ✅ **Script 05**: Topic extractor with enhanced organized output
+- ✅ **Script 06**: Confidence tracker with comprehensive organized reporting
+- ✅ **Script 07**: Pipeline orchestrator with organized output and metadata
+- ✅ **Test Harnesses**: Both pipeline test scripts use organized output structure
 
 ## Database Integration
 
