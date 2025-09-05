@@ -35,6 +35,14 @@ import pytz
 from pymongo import MongoClient
 from pymongo.collection import Collection
 
+# Import organized output directory manager
+import importlib.util
+_spec = importlib.util.spec_from_file_location("output_dir_manager", os.path.join(os.path.dirname(__file__), "00c_output_directory_manager_v1.py"))
+_output_module = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_output_module)
+create_organized_output_directory = _output_module.create_organized_output_directory
+create_output_file_header = _output_module.create_output_file_header
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -801,16 +809,8 @@ class PureDictionaryReportTypeExtractor:
 DictionaryBasedReportTypeExtractor = PureDictionaryReportTypeExtractor
 
 def create_output_directory(script_name: str) -> str:
-    """Create timestamped output directory from experiments directory."""
-    try:
-        import pytz
-        timestamp = datetime.now(pytz.timezone('America/Los_Angeles')).strftime('%Y%m%d_%H%M%S')
-    except ImportError:
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    
-    output_dir = f"../outputs/{timestamp}_{script_name}"
-    os.makedirs(output_dir, exist_ok=True)
-    return output_dir
+    """Create organized output directory with YYYY/MM/DD structure."""
+    return create_organized_output_directory(script_name)
 
 def main():
     """Test the pure dictionary-based report type extractor."""
@@ -886,8 +886,10 @@ def main():
     # Save test results summary
     results_file = os.path.join(output_dir, "test_results_summary.txt")
     with open(results_file, 'w') as f:
-        f.write("# Script 03 v4 Test Results Summary\n")
-        f.write(f"# Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        # Use standardized header
+        header = create_output_file_header("Script 03 v4 Report Type Extractor", "Pure dictionary-based processing test results")
+        f.write(header)
+        f.write("\n# Test Results Summary\n\n")
         f.write("Test Cases:\n")
         for i, title in enumerate(test_titles, 1):
             f.write(f"{i}. {title}\n")

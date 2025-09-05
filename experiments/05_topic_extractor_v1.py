@@ -9,11 +9,21 @@ Created for Market Research Title Parser project.
 
 import re
 import logging
+import os
+import importlib.util
 from typing import Dict, List, Optional, Tuple, Any, Union
 from dataclasses import dataclass
 from enum import Enum
 from datetime import datetime, timezone
 import pytz
+
+# Dynamic import of organized output directory manager
+import importlib.util
+_spec = importlib.util.spec_from_file_location("output_manager", os.path.join(os.path.dirname(__file__), "00c_output_directory_manager_v1.py"))
+_output_module = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_output_module)
+create_organized_output_directory = _output_module.create_organized_output_directory
+create_output_file_header = _output_module.create_output_file_header
 
 # Configure logging
 logging.basicConfig(
@@ -715,13 +725,25 @@ def demo_topic_extraction():
         print(f"Market For: {stats.market_for_count}")
         print(f"Market In: {stats.market_in_count}")
         
-        # Export report
+        # Export report with organized output
         print("\n3. Detailed Extraction Report:")
         print("-" * 40)
         
+        # Create organized output directory
+        output_dir = create_organized_output_directory("script05_topic_extractor_demo")
+        
+        # Generate and save comprehensive report
         report = extractor.export_extraction_report()
         print(report)
         
+        # Save report to organized output directory with standardized header
+        report_file = os.path.join(output_dir, "topic_extraction_report.txt")
+        with open(report_file, 'w', encoding='utf-8') as f:
+            header = create_output_file_header("script05_topic_extractor_demo", "Topic Extraction System demonstration results")
+            f.write(header + "\n\n")
+            f.write(report)
+        
+        print(f"✓ Report saved to: {report_file}")
         print("✅ Topic Extraction System demo completed successfully!")
         
     except Exception as e:

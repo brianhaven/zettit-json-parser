@@ -25,6 +25,13 @@ from dataclasses import dataclass
 from enum import Enum
 from dotenv import load_dotenv
 
+# Import organized output directory manager
+_spec_output = importlib.util.spec_from_file_location("output_dir_manager", os.path.join(os.path.dirname(__file__), "00c_output_directory_manager_v1.py"))
+_output_module = importlib.util.module_from_spec(_spec_output)
+_spec_output.loader.exec_module(_output_module)
+create_organized_output_directory = _output_module.create_organized_output_directory
+create_output_file_header = _output_module.create_output_file_header
+
 # Dynamic import for pattern library manager
 try:
     pattern_manager_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '00b_pattern_library_manager_v1.py')
@@ -418,16 +425,8 @@ def get_timestamp():
 
 
 def create_output_directory(script_name: str) -> str:
-    """Create timestamped output directory from experiments directory."""
-    try:
-        import pytz
-        timestamp = datetime.now(pytz.timezone('America/Los_Angeles')).strftime('%Y%m%d_%H%M%S')
-    except ImportError:
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    
-    output_dir = f"../outputs/{timestamp}_{script_name}"
-    os.makedirs(output_dir, exist_ok=True)
-    return output_dir
+    """Create organized output directory with YYYY/MM/DD structure."""
+    return create_organized_output_directory(script_name)
 
 def test_geographic_extraction(limit=50):
     """Test the lean geographic extraction with sample data."""
@@ -470,7 +469,7 @@ def test_geographic_extraction(limit=50):
                 'test_case': i,
                 'input_text': test_text,
                 'extracted_regions': extraction_result.extracted_regions,
-                'remaining_text': extraction_result.remaining_text,
+                'remaining_text': extraction_result.title,
                 'confidence_score': extraction_result.confidence_score,
                 'processing_notes': extraction_result.processing_notes
             }
@@ -478,7 +477,7 @@ def test_geographic_extraction(limit=50):
             results.append(result_data)
             
             logger.info(f"Extracted: {extraction_result.extracted_regions}")
-            logger.info(f"Remaining: '{extraction_result.remaining_text}'")
+            logger.info(f"Remaining: '{extraction_result.title}'")
             logger.info(f"Confidence: {extraction_result.confidence_score:.2f}")
         
         # Create output directory and save results

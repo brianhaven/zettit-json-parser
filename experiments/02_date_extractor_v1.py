@@ -16,6 +16,7 @@ from datetime import datetime
 import os
 import sys
 import importlib.util
+import json
 
 # Dynamic import for pattern library manager
 try:
@@ -28,6 +29,16 @@ try:
     PatternType = pattern_module.PatternType
 except Exception as e:
     raise ImportError(f"Could not import PatternLibraryManager: {e}") from e
+
+# Dynamic import of organized output directory manager
+try:
+    _spec = importlib.util.spec_from_file_location("output_dir_manager", os.path.join(os.path.dirname(__file__), "00c_output_directory_manager_v1.py"))
+    _output_module = importlib.util.module_from_spec(_spec)
+    _spec.loader.exec_module(_output_module)
+    create_organized_output_directory = _output_module.create_organized_output_directory
+    create_output_file_header = _output_module.create_output_file_header
+except Exception as e:
+    logger.warning(f"Could not import output directory manager: {e}. Output functionality limited.")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -414,8 +425,112 @@ class EnhancedDateExtractor:
         if self.pattern_library_manager:
             self.pattern_library_manager.close_connection()
 
+def demo_extraction_with_output_save():
+    """Demonstration function that saves extraction results to organized output directory.
+    
+    This is a placeholder function to provide output functionality consistent with other main scripts.
+    Script 02 primarily serves as a pipeline component and doesn't normally generate standalone output files.
+    """
+    from dotenv import load_dotenv
+    import pytz
+    from datetime import datetime
+    
+    load_dotenv()
+    
+    try:
+        # Initialize components
+        pattern_manager = PatternLibraryManager()
+        extractor = EnhancedDateExtractor(pattern_manager)
+        
+        # Create organized output directory
+        output_dir = create_organized_output_directory("script02_date_extractor_demo")
+        
+        # Test cases including the failing GitHub Issue #8 case
+        test_titles = [
+            "Automatic Weapons Market Size And Share [2023 Report]",  # GitHub Issue #8
+            "AI Technology Market Size Report, 2030",  # Clear date
+            "Healthcare Market 2025-2030",  # Range
+            "Some Market Analysis [2024 Study]",  # Bracket with Study
+            "Technology Overview",  # No numbers at all
+            "Component Analysis Part 3",  # Numbers but not dates
+            "Market Research [2023 Edition]",  # Edition variant
+            "Industry Survey (2024 Update)",  # Parentheses variant
+        ]
+        
+        # Process test cases
+        results = []
+        for title in test_titles:
+            result = extractor.extract(title)
+            results.append({
+                'original_title': title,
+                'categorization': result.categorization,
+                'extracted_date_range': result.extracted_date_range,
+                'format_type': result.format_type.value if result.format_type else None,
+                'raw_match': result.raw_match,
+                'preserved_words': result.preserved_words,
+                'cleaned_title': result.cleaned_title,
+                'notes': result.notes,
+                'confidence': result.confidence
+            })
+        
+        # Save results to organized output files
+        
+        # 1. Summary report
+        report_file = os.path.join(output_dir, "date_extraction_demo_report.txt")
+        with open(report_file, 'w', encoding='utf-8') as f:
+            header = create_output_file_header("script02_date_extractor_demo", "Enhanced Date Extractor demonstration results with bracket preservation")
+            f.write(header + "\n\n")
+            
+            f.write("🔧 Enhanced Date Extractor with Bracket Preservation Test Results:\n")
+            f.write("=" * 80 + "\n\n")
+            
+            for result in results:
+                f.write(f"Title: {result['original_title']}\n")
+                f.write(f"  Result: {result['categorization']}\n")
+                f.write(f"  Extracted: {result['extracted_date_range']}\n")
+                f.write(f"  Format: {result['format_type']}\n")
+                f.write(f"  Raw Match: {result['raw_match']}\n")
+                f.write(f"  Preserved Words: {result['preserved_words']}\n")
+                f.write(f"  Cleaned Title: {result['cleaned_title']}\n")
+                f.write(f"  Notes: {result['notes']}\n")
+                f.write(f"  Confidence: {result['confidence']}\n")
+                f.write("\n")
+            
+            # Add statistics
+            stats = extractor.get_stats()
+            f.write("Final Statistics:\n")
+            for key, value in stats.items():
+                f.write(f"  {key.replace('_', ' ').title()}: {value}\n")
+        
+        # 2. JSON results for programmatic access
+        json_file = os.path.join(output_dir, "date_extraction_results.json")
+        with open(json_file, 'w', encoding='utf-8') as f:
+            output_data = {
+                'metadata': {
+                    'script': 'script02_date_extractor_demo',
+                    'description': 'Enhanced Date Extractor demonstration results',
+                    'test_cases': len(results),
+                    'extraction_stats': extractor.get_stats(),
+                    'output_structure': 'organized_YYYY_MM_DD'
+                },
+                'results': results
+            }
+            json.dump(output_data, f, indent=2, ensure_ascii=False)
+        
+        print(f"✓ Date extraction demo completed successfully")
+        print(f"📁 Results saved to: {output_dir}")
+        print(f"  - Summary report: {report_file}")
+        print(f"  - JSON results: {json_file}")
+        
+        extractor.close_connection()
+        
+    except Exception as e:
+        logger.error(f"Demo extraction with output save failed: {e}")
+        raise
+
 if __name__ == "__main__":
     # Test the enhanced extractor with bracket format preservation
+    # For output file generation, use: demo_extraction_with_output_save()
     from dotenv import load_dotenv
     load_dotenv()
     

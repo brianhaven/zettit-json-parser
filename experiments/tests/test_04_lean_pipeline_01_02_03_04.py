@@ -23,6 +23,15 @@ import importlib.util
 import argparse
 
 # Add parent directory to path for imports
+# Import organized output directory manager
+experiments_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(experiments_dir)
+import importlib.util
+_spec = importlib.util.spec_from_file_location("output_manager", os.path.join(experiments_dir, "00c_output_directory_manager_v1.py"))
+_output_module = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_output_module)
+create_organized_output_directory = _output_module.create_organized_output_directory
+create_output_file_header = _output_module.create_output_file_header
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from dotenv import load_dotenv
@@ -42,23 +51,12 @@ def import_module_from_path(module_name: str, file_path: str):
     return module
 
 def create_output_directory(script_name: str) -> str:
-    """Create timestamped output directory using absolute paths."""
+    """Create organized output directory with YYYY/MM/DD structure."""
+    # Use project root directory for the organized output manager
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    experiments_dir = os.path.dirname(script_dir)  
+    experiments_dir = os.path.dirname(script_dir)
     project_root = os.path.dirname(experiments_dir)
-    outputs_dir = os.path.join(project_root, 'outputs')
-    
-    try:
-        import pytz
-        pdt = pytz.timezone('America/Los_Angeles')
-        timestamp = datetime.now(pdt).strftime('%Y%m%d_%H%M%S')
-    except ImportError:
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    
-    output_dir = os.path.join(outputs_dir, f"{timestamp}_{script_name}")
-    os.makedirs(output_dir, exist_ok=True)
-    
-    return output_dir
+    return create_organized_output_directory(script_name, custom_root_dir=project_root)
 
 def get_timestamp():
     """Generate timestamp for Pacific Time."""

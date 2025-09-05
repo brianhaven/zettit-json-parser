@@ -20,6 +20,14 @@ import time
 import traceback
 from enum import Enum
 
+# Dynamic import of organized output directory manager
+import importlib.util
+_spec = importlib.util.spec_from_file_location("output_manager", os.path.join(os.path.dirname(__file__), "00c_output_directory_manager_v1.py"))
+_output_module = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_output_module)
+create_organized_output_directory = _output_module.create_organized_output_directory
+create_output_file_header = _output_module.create_output_file_header
+
 # MongoDB imports
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
@@ -569,18 +577,24 @@ class PipelineOrchestrator:
             Report filename
         """
         pdt_str, utc_str, utc_now = self._get_timestamps()
-        timestamp_str = utc_now.strftime('%Y%m%d_%H%M%S')
-        filename = f"../outputs/{timestamp_str}_processing_report_{batch_id}.json"
         
         try:
-            # Create outputs directory if it doesn't exist
-            os.makedirs("../outputs", exist_ok=True)
+            # Create organized output directory
+            output_dir = create_organized_output_directory("script07_pipeline_orchestrator")
+            filename = os.path.join(output_dir, f"processing_report_{batch_id}.json")
             
-            # Generate report data
+            # Generate report data with organized metadata
             report_data = {
+                'metadata': {
+                    'script_name': 'script07_pipeline_orchestrator',
+                    'description': 'Pipeline Orchestrator processing report',
+                    'generated_timestamp_pdt': pdt_str,
+                    'generated_timestamp_utc': utc_str,
+                    'output_structure': 'organized_YYYY_MM_DD'
+                },
                 'batch_id': batch_id,
-                'generated_timestamp_pdt': pdt_str,
-                'generated_timestamp_utc': utc_str,
+                'generated_timestamp_pdt': pdt_str,  # Keep for backward compatibility
+                'generated_timestamp_utc': utc_str,   # Keep for backward compatibility
                 'overall_statistics': self.processing_stats.copy(),
                 'batch_summary': {},
                 'sample_results': []

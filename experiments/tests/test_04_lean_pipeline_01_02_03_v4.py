@@ -24,12 +24,21 @@ import argparse
 import pytz
 
 # Add parent directory to path for imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+experiments_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(experiments_dir)
 
 from dotenv import load_dotenv
 from pymongo import MongoClient
 
 load_dotenv()
+
+# Dynamic import of organized output directory manager
+import importlib.util
+_spec = importlib.util.spec_from_file_location("output_manager", os.path.join(experiments_dir, "00c_output_directory_manager_v1.py"))
+_output_module = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_output_module)
+create_organized_output_directory = _output_module.create_organized_output_directory
+create_output_file_header = _output_module.create_output_file_header
 
 # Setup logging - INFO level for Issue #21 validation
 logging.basicConfig(level=logging.WARNING, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -43,21 +52,8 @@ def import_module_from_path(module_name: str, file_path: str):
     return module
 
 def create_output_directory(script_name: str) -> str:
-    """Create timestamped output directory using absolute paths."""
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    experiments_dir = os.path.dirname(script_dir)  
-    project_root = os.path.dirname(experiments_dir)
-    outputs_dir = os.path.join(project_root, 'outputs')
-    
-    # Create timestamp in Pacific Time
-    pdt = pytz.timezone('America/Los_Angeles')
-    timestamp = datetime.now(pdt).strftime('%Y%m%d_%H%M%S')
-    
-    # Create timestamped subdirectory
-    output_dir = os.path.join(outputs_dir, f"{timestamp}_{script_name}")
-    os.makedirs(output_dir, exist_ok=True)
-    
-    return output_dir
+    """Create organized output directory with YYYY/MM/DD structure."""
+    return create_organized_output_directory(script_name)
 
 def get_timestamp() -> str:
     """Get formatted timestamp in PDT."""
@@ -192,7 +188,7 @@ def run_complete_pipeline_test(test_quantity: int = 100):
             # Stage 4: Geographic Entity Detection (Lean approach)
             geo_result = geo_detector.extract_geographic_entities(current_title)
             if geo_result.extracted_regions:
-                current_title = geo_result.remaining_text
+                current_title = geo_result.title  # Use .title for pipeline consistency (Issue #14)
                 print(f"Stage 4 - Regions: {geo_result.extracted_regions}")
             else:
                 print("Stage 4 - No geographic regions found")
@@ -240,7 +236,7 @@ def run_complete_pipeline_test(test_quantity: int = 100):
     print(f"Successful Extractions: {successful_extractions}")
     print(f"Success Rate: {(successful_extractions/len(results)*100):.1f}%")
     
-    # Save detailed results
+    # Save detailed results with standardized header
     results_file = os.path.join(output_dir, "pipeline_results.json")
     with open(results_file, 'w', encoding='utf-8') as f:
         json.dump({
@@ -249,20 +245,22 @@ def run_complete_pipeline_test(test_quantity: int = 100):
                 'test_quantity': test_quantity,
                 'actual_tests': len(results),
                 'success_rate': successful_extractions/len(results)*100,
-                'extractor_version': 'v4_issue_21_fixes'
+                'extractor_version': 'v4_issue_21_fixes',
+                'output_structure': 'organized_YYYY_MM_DD'
             },
             'test_results': results
         }, f, indent=2, ensure_ascii=False)
     
     print(f"✓ Detailed results saved to: {results_file}")
     
-    # Generate final topics file for analysis
+    # Generate final topics file with standardized header
     final_topics_file = os.path.join(output_dir, "final_topics.txt")
     with open(final_topics_file, 'w', encoding='utf-8') as f:
-        f.write(f"# FINAL TOPICS FROM PIPELINE PROCESSING\\n")
-        f.write(f"# Generated: {timestamp}\\n")
-        f.write(f"# Extractor: Script 03 v4 (Issue #21 fixes)\\n") 
-        f.write(f"# Success Rate: {(successful_extractions/len(results)*100):.1f}%\\n\\n")
+        header = create_output_file_header("pipeline_03v4_test", "Complete pipeline test results with Issue #21 fixes")
+        f.write(header + "\\n")
+        f.write(f"# Success Rate: {(successful_extractions/len(results)*100):.1f}%\\n")
+        f.write(f"# Test Cases: {len(results)}\\n")
+        f.write(f"# Extractor Version: v4 (Issue #21 fixes)\\n\\n")
         
         for result in results:
             if 'final_topic' in result:

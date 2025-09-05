@@ -11,6 +11,7 @@ import os
 import re
 import logging
 import json
+import importlib.util
 from typing import Dict, List, Optional, Tuple, Any, Union
 from dataclasses import dataclass, asdict
 from enum import Enum
@@ -18,6 +19,14 @@ from datetime import datetime, timezone
 from collections import defaultdict, Counter
 import statistics
 import pytz
+
+# Dynamic import of organized output directory manager
+import importlib.util
+_spec = importlib.util.spec_from_file_location("output_manager", os.path.join(os.path.dirname(__file__), "00c_output_directory_manager_v1.py"))
+_output_module = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_output_module)
+create_organized_output_directory = _output_module.create_organized_output_directory
+create_output_file_header = _output_module.create_output_file_header
 
 # Configure logging
 logging.basicConfig(
@@ -953,13 +962,25 @@ def demo_confidence_tracker():
                 percentage = distribution['confidence_histogram']['percentages'][i]
                 print(f"  {bin_range}: {count:3d} ({percentage:4.1f}%)")
         
-        # Export comprehensive report
+        # Export comprehensive report with organized output
         print("\n5. Comprehensive Report:")
         print("-" * 40)
         
+        # Create organized output directory
+        output_dir = create_organized_output_directory("script06_confidence_tracker_demo")
+        
+        # Generate and save comprehensive report
         report = tracker.export_confidence_report()
         print(report[:500] + "..." if len(report) > 500 else report)
         
+        # Save report to organized output directory with standardized header
+        report_file = os.path.join(output_dir, "confidence_tracking_report.txt")
+        with open(report_file, 'w', encoding='utf-8') as f:
+            header = create_output_file_header("script06_confidence_tracker_demo", "Confidence Tracking System demonstration results")
+            f.write(header + "\n\n")
+            f.write(report)
+        
+        print(f"✓ Report saved to: {report_file}")
         print("\n✅ Confidence Tracking System demo completed successfully!")
         
     except Exception as e:

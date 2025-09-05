@@ -19,6 +19,13 @@ import importlib.util
 import sys
 import os
 
+# Dynamic import of organized output directory manager
+_spec = importlib.util.spec_from_file_location("output_dir_manager", os.path.join(os.path.dirname(__file__), "00c_output_directory_manager_v1.py"))
+_output_module = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_output_module)
+create_organized_output_directory = _output_module.create_organized_output_directory
+create_output_file_header = _output_module.create_output_file_header
+
 # Dynamic import for pattern library manager (filename starts with numbers)
 try:
     pattern_manager_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '00b_pattern_library_manager_v1.py')
@@ -559,13 +566,22 @@ def demo_classification():
         print(f"Standard: {stats.standard_count} ({stats.standard_percentage:.2f}%)")
         print(f"Ambiguous: {stats.ambiguous_count} ({(stats.ambiguous_count/stats.total_classified)*100:.2f}%)")
         
-        # Export report
+        # Create organized output directory and save report
         print("\n3. Detailed Classification Report:")
         print("-" * 40)
         
+        output_dir = create_organized_output_directory("script01_market_classifier_demo")
         report = classifier.export_classification_report()
         print(report)
         
+        # Save report to file with standardized header
+        report_file = os.path.join(output_dir, "classification_report.txt")
+        with open(report_file, 'w', encoding='utf-8') as f:
+            header = create_output_file_header("script01_market_classifier_demo", "Market Term Classification System demonstration results")
+            f.write(header + "\n\n")
+            f.write(report)
+        
+        print(f"\n📁 Report saved to: {report_file}")
         print("✅ Market Term Classification demo completed successfully!")
         
     except Exception as e:
