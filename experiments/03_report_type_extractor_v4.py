@@ -800,6 +800,18 @@ class PureDictionaryReportTypeExtractor:
 # Alias for backward compatibility  
 DictionaryBasedReportTypeExtractor = PureDictionaryReportTypeExtractor
 
+def create_output_directory(script_name: str) -> str:
+    """Create timestamped output directory from experiments directory."""
+    try:
+        import pytz
+        timestamp = datetime.now(pytz.timezone('America/Los_Angeles')).strftime('%Y%m%d_%H%M%S')
+    except ImportError:
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    
+    output_dir = f"../outputs/{timestamp}_{script_name}"
+    os.makedirs(output_dir, exist_ok=True)
+    return output_dir
+
 def main():
     """Test the pure dictionary-based report type extractor."""
     test_titles = [
@@ -858,6 +870,37 @@ def main():
                 print(f"  {sub_key}: {sub_value}")
         else:
             print(f"{key}: {value}")
+    
+    # Create output directory and save test results
+    output_dir = create_output_directory("script03_v4_demo")
+    print(f"\n📁 Saving results to: {output_dir}")
+    
+    # Save processing statistics
+    stats_file = os.path.join(output_dir, "processing_statistics.json")
+    import json
+    with open(stats_file, 'w') as f:
+        json.dump(stats, f, indent=2)
+    
+    print(f"✓ Statistics saved to: {stats_file}")
+    
+    # Save test results summary
+    results_file = os.path.join(output_dir, "test_results_summary.txt")
+    with open(results_file, 'w') as f:
+        f.write("# Script 03 v4 Test Results Summary\n")
+        f.write(f"# Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        f.write("Test Cases:\n")
+        for i, title in enumerate(test_titles, 1):
+            f.write(f"{i}. {title}\n")
+        f.write(f"\nProcessing Statistics:\n")
+        for key, value in stats.items():
+            if isinstance(value, dict):
+                f.write(f"{key}:\n")
+                for sub_key, sub_value in value.items():
+                    f.write(f"  {sub_key}: {sub_value}\n")
+            else:
+                f.write(f"{key}: {value}\n")
+    
+    print(f"✓ Test summary saved to: {results_file}")
 
 if __name__ == "__main__":
     main()
