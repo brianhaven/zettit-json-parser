@@ -1,0 +1,16 @@
+{
+  "total_processed": 5,
+  "dictionary_hits": 0,
+  "market_boundary_detected": 5,
+  "processing_time_total": 1.6700000000000002,
+  "dictionary_hit_rate": 0.0,
+  "market_boundary_detection_rate": 100.0,
+  "avg_processing_time_ms": 0.334,
+  "dictionary_size": {
+    "primary_keywords": 8,
+    "secondary_keywords": 20,
+    "total_keywords": 28,
+    "separators": 14,
+    "boundary_markers": 5
+  }
+}

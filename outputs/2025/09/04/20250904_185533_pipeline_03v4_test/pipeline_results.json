@@ -1,0 +1,46 @@
+{
+  "test_metadata": {
+    "test_date": "2025-09-04 18:55:34 PDT",
+    "test_quantity": 3,
+    "actual_tests": 3,
+    "success_rate": 66.66666666666666,
+    "extractor_version": "v4_issue_21_fixes",
+    "output_structure": "organized_YYYY_MM_DD"
+  },
+  "test_results": [
+    {
+      "test_case": 1,
+      "original_title": "South Africa Hospitality Point Of Sale Software Market Report 2030",
+      "error": "'GeographicExtractionResult' object has no attribute 'remaining_text'",
+      "processing_successful": false
+    },
+    {
+      "test_case": 2,
+      "original_title": "Cryolite Market Size, Share & Trends Report, 2019-2025",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_date_range": "2019-2025",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market & Size & Share & Trends & Report",
+      "report_confidence": 1.0,
+      "extracted_regions": [],
+      "region_confidence": 0.0,
+      "final_topic": "Cryolite , 2019-2025",
+      "processing_successful": true
+    },
+    {
+      "test_case": 3,
+      "original_title": "Biodegradable Chelating Agents Market Forecast Report, 2019-2027",
+      "market_term_type": "standard",
+      "market_confidence": 0.9,
+      "extracted_date_range": "2019-2027",
+      "date_confidence": 0.98,
+      "extracted_report_type": "Market Forecast Report",
+      "report_confidence": 0.8,
+      "extracted_regions": [],
+      "region_confidence": 0.0,
+      "final_topic": "Biodegradable Chelating Agents , 2019-2027",
+      "processing_successful": true
+    }
+  ]
+}

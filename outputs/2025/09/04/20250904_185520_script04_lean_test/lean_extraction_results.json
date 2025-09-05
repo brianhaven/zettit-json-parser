@@ -1,0 +1,96 @@
+{
+  "timestamp_pst": "2025-09-04 18:55:19 PDT",
+  "timestamp_utc": "2025-09-05 01:55:19 UTC",
+  "test_config": {
+    "approach": "lean_pattern_based",
+    "total_patterns": 924,
+    "test_cases": 8
+  },
+  "results": [
+    {
+      "test_case": 1,
+      "input_text": "APAC Personal Protective Equipment",
+      "extracted_regions": [
+        "Asia Pacific"
+      ],
+      "remaining_text": "Personal Protective Equipment",
+      "confidence_score": 0.8500000000000001,
+      "processing_notes": "Pattern 'Asia Pacific': 1 matches"
+    },
+    {
+      "test_case": 2,
+      "input_text": "North America Europe Automotive Technology",
+      "extracted_regions": [
+        "North America",
+        "Europe"
+      ],
+      "remaining_text": "Automotive Technology",
+      "confidence_score": 0.9,
+      "processing_notes": "Pattern 'North America': 1 matches; Pattern 'Europe': 1 matches"
+    },
+    {
+      "test_case": 3,
+      "input_text": "Middle East & Africa Healthcare Systems",
+      "extracted_regions": [
+        "Middle East",
+        "Africa"
+      ],
+      "remaining_text": "Healthcare Systems",
+      "confidence_score": 0.9,
+      "processing_notes": "Pattern 'Middle East': 1 matches; Pattern 'Africa': 1 matches"
+    },
+    {
+      "test_case": 4,
+      "input_text": "Asia Pacific and Latin America Energy Solutions",
+      "extracted_regions": [
+        "Central and South America",
+        "Asia Pacific"
+      ],
+      "remaining_text": "Energy Solutions",
+      "confidence_score": 0.9,
+      "processing_notes": "Pattern 'Central and South America': 1 matches; Pattern 'Asia Pacific': 1 matches"
+    },
+    {
+      "test_case": 5,
+      "input_text": "Europe, Middle East and Africa Financial Services",
+      "extracted_regions": [
+        "Europe, Middle East and Africa"
+      ],
+      "remaining_text": "Financial Services",
+      "confidence_score": 0.8500000000000001,
+      "processing_notes": "Pattern 'Europe, Middle East and Africa': 1 matches"
+    },
+    {
+      "test_case": 6,
+      "input_text": "Global Semiconductor Manufacturing",
+      "extracted_regions": [
+        "Global"
+      ],
+      "remaining_text": "Semiconductor Manufacturing",
+      "confidence_score": 0.8500000000000001,
+      "processing_notes": "Pattern 'Global': 1 matches"
+    },
+    {
+      "test_case": 7,
+      "input_text": "United States Canada Mexico Trade",
+      "extracted_regions": [
+        "United States",
+        "Canada",
+        "Mexico"
+      ],
+      "remaining_text": "Trade",
+      "confidence_score": 0.9500000000000001,
+      "processing_notes": "Pattern 'United States': 1 matches; Pattern 'Canada': 1 matches; Pattern 'Mexico': 1 matches"
+    },
+    {
+      "test_case": 8,
+      "input_text": "Southeast Asia Manufacturing Trends",
+      "extracted_regions": [
+        "Southeast Asia"
+      ],
+      "remaining_text": "Manufacturing Trends",
+      "confidence_score": 0.8500000000000001,
+      "processing_notes": "Pattern 'Southeast Asia': 1 matches"
+    }
+  ]
+}

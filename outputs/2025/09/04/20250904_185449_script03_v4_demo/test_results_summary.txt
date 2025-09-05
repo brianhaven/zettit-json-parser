@@ -1,0 +1,32 @@
+# Script 03 v4 Report Type Extractor Output
+
+**Analysis Date (PDT):** 2025-09-04 18:54:49 PDT
+**Analysis Date (UTC):** 2025-09-05 01:54:49 UTC
+
+**Description:** Pure dictionary-based processing test results
+
+================================================================================
+
+# Test Results Summary
+
+Test Cases:
+1. Material Handling Equipment Market In Biomass Power Plant Report
+2. Functional Cosmetics Market for Skin Care Application Trends & Analysis FCSC Outlook
+3. Cloud Computing Market in Healthcare Industy
+4. Nanocapsules Market for Cosmetics Repot
+5. High Purity Quartz Sand Market for UVC Lighting Share and Size Outlook
+
+Processing Statistics:
+total_processed: 5
+dictionary_hits: 0
+market_boundary_detected: 5
+processing_time_total: 1.6700000000000002
+dictionary_hit_rate: 0.0
+market_boundary_detection_rate: 100.0
+avg_processing_time_ms: 0.334
+dictionary_size:
+  primary_keywords: 8
+  secondary_keywords: 20
+  total_keywords: 28
+  separators: 14
+  boundary_markers: 5
