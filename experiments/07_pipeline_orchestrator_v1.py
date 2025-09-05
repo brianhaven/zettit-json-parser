@@ -154,9 +154,22 @@ class PipelineOrchestrator:
             logger.error(f"Failed to connect to MongoDB: {e}")
             raise
     
+    def _get_pattern_library_manager(self):
+        """Get PatternLibraryManager instance."""
+        spec = importlib.util.spec_from_file_location(
+            "pattern_library_manager", 
+            "00b_pattern_library_manager_v1.py"
+        )
+        pattern_manager_module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(pattern_manager_module)
+        return pattern_manager_module.PatternLibraryManager(self.connection_string)
+    
     def _initialize_components(self) -> None:
         """Initialize all pipeline processing components."""
         try:
+            # Create shared PatternLibraryManager instance
+            pattern_lib_manager = self._get_pattern_library_manager()
+            
             # Import and initialize Market Term Classifier (01)
             spec = importlib.util.spec_from_file_location(
                 "market_classifier", 
@@ -164,7 +177,7 @@ class PipelineOrchestrator:
             )
             market_classifier_module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(market_classifier_module)
-            self.components['market_classifier'] = market_classifier_module.MarketTermClassifier()
+            self.components['market_classifier'] = market_classifier_module.MarketTermClassifier(pattern_lib_manager)
             
             # Import and initialize Date Extractor (02)
             spec = importlib.util.spec_from_file_location(
@@ -173,21 +186,21 @@ class PipelineOrchestrator:
             )
             date_extractor_module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(date_extractor_module)
-            self.components['date_extractor'] = date_extractor_module.DateExtractor()
+            self.components['date_extractor'] = date_extractor_module.EnhancedDateExtractor(pattern_lib_manager)
             
             # Import and initialize Report Type Extractor (03)
             spec = importlib.util.spec_from_file_location(
                 "report_extractor", 
-                "03_report_type_extractor_v1.py"
+                "03_report_type_extractor_v4.py"
             )
             report_extractor_module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(report_extractor_module)
-            self.components['report_extractor'] = report_extractor_module.ReportTypeExtractor()
+            self.components['report_extractor'] = report_extractor_module.PureDictionaryReportTypeExtractor(pattern_lib_manager)
             
             # Import Geographic Entity Detection functions (04)
             spec = importlib.util.spec_from_file_location(
                 "geographic_detector", 
-                "04_geographic_entity_detector_v1.py"
+                "04_geographic_entity_detector_v2.py"
             )
             geographic_detector_module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(geographic_detector_module)

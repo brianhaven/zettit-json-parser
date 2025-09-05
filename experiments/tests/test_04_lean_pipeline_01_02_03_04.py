@@ -100,9 +100,9 @@ def test_lean_pipeline(test_quantity: int = 9):
     script02 = import_module_from_path("date_extractor",
                                      os.path.join(parent_dir, "02_date_extractor_v1.py"))
     
-    # Import Script 03
+    # Import Script 03 v4
     script03 = import_module_from_path("report_type_extractor", 
-                                     os.path.join(parent_dir, "03_report_type_extractor_v2.py"))
+                                     os.path.join(parent_dir, "03_report_type_extractor_v4.py"))
     
     # Import Script 04 v2
     script04 = import_module_from_path("geographic_entity_detector_v2",
@@ -118,7 +118,7 @@ def test_lean_pipeline(test_quantity: int = 9):
     # Initialize components with proper managers (ALL using PatternLibraryManager for consistency)
     market_classifier = script01.MarketTermClassifier(pattern_lib_manager)
     date_extractor = script02.EnhancedDateExtractor(pattern_lib_manager)
-    report_extractor = script03.MarketAwareReportTypeExtractor(pattern_lib_manager)
+    report_extractor = script03.PureDictionaryReportTypeExtractor(pattern_lib_manager)
     geo_detector = script04.GeographicEntityDetector(pattern_lib_manager)  # Script 04 v2 now uses PatternLibraryManager
     
     # Query real database titles for testing
@@ -183,7 +183,7 @@ def test_lean_pipeline(test_quantity: int = 9):
             # Stage 4: Geographic Entity Detection (NEW LEAN APPROACH)
             geo_result = geo_detector.extract_geographic_entities(current_title)
             if geo_result.extracted_regions:
-                current_title = geo_result.remaining_text
+                current_title = geo_result.title
                 logger.info(f"Stage 4 - Regions: {geo_result.extracted_regions}")
             else:
                 logger.info("Stage 4 - No geographic regions found")
