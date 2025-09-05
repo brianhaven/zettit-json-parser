@@ -1,0 +1,1943 @@
+{
+  "timestamp_pst": "2025-09-04 20:46:15 PDT",
+  "timestamp_utc": "2025-09-05 03:46:15 UTC",
+  "test_config": {
+    "approach": "lean_pattern_based_pipeline",
+    "pipeline_stages": [
+      "01_market_classification",
+      "02_date_extraction",
+      "03_report_type",
+      "04_geographic_lean"
+    ],
+    "test_cases": 100
+  },
+  "results": [
+    {
+      "test_case": 1,
+      "original_title": "Dispatch Console Market Size & Share, Industry Report 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Industry & Report",
+      "extracted_regions": [],
+      "topic": "Dispatch Console",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 2,
+      "original_title": "Global and U.S. Conveying Equipment (Unit Handling, Bulk Handling and Parts & Attachments) Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [
+        "Global",
+        "United States"
+      ],
+      "topic": "Conveying Equipment (Unit Handling, Bulk Handling and Parts Attachments)",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.9
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'Global': 1 matches; Pattern 'United States': 1 matches"
+      }
+    },
+    {
+      "test_case": 3,
+      "original_title": "Automotive Gas Analyzers Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Automotive Gas Analyzers",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 4,
+      "original_title": "Anti-radiation Drugs Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Anti-radiation Drugs",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 5,
+      "original_title": "Laboratory Mills Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Laboratory Mills",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 6,
+      "original_title": "Tidal Energy Market Size, Share And Growth Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Growth Report",
+      "extracted_regions": [],
+      "topic": "Tidal Energy",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 7,
+      "original_title": "Thermoelectric Module Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Thermoelectric Module",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 8,
+      "original_title": "Die-cut Lids Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Die-cut Lids",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 9,
+      "original_title": "High Barrier Packaging Films Market Size, Share Report 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Report",
+      "extracted_regions": [],
+      "topic": "High Barrier Packaging Films",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 10,
+      "original_title": "Bioclimatic Pergola Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Bioclimatic Pergola",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 11,
+      "original_title": "Drain Cleaning Equipment Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Drain Cleaning Equipment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 12,
+      "original_title": "Hospital Bedsheet & Pillow Cover Market Size Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "topic": "Hospital Bedsheet & Pillow Cover",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 13,
+      "original_title": "Immersive Display In Entertainment Market Size Report 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "topic": "Immersive Display In Entertainment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 14,
+      "original_title": "Oil & Gas Data Management Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Oil & Gas",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 15,
+      "original_title": "Blockchain In Energy Market Size And Share Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Report",
+      "extracted_regions": [],
+      "topic": "Blockchain In Energy",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 16,
+      "original_title": "Glass Syringe Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Glass Syringe",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 17,
+      "original_title": "Neurology Patient Monitoring Market Size Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "topic": "Neurology Patient Monitoring",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 18,
+      "original_title": "Low Voltage (LV) and Medium Voltage (MV) Switchgear Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Low Voltage (LV) and Medium Voltage (MV) Switchgear",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 19,
+      "original_title": "2-shot Injection Molding Market Analysis, 2021-2031",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2021-2031",
+      "extracted_report_type": "Market Analysis",
+      "extracted_regions": [],
+      "topic": "2-shot Injection Molding",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.7000000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 20,
+      "original_title": "Hydrogen Truck Market Size & Share, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Industry & Report",
+      "extracted_regions": [],
+      "topic": "Hydrogen Truck",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 21,
+      "original_title": "Multi-med Adherence Packaging Market Size Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "topic": "Multi-med Adherence Packaging",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 22,
+      "original_title": "Coating Additives Market Size, Share, Global Industry Report, 2025",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2025",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "extracted_regions": [],
+      "topic": "Coating Additives",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 23,
+      "original_title": "Temperature Monitoring System Market, Industry Report, 2019-2025",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2019-2025",
+      "extracted_report_type": "Market Industry Report",
+      "extracted_regions": [],
+      "topic": "Temperature Monitoring System",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 24,
+      "original_title": "Amines Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Amines",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 25,
+      "original_title": "Spectrum Analyzer Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Spectrum Analyzer",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 26,
+      "original_title": "Anime Merchandising Market Size, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "extracted_regions": [],
+      "topic": "Anime Merchandising",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 27,
+      "original_title": "Automated Microscopy Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Automated Microscopy",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 28,
+      "original_title": "Specialty Insurance Market Size Report, 2021-2028",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2021-2028",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "topic": "Specialty Insurance",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 29,
+      "original_title": "Chlor-alkali Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Chlor-alkali",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 30,
+      "original_title": "Concrete Surface Retarders Market Size, Share, Industry Report, 2025",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2025",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "extracted_regions": [],
+      "topic": "Concrete Surface Retarders",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 31,
+      "original_title": "Automated Sample Storage Systems Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Automated Sample Storage Systems",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 32,
+      "original_title": "Generic Injectables Market Insights, 2021-2031",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2021-2031",
+      "extracted_report_type": "Market Insights",
+      "extracted_regions": [],
+      "topic": "Generic Injectables",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 33,
+      "original_title": "Graphics Card Market Size, Share And Trends [2023 Report]",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2023",
+      "extracted_report_type": "Market Size Share Trends Report",
+      "extracted_regions": [],
+      "topic": "Graphics Card",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.92,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 34,
+      "original_title": "Botulinum Toxin Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Botulinum Toxin",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 35,
+      "original_title": "Prenatal, Fetal and Neonatal Equipment Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Prenatal, Fetal and Neonatal Equipment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 36,
+      "original_title": "Aquaculture Vaccines Market Size Report, 2021-2028",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2021-2028",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "topic": "Aquaculture Vaccines",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 37,
+      "original_title": "Europe Air Compressor Market Size & Share Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Report",
+      "extracted_regions": [
+        "Europe"
+      ],
+      "topic": "Air Compressor",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'Europe': 1 matches"
+      }
+    },
+    {
+      "test_case": 38,
+      "original_title": "Healthcare Metaverse Market Size And Share Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Report",
+      "extracted_regions": [],
+      "topic": "Healthcare Metaverse",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 39,
+      "original_title": "PVC Roller Shutter Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "PVC Roller Shutter",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 40,
+      "original_title": "Precast Concrete Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Precast Concrete",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 41,
+      "original_title": "India Household Appliances Market, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Industry Report",
+      "extracted_regions": [
+        "India"
+      ],
+      "topic": "Household Appliances",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'India': 1 matches"
+      }
+    },
+    {
+      "test_case": 42,
+      "original_title": "Public Cloud Business Process Services Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Public Cloud Business Process Services",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 43,
+      "original_title": "Anthracene Market Size, Share, Trends, Global Industry Report, 2025",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2025",
+      "extracted_report_type": "Market Size Share Trends Industry Report",
+      "extracted_regions": [],
+      "topic": "Anthracene",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 44,
+      "original_title": "Food Grade Iron Powder Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Food Grade Iron Powder",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 45,
+      "original_title": "Blowing Agents Market Size, Share, Global Industry Report, 2019-2025",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2019-2025",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "extracted_regions": [],
+      "topic": "Blowing Agents",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 46,
+      "original_title": "U.S. Ammunition Market Size & Share, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Industry & Report",
+      "extracted_regions": [
+        "United States"
+      ],
+      "topic": "Ammunition",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'United States': 1 matches"
+      }
+    },
+    {
+      "test_case": 47,
+      "original_title": "Organic Recycling of Bio-based Plastics Market Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Report",
+      "extracted_regions": [],
+      "topic": "Organic Recycling of Bio-based Plastics",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 48,
+      "original_title": "Spout Pouch Market Size, Share, Global Industry Report, 2019-2025",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2019-2025",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "extracted_regions": [],
+      "topic": "Spout Pouch",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 49,
+      "original_title": "Thermal Conductive Polymer Materials Market Report 2028",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2028",
+      "extracted_report_type": "Market Report",
+      "extracted_regions": [],
+      "topic": "Thermal Conductive Polymer Materials",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 50,
+      "original_title": "Air Transport USM Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Air Transport USM",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 51,
+      "original_title": "Fly Ash Market Forecast, 2021-2031",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2021-2031",
+      "extracted_report_type": "Market Forecast",
+      "extracted_regions": [],
+      "topic": "Fly Ash",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 52,
+      "original_title": "Neurosurgery Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Neurosurgery",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 53,
+      "original_title": "Millet Based Packaged Food Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Millet Based Packaged Food",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 54,
+      "original_title": "Global Geotextiles Market Size & Share Analysis Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Analysis & Report",
+      "extracted_regions": [
+        "Global"
+      ],
+      "topic": "Geotextiles",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'Global': 1 matches"
+      }
+    },
+    {
+      "test_case": 55,
+      "original_title": "LED Lighting Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "LED Lighting",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 56,
+      "original_title": "Oil & Gas EPC Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Oil & Gas EPC",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 57,
+      "original_title": "Medical Nonwoven Disposables Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Medical Nonwoven Disposables",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 58,
+      "original_title": "U.S. Kidney Preservation Market Size, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "extracted_regions": [
+        "United States"
+      ],
+      "topic": "Kidney Preservation",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'United States': 1 matches"
+      }
+    },
+    {
+      "test_case": 59,
+      "original_title": "Home Wi-Fi Router and Extender Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Home Wi-Fi Router and Extender",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 60,
+      "original_title": "Wireless And Mobile Backhaul Equipment Market Size Report, 2025",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2025",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "topic": "Wireless And Mobile Backhaul Equipment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 61,
+      "original_title": "Redox Flow Battery Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Redox Flow Battery",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 62,
+      "original_title": "Vitamin K2 Market Size And Share, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "extracted_regions": [],
+      "topic": "Vitamin K2",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 63,
+      "original_title": "Allergy Treatment Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Allergy Treatment",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 64,
+      "original_title": "Europe Paint Protection Film Market Size, Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [
+        "Europe"
+      ],
+      "topic": "Paint Protection Film",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'Europe': 1 matches"
+      }
+    },
+    {
+      "test_case": 65,
+      "original_title": "Consumer To Consumer E-Commerce Market Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Report",
+      "extracted_regions": [],
+      "topic": "Consumer To Consumer E-Commerce",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.7000000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 66,
+      "original_title": "Tow Tractors Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Tow Tractors",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 67,
+      "original_title": "AI Computer Market Size & Share, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Industry & Report",
+      "extracted_regions": [],
+      "topic": "AI Computer",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 68,
+      "original_title": "Stretch And Shrink Film Market Size And Share Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Report",
+      "extracted_regions": [],
+      "topic": "Stretch And Shrink Film",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 69,
+      "original_title": "Voice Commerce Market Size, Share & Growth Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Growth & Report",
+      "extracted_regions": [],
+      "topic": "Voice Commerce",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 70,
+      "original_title": "Asia Pacific Air Purifier Market Size, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "extracted_regions": [
+        "Asia Pacific"
+      ],
+      "topic": "Air Purifier",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'Asia Pacific': 1 matches"
+      }
+    },
+    {
+      "test_case": 71,
+      "original_title": "Flexible OLED Display Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Flexible OLED Display",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 72,
+      "original_title": "Energy Efficient Windows Market Size & Share Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Report",
+      "extracted_regions": [],
+      "topic": "Energy Efficient Windows",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 73,
+      "original_title": "Para Nitrochlorobenzene Market Size Report, 2020-2027",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2020-2027",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "topic": "Para Nitrochlorobenzene",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 74,
+      "original_title": "Wax Market Size, Share & Growth, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Growth & Industry & Report",
+      "extracted_regions": [],
+      "topic": "Wax",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 75,
+      "original_title": "North America & Europe Cold Chain Packaging Materials Market Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Report",
+      "extracted_regions": [
+        "North America and Europe"
+      ],
+      "topic": "Cold Chain Packaging Materials",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'North America and Europe': 1 matches"
+      }
+    },
+    {
+      "test_case": 76,
+      "original_title": "Peracetic Acid Market Size & Share, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Industry & Report",
+      "extracted_regions": [],
+      "topic": "Peracetic Acid",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 77,
+      "original_title": "IV Bags Market Analysis, Forecast Report, 2020 \u2013 2032",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2020-2032",
+      "extracted_report_type": "Market Analysis Forecast Report",
+      "extracted_regions": [],
+      "topic": "IV Bags",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 78,
+      "original_title": "Neuropathic Pain Management Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Neuropathic Pain Management",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 79,
+      "original_title": "Periodontal Therapeutics Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Periodontal Therapeutics",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 80,
+      "original_title": "U.S. Weight Management Market Size, Industry Report 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "extracted_regions": [
+        "United States"
+      ],
+      "topic": "Weight Management",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'United States': 1 matches"
+      }
+    },
+    {
+      "test_case": 81,
+      "original_title": "Konjac Market Size, Share, Trends, Global Industry Report, 2025",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2025",
+      "extracted_report_type": "Market Size Share Trends Industry Report",
+      "extracted_regions": [],
+      "topic": "Konjac",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 82,
+      "original_title": "Artificial Intelligence In Remote Patient Monitoring Market Report 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Report",
+      "extracted_regions": [],
+      "topic": "Artificial Intelligence In Remote Patient Monitoring",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 83,
+      "original_title": "HEA, HPA, HEMA, & HPMA Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "HEA, HPA, HEMA, & HPMA",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 84,
+      "original_title": "Dopamine Agonist Market Size, Share, Industry Report 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "extracted_regions": [],
+      "topic": "Dopamine Agonist",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 85,
+      "original_title": "Image Sensor Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Image Sensor",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 86,
+      "original_title": "Point-of-Sale Terminal Market Size & Share Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Report",
+      "extracted_regions": [],
+      "topic": "Point-of-Sale Terminal",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 87,
+      "original_title": "Global Synthetic Lubricants Market Size & Share Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Report",
+      "extracted_regions": [
+        "Global"
+      ],
+      "topic": "Synthetic Lubricants",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'Global': 1 matches"
+      }
+    },
+    {
+      "test_case": 88,
+      "original_title": "Tendon Repair Market Size & Share, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market & Size & Share & Industry & Report",
+      "extracted_regions": [],
+      "topic": "Tendon Repair",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 89,
+      "original_title": "Point-of-Care (POC) Coagulation Testing Devices Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Point-of-Care (POC) Coagulation Testing Devices",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 90,
+      "original_title": "Point-of-Care Diagnostics Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Point-of-Care Diagnostics",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 91,
+      "original_title": "DDos Protection And Mitigation Security Market Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Report",
+      "extracted_regions": [],
+      "topic": "DDos Protection And Mitigation Security",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 92,
+      "original_title": "Pipe Threading Machine Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Pipe Threading Machine",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 93,
+      "original_title": "Security Automation Market Size, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "extracted_regions": [],
+      "topic": "Security Automation",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 94,
+      "original_title": "Global Sulfur Bentonite Market Size & Share Report, 2025",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2025",
+      "extracted_report_type": "Market & Size & Share & Report",
+      "extracted_regions": [
+        "Global"
+      ],
+      "topic": "Sulfur Bentonite",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'Global': 1 matches"
+      }
+    },
+    {
+      "test_case": 95,
+      "original_title": "Industrial Vending Machine Market, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Industry Report",
+      "extracted_regions": [],
+      "topic": "Industrial Vending Machine",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 96,
+      "original_title": "Nonwoven Fabrics Market Size, Share, Growth Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Growth Report",
+      "extracted_regions": [],
+      "topic": "Nonwoven Fabrics",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 97,
+      "original_title": "Rehabilitation Robots Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Rehabilitation Robots",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 98,
+      "original_title": "Animal Parasiticides Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Animal Parasiticides",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    },
+    {
+      "test_case": 99,
+      "original_title": "U.S. Industrial Internet Of Things Market, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Industry Report",
+      "extracted_regions": [
+        "United States"
+      ],
+      "topic": "Industrial Internet Of Things",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8500000000000001
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'United States': 1 matches"
+      }
+    },
+    {
+      "test_case": 100,
+      "original_title": "Digital Talent Acquisition Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "topic": "Digital Talent Acquisition",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": ""
+      }
+    }
+  ]
+}
