@@ -25,10 +25,22 @@ A systematic pattern-matching solution that extracts structured information (top
 @documentation/claude-component-integration.md
 @documentation/claude-pre-development-analysis.md
 
+## Experiments Directory Structure
+
+The `/experiments/` directory is organized into specialized subdirectories:
+
+- **Root Level**: Core infrastructure (00a-00c scripts) and main processing pipeline (01-07 scripts)
+- **`/experiments/tests/`**: Test harnesses, integration tests, and validation scripts
+- **`/experiments/debug/`**: Debug utilities and diagnostic scripts for troubleshooting
+- **`/experiments/patterns/`**: Pattern library management and database synchronization tools
+- **`/experiments/analysis/`**: Data analysis, performance research, and optimization scripts
+- **`/experiments/utilities/`**: Support utilities, migration scripts, and helper functions
+- **`/experiments/archive/`**: Legacy script versions and experimental approaches
+
 ### Testing Strategy
 
 **Development Process:**
-- Use `/experiments/` directory for iterative development
+- Use organized `/experiments/` subdirectories for specialized development workflows
 - MongoDB-based A/B testing for pattern libraries
 - Confidence scoring to identify titles needing human review
 - Real-time performance metrics for continuous improvement

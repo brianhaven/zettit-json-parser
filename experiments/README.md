@@ -1,5 +1,48 @@
 # Experiments Directory Organization
 
+## Directory Structure
+
+The experiments directory is organized into specialized subdirectories for better maintainability and navigation:
+
+### Core Infrastructure (`/experiments/` root)
+- **00a_mongodb_setup_v1.py** - MongoDB initialization and collection setup
+- **00b_pattern_library_manager_v1.py** - Pattern library management (used by Scripts 01-07)
+- **00c_output_directory_manager_v1.py** - Organized output directory creation utility
+
+### Main Processing Pipeline (`/experiments/` root)
+- **01-07 numbered scripts** - Core processing pipeline components in execution order
+
+### Specialized Subdirectories
+
+#### **`/experiments/tests/`** - Test Scripts and Validation
+- Test harnesses for individual components and full pipeline validation
+- Integration tests and component verification scripts
+- Pattern validation and accuracy measurement tools
+
+#### **`/experiments/debug/`** - Debug and Diagnostic Scripts
+- Debug utilities for troubleshooting specific processing issues
+- Variable scope analysis and workflow result debugging
+- Pattern matching diagnostics and reconstruction debugging
+
+#### **`/experiments/patterns/`** - Pattern Library Management
+- Pattern addition and verification utilities
+- Pattern audit and validation scripts
+- Database pattern synchronization tools
+
+#### **`/experiments/analysis/`** - Data Analysis and Research
+- Pattern consolidation analysis and execution
+- Performance analysis and optimization scripts
+- Data exploration and statistical analysis tools
+
+#### **`/experiments/utilities/`** - Support Utilities
+- One-time setup and migration scripts
+- Output directory management and reorganization tools
+- Miscellaneous utility functions
+
+#### **`/experiments/archive/`** - Legacy Components
+- Deprecated script versions and experimental approaches
+- Preserved for reference and rollback capabilities
+
 ## Processing Order Scripts
 
 These scripts should be run in numerical order for complete market research title processing:
