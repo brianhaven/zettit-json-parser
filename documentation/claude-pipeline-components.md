@@ -29,36 +29,37 @@
 - **Year validation (2020-2040 range)** with confidence scoring
 - **Performance:** 100% accuracy on titles with dates (exceeds 98-99% target)
 
-**03_report_type_extractor_v2.py:** **MARKET-AWARE** Report Type Extraction ✅ **PRODUCTION READY**
-- **DUAL PROCESSING LOGIC:** Handles market term and standard classifications differently
-- **Market Term Processing:** Extraction, rearrangement, and reconstruction workflow
-- **Standard Processing:** Direct database pattern matching
-- **Acronym-Embedded Processing:** Special handling for acronym extraction with pipeline preservation
-- **GitHub Issue #11 RESOLVED:** Fixed compound patterns matching before acronym_embedded
-- **Performance:** Achieved 95-97% accuracy target with 355 validated patterns across 5 format types
-- **Database Quality Assured:** Comprehensive pattern validation and malformed entry cleanup
+**03_report_type_extractor_v4.py:** **PURE DICTIONARY** Report Type Extraction ✅ **PRODUCTION READY**
+- **PURE DICTIONARY ARCHITECTURE:** Eliminates pattern priority system conflicts (Issues #13, #15, #16, #17 resolved)
+- **Boundary Detection:** Dictionary term identification around "Market" keyword
+- **Systematic Removal:** Dictionary terms removed through MongoDB pattern_libraries lookup
+- **90% Success Rate:** Achieved through dictionary-based boundary detection approach
+- **GitHub Issues #20, #21 RESOLVED:** Dictionary-based architecture implemented, workflow complexity eliminated
+- **Known Quality Issues:** Content loss (#27) and separator artifacts (#26) under active development
 
-### Market Term vs Standard Processing Logic
+### Script 03 v4 Pure Dictionary Processing Logic
 
-**Market Term Classification Processing Logic:**
-For titles classified as `market_for`, `market_in`, `market_by`, etc.:
-1. **Extract "Market"** from the market term phrase ("Market in" → extract "Market")
-2. **Preserve connector context** ("in Automotive" remains for pipeline)
-3. **Search for report type patterns** in remaining text **excluding "Market" prefix**
-4. **Reconstruct final report type** by prepending extracted "Market" to found pattern
+**Dictionary-Based Processing Workflow:**
+1. **Load Dictionary Terms:** Retrieve all dictionary terms from MongoDB pattern_libraries collection
+2. **Boundary Detection:** Identify dictionary terms in title text around "Market" keyword boundaries
+3. **Systematic Removal:** Remove identified dictionary terms from title systematically
+4. **Report Type Assembly:** Reconstruct report type from identified dictionary components
+5. **Topic Preservation:** Remaining text after systematic removal becomes the topic
 
-**Standard Classification Processing Logic:**
-For titles classified as `standard`:
-1. **Direct pattern matching** using complete database patterns
-2. **No rearrangement needed** - process title as-is after date removal
+**Key Architecture Benefits:**
+- **Eliminates Pattern Priority Conflicts:** No complex pattern matching hierarchies
+- **Database-driven exclusively:** All dictionary terms from MongoDB pattern_libraries
+- **Boundary Detection:** Prevents partial pattern matching issues
+- **Systematic Approach:** Consistent processing regardless of title complexity
+- **Quality Issues Identified:** Content loss and separator artifacts documented for resolution
 
-**Key Architecture:**
-- **Database-driven patterns exclusively** - no hardcoded patterns
-- **Dynamic market type loading** from MongoDB pattern_libraries collection
-- **Market prefix handling** for non-Market patterns during market term processing
-- **Confidence scoring** differentiated by processing type
+**Current Issues (Under Development):**
+- **Issue #27:** Pre-Market dictionary terms causing content loss
+- **Issue #26:** Separator artifacts in report type reconstruction
+- **Issue #28:** Market term context integration failures
+- **Issue #29:** Parentheses conflict between date and report type detection
 
-**04_geographic_entity_detector_v1.py:** **ENHANCED** Geographic Entity Detection
+**04_geographic_entity_detector_v2.py:** **LEAN PATTERN-BASED** Geographic Entity Detection
 - **HTML Processing Innovation:** BeautifulSoup parsing prevents concatenation artifacts
 - **Dual spaCy Model Validation:** en_core_web_md + en_core_web_lg for 31% more discoveries
 - **Enhanced HTML Cleaning:** Proper block-level separators prevent "KoreaIndonesiaAustralia" errors

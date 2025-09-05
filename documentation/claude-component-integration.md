@@ -20,8 +20,8 @@ pattern_lib_manager = pattern_manager.PatternLibraryManager(os.getenv('MONGODB_U
 # Initialize ALL components with PatternLibraryManager
 market_classifier = script01.MarketTermClassifier(pattern_lib_manager)
 date_extractor = script02.EnhancedDateExtractor(pattern_lib_manager)
-report_extractor = script03.MarketAwareReportTypeExtractor(pattern_lib_manager)
-geo_detector = script04.GeographicEntityDetector(pattern_lib_manager)  # UPDATED: Must use PatternLibraryManager
+report_extractor = script03.PureDictionaryReportTypeExtractor(pattern_lib_manager)
+geo_detector = script04.GeographicEntityDetector(patterns_collection)  # Script 04 v2 uses raw collection
 topic_extractor = script05.TopicExtractor(pattern_lib_manager)         # ALL scripts follow this pattern
 ```
 
@@ -33,14 +33,14 @@ patterns_collection = client['deathstar']['pattern_libraries']
 geo_detector = script04.GeographicEntityDetector(patterns_collection)
 ```
 
-## Current Component Class Names (VERIFIED 2025-08-27)
+## Current Component Class Names (UPDATED 2025-09-05)
 **ALWAYS verify class names before creating test scripts:**
 
 | Script | Current Class Name | Initialization | Main Method | Legacy/Incorrect Names |
 |--------|-------------------|---------------|-------------|------------------------|
 | 01 | `MarketTermClassifier` | `(pattern_library_manager=None)` | `classify(title)` | ✓ (unchanged) |
 | 02 | `EnhancedDateExtractor` | `(pattern_library_manager)` REQUIRED | `extract(title)` | ❌ `DateExtractor` |
-| 03 | `MarketAwareReportTypeExtractor` | `(pattern_library_manager)` REQUIRED | `extract(title, market_term_type="standard")` | ❌ `ReportTypeExtractor` |
+| 03 v4 | `PureDictionaryReportTypeExtractor` | `(pattern_library_manager)` REQUIRED | `extract(title)` | ❌ `MarketAwareReportTypeExtractor` (v2) |
 | 04 v2 | `GeographicEntityDetector` | `(patterns_collection)` RAW | `extract_geographic_entities(text)` | ✓ (lean architecture) |
 | 05 | `TopicExtractor` | `(pattern_library_manager)` | `extract(title)` | (to be confirmed) |
 

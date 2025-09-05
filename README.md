@@ -78,7 +78,7 @@ Market research report titles contain valuable structured data that needs to be 
 ### MongoDB-First Systematic Processing
 1. ✅ **Market Term Classification**: Separate special patterns ("Market for"/"Market in") from standard titles - **100% accuracy**
 2. ✅ **Enhanced Date Extraction**: Numeric pre-filtering with 64-pattern library (`extracted_forecast_date_range`) - **100% accuracy on titles with dates**
-3. **Report Type Processing**: ✅ **PRODUCTION READY** - Market-aware processing with 355 validated patterns + **NEW v3 Dictionary-Based Detection** (`extracted_report_type`)
+3. **Report Type Processing**: ✅ **Script 03 v4 PRODUCTION READY** - Pure dictionary-based boundary detection achieving 90% success rate (`extracted_report_type`)
 4. **Geographic Entity Detection**: Compound-priority matching from MongoDB libraries (`extracted_regions`)
 5. **Topic Extraction**: Preserve complete technical compounds (`topic` and `topicName`)
 
@@ -91,7 +91,7 @@ Market research report titles contain valuable structured data that needs to be 
 - **Geographic Entities**: 363+ regions, countries, acronyms with compound-first processing
 - **Market Term Exceptions**: Handle "After Market", "Marketplace", edge cases
 - **Date Pattern Recognition**: Standard, bracketed, and embedded date formats
-- **Report Type Standardization**: 355 validated patterns across 5 format types + **Enhanced Dictionary-Based v3 Detection**
+- **Report Type Processing**: Script 03 v4 pure dictionary architecture with MongoDB boundary detection
 
 ## Key Features
 
@@ -183,24 +183,24 @@ python experiments/title_pattern_discovery_v1.py
 - **Dataset Size**: 19,558 market research titles
 - **Phase 1 Complete**: ✅ Market classification with 100% accuracy
 - **Phase 2 Complete**: ✅ Date extraction with 100% accuracy on titles with dates (979/979)
-- **Phase 3 Complete**: ✅ Report type extraction production-ready with 355 validated patterns
-  - **GitHub Issue #11 Resolved**: Fixed acronym-embedded pattern processing
-  - **Market-Aware Processing**: Dual workflows for different title classifications
-  - **Database Quality Assured**: Comprehensive pattern validation and cleanup
-  - **NEW Script 03 v3**: 🔄 Dictionary-based detection approach (GitHub Issue #20) - simplifies 921 patterns to 8 primary + 48 secondary keywords (Global preserved for Script 04)
-- **Phase 4 Ready**: 🔄 Geographic Entity Detection ready for lean pattern-based refactoring
+- **Phase 3 Complete**: ✅ Script 03 v4 pure dictionary architecture production-ready with 90% success rate
+  - **GitHub Issues #13, #15, #16, #17, #20, #21 Resolved**: Priority system conflicts eliminated through dictionary approach
+  - **Pure Dictionary Processing**: Boundary detection around "Market" keyword with systematic removal
+  - **Quality Issues Identified**: Content loss (#27) and separator artifacts (#26) under active development
+  - **250-Document Testing**: Comprehensive pipeline validation completed September 2025
+- **Phase 4 Complete**: ✅ Geographic Entity Detection lean pattern-based refactoring (Script 04 v2 operational)
 - **Enhanced Categorization**: 21 titles correctly identified as having no dates (not failures)
 - **Pattern Libraries**: 64 date patterns + 355 report type patterns across multiple format types
 - **Geographic Coverage**: ~9% of titles contain regional information  
 - **Topic Preservation**: Complete technical compound retention
-- **Overall Success Rate**: Exceeding 95-98% target accuracy (89% complete processing foundation)
+- **Overall Success Rate**: Script 03 v4 achieving 90% success rate with 99.2% extraction rate (248/250 topics) in comprehensive testing
 
-### Latest Improvements (August 27, 2025):
-- **Documentation Optimization**: CLAUDE.md reduced from 866 to 182 lines (79% reduction)
-- **Modular Documentation**: 7 focused documentation files with @ reference system
-- **Integration Error Prevention**: Comprehensive guides to prevent common debugging cycles
-- **Component Verification**: Current class names and method signatures validated
-- **Pre-Development Analysis**: Enhanced error prevention patterns and verification commands
+### Latest Improvements (September 2025):
+- **Script 03 v4 Implementation**: Pure dictionary architecture achieving 90% success rate
+- **GitHub Issues Resolution**: 6 legacy issues closed (#13, #15, #16, #17, #20, #21, #25)
+- **Comprehensive Testing**: 250-document pipeline validation with detailed quality analysis
+- **Infrastructure Completion**: Organized output directory structure implemented
+- **Quality Issue Identification**: Content loss and separator artifacts documented for resolution
 
 ## Sample Processing Results
 
