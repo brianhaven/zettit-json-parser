@@ -1,0 +1,76 @@
+Issue #26 Fix - Regression Test Results
+============================================================
+Test Date (PDT): 2025-09-10 16:16:54 PDT
+Test Date (UTC): 2025-09-10 23:16:54 UTC
+============================================================
+
+Test Case 1 (separator_cleanup):
+  Input:        Global Market & Size & Share & Report 2025
+  Extracted:    Market Size Share Report
+  Remaining:    Global 2025
+  Status:       PASSED
+----------------------------------------
+Test Case 2 (separator_cleanup):
+  Input:        Market & Industry & Analysis & Forecast
+  Extracted:    Market Industry Analysis Forecast
+  Remaining:    
+  Status:       PASSED
+----------------------------------------
+Test Case 3 (normal):
+  Input:        Global Automotive Market Analysis Report 2025
+  Extracted:    Market Analysis Report
+  Remaining:    Global Automotive 2025
+  Status:       PASSED
+----------------------------------------
+Test Case 4 (normal):
+  Input:        APAC Personal Protective Equipment Market Study
+  Extracted:    Market Study
+  Remaining:    APAC Personal Protective Equipment
+  Status:       PASSED
+----------------------------------------
+Test Case 5 (normal):
+  Input:        North America Healthcare Market Size and Forecast
+  Extracted:    Market Size and Forecast
+  Remaining:    North America Healthcare
+  Status:       PASSED
+----------------------------------------
+Test Case 6 (normal):
+  Input:        Europe Electric Vehicle Market Trends Report
+  Extracted:    Market Trends Report
+  Remaining:    Europe Electric Vehicle
+  Status:       PASSED
+----------------------------------------
+Test Case 7 (normal_with_and):
+  Input:        Global Market Research and Analysis
+  Extracted:    Market Research and Analysis
+  Remaining:    Global
+  Status:       PASSED
+----------------------------------------
+Test Case 8 (normal_with_and):
+  Input:        Market Size and Share Analysis
+  Extracted:    Market Size Share and Analysis
+  Remaining:    
+  Status:       PASSED
+----------------------------------------
+Test Case 9 (simple):
+  Input:        Market Report
+  Extracted:    Market Report
+  Remaining:    
+  Status:       PASSED
+----------------------------------------
+Test Case 10 (simple):
+  Input:        Market Analysis
+  Extracted:    Market Analysis
+  Remaining:    
+  Status:       PASSED
+----------------------------------------
+
+============================================================
+SUMMARY:
+  Total Tests: 10
+  Passed: 10
+  Failed: 0
+  Success Rate: 100.0%
+
+✓ SUCCESS: Regression test passed (>= 90% success rate)
+✓ Issue #26 fix is working without breaking existing functionality!

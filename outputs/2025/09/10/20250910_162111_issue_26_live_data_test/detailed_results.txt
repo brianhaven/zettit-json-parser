@@ -1,0 +1,70 @@
+Issue #26 Fix - Live Data Test Results
+============================================================
+Test Date (PDT): 2025-09-10 16:21:11 PDT
+Test Date (UTC): 2025-09-10 23:21:11 UTC
+Total Titles Tested: 50
+============================================================
+
+[CLEANED] Test 1:
+  Title: Space-based Solar Power Market Size & Share Report, 2030
+  Extracted: Market Size Share Report (& removed)
+----------------------------------------
+[CLEANED] Test 2:
+  Title: Entertainment Market Size, Share & Trends, Industry Report, 2019-2025
+  Extracted: Market Size Share Trends Industry Report (& removed)
+----------------------------------------
+[CLEANED] Test 4:
+  Title: Alternative Fuels Market Size & Share, Industry Report 2030
+  Extracted: Market Size Share Industry Report (& removed)
+----------------------------------------
+[CLEANED] Test 5:
+  Title: Recreational Vehicle Market Size & Share Report, 2030
+  Extracted: Market Size Share Report (& removed)
+----------------------------------------
+[CLEANED] Test 7:
+  Title: Olive Market Size, Share & Growth, Industry Report, 2030
+  Extracted: Market Size Share Growth Industry Report (& removed)
+----------------------------------------
+[CLEANED] Test 17:
+  Title: Enterprise Video Market Size & Share, Industry Report, 2030
+  Extracted: Market Size Share Industry Report (& removed)
+----------------------------------------
+[CLEANED] Test 19:
+  Title: Data Wrangling Market Size & Share, Industry Report, 2030
+  Extracted: Market Size Share Industry Report (& removed)
+----------------------------------------
+[CLEANED] Test 23:
+  Title: IoT Device Management Market Size & Share Report, 2030
+  Extracted: Market Size Share Report (& removed)
+----------------------------------------
+[CLEANED] Test 31:
+  Title: Speech Analytics Market Size, Share & Trends Report, 2030
+  Extracted: Market Size Share Trends Report (& removed)
+----------------------------------------
+[CLEANED] Test 39:
+  Title: Marine Scrubber Market Size & Share, Industry Report, 2030
+  Extracted: Market Size Share Industry Report (& removed)
+----------------------------------------
+[CLEANED] Test 44:
+  Title: Chiral Chemicals Market Size & Share, Industry Report 2030
+  Extracted: Market Size Share Industry Report (& removed)
+----------------------------------------
+[CLEANED] Test 47:
+  Title: MENA Artificial Intelligence Market Size & Share Report 2030
+  Extracted: Market Size Share Report (& removed)
+----------------------------------------
+[CLEANED] Test 49:
+  Title: Managed File Transfer Market Size & Share [2023 Report]
+  Extracted: Market Size Share Report (& removed)
+----------------------------------------
+
+============================================================
+SUMMARY:
+  Total Titles: 50
+  Successful Extractions: 50 (100.0%)
+  Failed Extractions: 0
+  Titles with & in original: 13
+  Successfully cleaned: 13 (100.0% of those with &)
+
+✓ SUCCESS: Live data test passed!
+✓ All separator artifacts were successfully cleaned!

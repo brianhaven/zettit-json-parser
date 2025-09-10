@@ -1,0 +1,46 @@
+Issue #26 Separator Cleanup Test Results
+============================================================
+Test Date (PDT): 2025-09-10 16:15:42 PDT
+Test Date (UTC): 2025-09-10 23:15:42 UTC
+============================================================
+
+Test Case 1: Multiple & separators
+  Input:    Market & Size & Share & Report
+  Expected: Market Size Share Report
+  Actual:   Market Size Share Report
+  Status:   PASSED
+----------------------------------------
+Test Case 2: Multiple & separators with Trends
+  Input:    Market & Size & Trends & Report
+  Expected: Market Size Trends Report
+  Actual:   Market Size Trends Report
+  Status:   PASSED
+----------------------------------------
+Test Case 3: Multiple & separators with Industry
+  Input:    Market & Size & Share & Industry & Report
+  Expected: Market Size Share Industry Report
+  Actual:   Market Size Share Industry Report
+  Status:   PASSED
+----------------------------------------
+Test Case 4: Multiple & separators with Analysis
+  Input:    Market & Size & Share & Analysis & Report
+  Expected: Market Size Share Analysis Report
+  Actual:   Market Size Share Analysis Report
+  Status:   PASSED
+----------------------------------------
+Test Case 5: Multiple & separators with Growth Analysis
+  Input:    Market & Size & Share & Growth & Analysis & Report
+  Expected: Market Size Share Growth Analysis Report
+  Actual:   Market Size Share Growth Analysis Report
+  Status:   PASSED
+----------------------------------------
+Test Case 6: Mixed spacing with & separators
+  Input:    Market Size & Outlook & Statistics
+  Expected: Market Size Outlook Statistics
+  Actual:   Market Size Outlook Statistics
+  Status:   PASSED
+----------------------------------------
+
+============================================================
+Summary: 6/6 tests passed
+✓ ALL TESTS PASSED - Issue #26 fix is working correctly!

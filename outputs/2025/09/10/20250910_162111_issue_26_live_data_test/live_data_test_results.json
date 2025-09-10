@@ -1,0 +1,512 @@
+{
+  "test_date": "2025-09-10T23:21:11.357142+00:00",
+  "total_titles": 50,
+  "successful": 50,
+  "failed": 0,
+  "with_separators": 13,
+  "cleaned": 13,
+  "success_rate": 100.0,
+  "cleanup_rate": 100.0,
+  "results": [
+    {
+      "test_num": 1,
+      "title": "Space-based Solar Power Market Size & Share Report, 2030",
+      "extracted_report_type": "Market Size Share Report",
+      "remaining": "Space-based Solar Power , 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 2,
+      "title": "Entertainment Market Size, Share & Trends, Industry Report, 2019-2025",
+      "extracted_report_type": "Market Size Share Trends Industry Report",
+      "remaining": "Entertainment , 2019-2025",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 3,
+      "title": "Glycolic Acid Beauty Products Market Size Report, 2030",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "Glycolic Acid Beauty Products , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 4,
+      "title": "Alternative Fuels Market Size & Share, Industry Report 2030",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "remaining": "Alternative Fuels 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 5,
+      "title": "Recreational Vehicle Market Size & Share Report, 2030",
+      "extracted_report_type": "Market Size Share Report",
+      "remaining": "Recreational Vehicle , 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 6,
+      "title": "Disposable Blood Pressure Cuffs Market Size Report, 2030",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "Disposable Blood Pressure Cuffs , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 7,
+      "title": "Olive Market Size, Share & Growth, Industry Report, 2030",
+      "extracted_report_type": "Market Size Share Growth Industry Report",
+      "remaining": "Olive , 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 8,
+      "title": "U.S. Long-term Care Private Insurance Market Report, 2030",
+      "extracted_report_type": "Market Report",
+      "remaining": "U.S. Long-term Care Private Insurance , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 9,
+      "title": "Medical Image Analysis Software Market Size Report, 2030",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "Medical Image , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 10,
+      "title": "Aerosol Valves Market Size, Share And Trends Report, 2030",
+      "extracted_report_type": "Market Size Share Trends Report",
+      "remaining": "Aerosol Valves , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 11,
+      "title": "Cloud Managed Network Market Size, Industry Report, 2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "remaining": "Cloud Managed Network , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 12,
+      "title": "Postmenopausal Osteoporosis Treatment Market Report 2030",
+      "extracted_report_type": "Market Report",
+      "remaining": "Postmenopausal Osteoporosis Treatment 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 13,
+      "title": "U.S. Scented Candles Market Size, Industry Report, 2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "remaining": "U.S. Scented Candles , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 14,
+      "title": "Blood Filtration And Purification Market, Industry Report, 2030",
+      "extracted_report_type": "Market Industry Report",
+      "remaining": "Blood Filtration And Purification , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 15,
+      "title": "U.S. Industrial Ceiling Fan Market, Industry Report, 2030",
+      "extracted_report_type": "Market Industry Report",
+      "remaining": "U.S. Industrial Ceiling Fan , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 16,
+      "title": "Contact Tracing Technology Market Report, 2021-2028",
+      "extracted_report_type": "Market Report",
+      "remaining": "Contact Tracing Technology , 2021-2028",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 17,
+      "title": "Enterprise Video Market Size & Share, Industry Report, 2030",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "remaining": "Enterprise Video , 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 18,
+      "title": "Hydroxyethyl Methyl Cellulose Market Report, 2022-2030",
+      "extracted_report_type": "Market Report",
+      "remaining": "Hydroxyethyl Methyl Cellulose , 2022-2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 19,
+      "title": "Data Wrangling Market Size & Share, Industry Report, 2030",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "remaining": "2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 20,
+      "title": "U.S. Negative Pressure Wound Therapy Market, Industry Report, 2030",
+      "extracted_report_type": "Market Industry Report",
+      "remaining": "U.S. Negative Pressure Wound Therapy , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 21,
+      "title": "Rotary Hammer Drill Market Size And Share Report, 2030",
+      "extracted_report_type": "Market Size Share Report",
+      "remaining": "Rotary Hammer Drill , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 22,
+      "title": "Edible Films And Coating Market Size Report, 2028",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "Edible Films And Coating , 2028",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 23,
+      "title": "IoT Device Management Market Size & Share Report, 2030",
+      "extracted_report_type": "Market Size Share Report",
+      "remaining": "IoT Device Management , 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 24,
+      "title": "U.S. Automotive Protection Films Market Size, Report, 2030",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "U.S. Automotive Protection Films , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 25,
+      "title": "U.S. Hematology Diagnostics Market, Industry Report, 2030",
+      "extracted_report_type": "Market Industry Report",
+      "remaining": "U.S. Hematology Diagnostics , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 26,
+      "title": "Caprolactam Market Size, Share And Trends Report, 2030",
+      "extracted_report_type": "Market Size Share Trends Report",
+      "remaining": "Caprolactam , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 27,
+      "title": "Cloud Information Technology Service Management Market Report 2030",
+      "extracted_report_type": "Market Report",
+      "remaining": "Cloud Information Technology Service Management 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 28,
+      "title": "Faucet Market Size, Share And Trends, Industry Report, 2030",
+      "extracted_report_type": "Market Size Share Trends Industry Report",
+      "remaining": "Faucet , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 29,
+      "title": "Taiwan Liquid Dietary Supplements Market Size Report, 2030",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "Taiwan Liquid Dietary Supplements , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 30,
+      "title": "Sugar Market Size, Share, Trends And Growth Report, 2030",
+      "extracted_report_type": "Market Size Share Trends Growth Report",
+      "remaining": "Sugar , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 31,
+      "title": "Speech Analytics Market Size, Share & Trends Report, 2030",
+      "extracted_report_type": "Market Size Share Trends Report",
+      "remaining": "Speech Analytics , 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 32,
+      "title": "South Africa Hemodialysis And Peritoneal Dialysis Market, Report, 2030",
+      "extracted_report_type": "Market Report",
+      "remaining": "South Africa Hemodialysis And Peritoneal Dialysis , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 33,
+      "title": "Hemodialysis Catheters Market Size, Industry Report, 2033",
+      "extracted_report_type": "Market Size Industry Report",
+      "remaining": "Hemodialysis Catheters , 2033",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 34,
+      "title": "Medical Grade Silicone Rubber Market Size Report, 2030",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "Medical Grade Silicone Rubber , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 35,
+      "title": "Enteral Feeding Devices Market Size, Industry Report, 2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "remaining": "Enteral Feeding Devices , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 36,
+      "title": "Antibiotics Market Size, Share, Trends, Industry Report, 2033",
+      "extracted_report_type": "Market Size Share Trends Industry Report",
+      "remaining": "Antibiotics , 2033",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 37,
+      "title": "Manufacturing Operations Management Software Market Report, 2030",
+      "extracted_report_type": "Market Report",
+      "remaining": "Manufacturing Operations Management Software , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 38,
+      "title": "Special Mission Aircraft Market Size, Global Industry Report, 2025",
+      "extracted_report_type": "Market Size Industry Report",
+      "remaining": "Special Mission Aircraft , 2025",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 39,
+      "title": "Marine Scrubber Market Size & Share, Industry Report, 2030",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "remaining": "Marine Scrubber , 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 40,
+      "title": "Huntington\u2019s Disease Treatment Market Size Report, 2030",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "Huntington\u2019s Disease Treatment , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 41,
+      "title": "Virtual Networking Market Size, Share, Industry Report, 2030",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "remaining": "Virtual Networking , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 42,
+      "title": "Sponge And Scouring Pads Market, Industry Report, 2030",
+      "extracted_report_type": "Market Industry Report",
+      "remaining": "Sponge And Scouring Pads , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 43,
+      "title": "Africa Mining Chemicals Market Size Report, 2021-2028",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "Africa Mining Chemicals , 2021-2028",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 44,
+      "title": "Chiral Chemicals Market Size & Share, Industry Report 2030",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "remaining": "Chiral Chemicals 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 45,
+      "title": "Cloud-native Application Protection Platform Market Report 2030",
+      "extracted_report_type": "Market Report",
+      "remaining": "Cloud-native Application Protection Platform 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 46,
+      "title": "Global Industrial Silica Sand Market Size Report, 2019-2025",
+      "extracted_report_type": "Market Size Report",
+      "remaining": "Global Industrial Silica Sand , 2019-2025",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 47,
+      "title": "MENA Artificial Intelligence Market Size & Share Report 2030",
+      "extracted_report_type": "Market Size Share Report",
+      "remaining": "MENA Artificial Intelligence 2030",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 48,
+      "title": "Satellite Data Services Market Size, Industry Report, 2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "remaining": "Satellite , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    },
+    {
+      "test_num": 49,
+      "title": "Managed File Transfer Market Size & Share [2023 Report]",
+      "extracted_report_type": "Market Size Share Report",
+      "remaining": "Managed File Transfer ]",
+      "had_separator": true,
+      "has_separator_now": false,
+      "cleaned": true,
+      "success": true
+    },
+    {
+      "test_num": 50,
+      "title": "Europe Facial Injectable Market Size, Industry Report, 2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "remaining": "Europe Facial Injectable , 2030",
+      "had_separator": false,
+      "has_separator_now": false,
+      "cleaned": false,
+      "success": true
+    }
+  ]
+}
