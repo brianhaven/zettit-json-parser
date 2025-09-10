@@ -294,6 +294,18 @@ test_cases = [
 
 The ampersand preservation issue stems from regex pattern limitations rather than intentional symbol removal. The proposed solution enhances pattern matching to handle comma-separated keywords while preserving all special characters. This fix improves technical accuracy without compromising the existing dictionary-based architecture.
 
+## UPDATE: Simple Pattern Enhancement Recommended (CHOSEN APPROACH)
+
+After comprehensive analysis, a **simple single-line pattern fix** has been identified as the optimal solution. See GitHub Issue #19 comment: https://github.com/brianhaven/zettit-json-parser/issues/19#issuecomment-3273482651
+
+**Chosen Implementation Approach:**
+1. **Single Line Fix**: Modify Line 524 in Script 03v4 to enhance the regex pattern
+2. **Pattern Change**: Replace `([^,]*?)` with `(.+?)` to capture all symbols including `&`, `+`, `-`, `/`
+3. **Comma Handling**: Enhance lookahead with `(?:,\s*(?:{keywords})|` to handle comma-separated keywords
+4. **Expected Results**: "Windows & Patio Doors Market For Single Family Homes" → "Windows & Patio Doors for Single Family Homes" ✅
+
+**Rationale**: This simple approach addresses the root cause (pattern matching failure) with minimal risk and complexity. The enhanced pattern naturally preserves all special characters without requiring validation layers, symbol recovery mechanisms, or multiple pattern attempts. Maintains consistency with the simple solution philosophy used for Issues #26, #27, #28, and #29.
+
 ## Code References
 
 **File:** `/experiments/03_report_type_extractor_v4.py`
