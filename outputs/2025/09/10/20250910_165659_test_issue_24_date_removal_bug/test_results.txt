@@ -1,0 +1,87 @@
+================================================================================
+TEST ISSUE 24 DATE REMOVAL BUG
+Date Removal Bug Test
+================================================================================
+Analysis Date (PDT): 2025-09-10 16:57:00 PDT
+Analysis Date (UTC): 2025-09-10 23:57:00 UTC
+================================================================================
+
+
+================================================================================
+GitHub Issue #24: Date Removal Bug Test Results
+================================================================================
+
+⚠️  BUG CONFIRMED: Dates are not being removed from the returned title!
+The bug is on line 332 of 02_date_extractor_v1.py
+It returns 'title=title' instead of 'title=cleaned_title'
+
+--------------------------------------------------------------------------------
+Detailed Test Results:
+--------------------------------------------------------------------------------
+
+Test Case 1: BUG DETECTED
+Original:  Global Market for AI, Machine Learning, and Deep Learning Technologies, 2025-2030
+Date:      2025-2030
+Returned:  Global Market for AI, Machine Learning, and Deep Learning Technologies, 2025-2030
+Cleaned:   Global Market for AI, Machine Learning, and Deep Learning Technologies
+⚠️  ERROR: Date '2025-2030' still present in returned title!
+
+Test Case 2: BUG DETECTED
+Original:  North America, Europe IoT Market, Healthcare, Automotive Applications, 2024-2028
+Date:      2024-2028
+Returned:  North America, Europe IoT Market, Healthcare, Automotive Applications, 2024-2028
+Cleaned:   North America, Europe IoT Market, Healthcare, Automotive Applications
+⚠️  ERROR: Date '2024-2028' still present in returned title!
+
+Test Case 3: BUG DETECTED
+Original:  Market in Asia-Pacific: Semiconductors, Electronics & Components, Q1 2025
+Date:      2025
+Returned:  Market in Asia-Pacific: Semiconductors, Electronics & Components, Q1 2025
+Cleaned:   Market in Asia-Pacific: Semiconductors, Electronics & Components, Q1
+⚠️  ERROR: Date '2025' still present in returned title!
+
+Test Case 4: BUG DETECTED
+Original:  European Market for Renewable Energy, Wind, Solar, and Hydroelectric Power Markets, 2025
+Date:      2025
+Returned:  European Market for Renewable Energy, Wind, Solar, and Hydroelectric Power Markets, 2025
+Cleaned:   European Market for Renewable Energy, Wind, Solar, and Hydroelectric Power Markets
+⚠️  ERROR: Date '2025' still present in returned title!
+
+Test Case 5: BUG DETECTED
+Original:  Market Report, 2030
+Date:      2030
+Returned:  Market Report, 2030
+Cleaned:   Market Report
+⚠️  ERROR: Date '2030' still present in returned title!
+
+Test Case 6: BUG DETECTED
+Original:  Market Analysis, 2023-2030
+Date:      2023-2030
+Returned:  Market Analysis, 2023-2030
+Cleaned:   Market Analysis
+⚠️  ERROR: Date '2023-2030' still present in returned title!
+
+Test Case 7: BUG DETECTED
+Original:  Market Study [2024]
+Date:      2024
+Returned:  Market Study [2024]
+Cleaned:   Market Study
+⚠️  ERROR: Date '2024' still present in returned title!
+
+Test Case 8: BUG DETECTED
+Original:  Market Outlook 2031
+Date:      2031
+Returned:  Market Outlook 2031
+Cleaned:   Market
+⚠️  ERROR: Date '2031' still present in returned title!
+
+--------------------------------------------------------------------------------
+Summary:
+--------------------------------------------------------------------------------
+Total test cases: 8
+Cases with bug:   8
+Cases without bug: 0
+
+⚠️  ACTION REQUIRED: Fix line 332 in 02_date_extractor_v1.py
+Change: title=title,
+To:     title=cleaned_title,
