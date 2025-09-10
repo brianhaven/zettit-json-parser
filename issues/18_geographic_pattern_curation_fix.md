@@ -215,9 +215,21 @@ Created `analyze_problematic_abbreviations.py` to:
 - [ ] Verify false positive elimination
 - [ ] Update pattern library documentation
 
+## UPDATE: Targeted Pattern Curation with Expanded Scope (CHOSEN APPROACH)
+
+After comprehensive analysis, a **targeted approach with expanded scope** has been identified as the optimal strategy. See GitHub Issue #18 comment: https://github.com/brianhaven/zettit-json-parser/issues/18#issuecomment-3273602273
+
+**Chosen Implementation Approach:**
+1. **Archive 6 Problematic Abbreviations**: Move ID, OR, MS, GO, IN, IT from `aliases` to `archived_aliases` field
+2. **Remove 3 Invalid Compound Regions**: Delete "North and South America", "Europe and Asia", "Asia and Middle East" patterns
+3. **Use Existing Infrastructure**: Leverage proven `archived_aliases` mechanism and existing curation script
+4. **Targeted Validation**: Test against specific problem cases for immediate feedback
+
+**Rationale**: This approach addresses the documented Issue #18 problems (Idaho "ID" and compound regions) while expanding to include the most problematic abbreviations identified in the comprehensive analysis. Uses existing MongoDB infrastructure that has successfully handled similar issues for 35+ regions, following our proven simple solution philosophy with practical scope expansion.
+
 ## Conclusion
 
-The geographic pattern curation issue can be resolved using the existing `archived_aliases` field pattern already proven successful for 35+ regions. The solution requires minimal code changes - only database updates to move problematic abbreviations and remove invalid compound patterns. This approach maintains backward compatibility while significantly improving extraction accuracy.
+The geographic pattern curation issue can be resolved using the existing `archived_aliases` field pattern already proven successful for 35+ regions. The targeted approach with expanded scope addresses both the specific documented issues and the highest-priority problematic abbreviations through database updates only, maintaining backward compatibility while significantly improving extraction accuracy.
 
 ## Appendix: Pattern Curation Commands
 
