@@ -297,6 +297,18 @@ The geographic detector has partial standardization already completed (`title` a
 
 The `extracted_regions` naming is actually more appropriate than `extracted_geographic_entities` for the domain and should be retained. This approach provides the best balance of standardization and practicality.
 
+## UPDATE: Minimal Solution Approach Recommended (CHOSEN APPROACH)
+
+After comprehensive analysis, the **minimal solution approach** has been identified as the optimal strategy. See GitHub Issue #22 comment: https://github.com/brianhaven/zettit-json-parser/issues/22#issuecomment-3273518173
+
+**Chosen Implementation Approach:**
+1. **Standardize Only Two Attributes**: Change `confidence_score` → `confidence` and `processing_notes` → `notes`
+2. **Keep `extracted_regions` Unchanged**: Domain-appropriate terminology that matches business usage
+3. **Minimal Impact**: Only affects 2 attributes, preserves pipeline integration and extensive test coverage
+4. **Simple Migration**: Find-replace operations for affected files, no logic changes required
+
+**Rationale**: This approach fixes the actual inconsistencies (confidence and notes naming) while preserving what works well (extracted_regions naming and usage). Follows the proven simple solution philosophy successful for Issues #19, #28, #29, and #24 by targeting real problems with minimal risk and integration impact.
+
 ## Recommended Actions
 
 1. **Immediate:** Standardize `confidence` and `notes` attributes only
