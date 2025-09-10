@@ -286,22 +286,31 @@ Ensure the fix doesn't impact:
 - Implement feature flag for separator cleanup (optional)
 - Gradual rollout with monitoring
 
+## UPDATE: Simpler Solution Recommended
+
+After further analysis, a simpler solution has been proposed that addresses the separator artifacts with minimal risk and complexity. See GitHub Issue #26 comment: https://github.com/brianhaven/zettit-json-parser/issues/26#issuecomment-3273424480
+
 ## Recommended Implementation
 
-### Immediate Fix (Quick Win)
+### Simple Fix (Recommended - Low Risk)
+```python
+# Add to _clean_reconstructed_type() method:
+# ISSUE #26 FIX: Remove separator artifacts
+cleaned = re.sub(r'\s*&\s*', ' ', reconstructed)  # Remove & separators
+cleaned = re.sub(r'\s+', ' ', cleaned).strip()    # Clean extra spaces
+```
+
+**Rationale**: 
+- **Minimal Risk**: Only 2-line addition to existing cleanup method
+- **Fast Implementation**: 15-30 minutes vs 2-3 hours for complex approach
+- **Easy Rollback**: Simple to revert if issues arise
+- **Preserves Issue #21**: Doesn't modify separator detection logic
+
+### Alternative: Complete Reconstruction Rewrite (Complex)
 ```python
 # In reconstruct_report_type_from_keywords(), replace lines 387-400 with:
 # Always use clean space separator for report types
 reconstructed = ' '.join(report_type_parts)
-```
-
-### Enhanced Fix (Production Ready)
-```python
-# Add to _clean_reconstructed_type() method:
-# Remove separator artifacts
-cleaned = re.sub(r'\s*&\s*', ' ', cleaned)
-cleaned = re.sub(r'\s*,\s*', ' ', cleaned)  # Optional: remove commas too
-cleaned = re.sub(r'\s+', ' ', cleaned).strip()
 ```
 
 ## Conclusion
