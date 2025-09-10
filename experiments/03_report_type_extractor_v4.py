@@ -446,8 +446,9 @@ class PureDictionaryReportTypeExtractor:
         if not reconstructed:
             return reconstructed
         
-        # Remove excessive spaces but preserve separators
-        cleaned = re.sub(r' +', ' ', reconstructed).strip()
+        # ISSUE #26 FIX: Remove separator artifacts
+        cleaned = re.sub(r'\s*&\s*', ' ', reconstructed)  # Remove & separators
+        cleaned = re.sub(r'\s+', ' ', cleaned).strip()    # Clean extra spaces
         
         # Fix common duplicate patterns
         patterns_to_fix = [
