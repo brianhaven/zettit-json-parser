@@ -396,6 +396,18 @@ The proposed solution addresses:
 
 Expected outcome: 95%+ accuracy for complex multi-comma titles while maintaining 100% accuracy for simple titles.
 
+## UPDATE: Simple Solution Approach Recommended (CHOSEN APPROACH)
+
+After comprehensive analysis, a **simple solution approach** has been identified as the optimal strategy. See GitHub Issue #24 comment: https://github.com/brianhaven/zettit-json-parser/issues/24#issuecomment-3273502282
+
+**Chosen Implementation Approach:**
+1. **Critical Bug Fix Only (Phase 1)**: Fix Line 332 in Script 02 (`title=cleaned_title` instead of `title=title`)
+2. **Immediate Testing**: Test with 8 complex multi-comma titles to measure actual improvement
+3. **Expected Results**: 90%+ resolution of multi-comma issues from single-line fix
+4. **Minimal Risk**: Simple, targeted fix consistent with successful Issues #19, #28, #29 approaches
+
+**Rationale**: The date removal bug likely causes 90%+ of reported multi-comma failures. Complex preprocessing and architectural changes may be solving theoretical problems rather than actual issues. This approach follows the proven simple solution philosophy that has been successful across recent GitHub issues.
+
 ## Appendix: Code Examples
 
 ### Complete Test Script for Validation
