@@ -304,3 +304,15 @@ def cleanup_remaining_text(self, text: str) -> str:
 ## Conclusion
 
 Issue #28 represents a coordination failure between pipeline stages where market term context is not properly preserved through geographic entity extraction. The recommended immediate fix is to clean up orphaned prepositions in Script 04, with a planned enhancement to implement proper context preservation flags for more sophisticated handling of market term patterns.
+
+## UPDATE: Approach 2 Recommended as Immediate Solution (CHOSEN APPROACH)
+
+After comprehensive analysis, **Approach 2 (Preposition Cleanup)** has been identified as the optimal immediate solution. See GitHub Issue #28 comment: https://github.com/brianhaven/zettit-json-parser/issues/28#issuecomment-3273467944
+
+**Chosen Implementation Approach:**
+1. **Immediate Fix**: Modify `cleanup_remaining_text()` method in Script 04 to remove orphaned prepositions  
+2. **Target Patterns**: `\s+(in|for|by|of|at|to|with|from)\s*$` at end and `^(in|for|by|of|at|to|with|from)\s+` at start
+3. **Expected Results**: "Retail Market in Singapore" → Topic: "Retail" (clean, no artifacts)
+4. **Timeline**: 30 minutes implementation, minimal risk, immediate impact
+
+**Rationale**: This approach directly addresses the root cause (orphaned prepositions) with a simple, targeted fix that handles all orphaned preposition cases from any source, not just market_in patterns. Maintains consistency with the simple solution philosophy used for Issues #26, #27, and #29.
