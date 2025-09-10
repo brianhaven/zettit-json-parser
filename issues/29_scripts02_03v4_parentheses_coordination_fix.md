@@ -351,6 +351,18 @@ The parentheses conflict in Issue #29 stems from Script 02 returning the origina
 4. Validate no regression
 5. Deploy to production
 
+## UPDATE: Simple 1-Line Fix Recommended (CHOSEN APPROACH)
+
+After comprehensive analysis, a simple 1-line fix has been identified as the optimal solution. See GitHub Issue #29 comment: https://github.com/brianhaven/zettit-json-parser/issues/29#issuecomment-3273451430
+
+**Chosen Implementation Approach:**
+1. **Phase 1 (IMMEDIATE)**: Fix Script 02 Line 332 to return `cleaned_title` instead of `title` (1-line change)
+2. **Phase 2**: Enhance `_create_cleaned_title()` method with empty parentheses cleanup and balancing logic  
+3. Test with provided test cases and validate with 250-document pipeline test
+4. This approach addresses the root cause with minimal risk and maximum impact
+
+**Rationale**: The bug is that Script 02 returns the original title instead of the cleaned title in the `title` field used by downstream processing. This simple field assignment fix eliminates the root cause completely.
+
 ---
 
 *This resolution plan addresses the parentheses coordination issue while maintaining system integrity and performance.*
