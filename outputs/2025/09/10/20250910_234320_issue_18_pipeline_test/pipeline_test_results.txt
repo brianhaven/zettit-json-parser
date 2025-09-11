@@ -1,0 +1,112 @@
+================================================================================
+ISSUE #18 PIPELINE INTEGRATION TEST
+Full pipeline test with curated geographic patterns
+================================================================================
+
+**Analysis Date (PDT):** 2025-09-10 23:43:22 PDT
+**Analysis Date (UTC):** 2025-09-11 06:43:22 UTC
+
+================================================================================
+
+================================================================================
+ISSUE #18 PIPELINE INTEGRATION TEST
+Testing full pipeline with curated geographic patterns
+================================================================================
+
+1. FALSE POSITIVE PREVENTION TESTS
+--------------------------------------------------
+
+Title: 'ID card printer Market Analysis, 2024'
+  Expected: []
+  Extracted: []
+  Should NOT extract: Idaho
+  ✓ PASS - 'ID' archived as abbreviation
+
+Title: 'Microsoft MS Office Market Study'
+  Expected: []
+  Extracted: []
+  Should NOT extract: Mississippi
+  ✓ PASS - 'MS' archived as abbreviation
+
+Title: 'Market for widgets OR gadgets'
+  Expected: []
+  Extracted: []
+  Should NOT extract: Oregon
+  ✓ PASS - 'OR' archived as abbreviation
+
+Title: 'GO programming language Market'
+  Expected: []
+  Extracted: []
+  Should NOT extract: Goiás
+  ✓ PASS - 'GO' archived as abbreviation
+
+
+2. CORRECT EXTRACTION TESTS
+--------------------------------------------------
+
+Title: 'Idaho potato Market Analysis'
+  Expected: ['Idaho']
+  Extracted: ['Idaho']
+  ✓ PASS - Full state name should extract
+
+Title: 'Oregon timber Market Report'
+  Expected: ['Oregon']
+  Extracted: ['Oregon']
+  ✓ PASS - Full state name should extract
+
+Title: 'Mississippi river transportation Market'
+  Expected: ['Mississippi']
+  Extracted: ['Mississippi']
+  ✓ PASS - Full state name should extract
+
+Title: 'North America automotive Market'
+  Expected: ['North America']
+  Extracted: ['North America']
+  ✓ PASS - Continental region should extract
+
+
+3. COMPOUND REGION SPLITTING TESTS
+--------------------------------------------------
+
+Title: 'North America and Europe semiconductor Market'
+  Expected: ['North America', 'Europe']
+  Extracted: ['North America', 'Europe']
+  ✓ PASS - Invalid compound should split into separate regions
+
+Title: 'Asia and Middle East pharmaceutical Market'
+  Expected: ['Asia', 'Middle East']
+  Extracted: ['Middle East', 'Asia']
+  ✓ PASS - Invalid compound should split into separate regions
+
+
+4. VALID COMPOUND PRESERVATION TESTS
+--------------------------------------------------
+
+Title: 'Australia and New Zealand dairy Market'
+  Expected: ['Australia and New Zealand']
+  Extracted: ['Australia and New Zealand']
+  ✓ PASS - Valid ANZ compound should remain intact
+
+Title: 'Europe, Middle East and Africa telecom Market'
+  Expected: ['Europe, Middle East and Africa']
+  Extracted: ['Europe, Middle East and Africa']
+  ✓ PASS - Valid EMEA compound should remain intact
+
+Title: 'Bosnia and Herzegovina tourism Market'
+  Expected: ['Bosnia and Herzegovina']
+  Extracted: ['Bosnia and Herzegovina']
+  ✓ PASS - Valid country name should remain intact
+
+
+================================================================================
+TEST SUMMARY
+================================================================================
+
+Total tests run: 13
+
+Note: This test validates that Issue #18 curation changes are working correctly
+in the actual processing pipeline.
+
+================================================================================
+END OF PIPELINE TEST
+================================================================================
