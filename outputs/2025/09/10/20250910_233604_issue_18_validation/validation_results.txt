@@ -1,0 +1,196 @@
+================================================================================
+ISSUE #18 VALIDATION
+Geographic Pattern Curation Validation Results
+================================================================================
+
+**Analysis Date (PDT):** 2025-09-10 23:36:06 PDT
+**Analysis Date (UTC):** 2025-09-11 06:36:06 UTC
+
+================================================================================
+
+================================================================================
+ISSUE #18 GEOGRAPHIC PATTERN VALIDATION
+================================================================================
+
+1. CHECKING PROBLEMATIC ABBREVIATIONS
+--------------------------------------------------
+
+Idaho:
+  Active aliases: ['ID']
+  Archived aliases: []
+  ⚠ WARNING: 'ID' still active (should be archived)
+
+Oregon:
+  Active aliases: ['OR']
+  Archived aliases: []
+  ⚠ WARNING: 'OR' still active (should be archived)
+
+Mississippi:
+  Active aliases: ['MS']
+  Archived aliases: []
+
+Italy:
+  Active aliases: []
+  Archived aliases: []
+
+Indiana:
+  Active aliases: []
+  Archived aliases: []
+
+Goiás:
+  Active aliases: ['GO']
+  Archived aliases: []
+
+
+2. CHECKING COMPOUND REGIONS
+--------------------------------------------------
+
+'North America and Europe': ✓ Properly removed
+
+'North and South America': ⚠ Still exists (should be removed)
+
+'Europe and Asia': ⚠ Still exists (should be removed)
+
+'Asia and Middle East': ⚠ Still exists (should be removed)
+
+'North and Central America': ⚠ Still exists (should be removed)
+
+
+3. FALSE POSITIVE PREVENTION TESTS
+--------------------------------------------------
+
+These titles should NOT extract the listed regions:
+
+'ID card printer Market Analysis, 2024'
+  Should NOT extract: Idaho (from 'ID')
+  ⚠ 'ID' is still active - false positive possible
+
+'IDentity management Market Report'
+  Should NOT extract: Idaho (from 'ID')
+  ⚠ 'ID' is still active - false positive possible
+
+'Microsoft MS Office Market Study'
+  Should NOT extract: Mississippi (from 'MS')
+  ⚠ 'MS' is still active - false positive possible
+
+'MS degree holders in Market Research'
+  Should NOT extract: Mississippi (from 'MS')
+  ⚠ 'MS' is still active - false positive possible
+
+'IT infrastructure Market Outlook'
+  Should NOT extract: Italy (from 'IT')
+  ℹ 'IT' not found in pattern
+
+'Information Technology (IT) Market'
+  Should NOT extract: Italy (from 'IT')
+  ℹ 'IT' not found in pattern
+
+'Market for widgets OR gadgets'
+  Should NOT extract: Oregon (from 'OR')
+  ⚠ 'OR' is still active - false positive possible
+
+'GO programming language Market'
+  Should NOT extract: Goiás (from 'GO')
+  ⚠ 'GO' is still active - false positive possible
+
+'Market trends IN technology'
+  Should NOT extract: Indiana (from 'IN')
+  ℹ 'IN' not found in pattern
+
+
+4. CORRECT EXTRACTION TESTS
+--------------------------------------------------
+
+These titles SHOULD extract the listed regions:
+
+'Idaho potato Market Analysis'
+  Should extract: Idaho
+  ✓ Pattern exists for 'Idaho'
+
+'Oregon timber Market Report'
+  Should extract: Oregon
+  ✓ Pattern exists for 'Oregon'
+
+'Mississippi river Market Study'
+  Should extract: Mississippi
+  ✓ Pattern exists for 'Mississippi'
+
+'Italy fashion Market Overview'
+  Should extract: Italy
+  ✓ Pattern exists for 'Italy'
+
+'Indiana automotive Market'
+  Should extract: Indiana
+  ✓ Pattern exists for 'Indiana'
+
+'North America Market Report'
+  Should extract: North America
+  ✓ Pattern exists for 'North America'
+
+'Europe Market Analysis'
+  Should extract: Europe
+  ✓ Pattern exists for 'Europe'
+
+'Asia Market Study'
+  Should extract: Asia
+  ✓ Pattern exists for 'Asia'
+
+'Middle East Market Overview'
+  Should extract: Middle East
+  ✓ Pattern exists for 'Middle East'
+
+
+5. COMPOUND REGION SPLITTING TESTS
+--------------------------------------------------
+
+These compound regions should extract as separate entities:
+
+'North America and Europe Market Report'
+  Should extract: ['North America', 'Europe']
+  ✓ Compound pattern properly removed
+    ✓ 'North America' pattern exists
+    ✓ 'Europe' pattern exists
+
+'Asia and Middle East Market Analysis'
+  Should extract: ['Asia', 'Middle East']
+  ⚠ Compound pattern still exists
+    ✓ 'Asia' pattern exists
+    ✓ 'Middle East' pattern exists
+
+'North and South America Market Study'
+  Should extract: ['North America', 'South America']
+  ✓ Compound pattern properly removed
+    ✓ 'North America' pattern exists
+    ✓ 'South America' pattern exists
+
+'Europe and Asia Market Overview'
+  Should extract: ['Europe', 'Asia']
+  ⚠ Compound pattern still exists
+    ✓ 'Europe' pattern exists
+    ✓ 'Asia' pattern exists
+
+
+6. VALID COMPOUND PRESERVATION TESTS
+--------------------------------------------------
+
+These valid compounds should extract as single entities:
+
+'Australia and New Zealand Market Report'
+  Should extract: ['Australia and New Zealand']
+  ✓ Pattern exists for 'Australia and New Zealand'
+
+'Europe, Middle East and Africa Market Analysis'
+  Should extract: ['Europe, Middle East and Africa']
+  ✓ Pattern exists for 'Europe, Middle East and Africa'
+
+'Bosnia and Herzegovina Market Study'
+  Should extract: ['Bosnia and Herzegovina']
+  ✓ Pattern exists for 'Bosnia and Herzegovina'
+
+'Trinidad and Tobago Market Overview'
+  Should extract: ['Trinidad and Tobago']
+  ✓ Pattern exists for 'Trinidad and Tobago'
+
+================================================================================
+END OF VALIDATION REPORT
+================================================================================
