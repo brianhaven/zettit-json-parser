@@ -329,7 +329,7 @@ class EnhancedDateExtractor:
                 notes = f"Contains numbers {numeric_values} but likely not dates"
         
         return EnhancedDateExtractionResult(
-            title=title,
+            title=cleaned_title,
             extracted_date_range=extraction_result['extracted_date_range'],
             start_year=extraction_result['start_year'],
             end_year=extraction_result['end_year'],

@@ -1,0 +1,73 @@
+================================================================================
+TEST ISSUE 24 DATE REMOVAL BUG
+Date Removal Bug Test
+================================================================================
+Analysis Date (PDT): 2025-09-10 16:59:18 PDT
+Analysis Date (UTC): 2025-09-10 23:59:18 UTC
+================================================================================
+
+
+================================================================================
+GitHub Issue #24: Date Removal Bug Test Results
+================================================================================
+
+✅ NO BUG DETECTED: Dates are being properly removed from titles.
+
+--------------------------------------------------------------------------------
+Detailed Test Results:
+--------------------------------------------------------------------------------
+
+Test Case 1: OK
+Original:  Global Market for AI, Machine Learning, and Deep Learning Technologies, 2025-2030
+Date:      2025-2030
+Returned:  Global Market for AI, Machine Learning, and Deep Learning Technologies
+Cleaned:   Global Market for AI, Machine Learning, and Deep Learning Technologies
+
+Test Case 2: OK
+Original:  North America, Europe IoT Market, Healthcare, Automotive Applications, 2024-2028
+Date:      2024-2028
+Returned:  North America, Europe IoT Market, Healthcare, Automotive Applications
+Cleaned:   North America, Europe IoT Market, Healthcare, Automotive Applications
+
+Test Case 3: OK
+Original:  Market in Asia-Pacific: Semiconductors, Electronics & Components, Q1 2025
+Date:      2025
+Returned:  Market in Asia-Pacific: Semiconductors, Electronics & Components, Q1
+Cleaned:   Market in Asia-Pacific: Semiconductors, Electronics & Components, Q1
+
+Test Case 4: OK
+Original:  European Market for Renewable Energy, Wind, Solar, and Hydroelectric Power Markets, 2025
+Date:      2025
+Returned:  European Market for Renewable Energy, Wind, Solar, and Hydroelectric Power Markets
+Cleaned:   European Market for Renewable Energy, Wind, Solar, and Hydroelectric Power Markets
+
+Test Case 5: OK
+Original:  Market Report, 2030
+Date:      2030
+Returned:  Market Report
+Cleaned:   Market Report
+
+Test Case 6: OK
+Original:  Market Analysis, 2023-2030
+Date:      2023-2030
+Returned:  Market Analysis
+Cleaned:   Market Analysis
+
+Test Case 7: OK
+Original:  Market Study [2024]
+Date:      2024
+Returned:  Market Study
+Cleaned:   Market Study
+
+Test Case 8: OK
+Original:  Market Outlook 2031
+Date:      2031
+Returned:  Market
+Cleaned:   Market
+
+--------------------------------------------------------------------------------
+Summary:
+--------------------------------------------------------------------------------
+Total test cases: 8
+Cases with bug:   0
+Cases without bug: 8
