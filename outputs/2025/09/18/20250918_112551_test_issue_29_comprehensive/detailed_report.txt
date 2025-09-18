@@ -1,0 +1,95 @@
+# Issue #29 Comprehensive Test - Comprehensive Test Report
+Expanded test suite for parentheses conflict resolution
+
+**Analysis Date (PDT):** 2025-09-18 11:25:51 PDT
+**Analysis Date (UTC):** 2025-09-18 18:25:51 UTC
+
+================================================================================
+
+
+TEST RESULTS
+================================================================================
+
+Test 1 - Parenthetical Date+Report: ✅ PASS
+Title: Battery Fuel Gauge Market (Forecast 2020-2030)
+Expected: date=2020-2030, report=Market Forecast, topic=Battery Fuel Gauge
+Actual:   date=2020-2030, report=Market Forecast, topic=Battery Fuel Gauge
+
+Test 2 - Parenthetical Date+Report: ✅ PASS
+Title: Global Smart Grid Market (Analysis & Forecast 2024-2029)
+Expected: date=2024-2029, report=Market Analysis Forecast, topic=Global Smart Grid
+Actual:   date=2024-2029, report=Market Analysis Forecast, topic=Global Smart Grid
+
+Test 3 - Date First: ✅ PASS
+Title: Electric Vehicle Market (2025-2035 Outlook)
+Expected: date=2025-2035, report=Market Outlook, topic=Electric Vehicle
+Actual:   date=2025-2035, report=Market Outlook, topic=Electric Vehicle
+
+Test 4 - Multiple Words: ✅ PASS
+Title: Digital Health Market (Industry Analysis 2023-2028)
+Expected: date=2023-2028, report=Market Industry Analysis, topic=Digital Health
+Actual:   date=2023-2028, report=Market Industry Analysis, topic=Digital Health
+
+Test 5 - Single Year: ✅ PASS
+Title: Renewable Energy Market Research Report (2024)
+Expected: date=2024, report=Market Research Report, topic=Renewable Energy
+Actual:   date=2024, report=Market Research Report, topic=Renewable Energy
+
+Test 6 - Brackets: ✅ PASS
+Title: AI Chipset Market [Forecast 2024-2030]
+Expected: date=2024-2030, report=Market Forecast, topic=AI Chipset
+Actual:   date=2024-2030, report=Market Forecast, topic=AI Chipset
+
+Test 7 - No Parentheses: ✅ PASS
+Title: Blockchain Market Analysis 2025-2030
+Expected: date=2025-2030, report=Market Analysis, topic=Blockchain
+Actual:   date=2025-2030, report=Market Analysis, topic=Blockchain
+
+Test 8 - Complex Content: ❌ FAIL
+Title: Cloud Computing Market (Global Analysis & Forecast 2024-2029)
+Expected: date=2024-2029, report=Market Global Analysis Forecast, topic=Cloud Computing
+Actual:   date=2024-2029, report=Market Analysis Forecast, topic=Cloud Computing
+Issues: report type mismatch
+
+Test 9 - Comma Date: ✅ PASS
+Title: IoT Sensors Market Report, 2024-2028
+Expected: date=2024-2028, report=Market Report, topic=IoT Sensors
+Actual:   date=2024-2028, report=Market Report, topic=IoT Sensors
+
+Test 10 - Empty After Removal: ✅ PASS
+Title: Quantum Computing Market (2025)
+Expected: date=2025, report=Market, topic=Quantum Computing
+Actual:   date=2025, report=Market, topic=Quantum Computing
+
+Test 11 - Multiple Parentheses: ❌ FAIL
+Title: 5G Network (Infrastructure) Market (Analysis 2024-2029)
+Expected: date=2024-2029, report=Market Analysis, topic=5G Network (Infrastructure)
+Actual:   date=2024-2029, report=Market Analysis, topic=5G Network (Infrastructure)
+Issues: parentheses artifacts
+
+Test 12 - Nested: ❌ FAIL
+Title: Edge Computing Market (North America) Report 2025-2030
+Expected: date=2025-2030, report=Market Report, topic=Edge Computing (North America)
+Actual:   date=2025-2030, report=Market Report, topic=Edge Computing
+Issues: topic mismatch
+
+
+SUMMARY
+================================================================================
+Total Tests: 12
+Passed: 9
+Failed: 3
+Success Rate: 75.0%
+
+By Category:
+  Parenthetical Date+Report: 2/2 (100%)
+  Date First: 1/1 (100%)
+  Multiple Words: 1/1 (100%)
+  Single Year: 1/1 (100%)
+  Brackets: 1/1 (100%)
+  No Parentheses: 1/1 (100%)
+  Complex Content: 0/1 (0%)
+  Comma Date: 1/1 (100%)
+  Empty After Removal: 1/1 (100%)
+  Multiple Parentheses: 0/1 (0%)
+  Nested: 0/1 (0%)

@@ -1,0 +1,308 @@
+{
+  "results": [
+    {
+      "test": 1,
+      "category": "Parenthetical Date+Report",
+      "title": "Battery Fuel Gauge Market (Forecast 2020-2030)",
+      "expected": {
+        "date": "2020-2030",
+        "report_type": "Market Forecast",
+        "topic": "Battery Fuel Gauge"
+      },
+      "actual": {
+        "date": "2020-2030",
+        "report_type": "Market Forecast",
+        "topic": "Battery Fuel Gauge"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": true
+    },
+    {
+      "test": 2,
+      "category": "Parenthetical Date+Report",
+      "title": "Global Smart Grid Market (Analysis & Forecast 2024-2029)",
+      "expected": {
+        "date": "2024-2029",
+        "report_type": "Market Analysis Forecast",
+        "topic": "Global Smart Grid"
+      },
+      "actual": {
+        "date": "2024-2029",
+        "report_type": "Market Analysis Forecast",
+        "topic": "Global Smart Grid"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": true
+    },
+    {
+      "test": 3,
+      "category": "Date First",
+      "title": "Electric Vehicle Market (2025-2035 Outlook)",
+      "expected": {
+        "date": "2025-2035",
+        "report_type": "Market Outlook",
+        "topic": "Electric Vehicle"
+      },
+      "actual": {
+        "date": "2025-2035",
+        "report_type": "Market Outlook",
+        "topic": "Electric Vehicle"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": true
+    },
+    {
+      "test": 4,
+      "category": "Multiple Words",
+      "title": "Digital Health Market (Industry Analysis 2023-2028)",
+      "expected": {
+        "date": "2023-2028",
+        "report_type": "Market Industry Analysis",
+        "topic": "Digital Health"
+      },
+      "actual": {
+        "date": "2023-2028",
+        "report_type": "Market Industry Analysis",
+        "topic": "Digital Health"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": true
+    },
+    {
+      "test": 5,
+      "category": "Single Year",
+      "title": "Renewable Energy Market Research Report (2024)",
+      "expected": {
+        "date": "2024",
+        "report_type": "Market Research Report",
+        "topic": "Renewable Energy"
+      },
+      "actual": {
+        "date": "2024",
+        "report_type": "Market Research Report",
+        "topic": "Renewable Energy"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": true
+    },
+    {
+      "test": 6,
+      "category": "Brackets",
+      "title": "AI Chipset Market [Forecast 2024-2030]",
+      "expected": {
+        "date": "2024-2030",
+        "report_type": "Market Forecast",
+        "topic": "AI Chipset"
+      },
+      "actual": {
+        "date": "2024-2030",
+        "report_type": "Market Forecast",
+        "topic": "AI Chipset"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": true
+    },
+    {
+      "test": 7,
+      "category": "No Parentheses",
+      "title": "Blockchain Market Analysis 2025-2030",
+      "expected": {
+        "date": "2025-2030",
+        "report_type": "Market Analysis",
+        "topic": "Blockchain"
+      },
+      "actual": {
+        "date": "2025-2030",
+        "report_type": "Market Analysis",
+        "topic": "Blockchain"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": true
+    },
+    {
+      "test": 8,
+      "category": "Complex Content",
+      "title": "Cloud Computing Market (Global Analysis & Forecast 2024-2029)",
+      "expected": {
+        "date": "2024-2029",
+        "report_type": "Market Global Analysis Forecast",
+        "topic": "Cloud Computing"
+      },
+      "actual": {
+        "date": "2024-2029",
+        "report_type": "Market Analysis Forecast",
+        "topic": "Cloud Computing"
+      },
+      "date_match": true,
+      "report_match": false,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": false
+    },
+    {
+      "test": 9,
+      "category": "Comma Date",
+      "title": "IoT Sensors Market Report, 2024-2028",
+      "expected": {
+        "date": "2024-2028",
+        "report_type": "Market Report",
+        "topic": "IoT Sensors"
+      },
+      "actual": {
+        "date": "2024-2028",
+        "report_type": "Market Report",
+        "topic": "IoT Sensors"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": true
+    },
+    {
+      "test": 10,
+      "category": "Empty After Removal",
+      "title": "Quantum Computing Market (2025)",
+      "expected": {
+        "date": "2025",
+        "report_type": "Market",
+        "topic": "Quantum Computing"
+      },
+      "actual": {
+        "date": "2025",
+        "report_type": "Market",
+        "topic": "Quantum Computing"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": true
+    },
+    {
+      "test": 11,
+      "category": "Multiple Parentheses",
+      "title": "5G Network (Infrastructure) Market (Analysis 2024-2029)",
+      "expected": {
+        "date": "2024-2029",
+        "report_type": "Market Analysis",
+        "topic": "5G Network (Infrastructure)"
+      },
+      "actual": {
+        "date": "2024-2029",
+        "report_type": "Market Analysis",
+        "topic": "5G Network (Infrastructure)"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": true,
+      "has_artifacts": true,
+      "has_unmatched_parens": false,
+      "pass": false
+    },
+    {
+      "test": 12,
+      "category": "Nested",
+      "title": "Edge Computing Market (North America) Report 2025-2030",
+      "expected": {
+        "date": "2025-2030",
+        "report_type": "Market Report",
+        "topic": "Edge Computing (North America)"
+      },
+      "actual": {
+        "date": "2025-2030",
+        "report_type": "Market Report",
+        "topic": "Edge Computing"
+      },
+      "date_match": true,
+      "report_match": true,
+      "topic_match": false,
+      "has_artifacts": false,
+      "has_unmatched_parens": false,
+      "pass": false
+    }
+  ],
+  "category_stats": {
+    "Parenthetical Date+Report": {
+      "total": 2,
+      "passed": 2
+    },
+    "Date First": {
+      "total": 1,
+      "passed": 1
+    },
+    "Multiple Words": {
+      "total": 1,
+      "passed": 1
+    },
+    "Single Year": {
+      "total": 1,
+      "passed": 1
+    },
+    "Brackets": {
+      "total": 1,
+      "passed": 1
+    },
+    "No Parentheses": {
+      "total": 1,
+      "passed": 1
+    },
+    "Complex Content": {
+      "total": 1,
+      "passed": 0
+    },
+    "Comma Date": {
+      "total": 1,
+      "passed": 1
+    },
+    "Empty After Removal": {
+      "total": 1,
+      "passed": 1
+    },
+    "Multiple Parentheses": {
+      "total": 1,
+      "passed": 0
+    },
+    "Nested": {
+      "total": 1,
+      "passed": 0
+    }
+  },
+  "summary": {
+    "total_tests": 12,
+    "passed": 9,
+    "failed": 3,
+    "success_rate": 75.0
+  }
+}
