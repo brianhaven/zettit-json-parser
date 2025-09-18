@@ -1,0 +1,102 @@
+[
+  {
+    "test_case": 1,
+    "original_title": "Battery Fuel Gauge Market (Forecast 2020-2030)",
+    "expected": {
+      "date": "2020-2030",
+      "report_type": "Market Forecast",
+      "topic": "Battery Fuel Gauge"
+    },
+    "actual": {
+      "date": "2020-2030",
+      "report_type": "Market Forecast",
+      "topic": "Battery Fuel Gauge"
+    },
+    "date_match": true,
+    "report_match": true,
+    "topic_match": true,
+    "has_artifacts": false,
+    "has_unmatched_parens": false,
+    "pass": true
+  },
+  {
+    "test_case": 2,
+    "original_title": "Global Smart Grid Market (Analysis & Forecast 2024-2029)",
+    "expected": {
+      "date": "2024-2029",
+      "report_type": "Market Analysis & Forecast",
+      "topic": "Global Smart Grid"
+    },
+    "actual": {
+      "date": "2024-2029",
+      "report_type": "Market Analysis Forecast",
+      "topic": "Global Smart Grid"
+    },
+    "date_match": true,
+    "report_match": false,
+    "topic_match": true,
+    "has_artifacts": false,
+    "has_unmatched_parens": false,
+    "pass": false
+  },
+  {
+    "test_case": 3,
+    "original_title": "Electric Vehicle Market (2025-2035 Outlook)",
+    "expected": {
+      "date": "2025-2035",
+      "report_type": "Market Outlook",
+      "topic": "Electric Vehicle"
+    },
+    "actual": {
+      "date": "2025-2035",
+      "report_type": "Market Outlook",
+      "topic": "Electric Vehicle"
+    },
+    "date_match": true,
+    "report_match": true,
+    "topic_match": true,
+    "has_artifacts": false,
+    "has_unmatched_parens": false,
+    "pass": true
+  },
+  {
+    "test_case": 4,
+    "original_title": "Digital Health Market (Industry Analysis 2023-2028)",
+    "expected": {
+      "date": "2023-2028",
+      "report_type": "Market Industry Analysis",
+      "topic": "Digital Health"
+    },
+    "actual": {
+      "date": "2023-2028",
+      "report_type": "Market Industry Analysis",
+      "topic": "Digital Health"
+    },
+    "date_match": true,
+    "report_match": true,
+    "topic_match": true,
+    "has_artifacts": false,
+    "has_unmatched_parens": false,
+    "pass": true
+  },
+  {
+    "test_case": 5,
+    "original_title": "Renewable Energy Market Research Report (2024)",
+    "expected": {
+      "date": "2024",
+      "report_type": "Market Research Report",
+      "topic": "Renewable Energy"
+    },
+    "actual": {
+      "date": "2024",
+      "report_type": "Market Research Report",
+      "topic": "Renewable Energy"
+    },
+    "date_match": true,
+    "report_match": true,
+    "topic_match": true,
+    "has_artifacts": false,
+    "has_unmatched_parens": false,
+    "pass": true
+  }
+]

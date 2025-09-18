@@ -227,21 +227,57 @@ class EnhancedDateExtractor:
     def _create_cleaned_title(self, title: str, raw_match: str, preserved_words: List[str]) -> str:
         """
         Create a cleaned title with date pattern removed but important words preserved.
-        
+        Enhanced with Phase 2 fix for Issue #29: Better parentheses cleanup and content preservation.
+
         Args:
             title: Original title
             raw_match: The matched date pattern text
             preserved_words: Words to preserve from the pattern
-            
+
         Returns:
-            Cleaned title with preserved words
+            Cleaned title with preserved words and proper parentheses handling
         """
         if not raw_match:
-            return title
-        
-        # Remove the raw match
-        cleaned = title.replace(raw_match, '').strip()
-        
+            cleaned = title
+        else:
+            # Check if the date is within parentheses/brackets and preserve non-date content
+            # Pattern: (Something 2020-2030) -> preserve "Something"
+            paren_pattern = r'\(([^)]*?)' + re.escape(raw_match) + r'([^)]*?)\)'
+            bracket_pattern = r'\[([^]]*?)' + re.escape(raw_match) + r'([^]]*?)\]'
+
+            # Try to match parentheses pattern
+            paren_match = re.search(paren_pattern, title)
+            if paren_match:
+                # Extract non-date content from parentheses
+                before_date = paren_match.group(1).strip()
+                after_date = paren_match.group(2).strip()
+
+                # Combine non-date parts and add to preserved words
+                paren_content = (before_date + ' ' + after_date).strip()
+                if paren_content:
+                    preserved_words = list(preserved_words) + paren_content.split()
+
+                # Remove the entire parenthetical section
+                cleaned = title.replace(paren_match.group(0), '').strip()
+            else:
+                # Try bracket pattern
+                bracket_match = re.search(bracket_pattern, title)
+                if bracket_match:
+                    # Extract non-date content from brackets
+                    before_date = bracket_match.group(1).strip()
+                    after_date = bracket_match.group(2).strip()
+
+                    # Combine non-date parts and add to preserved words
+                    bracket_content = (before_date + ' ' + after_date).strip()
+                    if bracket_content:
+                        preserved_words = list(preserved_words) + bracket_content.split()
+
+                    # Remove the entire bracket section
+                    cleaned = title.replace(bracket_match.group(0), '').strip()
+                else:
+                    # Standard removal - date is not in parentheses/brackets
+                    cleaned = title.replace(raw_match, '').strip()
+
         # Add preserved words back
         if preserved_words:
             preserved_text = ' '.join(preserved_words)
@@ -249,11 +285,32 @@ class EnhancedDateExtractor:
                 cleaned = f"{cleaned} {preserved_text}"
             else:
                 cleaned = preserved_text
-        
+
+        # Phase 2 Enhancement for Issue #29: Comprehensive parentheses cleanup
+        # Remove parentheses with content that has trailing or leading spaces
+        cleaned = re.sub(r'\([^)]*?\s+\)', '', cleaned)  # Remove ( anything-space )
+        cleaned = re.sub(r'\(\s+[^)]*?\)', '', cleaned)  # Remove ( space-anything )
+        cleaned = re.sub(r'\(\s*\)', '', cleaned)  # Remove empty ()
+        cleaned = re.sub(r'\[\s*\]', '', cleaned)  # Remove empty []
+
+        # Balance parentheses if unmatched
+        open_parens = cleaned.count('(')
+        close_parens = cleaned.count(')')
+        if open_parens != close_parens:
+            # If unbalanced, remove all parentheses to avoid artifacts
+            cleaned = re.sub(r'[()]', '', cleaned)
+
+        # Balance brackets if unmatched
+        open_brackets = cleaned.count('[')
+        close_brackets = cleaned.count(']')
+        if open_brackets != close_brackets:
+            # If unbalanced, remove all brackets to avoid artifacts
+            cleaned = re.sub(r'[\[\]]', '', cleaned)
+
         # Clean up spacing and punctuation
         cleaned = re.sub(r'\s+', ' ', cleaned).strip()
         cleaned = re.sub(r'[,\.]+$', '', cleaned)  # Remove trailing punctuation
-        
+
         return cleaned
     
     def extract(self, title: str) -> EnhancedDateExtractionResult:
@@ -274,8 +331,10 @@ class EnhancedDateExtractor:
         # Step 2: If no numeric content, categorize as "no dates present"
         if not has_numeric_content:
             self.extraction_stats['no_dates_present'] += 1
+            # Still clean the title for consistency (Phase 1 fix for Issue #29)
+            cleaned_title = self._create_cleaned_title(title, None, [])
             return EnhancedDateExtractionResult(
-                title=title,
+                title=cleaned_title,  # FIX: Return cleaned title for pipeline consistency
                 extracted_date_range=None,
                 start_year=None,
                 end_year=None,
@@ -287,7 +346,7 @@ class EnhancedDateExtractor:
                 numeric_values_found=numeric_values,
                 categorization="no_dates_present",
                 preserved_words=[],
-                cleaned_title=title,
+                cleaned_title=cleaned_title,  # Maintain consistency
                 notes="No numeric content detected - no dates expected"
             )
         
