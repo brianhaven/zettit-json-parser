@@ -478,7 +478,7 @@ def test_geographic_extraction(limit=50):
             
             logger.info(f"Extracted: {extraction_result.extracted_regions}")
             logger.info(f"Remaining: '{extraction_result.title}'")
-            logger.info(f"Confidence: {extraction_result.confidence_score:.2f}")
+            logger.info(f"Confidence: {extraction_result.confidence:.2f}")
         
         # Create output directory and save results
         output_dir = create_output_directory("script04_lean_test")
