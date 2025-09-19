@@ -510,9 +510,9 @@ def run_geographic_detection_tests():
                     'aliases_matched': entity.aliases_matched,
                     'priority': entity.priority
                 } for entity in result.entities],
-                'confidence_score': result.confidence_score,
+                'confidence': result.confidence,
                 'detection_method': result.detection_method,
-                'processing_notes': result.processing_notes,
+                'notes': result.notes,
                 'has_regions': len(result.extracted_regions) > 0
             }
             results.append(result_dict)

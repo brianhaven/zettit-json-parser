@@ -94,7 +94,7 @@ def test_hyphenated_word_fix():
                 'actual_regions': result.extracted_regions,
                 'success': success,
                 'remaining_text': result.remaining_text,
-                'confidence': result.confidence_score
+                'confidence': result.confidence
             }
             
             results.append(test_result)

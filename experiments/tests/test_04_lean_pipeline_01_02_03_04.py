@@ -205,11 +205,11 @@ def test_lean_pipeline(test_quantity: int = 9):
                     'market_classification': market_result.confidence,
                     'date_extraction': date_result.confidence,
                     'report_type': report_result.confidence,
-                    'geographic_extraction': geo_result.confidence_score if geo_result else 1.0
+                    'geographic_extraction': geo_result.confidence if geo_result else 1.0
                 },
                 'processing_notes': {
                     'market_workflow': market_result.notes or '',
-                    'geographic_notes': geo_result.processing_notes if geo_result else ''
+                    'geographic_notes': geo_result.notes if geo_result else ''
                 }
             }
             

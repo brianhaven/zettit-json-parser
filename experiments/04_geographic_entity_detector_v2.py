@@ -56,13 +56,13 @@ logger = logging.getLogger(__name__)
 
 class GeographicExtractionResult:
     """Result object for geographic entity extraction."""
-    
-    def __init__(self, extracted_regions: List[str] = None, title: str = "", 
-                 confidence_score: float = 0.0, processing_notes: str = ""):
+
+    def __init__(self, extracted_regions: List[str] = None, title: str = "",
+                 confidence: float = 0.0, notes: str = ""):
         self.extracted_regions = extracted_regions or []
         self.title = title  # Standardized: changed from remaining_text to title for consistency
-        self.confidence_score = confidence_score
-        self.processing_notes = processing_notes
+        self.confidence = confidence  # Standardized: changed from confidence_score to confidence
+        self.notes = notes  # Standardized: changed from processing_notes to notes
 
 @dataclass
 class GeographicPattern:
@@ -176,8 +176,8 @@ class GeographicEntityDetector:
             return GeographicExtractionResult(
                 extracted_regions=[],
                 title="",
-                confidence_score=1.0,
-                processing_notes="Empty input text"
+                confidence=1.0,
+                notes="Empty input text"
             )
         
         logger.info(f"Processing text: {title[:100]}...")
@@ -226,7 +226,7 @@ class GeographicEntityDetector:
                 continue
         
         # Calculate confidence score
-        confidence_score = self.calculate_confidence_score(
+        confidence = self.calculate_confidence_score(
             original_text=title,
             extracted_regions=extracted_regions,
             remaining_text=working_text
@@ -238,8 +238,8 @@ class GeographicEntityDetector:
         result = GeographicExtractionResult(
             extracted_regions=extracted_regions,
             title=working_text,
-            confidence_score=confidence_score,
-            processing_notes="; ".join(processing_notes)
+            confidence=confidence,
+            notes="; ".join(processing_notes)
         )
         
         logger.info(f"Extracted {len(extracted_regions)} regions: {extracted_regions}")
@@ -470,8 +470,8 @@ def test_geographic_extraction(limit=50):
                 'input_text': test_text,
                 'extracted_regions': extraction_result.extracted_regions,
                 'remaining_text': extraction_result.title,
-                'confidence_score': extraction_result.confidence_score,
-                'processing_notes': extraction_result.processing_notes
+                'confidence': extraction_result.confidence,
+                'notes': extraction_result.notes
             }
             
             results.append(result_data)
@@ -511,8 +511,8 @@ def test_geographic_extraction(limit=50):
                     f.write(f"Original: {result['input_text']}\n")
                     f.write(f"Extracted Regions: {', '.join(result['extracted_regions'])}\n")
                     f.write(f"Remaining Text: {result['remaining_text']}\n")
-                    f.write(f"Confidence: {result['confidence_score']:.3f}\n")
-                    f.write(f"Processing Notes: {result['processing_notes']}\n")
+                    f.write(f"Confidence: {result['confidence']:.3f}\n")
+                    f.write(f"Processing Notes: {result['notes']}\n")
                     f.write("-" * 40 + "\n\n")
         
         # Generate failed extractions file for manual review
@@ -530,7 +530,7 @@ def test_geographic_extraction(limit=50):
                 for result in failed_results:
                     f.write(f"Original: {result['input_text']}\n")
                     f.write(f"No regions extracted - remaining text: {result['remaining_text']}\n")
-                    f.write(f"Confidence: {result['confidence_score']:.3f}\n")
+                    f.write(f"Confidence: {result['confidence']:.3f}\n")
                     f.write("-" * 40 + "\n\n")
             else:
                 f.write("No failed extractions in test cases.\n")
@@ -570,18 +570,18 @@ def test_geographic_extraction(limit=50):
             for priority in sorted(priority_counts.keys()):
                 f.write(f"- Priority {priority}: {priority_counts[priority]} patterns\n")
             
-            f.write(f"\nAverage Confidence Score: {sum(r['confidence_score'] for r in results) / len(results):.3f}\n")
+            f.write(f"\nAverage Confidence Score: {sum(r['confidence'] for r in results) / len(results):.3f}\n")
             
             # High confidence extractions
-            high_confidence = [r for r in results if r['confidence_score'] >= 0.90]
+            high_confidence = [r for r in results if r['confidence'] >= 0.90]
             f.write(f"High Confidence (≥0.90): {len(high_confidence)} cases\n")
             
-            # Medium confidence extractions  
-            med_confidence = [r for r in results if 0.80 <= r['confidence_score'] < 0.90]
+            # Medium confidence extractions
+            med_confidence = [r for r in results if 0.80 <= r['confidence'] < 0.90]
             f.write(f"Medium Confidence (0.80-0.89): {len(med_confidence)} cases\n")
             
             # Low confidence extractions
-            low_confidence = [r for r in results if r['confidence_score'] < 0.80]
+            low_confidence = [r for r in results if r['confidence'] < 0.80]
             f.write(f"Low Confidence (<0.80): {len(low_confidence)} cases\n")
         
         # Generate summary report
@@ -605,12 +605,12 @@ def test_geographic_extraction(limit=50):
             
             for result in results:
                 regions_str = ", ".join(result['extracted_regions']) if result['extracted_regions'] else "None"
-                f.write(f"| {result['test_case']} | {result['input_text'][:30]}... | {regions_str} | {result['remaining_text'][:30]}... | {result['confidence_score']:.2f} |\n")
+                f.write(f"| {result['test_case']} | {result['input_text'][:30]}... | {regions_str} | {result['remaining_text'][:30]}... | {result['confidence']:.2f} |\n")
             
             f.write(f"""
 ## Performance Analysis
 - **Total Extractions:** {sum(len(r['extracted_regions']) for r in results)}
-- **Average Confidence:** {sum(r['confidence_score'] for r in results) / len(results):.2f}
+- **Average Confidence:** {sum(r['confidence'] for r in results) / len(results):.2f}
 - **Processing Approach:** Database-driven pattern matching
 - **Architecture Consistency:** ✅ Aligned with Scripts 01-03
 
