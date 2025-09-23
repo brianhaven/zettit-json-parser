@@ -1,0 +1,82 @@
+{
+  "test_metadata": {
+    "issue": "Issue #27: Pre-Market Dictionary Terms Causing Content Loss",
+    "test_type": "Pipeline Integration Test (01\u219202\u219203\u219204)",
+    "test_date_pdt": "2025-09-22 21:51:51 PDT",
+    "test_date_utc": "2025-09-23 04:51:51 UTC",
+    "pipeline_scripts": [
+      "01_market_term_classifier_v1.py",
+      "02_date_extractor_v1.py",
+      "03_report_type_extractor_v4.py (WITH FIX)",
+      "04_geographic_entity_detector_v2.py"
+    ]
+  },
+  "summary": {
+    "total_tests": 5,
+    "content_preserved": 5,
+    "content_lost": 0
+  },
+  "test_results": [
+    {
+      "test_case": 1,
+      "title": "Oil & Gas Data Management Market, 2024-2029",
+      "market_type": "standard",
+      "date": "2024-2029",
+      "report_type": "Market",
+      "regions": [],
+      "final_topic": "Oil Gas Data Management",
+      "content_preserved": true,
+      "description": "Topic with dictionary keywords"
+    },
+    {
+      "test_case": 2,
+      "title": "Data Monetization Market Outlook, Trends, Analysis, 2025",
+      "market_type": "standard",
+      "date": "2025",
+      "report_type": "Market Outlook Trends Analysis",
+      "regions": [],
+      "final_topic": "Data Monetization",
+      "content_preserved": true,
+      "description": "Data at beginning of title"
+    },
+    {
+      "test_case": 3,
+      "title": "Europe Building Information Modeling Market Analysis Report, 2024",
+      "market_type": "standard",
+      "date": "2024",
+      "report_type": "Market Analysis Report",
+      "regions": [
+        "Europe"
+      ],
+      "final_topic": "Building Information Modeling",
+      "content_preserved": true,
+      "description": "Complex topic with multiple dictionary terms"
+    },
+    {
+      "test_case": 4,
+      "title": "Asia-Pacific Advanced Analytics Market Research Study, 2024-2030",
+      "market_type": "standard",
+      "date": "2024-2030",
+      "report_type": "Market Research Study",
+      "regions": [
+        "Asia Pacific"
+      ],
+      "final_topic": "Advanced Analytics",
+      "content_preserved": true,
+      "description": "Geographic region with advanced topic"
+    },
+    {
+      "test_case": 5,
+      "title": "Global Food Processing Equipment Market Trends & Opportunities, 2025",
+      "market_type": "standard",
+      "date": "2025",
+      "report_type": "Market Trends",
+      "regions": [
+        "Global"
+      ],
+      "final_topic": "Food Processing Equipment Opportunities",
+      "content_preserved": true,
+      "description": "Processing keyword in topic"
+    }
+  ]
+}
