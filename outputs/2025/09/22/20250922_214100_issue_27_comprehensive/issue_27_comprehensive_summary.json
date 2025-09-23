@@ -1,0 +1,21 @@
+{
+  "test_metadata": {
+    "issue": "Issue #27: Pre-Market Dictionary Terms Causing Content Loss",
+    "test_type": "Comprehensive 250-document test",
+    "script": "Script 03 v4: Pure Dictionary Report Type Extractor",
+    "test_date_pdt": "2025-09-22 21:41:03 PDT",
+    "test_date_utc": "2025-09-23 04:41:03 UTC"
+  },
+  "statistics": {
+    "total_documents": 250,
+    "successful": 250,
+    "failed": 0,
+    "empty_topics": 0,
+    "success_rate": 100.0,
+    "empty_topic_rate": 0.0
+  },
+  "fix_impact": {
+    "description": "Changed from span-based removal to position-based removal",
+    "expected_improvement": "Reduced content loss while maintaining extraction accuracy"
+  }
+}
