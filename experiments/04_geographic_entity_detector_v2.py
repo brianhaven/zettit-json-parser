@@ -385,18 +385,26 @@ class GeographicEntityDetector:
         """Final cleanup of remaining text after geographic extraction."""
         if not text:
             return ""
-        
+
         # Remove dangling connectors and artifacts
         text = re.sub(r'^\s*(and|&|,|;|-)\s*', '', text, flags=re.IGNORECASE)
         text = re.sub(r'\s*(and|&|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
-        
+
+        # Issue #28 Fix: Remove orphaned prepositions after geographic removal
+        # Handles "Retail in" → "Retail" after removing "Singapore" from "Retail in Singapore"
+        text = re.sub(r'\s+(in|for|by|of|at|to|with|from)\s*$', '', text, flags=re.IGNORECASE)
+
+        # Also handle orphaned prepositions at start
+        # Handles "in Technology" → "Technology"
+        text = re.sub(r'^(in|for|by|of|at|to|with|from)\s+', '', text, flags=re.IGNORECASE)
+
         # Clean up multiple spaces and normalize
         text = re.sub(r'\s+', ' ', text)
-        
+
         # Remove single character artifacts
         words = text.split()
         cleaned_words = [word for word in words if len(word.strip('.,;:-()[]{}')) > 1]
-        
+
         return ' '.join(cleaned_words).strip()
 
 def get_timestamp():

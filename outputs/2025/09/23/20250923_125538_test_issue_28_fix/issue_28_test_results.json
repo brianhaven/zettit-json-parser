@@ -1,0 +1,101 @@
+{
+  "test_date": "2025-09-23T19:55:38.535233",
+  "issue": "Issue #28: Orphaned Preposition Cleanup",
+  "total_tests": 10,
+  "passed": 8,
+  "success_rate": "80.0%",
+  "test_cases": [
+    {
+      "input": "Retail in Singapore",
+      "expected": "Retail",
+      "actual": "Retail",
+      "extracted_regions": [
+        "Singapore"
+      ],
+      "success": true,
+      "description": "Main Issue #28 case - 'Market in' pattern with Singapore"
+    },
+    {
+      "input": "Technology in Asia Pacific",
+      "expected": "Technology",
+      "actual": "Technology",
+      "extracted_regions": [
+        "Asia Pacific"
+      ],
+      "success": true,
+      "description": "Technology market in region"
+    },
+    {
+      "input": "Advanced Materials in Aerospace",
+      "expected": "Advanced Materials",
+      "actual": "Advanced Materials in Aerospace",
+      "extracted_regions": [],
+      "success": false,
+      "description": "Materials market (no geographic entity)"
+    },
+    {
+      "input": "Healthcare Services for Europe",
+      "expected": "Healthcare Services",
+      "actual": "Healthcare Services",
+      "extracted_regions": [
+        "Europe"
+      ],
+      "success": true,
+      "description": "Market for pattern with Europe"
+    },
+    {
+      "input": "Automotive Components by Japan",
+      "expected": "Automotive Components",
+      "actual": "Automotive Components",
+      "extracted_regions": [
+        "Japan"
+      ],
+      "success": true,
+      "description": "Market by pattern with Japan"
+    },
+    {
+      "input": "Software Solutions of United States",
+      "expected": "Software Solutions",
+      "actual": "Software Solutions",
+      "extracted_regions": [
+        "United States"
+      ],
+      "success": true,
+      "description": "Market of pattern with United States"
+    },
+    {
+      "input": "Personal Protective Equipment",
+      "expected": "Personal Protective Equipment",
+      "actual": "Personal Protective Equipment",
+      "extracted_regions": [],
+      "success": true,
+      "description": "Standard case without prepositions"
+    },
+    {
+      "input": "in Technology",
+      "expected": "Technology",
+      "actual": "Technology",
+      "extracted_regions": [],
+      "success": true,
+      "description": "Orphaned preposition at start"
+    },
+    {
+      "input": "Manufacturing in",
+      "expected": "Manufacturing",
+      "actual": "Manufacturing",
+      "extracted_regions": [],
+      "success": true,
+      "description": "Orphaned preposition at end"
+    },
+    {
+      "input": "Global Market for Advanced Materials in Aerospace",
+      "expected": "Advanced Materials",
+      "actual": "Market for Advanced Materials in Aerospace",
+      "extracted_regions": [
+        "Global"
+      ],
+      "success": false,
+      "description": "Complex case with 'for' and 'in'"
+    }
+  ]
+}

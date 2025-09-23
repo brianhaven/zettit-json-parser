@@ -1,0 +1,69 @@
+# Issue #28 Resolution Test Output
+
+**Analysis Date (PDT):** 2025-09-23 12:57:57 PDT
+**Analysis Date (UTC):** 2025-09-23 19:57:57 UTC
+
+**Description:** Orphaned Preposition Cleanup Fix Validation
+
+================================================================================
+
+
+ISSUE #28 RESOLUTION TEST SUMMARY
+============================================================
+
+Test Date: 2025-09-23 19:57:57
+Total Tests: 7
+Passed: 6
+Failed: 1
+Success Rate: 85.7%
+Status: ⚠️  PARTIALLY RESOLVED
+
+Test Results:
+------------------------------------------------------------
+✅ Main Issue #28 case from GitHub issue
+   Title: Retail Market in Singapore - Size, Outlook & Statistics
+   Expected: 'Retail'
+   Actual: 'Retail'
+
+✅ Market in with date range
+   Title: Technology Market in Asia Pacific, 2025-2030
+   Expected: 'Technology'
+   Actual: 'Technology'
+
+✅ Market in with industry context (not geographic)
+   Title: Artificial Intelligence (AI) Market in Automotive Outlook & Trends, 2025-2035
+   Expected: 'Artificial Intelligence (AI) in Automotive'
+   Actual: 'Artificial Intelligence (AI) in Automotive'
+
+✅ Market for pattern with Europe
+   Title: Healthcare Market for Europe Analysis and Forecast, 2024-2029
+   Expected: 'Healthcare'
+   Actual: 'Healthcare'
+
+✅ Standard pattern (no orphaned prepositions)
+   Title: APAC Personal Protective Equipment Market Analysis, 2024-2029
+   Expected: 'Personal Protective Equipment'
+   Actual: 'Personal Protective Equipment'
+
+❌ Market by pattern
+   Title: Global Automotive Components Market by Region, 2023-2028
+   Expected: 'Automotive Components'
+   Actual: 'Automotive Components by Region'
+
+✅ Market of pattern
+   Title: Software Solutions Market of United States Report, 2025
+   Expected: 'Software Solutions'
+   Actual: 'Software Solutions'
+
+
+FIX IMPLEMENTATION:
+------------------------------------------------------------
+Modified: experiments/04_geographic_entity_detector_v2.py
+Method: cleanup_remaining_text()
+Change: Added regex patterns to remove orphaned prepositions:
+  - End of text: r'\s+(in|for|by|of|at|to|with|from)\s*$'
+  - Start of text: r'^(in|for|by|of|at|to|with|from)\s+'
+
+This fix ensures that when geographic entities are removed,
+any orphaned prepositions are also cleaned up, resulting in
+clean, predictable topic extraction.

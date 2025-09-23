@@ -1,0 +1,223 @@
+{
+  "test_date": "2025-09-23T19:57:57.718925",
+  "issue": "Issue #28: 'Market in' Context Integration",
+  "total_tests": 7,
+  "passed": 6,
+  "success_rate": "85.7%",
+  "resolved": false,
+  "test_results": [
+    {
+      "title": "Retail Market in Singapore - Size, Outlook & Statistics",
+      "expected_topic": "Retail",
+      "actual_topic": "Retail",
+      "success": true,
+      "description": "Main Issue #28 case from GitHub issue",
+      "pipeline_stages": {
+        "01_market_classification": {
+          "market_term_type": "market_in",
+          "confidence": 0.95,
+          "remaining": "Retail Market in Singapore - Size, Outlook & Statistics"
+        },
+        "02_date_extraction": {
+          "extracted_date": null,
+          "confidence": 1.0,
+          "remaining": "Retail Market in Singapore - Size, Outlook & Statistics"
+        },
+        "03_report_type": {
+          "extracted_report_type": "Market Size Outlook Statistics",
+          "confidence": 0.4,
+          "remaining": "Retail in Singapore -"
+        },
+        "04_geographic_detection": {
+          "extracted_regions": [
+            "Singapore"
+          ],
+          "confidence": 0.8500000000000001,
+          "remaining": "Retail"
+        }
+      }
+    },
+    {
+      "title": "Technology Market in Asia Pacific, 2025-2030",
+      "expected_topic": "Technology",
+      "actual_topic": "Technology",
+      "success": true,
+      "description": "Market in with date range",
+      "pipeline_stages": {
+        "01_market_classification": {
+          "market_term_type": "market_in",
+          "confidence": 0.95,
+          "remaining": "Technology Market in Asia Pacific, 2025-2030"
+        },
+        "02_date_extraction": {
+          "extracted_date": "2025-2030",
+          "confidence": 0.98,
+          "remaining": "Technology Market in Asia Pacific"
+        },
+        "03_report_type": {
+          "extracted_report_type": "Market",
+          "confidence": 0.0,
+          "remaining": "Technology in Asia Pacific"
+        },
+        "04_geographic_detection": {
+          "extracted_regions": [
+            "Asia Pacific"
+          ],
+          "confidence": 0.8500000000000001,
+          "remaining": "Technology"
+        }
+      }
+    },
+    {
+      "title": "Artificial Intelligence (AI) Market in Automotive Outlook & Trends, 2025-2035",
+      "expected_topic": "Artificial Intelligence (AI) in Automotive",
+      "actual_topic": "Artificial Intelligence (AI) in Automotive",
+      "success": true,
+      "description": "Market in with industry context (not geographic)",
+      "pipeline_stages": {
+        "01_market_classification": {
+          "market_term_type": "market_in",
+          "confidence": 0.95,
+          "remaining": "Artificial Intelligence (AI) Market in Automotive Outlook & Trends, 2025-2035"
+        },
+        "02_date_extraction": {
+          "extracted_date": "2025-2035",
+          "confidence": 0.98,
+          "remaining": "Artificial Intelligence (AI) Market in Automotive Outlook & Trends"
+        },
+        "03_report_type": {
+          "extracted_report_type": "Market Outlook Trends",
+          "confidence": 0.30000000000000004,
+          "remaining": "Artificial Intelligence (AI) in Automotive"
+        },
+        "04_geographic_detection": {
+          "extracted_regions": [],
+          "confidence": 0.8,
+          "remaining": "Artificial Intelligence (AI) in Automotive"
+        }
+      }
+    },
+    {
+      "title": "Healthcare Market for Europe Analysis and Forecast, 2024-2029",
+      "expected_topic": "Healthcare",
+      "actual_topic": "Healthcare",
+      "success": true,
+      "description": "Market for pattern with Europe",
+      "pipeline_stages": {
+        "01_market_classification": {
+          "market_term_type": "market_for",
+          "confidence": 0.95,
+          "remaining": "Healthcare Market for Europe Analysis and Forecast, 2024-2029"
+        },
+        "02_date_extraction": {
+          "extracted_date": "2024-2029",
+          "confidence": 0.98,
+          "remaining": "Healthcare Market for Europe Analysis and Forecast"
+        },
+        "03_report_type": {
+          "extracted_report_type": "Market Analysis and Forecast",
+          "confidence": 0.30000000000000004,
+          "remaining": "Healthcare for Europe"
+        },
+        "04_geographic_detection": {
+          "extracted_regions": [
+            "Europe"
+          ],
+          "confidence": 0.8500000000000001,
+          "remaining": "Healthcare"
+        }
+      }
+    },
+    {
+      "title": "APAC Personal Protective Equipment Market Analysis, 2024-2029",
+      "expected_topic": "Personal Protective Equipment",
+      "actual_topic": "Personal Protective Equipment",
+      "success": true,
+      "description": "Standard pattern (no orphaned prepositions)",
+      "pipeline_stages": {
+        "01_market_classification": {
+          "market_term_type": "standard",
+          "confidence": 0.9,
+          "remaining": "APAC Personal Protective Equipment Market Analysis, 2024-2029"
+        },
+        "02_date_extraction": {
+          "extracted_date": "2024-2029",
+          "confidence": 0.98,
+          "remaining": "APAC Personal Protective Equipment Market Analysis"
+        },
+        "03_report_type": {
+          "extracted_report_type": "Market Analysis",
+          "confidence": 0.7000000000000001,
+          "remaining": "APAC Personal Protective Equipment"
+        },
+        "04_geographic_detection": {
+          "extracted_regions": [
+            "Asia Pacific"
+          ],
+          "confidence": 0.8500000000000001,
+          "remaining": "Personal Protective Equipment"
+        }
+      }
+    },
+    {
+      "title": "Global Automotive Components Market by Region, 2023-2028",
+      "expected_topic": "Automotive Components",
+      "actual_topic": "Automotive Components by Region",
+      "success": false,
+      "description": "Market by pattern",
+      "pipeline_stages": {
+        "01_market_classification": {
+          "market_term_type": "market_by",
+          "confidence": 0.95,
+          "remaining": "Global Automotive Components Market by Region, 2023-2028"
+        },
+        "02_date_extraction": {
+          "extracted_date": "2023-2028",
+          "confidence": 0.98,
+          "remaining": "Global Automotive Components Market by Region"
+        },
+        "03_report_type": {
+          "extracted_report_type": "Market",
+          "confidence": 0.1,
+          "remaining": "Global Automotive Components by Region"
+        },
+        "04_geographic_detection": {
+          "extracted_regions": [
+            "Global"
+          ],
+          "confidence": 0.8500000000000001,
+          "remaining": "Automotive Components by Region"
+        }
+      }
+    },
+    {
+      "title": "Software Solutions Market of United States Report, 2025",
+      "expected_topic": "Software Solutions",
+      "actual_topic": "Software Solutions",
+      "success": true,
+      "description": "Market of pattern",
+      "pipeline_stages": {
+        "01_market_classification": {
+          "market_term_type": "standard",
+          "confidence": 0.9,
+          "remaining": "Software Solutions Market of United States Report, 2025"
+        },
+        "02_date_extraction": {
+          "extracted_date": "2025",
+          "confidence": 0.95,
+          "remaining": "Software Solutions Market of United States Report"
+        },
+        "03_report_type": {
+          "extracted_report_type": "Market Report",
+          "confidence": 0.7000000000000001,
+          "remaining": "Software Solutions"
+        },
+        "04_geographic_detection": {
+          "extracted_regions": [],
+          "confidence": 0.8,
+          "remaining": "Software Solutions"
+        }
+      }
+    }
+  ]
+}
