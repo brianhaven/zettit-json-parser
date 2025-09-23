@@ -1,0 +1,63 @@
+{
+  "test_metadata": {
+    "issue": "Issue #27: Pre-Market Dictionary Terms Causing Content Loss",
+    "script": "Script 03 v4: Pure Dictionary Report Type Extractor",
+    "test_date_pdt": "2025-09-22 21:34:25 PDT",
+    "test_date_utc": "2025-09-23 04:34:25 UTC",
+    "total_tests": 5,
+    "passed": 1,
+    "failed": 4
+  },
+  "test_results": [
+    {
+      "test_case": 1,
+      "title": "Oil & Gas Data Management Market",
+      "expected_report_type": "Market",
+      "actual_report_type": "Market",
+      "expected_topic": "Oil & Gas Data Management",
+      "actual_topic": "Oil & Gas",
+      "passed": false,
+      "issue": "Currently loses 'Data Management' from topic"
+    },
+    {
+      "test_case": 2,
+      "title": "Data Monetization Market Outlook, Trends, Analysis",
+      "expected_report_type": "Market Outlook Trends Analysis",
+      "actual_report_type": "Market Outlook Trends Analysis",
+      "expected_topic": "Data Monetization",
+      "actual_topic": "",
+      "passed": false,
+      "issue": "Currently loses entire 'Data Monetization' topic"
+    },
+    {
+      "test_case": 3,
+      "title": "Europe Building Information Modeling Market Analysis Report, 2024",
+      "expected_report_type": "Market Analysis Report",
+      "actual_report_type": "Market Analysis Report",
+      "expected_topic": "Europe Building Information Modeling",
+      "actual_topic": "Europe Building Information Modeling , 2024",
+      "passed": false,
+      "issue": "May lose 'Information' or 'Modeling' from topic"
+    },
+    {
+      "test_case": 4,
+      "title": "Asia-Pacific Advanced Analytics Market Research Study",
+      "expected_report_type": "Market Research Study",
+      "actual_report_type": "Market Research Study",
+      "expected_topic": "Asia-Pacific Advanced Analytics",
+      "actual_topic": "Asia-Pacific Advanced Analytics",
+      "passed": true,
+      "issue": "May lose 'Advanced' or 'Analytics' from topic"
+    },
+    {
+      "test_case": 5,
+      "title": "Global Food Processing Equipment Market Trends & Opportunities",
+      "expected_report_type": "Market Trends Opportunities",
+      "actual_report_type": "Market Trends",
+      "expected_topic": "Global Food Processing Equipment",
+      "actual_topic": "Global Food Processing Equipment & Opportunities",
+      "passed": false,
+      "issue": "May lose 'Processing' from topic"
+    }
+  ]
+}

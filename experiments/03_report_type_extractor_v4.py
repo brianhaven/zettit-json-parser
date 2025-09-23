@@ -755,37 +755,50 @@ class PureDictionaryReportTypeExtractor:
             )
 
     def _clean_remaining_title(self, original_title: str, extracted_type: Optional[str], dictionary_result: DictionaryKeywordResult) -> str:
-        """Clean remaining title by removing extracted report type."""
+        """Clean remaining title by removing only the extracted report type keywords."""
         if not extracted_type or not dictionary_result.keyword_positions:
             return original_title
-        
-        # Remove keyword phrases from title
-        remaining = original_title
-        
-        # Get all keyword positions sorted by start position
-        positions = []
-        for keyword in dictionary_result.keywords_found:
-            if keyword in dictionary_result.keyword_positions:
-                pos_info = dictionary_result.keyword_positions[keyword]
-                positions.append((pos_info['start'], pos_info['end'], keyword))
-        
-        if positions:
-            # Sort by start position
-            positions.sort()
-            
-            # Remove the complete phrase span from first to last keyword
-            first_start = positions[0][0]
-            last_end = positions[-1][1]
-            
-            # Remove the complete phrase span
+
+        # Build a list of positions for report type keywords only
+        # Report type keywords should be contiguous around "Market"
+        report_positions = []
+
+        # Find Market position as anchor
+        market_pos = None
+        if "Market" in dictionary_result.keyword_positions:
+            market_info = dictionary_result.keyword_positions["Market"]
+            market_pos = market_info['start']
+            report_positions.append((market_info['start'], market_info['end']))
+
+        if market_pos is not None:
+            # Identify which keywords are part of the report type
+            # These should be adjacent/near to Market
+            for keyword in dictionary_result.keywords_found:
+                if keyword != "Market" and keyword in dictionary_result.keyword_positions:
+                    pos_info = dictionary_result.keyword_positions[keyword]
+                    # Check if this keyword is part of report type (after Market or very close)
+                    if pos_info['start'] >= market_pos or abs(pos_info['start'] - market_pos) < 50:
+                        # Only include keywords that are in the extracted report type
+                        if keyword in extracted_type:
+                            report_positions.append((pos_info['start'], pos_info['end']))
+
+        if report_positions:
+            # Sort positions and find the span to remove
+            report_positions.sort()
+            first_start = report_positions[0][0]
+            last_end = report_positions[-1][1]
+
+            # Remove only the report type span
             remaining = original_title[:first_start] + original_title[last_end:]
-        
-        # Clean up extra spaces and punctuation
+        else:
+            # Fallback to simple replacement if positions not available
+            remaining = original_title.replace(extracted_type, "", 1)
+
+        # Clean up spaces and punctuation
         remaining = re.sub(r'\s+', ' ', remaining)
         remaining = re.sub(r'^[,\s&\-–—\|;:]+|[,\s&\-–—\|;:]+$', '', remaining)
-        remaining = remaining.strip()
-        
-        return remaining
+
+        return remaining.strip()
 
     def get_statistics(self) -> Dict:
         """Get processing statistics for pure dictionary approach."""
