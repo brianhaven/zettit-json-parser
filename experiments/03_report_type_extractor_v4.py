@@ -522,7 +522,9 @@ class PureDictionaryReportTypeExtractor:
         # Enhanced pattern: capture just the market context but PRESERVE all database keywords
         # Build comprehensive lookahead from ALL database keywords to ensure none are consumed
         all_keywords_pattern = '|'.join([re.escape(kw) for kw in self.all_keywords if kw != 'Market'])
-        pattern = rf'\b{re.escape(market_phrase)}\s+([^,]*?)(?=\s+(?:{all_keywords_pattern})|$)'
+        # ISSUE #19 FIX: Enhanced pattern to preserve symbols like & by using .+? instead of [^,]*?
+        # and adding proper comma-separated keyword handling
+        pattern = rf'\b{re.escape(market_phrase)}\s+(.+?)(?:,\s*(?:{all_keywords_pattern})|(?:\s+(?:{all_keywords_pattern}))|$)'
         match = re.search(pattern, title, re.IGNORECASE)
         
         if match:

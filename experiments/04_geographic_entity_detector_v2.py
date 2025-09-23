@@ -273,11 +273,13 @@ class GeographicEntityDetector:
         extended_end = end
         
         # Look backwards for punctuation/whitespace to include in removal
-        while extended_start > 0 and text[extended_start - 1] in ' ,;&-()[]{}':
+        # ISSUE #19 FIX: Remove '&' from cleanup characters to preserve ampersands in titles
+        while extended_start > 0 and text[extended_start - 1] in ' ,;-()[]{}':
             extended_start -= 1
-        
-        # Look forwards for punctuation/whitespace to include in removal  
-        while extended_end < len(text) and text[extended_end] in ' ,;&-()[]{}':
+
+        # Look forwards for punctuation/whitespace to include in removal
+        # ISSUE #19 FIX: Remove '&' from cleanup characters to preserve ampersands in titles
+        while extended_end < len(text) and text[extended_end] in ' ,;-()[]{}':
             extended_end += 1
         
         # Check if we need to extend further for compound patterns
@@ -303,8 +305,13 @@ class GeographicEntityDetector:
         cleaned_text = re.sub(r'\s*,\s*and\s*,\s*', ' ', cleaned_text) # Comma-and-comma artifacts
         cleaned_text = re.sub(r'\s*and\s*and\s*', ' ', cleaned_text) # Double "and" connectors
         cleaned_text = re.sub(r'\s+', ' ', cleaned_text)             # Multiple spaces
-        cleaned_text = re.sub(r'^\s*[,;&-]\s*', '', cleaned_text)    # Leading punctuation
-        cleaned_text = re.sub(r'\s*[,;&-]\s*$', '', cleaned_text)    # Trailing punctuation
+        # ISSUE #19 FIX: Don't remove & if it's between words
+        if not re.search(r'\w\s*&\s*\w', cleaned_text):
+            cleaned_text = re.sub(r'^\s*[,;&-]\s*', '', cleaned_text)    # Leading punctuation
+            cleaned_text = re.sub(r'\s*[,;&-]\s*$', '', cleaned_text)    # Trailing punctuation
+        else:
+            cleaned_text = re.sub(r'^\s*[,;-]\s*', '', cleaned_text)    # Leading punctuation (preserve &)
+            cleaned_text = re.sub(r'\s*[,;-]\s*$', '', cleaned_text)    # Trailing punctuation (preserve &)
         cleaned_text = re.sub(r'^\s*and\s*', '', cleaned_text, flags=re.IGNORECASE) # Leading "and"
         cleaned_text = re.sub(r'\s*and\s*$', '', cleaned_text, flags=re.IGNORECASE) # Trailing "and"
         
@@ -387,8 +394,28 @@ class GeographicEntityDetector:
             return ""
 
         # Remove dangling connectors and artifacts
-        text = re.sub(r'^\s*(and|&|,|;|-)\s*', '', text, flags=re.IGNORECASE)
-        text = re.sub(r'\s*(and|&|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
+        # ISSUE #19 FIX: Only remove '&' and '+' if they're truly isolated, not between words
+        # Check if '&' or '+' are between words before removing
+        has_ampersand_between_words = re.search(r'\w\s*&\s*\w', text)
+        has_plus_between_words = re.search(r'\w\s*\+\s*\w', text)
+
+        # Build pattern based on what we can safely remove
+        if has_ampersand_between_words and has_plus_between_words:
+            # Both & and + are between words, preserve both
+            text = re.sub(r'^\s*(and|,|;|-)\s*', '', text, flags=re.IGNORECASE)
+            text = re.sub(r'\s*(and|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
+        elif has_ampersand_between_words:
+            # & is between words, preserve it but + can be removed if isolated
+            text = re.sub(r'^\s*(and|\+|,|;|-)\s*', '', text, flags=re.IGNORECASE)
+            text = re.sub(r'\s*(and|\+|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
+        elif has_plus_between_words:
+            # + is between words, preserve it but & can be removed if isolated
+            text = re.sub(r'^\s*(and|&|,|;|-)\s*', '', text, flags=re.IGNORECASE)
+            text = re.sub(r'\s*(and|&|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
+        else:
+            # Neither & nor + are between words, safe to remove if isolated
+            text = re.sub(r'^\s*(and|&|\+|,|;|-)\s*', '', text, flags=re.IGNORECASE)
+            text = re.sub(r'\s*(and|&|\+|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
 
         # Issue #28 Fix: Remove orphaned prepositions after geographic removal
         # Handles "Retail in" → "Retail" after removing "Singapore" from "Retail in Singapore"
@@ -402,8 +429,9 @@ class GeographicEntityDetector:
         text = re.sub(r'\s+', ' ', text)
 
         # Remove single character artifacts
+        # ISSUE #19 FIX: Preserve & and + symbols even though they're single characters
         words = text.split()
-        cleaned_words = [word for word in words if len(word.strip('.,;:-()[]{}')) > 1]
+        cleaned_words = [word for word in words if len(word.strip('.,;:-()[]{}')) > 1 or word in ['&', '+']]
 
         return ' '.join(cleaned_words).strip()
 
