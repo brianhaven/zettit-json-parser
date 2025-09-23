@@ -1,0 +1,138 @@
+================================================================================
+ISSUE #23 INTEGRATION TEST - Complete Pipeline Validation
+================================================================================
+Analysis Date (PDT): 2025-09-22 20:42:49 PDT
+Analysis Date (UTC): 2025-09-23 03:42:49 UTC
+================================================================================
+
+
+TEST SUMMARY
+================================================================================
+Total Titles Tested: 15
+Clean Extractions: 15
+Artifacts Found: 0
+Success Rate: 100.0%
+
+
+DETAILED RESULTS
+================================================================================
+
+[✓] Global AI Market Analysis, 2024-2030
+  Market Type: standard
+  Date: 2024-2030
+  Report Type: Market Analysis
+  Regions: ['Global']
+  Topic: 'AI'
+  Normalized: 'ai'
+
+[✓] North America Cloud Computing Market Forecast to 2035
+  Market Type: standard
+  Date: 2035
+  Report Type: Market Forecast
+  Regions: ['North America']
+  Topic: 'Cloud Computing'
+  Normalized: 'cloud-computing'
+
+[✓] APAC Robotics Market (2025-2032)
+  Market Type: standard
+  Date: 2025-2032
+  Report Type: Market
+  Regions: ['Asia Pacific']
+  Topic: 'Robotics'
+  Normalized: 'robotics'
+
+[✓] European IoT Market Study [2024]
+  Market Type: standard
+  Date: 2024
+  Report Type: Market Study
+  Regions: ['European Union']
+  Topic: 'IoT'
+  Normalized: 'iot'
+
+[✓] Machine Learning in Healthcare Market, Forecast to 2030
+  Market Type: standard
+  Date: 2030
+  Report Type: Market Forecast
+  Regions: []
+  Topic: 'Machine Learning in Healthcare'
+  Normalized: 'machine-learning-in-healthcare'
+
+[✓] Blockchain Market Analysis () 2024-2029
+  Market Type: standard
+  Date: 2024-2029
+  Report Type: Market Analysis
+  Regions: []
+  Topic: 'Blockchain'
+  Normalized: 'blockchain'
+
+[✓] 5G Network Market [] Through 2031
+  Market Type: standard
+  Date: 2031
+  Report Type: Market
+  Regions: []
+  Topic: '5G Network'
+  Normalized: '5g-network'
+
+[✓] Quantum Computing Market, 2024 to 2030
+  Market Type: standard
+  Date: 2024-2030
+  Report Type: Market
+  Regions: []
+  Topic: 'Quantum Computing'
+  Normalized: 'quantum-computing'
+
+[✓] Edge Computing Market Analysis, Forecast to
+  Market Type: standard
+  Date: None
+  Report Type: Market Analysis Forecast
+  Regions: []
+  Topic: 'Edge Computing'
+  Normalized: 'edge-computing'
+
+[✓] Global Artificial Intelligence (AI) in Healthcare Market Analysis, Forecast to 2030
+  Market Type: standard
+  Date: 2030
+  Report Type: Market Analysis Forecast
+  Regions: ['Global']
+  Topic: 'Artificial Intelligence (AI) in Healthcare'
+  Normalized: 'artificial-intelligence-ai-in-healthcare'
+
+[✓] North America Machine Learning Market for Retail, 2024-2029
+  Market Type: market_for
+  Date: 2024-2029
+  Report Type: Market
+  Regions: ['North America']
+  Topic: 'Machine Learning for Retail'
+  Normalized: 'machine-learning-for-retail'
+
+[✓] APAC Cloud Computing Market in Banking and Financial Services (2025-2031)
+  Market Type: market_in
+  Date: 2025-2031
+  Report Type: Market
+  Regions: ['Asia Pacific']
+  Topic: 'Cloud Computing in Banking and Financial Services'
+  Normalized: 'cloud-computing-in-banking-and-financial-services'
+
+[✓] Global Digital Transformation Market Analysis
+  Market Type: standard
+  Date: None
+  Report Type: Market Analysis
+  Regions: ['Global']
+  Topic: 'Digital Transformation'
+  Normalized: 'digital-transformation'
+
+[✓] IoT Platform Market Overview
+  Market Type: standard
+  Date: None
+  Report Type: Market Overview
+  Regions: []
+  Topic: 'IoT Platform'
+  Normalized: 'iot-platform'
+
+[✓] Cybersecurity Market Trends and Opportunities
+  Market Type: standard
+  Date: None
+  Report Type: Market Trends
+  Regions: []
+  Topic: 'Cybersecurity and Opportunities'
+  Normalized: 'cybersecurity-and-opportunities'

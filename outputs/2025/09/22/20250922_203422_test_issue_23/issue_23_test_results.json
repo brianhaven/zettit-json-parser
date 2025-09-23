@@ -1,0 +1,139 @@
+{
+  "test_summary": {
+    "total_tests": 10,
+    "passed": 10,
+    "failed": 0,
+    "all_passed": true
+  },
+  "test_results": [
+    {
+      "test_id": "Case 1",
+      "description": "Empty brackets after date removal",
+      "input": "AI in Healthcare Market []",
+      "preprocessed": "AI in Healthcare  []",
+      "expected": "AI in Healthcare",
+      "actual": "AI in Healthcare",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: 'AI in Healthcare []'",
+        "After artifact cleanup: 'AI in Healthcare'"
+      ]
+    },
+    {
+      "test_id": "Case 2",
+      "description": "Empty parentheses after date removal",
+      "input": "Machine Learning Market ()",
+      "preprocessed": "Machine Learning  ()",
+      "expected": "Machine Learning",
+      "actual": "Machine Learning",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: 'Machine Learning ()'",
+        "After artifact cleanup: 'Machine Learning'"
+      ]
+    },
+    {
+      "test_id": "Case 3",
+      "description": "Double spaces from date removal",
+      "input": "Robotics  Market",
+      "preprocessed": "Robotics",
+      "expected": "Robotics",
+      "actual": "Robotics",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: 'Robotics'"
+      ]
+    },
+    {
+      "test_id": "Case 4",
+      "description": "Orphaned 'Forecast to' connector",
+      "input": "Blockchain Market, Forecast to",
+      "preprocessed": "Blockchain , Forecast to",
+      "expected": "Blockchain",
+      "actual": "Blockchain",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: 'Blockchain , Forecast to'",
+        "After artifact cleanup: 'Blockchain'"
+      ]
+    },
+    {
+      "test_id": "Case 5",
+      "description": "Orphaned 'to' connector at end",
+      "input": "IoT Market Analysis to",
+      "preprocessed": "IoT  to",
+      "expected": "IoT",
+      "actual": "IoT",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: 'IoT to'",
+        "After artifact cleanup: 'IoT'"
+      ]
+    },
+    {
+      "test_id": "Case 6",
+      "description": "Orphaned 'through' connector",
+      "input": "5G Network Market through",
+      "preprocessed": "5G Network  through",
+      "expected": "5G Network",
+      "actual": "5G Network",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: '5G Network through'",
+        "After artifact cleanup: '5G Network'"
+      ]
+    },
+    {
+      "test_id": "Case 7",
+      "description": "Orphaned 'till' connector",
+      "input": "Cloud Computing Market till",
+      "preprocessed": "Cloud Computing  till",
+      "expected": "Cloud Computing",
+      "actual": "Cloud Computing",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: 'Cloud Computing till'",
+        "After artifact cleanup: 'Cloud Computing'"
+      ]
+    },
+    {
+      "test_id": "Case 8",
+      "description": "Orphaned 'until' connector",
+      "input": "Quantum Computing Market until",
+      "preprocessed": "Quantum Computing  until",
+      "expected": "Quantum Computing",
+      "actual": "Quantum Computing",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: 'Quantum Computing until'",
+        "After artifact cleanup: 'Quantum Computing'"
+      ]
+    },
+    {
+      "test_id": "Case 9",
+      "description": "Multiple empty containers and spaces",
+      "input": "Edge Computing Market  ()  []",
+      "preprocessed": "Edge Computing   ()  []",
+      "expected": "Edge Computing",
+      "actual": "Edge Computing",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: 'Edge Computing () []'",
+        "After artifact cleanup: 'Edge Computing'"
+      ]
+    },
+    {
+      "test_id": "Case 10",
+      "description": "Combined artifacts",
+      "input": "AR/VR Market, Forecast to  ()",
+      "preprocessed": "AR/VR , Forecast to  ()",
+      "expected": "AR/VR",
+      "actual": "AR/VR",
+      "passed": true,
+      "processing_notes": [
+        "After systematic removal: 'AR/VR , Forecast to ()'",
+        "After artifact cleanup: 'AR/VR'"
+      ]
+    }
+  ]
+}

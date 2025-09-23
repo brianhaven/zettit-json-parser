@@ -1,0 +1,253 @@
+{
+  "summary": {
+    "total_titles": 15,
+    "clean_extractions": 15,
+    "artifacts_found": 0,
+    "success_rate": 100.0
+  },
+  "results": [
+    {
+      "original_title": "Global AI Market Analysis, 2024-2030",
+      "market_type": "standard",
+      "extracted_date": "2024-2030",
+      "extracted_report_type": "Market Analysis",
+      "extracted_regions": [
+        "Global"
+      ],
+      "extracted_topic": "AI",
+      "normalized_topic": "ai",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'AI'",
+        "Final topic: 'AI'"
+      ]
+    },
+    {
+      "original_title": "North America Cloud Computing Market Forecast to 2035",
+      "market_type": "standard",
+      "extracted_date": "2035",
+      "extracted_report_type": "Market Forecast",
+      "extracted_regions": [
+        "North America"
+      ],
+      "extracted_topic": "Cloud Computing",
+      "normalized_topic": "cloud-computing",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Cloud Computing'",
+        "Final topic: 'Cloud Computing'"
+      ]
+    },
+    {
+      "original_title": "APAC Robotics Market (2025-2032)",
+      "market_type": "standard",
+      "extracted_date": "2025-2032",
+      "extracted_report_type": "Market",
+      "extracted_regions": [
+        "Asia Pacific"
+      ],
+      "extracted_topic": "Robotics",
+      "normalized_topic": "robotics",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Robotics'",
+        "Final topic: 'Robotics'"
+      ]
+    },
+    {
+      "original_title": "European IoT Market Study [2024]",
+      "market_type": "standard",
+      "extracted_date": "2024",
+      "extracted_report_type": "Market Study",
+      "extracted_regions": [
+        "European Union"
+      ],
+      "extracted_topic": "IoT",
+      "normalized_topic": "iot",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'IoT'",
+        "Final topic: 'IoT'"
+      ]
+    },
+    {
+      "original_title": "Machine Learning in Healthcare Market, Forecast to 2030",
+      "market_type": "standard",
+      "extracted_date": "2030",
+      "extracted_report_type": "Market Forecast",
+      "extracted_regions": [],
+      "extracted_topic": "Machine Learning in Healthcare",
+      "normalized_topic": "machine-learning-in-healthcare",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Machine Learning in Healthcare'",
+        "Final topic: 'Machine Learning in Healthcare'"
+      ]
+    },
+    {
+      "original_title": "Blockchain Market Analysis () 2024-2029",
+      "market_type": "standard",
+      "extracted_date": "2024-2029",
+      "extracted_report_type": "Market Analysis",
+      "extracted_regions": [],
+      "extracted_topic": "Blockchain",
+      "normalized_topic": "blockchain",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Blockchain'",
+        "Final topic: 'Blockchain'"
+      ]
+    },
+    {
+      "original_title": "5G Network Market [] Through 2031",
+      "market_type": "standard",
+      "extracted_date": "2031",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "extracted_topic": "5G Network",
+      "normalized_topic": "5g-network",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: '5G Network'",
+        "Final topic: '5G Network'"
+      ]
+    },
+    {
+      "original_title": "Quantum Computing Market, 2024 to 2030",
+      "market_type": "standard",
+      "extracted_date": "2024-2030",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "extracted_topic": "Quantum Computing",
+      "normalized_topic": "quantum-computing",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Quantum Computing'",
+        "Final topic: 'Quantum Computing'"
+      ]
+    },
+    {
+      "original_title": "Edge Computing Market Analysis, Forecast to",
+      "market_type": "standard",
+      "extracted_date": null,
+      "extracted_report_type": "Market Analysis Forecast",
+      "extracted_regions": [],
+      "extracted_topic": "Edge Computing",
+      "normalized_topic": "edge-computing",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Edge Computing to'",
+        "After artifact cleanup: 'Edge Computing'",
+        "Final topic: 'Edge Computing'"
+      ]
+    },
+    {
+      "original_title": "Global Artificial Intelligence (AI) in Healthcare Market Analysis, Forecast to 2030",
+      "market_type": "standard",
+      "extracted_date": "2030",
+      "extracted_report_type": "Market Analysis Forecast",
+      "extracted_regions": [
+        "Global"
+      ],
+      "extracted_topic": "Artificial Intelligence (AI) in Healthcare",
+      "normalized_topic": "artificial-intelligence-ai-in-healthcare",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Artificial Intelligence (AI) in Healthcare'",
+        "Final topic: 'Artificial Intelligence (AI) in Healthcare'"
+      ]
+    },
+    {
+      "original_title": "North America Machine Learning Market for Retail, 2024-2029",
+      "market_type": "market_for",
+      "extracted_date": "2024-2029",
+      "extracted_report_type": "Market",
+      "extracted_regions": [
+        "North America"
+      ],
+      "extracted_topic": "Machine Learning for Retail",
+      "normalized_topic": "machine-learning-for-retail",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Machine Learning for Retail'",
+        "Final topic: 'Machine Learning for Retail'"
+      ]
+    },
+    {
+      "original_title": "APAC Cloud Computing Market in Banking and Financial Services (2025-2031)",
+      "market_type": "market_in",
+      "extracted_date": "2025-2031",
+      "extracted_report_type": "Market",
+      "extracted_regions": [
+        "Asia Pacific"
+      ],
+      "extracted_topic": "Cloud Computing in Banking and Financial Services",
+      "normalized_topic": "cloud-computing-in-banking-and-financial-services",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Cloud Computing in Banking and Financial Services'",
+        "Final topic: 'Cloud Computing in Banking and Financial Services'"
+      ]
+    },
+    {
+      "original_title": "Global Digital Transformation Market Analysis",
+      "market_type": "standard",
+      "extracted_date": null,
+      "extracted_report_type": "Market Analysis",
+      "extracted_regions": [
+        "Global"
+      ],
+      "extracted_topic": "Digital Transformation",
+      "normalized_topic": "digital-transformation",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Digital Transformation'",
+        "Final topic: 'Digital Transformation'"
+      ]
+    },
+    {
+      "original_title": "IoT Platform Market Overview",
+      "market_type": "standard",
+      "extracted_date": null,
+      "extracted_report_type": "Market Overview",
+      "extracted_regions": [],
+      "extracted_topic": "IoT Platform",
+      "normalized_topic": "iot-platform",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'IoT Platform'",
+        "Final topic: 'IoT Platform'"
+      ]
+    },
+    {
+      "original_title": "Cybersecurity Market Trends and Opportunities",
+      "market_type": "standard",
+      "extracted_date": null,
+      "extracted_report_type": "Market Trends",
+      "extracted_regions": [],
+      "extracted_topic": "Cybersecurity and Opportunities",
+      "normalized_topic": "cybersecurity-and-opportunities",
+      "has_artifacts": false,
+      "processing_notes": [
+        "No 'Market' keyword found - using full title",
+        "After systematic removal: 'Cybersecurity and Opportunities'",
+        "Final topic: 'Cybersecurity and Opportunities'"
+      ]
+    }
+  ],
+  "artifacts_detected": []
+}
