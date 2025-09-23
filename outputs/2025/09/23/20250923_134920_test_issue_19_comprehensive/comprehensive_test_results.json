@@ -1,0 +1,434 @@
+[
+  {
+    "suite": "Ampersand Cases",
+    "results": [
+      {
+        "title": "Oil & Gas Market Report, 2025",
+        "expected": "Oil & Gas",
+        "result": {
+          "original_title": "Oil & Gas Market Report, 2025",
+          "market_type": "standard",
+          "date_extracted": "2025",
+          "report_type": "Market Report",
+          "regions": [],
+          "final_topic": "Oil & Gas",
+          "pipeline_stages": {
+            "after_market": "Oil & Gas Market Report, 2025",
+            "after_date": "Oil & Gas Market Report",
+            "after_report": "Oil & Gas",
+            "after_geo": "Oil & Gas"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "Food & Beverage Market Analysis",
+        "expected": "Food & Beverage",
+        "result": {
+          "original_title": "Food & Beverage Market Analysis",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Analysis",
+          "regions": [],
+          "final_topic": "Food & Beverage",
+          "pipeline_stages": {
+            "after_market": "Food & Beverage Market Analysis",
+            "after_date": "Food & Beverage Market Analysis",
+            "after_report": "Food & Beverage",
+            "after_geo": "Food & Beverage"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "M&A Market Outlook, 2030",
+        "expected": "M&A",
+        "result": {
+          "original_title": "M&A Market Outlook, 2030",
+          "market_type": "standard",
+          "date_extracted": "2030",
+          "report_type": "Market Outlook",
+          "regions": [],
+          "final_topic": "M&A",
+          "pipeline_stages": {
+            "after_market": "M&A Market Outlook, 2030",
+            "after_date": "M&A Market Outlook",
+            "after_report": "M&A",
+            "after_geo": "M&A"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "R&D Market for Science & Technology",
+        "expected": "R&D for Science & Technology",
+        "result": {
+          "original_title": "R&D Market for Science & Technology",
+          "market_type": "market_for",
+          "date_extracted": null,
+          "report_type": "Market",
+          "regions": [],
+          "final_topic": "R&D for Science & Technology",
+          "pipeline_stages": {
+            "after_market": "R&D Market for Science & Technology",
+            "after_date": "R&D Market for Science & Technology",
+            "after_report": "R&D for Science & Technology",
+            "after_geo": "R&D for Science & Technology"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "Health & Wellness Market In Fitness & Nutrition",
+        "expected": "Health & Wellness in Fitness & Nutrition",
+        "result": {
+          "original_title": "Health & Wellness Market In Fitness & Nutrition",
+          "market_type": "market_in",
+          "date_extracted": null,
+          "report_type": "Market",
+          "regions": [],
+          "final_topic": "Health & Wellness in Fitness & Nutrition",
+          "pipeline_stages": {
+            "after_market": "Health & Wellness Market In Fitness & Nutrition",
+            "after_date": "Health & Wellness Market In Fitness & Nutrition",
+            "after_report": "Health & Wellness in Fitness & Nutrition",
+            "after_geo": "Health & Wellness in Fitness & Nutrition"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      }
+    ]
+  },
+  {
+    "suite": "Plus Symbol Cases",
+    "results": [
+      {
+        "title": "Technology + Innovation Market Study",
+        "expected": "Technology + Innovation",
+        "result": {
+          "original_title": "Technology + Innovation Market Study",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Study",
+          "regions": [],
+          "final_topic": "Technology + Innovation",
+          "pipeline_stages": {
+            "after_market": "Technology + Innovation Market Study",
+            "after_date": "Technology + Innovation Market Study",
+            "after_report": "Technology + Innovation",
+            "after_geo": "Technology + Innovation"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "Design + Manufacturing Market Report",
+        "expected": "Design + Manufacturing",
+        "result": {
+          "original_title": "Design + Manufacturing Market Report",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Report",
+          "regions": [],
+          "final_topic": "Design + Manufacturing",
+          "pipeline_stages": {
+            "after_market": "Design + Manufacturing Market Report",
+            "after_date": "Design + Manufacturing Market Report",
+            "after_report": "Design + Manufacturing",
+            "after_geo": "Design + Manufacturing"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "Sales + Marketing Market Analysis",
+        "expected": "Sales + Marketing",
+        "result": {
+          "original_title": "Sales + Marketing Market Analysis",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Analysis",
+          "regions": [],
+          "final_topic": "Sales + Marketing",
+          "pipeline_stages": {
+            "after_market": "Sales + Marketing Market Analysis",
+            "after_date": "Sales + Marketing Market Analysis",
+            "after_report": "Sales + Marketing",
+            "after_geo": "Sales + Marketing"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      }
+    ]
+  },
+  {
+    "suite": "Multiple Symbols",
+    "results": [
+      {
+        "title": "IT & Software + Hardware Market Report",
+        "expected": "IT & Software + Hardware",
+        "result": {
+          "original_title": "IT & Software + Hardware Market Report",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Report",
+          "regions": [],
+          "final_topic": "IT & Software + Hardware",
+          "pipeline_stages": {
+            "after_market": "IT & Software + Hardware Market Report",
+            "after_date": "IT & Software + Hardware Market Report",
+            "after_report": "IT & Software + Hardware",
+            "after_geo": "IT & Software + Hardware"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "Food & Beverage + Hotels/Restaurants Market",
+        "expected": "Food & Beverage + Hotels/Restaurants",
+        "result": {
+          "original_title": "Food & Beverage + Hotels/Restaurants Market",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market",
+          "regions": [],
+          "final_topic": "Food & Beverage + Hotels/Restaurants",
+          "pipeline_stages": {
+            "after_market": "Food & Beverage + Hotels/Restaurants Market",
+            "after_date": "Food & Beverage + Hotels/Restaurants Market",
+            "after_report": "Food & Beverage + Hotels/Restaurants",
+            "after_geo": "Food & Beverage + Hotels/Restaurants"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "Aerospace & Defense / Security Market",
+        "expected": "Aerospace & Defense / Security",
+        "result": {
+          "original_title": "Aerospace & Defense / Security Market",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market",
+          "regions": [],
+          "final_topic": "Aerospace & Defense Security",
+          "pipeline_stages": {
+            "after_market": "Aerospace & Defense / Security Market",
+            "after_date": "Aerospace & Defense / Security Market",
+            "after_report": "Aerospace & Defense / Security",
+            "after_geo": "Aerospace & Defense Security"
+          }
+        },
+        "passed": false,
+        "symbols_preserved": false,
+        "topic_correct": false
+      }
+    ]
+  },
+  {
+    "suite": "Edge Cases",
+    "results": [
+      {
+        "title": "&& Double Ampersand Market Report",
+        "expected": "&& Double Ampersand",
+        "result": {
+          "original_title": "&& Double Ampersand Market Report",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Report",
+          "regions": [],
+          "final_topic": "Double Ampers",
+          "pipeline_stages": {
+            "after_market": "&& Double Ampersand Market Report",
+            "after_date": "&& Double Ampersand Market Report",
+            "after_report": "Double Ampersand",
+            "after_geo": "Double Ampers"
+          }
+        },
+        "passed": false,
+        "symbols_preserved": false,
+        "topic_correct": false
+      },
+      {
+        "title": "Market & Report & Analysis & Study",
+        "expected": "Market & & Analysis & Study",
+        "result": {
+          "original_title": "Market & Report & Analysis & Study",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Report Analysis Study",
+          "regions": [],
+          "final_topic": "",
+          "pipeline_stages": {
+            "after_market": "Market & Report & Analysis & Study",
+            "after_date": "Market & Report & Analysis & Study",
+            "after_report": "",
+            "after_geo": ""
+          }
+        },
+        "passed": false,
+        "symbols_preserved": false,
+        "topic_correct": false
+      },
+      {
+        "title": "A&B&C&D Market Report",
+        "expected": "A&B&C&D",
+        "result": {
+          "original_title": "A&B&C&D Market Report",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Report",
+          "regions": [],
+          "final_topic": "A&B&C&D",
+          "pipeline_stages": {
+            "after_market": "A&B&C&D Market Report",
+            "after_date": "A&B&C&D Market Report",
+            "after_report": "A&B&C&D",
+            "after_geo": "A&B&C&D"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "Market+++Report",
+        "expected": "Market+++",
+        "result": {
+          "original_title": "Market+++Report",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Report",
+          "regions": [],
+          "final_topic": "",
+          "pipeline_stages": {
+            "after_market": "Market+++Report",
+            "after_date": "Market+++Report",
+            "after_report": "",
+            "after_geo": ""
+          }
+        },
+        "passed": false,
+        "symbols_preserved": false,
+        "topic_correct": false
+      }
+    ]
+  },
+  {
+    "suite": "Geographic with Symbols",
+    "results": [
+      {
+        "title": "U.S. Oil & Gas Market Report",
+        "expected": "Oil & Gas",
+        "result": {
+          "original_title": "U.S. Oil & Gas Market Report",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Report",
+          "regions": [
+            "United States"
+          ],
+          "final_topic": "Oil & Gas",
+          "pipeline_stages": {
+            "after_market": "U.S. Oil & Gas Market Report",
+            "after_date": "U.S. Oil & Gas Market Report",
+            "after_report": "U.S. Oil & Gas",
+            "after_geo": "Oil & Gas"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "Asia-Pacific M&A Market Analysis",
+        "expected": "M&A",
+        "result": {
+          "original_title": "Asia-Pacific M&A Market Analysis",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Analysis",
+          "regions": [
+            "Asia Pacific"
+          ],
+          "final_topic": "M&A",
+          "pipeline_stages": {
+            "after_market": "Asia-Pacific M&A Market Analysis",
+            "after_date": "Asia-Pacific M&A Market Analysis",
+            "after_report": "Asia-Pacific M&A",
+            "after_geo": "M&A"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "European Food + Beverage Market",
+        "expected": "Food + Beverage",
+        "result": {
+          "original_title": "European Food + Beverage Market",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market",
+          "regions": [
+            "European Union"
+          ],
+          "final_topic": "Food + Beverage",
+          "pipeline_stages": {
+            "after_market": "European Food + Beverage Market",
+            "after_date": "European Food + Beverage Market",
+            "after_report": "European Food + Beverage",
+            "after_geo": "Food + Beverage"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      },
+      {
+        "title": "Global IT & Telecom Market Study",
+        "expected": "IT & Telecom",
+        "result": {
+          "original_title": "Global IT & Telecom Market Study",
+          "market_type": "standard",
+          "date_extracted": null,
+          "report_type": "Market Study",
+          "regions": [
+            "Global"
+          ],
+          "final_topic": "IT & Telecom",
+          "pipeline_stages": {
+            "after_market": "Global IT & Telecom Market Study",
+            "after_date": "Global IT & Telecom Market Study",
+            "after_report": "Global IT & Telecom",
+            "after_geo": "IT & Telecom"
+          }
+        },
+        "passed": true,
+        "symbols_preserved": true,
+        "topic_correct": true
+      }
+    ]
+  }
+]
