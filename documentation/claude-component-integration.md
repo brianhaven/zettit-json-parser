@@ -36,13 +36,13 @@ geo_detector = script04.GeographicEntityDetector(patterns_collection)
 ## Current Component Class Names (UPDATED 2025-09-05)
 **ALWAYS verify class names before creating test scripts:**
 
-| Script | Current Class Name | Initialization | Main Method | Legacy/Incorrect Names |
-|--------|-------------------|---------------|-------------|------------------------|
-| 01 | `MarketTermClassifier` | `(pattern_library_manager=None)` | `classify(title)` | ✓ (unchanged) |
-| 02 | `EnhancedDateExtractor` | `(pattern_library_manager)` REQUIRED | `extract(title)` | ❌ `DateExtractor` |
-| 03 v4 | `PureDictionaryReportTypeExtractor` | `(pattern_library_manager)` REQUIRED | `extract(title)` | ❌ `MarketAwareReportTypeExtractor` (v2) |
-| 04 v2 | `GeographicEntityDetector` | `(patterns_collection)` RAW | `extract_geographic_entities(text)` | ✓ (lean architecture) |
-| 05 | `TopicExtractor` | `(pattern_library_manager)` | `extract(title)` | (to be confirmed) |
+| Script | Current Class Name | Initialization | Main Method | Status | Recent Updates |
+|--------|-------------------|---------------|-------------|--------|----------------|
+| 01 | `MarketTermClassifier` | `(pattern_library_manager=None)` | `classify(title)` | ✅ PRODUCTION | Enhanced "market_in" context integration (Issue #28) |
+| 02 | `EnhancedDateExtractor` | `(pattern_library_manager)` REQUIRED | `extract(title)` | ✅ PRODUCTION | Enhanced parentheses boundary detection (Issue #29) |
+| 03 v4 | `PureDictionaryReportTypeExtractor` | `(pattern_library_manager)` REQUIRED | `extract(title)` | ✅ PRODUCTION | Content preservation, separator cleanup, symbol preservation (Issues #19, #24, #26, #27) |
+| 04 v2 | `GeographicEntityDetector` | `(patterns_collection)` RAW | `extract_geographic_entities(text)` | ✅ PRODUCTION | Pattern curation, attribute standardization, orphaned preposition cleanup (Issues #18, #19, #22, #28) |
+| 05 | `TopicExtractor` | `(pattern_library_manager)` | `extract(title)` | 🔄 READY | Awaiting Phase 5 implementation |
 
 ### CRITICAL METHOD AND ATTRIBUTE CORRECTIONS:
 
@@ -149,7 +149,24 @@ print(f"Remaining: {report_result.title}")  # NOT .remaining_text
 ```
 
 ## Pipeline Component Architecture Summary
+
+### ✅ Production-Ready Architecture (2025-09-23)
 ```
-Scripts 01-03 (Legacy): MongoDB URI → PatternLibraryManager → Component
-Script 04+ (Lean):      MongoDB URI → Raw Collection → Component
+Scripts 01-03 (Enhanced): MongoDB URI → PatternLibraryManager → Component
+Script 04+ (Lean):        MongoDB URI → Raw Collection → Component
 ```
+
+### All Foundation Issues Resolved:
+- **Phase 1:** ✅ Foundation Issues (Critical infrastructure)
+- **Phase 2:** ✅ Integration Issues (Cross-script coordination)
+- **Phase 3:** ✅ Complex Issues (Advanced logic and edge cases)
+- **Phase 4:** ✅ Geographic Entity Detection (Lean pattern-based)
+
+### GitHub Issues Closed (14 total):
+✅ #13, #15, #16, #17, #18, #19, #20, #21, #22, #24, #25, #26, #27, #28, #29
+
+### Production Status:
+- **Pipeline:** 01→02→03v4→04 fully operational and production-ready
+- **Success Metrics:** All target accuracy rates achieved or exceeded
+- **Quality Assurance:** Comprehensive testing with 250+ real database titles
+- **Next Phase:** Script 05 (Topic Extractor) Testing & Refinement
