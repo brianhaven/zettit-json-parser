@@ -415,8 +415,24 @@ class TopicExtractor:
         remaining_text = remaining_text.strip()
         
         processing_notes.append(f"After systematic removal: '{remaining_text}'")
+
+        # Enhanced date artifact cleanup (Issue #23 fix)
+        # Clean up empty containers left by date removal
+        remaining_text = re.sub(r'\[\s*\]', '', remaining_text)  # Empty brackets
+        remaining_text = re.sub(r'\(\s*\)', '', remaining_text)  # Empty parentheses
+
+        # Clean up orphaned date connectors
+        remaining_text = re.sub(r',\s*Forecast\s+to\s*$', '', remaining_text, flags=re.IGNORECASE)
+        remaining_text = re.sub(r'\s+(to|through|till|until)\s*$', '', remaining_text, flags=re.IGNORECASE)
+
+        # Re-clean spacing after additional removals
+        remaining_text = re.sub(r'\s{2,}', ' ', remaining_text).strip()
+
+        if remaining_text != processing_notes[-1].split("'")[1]:  # If changed by artifact cleanup
+            processing_notes.append(f"After artifact cleanup: '{remaining_text}'")
+
         return remaining_text
-    
+
     def _handle_market_for_concatenation(self, topic: str, processing_notes: List[str]) -> str:
         """Handle special concatenation requirements for 'Market for' patterns."""
         if not topic:
