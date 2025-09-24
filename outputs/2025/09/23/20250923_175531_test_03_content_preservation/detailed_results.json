@@ -1,0 +1,949 @@
+{
+  "statistics": {
+    "total": 50,
+    "passed": 50,
+    "failed": 0,
+    "by_category": {
+      "acronym_preservation": {
+        "total": 20,
+        "passed": 20,
+        "failed": 0,
+        "success_rate": 100.0
+      },
+      "compound_preservation": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0,
+        "success_rate": 100.0
+      },
+      "market_following": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0,
+        "success_rate": 100.0
+      },
+      "multi_acronym": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0,
+        "success_rate": 100.0
+      }
+    },
+    "success_rate": 100.0
+  },
+  "results": [
+    {
+      "success": true,
+      "original_title": "Real-Time Locating Systems Market Size, RTLS Industry Report, 2025",
+      "extracted_report_type": "Market Size Industry Report",
+      "remaining_title": "Real-Time Locating Systems RTLS , 2025",
+      "confidence": 0.9,
+      "processing_time_ms": 4.231000000000001,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Real-Time Locating Systems Market Size, RTLS Industry Report, 2025",
+        "expected_topic_contains": [
+          "RTLS",
+          "Real-Time Locating Systems"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Artificial Intelligence Market Analysis, AI Technology Report, 2030",
+      "extracted_report_type": "Market Analysis Report",
+      "remaining_title": "Artificial Intelligence AI Technology , 2030",
+      "confidence": 0.8,
+      "processing_time_ms": 0.651,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Artificial Intelligence Market Analysis, AI Technology Report, 2030",
+        "expected_topic_contains": [
+          "AI",
+          "Artificial Intelligence"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Internet of Things Market Trends, IoT Industry Study, 2025",
+      "extracted_report_type": "Market Trends Industry Study",
+      "remaining_title": "Internet of Things IoT , 2025",
+      "confidence": 0.9,
+      "processing_time_ms": 0.599,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Internet of Things Market Trends, IoT Industry Study, 2025",
+        "expected_topic_contains": [
+          "IoT",
+          "Internet of Things"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Enterprise Resource Planning Market Outlook, ERP Solutions Report, 2026",
+      "extracted_report_type": "Market Outlook Report",
+      "remaining_title": "Enterprise Resource Planning ERP Solutions , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.6629999999999999,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Enterprise Resource Planning Market Outlook, ERP Solutions Report, 2026",
+        "expected_topic_contains": [
+          "ERP",
+          "Enterprise Resource Planning"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Customer Relationship Management Market Insights, CRM Platform Analysis, 2024",
+      "extracted_report_type": "Market Insights Analysis",
+      "remaining_title": "Customer Relationship Management CRM Platform , 2024",
+      "confidence": 0.8,
+      "processing_time_ms": 0.638,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Customer Relationship Management Market Insights, CRM Platform Analysis, 2024",
+        "expected_topic_contains": [
+          "CRM",
+          "Customer Relationship Management"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Application Programming Interface Market Forecast, API Economy Report, 2025-2030",
+      "extracted_report_type": "Market Forecast Report",
+      "remaining_title": "Application Programming Interface API Economy , 2025-2030",
+      "confidence": 0.8,
+      "processing_time_ms": 0.641,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Application Programming Interface Market Forecast, API Economy Report, 2025-2030",
+        "expected_topic_contains": [
+          "API",
+          "Application Programming Interface"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Software as a Service Market Overview, SaaS Industry Report, 2025",
+      "extracted_report_type": "Market Overview Industry Report",
+      "remaining_title": "Software as a Service SaaS , 2025",
+      "confidence": 0.9,
+      "processing_time_ms": 0.623,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Software as a Service Market Overview, SaaS Industry Report, 2025",
+        "expected_topic_contains": [
+          "SaaS",
+          "Software as a Service"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Platform as a Service Market Research, PaaS Cloud Report, 2026",
+      "extracted_report_type": "Market Research Report",
+      "remaining_title": "Platform as a Service PaaS Cloud , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.5900000000000001,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Platform as a Service Market Research, PaaS Cloud Report, 2026",
+        "expected_topic_contains": [
+          "PaaS",
+          "Platform as a Service"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Infrastructure as a Service Market Analysis, IaaS Provider Study, 2024",
+      "extracted_report_type": "Market Analysis Study",
+      "remaining_title": "Infrastructure as a Service IaaS Provider , 2024",
+      "confidence": 0.8,
+      "processing_time_ms": 0.6,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Infrastructure as a Service Market Analysis, IaaS Provider Study, 2024",
+        "expected_topic_contains": [
+          "IaaS",
+          "Infrastructure as a Service"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Virtual Private Network Market Trends, VPN Security Report, 2025",
+      "extracted_report_type": "Market Trends Report",
+      "remaining_title": "Virtual Private Network VPN Security , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.588,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Virtual Private Network Market Trends, VPN Security Report, 2025",
+        "expected_topic_contains": [
+          "VPN",
+          "Virtual Private Network"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Light Detection and Ranging Market Forecast, LiDAR Technology Report, 2024-2029",
+      "extracted_report_type": "Market Forecast Report",
+      "remaining_title": "Light Detection and Ranging LiDAR Technology , 2024-2029",
+      "confidence": 0.8,
+      "processing_time_ms": 0.9560000000000001,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Light Detection and Ranging Market Forecast, LiDAR Technology Report, 2024-2029",
+        "expected_topic_contains": [
+          "LiDAR",
+          "Light Detection and Ranging"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Radio Frequency Identification Market Size, RFID Tags Report, 2025",
+      "extracted_report_type": "Market Size Report",
+      "remaining_title": "Radio Frequency Identification RFID Tags , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.594,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Radio Frequency Identification Market Size, RFID Tags Report, 2025",
+        "expected_topic_contains": [
+          "RFID",
+          "Radio Frequency Identification"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Near Field Communication Market Analysis, NFC Payment Report, 2026",
+      "extracted_report_type": "Market Analysis Report",
+      "remaining_title": "Near Field Communication NFC Payment , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.641,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Near Field Communication Market Analysis, NFC Payment Report, 2026",
+        "expected_topic_contains": [
+          "NFC",
+          "Near Field Communication"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Augmented Reality Market Overview, AR Gaming Report, 2025-2030",
+      "extracted_report_type": "Market Overview Report",
+      "remaining_title": "Augmented Reality AR Gaming , 2025-2030",
+      "confidence": 0.8,
+      "processing_time_ms": 0.598,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Augmented Reality Market Overview, AR Gaming Report, 2025-2030",
+        "expected_topic_contains": [
+          "AR",
+          "Augmented Reality"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Virtual Reality Market Insights, VR Headset Analysis, 2024",
+      "extracted_report_type": "Market Insights Analysis",
+      "remaining_title": "Virtual Reality VR Headset , 2024",
+      "confidence": 0.8,
+      "processing_time_ms": 0.575,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Virtual Reality Market Insights, VR Headset Analysis, 2024",
+        "expected_topic_contains": [
+          "VR",
+          "Virtual Reality"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Mixed Reality Market Research, MR Technology Report, 2026",
+      "extracted_report_type": "Market Research Report",
+      "remaining_title": "Mixed Reality MR Technology , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.625,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Mixed Reality Market Research, MR Technology Report, 2026",
+        "expected_topic_contains": [
+          "MR",
+          "Mixed Reality"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Human Resource Management Market Trends, HRM Software Report, 2025",
+      "extracted_report_type": "Market Trends Report",
+      "remaining_title": "Human Resource Management HRM Software , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.625,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Human Resource Management Market Trends, HRM Software Report, 2025",
+        "expected_topic_contains": [
+          "HRM",
+          "Human Resource Management"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Supply Chain Management Market Forecast, SCM Platform Analysis, 2024-2029",
+      "extracted_report_type": "Market Forecast Analysis",
+      "remaining_title": "Supply Chain Management SCM Platform , 2024-2029",
+      "confidence": 0.8,
+      "processing_time_ms": 0.611,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Supply Chain Management Market Forecast, SCM Platform Analysis, 2024-2029",
+        "expected_topic_contains": [
+          "SCM",
+          "Supply Chain Management"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Business Process Management Market Size, BPM Solutions Report, 2025",
+      "extracted_report_type": "Market Size Report",
+      "remaining_title": "Business Process Management BPM Solutions , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.601,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Business Process Management Market Size, BPM Solutions Report, 2025",
+        "expected_topic_contains": [
+          "BPM",
+          "Business Process Management"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Content Management System Market Analysis, CMS Platform Study, 2026",
+      "extracted_report_type": "Market Analysis Study",
+      "remaining_title": "Content Management System CMS Platform , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.585,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Content Management System Market Analysis, CMS Platform Study, 2026",
+        "expected_topic_contains": [
+          "CMS",
+          "Content Management System"
+        ],
+        "category": "acronym_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "5G Network Market Size, Next-Gen Telecom Report, 2025",
+      "extracted_report_type": "Market Size Report",
+      "remaining_title": "5G Network Next-Gen Telecom , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.562,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "5G Network Market Size, Next-Gen Telecom Report, 2025",
+        "expected_topic_contains": [
+          "5G Network",
+          "Next-Gen"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "IoT-Enabled Devices Market Analysis, Smart Home Report, 2026",
+      "extracted_report_type": "Market Analysis Report",
+      "remaining_title": "IoT-Enabled Devices Smart Home , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.578,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "IoT-Enabled Devices Market Analysis, Smart Home Report, 2026",
+        "expected_topic_contains": [
+          "IoT-Enabled",
+          "Smart Home"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Cloud-Based Solutions Market Research, Multi-Cloud Report, 2024",
+      "extracted_report_type": "Market Research Report",
+      "remaining_title": "Cloud-Based Solutions Multi-Cloud , 2024",
+      "confidence": 0.8,
+      "processing_time_ms": 0.495,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Cloud-Based Solutions Market Research, Multi-Cloud Report, 2024",
+        "expected_topic_contains": [
+          "Cloud-Based",
+          "Multi-Cloud"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "AI-Powered Analytics Market Forecast, ML-Driven Insights Report, 2025-2030",
+      "extracted_report_type": "Market Forecast Insights Report",
+      "remaining_title": "AI-Powered Analytics ML-Driven , 2025-2030",
+      "confidence": 0.9,
+      "processing_time_ms": 0.495,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "AI-Powered Analytics Market Forecast, ML-Driven Insights Report, 2025-2030",
+        "expected_topic_contains": [
+          "AI-Powered",
+          "ML-Driven"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Blockchain-as-a-Service Market Overview, BaaS Platform Report, 2025",
+      "extracted_report_type": "Market Overview Report",
+      "remaining_title": "Blockchain-as-a-Service BaaS Platform , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.596,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Blockchain-as-a-Service Market Overview, BaaS Platform Report, 2025",
+        "expected_topic_contains": [
+          "Blockchain-as-a-Service",
+          "BaaS"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Edge-to-Cloud Computing Market Insights, E2C Architecture Analysis, 2024",
+      "extracted_report_type": "Market Insights Analysis",
+      "remaining_title": "Edge-to-Cloud Computing E2C Architecture , 2024",
+      "confidence": 0.8,
+      "processing_time_ms": 0.589,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Edge-to-Cloud Computing Market Insights, E2C Architecture Analysis, 2024",
+        "expected_topic_contains": [
+          "Edge-to-Cloud",
+          "E2C"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Software-Defined Networking Market Research, SDN Controller Report, 2026",
+      "extracted_report_type": "Market Research Report",
+      "remaining_title": "Software-Defined Networking SDN Controller , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.574,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Software-Defined Networking Market Research, SDN Controller Report, 2026",
+        "expected_topic_contains": [
+          "Software-Defined Networking",
+          "SDN"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Network-Attached Storage Market Trends, NAS Device Report, 2025",
+      "extracted_report_type": "Market Trends Report",
+      "remaining_title": "Network-Attached Storage NAS Device , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.6489999999999999,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Network-Attached Storage Market Trends, NAS Device Report, 2025",
+        "expected_topic_contains": [
+          "Network-Attached Storage",
+          "NAS"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Direct-to-Consumer Market Forecast, D2C E-commerce Report, 2024-2029",
+      "extracted_report_type": "Market Forecast Report",
+      "remaining_title": "Direct-to-Consumer D2C E-commerce , 2024-2029",
+      "confidence": 0.8,
+      "processing_time_ms": 0.603,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Direct-to-Consumer Market Forecast, D2C E-commerce Report, 2024-2029",
+        "expected_topic_contains": [
+          "Direct-to-Consumer",
+          "D2C"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Business-to-Business Market Size, B2B Platform Report, 2025",
+      "extracted_report_type": "Market Size Report",
+      "remaining_title": "Business-to-Business B2B Platform , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.428,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Business-to-Business Market Size, B2B Platform Report, 2025",
+        "expected_topic_contains": [
+          "Business-to-Business",
+          "B2B"
+        ],
+        "category": "compound_preservation"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Electric Vehicle Market by Battery Type Report, 2025",
+      "extracted_report_type": "Market Report",
+      "remaining_title": "Electric Vehicle by Battery Type , 2025",
+      "confidence": 0.7000000000000001,
+      "processing_time_ms": 0.518,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Electric Vehicle Market by Battery Type Report, 2025",
+        "expected_topic_contains": [
+          "Electric Vehicle",
+          "Battery Type"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Renewable Energy Market by Source Analysis, 2026",
+      "extracted_report_type": "Market Analysis",
+      "remaining_title": "Renewable Energy by Source , 2026",
+      "confidence": 0.7000000000000001,
+      "processing_time_ms": 1.08,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Renewable Energy Market by Source Analysis, 2026",
+        "expected_topic_contains": [
+          "Renewable Energy",
+          "Source"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Healthcare IT Market by Component Study, 2024",
+      "extracted_report_type": "Market Study",
+      "remaining_title": "Healthcare IT by Component , 2024",
+      "confidence": 0.7000000000000001,
+      "processing_time_ms": 0.391,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Healthcare IT Market by Component Study, 2024",
+        "expected_topic_contains": [
+          "Healthcare IT",
+          "Component"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Cybersecurity Market by Solution Type Report, 2025-2030",
+      "extracted_report_type": "Market Report",
+      "remaining_title": "Cybersecurity by Solution Type , 2025-2030",
+      "confidence": 0.7000000000000001,
+      "processing_time_ms": 0.304,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Cybersecurity Market by Solution Type Report, 2025-2030",
+        "expected_topic_contains": [
+          "Cybersecurity",
+          "Solution Type"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Smart Cities Market by Application Area Overview, 2025",
+      "extracted_report_type": "Market Overview",
+      "remaining_title": "Smart Cities by Application Area , 2025",
+      "confidence": 0.7000000000000001,
+      "processing_time_ms": 0.294,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Smart Cities Market by Application Area Overview, 2025",
+        "expected_topic_contains": [
+          "Smart Cities",
+          "Application Area"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Digital Twin Market by End-User Industry Insights, 2024",
+      "extracted_report_type": "Market Industry Insights",
+      "remaining_title": "Digital Twin by End-User , 2024",
+      "confidence": 0.8,
+      "processing_time_ms": 0.314,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Digital Twin Market by End-User Industry Insights, 2024",
+        "expected_topic_contains": [
+          "Digital Twin",
+          "End-User Industry"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Quantum Computing Market by Technology Type Research, 2026",
+      "extracted_report_type": "Market Research",
+      "remaining_title": "Quantum Computing by Technology Type , 2026",
+      "confidence": 0.7000000000000001,
+      "processing_time_ms": 0.399,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Quantum Computing Market by Technology Type Research, 2026",
+        "expected_topic_contains": [
+          "Quantum Computing",
+          "Technology Type"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Autonomous Vehicles Market by Level of Automation Trends, 2025",
+      "extracted_report_type": "Market Trends",
+      "remaining_title": "Autonomous Vehicles by Level of Automation , 2025",
+      "confidence": 0.7000000000000001,
+      "processing_time_ms": 0.318,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Autonomous Vehicles Market by Level of Automation Trends, 2025",
+        "expected_topic_contains": [
+          "Autonomous Vehicles",
+          "Level of Automation"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Green Technology Market by Product Category Forecast, 2024-2029",
+      "extracted_report_type": "Market Product Forecast",
+      "remaining_title": "Green Technology by Category , 2024-2029",
+      "confidence": 0.8,
+      "processing_time_ms": 0.417,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Green Technology Market by Product Category Forecast, 2024-2029",
+        "expected_topic_contains": [
+          "Green Technology",
+          "Product Category"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Fintech Market by Service Type Size Report, 2025",
+      "extracted_report_type": "Market Size Report",
+      "remaining_title": "Fintech by Service Type , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.31,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "Fintech Market by Service Type Size Report, 2025",
+        "expected_topic_contains": [
+          "Fintech",
+          "Service Type"
+        ],
+        "category": "market_following"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "API Management Market Analysis, REST vs SOAP Report, 2026",
+      "extracted_report_type": "Market Analysis Report",
+      "remaining_title": "API Management REST vs SOAP , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.323,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "API Management Market Analysis, REST vs SOAP Report, 2026",
+        "expected_topic_contains": [
+          "API Management",
+          "REST",
+          "SOAP"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "ERP and CRM Integration Market Study, SAP vs Oracle Report, 2024",
+      "extracted_report_type": "Market Study Report",
+      "remaining_title": "ERP and CRM Integration SAP vs Oracle , 2024",
+      "confidence": 0.8,
+      "processing_time_ms": 0.332,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "ERP and CRM Integration Market Study, SAP vs Oracle Report, 2024",
+        "expected_topic_contains": [
+          "ERP",
+          "CRM",
+          "SAP",
+          "Oracle"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "IaaS, PaaS, and SaaS Market Comparison Report, 2025-2030",
+      "extracted_report_type": "Market Report",
+      "remaining_title": "IaaS, PaaS, and SaaS Comparison , 2025-2030",
+      "confidence": 0.7000000000000001,
+      "processing_time_ms": 0.312,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "IaaS, PaaS, and SaaS Market Comparison Report, 2025-2030",
+        "expected_topic_contains": [
+          "IaaS",
+          "PaaS",
+          "SaaS"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "AR/VR/MR Technologies Market Overview, XR Industry Report, 2025",
+      "extracted_report_type": "Market Overview Industry Report",
+      "remaining_title": "AR/VR/MR Technologies XR , 2025",
+      "confidence": 0.9,
+      "processing_time_ms": 0.342,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "AR/VR/MR Technologies Market Overview, XR Industry Report, 2025",
+        "expected_topic_contains": [
+          "AR",
+          "VR",
+          "MR",
+          "XR"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "IoT and AI Convergence Market Insights, AIoT Platform Analysis, 2024",
+      "extracted_report_type": "Market Insights Analysis",
+      "remaining_title": "IoT and AI Convergence AIoT Platform , 2024",
+      "confidence": 0.8,
+      "processing_time_ms": 0.33799999999999997,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "IoT and AI Convergence Market Insights, AIoT Platform Analysis, 2024",
+        "expected_topic_contains": [
+          "IoT",
+          "AI",
+          "AIoT"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "B2B vs B2C E-commerce Market Research, D2C Disruption Report, 2026",
+      "extracted_report_type": "Market Research Report",
+      "remaining_title": "B2B vs B2C E-commerce D2C Disruption , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.342,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "B2B vs B2C E-commerce Market Research, D2C Disruption Report, 2026",
+        "expected_topic_contains": [
+          "B2B",
+          "B2C",
+          "D2C"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "SDN and NFV Technologies Market Trends, 5G Network Report, 2025",
+      "extracted_report_type": "Market Trends Report",
+      "remaining_title": "SDN and NFV Technologies 5G Network , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.331,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "SDN and NFV Technologies Market Trends, 5G Network Report, 2025",
+        "expected_topic_contains": [
+          "SDN",
+          "NFV",
+          "5G"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "ML and DL Frameworks Market Forecast, AI Development Report, 2024-2029",
+      "extracted_report_type": "Market Forecast Report",
+      "remaining_title": "ML and DL Frameworks AI Development , 2024-2029",
+      "confidence": 0.8,
+      "processing_time_ms": 0.33799999999999997,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "ML and DL Frameworks Market Forecast, AI Development Report, 2024-2029",
+        "expected_topic_contains": [
+          "ML",
+          "DL",
+          "AI"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "CDP and DMP Platforms Market Size, CRM Integration Report, 2025",
+      "extracted_report_type": "Market Size Report",
+      "remaining_title": "CDP and DMP Platforms CRM Integration , 2025",
+      "confidence": 0.8,
+      "processing_time_ms": 0.347,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "CDP and DMP Platforms Market Size, CRM Integration Report, 2025",
+        "expected_topic_contains": [
+          "CDP",
+          "DMP",
+          "CRM"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "HRM, SCM, and BPM Software Market Analysis, ERP Suite Report, 2026",
+      "extracted_report_type": "Market Analysis Report",
+      "remaining_title": "HRM, SCM, and BPM Software ERP Suite , 2026",
+      "confidence": 0.8,
+      "processing_time_ms": 0.34299999999999997,
+      "preservation_enabled": true,
+      "test_case": {
+        "title": "HRM, SCM, and BPM Software Market Analysis, ERP Suite Report, 2026",
+        "expected_topic_contains": [
+          "HRM",
+          "SCM",
+          "BPM",
+          "ERP"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    }
+  ]
+}

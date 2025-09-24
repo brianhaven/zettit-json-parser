@@ -1,0 +1,285 @@
+{
+  "statistics": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "by_category": {
+      "core_issue": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "success_rate": 100.0
+      },
+      "acronym": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "success_rate": 100.0
+      },
+      "compound": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "success_rate": 100.0
+      },
+      "market_by": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "success_rate": 100.0
+      },
+      "multi_acronym": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "success_rate": 100.0
+      }
+    },
+    "success_rate": 100.0
+  },
+  "results": [
+    {
+      "success": true,
+      "original_title": "Real-Time Locating Systems Market Size, RTLS Industry Report, 2025",
+      "market_type": "standard",
+      "extracted_date": "2025",
+      "extracted_report_type": "Market Size Industry Report",
+      "extracted_regions": [],
+      "final_topic": "Real-Time Locating Systems RTLS",
+      "processing_stages": {
+        "after_market_classification": "Real-Time Locating Systems Market Size, RTLS Industry Report, 2025",
+        "after_date_extraction": "Real-Time Locating Systems Market Size, RTLS Industry Report",
+        "after_report_type_extraction": "Real-Time Locating Systems RTLS",
+        "after_geographic_extraction": "Real-Time Locating Systems RTLS"
+      },
+      "test_case": {
+        "title": "Real-Time Locating Systems Market Size, RTLS Industry Report, 2025",
+        "expected_contains": [
+          "RTLS",
+          "Real-Time Locating Systems"
+        ],
+        "category": "core_issue"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Artificial Intelligence Market Analysis, AI Technology Report, 2030",
+      "market_type": "standard",
+      "extracted_date": "2030",
+      "extracted_report_type": "Market Analysis Report",
+      "extracted_regions": [],
+      "final_topic": "Artificial Intelligence AI Technology",
+      "processing_stages": {
+        "after_market_classification": "Artificial Intelligence Market Analysis, AI Technology Report, 2030",
+        "after_date_extraction": "Artificial Intelligence Market Analysis, AI Technology Report",
+        "after_report_type_extraction": "Artificial Intelligence AI Technology",
+        "after_geographic_extraction": "Artificial Intelligence AI Technology"
+      },
+      "test_case": {
+        "title": "Artificial Intelligence Market Analysis, AI Technology Report, 2030",
+        "expected_contains": [
+          "AI",
+          "Artificial Intelligence"
+        ],
+        "category": "acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Internet of Things Market Trends, IoT Industry Study, 2025",
+      "market_type": "standard",
+      "extracted_date": "2025",
+      "extracted_report_type": "Market Trends Industry Study",
+      "extracted_regions": [],
+      "final_topic": "Internet of Things IoT",
+      "processing_stages": {
+        "after_market_classification": "Internet of Things Market Trends, IoT Industry Study, 2025",
+        "after_date_extraction": "Internet of Things Market Trends, IoT Industry Study",
+        "after_report_type_extraction": "Internet of Things IoT",
+        "after_geographic_extraction": "Internet of Things IoT"
+      },
+      "test_case": {
+        "title": "Internet of Things Market Trends, IoT Industry Study, 2025",
+        "expected_contains": [
+          "IoT",
+          "Internet of Things"
+        ],
+        "category": "acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "5G Network Market Size, Next-Gen Telecom Report, 2025",
+      "market_type": "standard",
+      "extracted_date": "2025",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "final_topic": "5G Network Next-Gen Telecom",
+      "processing_stages": {
+        "after_market_classification": "5G Network Market Size, Next-Gen Telecom Report, 2025",
+        "after_date_extraction": "5G Network Market Size, Next-Gen Telecom Report",
+        "after_report_type_extraction": "5G Network Next-Gen Telecom",
+        "after_geographic_extraction": "5G Network Next-Gen Telecom"
+      },
+      "test_case": {
+        "title": "5G Network Market Size, Next-Gen Telecom Report, 2025",
+        "expected_contains": [
+          "5G Network",
+          "Next-Gen"
+        ],
+        "category": "compound"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Electric Vehicle Market by Battery Type Report, 2025",
+      "market_type": "market_by",
+      "extracted_date": "2025",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "final_topic": "Electric Vehicle by Battery Type",
+      "processing_stages": {
+        "after_market_classification": "Electric Vehicle Market by Battery Type Report, 2025",
+        "after_date_extraction": "Electric Vehicle Market by Battery Type Report",
+        "after_report_type_extraction": "Electric Vehicle by Battery Type",
+        "after_geographic_extraction": "Electric Vehicle by Battery Type"
+      },
+      "test_case": {
+        "title": "Electric Vehicle Market by Battery Type Report, 2025",
+        "expected_contains": [
+          "Electric Vehicle",
+          "Battery Type"
+        ],
+        "category": "market_by"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "API Management Market Analysis, REST vs SOAP Report, 2026",
+      "market_type": "standard",
+      "extracted_date": "2026",
+      "extracted_report_type": "Market Analysis Report",
+      "extracted_regions": [],
+      "final_topic": "API Management REST vs SOAP",
+      "processing_stages": {
+        "after_market_classification": "API Management Market Analysis, REST vs SOAP Report, 2026",
+        "after_date_extraction": "API Management Market Analysis, REST vs SOAP Report",
+        "after_report_type_extraction": "API Management REST vs SOAP",
+        "after_geographic_extraction": "API Management REST vs SOAP"
+      },
+      "test_case": {
+        "title": "API Management Market Analysis, REST vs SOAP Report, 2026",
+        "expected_contains": [
+          "API Management",
+          "REST",
+          "SOAP"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Supply Chain Management Market Forecast, SCM Platform Analysis, 2024-2029",
+      "market_type": "standard",
+      "extracted_date": "2024-2029",
+      "extracted_report_type": "Market Forecast Analysis",
+      "extracted_regions": [],
+      "final_topic": "Supply Chain Management SCM Platform",
+      "processing_stages": {
+        "after_market_classification": "Supply Chain Management Market Forecast, SCM Platform Analysis, 2024-2029",
+        "after_date_extraction": "Supply Chain Management Market Forecast, SCM Platform Analysis",
+        "after_report_type_extraction": "Supply Chain Management SCM Platform",
+        "after_geographic_extraction": "Supply Chain Management SCM Platform"
+      },
+      "test_case": {
+        "title": "Supply Chain Management Market Forecast, SCM Platform Analysis, 2024-2029",
+        "expected_contains": [
+          "SCM",
+          "Supply Chain Management"
+        ],
+        "category": "acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Software-Defined Networking Market Research, SDN Controller Report, 2026",
+      "market_type": "standard",
+      "extracted_date": "2026",
+      "extracted_report_type": "Market Research Report",
+      "extracted_regions": [],
+      "final_topic": "Software-Defined Networking SDN Controller",
+      "processing_stages": {
+        "after_market_classification": "Software-Defined Networking Market Research, SDN Controller Report, 2026",
+        "after_date_extraction": "Software-Defined Networking Market Research, SDN Controller Report",
+        "after_report_type_extraction": "Software-Defined Networking SDN Controller",
+        "after_geographic_extraction": "Software-Defined Networking SDN Controller"
+      },
+      "test_case": {
+        "title": "Software-Defined Networking Market Research, SDN Controller Report, 2026",
+        "expected_contains": [
+          "Software-Defined Networking",
+          "SDN"
+        ],
+        "category": "compound"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "AR/VR/MR Technologies Market Overview, XR Industry Report, 2025",
+      "market_type": "standard",
+      "extracted_date": "2025",
+      "extracted_report_type": "Market Overview Industry Report",
+      "extracted_regions": [],
+      "final_topic": "AR/VR/MR Technologies XR",
+      "processing_stages": {
+        "after_market_classification": "AR/VR/MR Technologies Market Overview, XR Industry Report, 2025",
+        "after_date_extraction": "AR/VR/MR Technologies Market Overview, XR Industry Report",
+        "after_report_type_extraction": "AR/VR/MR Technologies XR",
+        "after_geographic_extraction": "AR/VR/MR Technologies XR"
+      },
+      "test_case": {
+        "title": "AR/VR/MR Technologies Market Overview, XR Industry Report, 2025",
+        "expected_contains": [
+          "AR",
+          "VR",
+          "MR",
+          "XR"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": true
+    },
+    {
+      "success": true,
+      "original_title": "Cybersecurity Market by Solution Type Report, 2025-2030",
+      "market_type": "market_by",
+      "extracted_date": "2025-2030",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "final_topic": "Cybersecurity by Solution Type",
+      "processing_stages": {
+        "after_market_classification": "Cybersecurity Market by Solution Type Report, 2025-2030",
+        "after_date_extraction": "Cybersecurity Market by Solution Type Report",
+        "after_report_type_extraction": "Cybersecurity by Solution Type",
+        "after_geographic_extraction": "Cybersecurity by Solution Type"
+      },
+      "test_case": {
+        "title": "Cybersecurity Market by Solution Type Report, 2025-2030",
+        "expected_contains": [
+          "Cybersecurity",
+          "Solution Type"
+        ],
+        "category": "market_by"
+      },
+      "test_passed": true
+    }
+  ]
+}

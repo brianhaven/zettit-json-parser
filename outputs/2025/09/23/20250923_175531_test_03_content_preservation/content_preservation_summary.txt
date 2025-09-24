@@ -1,0 +1,46 @@
+================================================================================
+Test Script: test_03_content_preservation
+Description: Content Preservation Testing for Issue #31 - Acronym Loss Fix
+Analysis Date (PDT): 2025-09-23 17:55:32 PDT
+Analysis Date (UTC): 2025-09-24 00:55:32 UTC
+================================================================================
+
+OVERALL STATISTICS
+================================================================================
+Total Test Cases: 50
+Passed: 50
+Failed: 0
+Success Rate: 100.0%
+
+RESULTS BY CATEGORY
+================================================================================
+
+ACRONYM_PRESERVATION:
+  Total: 20
+  Passed: 20
+  Failed: 0
+  Success Rate: 100.0%
+
+COMPOUND_PRESERVATION:
+  Total: 10
+  Passed: 10
+  Failed: 0
+  Success Rate: 100.0%
+
+MARKET_FOLLOWING:
+  Total: 10
+  Passed: 10
+  Failed: 0
+  Success Rate: 100.0%
+
+MULTI_ACRONYM:
+  Total: 10
+  Passed: 10
+  Failed: 0
+  Success Rate: 100.0%
+
+================================================================================
+FAILED TEST CASES
+================================================================================
+
+All test cases passed!

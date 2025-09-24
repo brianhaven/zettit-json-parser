@@ -1,0 +1,174 @@
+================================================================================
+Test Script: test_issue_31_full_pipeline
+Description: Full Pipeline Testing for Issue #31 - Content Preservation Validation
+Analysis Date (PDT): 2025-09-23 18:03:00 PDT
+Analysis Date (UTC): 2025-09-24 01:03:00 UTC
+================================================================================
+
+FULL PIPELINE TEST STATISTICS
+================================================================================
+Total Test Cases: 10
+Passed: 10
+Failed: 0
+Success Rate: 100.0%
+
+RESULTS BY CATEGORY
+================================================================================
+
+CORE_ISSUE:
+  Total: 1
+  Passed: 1
+  Failed: 0
+  Success Rate: 100.0%
+
+ACRONYM:
+  Total: 3
+  Passed: 3
+  Failed: 0
+  Success Rate: 100.0%
+
+COMPOUND:
+  Total: 2
+  Passed: 2
+  Failed: 0
+  Success Rate: 100.0%
+
+MARKET_BY:
+  Total: 2
+  Passed: 2
+  Failed: 0
+  Success Rate: 100.0%
+
+MULTI_ACRONYM:
+  Total: 2
+  Passed: 2
+  Failed: 0
+  Success Rate: 100.0%
+
+================================================================================
+DETAILED TEST RESULTS
+================================================================================
+
+Test #1 [PASS] - core_issue
+  Original: Real-Time Locating Systems Market Size, RTLS Industry Report, 2025
+  Expected: ['RTLS', 'Real-Time Locating Systems']
+  Final Topic: Real-Time Locating Systems RTLS
+  Report Type: Market Size Industry Report
+  Date: 2025
+  Processing Stages:
+    after_market_classification: Real-Time Locating Systems Market Size, RTLS Industry Report, 2025
+    after_date_extraction: Real-Time Locating Systems Market Size, RTLS Industry Report
+    after_report_type_extraction: Real-Time Locating Systems RTLS
+    after_geographic_extraction: Real-Time Locating Systems RTLS
+
+Test #2 [PASS] - acronym
+  Original: Artificial Intelligence Market Analysis, AI Technology Report, 2030
+  Expected: ['AI', 'Artificial Intelligence']
+  Final Topic: Artificial Intelligence AI Technology
+  Report Type: Market Analysis Report
+  Date: 2030
+  Processing Stages:
+    after_market_classification: Artificial Intelligence Market Analysis, AI Technology Report, 2030
+    after_date_extraction: Artificial Intelligence Market Analysis, AI Technology Report
+    after_report_type_extraction: Artificial Intelligence AI Technology
+    after_geographic_extraction: Artificial Intelligence AI Technology
+
+Test #3 [PASS] - acronym
+  Original: Internet of Things Market Trends, IoT Industry Study, 2025
+  Expected: ['IoT', 'Internet of Things']
+  Final Topic: Internet of Things IoT
+  Report Type: Market Trends Industry Study
+  Date: 2025
+  Processing Stages:
+    after_market_classification: Internet of Things Market Trends, IoT Industry Study, 2025
+    after_date_extraction: Internet of Things Market Trends, IoT Industry Study
+    after_report_type_extraction: Internet of Things IoT
+    after_geographic_extraction: Internet of Things IoT
+
+Test #4 [PASS] - compound
+  Original: 5G Network Market Size, Next-Gen Telecom Report, 2025
+  Expected: ['5G Network', 'Next-Gen']
+  Final Topic: 5G Network Next-Gen Telecom
+  Report Type: Market Size Report
+  Date: 2025
+  Processing Stages:
+    after_market_classification: 5G Network Market Size, Next-Gen Telecom Report, 2025
+    after_date_extraction: 5G Network Market Size, Next-Gen Telecom Report
+    after_report_type_extraction: 5G Network Next-Gen Telecom
+    after_geographic_extraction: 5G Network Next-Gen Telecom
+
+Test #5 [PASS] - market_by
+  Original: Electric Vehicle Market by Battery Type Report, 2025
+  Expected: ['Electric Vehicle', 'Battery Type']
+  Final Topic: Electric Vehicle by Battery Type
+  Report Type: Market
+  Date: 2025
+  Processing Stages:
+    after_market_classification: Electric Vehicle Market by Battery Type Report, 2025
+    after_date_extraction: Electric Vehicle Market by Battery Type Report
+    after_report_type_extraction: Electric Vehicle by Battery Type
+    after_geographic_extraction: Electric Vehicle by Battery Type
+
+Test #6 [PASS] - multi_acronym
+  Original: API Management Market Analysis, REST vs SOAP Report, 2026
+  Expected: ['API Management', 'REST', 'SOAP']
+  Final Topic: API Management REST vs SOAP
+  Report Type: Market Analysis Report
+  Date: 2026
+  Processing Stages:
+    after_market_classification: API Management Market Analysis, REST vs SOAP Report, 2026
+    after_date_extraction: API Management Market Analysis, REST vs SOAP Report
+    after_report_type_extraction: API Management REST vs SOAP
+    after_geographic_extraction: API Management REST vs SOAP
+
+Test #7 [PASS] - acronym
+  Original: Supply Chain Management Market Forecast, SCM Platform Analysis, 2024-2029
+  Expected: ['SCM', 'Supply Chain Management']
+  Final Topic: Supply Chain Management SCM Platform
+  Report Type: Market Forecast Analysis
+  Date: 2024-2029
+  Processing Stages:
+    after_market_classification: Supply Chain Management Market Forecast, SCM Platform Analysis, 2024-2029
+    after_date_extraction: Supply Chain Management Market Forecast, SCM Platform Analysis
+    after_report_type_extraction: Supply Chain Management SCM Platform
+    after_geographic_extraction: Supply Chain Management SCM Platform
+
+Test #8 [PASS] - compound
+  Original: Software-Defined Networking Market Research, SDN Controller Report, 2026
+  Expected: ['Software-Defined Networking', 'SDN']
+  Final Topic: Software-Defined Networking SDN Controller
+  Report Type: Market Research Report
+  Date: 2026
+  Processing Stages:
+    after_market_classification: Software-Defined Networking Market Research, SDN Controller Report, 2026
+    after_date_extraction: Software-Defined Networking Market Research, SDN Controller Report
+    after_report_type_extraction: Software-Defined Networking SDN Controller
+    after_geographic_extraction: Software-Defined Networking SDN Controller
+
+Test #9 [PASS] - multi_acronym
+  Original: AR/VR/MR Technologies Market Overview, XR Industry Report, 2025
+  Expected: ['AR', 'VR', 'MR', 'XR']
+  Final Topic: AR/VR/MR Technologies XR
+  Report Type: Market Overview Industry Report
+  Date: 2025
+  Processing Stages:
+    after_market_classification: AR/VR/MR Technologies Market Overview, XR Industry Report, 2025
+    after_date_extraction: AR/VR/MR Technologies Market Overview, XR Industry Report
+    after_report_type_extraction: AR/VR/MR Technologies XR
+    after_geographic_extraction: AR/VR/MR Technologies XR
+
+Test #10 [PASS] - market_by
+  Original: Cybersecurity Market by Solution Type Report, 2025-2030
+  Expected: ['Cybersecurity', 'Solution Type']
+  Final Topic: Cybersecurity by Solution Type
+  Report Type: Market
+  Date: 2025-2030
+  Processing Stages:
+    after_market_classification: Cybersecurity Market by Solution Type Report, 2025-2030
+    after_date_extraction: Cybersecurity Market by Solution Type Report
+    after_report_type_extraction: Cybersecurity by Solution Type
+    after_geographic_extraction: Cybersecurity by Solution Type
+
+================================================================================
+✓ ALL TEST CASES PASSED!
+================================================================================

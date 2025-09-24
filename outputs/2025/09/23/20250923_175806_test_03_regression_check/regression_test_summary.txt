@@ -1,0 +1,139 @@
+================================================================================
+Test Script: test_03_regression_check
+Description: Regression Testing for Issue #31 Fix - Production Data Validation
+Analysis Date (PDT): 2025-09-23 17:58:08 PDT
+Analysis Date (UTC): 2025-09-24 00:58:08 UTC
+================================================================================
+
+REGRESSION TEST STATISTICS
+================================================================================
+Total Titles Tested: 100
+Successful Processing: 100
+Failed Processing: 0
+Success Rate: 100.0%
+
+Report Type Extraction:
+  With Report Type: 100
+  Without Report Type: 0
+  Extraction Rate: 100.0%
+
+Acronym Preservation:
+  Titles with Acronyms: 9
+  Acronyms Preserved: 9
+
+✓ SUCCESS RATE MAINTAINED: The fix preserves the 90% success rate target!
+
+
+SAMPLE SUCCESSFUL EXTRACTIONS (First 20)
+================================================================================
+
+#1:
+  Original: Keratoconus Treatment Market
+  Report Type: Market
+  Remaining: Keratoconus Treatment
+
+#2:
+  Original: Women’s Coats And Jackets Market Size Report, 2028
+  Report Type: Market Size Report
+  Remaining: Women’s Coats And Jackets
+  Date: 2028
+
+#3:
+  Original: Insider Threat Protection Market Size & Share Report, 2030
+  Report Type: Market Size Share Report
+  Remaining: Insider Threat Protection
+  Date: 2030
+
+#4:
+  Original: Teleradiology Market
+  Report Type: Market
+  Remaining: Teleradiology
+
+#5:
+  Original: Asia Pacific and Middle East Quicklime Market
+  Report Type: Market
+  Remaining: Asia Pacific and Middle East Quicklime
+
+#6:
+  Original: Coal Bed Methane Market Size, Industry Report, 2020-2027
+  Report Type: Market Size Industry Report
+  Remaining: Coal Bed Methane
+  Date: 2020-2027
+
+#7:
+  Original: Bio-emulsion Polymers Market
+  Report Type: Market
+  Remaining: Bio-emulsion Polymers
+
+#8:
+  Original: Nanocomposites (Carbon Nanotubes, Polymer Metal Fiber, Nanofibers, Graphene, Nanoplatelet and Others) Market
+  Report Type: Market
+  Remaining: Nanocomposites (Carbon Nanotubes, Polymer Metal Fiber, Nanofibers, Graphene, Nanoplatelet and Others)
+
+#9:
+  Original: Insights-as-a-Service Market Size, Industry report, 2030
+  Report Type: Market Size Industry Report
+  Remaining: Insights-as-a-Service
+  Date: 2030
+
+#10:
+  Original: Light Diffusion Materials Market
+  Report Type: Market
+  Remaining: Light Diffusion Materials
+
+#11:
+  Original: Industrial Packaging Market
+  Report Type: Market
+  Remaining: Industrial Packaging
+
+#12:
+  Original: Twist Caps Market
+  Report Type: Market
+  Remaining: Twist Caps
+
+#13:
+  Original: Asia Pacific Vitamin And Mineral Premixes Market, 2030
+  Report Type: Market
+  Remaining: Asia Pacific Vitamin And Mineral Premixes
+  Date: 2030
+
+#14:
+  Original: FFPE Tissue Samples For Genomics Study and Analysis Market
+  Report Type: Market
+  Remaining: FFPE Tissue Samples For Genomics Study and Analysis
+
+#15:
+  Original: Blister Pack Pharmaceutical Products Market
+  Report Type: Market
+  Remaining: Blister Pack Pharmaceutical Products
+
+#16:
+  Original: Grape Seed Oil Market Size, Share & Trends Report, 2030
+  Report Type: Market Size Share Trends Report
+  Remaining: Grape Seed Oil
+  Date: 2030
+
+#17:
+  Original: North America Household Washer And Dryer Market, Report 2030
+  Report Type: Market
+  Remaining: North America Household Washer And Dryer
+  Date: 2030
+
+#18:
+  Original: U.S. Office Supplies Market Size, Industry Report, 2033
+  Report Type: Market Size Industry Report
+  Remaining: U.S. Office Supplies
+  Date: 2033
+
+#19:
+  Original: On-road Motorcycles Market Size & Share Report, 2028
+  Report Type: Market Size Share Report
+  Remaining: On-road Motorcycles
+  Date: 2028
+
+#20:
+  Original: Global Vehicle Telematics Market Size, Share, Industry Report, 2022
+  Report Type: Market Size Share Industry Report
+  Remaining: Global Vehicle Telematics
+  Date: 2022
+
