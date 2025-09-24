@@ -756,8 +756,8 @@ class PureDictionaryReportTypeExtractor:
                 error_details=error_details
             )
 
-    def _clean_remaining_title(self, original_title: str, extracted_type: Optional[str], dictionary_result: DictionaryKeywordResult) -> str:
-        """Clean remaining title by removing only the extracted report type keywords."""
+    def _clean_remaining_title_legacy(self, original_title: str, extracted_type: Optional[str], dictionary_result: DictionaryKeywordResult) -> str:
+        """Legacy method: Clean remaining title by removing only the extracted report type keywords."""
         if not extracted_type or not dictionary_result.keyword_positions:
             return original_title
 
@@ -795,6 +795,91 @@ class PureDictionaryReportTypeExtractor:
         else:
             # Fallback to simple replacement if positions not available
             remaining = original_title.replace(extracted_type, "", 1)
+
+        # Clean up spaces and punctuation
+        remaining = re.sub(r'\s+', ' ', remaining)
+        remaining = re.sub(r'^[,\s&\-–—\|;:]+|[,\s&\-–—\|;:]+$', '', remaining)
+
+        return remaining.strip()
+
+    def _clean_remaining_title(self, original_title: str, extracted_type: Optional[str], dictionary_result: DictionaryKeywordResult,
+                               enable_content_preservation: bool = True) -> str:
+        """
+        Clean remaining title with content preservation between report type keywords.
+
+        This method implements the content preservation solution for Issue #31:
+        - Preserves acronyms and meaningful content that appears between report type keywords
+        - Removes only the report type keyword span while keeping intervening content
+
+        Args:
+            original_title: The original title text
+            extracted_type: The extracted report type
+            dictionary_result: Dictionary detection results with keyword positions
+            enable_content_preservation: Feature flag for content preservation (default: True)
+
+        Returns:
+            Cleaned title with preserved content
+        """
+        # Use legacy method if content preservation is disabled
+        if not enable_content_preservation:
+            return self._clean_remaining_title_legacy(original_title, extracted_type, dictionary_result)
+
+        if not extracted_type or not dictionary_result.keyword_positions:
+            return original_title
+
+        # Collect all report type keyword positions
+        report_keyword_positions = []
+
+        # Find all keywords that are part of the report type
+        for keyword in dictionary_result.keywords_found:
+            if keyword in extracted_type and keyword in dictionary_result.keyword_positions:
+                pos_info = dictionary_result.keyword_positions[keyword]
+                report_keyword_positions.append((pos_info['start'], pos_info['end'], keyword))
+
+        if not report_keyword_positions:
+            # Fallback to simple replacement if no positions found
+            remaining = original_title.replace(extracted_type, "", 1)
+        else:
+            # Sort positions by start index
+            report_keyword_positions.sort(key=lambda x: x[0])
+
+            # Find overall span of report type
+            first_start = report_keyword_positions[0][0]
+            last_end = report_keyword_positions[-1][1]
+
+            # Extract content to preserve (content between keywords within the span)
+            preserved_content = []
+
+            # Look for content between consecutive keyword pairs
+            for i in range(len(report_keyword_positions) - 1):
+                current_end = report_keyword_positions[i][1]
+                next_start = report_keyword_positions[i + 1][0]
+
+                # Extract content between keywords
+                between_content = original_title[current_end:next_start].strip()
+
+                # Preserve meaningful content (not just punctuation/separators)
+                if between_content and not re.match(r'^[,\s&\-–—\|;:]+$', between_content):
+                    # Clean the content but preserve it
+                    clean_between = re.sub(r'^[,\s]+|[,\s]+$', '', between_content)
+                    if clean_between and clean_between not in ['', ',', '&', '-', '–', '—', '|', ';', ':']:
+                        preserved_content.append(clean_between)
+
+            # Build the remaining title
+            before_span = original_title[:first_start].strip()
+            after_span = original_title[last_end:].strip()
+
+            # Combine parts with preserved content
+            parts = []
+            if before_span:
+                parts.append(before_span)
+            if preserved_content:
+                parts.extend(preserved_content)
+            if after_span:
+                parts.append(after_span)
+
+            # Join parts with spaces
+            remaining = ' '.join(parts)
 
         # Clean up spaces and punctuation
         remaining = re.sub(r'\s+', ' ', remaining)
