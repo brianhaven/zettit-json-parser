@@ -1,0 +1,185 @@
+{
+  "statistics": {
+    "total": 10,
+    "passed": 0,
+    "failed": 10,
+    "by_category": {
+      "core_issue": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "success_rate": 0.0
+      },
+      "acronym": {
+        "total": 3,
+        "passed": 0,
+        "failed": 3,
+        "success_rate": 0.0
+      },
+      "compound": {
+        "total": 2,
+        "passed": 0,
+        "failed": 2,
+        "success_rate": 0.0
+      },
+      "market_by": {
+        "total": 2,
+        "passed": 0,
+        "failed": 2,
+        "success_rate": 0.0
+      },
+      "multi_acronym": {
+        "total": 2,
+        "passed": 0,
+        "failed": 2,
+        "success_rate": 0.0
+      }
+    },
+    "success_rate": 0.0
+  },
+  "results": [
+    {
+      "success": false,
+      "original_title": "Real-Time Locating Systems Market Size, RTLS Industry Report, 2025",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "Real-Time Locating Systems Market Size, RTLS Industry Report, 2025",
+        "expected_contains": [
+          "RTLS",
+          "Real-Time Locating Systems"
+        ],
+        "category": "core_issue"
+      },
+      "test_passed": false
+    },
+    {
+      "success": false,
+      "original_title": "Artificial Intelligence Market Analysis, AI Technology Report, 2030",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "Artificial Intelligence Market Analysis, AI Technology Report, 2030",
+        "expected_contains": [
+          "AI",
+          "Artificial Intelligence"
+        ],
+        "category": "acronym"
+      },
+      "test_passed": false
+    },
+    {
+      "success": false,
+      "original_title": "Internet of Things Market Trends, IoT Industry Study, 2025",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "Internet of Things Market Trends, IoT Industry Study, 2025",
+        "expected_contains": [
+          "IoT",
+          "Internet of Things"
+        ],
+        "category": "acronym"
+      },
+      "test_passed": false
+    },
+    {
+      "success": false,
+      "original_title": "5G Network Market Size, Next-Gen Telecom Report, 2025",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "5G Network Market Size, Next-Gen Telecom Report, 2025",
+        "expected_contains": [
+          "5G Network",
+          "Next-Gen"
+        ],
+        "category": "compound"
+      },
+      "test_passed": false
+    },
+    {
+      "success": false,
+      "original_title": "Electric Vehicle Market by Battery Type Report, 2025",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "Electric Vehicle Market by Battery Type Report, 2025",
+        "expected_contains": [
+          "Electric Vehicle",
+          "Battery Type"
+        ],
+        "category": "market_by"
+      },
+      "test_passed": false
+    },
+    {
+      "success": false,
+      "original_title": "API Management Market Analysis, REST vs SOAP Report, 2026",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "API Management Market Analysis, REST vs SOAP Report, 2026",
+        "expected_contains": [
+          "API Management",
+          "REST",
+          "SOAP"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": false
+    },
+    {
+      "success": false,
+      "original_title": "Supply Chain Management Market Forecast, SCM Platform Analysis, 2024-2029",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "Supply Chain Management Market Forecast, SCM Platform Analysis, 2024-2029",
+        "expected_contains": [
+          "SCM",
+          "Supply Chain Management"
+        ],
+        "category": "acronym"
+      },
+      "test_passed": false
+    },
+    {
+      "success": false,
+      "original_title": "Software-Defined Networking Market Research, SDN Controller Report, 2026",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "Software-Defined Networking Market Research, SDN Controller Report, 2026",
+        "expected_contains": [
+          "Software-Defined Networking",
+          "SDN"
+        ],
+        "category": "compound"
+      },
+      "test_passed": false
+    },
+    {
+      "success": false,
+      "original_title": "AR/VR/MR Technologies Market Overview, XR Industry Report, 2025",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "AR/VR/MR Technologies Market Overview, XR Industry Report, 2025",
+        "expected_contains": [
+          "AR",
+          "VR",
+          "MR",
+          "XR"
+        ],
+        "category": "multi_acronym"
+      },
+      "test_passed": false
+    },
+    {
+      "success": false,
+      "original_title": "Cybersecurity Market by Solution Type Report, 2025-2030",
+      "error": "'GeographicExtractionResult' object has no attribute 'get'",
+      "test_case": {
+        "title": "Cybersecurity Market by Solution Type Report, 2025-2030",
+        "expected_contains": [
+          "Cybersecurity",
+          "Solution Type"
+        ],
+        "category": "market_by"
+      },
+      "test_passed": false
+    }
+  ]
+}

@@ -1,0 +1,432 @@
+================================================================================
+Test Script: test_03_regression_check
+Description: Regression Testing for Issue #31 Fix - Production Data Validation
+Analysis Date (PDT): 2025-09-23 17:57:23 PDT
+Analysis Date (UTC): 2025-09-24 00:57:23 UTC
+================================================================================
+
+REGRESSION TEST STATISTICS
+================================================================================
+Total Titles Tested: 100
+Successful Processing: 0
+Failed Processing: 100
+Success Rate: 0.0%
+
+Report Type Extraction:
+  With Report Type: 0
+  Without Report Type: 0
+  Extraction Rate: 0.0%
+
+Acronym Preservation:
+  Titles with Acronyms: 0
+  Acronyms Preserved: 0
+
+✗ WARNING: Success rate below 90% target. Review failed cases.
+
+FAILED CASES
+================================================================================
+
+FAILURE #1:
+  Title: Cosmetic Antioxidants Market Size & Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #2:
+  Title: Chip Scale Package (CSP) LED Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #3:
+  Title: Pharma 4.0 Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #4:
+  Title: U.S. Spice & Seasonings Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #5:
+  Title: Chatbot-Based Mental Health Apps Market Size Report, 2033
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #6:
+  Title: Thiochemicals Market Size, Share, Industry Analysis Report, 2019-2025
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #7:
+  Title: Veterinary Oncology Diagnostics Market Size Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #8:
+  Title: Brewer’s Yeast Market Size, Share And Growth Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #9:
+  Title: Surgical Gowns Level AAMI 3 Market, Industry Report, 2033
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #10:
+  Title: Welding Equipment Market Size And Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #11:
+  Title: Veterinary Regenerative Medicine Market Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #12:
+  Title: Silicone Elastomer Market Size, Share & Growth Report 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #13:
+  Title: Mobile Satellite Services Market Size & Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #14:
+  Title: Baler Market Size, Share & Growth, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #15:
+  Title: Rapeseed Oil Market Size, Industry Report, 2019-2025
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #16:
+  Title: Education Technology Market Size, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #17:
+  Title: Nitric Acid Market Size And Share, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #18:
+  Title: U.S. Sexual Wellness Market Size And Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #19:
+  Title: Wearable Injectors Market Size, Share & Trends Report 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #20:
+  Title: Carbon Cleaning Machine Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #21:
+  Title: Pet Bird Health Market Size & Share, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #22:
+  Title: Hospital Acquired Infections Therapeutic Market Report, 2027
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #23:
+  Title: Enterprise Video Market Size & Share, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #24:
+  Title: Mass Notification System Market Size, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #25:
+  Title: In Vitro Fertilization Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #26:
+  Title: Latin America Reverse Factoring Market Size Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #27:
+  Title: Veterinary Dental Elevators Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #28:
+  Title: Personal Protective Equipment Market Size Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #29:
+  Title: Digital Camera Market Size, Share & Growth Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #30:
+  Title: Traditional Chinese Medicine for Skincare Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #31:
+  Title: Scented Candles Market Size, Share & Trends Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #32:
+  Title: Dental Turbine Market Share & Trends Report, 2020-2027
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #33:
+  Title: Barrier Films For Pharmaceutical Packaging Market Report 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #34:
+  Title: Leisure Boat Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #35:
+  Title: India Cleanroom Gloves Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #36:
+  Title: Asia Pacific Clinical Laboratory Services Market, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #37:
+  Title: Aromatherapy Market Size & Share, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #38:
+  Title: U.S. Hydrogen Generation Market, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #39:
+  Title: Photo-rechargeable Batteries Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #40:
+  Title: Clinical Communication And Collaboration Market Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #41:
+  Title: Europe Outdoor Apparel Market Size, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #42:
+  Title: Organic Sports Supplement Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #43:
+  Title: China Liquid Dietary Supplements Market Size Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #44:
+  Title: Spinal Fusion Bone Graft Substitute Market Size Report, 2025
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #45:
+  Title: Carrier Aggregation Solutions Market Size Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #46:
+  Title: U.S. Residential HVAC Systems Market Size Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #47:
+  Title: Skin Resurfacing Market Size, Share, Industry Report, 2020-2027
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #48:
+  Title: Monk Fruit Sweetener Market Size And Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #49:
+  Title: Tallow Fatty Acids (Saturated, Polyunsaturated, and Monounsaturated) Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #50:
+  Title: Automotive Finance Market Size, Share, Growth Report 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #51:
+  Title: Africa Diesel Generator Market Size, Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #52:
+  Title: Cold Plunge Tub Market Size, Share & Trends Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #53:
+  Title: pH Meters Market Size And Share, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #54:
+  Title: Enterprise Collaboration Service Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #55:
+  Title: Zero Trust Security Market Size, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #56:
+  Title: Rooftop Solar PV Market Size, Share, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #57:
+  Title: North America Anime Market Size, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #58:
+  Title: Sodium Nitrate Market Size, Share & Growth Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #59:
+  Title: Brewer’s Spent Grain Market Size & Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #60:
+  Title: Digestive Health Supplements Market Size Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #61:
+  Title: Europe Waste Recycling Services Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #62:
+  Title: Colorants Market Size, Share & Trends Analysis Report, 2025
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #63:
+  Title: Phthalates and Bisphenol A Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #64:
+  Title: Medical Superabsorbent Polymers Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #65:
+  Title: Neurovascular Catheters Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #66:
+  Title: Email Marketing Industry
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #67:
+  Title: Autoclave Aerated Concrete Market Size, Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #68:
+  Title: Hyper Spectral Imaging System Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #69:
+  Title: Carbide Tools Market Size & Share, Global Industry Report, 2019-2025
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #70:
+  Title: Aquatic Weed Harvester Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #71:
+  Title: Sealers Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #72:
+  Title: Custom Antibody Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #73:
+  Title: Very Large Gas Carrier Market Size, Global Industry Report, 2025
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #74:
+  Title: Somatostatin Analogs Market Size, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #75:
+  Title: Phosphates Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #76:
+  Title: Hybrid Cars Market Size, Share And Growth Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #77:
+  Title: Pharmaceutical Sample Services Market Size Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #78:
+  Title: Silylated Polymers Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #79:
+  Title: Self-Healing Networks Market Size, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #80:
+  Title: Australia & New Zealand Healthcare CROs Market Report 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #81:
+  Title: Air Deflector Market Size, Share And Growth Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #82:
+  Title: Insulin Pens Market Size, Share And Growth Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #83:
+  Title: Edge Artificial Intelligence Chips Market, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #84:
+  Title: U.K. WEEE Waste Recycling Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #85:
+  Title: Conformal Coatings Market for PCBs
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #86:
+  Title: Innerwear Market Size, Share, Trends & Growth Report 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #87:
+  Title: Colon Screening Market Size & Share, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #88:
+  Title: Brachioplasty Market Size, Share & Growth Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #89:
+  Title: Creative Software Market Size, Share & Growth Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #90:
+  Title: Adhesive Films Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #91:
+  Title: MS Polymer Hybrid Adhesives & Sealants Market Trends Report, 2025
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #92:
+  Title: Enterprise Application Market Size, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #93:
+  Title: Emission Trading Schemes Market Size, Global Industry Report, 2025
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #94:
+  Title: Biologics Market Size, Share & Growth Analysis Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #95:
+  Title: Cut Resistant Fabrics Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #96:
+  Title: Breast Cancer Core Needle Biopsy Market Size Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #97:
+  Title: Remote Mobile Payment Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #98:
+  Title: Gamepad Market
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #99:
+  Title: Phototherapy Equipment Market Size & Share Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+FAILURE #100:
+  Title: Coffee Beans Market Size & Share, Industry Report, 2030
+  Error: 'ClassificationResult' object has no attribute 'market_term_type'
+
+
+SAMPLE SUCCESSFUL EXTRACTIONS (First 20)
+================================================================================
+
