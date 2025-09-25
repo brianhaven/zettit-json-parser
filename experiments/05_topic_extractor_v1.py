@@ -607,6 +607,9 @@ class TopicExtractor:
         # Remove apostrophes and trailing letters (typically 's')
         normalized = re.sub(r"'s?\b", '', normalized)
 
+        # Remove commas and other punctuation except dashes and spaces
+        normalized = re.sub(r'[,;.!?]', '', normalized)
+
         # Convert separating punctuation to dashes
         normalized = re.sub(r'[/\\|]', '-', normalized)
 
