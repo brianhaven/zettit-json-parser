@@ -1,0 +1,155 @@
+{
+  "timestamp": "2025-09-24T21:30:17.880620-07:00",
+  "real_world_results": {
+    "total_tests": 7,
+    "passed": 7,
+    "failed": 0,
+    "test_details": [
+      {
+        "test_number": 1,
+        "test_type": "word_separator_And",
+        "input": "Timing Relay Market Size, Share And Growth Report, 2024-2030",
+        "expected_topic": "Timing Relay",
+        "actual_topic": "Timing Relay",
+        "extracted_date": "2024-2030",
+        "extracted_report_type": "Market Size Share Growth Report",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Original case showing \"And\" artifact in topic"
+      },
+      {
+        "test_number": 2,
+        "test_type": "word_separator_And",
+        "input": "Polymeric Biomaterials Market Size And Share Report, 2025",
+        "expected_topic": "Polymeric Biomaterials",
+        "actual_topic": "Polymeric Biomaterials",
+        "extracted_date": "2025",
+        "extracted_report_type": "Market Size Share Report",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Another case with \"And\" between Size and Share"
+      },
+      {
+        "test_number": 3,
+        "test_type": "word_separator_And",
+        "input": "Gift Wrapping Products Market Size And Share Report, 2024-2029",
+        "expected_topic": "Gift Wrapping Products",
+        "actual_topic": "Gift Wrapping Products",
+        "extracted_date": "2024-2029",
+        "extracted_report_type": "Market Size Share Report",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Case with date range and \"And\" separator"
+      },
+      {
+        "test_number": 4,
+        "test_type": "mixed_comma_And",
+        "input": "Aviation IoT Market Size, Share And Growth Report, 2024",
+        "expected_topic": "Aviation IoT",
+        "actual_topic": "Aviation IoT",
+        "extracted_date": "2024",
+        "extracted_report_type": "Market Size Share Growth Report",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Mixed comma and \"And\" separators"
+      },
+      {
+        "test_number": 5,
+        "test_type": "word_separator_Plus",
+        "input": "Smart Materials Market Analysis Plus Forecast, 2025-2030",
+        "expected_topic": "Smart Materials",
+        "actual_topic": "Smart Materials",
+        "extracted_date": "2025-2030",
+        "extracted_report_type": "Market Analysis Forecast",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Testing \"Plus\" word separator"
+      },
+      {
+        "test_number": 6,
+        "test_type": "word_separator_Or",
+        "input": "Electric Vehicles Market Trends Or Outlook, 2024-2035",
+        "expected_topic": "Electric Vehicles",
+        "actual_topic": "Electric Vehicles",
+        "extracted_date": "2024-2035",
+        "extracted_report_type": "Market Trends Outlook",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Testing \"Or\" word separator"
+      },
+      {
+        "test_number": 7,
+        "test_type": "mixed_ampersand_And",
+        "input": "Nanotechnology Market Size & Share And Growth Report, 2025",
+        "expected_topic": "Nanotechnology",
+        "actual_topic": "Nanotechnology",
+        "extracted_date": "2025",
+        "extracted_report_type": "Market Size Share Growth Report",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Mixed & symbol and \"And\" word separators"
+      }
+    ]
+  },
+  "edge_case_results": {
+    "total_tests": 4,
+    "passed": 4,
+    "failed": 0,
+    "test_details": [
+      {
+        "test_number": 1,
+        "test_type": "edge_portland_oregon",
+        "input": "Portland Oregon Market Analysis Report, 2025",
+        "expected_topic": "Portland Oregon",
+        "actual_topic": "Portland Oregon",
+        "extracted_date": "2025",
+        "extracted_report_type": "Market Analysis Report",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Should not remove \"Or\" from Oregon"
+      },
+      {
+        "test_number": 2,
+        "test_type": "edge_orlando",
+        "input": "Orlando Tourism Market Study, 2024-2026",
+        "expected_topic": "Orlando Tourism",
+        "actual_topic": "Orlando Tourism",
+        "extracted_date": "2024-2026",
+        "extracted_report_type": "Market Study",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Should not remove \"Or\" from Orlando"
+      },
+      {
+        "test_number": 3,
+        "test_type": "edge_anderson",
+        "input": "Anderson Consulting Market Research Report, 2025",
+        "expected_topic": "Anderson Consulting",
+        "actual_topic": "Anderson Consulting",
+        "extracted_date": "2025",
+        "extracted_report_type": "Market Research Report",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Should not remove \"and\" from Anderson"
+      },
+      {
+        "test_number": 4,
+        "test_type": "edge_plus_size",
+        "input": "Plus-Size Fashion Market Analysis, 2024",
+        "expected_topic": "Plus-Size Fashion",
+        "actual_topic": "Plus-Size Fashion",
+        "extracted_date": "2024",
+        "extracted_report_type": "Market Analysis",
+        "status": "\u2705 PASS",
+        "passed": true,
+        "description": "Should not remove \"Plus\" from Plus-Size"
+      }
+    ]
+  },
+  "summary": {
+    "total_tests": 11,
+    "total_passed": 11,
+    "total_failed": 0,
+    "success_rate": 100.0
+  }
+}

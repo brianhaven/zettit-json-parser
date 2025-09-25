@@ -1,0 +1,194 @@
+{
+  "timestamp": "2025-09-24T21:25:31.523606-07:00",
+  "real_world_results": {
+    "total_tests": 6,
+    "passed": 4,
+    "failed": 2,
+    "test_details": [
+      {
+        "test_number": 1,
+        "test_type": "word_separator_And",
+        "input": "Timing Relay Market Size, Share And Growth Report, 2024-2030",
+        "expected": "Market Size, Share Growth Report",
+        "actual": "Market Size Share Growth Report",
+        "status": "\u274c FAIL",
+        "passed": false
+      },
+      {
+        "test_number": 2,
+        "test_type": "word_separator_And",
+        "input": "Polymeric Biomaterials Market Size And Share Report, 2025",
+        "expected": "Market Size Share Report",
+        "actual": "Market Size Share Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 3,
+        "test_type": "word_separator_And",
+        "input": "Gift Wrapping Products Market Size And Share Report, 2024-2029",
+        "expected": "Market Size Share Report",
+        "actual": "Market Size Share Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 4,
+        "test_type": "word_separator_And",
+        "input": "Aviation IoT Market Size, Share And Growth Report, 2024",
+        "expected": "Market Size, Share Growth Report",
+        "actual": "Market Size Share Growth Report",
+        "status": "\u274c FAIL",
+        "passed": false
+      },
+      {
+        "test_number": 5,
+        "test_type": "word_separator_Plus",
+        "input": "Market Analysis Plus Forecast Report, 2025",
+        "expected": "Market Analysis Forecast Report",
+        "actual": "Market Analysis Forecast Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 6,
+        "test_type": "word_separator_Or",
+        "input": "Market Trends Or Outlook Report, 2024-2030",
+        "expected": "Market Trends Outlook Report",
+        "actual": "Market Trends Outlook Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      }
+    ]
+  },
+  "comprehensive_results": {
+    "total_tests": 13,
+    "passed": 12,
+    "failed": 1,
+    "test_details": [
+      {
+        "test_number": 1,
+        "test_type": "symbol_ampersand",
+        "input": "Market & Size & Share & Report",
+        "expected": "Market Size Share Report",
+        "actual": "Market Size Share Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 2,
+        "test_type": "symbol_ampersand",
+        "input": "Market & Trends & Analysis",
+        "expected": "Market Trends Analysis",
+        "actual": "Market Trends Analysis",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 3,
+        "test_type": "word_and",
+        "input": "Market Size And Share Report",
+        "expected": "Market Size Share Report",
+        "actual": "Market Size Share Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 4,
+        "test_type": "word_and",
+        "input": "Market Analysis And Forecast Report",
+        "expected": "Market Analysis Forecast Report",
+        "actual": "Market Analysis Forecast Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 5,
+        "test_type": "word_plus",
+        "input": "Market Growth Plus Trends Report",
+        "expected": "Market Growth Trends Report",
+        "actual": "Market Growth Trends Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 6,
+        "test_type": "word_or",
+        "input": "Market Overview Or Summary Report",
+        "expected": "Market Overview Summary Report",
+        "actual": "Market Overview Report",
+        "status": "\u274c FAIL",
+        "passed": false
+      },
+      {
+        "test_number": 7,
+        "test_type": "mixed_ampersand_and",
+        "input": "Market & Size And Share Report",
+        "expected": "Market Size Share Report",
+        "actual": "Market Size Share Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 8,
+        "test_type": "mixed_ampersand_plus",
+        "input": "Market Size & Trends Plus Growth Report",
+        "expected": "Market Size Trends Growth Report",
+        "actual": "Market Size Trends Growth Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 9,
+        "test_type": "uppercase_AND",
+        "input": "Market Size AND Share Report",
+        "expected": "Market Size Share Report",
+        "actual": "Market Size Share Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 10,
+        "test_type": "lowercase_and",
+        "input": "Market Analysis and Forecast Report",
+        "expected": "Market Analysis Forecast Report",
+        "actual": "Market Analysis Forecast Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 11,
+        "test_type": "uppercase_PLUS",
+        "input": "Market Growth PLUS Trends Report",
+        "expected": "Market Growth Trends Report",
+        "actual": "Market Growth Trends Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 12,
+        "test_type": "edge_orlando",
+        "input": "Orlando Market Analysis Report",
+        "expected": "Market Analysis Report",
+        "actual": "Market Analysis Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      },
+      {
+        "test_number": 13,
+        "test_type": "edge_portland",
+        "input": "Portland Market Study Report",
+        "expected": "Market Study Report",
+        "actual": "Market Study Report",
+        "status": "\u2705 PASS",
+        "passed": true
+      }
+    ]
+  },
+  "summary": {
+    "total_tests": 19,
+    "total_passed": 16,
+    "total_failed": 3,
+    "success_rate": 84.21052631578947
+  }
+}

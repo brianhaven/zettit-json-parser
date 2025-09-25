@@ -445,10 +445,21 @@ class PureDictionaryReportTypeExtractor:
         """Clean and normalize reconstructed report type."""
         if not reconstructed:
             return reconstructed
-        
-        # ISSUE #26 FIX: Remove separator artifacts
-        cleaned = re.sub(r'\s*&\s*', ' ', reconstructed)  # Remove & separators
-        cleaned = re.sub(r'\s+', ' ', cleaned).strip()    # Clean extra spaces
+
+        # ISSUE #26 FIX (ENHANCED): Remove both symbol and word-based separator artifacts
+        # Original fix: Remove & symbol separators
+        cleaned = re.sub(r'\s*&\s*', ' ', reconstructed)
+
+        # REGRESSION FIX: Also remove word-based separators (And, Plus, Or)
+        # Remove trailing word separators that may appear at the end
+        cleaned = re.sub(r'\s+\b(And|Plus|Or)\b\s*$', '', cleaned, flags=re.IGNORECASE)
+
+        # Remove word separators in the middle of the report type
+        # (preserves them only if they're part of a meaningful phrase)
+        cleaned = re.sub(r'\s+\b(And|Plus|Or)\b\s+', ' ', cleaned, flags=re.IGNORECASE)
+
+        # Clean up any resulting extra spaces
+        cleaned = re.sub(r'\s+', ' ', cleaned).strip()
         
         # Fix common duplicate patterns
         patterns_to_fix = [
@@ -859,10 +870,13 @@ class PureDictionaryReportTypeExtractor:
                 between_content = original_title[current_end:next_start].strip()
 
                 # Preserve meaningful content (not just punctuation/separators)
+                # ISSUE #26 REGRESSION FIX: Also filter out word-based separators (And, Plus, Or)
                 if between_content and not re.match(r'^[,\s&\-–—\|;:]+$', between_content):
                     # Clean the content but preserve it
                     clean_between = re.sub(r'^[,\s]+|[,\s]+$', '', between_content)
-                    if clean_between and clean_between not in ['', ',', '&', '-', '–', '—', '|', ';', ':']:
+                    # Filter out both symbol and word-based separators
+                    if clean_between and clean_between not in ['', ',', '&', '-', '–', '—', '|', ';', ':'] \
+                       and not re.match(r'^(And|Plus|Or)$', clean_between, re.IGNORECASE):
                         preserved_content.append(clean_between)
 
             # Build the remaining title
@@ -884,6 +898,9 @@ class PureDictionaryReportTypeExtractor:
         # Clean up spaces and punctuation
         remaining = re.sub(r'\s+', ' ', remaining)
         remaining = re.sub(r'^[,\s&\-–—\|;:]+|[,\s&\-–—\|;:]+$', '', remaining)
+
+        # ISSUE #26 REGRESSION FIX: Also remove trailing word-based separators
+        remaining = re.sub(r'\s+(And|Plus|Or)\s*$', '', remaining, flags=re.IGNORECASE).strip()
 
         return remaining.strip()
 
