@@ -1,0 +1,119 @@
+{
+  "timestamp": {
+    "pst": "2025-09-24 17:32:32 PDT",
+    "utc": "2025-09-25 00:32:32 UTC",
+    "filename": "20250924_173232"
+  },
+  "total_tests": 10,
+  "results": [
+    {
+      "test_number": 1,
+      "input": "U.S. And Europe Digital Pathology",
+      "extracted_regions": [
+        "Europe",
+        "United States"
+      ],
+      "remaining_text": "Digital Pathology",
+      "confidence": 0.9,
+      "notes": "Pattern 'Europe': 1 matches; Pattern 'United States': 1 matches"
+    },
+    {
+      "test_number": 2,
+      "input": "APAC Personal Protective Equipment",
+      "extracted_regions": [
+        "Asia Pacific"
+      ],
+      "remaining_text": "Personal Protective Equipment",
+      "confidence": 0.8500000000000001,
+      "notes": "Pattern 'Asia Pacific': 1 matches"
+    },
+    {
+      "test_number": 3,
+      "input": "North America Europe Automotive Technology",
+      "extracted_regions": [
+        "North America",
+        "Europe"
+      ],
+      "remaining_text": "Automotive Technology",
+      "confidence": 0.9,
+      "notes": "Pattern 'North America': 1 matches; Pattern 'Europe': 1 matches"
+    },
+    {
+      "test_number": 4,
+      "input": "Middle East & Africa Healthcare Systems",
+      "extracted_regions": [
+        "Middle East",
+        "Africa"
+      ],
+      "remaining_text": "Healthcare Systems",
+      "confidence": 0.9,
+      "notes": "Pattern 'Middle East': 1 matches; Pattern 'Africa': 1 matches"
+    },
+    {
+      "test_number": 5,
+      "input": "Asia Pacific and Latin America Energy Solutions",
+      "extracted_regions": [
+        "Latin America",
+        "Asia Pacific"
+      ],
+      "remaining_text": "Energy Solutions",
+      "confidence": 0.9,
+      "notes": "Pattern 'Latin America': 1 matches; Pattern 'Asia Pacific': 1 matches"
+    },
+    {
+      "test_number": 6,
+      "input": "Europe, Middle East and Africa Financial Services",
+      "extracted_regions": [
+        "Middle East",
+        "Europe",
+        "Africa"
+      ],
+      "remaining_text": "Financial Services",
+      "confidence": 0.9500000000000001,
+      "notes": "Pattern 'Middle East': 1 matches; Pattern 'Europe': 1 matches; Pattern 'Africa': 1 matches"
+    },
+    {
+      "test_number": 7,
+      "input": "Global Semiconductor Manufacturing",
+      "extracted_regions": [
+        "Global"
+      ],
+      "remaining_text": "Semiconductor Manufacturing",
+      "confidence": 0.8500000000000001,
+      "notes": "Pattern 'Global': 1 matches"
+    },
+    {
+      "test_number": 8,
+      "input": "United States Canada Mexico Trade",
+      "extracted_regions": [
+        "United States",
+        "Canada",
+        "Mexico"
+      ],
+      "remaining_text": "Trade",
+      "confidence": 0.9500000000000001,
+      "notes": "Pattern 'United States': 1 matches; Pattern 'Canada': 1 matches; Pattern 'Mexico': 1 matches"
+    },
+    {
+      "test_number": 9,
+      "input": "Southeast Asia Manufacturing Trends",
+      "extracted_regions": [
+        "Southeast Asia"
+      ],
+      "remaining_text": "Manufacturing Trends",
+      "confidence": 0.8500000000000001,
+      "notes": "Pattern 'Southeast Asia': 1 matches"
+    },
+    {
+      "test_number": 10,
+      "input": "Latin America Plus Asia Pacific Services",
+      "extracted_regions": [
+        "Latin America",
+        "Asia Pacific"
+      ],
+      "remaining_text": "Services",
+      "confidence": 0.9,
+      "notes": "Pattern 'Latin America': 1 matches; Pattern 'Asia Pacific': 1 matches"
+    }
+  ]
+}

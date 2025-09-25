@@ -37,8 +37,8 @@ def run_comparison_test():
     # Import both versions of Script 04
     script04_v2 = import_module_from_path("geographic_detector_v2",
                                           os.path.join(parent_dir, "04_geographic_entity_detector_v2.py"))
-    script04_v3 = import_module_from_path("geographic_detector_v3",
-                                          os.path.join(parent_dir, "04_geographic_entity_detector_v3.py"))
+    script04_v3 = import_module_from_path("geographic_detector_v3_fixed",
+                                          os.path.join(parent_dir, "04_geographic_entity_detector_v3_fixed.py"))
 
     # Initialize components
     pattern_lib_manager = pattern_manager.PatternLibraryManager(os.getenv('MONGODB_URI'))
