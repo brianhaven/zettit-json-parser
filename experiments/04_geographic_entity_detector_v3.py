@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 """
 Geographic Entity Detection System v3 - Enhanced Regional Separator Cleanup
-Database-driven systematic removal solution with cohesive regional group processing.
+Database-driven systematic removal solution with improved separator handling.
 
-Enhancement for Git Issue #33: Properly handles separator words between regional entities
-(e.g., "U.S. And Europe" → removes entire group including "And")
+Git Issue #33 Fix: Enhanced cleanup to handle regional separator words that appear
+between geographic entities (e.g., "U.S. And Europe" → removes "U.S.", "And", "Europe")
+
+This is a minimal enhancement of v2 that adds smarter cleanup for separator words
+without disrupting the proven priority-based pattern matching system.
 
 Features:
 1. MongoDB-driven pattern matching (926 geographic entities)
 2. Priority-based processing (complex → simple patterns)
 3. Comprehensive alias resolution system
 4. Multi-region extraction capabilities
-5. Enhanced regional group detection with separator handling
-6. Cohesive removal of regional groups including connectors
+5. Enhanced separator word cleanup (Issue #33 fix)
+6. Consistent with Scripts 01-03 lean architecture
 
 Processing Order: Run after report type extraction (03) to systematically remove geographic regions.
 """
@@ -79,23 +82,11 @@ class GeographicPattern:
     success_count: int = 0
     failure_count: int = 0
 
-@dataclass
-class RegionalGroup:
-    """Represents a group of regional entities with separators."""
-    regions: List[Tuple[int, int, str]]  # (start, end, region_name) tuples
-    separators: List[Tuple[int, int, str]]  # (start, end, separator_word) tuples
-    full_start: int  # Start of entire group
-    full_end: int  # End of entire group
-    full_text: str  # Complete text of group including separators
-
 class GeographicEntityDetector:
     """
-    Enhanced pattern-based geographic entity detector with regional group processing.
-    Fixes Git Issue #33: Properly handles separator words between regional entities.
+    Enhanced pattern-based geographic entity detector with improved separator cleanup.
+    Fixes Git Issue #33: Better handles separator words between regional entities.
     """
-
-    # Common separator words between regions
-    REGIONAL_SEPARATORS = {'and', 'And', 'AND', '&', 'plus', 'Plus', 'PLUS', ','}
 
     def __init__(self, pattern_library_manager):
         """
@@ -161,108 +152,11 @@ class GeographicEntityDetector:
             logger.error(f"Failed to load geographic patterns: {e}")
             raise
 
-    def detect_regional_groups(self, text: str) -> List[RegionalGroup]:
-        """
-        Detect groups of regional entities connected by separator words.
-
-        Git Issue #33 Fix: This method identifies regional groups like "U.S. And Europe"
-        that should be removed as cohesive units including the separator word.
-
-        Args:
-            text: Text to analyze for regional groups
-
-        Returns:
-            List of RegionalGroup objects representing connected regions
-        """
-        regional_groups = []
-
-        # Process patterns by priority (important for avoiding partial matches)
-        # Find all regional entity matches using priority order
-        all_matches = []
-        processed_spans = set()  # Track already processed text spans
-
-        for pattern in self.geographic_patterns:
-            try:
-                matches = list(re.finditer(pattern.pattern, text, re.IGNORECASE))
-                for match in matches:
-                    # Skip if this span overlaps with an already processed match
-                    span = (match.start(), match.end())
-                    if any(span[0] < existing[1] and span[1] > existing[0] for existing in processed_spans):
-                        continue
-
-                    # Skip hyphenated word parts
-                    if not self.is_part_of_hyphenated_word(text, match):
-                        all_matches.append((match.start(), match.end(), match.group(), pattern))
-                        processed_spans.add(span)
-            except Exception as e:
-                logger.debug(f"Error in pattern matching: {e}")
-                continue
-
-        # Sort matches by position
-        all_matches.sort(key=lambda x: x[0])
-
-        if len(all_matches) < 2:
-            return regional_groups
-
-        # Look for regional groups with separators
-        i = 0
-        while i < len(all_matches) - 1:
-            current_match = all_matches[i]
-            next_match = all_matches[i + 1]
-
-            # Check if there's a separator between current and next match
-            between_text = text[current_match[1]:next_match[0]].strip()
-
-            # Check if the text between matches is just a separator word
-            if between_text in self.REGIONAL_SEPARATORS:
-                # Found a regional group!
-                group_regions = [(current_match[0], current_match[1], current_match[2])]
-                group_separators = [(current_match[1], next_match[0], between_text)]
-
-                # Check if we can extend the group further
-                j = i + 1
-                while j < len(all_matches) - 1:
-                    current = all_matches[j]
-                    next = all_matches[j + 1]
-                    between = text[current[1]:next[0]].strip()
-
-                    if between in self.REGIONAL_SEPARATORS:
-                        group_regions.append((current[0], current[1], current[2]))
-                        group_separators.append((current[1], next[0], between))
-                        j += 1
-                    else:
-                        break
-
-                # Add the last region in the group
-                group_regions.append((all_matches[j][0], all_matches[j][1], all_matches[j][2]))
-
-                # Create RegionalGroup object
-                full_start = group_regions[0][0]
-                full_end = group_regions[-1][1]
-                full_text = text[full_start:full_end]
-
-                regional_group = RegionalGroup(
-                    regions=group_regions,
-                    separators=group_separators,
-                    full_start=full_start,
-                    full_end=full_end,
-                    full_text=full_text
-                )
-
-                regional_groups.append(regional_group)
-
-                # Skip the processed matches
-                i = j + 1
-            else:
-                i += 1
-
-        return regional_groups
-
     def extract_geographic_entities(self, title: str) -> GeographicExtractionResult:
         """
-        Extract geographic entities from title with enhanced regional group processing.
+        Extract geographic entities from title with database patterns.
 
-        Git Issue #33 Fix: Properly removes regional groups including separator words.
+        Git Issue #33 Enhancement: Improved cleanup of separator words between regions.
 
         Args:
             title: Title text after report type extraction
@@ -280,39 +174,7 @@ class GeographicEntityDetector:
         processing_notes = []
         working_text = title
 
-        # First, detect and remove regional groups (Issue #33 fix)
-        regional_groups = self.detect_regional_groups(working_text)
-
-        if regional_groups:
-            # Sort groups by position (reverse order for removal)
-            regional_groups.sort(key=lambda x: x.full_start, reverse=True)
-
-            for group in regional_groups:
-                # Extract all regions from this group
-                for region_tuple in group.regions:
-                    region_name = region_tuple[2]
-                    # Resolve to primary term
-                    for pattern in self.geographic_patterns:
-                        if re.search(pattern.pattern, region_name, re.IGNORECASE):
-                            resolved_region = self.resolve_to_primary_term(region_name, pattern)
-                            if resolved_region not in extracted_regions:
-                                extracted_regions.append(resolved_region)
-                            break
-
-                # Remove the entire group including separators
-                before = working_text[:group.full_start]
-                after = working_text[group.full_end:]
-
-                # Clean up any trailing/leading punctuation
-                before = before.rstrip(' ,;-')
-                after = after.lstrip(' ,;-')
-
-                working_text = (before + " " + after).strip()
-
-                processing_notes.append(f"Removed regional group: {group.full_text}")
-                logger.debug(f"Removed regional group: {group.full_text}")
-
-        # Now process remaining text for individual regions (not in groups)
+        # Process patterns by priority (prevents partial matches)
         for pattern in self.geographic_patterns:
             if not pattern.active:
                 continue
@@ -341,8 +203,8 @@ class GeographicEntityDetector:
                         if resolved_region not in extracted_regions:
                             extracted_regions.append(resolved_region)
 
-                        # Remove from working text with context cleanup
-                        working_text = self.remove_match_with_cleanup(working_text, match)
+                        # Remove from working text with enhanced cleanup
+                        working_text = self.remove_match_with_enhanced_cleanup(working_text, match)
 
                     processing_notes.append(f"Pattern '{pattern.term}': {len(pattern_matches)} matches")
                     logger.debug(f"Found {len(pattern_matches)} matches for pattern: {pattern.term}")
@@ -358,8 +220,8 @@ class GeographicEntityDetector:
             remaining_text=working_text
         )
 
-        # Clean up remaining text
-        working_text = self.cleanup_remaining_text(working_text)
+        # Clean up remaining text with enhanced separator removal
+        working_text = self.cleanup_remaining_text_enhanced(working_text)
 
         result = GeographicExtractionResult(
             extracted_regions=extracted_regions,
@@ -390,47 +252,66 @@ class GeographicEntityDetector:
         # Otherwise, return the matched text as-is (preserving original case)
         return matched_text
 
-    def remove_match_with_cleanup(self, text: str, match) -> str:
-        """Remove matched text with surrounding punctuation and whitespace cleanup."""
+    def remove_match_with_enhanced_cleanup(self, text: str, match) -> str:
+        """
+        Remove matched text with enhanced cleanup for separator words.
+
+        Git Issue #33 Enhancement: Better detection and removal of separator words
+        that appear between geographic entities.
+        """
         start, end = match.span()
 
-        # For compound patterns, extend removal more aggressively
-        extended_start = start
-        extended_end = end
+        # Look for separator words before the match
+        before_text = text[:start].rstrip()
+        after_text = text[end:].lstrip()
 
-        # Look backwards for punctuation/whitespace to include in removal
-        # ISSUE #19 FIX: Remove '&' from cleanup characters to preserve ampersands in titles
-        while extended_start > 0 and text[extended_start - 1] in ' ,;-()[]{}':
-            extended_start -= 1
+        # Check if there's a separator word immediately before this match
+        # that should be removed (e.g., "And" in "U.S. And Europe")
+        separator_before_pattern = r'\b(and|And|AND|plus|Plus|PLUS)\s*$'
+        separator_before_match = re.search(separator_before_pattern, before_text)
 
-        # Look forwards for punctuation/whitespace to include in removal
-        # ISSUE #19 FIX: Remove '&' from cleanup characters to preserve ampersands in titles
-        while extended_end < len(text) and text[extended_end] in ' ,;-()[]{}':
-            extended_end += 1
-
-        # Check if we need to extend further for compound patterns
-        # Look for dangling "and" or "&" patterns that should be included
-        remaining_start = text[:extended_start].strip()
-        remaining_end = text[extended_end:].strip()
-
-        # If we have dangling connectors, extend the removal
-        if remaining_start.endswith(('and', '&')) or remaining_end.startswith(('and', '&')):
-            # Extend removal to capture compound pattern artifacts
-            while extended_start > 0 and text[extended_start - 1:extended_start] not in [' ', '\t']:
-                if text[extended_start - 1:extended_start + 3] == 'and' or text[extended_start - 1:extended_start] == '&':
-                    extended_start -= 3 if text[extended_start - 1:extended_start + 2] == 'and' else 1
+        if separator_before_match:
+            # Check if this separator is between two regions
+            # Look for a region pattern before the separator
+            region_before_separator = False
+            for pattern in self.geographic_patterns[:20]:  # Check top patterns
+                if re.search(pattern.pattern + r'\s+' + separator_before_pattern,
+                           text[:start], re.IGNORECASE):
+                    region_before_separator = True
                     break
-                extended_start -= 1
 
-        # Remove the extended match
-        cleaned_text = text[:extended_start] + " " + text[extended_end:]
+            if region_before_separator:
+                # Remove the separator as well
+                before_text = before_text[:separator_before_match.start()].rstrip()
 
-        # Comprehensive cleanup of artifacts
+        # Check if there's a separator word immediately after this match
+        separator_after_pattern = r'^\s*(and|And|AND|plus|Plus|PLUS)\b'
+        separator_after_match = re.search(separator_after_pattern, after_text)
+
+        if separator_after_match:
+            # Check if this separator is between two regions
+            # Look for a region pattern after the separator
+            region_after_separator = False
+            remaining_after = after_text[separator_after_match.end():]
+            for pattern in self.geographic_patterns[:20]:  # Check top patterns
+                if re.search(r'^\s*' + pattern.pattern, remaining_after, re.IGNORECASE):
+                    region_after_separator = True
+                    break
+
+            if region_after_separator:
+                # Remove the separator as well
+                after_text = after_text[separator_after_match.end():].lstrip()
+
+        # Reconstruct text without the match and potentially the separators
+        cleaned_text = before_text + " " + after_text
+
+        # Standard cleanup of artifacts
         cleaned_text = re.sub(r'\s*,\s*,\s*', ', ', cleaned_text)    # Double commas
         cleaned_text = re.sub(r'\s*&\s*&\s*', ' & ', cleaned_text)   # Double ampersands
         cleaned_text = re.sub(r'\s*,\s*and\s*,\s*', ' ', cleaned_text) # Comma-and-comma artifacts
         cleaned_text = re.sub(r'\s*and\s*and\s*', ' ', cleaned_text) # Double "and" connectors
         cleaned_text = re.sub(r'\s+', ' ', cleaned_text)             # Multiple spaces
+
         # ISSUE #19 FIX: Don't remove & if it's between words
         if not re.search(r'\w\s*&\s*\w', cleaned_text):
             cleaned_text = re.sub(r'^\s*[,;&-]\s*', '', cleaned_text)    # Leading punctuation
@@ -438,6 +319,7 @@ class GeographicEntityDetector:
         else:
             cleaned_text = re.sub(r'^\s*[,;-]\s*', '', cleaned_text)    # Leading punctuation (preserve &)
             cleaned_text = re.sub(r'\s*[,;-]\s*$', '', cleaned_text)    # Trailing punctuation (preserve &)
+
         cleaned_text = re.sub(r'^\s*and\s*', '', cleaned_text, flags=re.IGNORECASE) # Leading "and"
         cleaned_text = re.sub(r'\s*and\s*$', '', cleaned_text, flags=re.IGNORECASE) # Trailing "and"
 
@@ -459,14 +341,17 @@ class GeographicEntityDetector:
 
         # Confidence reduction for suspicious remaining text patterns
         suspicious_patterns = [
-            r'\b(and|&)\s*$',  # Ends with dangling connector
-            r'^\s*(and|&)\b',  # Starts with dangling connector
+            r'\b(and|And|AND)\s*$',  # Ends with dangling "And"
+            r'^\s*(and|And|AND)\b',  # Starts with dangling "And"
+            r'\b(plus|Plus|PLUS)\s*$',  # Ends with dangling "Plus"
+            r'^\s*(plus|Plus|PLUS)\b',  # Starts with dangling "Plus"
+            r'\b(in|In|IN)\s*$',  # Ends with dangling "In"
+            r'^\s*(&)\b',  # Starts with dangling "&"
             r'\b\w{1}\b',      # Single letter words (likely artifacts)
-            r'\b(Plus|plus)\b',  # Leftover "Plus" separator
         ]
 
         for pattern in suspicious_patterns:
-            if re.search(pattern, remaining_text, re.IGNORECASE):
+            if re.search(pattern, remaining_text):
                 base_confidence -= 0.1
 
         # Ensure confidence stays within valid range
@@ -515,47 +400,47 @@ class GeographicEntityDetector:
 
         return False
 
-    def cleanup_remaining_text(self, text: str) -> str:
-        """Final cleanup of remaining text after geographic extraction."""
+    def cleanup_remaining_text_enhanced(self, text: str) -> str:
+        """
+        Enhanced final cleanup of remaining text after geographic extraction.
+
+        Git Issue #33 Enhancement: More aggressive cleanup of separator words.
+        """
         if not text:
             return ""
 
+        # Issue #33 Fix: Remove standalone separator words more aggressively
+        # These patterns catch separator words that might be left between removed regions
+        text = re.sub(r'^\s*(and|And|AND|plus|Plus|PLUS)\s+', '', text)  # At start
+        text = re.sub(r'\s+(and|And|AND|plus|Plus|PLUS)\s*$', '', text)  # At end
+        text = re.sub(r'\s+(and|And|AND|plus|Plus|PLUS)\s+', ' ', text)  # In middle (isolated)
+
         # Remove dangling connectors and artifacts
         # ISSUE #19 FIX: Only remove '&' and '+' if they're truly isolated, not between words
-        # Check if '&' or '+' are between words before removing
         has_ampersand_between_words = re.search(r'\w\s*&\s*\w', text)
         has_plus_between_words = re.search(r'\w\s*\+\s*\w', text)
 
         # Build pattern based on what we can safely remove
         if has_ampersand_between_words and has_plus_between_words:
             # Both & and + are between words, preserve both
-            text = re.sub(r'^\s*(and|,|;|-)\s*', '', text, flags=re.IGNORECASE)
-            text = re.sub(r'\s*(and|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
+            text = re.sub(r'^\s*(,|;|-)\s*', '', text)
+            text = re.sub(r'\s*(,|;|-)\s*$', '', text)
         elif has_ampersand_between_words:
             # & is between words, preserve it but + can be removed if isolated
-            text = re.sub(r'^\s*(and|\+|,|;|-)\s*', '', text, flags=re.IGNORECASE)
-            text = re.sub(r'\s*(and|\+|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
+            text = re.sub(r'^\s*(\+|,|;|-)\s*', '', text)
+            text = re.sub(r'\s*(\+|,|;|-)\s*$', '', text)
         elif has_plus_between_words:
             # + is between words, preserve it but & can be removed if isolated
-            text = re.sub(r'^\s*(and|&|,|;|-)\s*', '', text, flags=re.IGNORECASE)
-            text = re.sub(r'\s*(and|&|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
+            text = re.sub(r'^\s*(&|,|;|-)\s*', '', text)
+            text = re.sub(r'\s*(&|,|;|-)\s*$', '', text)
         else:
             # Neither & nor + are between words, safe to remove if isolated
-            text = re.sub(r'^\s*(and|&|\+|,|;|-)\s*', '', text, flags=re.IGNORECASE)
-            text = re.sub(r'\s*(and|&|\+|,|;|-)\s*$', '', text, flags=re.IGNORECASE)
+            text = re.sub(r'^\s*(&|\+|,|;|-)\s*', '', text)
+            text = re.sub(r'\s*(&|\+|,|;|-)\s*$', '', text)
 
         # Issue #28 Fix: Remove orphaned prepositions after geographic removal
-        # Handles "Retail in" → "Retail" after removing "Singapore" from "Retail in Singapore"
         text = re.sub(r'\s+(in|for|by|of|at|to|with|from)\s*$', '', text, flags=re.IGNORECASE)
-
-        # Also handle orphaned prepositions at start
-        # Handles "in Technology" → "Technology"
         text = re.sub(r'^(in|for|by|of|at|to|with|from)\s+', '', text, flags=re.IGNORECASE)
-
-        # Issue #33 Enhancement: Remove orphaned separator words
-        # Remove standalone "Plus" that might remain after regional group removal
-        text = re.sub(r'^\s*(Plus|plus|PLUS)\s+', '', text)
-        text = re.sub(r'\s+(Plus|plus|PLUS)\s*$', '', text)
 
         # Clean up multiple spaces and normalize
         text = re.sub(r'\s+', ' ', text)
@@ -597,8 +482,8 @@ def create_output_directory(script_name: str) -> str:
     return create_organized_output_directory(script_name)
 
 def test_geographic_extraction(limit=50):
-    """Test the enhanced geographic extraction with sample data."""
-    logger.info("Starting enhanced geographic entity extraction test (v3)...")
+    """Test the enhanced geographic extraction with Issue #33 fixes."""
+    logger.info("Starting enhanced geographic entity extraction test (v3 fixed)...")
 
     try:
         # Initialize PatternLibraryManager (consistent with Scripts 01-03)
@@ -613,7 +498,7 @@ def test_geographic_extraction(limit=50):
 
         # Test with sample titles including Issue #33 cases
         test_cases = [
-            "U.S. And Europe Digital Pathology",  # Issue #33 test case
+            "U.S. And Europe Digital Pathology",  # Issue #33 primary test case
             "APAC Personal Protective Equipment",
             "North America Europe Automotive Technology",
             "Middle East & Africa Healthcare Systems",
@@ -622,7 +507,7 @@ def test_geographic_extraction(limit=50):
             "Global Semiconductor Manufacturing",
             "United States Canada Mexico Trade",
             "Southeast Asia Manufacturing Trends",
-            "Latin America Plus Asia Pacific Services",  # Issue #33 test case
+            "Latin America Plus Asia Pacific Services",  # Issue #33 "Plus" test case
         ]
 
         timestamp = get_timestamp()
@@ -651,7 +536,7 @@ def test_geographic_extraction(limit=50):
             })
 
         # Create output directory and save results
-        output_dir = create_output_directory("04_geographic_detector_v3_test")
+        output_dir = create_output_directory("04_geographic_detector_v3_fixed_test")
 
         # Save results to JSON
         output_file = os.path.join(output_dir, f"geographic_extraction_test_results.json")
@@ -671,6 +556,27 @@ def test_geographic_extraction(limit=50):
         logger.info(f"Total test cases: {len(results)}")
         logger.info(f"Successful extractions: {sum(1 for r in results if r['extracted_regions'])}")
         logger.info(f"Average confidence: {sum(r['confidence'] for r in results) / len(results):.3f}")
+
+        # Check Issue #33 specific cases
+        issue_33_cases = {
+            "U.S. And Europe Digital Pathology": "Digital Pathology",
+            "Latin America Plus Asia Pacific Services": "Services"
+        }
+
+        issue_33_passed = 0
+        for r in results:
+            if r['input'] in issue_33_cases:
+                expected = issue_33_cases[r['input']]
+                if r['remaining_text'] == expected:
+                    logger.info(f"✅ Issue #33 case passed: '{r['input']}' → '{r['remaining_text']}'")
+                    issue_33_passed += 1
+                else:
+                    logger.info(f"❌ Issue #33 case failed: '{r['input']}' → '{r['remaining_text']}' (expected: '{expected}')")
+
+        if issue_33_passed == len(issue_33_cases):
+            logger.info("\n🎉 Git Issue #33 RESOLVED! All test cases passed!")
+        else:
+            logger.info(f"\n⚠️  Git Issue #33: {issue_33_passed}/{len(issue_33_cases)} cases passed")
 
     except Exception as e:
         logger.error(f"Test failed: {e}")
