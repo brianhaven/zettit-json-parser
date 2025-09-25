@@ -1,0 +1,148 @@
+# script05_formatting_test Output
+
+**Analysis Date (PDT):** 2025-09-25 16:42:24 PDT
+**Analysis Date (UTC):** 2025-09-25 23:42:24 UTC
+
+**Description:** Topic formatting enhancement validation results
+
+================================================================================
+
+
+Topic Formatting Enhancement Test Results
+==================================================
+
+Test Summary:
+  Total Test Cases:      6
+  Topic Name Accuracy:   6/6 (100.0%)
+  Normalized Accuracy:   6/6 (100.0%)
+  Average Confidence:    0.875
+  Overall Success Rate:  6/6 (100.0%)
+
+Detailed Test Results:
+=========================
+
+Test 1: Ampersand Handling
+  Original: AI Trust, Risk & Security Management Market
+  Pipeline: AI Trust, Risk Security Management
+  Expected Topic Name: AI Trust, Risk Security Management
+  Actual Topic Name:   AI Trust, Risk Security Management
+  Expected Normalized: ai-trust-risk-security-management
+  Actual Normalized:   ai-trust-risk-security-management
+  Topic Name Match: PASS
+  Normalized Match: PASS
+  Confidence: 0.950
+
+  Processing Notes:
+    - Preserved formatting: 'AI' → 'AI'
+    - Preserved formatting: 'Trust,' → 'Trust,'
+    - Preserved formatting: 'Risk' → 'Risk'
+    - Preserved formatting: 'Security' → 'Security'
+    - Preserved formatting: 'Management' → 'Management'
+    - Original formatting preserved: 'AI Trust, Risk Security Management'
+    - TopicName created: 'AI Trust, Risk Security Management'
+    - Normalized topic created: 'ai-trust-risk-security-management'
+
+Test 2: Parentheses Preservation
+  Original: Natural Language Processing (NLP) Market Growth Report, 2030
+  Pipeline: Natural Language Processing
+  Expected Topic Name: Natural Language Processing
+  Actual Topic Name:   Natural Language Processing
+  Expected Normalized: natural-language-processing
+  Actual Normalized:   natural-language-processing
+  Topic Name Match: PASS
+  Normalized Match: PASS
+  Confidence: 0.800
+
+  Processing Notes:
+    - Preserved formatting: 'Natural' → 'Natural'
+    - Preserved formatting: 'Language' → 'Language'
+    - Preserved formatting: 'Processing' → 'Processing'
+    - Original formatting preserved: 'Natural Language Processing'
+    - TopicName created: 'Natural Language Processing'
+    - Normalized topic created: 'natural-language-processing'
+
+Test 3: Brackets to Parentheses
+  Original: Fecal Immunochemical Test [FIT] Market Analysis
+  Pipeline: Fecal Immunochemical Test
+  Expected Topic Name: Fecal Immunochemical Test
+  Actual Topic Name:   Fecal Immunochemical Test
+  Expected Normalized: fecal-immunochemical-test
+  Actual Normalized:   fecal-immunochemical-test
+  Topic Name Match: PASS
+  Normalized Match: PASS
+  Confidence: 0.800
+
+  Processing Notes:
+    - Preserved formatting: 'Fecal' → 'Fecal'
+    - Preserved formatting: 'Immunochemical' → 'Immunochemical'
+    - Preserved formatting: 'Test' → 'Test'
+    - Original formatting preserved: 'Fecal Immunochemical Test'
+    - TopicName created: 'Fecal Immunochemical Test'
+    - Normalized topic created: 'fecal-immunochemical-test'
+
+Test 4: Technical Compounds
+  Original: 5G Infrastructure Market Size & Share Report
+  Pipeline: 5G Infrastructure
+  Expected Topic Name: 5G Infrastructure
+  Actual Topic Name:   5G Infrastructure
+  Expected Normalized: 5g-infrastructure
+  Actual Normalized:   5g-infrastructure
+  Topic Name Match: PASS
+  Normalized Match: PASS
+  Confidence: 0.950
+
+  Processing Notes:
+    - Preserved formatting: '5G' → '5G'
+    - Preserved formatting: 'Infrastructure' → 'Infrastructure'
+    - Original formatting preserved: '5G Infrastructure'
+    - TopicName created: '5G Infrastructure'
+    - Normalized topic created: '5g-infrastructure'
+
+Test 5: Apostrophe Handling
+  Original: Johnson's Baby Products Market
+  Pipeline: Johnson's Baby Products
+  Expected Topic Name: Johnson's Baby Products
+  Actual Topic Name:   Johnson's Baby Products
+  Expected Normalized: johnson-baby-products
+  Actual Normalized:   johnson-baby-products
+  Topic Name Match: PASS
+  Normalized Match: PASS
+  Confidence: 0.800
+
+  Processing Notes:
+    - Preserved formatting: 'Johnson's' → 'Johnson's'
+    - Preserved formatting: 'Baby' → 'Baby'
+    - Preserved formatting: 'Products' → 'Products'
+    - Original formatting preserved: 'Johnson's Baby Products'
+    - TopicName created: 'Johnson's Baby Products'
+    - Normalized topic created: 'johnson-baby-products'
+
+Test 6: Mixed Case Acronyms
+  Original: IoT Device Management Platform Market
+  Pipeline: IoT Device Management Platform
+  Expected Topic Name: IoT Device Management Platform
+  Actual Topic Name:   IoT Device Management Platform
+  Expected Normalized: iot-device-management-platform
+  Actual Normalized:   iot-device-management-platform
+  Topic Name Match: PASS
+  Normalized Match: PASS
+  Confidence: 0.950
+
+  Processing Notes:
+    - Preserved formatting: 'IoT' → 'IoT'
+    - Preserved formatting: 'Device' → 'Device'
+    - Preserved formatting: 'Management' → 'Management'
+    - Preserved formatting: 'Platform' → 'Platform'
+    - Original formatting preserved: 'IoT Device Management Platform'
+    - TopicName created: 'IoT Device Management Platform'
+    - Normalized topic created: 'iot-device-management-platform'
+
+Extractor Performance Metrics:
+==============================
+Processing Success Rate: 100.0%
+Overall Confidence:      90.0%
+Total Processed:         6
+Successful Extractions:  6
+Failed Extractions:      0
+
+Test Status: ✅ PASSED
