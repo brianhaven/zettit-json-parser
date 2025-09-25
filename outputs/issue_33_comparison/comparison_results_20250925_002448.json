@@ -1,0 +1,224 @@
+{
+  "test_date": "2025-09-25T00:24:48.141571",
+  "total_cases": 10,
+  "v2_passes": 7,
+  "v3_passes": 7,
+  "improvements": 1,
+  "results": [
+    {
+      "test_case": 1,
+      "description": "Regional separator 'And' should be removed with regions",
+      "input": "U.S. And Europe Digital Pathology",
+      "expected": "Digital Pathology",
+      "v2_output": "And Digital Pathology",
+      "v2_regions": [
+        "Europe",
+        "United States"
+      ],
+      "v2_confidence": 0.9,
+      "v2_pass": false,
+      "v3_output": "And Digital Pathology",
+      "v3_regions": [
+        "Europe",
+        "United States"
+      ],
+      "v3_confidence": 0.9,
+      "v3_pass": false,
+      "improved": false
+    },
+    {
+      "test_case": 2,
+      "description": "Multi-region with 'And' separator",
+      "input": "Asia Pacific And North America Energy Solutions",
+      "expected": "Energy Solutions",
+      "v2_output": "Energy Solutions",
+      "v2_regions": [
+        "North America",
+        "Asia Pacific"
+      ],
+      "v2_confidence": 0.9,
+      "v2_pass": true,
+      "v3_output": "Energy Solutions",
+      "v3_regions": [
+        "Pacific",
+        "North America",
+        "Asia"
+      ],
+      "v3_confidence": 0.9500000000000001,
+      "v3_pass": true,
+      "improved": false
+    },
+    {
+      "test_case": 3,
+      "description": "Adjacent regions with 'And'",
+      "input": "Europe And Middle East Healthcare",
+      "expected": "Healthcare",
+      "v2_output": "Healthcare",
+      "v2_regions": [
+        "Middle East",
+        "Europe"
+      ],
+      "v2_confidence": 0.9,
+      "v2_pass": true,
+      "v3_output": "Healthcare",
+      "v3_regions": [
+        "Europe",
+        "Middle East"
+      ],
+      "v3_confidence": 0.9,
+      "v3_pass": true,
+      "improved": false
+    },
+    {
+      "test_case": 4,
+      "description": "Country-level regions with 'And'",
+      "input": "Canada And United States Market",
+      "expected": "Market",
+      "v2_output": "Market",
+      "v2_regions": [
+        "United States",
+        "Canada"
+      ],
+      "v2_confidence": 0.9,
+      "v2_pass": true,
+      "v3_output": "Market",
+      "v3_regions": [
+        "Canada",
+        "United States"
+      ],
+      "v3_confidence": 0.9,
+      "v3_pass": true,
+      "improved": false
+    },
+    {
+      "test_case": 5,
+      "description": "Acronym regions with 'And'",
+      "input": "APAC And EMEA Software Solutions",
+      "expected": "Software Solutions",
+      "v2_output": "Software Solutions",
+      "v2_regions": [
+        "Europe, Middle East and Africa",
+        "Asia Pacific"
+      ],
+      "v2_confidence": 0.9,
+      "v2_pass": true,
+      "v3_output": "Software Solutions",
+      "v3_regions": [
+        "Asia Pacific",
+        "Europe, Middle East and Africa"
+      ],
+      "v3_confidence": 0.9,
+      "v3_pass": true,
+      "improved": false
+    },
+    {
+      "test_case": 6,
+      "description": "Regions with '&' separator",
+      "input": "North America & Europe Technology",
+      "expected": "Technology",
+      "v2_output": "Technology",
+      "v2_regions": [
+        "North America",
+        "Europe"
+      ],
+      "v2_confidence": 0.9,
+      "v2_pass": true,
+      "v3_output": "North Technology",
+      "v3_regions": [
+        "America",
+        "Europe"
+      ],
+      "v3_confidence": 0.9,
+      "v3_pass": false,
+      "improved": false
+    },
+    {
+      "test_case": 7,
+      "description": "Regions with 'Plus' separator",
+      "input": "Latin America Plus Asia Pacific Services",
+      "expected": "Services",
+      "v2_output": "Plus Services",
+      "v2_regions": [
+        "Central and South America",
+        "Asia Pacific"
+      ],
+      "v2_confidence": 0.9,
+      "v2_pass": false,
+      "v3_output": "Latin Services",
+      "v3_regions": [
+        "America",
+        "Asia Pacific"
+      ],
+      "v3_confidence": 0.9,
+      "v3_pass": false,
+      "improved": false
+    },
+    {
+      "test_case": 8,
+      "description": "Multiple regions with mixed separators",
+      "input": "United States, Europe And Asia Manufacturing",
+      "expected": "Manufacturing",
+      "v2_output": "Manufacturing",
+      "v2_regions": [
+        "Europe",
+        "Asia",
+        "United States"
+      ],
+      "v2_confidence": 0.9500000000000001,
+      "v2_pass": true,
+      "v3_output": "Manufacturing",
+      "v3_regions": [
+        "United States",
+        "Europe",
+        "Asia"
+      ],
+      "v3_confidence": 0.9500000000000001,
+      "v3_pass": true,
+      "improved": false
+    },
+    {
+      "test_case": 9,
+      "description": "Lowercase 'and' separator",
+      "input": "Middle East and North Africa Banking",
+      "expected": "Banking",
+      "v2_output": "Banking",
+      "v2_regions": [
+        "North Africa",
+        "Middle East"
+      ],
+      "v2_confidence": 0.9,
+      "v2_pass": true,
+      "v3_output": "Banking",
+      "v3_regions": [
+        "Middle East",
+        "North Africa"
+      ],
+      "v3_confidence": 0.9,
+      "v3_pass": true,
+      "improved": false
+    },
+    {
+      "test_case": 10,
+      "description": "Multiple 'Plus' separators",
+      "input": "Europe Plus Middle East Plus Africa Retail",
+      "expected": "Retail",
+      "v2_output": "Plus Plus Retail",
+      "v2_regions": [
+        "Middle East",
+        "Europe",
+        "Africa"
+      ],
+      "v2_confidence": 0.9500000000000001,
+      "v2_pass": false,
+      "v3_output": "Retail",
+      "v3_regions": [
+        "Europe",
+        "Middle East",
+        "Africa"
+      ],
+      "v3_confidence": 0.9500000000000001,
+      "v3_pass": true,
+      "improved": true
+    }
+  ]
+}
