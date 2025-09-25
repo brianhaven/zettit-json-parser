@@ -135,53 +135,69 @@ class TopicExtractor:
         
         return pdt_str, utc_str, utc_now
     
-    def extract(self, title: str, extracted_elements: Dict[str, Any]) -> TopicExtractionResult:
+    def extract(self, title: str, final_topic_text: str, extracted_elements: Optional[Dict[str, Any]] = None) -> TopicExtractionResult:
         """
-        Main extraction method that coordinates topic extraction based on market term type.
-        
+        Main extraction method that processes final topic text from pipeline.
+
         Args:
-            title: Original title
-            extracted_elements: Dictionary containing results from previous extractors:
-                - market_term_type: "standard", "market_for", or "market_in"
-                - extracted_forecast_date_range: Date/range string
-                - extracted_report_type: Report type string
-                - extracted_regions: List of geographic regions
-                
+            title: Original title for formatting reference
+            final_topic_text: Final topic text from Script 04 processing
+            extracted_elements: Optional dictionary containing results from previous extractors
+
         Returns:
-            TopicExtractionResult with extracted topic and metadata
+            TopicExtractionResult with properly formatted topic and normalized topic name
         """
         self.extraction_stats['total_processed'] += 1
-        
-        # Get market term type from previous extraction
+
+        # Use empty dict if no extracted elements provided
+        if extracted_elements is None:
+            extracted_elements = {}
+
         market_type = extracted_elements.get('market_term_type', 'standard')
         processing_notes = []
-        
-        logger.debug(f"Processing title '{title}' with market type '{market_type}'")
-        
-        # Route to appropriate processing method
+
+        logger.debug(f"Processing final topic '{final_topic_text}' from original title '{title}'")
+
         try:
-            if market_type == "market_for":
-                result = self.process_market_for(title, extracted_elements)
-            elif market_type == "market_in":
-                result = self.process_market_in(title, extracted_elements)
-            else:
-                result = self.process_standard_market(title, extracted_elements)
-            
-            if result.extracted_topic:
+            # Step 1: Preserve original formatting by comparing with original title
+            formatted_topic = self._preserve_original_formatting(final_topic_text, title, processing_notes)
+
+            # Step 2: Create topicName with proper formatting
+            topic_name = self._create_topic_name(formatted_topic, processing_notes)
+
+            # Step 3: Create normalized topic (machine-readable)
+            normalized_topic = self._create_normalized_topic(topic_name, processing_notes)
+
+            # Step 4: Calculate confidence
+            confidence = self._calculate_confidence(topic_name, TopicExtractionFormat.STANDARD_MARKET)
+
+            if topic_name:
                 self.extraction_stats['successful_extractions'] += 1
-                logger.debug(f"Successfully extracted topic: '{result.extracted_topic}'")
+                logger.debug(f"Successfully processed topic: '{topic_name}' → '{normalized_topic}'")
             else:
                 self.extraction_stats['failed_extractions'] += 1
-                logger.warning(f"Failed to extract topic from: '{title}'")
-            
-            return result
-            
+                logger.warning(f"Failed to process final topic: '{final_topic_text}'")
+
+            return TopicExtractionResult(
+                title=final_topic_text,
+                original_title=title,
+                market_term_type=market_type,
+                extracted_topic=normalized_topic,  # Machine-readable version
+                normalized_topic_name=topic_name,  # Human-readable version
+                format_type=TopicExtractionFormat.STANDARD_MARKET,
+                confidence=confidence,
+                technical_compounds_preserved=self._find_technical_compounds(topic_name or ""),
+                removed_patterns=extracted_elements,
+                processing_notes=processing_notes,
+                raw_remainder_before_processing=final_topic_text
+            )
+
         except Exception as e:
             self.extraction_stats['failed_extractions'] += 1
-            logger.error(f"Topic extraction failed for '{title}': {e}")
-            
+            logger.error(f"Topic processing failed for '{final_topic_text}': {e}")
+
             return TopicExtractionResult(
-                title=title,
+                title=final_topic_text,
                 original_title=title,
                 market_term_type=market_type,
                 extracted_topic=None,
@@ -189,8 +205,8 @@ class TopicExtractor:
                 format_type=TopicExtractionFormat.UNKNOWN,
                 confidence=0.0,
                 technical_compounds_preserved=[],
-                removed_patterns=extracted_elements,
-                processing_notes=[f"Extraction failed: {str(e)}"]
+                removed_patterns=extracted_elements or {},
+                processing_notes=[f"Processing failed: {str(e)}"]
             )
     
     def process_standard_market(self, title: str, extracted_elements: Dict[str, Any]) -> TopicExtractionResult:
@@ -499,26 +515,133 @@ class TopicExtractor:
         
         return list(set(compounds))  # Remove duplicates
     
+    def _preserve_original_formatting(self, final_topic_text: str, original_title: str, processing_notes: List[str]) -> str:
+        """
+        Preserve original formatting by comparing final topic words with original title.
+
+        Args:
+            final_topic_text: Topic text from pipeline processing
+            original_title: Original title for formatting reference
+            processing_notes: List to append processing notes to
+
+        Returns:
+            Topic text with original formatting preserved
+        """
+        if not final_topic_text or not original_title:
+            return final_topic_text
+
+        # Tokenize both texts for comparison
+        topic_words = final_topic_text.split()
+        original_words = original_title.split()
+
+        # Create a mapping of lowercase words to their original formatting
+        original_word_map = {}
+        for word in original_words:
+            # Extract core word without punctuation for matching
+            clean_word = re.sub(r'[^\w\s]', '', word).lower()
+            if clean_word:
+                original_word_map[clean_word] = word
+
+        formatted_words = []
+        for word in topic_words:
+            clean_word = re.sub(r'[^\w\s]', '', word).lower()
+
+            # Try to find original formatting
+            if clean_word in original_word_map:
+                original_formatted = original_word_map[clean_word]
+                # Handle parentheses/brackets - convert brackets to parentheses
+                if '[' in original_formatted and ']' in original_formatted:
+                    original_formatted = original_formatted.replace('[', '(').replace(']', ')')
+                formatted_words.append(original_formatted)
+                processing_notes.append(f"Preserved formatting: '{word}' → '{original_formatted}'")
+            else:
+                formatted_words.append(word)
+
+        formatted_topic = ' '.join(formatted_words)
+        processing_notes.append(f"Original formatting preserved: '{formatted_topic}'")
+        return formatted_topic
+
+    def _create_topic_name(self, formatted_topic: str, processing_notes: List[str]) -> str:
+        """
+        Create topicName with proper formatting and separator handling.
+
+        Args:
+            formatted_topic: Topic with original formatting preserved
+            processing_notes: List to append processing notes to
+
+        Returns:
+            Properly formatted topic name for database insertion
+        """
+        if not formatted_topic:
+            return ""
+
+        # Convert ampersands to "and"
+        topic_name = re.sub(r'\s*&\s*', ' and ', formatted_topic)
+
+        # Clean up extra spaces
+        topic_name = re.sub(r'\s+', ' ', topic_name).strip()
+
+        processing_notes.append(f"TopicName created: '{topic_name}'")
+        return topic_name
+
+    def _create_normalized_topic(self, topic_name: str, processing_notes: List[str]) -> str:
+        """
+        Create normalized machine-readable topic from topicName.
+
+        Args:
+            topic_name: Human-readable topic name
+            processing_notes: List to append processing notes to
+
+        Returns:
+            Normalized machine-readable topic
+        """
+        if not topic_name:
+            return ""
+
+        # Convert to lowercase
+        normalized = topic_name.lower()
+
+        # Remove parentheses and their contents
+        normalized = re.sub(r'\([^)]*\)', '', normalized)
+
+        # Remove apostrophes and trailing letters (typically 's')
+        normalized = re.sub(r"'s?\b", '', normalized)
+
+        # Convert separating punctuation to dashes
+        normalized = re.sub(r'[/\\|]', '-', normalized)
+
+        # Convert spaces to dashes
+        normalized = re.sub(r'\s+', '-', normalized)
+
+        # Clean up multiple dashes
+        normalized = re.sub(r'-+', '-', normalized)
+
+        # Remove leading/trailing dashes
+        normalized = normalized.strip('-')
+
+        processing_notes.append(f"Normalized topic created: '{normalized}'")
+        return normalized
+
     def normalize_topic(self, topic: str) -> Optional[str]:
         """
         Create standardized topic name for system use.
-        
+
         Args:
             topic: Original topic text
-            
+
         Returns:
             Normalized topic name (lowercase, hyphenated)
         """
         if not topic:
             return None
-        
+
         # Convert to lowercase and replace spaces/special chars with hyphens
         normalized = topic.lower()
         normalized = re.sub(r'[^\w\s-]', '', normalized)  # Remove special chars except hyphens
         normalized = re.sub(r'[\s_]+', '-', normalized)   # Replace spaces/underscores with hyphens
         normalized = re.sub(r'-+', '-', normalized)       # Collapse multiple hyphens
         normalized = normalized.strip('-')                # Remove leading/trailing hyphens
-        
+
         return normalized if normalized else None
     
     def _clean_artifacts(self, text: str) -> str:
