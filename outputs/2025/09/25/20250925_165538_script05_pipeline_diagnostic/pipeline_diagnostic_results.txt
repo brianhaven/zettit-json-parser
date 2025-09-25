@@ -1,0 +1,87 @@
+# script05_pipeline_diagnostic Output
+
+**Analysis Date (PDT):** 2025-09-25 16:55:38 PDT
+**Analysis Date (UTC):** 2025-09-25 23:55:38 UTC
+
+**Description:** Pipeline content preservation diagnostic results
+
+================================================================================
+
+
+Script 05 Pipeline Diagnostic Results
+==================================================
+
+Content Preservation Analysis:
+  Total Test Cases:         3
+  Content Loss Issues:      0/3
+  Content Preservation:     100.0%
+
+Detailed Pipeline Processing Results:
+========================================
+
+Test 1: Ampersand Preservation Test
+  Original Title: AI Trust, Risk & Security Management Market
+  Expected Symbols: ['&']
+  Issue Description: Ampersand (&) should be preserved through pipeline
+
+  Stage-by-Stage Processing:
+    Market Classification: 'AI Trust, Risk & Security Management Market'
+      → Classification: standard
+    Date Extraction: 'AI Trust, Risk & Security Management Market'
+      → Extracted: None
+    Report Type Extraction: 'AI Trust, Risk & Security Management'
+      → Extracted: Market
+    Geographic Detection: 'AI Trust, Risk & Security Management'
+      → Extracted: []
+
+  Final Pipeline Result: 'AI Trust, Risk & Security Management'
+  Symbols Preserved: ['&']
+  Symbols Lost: []
+  Content Loss Issue: NO
+
+Test 2: Bracket/Acronym Preservation Test
+  Original Title: Fecal Immunochemical Test [FIT] Market Analysis
+  Expected Symbols: ['[FIT]']
+  Issue Description: [FIT] should be preserved through pipeline
+
+  Stage-by-Stage Processing:
+    Market Classification: 'Fecal Immunochemical Test [FIT] Market Analysis'
+      → Classification: standard
+    Date Extraction: 'Fecal Immunochemical Test [FIT] Market Analysis'
+      → Extracted: None
+    Report Type Extraction: 'Fecal Immunochemical Test [FIT]'
+      → Extracted: Market Analysis
+    Geographic Detection: 'Fecal Immunochemical Test [FIT]'
+      → Extracted: []
+
+  Final Pipeline Result: 'Fecal Immunochemical Test [FIT]'
+  Symbols Preserved: ['[FIT]']
+  Symbols Lost: []
+  Content Loss Issue: NO
+
+Test 3: Parentheses Acronym Test
+  Original Title: Natural Language Processing (NLP) Market Growth Report, 2030
+  Expected Symbols: ['(NLP)']
+  Issue Description: (NLP) should be preserved through pipeline
+
+  Stage-by-Stage Processing:
+    Market Classification: 'Natural Language Processing (NLP) Market Growth Report, 2030'
+      → Classification: standard
+    Date Extraction: 'Natural Language Processing (NLP) Market Growth Report'
+      → Extracted: 2030
+    Report Type Extraction: 'Natural Language Processing (NLP)'
+      → Extracted: Market Growth Report
+    Geographic Detection: 'Natural Language Processing (NLP)'
+      → Extracted: []
+
+  Final Pipeline Result: 'Natural Language Processing (NLP)'
+  Symbols Preserved: ['(NLP)']
+  Symbols Lost: []
+  Content Loss Issue: NO
+
+
+CONCLUSION:
+============
+✅ NO PIPELINE ISSUES DETECTED
+All content preservation tests passed. The issues in the Script 05 test cases
+were likely test data discrepancies rather than actual pipeline bugs.
