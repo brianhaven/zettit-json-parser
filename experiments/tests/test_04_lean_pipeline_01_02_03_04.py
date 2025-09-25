@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Complete pipeline test: 01→02→03→04 with new lean Script 04 v2
-Tests the full processing pipeline with refactored geographic extraction.
+Complete pipeline test: 01→02→03→04 with enhanced Script 04 v3 (Issue #33 fix)
+Tests the full processing pipeline with enhanced regional separator cleanup.
 
 Usage:
     python3 test_04_lean_pipeline_01_02_03_04.py [quantity]
@@ -104,9 +104,9 @@ def test_lean_pipeline(test_quantity: int = 9):
     script03 = import_module_from_path("report_type_extractor", 
                                      os.path.join(parent_dir, "03_report_type_extractor_v4.py"))
     
-    # Import Script 04 v2
-    script04 = import_module_from_path("geographic_entity_detector_v2",
-                                     os.path.join(parent_dir, "04_geographic_entity_detector_v2.py"))
+    # Import Script 04 v3 (Issue #33 fix)
+    script04 = import_module_from_path("geographic_entity_detector_v3",
+                                     os.path.join(parent_dir, "04_geographic_entity_detector_v3.py"))
     
     # Import and create PatternLibraryManager (consistent architecture across all scripts)
     pattern_manager = import_module_from_path("pattern_library_manager",
@@ -119,7 +119,7 @@ def test_lean_pipeline(test_quantity: int = 9):
     market_classifier = script01.MarketTermClassifier(pattern_lib_manager)
     date_extractor = script02.EnhancedDateExtractor(pattern_lib_manager)
     report_extractor = script03.PureDictionaryReportTypeExtractor(pattern_lib_manager)
-    geo_detector = script04.GeographicEntityDetector(pattern_lib_manager)  # Script 04 v2 now uses PatternLibraryManager
+    geo_detector = script04.GeographicEntityDetector(pattern_lib_manager)  # Script 04 v3 with Issue #33 fix
     
     # Query real database titles for testing
     client = MongoClient(os.getenv('MONGODB_URI'))
