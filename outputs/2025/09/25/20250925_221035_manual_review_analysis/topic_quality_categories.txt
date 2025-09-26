@@ -1,0 +1,76 @@
+Topic Extraction Quality Categories
+Analysis Date (PDT): 2025-09-25 22:10:35 PDT
+==================================================
+
+EXCELLENT EXTRACTIONS (Confidence ≥ 0.9)
+Total: 0 cases
+
+
+
+GOOD EXTRACTIONS (Confidence 0.7-0.89)
+Total: 456 cases
+
+  2. Real-time Bidding → real-time-bidding (conf: 0.800)
+  3. High-Integrity Pressure Protection System (HIPPS) → high-integrity-pressure-protection-system-hipps (conf: 0.800)
+  4. Spectrum Analyzer → spectrum-analyzer (conf: 0.800)
+  5. Thin Film Photovoltaics → thin-film-photovoltaics (conf: 0.800)
+  6. Coffee Machine → coffee-machine (conf: 0.800)
+  7. Battery Leasing and Swapping → battery-leasing-and-swapping (conf: 0.800)
+  8. Cross Laminated Timber → cross-laminated-timber (conf: 0.800)
+  9. Retort Packaging → retort-packaging (conf: 0.800)
+ 10. Automatic Self-cleaning Cat Litter Box → automatic-self-cleaning-cat-litter-box (conf: 0.800)
+ 11. Hotels, Resorts And Cruise Lines → hotels-resorts-and-cruise-lines (conf: 0.800)
+ 12. Water Leak Detection Repair Services → water-leak-detection-repair-services (conf: 0.800)
+ 13. Oxygen Therapy → oxygen-therapy (conf: 0.800)
+ 14. Equine Healthcare → equine-healthcare (conf: 0.800)
+ 15. Point-of-Care Medical Imaging → point-of-care-medical-imaging (conf: 0.800)
+ 16. Floor Paints → floor-paints (conf: 0.800)
+
+
+NEEDS IMPROVEMENT (Confidence < 0.7)
+Total: 44 cases
+
+  1. Steel → steel (conf: 0.600) - Low confidence
+ 17. Aerogel → aerogel (conf: 0.600) - Low confidence
+ 22. Railing → railing (conf: 0.600) - Low confidence
+ 29. Phytonutrients → phytonutrients (conf: 0.600) - Low confidence
+ 32. Loratadine → loratadine (conf: 0.600) - Low confidence
+ 37. Butane → butane (conf: 0.600) - Low confidence
+ 54. Gamification → gamification (conf: 0.600) - Low confidence
+ 56. Ethoxyquin → ethoxyquin (conf: 0.600) - Low confidence
+ 57. C-arms → c-arms (conf: 0.600) - Low confidence
+129. Biogas → biogas (conf: 0.600) - Low confidence
+145. Sealers → sealers (conf: 0.600) - Low confidence
+152. Cider → cider (conf: 0.600) - Low confidence
+157. Ethylene → ethylene (conf: 0.600) - Low confidence
+167. Pacemakers → pacemakers (conf: 0.600) - Low confidence
+207. Langasite → langasite (conf: 0.600) - Low confidence
+217. Glamping → glamping (conf: 0.600) - Low confidence
+222. Spring → spring (conf: 0.600) - Low confidence
+234. Trocars → trocars (conf: 0.600) - Low confidence
+238. Swimwear → swimwear (conf: 0.600) - Low confidence
+247. Hospice → hospice (conf: 0.600) - Low confidence
+253. Nanosilver → nanosilver (conf: 0.600) - Low confidence
+256. Nutricosmetics → nutricosmetics (conf: 0.600) - Low confidence
+257. Innerduct → innerduct (conf: 0.600) - Low confidence
+268. Bran → bran (conf: 0.600) - Low confidence
+285. Canopy → canopy (conf: 0.600) - Low confidence
+314. Carbapenem → carbapenem (conf: 0.600) - Low confidence
+315. Polyolefin → polyolefin (conf: 0.600) - Low confidence
+320. Cryocooler → cryocooler (conf: 0.600) - Low confidence
+325. Lime → lime (conf: 0.600) - Low confidence
+329. Bioenergy → bioenergy (conf: 0.600) - Low confidence
+367. Prosthetics → prosthetics (conf: 0.600) - Low confidence
+398. Candle → candle (conf: 0.600) - Low confidence
+407. Hyoscine → hyoscine (conf: 0.600) - Low confidence
+425. Ethanol → ethanol (conf: 0.600) - Low confidence
+426. Cristobalite → cristobalite (conf: 0.600) - Low confidence
+437. Benzaldehyde → benzaldehyde (conf: 0.600) - Low confidence
+462. Ketones → ketones (conf: 0.600) - Low confidence
+464. Gin → gin (conf: 0.600) - Low confidence
+473. Fondant → fondant (conf: 0.600) - Low confidence
+477. Supercapacitors → supercapacitors (conf: 0.600) - Low confidence
+478. Diamond → diamond (conf: 0.600) - Low confidence
+482. Nanomaterials → nanomaterials (conf: 0.600) - Low confidence
+483. Anime → anime (conf: 0.600) - Low confidence
+485. Polyols → polyols (conf: 0.600) - Low confidence
