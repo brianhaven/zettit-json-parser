@@ -516,6 +516,7 @@ class TopicExtractor:
     def _preserve_original_formatting(self, final_topic_text: str, original_title: str, processing_notes: List[str]) -> str:
         """
         Preserve original formatting by comparing final topic words with original title.
+        Uses position-aware mapping to handle complex parentheses content correctly.
 
         Args:
             final_topic_text: Topic text from pipeline processing
@@ -528,32 +529,47 @@ class TopicExtractor:
         if not final_topic_text or not original_title:
             return final_topic_text
 
+        # For complex parentheses content, preserve the original structure directly
+        # Check if original contains complex comma-separated parentheses content
+        parentheses_match = re.search(r'\([^)]*,.*?\)', original_title)
+        if parentheses_match and parentheses_match.group(0) in final_topic_text:
+            # Complex parentheses content - preserve original structure
+            formatted_topic = final_topic_text
+            # Convert brackets to parentheses if present
+            formatted_topic = re.sub(r'\[([^\]]+)\]', r'(\1)', formatted_topic)
+            processing_notes.append(f"Preserved complex parentheses structure: '{formatted_topic}'")
+            return formatted_topic
+
         # Tokenize both texts for comparison
         topic_words = final_topic_text.split()
         original_words = original_title.split()
 
-        # Create a mapping of lowercase words to their original formatting
-        original_word_map = {}
-        for word in original_words:
-            # Extract core word without punctuation for matching
+        # Create position-aware mapping to handle duplicate words correctly
+        original_word_positions = []
+        for i, word in enumerate(original_words):
             clean_word = re.sub(r'[^\w\s]', '', word).lower()
             if clean_word:
-                original_word_map[clean_word] = word
+                original_word_positions.append((clean_word, word, i))
 
         formatted_words = []
+        used_positions = set()
+
         for word in topic_words:
             clean_word = re.sub(r'[^\w\s]', '', word).lower()
 
-            # Try to find original formatting
-            if clean_word in original_word_map:
-                original_formatted = original_word_map[clean_word]
-                # Handle parentheses/brackets - convert brackets to parentheses
-                if '[' in original_formatted and ']' in original_formatted:
-                    original_formatted = original_formatted.replace('[', '(').replace(']', ')')
-                formatted_words.append(original_formatted)
-                processing_notes.append(f"Preserved formatting: '{word}' → '{original_formatted}'")
-            else:
-                formatted_words.append(word)
+            # Find the next unused occurrence of this word
+            original_formatted = word  # default fallback
+            for clean, original, pos in original_word_positions:
+                if clean == clean_word and pos not in used_positions:
+                    original_formatted = original
+                    used_positions.add(pos)
+                    # Handle parentheses/brackets - convert brackets to parentheses
+                    if '[' in original_formatted and ']' in original_formatted:
+                        original_formatted = original_formatted.replace('[', '(').replace(']', ')')
+                    processing_notes.append(f"Preserved formatting: '{word}' → '{original_formatted}'")
+                    break
+
+            formatted_words.append(original_formatted)
 
         formatted_topic = ' '.join(formatted_words)
         processing_notes.append(f"Original formatting preserved: '{formatted_topic}'")
