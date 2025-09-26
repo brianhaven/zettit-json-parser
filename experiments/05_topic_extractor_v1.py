@@ -16,6 +16,10 @@ from dataclasses import dataclass
 from enum import Enum
 from datetime import datetime, timezone
 import pytz
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Dynamic import of organized output directory manager
 import importlib.util
@@ -37,7 +41,6 @@ class TopicExtractionFormat(Enum):
     STANDARD_MARKET = "standard_market"      # Standard "Topic Market" pattern
     MARKET_FOR = "market_for"                # "Market for Topic" pattern  
     MARKET_IN = "market_in"                  # "Topic Market in Region" pattern
-    TECHNICAL_COMPOUND = "technical_compound" # Complex technical specifications
     UNKNOWN = "unknown"
 
 @dataclass
@@ -50,7 +53,7 @@ class TopicExtractionResult:
     normalized_topic_name: Optional[str]
     format_type: TopicExtractionFormat
     confidence: float
-    technical_compounds_preserved: List[str]
+    patterns_applied: List[str]
     removed_patterns: Dict[str, Any]
     processing_notes: List[str]
     raw_remainder_before_processing: Optional[str] = None
@@ -63,7 +66,6 @@ class TopicExtractionStats:
     standard_market_count: int
     market_for_count: int
     market_in_count: int
-    technical_compound_count: int
     failed_extractions: int
     success_rate: float
 
@@ -92,37 +94,82 @@ class TopicExtractor:
             'standard_market': 0,
             'market_for': 0,
             'market_in': 0,
-            'technical_compound': 0,
             'failed_extractions': 0
         }
         
-        # Technical compound patterns to preserve
-        self._initialize_technical_patterns()
+        # Load patterns from database
+        self._load_database_patterns()
         
         logger.info("TopicExtractor initialized - ready for systematic removal processing")
     
-    def _initialize_technical_patterns(self) -> None:
-        """Initialize patterns for technical compound preservation."""
-        # Common technical compound indicators to preserve
-        self.technical_indicators = [
-            r'\b\d+[A-Za-z]+\b',  # "5G", "4K", "8-bit"
-            r'\b[A-Z]{2,4}\b',    # Acronyms like "AI", "IoT", "API", "HTML"
-            r'\b\w*-\w*\b',       # Hyphenated terms
-            r'\b\w+\d+\w*\b',     # Terms with embedded numbers
-            r'\bIoT\b',           # Specific case for IoT
-            r'\bAPI\b',           # Specific case for API
+    def _load_database_patterns(self) -> None:
+        """Load legitimate patterns from MongoDB pattern_libraries collection."""
+        # Initialize pattern storage
+        self.topic_artifact_patterns = []
+        self.date_artifact_patterns = []
+        self.systematic_removal_patterns = []
+        self.topic_name_creation_patterns = []
+        self.topic_normalization_patterns = []
+        self.format_conversion_patterns = []
+
+        if not self.pattern_library_manager:
+            logger.warning("No PatternLibraryManager provided - using fallback patterns")
+            self._initialize_fallback_patterns()
+            return
+
+        try:
+            # Query database directly for Script 05 patterns (bypasses PatternLibraryManager enum limitations)
+            db = self.pattern_library_manager.db
+            collection = db.pattern_libraries
+
+            # Map database pattern types to instance attributes
+            type_mapping = {
+                'topic_artifact_cleanup': 'topic_artifact_patterns',
+                'date_artifact_cleanup': 'date_artifact_patterns',
+                'systematic_removal': 'systematic_removal_patterns',
+                'topic_name_creation': 'topic_name_creation_patterns',
+                'topic_normalization': 'topic_normalization_patterns',
+                'format_conversion': 'format_conversion_patterns'
+            }
+
+            for pattern_type, attr_name in type_mapping.items():
+                # Query MongoDB directly for Script 05 patterns
+                cursor = collection.find({
+                    'type': pattern_type,
+                    'active': True
+                })
+
+                pattern_list = getattr(self, attr_name)
+
+                for pattern_doc in cursor:
+                    pattern_list.append({
+                        'pattern': pattern_doc['pattern'],
+                        'replacement': pattern_doc.get('replacement', ''),
+                        'description': pattern_doc.get('description', ''),
+                        'priority': pattern_doc.get('priority', 999)
+                    })
+
+                # Sort by priority
+                pattern_list.sort(key=lambda x: x['priority'])
+                logger.info(f"Loaded {len(pattern_list)} {pattern_type} patterns from database")
+
+            logger.info("Database patterns loaded successfully")
+        except Exception as e:
+            logger.error(f"Failed to load database patterns: {e}")
+            self._initialize_fallback_patterns()
+
+    def _initialize_fallback_patterns(self) -> None:
+        """Initialize minimal fallback patterns if database is unavailable."""
+        logger.warning("Using fallback patterns - database unavailable")
+
+        # Basic artifact cleanup patterns
+        self.topic_artifact_patterns = [
+            {'pattern': r'\s*,\s*$', 'replacement': '', 'description': 'Trailing commas', 'priority': 1},
+            {'pattern': r'\s*&\s*$', 'replacement': '', 'description': 'Trailing ampersands', 'priority': 2},
+            {'pattern': r'^\s*and\s+', 'replacement': '', 'description': 'Leading and', 'priority': 3},
+            {'pattern': r'^\s*the\s+', 'replacement': '', 'description': 'Leading the', 'priority': 4},
+            {'pattern': r'\s{2,}', 'replacement': ' ', 'description': 'Multiple spaces', 'priority': 5}
         ]
-        
-        # Common artifact patterns to clean
-        self.artifact_patterns = [
-            r'\s*,\s*$',          # Trailing commas
-            r'\s*&\s*$',          # Trailing ampersands
-            r'^\s*and\s+',        # Leading "and "
-            r'^\s*the\s+',        # Leading "the "
-            r'\s{2,}',            # Multiple spaces
-        ]
-        
-        logger.debug("Technical compound patterns initialized")
     
     def _get_timestamps(self) -> tuple:
         """Generate PDT and UTC timestamps."""
@@ -186,7 +233,7 @@ class TopicExtractor:
                 normalized_topic_name=topic_name,  # Human-readable version
                 format_type=TopicExtractionFormat.STANDARD_MARKET,
                 confidence=confidence,
-                technical_compounds_preserved=self._find_technical_compounds(topic_name or ""),
+                patterns_applied=[],  # Database patterns applied during processing
                 removed_patterns=extracted_elements,
                 processing_notes=processing_notes,
                 raw_remainder_before_processing=final_topic_text
@@ -239,12 +286,11 @@ class TopicExtractor:
             text_before_market, extracted_elements, processing_notes
         )
         
-        # Step 3: Preserve technical compounds and clean artifacts
-        final_topic = self.preserve_technical_compounds(topic_candidate)
-        final_topic = self._clean_artifacts(final_topic)
+        # Step 3: Clean artifacts using database patterns
+        final_topic = self._clean_artifacts(topic_candidate)
         
         # Step 4: Generate normalized topic name
-        normalized_name = self.normalize_topic(final_topic) if final_topic else None
+        normalized_name = self._create_normalized_topic(final_topic, processing_notes) if final_topic else None
         
         # Step 5: Calculate confidence
         confidence = self._calculate_confidence(final_topic, TopicExtractionFormat.STANDARD_MARKET)
@@ -259,7 +305,7 @@ class TopicExtractor:
             normalized_topic_name=normalized_name,
             format_type=TopicExtractionFormat.STANDARD_MARKET,
             confidence=confidence,
-            technical_compounds_preserved=self._find_technical_compounds(final_topic or ""),
+            patterns_applied=[],  # Database patterns applied during processing
             removed_patterns=extracted_elements,
             processing_notes=processing_notes,
             raw_remainder_before_processing=text_before_market
@@ -299,11 +345,11 @@ class TopicExtractor:
         final_topic = self._handle_market_for_concatenation(topic_candidate, processing_notes)
         
         # Step 4: Preserve technical compounds and clean artifacts
-        final_topic = self.preserve_technical_compounds(final_topic)
+        # Technical compound preservation removed - using database patterns instead
         final_topic = self._clean_artifacts(final_topic)
         
         # Step 5: Generate normalized topic name
-        normalized_name = self.normalize_topic(final_topic) if final_topic else None
+        normalized_name = self._create_normalized_topic(final_topic, processing_notes) if final_topic else None
         
         # Step 6: Calculate confidence
         confidence = self._calculate_confidence(final_topic, TopicExtractionFormat.MARKET_FOR)
@@ -318,7 +364,7 @@ class TopicExtractor:
             normalized_topic_name=normalized_name,
             format_type=TopicExtractionFormat.MARKET_FOR,
             confidence=confidence,
-            technical_compounds_preserved=self._find_technical_compounds(final_topic or ""),
+            patterns_applied=[],  # Database patterns applied during processing
             removed_patterns=extracted_elements,
             processing_notes=processing_notes,
             raw_remainder_before_processing=text_after_for
@@ -361,11 +407,11 @@ class TopicExtractor:
         final_topic = self._handle_market_in_context(topic_candidate, regions, processing_notes)
         
         # Step 4: Preserve technical compounds and clean artifacts
-        final_topic = self.preserve_technical_compounds(final_topic)
+        # Technical compound preservation removed - using database patterns instead
         final_topic = self._clean_artifacts(final_topic)
         
         # Step 5: Generate normalized topic name
-        normalized_name = self.normalize_topic(final_topic) if final_topic else None
+        normalized_name = self._create_normalized_topic(final_topic, processing_notes) if final_topic else None
         
         # Step 6: Calculate confidence
         confidence = self._calculate_confidence(final_topic, TopicExtractionFormat.MARKET_IN)
@@ -380,7 +426,7 @@ class TopicExtractor:
             normalized_topic_name=normalized_name,
             format_type=TopicExtractionFormat.MARKET_IN,
             confidence=confidence,
-            technical_compounds_preserved=self._find_technical_compounds(final_topic or ""),
+            patterns_applied=[],  # Database patterns applied during processing
             removed_patterns=extracted_elements,
             processing_notes=processing_notes,
             raw_remainder_before_processing=text_before_market_in
@@ -414,35 +460,22 @@ class TopicExtractor:
             report_type = extracted_elements['extracted_report_type']
             # Remove report type and common connectors
             remaining_text = re.sub(rf'\b{re.escape(report_type)}\b', '', remaining_text, flags=re.IGNORECASE)
-            remaining_text = re.sub(r'\s*&\s*share\b', '', remaining_text, flags=re.IGNORECASE)  # Common artifact
             processing_notes.append(f"Removed report type: '{report_type}'")
-        
+
         # Remove geographic regions
         if extracted_elements.get('extracted_regions'):
             regions = extracted_elements['extracted_regions']
             for region in regions:
                 remaining_text = re.sub(rf'\b{re.escape(region)}\b', '', remaining_text, flags=re.IGNORECASE)
-                remaining_text = re.sub(r'\s*&\s*', ' ', remaining_text)  # Clean up ampersands
                 processing_notes.append(f"Removed region: '{region}'")
-        
-        # Clean up extra whitespace and common connectors
-        remaining_text = re.sub(r'\s*&\s*', ' ', remaining_text)
-        remaining_text = re.sub(r'\s{2,}', ' ', remaining_text)
-        remaining_text = remaining_text.strip()
-        
+
         processing_notes.append(f"After systematic removal: '{remaining_text}'")
 
-        # Enhanced date artifact cleanup (Issue #23 fix)
-        # Clean up empty containers left by date removal
-        remaining_text = re.sub(r'\[\s*\]', '', remaining_text)  # Empty brackets
-        remaining_text = re.sub(r'\(\s*\)', '', remaining_text)  # Empty parentheses
+        # Apply systematic removal patterns from database
+        remaining_text = self._apply_systematic_patterns(remaining_text, processing_notes)
 
-        # Clean up orphaned date connectors
-        remaining_text = re.sub(r',\s*Forecast\s+to\s*$', '', remaining_text, flags=re.IGNORECASE)
-        remaining_text = re.sub(r'\s+(to|through|till|until)\s*$', '', remaining_text, flags=re.IGNORECASE)
-
-        # Re-clean spacing after additional removals
-        remaining_text = re.sub(r'\s{2,}', ' ', remaining_text).strip()
+        # Apply date artifact cleanup patterns from database
+        remaining_text = self._apply_date_artifact_patterns(remaining_text, processing_notes)
 
         if remaining_text != processing_notes[-1].split("'")[1]:  # If changed by artifact cleanup
             processing_notes.append(f"After artifact cleanup: '{remaining_text}'")
@@ -479,41 +512,6 @@ class TopicExtractor:
         
         return topic
     
-    def preserve_technical_compounds(self, topic: str) -> str:
-        """
-        Preserve technical compounds and specifications in topics.
-        
-        Args:
-            topic: Topic text to process
-            
-        Returns:
-            Topic with technical compounds preserved
-        """
-        if not topic:
-            return topic
-        
-        # Preserve existing formatting for technical terms
-        # This method ensures we don't accidentally break technical specifications
-        preserved_topic = topic
-        
-        # Log technical compounds found
-        technical_compounds = self._find_technical_compounds(topic)
-        if technical_compounds:
-            logger.debug(f"Preserved technical compounds: {technical_compounds}")
-        
-        return preserved_topic
-    
-    def _find_technical_compounds(self, text: str) -> List[str]:
-        """Find technical compounds in text using predefined patterns."""
-        if not text:
-            return []
-        
-        compounds = []
-        for pattern in self.technical_indicators:
-            matches = re.findall(pattern, text)
-            compounds.extend(matches)
-        
-        return list(set(compounds))  # Remove duplicates
     
     def _preserve_original_formatting(self, final_topic_text: str, original_title: str, processing_notes: List[str]) -> str:
         """
@@ -563,7 +561,7 @@ class TopicExtractor:
 
     def _create_topic_name(self, formatted_topic: str, processing_notes: List[str]) -> str:
         """
-        Create topicName with proper formatting and separator handling.
+        Create topicName with proper formatting using database patterns.
 
         Args:
             formatted_topic: Topic with original formatting preserved
@@ -575,18 +573,26 @@ class TopicExtractor:
         if not formatted_topic:
             return ""
 
-        # Convert ampersands to "and"
-        topic_name = re.sub(r'\s*&\s*', ' and ', formatted_topic)
+        topic_name = formatted_topic
 
-        # Clean up extra spaces
-        topic_name = re.sub(r'\s+', ' ', topic_name).strip()
+        # Apply topic name creation patterns from database
+        for pattern_info in self.topic_name_creation_patterns:
+            pattern = pattern_info['pattern']
+            replacement = pattern_info.get('replacement', '')
+
+            try:
+                topic_name = re.sub(pattern, replacement, topic_name)
+                processing_notes.append(f"Applied topic name pattern: {pattern_info['description']}")
+            except re.error as e:
+                logger.warning(f"Invalid regex pattern in topic name creation: {pattern} - {e}")
+                continue
 
         processing_notes.append(f"TopicName created: '{topic_name}'")
         return topic_name
 
     def _create_normalized_topic(self, topic_name: str, processing_notes: List[str]) -> str:
         """
-        Create normalized machine-readable topic from topicName.
+        Create normalized machine-readable topic from topicName using database patterns.
 
         Args:
             topic_name: Human-readable topic name
@@ -598,26 +604,20 @@ class TopicExtractor:
         if not topic_name:
             return ""
 
-        # Convert to lowercase
+        # Start with lowercase version
         normalized = topic_name.lower()
 
-        # Remove parentheses and their contents
-        normalized = re.sub(r'\([^)]*\)', '', normalized)
+        # Apply topic normalization patterns from database
+        for pattern_info in self.topic_normalization_patterns:
+            pattern = pattern_info['pattern']
+            replacement = pattern_info.get('replacement', '')
 
-        # Remove apostrophes and trailing letters (typically 's')
-        normalized = re.sub(r"'s?\b", '', normalized)
-
-        # Remove commas and other punctuation except dashes and spaces
-        normalized = re.sub(r'[,;.!?]', '', normalized)
-
-        # Convert separating punctuation to dashes
-        normalized = re.sub(r'[/\\|]', '-', normalized)
-
-        # Convert spaces to dashes
-        normalized = re.sub(r'\s+', '-', normalized)
-
-        # Clean up multiple dashes
-        normalized = re.sub(r'-+', '-', normalized)
+            try:
+                normalized = re.sub(pattern, replacement, normalized)
+                processing_notes.append(f"Applied normalization pattern: {pattern_info['description']}")
+            except re.error as e:
+                logger.warning(f"Invalid regex pattern in topic normalization: {pattern} - {e}")
+                continue
 
         # Remove leading/trailing dashes
         normalized = normalized.strip('-')
@@ -625,37 +625,50 @@ class TopicExtractor:
         processing_notes.append(f"Normalized topic created: '{normalized}'")
         return normalized
 
-    def normalize_topic(self, topic: str) -> Optional[str]:
-        """
-        Create standardized topic name for system use.
-
-        Args:
-            topic: Original topic text
-
-        Returns:
-            Normalized topic name (lowercase, hyphenated)
-        """
-        if not topic:
-            return None
-
-        # Convert to lowercase and replace spaces/special chars with hyphens
-        normalized = topic.lower()
-        normalized = re.sub(r'[^\w\s-]', '', normalized)  # Remove special chars except hyphens
-        normalized = re.sub(r'[\s_]+', '-', normalized)   # Replace spaces/underscores with hyphens
-        normalized = re.sub(r'-+', '-', normalized)       # Collapse multiple hyphens
-        normalized = normalized.strip('-')                # Remove leading/trailing hyphens
-
-        return normalized if normalized else None
     
-    def _clean_artifacts(self, text: str) -> str:
-        """Clean common artifacts from extracted topics."""
+    def _apply_systematic_patterns(self, text: str, processing_notes: List[str]) -> str:
+        """Apply systematic removal patterns from database."""
         if not text:
             return text
-        
+
         cleaned = text
-        for pattern in self.artifact_patterns:
-            cleaned = re.sub(pattern, '', cleaned)
-        
+        for pattern_info in self.systematic_removal_patterns:
+            pattern = pattern_info['pattern']
+            replacement = pattern_info.get('replacement', '')
+            before = cleaned
+            cleaned = re.sub(pattern, replacement, cleaned, flags=re.IGNORECASE)
+            if cleaned != before:
+                processing_notes.append(f"Applied systematic pattern '{pattern_info.get('description', pattern)}': '{cleaned}'")
+
+        return cleaned.strip()
+
+    def _apply_date_artifact_patterns(self, text: str, processing_notes: List[str]) -> str:
+        """Apply date artifact cleanup patterns from database."""
+        if not text:
+            return text
+
+        cleaned = text
+        for pattern_info in self.date_artifact_patterns:
+            pattern = pattern_info['pattern']
+            replacement = pattern_info.get('replacement', '')
+            before = cleaned
+            cleaned = re.sub(pattern, replacement, cleaned, flags=re.IGNORECASE)
+            if cleaned != before:
+                processing_notes.append(f"Applied date artifact pattern '{pattern_info.get('description', pattern)}': '{cleaned}'")
+
+        return cleaned.strip()
+
+    def _clean_artifacts(self, text: str) -> str:
+        """Clean common artifacts from extracted topics using database patterns."""
+        if not text:
+            return text
+
+        cleaned = text
+        for pattern_info in self.topic_artifact_patterns:
+            pattern = pattern_info['pattern']
+            replacement = pattern_info.get('replacement', '')
+            cleaned = re.sub(pattern, replacement, cleaned)
+
         return cleaned.strip()
     
     def _calculate_confidence(self, topic: str, format_type: TopicExtractionFormat) -> float:
@@ -678,9 +691,10 @@ class TopicExtractor:
         if len(topic.split()) >= 2:
             confidence += 0.2
         
-        # Higher confidence for technical compounds
-        if self._find_technical_compounds(topic):
-            confidence += 0.15
+        # Confidence boost for well-formed topics with database patterns
+        patterns_found = sum(1 for p in self.topic_artifact_patterns if re.search(p['pattern'], topic, re.IGNORECASE))
+        if patterns_found > 0:
+            confidence += 0.1
         
         # Format-specific adjustments
         if format_type == TopicExtractionFormat.STANDARD_MARKET:
