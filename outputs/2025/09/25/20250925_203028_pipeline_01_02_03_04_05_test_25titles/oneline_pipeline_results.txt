@@ -1,0 +1,81 @@
+Complete Pipeline Results: 01→02→03→04→05 (DATABASE-FIRST)
+Analysis Date (PDT): 2025-09-25 20:30:26 PDT
+====================================================================================================
+
+Format: ORIGINAL → [MARKET] [DATE] [REPORT] [REGIONS] → PIPELINE_FORWARD → TOPIC → TOPIC_NAME
+
+ 1. Ethyl Lactate Market
+    → [STA] [None] [Market...] [None] → Ethyl Lactate → ethyl-lactate → Ethyl Lactate
+
+ 2. Specialty Lubricants Market
+    → [STA] [None] [Market...] [None] → Specialty Lubricants → specialty-lubricants → Specialty Lubricants
+
+ 3. Mobile Energy Storage Systems Market
+    → [STA] [None] [Market...] [None] → Mobile Energy Storage Systems → mobile-energy-storage-systems → Mobile Energy Storage Systems
+
+ 4. Sodium-air Battery Market
+    → [STA] [None] [Market...] [None] → Sodium-air Battery → sodium-air-battery → Sodium-air Battery
+
+ 5. UV Light Stabilizer Market
+    → [STA] [None] [Market...] [None] → UV Light Stabilizer → uv-light-stabilizer → UV Light Stabilizer
+
+ 6. Medical Case Management Market
+    → [STA] [None] [Market...] [None] → Medical Case Management → medical-case-management → Medical Case Management
+
+ 7. Healthcare Biometrics Market Size & Share Report, 2030
+    → [STA] [2030] [Market Size Share Re...] [None] → Healthcare Biometrics → healthcare-biometrics → Healthcare Biometrics
+
+ 8. Electrodes for Medical Devices Market Trends, 2013-2019
+    → [STA] [2013-2019] [Market Trends...] [None] → Electrodes for Medical Devices → electrodes-for-medical-devices → Electrodes for Medical Devices
+
+ 9. Infrared Sensors Market
+    → [STA] [None] [Market...] [None] → Infrared Sensors → infrared-sensors → Infrared Sensors
+
+10. Flexible, Printed And Thin Film Battery Market Report, 2030
+    → [STA] [2030] [Market Report...] [None] → Flexible, Printed And Thin Film Battery → flexible-printed-and-thin-film-battery → Flexible, Printed And Thin Film Battery
+
+11. Small Bone and Joint Orthopedic Devices Market
+    → [STA] [None] [Market...] [None] → Small Bone and Joint Orthopedic Devices → small-bone-and-joint-orthopedic-devices → Small Bone and Joint Orthopedic Devices
+
+12. Vision Positioning System Market Size, Industry Report, 2030
+    → [STA] [2030] [Market Size Industry...] [None] → Vision Positioning System → vision-positioning-system → Vision Positioning System
+
+13. Automotive Embedded Systems Market
+    → [STA] [None] [Market...] [None] → Automotive Embedded Systems → automotive-embedded-systems → Automotive Embedded Systems
+
+14. Green Hydrogen Market Size, Share & Growth Report, 2030
+    → [STA] [2030] [Market Size Share Gr...] [None] → Green Hydrogen → green-hydrogen → Green Hydrogen
+
+15. Automotive Vehicle-to-Everything Market Size Report, 2030
+    → [STA] [2030] [Market Size Report...] [None] → Automotive Vehicle-to-Everything → automotive-vehicle-to-everything → Automotive Vehicle-to-Everything
+
+16. Humidity Sensor Market Size, Share & Growth Report, 2030
+    → [STA] [2030] [Market Size Share Gr...] [None] → Humidity Sensor → humidity-sensor → Humidity Sensor
+
+17. Gyrocopter Market
+    → [STA] [None] [Market...] [None] → Gyrocopter → gyrocopter → Gyrocopter
+
+18. Asia Pacific Group Health Insurance Market Size Report, 2030
+    → [STA] [2030] [Market Size Report...] [Asia Pacific] → Group Health Insurance → group-health-insurance → Group Health Insurance
+
+19. Fondaparinux Market Size & Share, Industry Report, 2030
+    → [STA] [2030] [Market Size Share In...] [None] → Fondaparinux → fondaparinux → Fondaparinux
+
+20. Real World Evidence Solutions Market Size Report, 2030
+    → [STA] [2030] [Market Size Report...] [None] → Real World Evidence Solutions → real-world-evidence-solutions → Real World Evidence Solutions
+
+21. MEA Technical And Vocational Education Market, Industry Report 2030
+    → [STA] [2030] [Market Industry Repo...] [MEA] → Technical Vocational Education → technical-vocational-education → Technical Vocational Education
+
+22. Absorbent Pads Market
+    → [STA] [None] [Market...] [None] → Absorbent Pads → absorbent-pads → Absorbent Pads
+
+23. Flame Detector Market Size & Share Analysis Report, 2030
+    → [STA] [2030] [Market Size Share An...] [None] → Flame Detector → flame-detector → Flame Detector
+
+24. Physician Dispensed Cosmeceuticals Market
+    → [STA] [None] [Market...] [None] → Physician Dispensed Cosmeceuticals → physician-dispensed-cosmeceuticals → Physician Dispensed Cosmeceuticals
+
+25. Micro Electric Vehicle Market Size, Industry Report, 2030
+    → [STA] [2030] [Market Size Industry...] [None] → Micro Electric Vehicle → micro-electric-vehicle → Micro Electric Vehicle
+

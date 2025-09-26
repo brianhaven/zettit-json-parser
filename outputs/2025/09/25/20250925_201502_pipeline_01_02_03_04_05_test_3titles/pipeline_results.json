@@ -1,0 +1,16 @@
+{
+  "timestamp_pst": "2025-09-25 20:15:02 PDT",
+  "timestamp_utc": "2025-09-26 03:15:02 UTC",
+  "test_config": {
+    "approach": "database_first_full_pipeline",
+    "pipeline_stages": [
+      "01_market_classification",
+      "02_date_extraction",
+      "03_report_type",
+      "04_geographic_lean",
+      "05_topic_extraction"
+    ],
+    "test_cases": 3
+  },
+  "results": []
+}

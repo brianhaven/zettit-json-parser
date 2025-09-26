@@ -1,0 +1,596 @@
+{
+  "timestamp_pst": "2025-09-25 20:30:26 PDT",
+  "timestamp_utc": "2025-09-26 03:30:26 UTC",
+  "test_config": {
+    "approach": "database_first_full_pipeline",
+    "pipeline_stages": [
+      "01_market_classification",
+      "02_date_extraction",
+      "03_report_type",
+      "04_geographic_lean",
+      "05_topic_extraction"
+    ],
+    "test_cases": 25
+  },
+  "results": [
+    {
+      "test_case": 1,
+      "original_title": "Ethyl Lactate Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Ethyl Lactate",
+      "topic": "ethyl-lactate",
+      "topicName": "Ethyl Lactate",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Ethyl' \u2192 'Ethyl', Preserved formatting: 'Lactate' \u2192 'Lactate', Original formatting preserved: 'Ethyl Lactate', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Ethyl Lactate', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'ethyl-lactate'"
+      }
+    },
+    {
+      "test_case": 2,
+      "original_title": "Specialty Lubricants Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Specialty Lubricants",
+      "topic": "specialty-lubricants",
+      "topicName": "Specialty Lubricants",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Specialty' \u2192 'Specialty', Preserved formatting: 'Lubricants' \u2192 'Lubricants', Original formatting preserved: 'Specialty Lubricants', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Specialty Lubricants', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'specialty-lubricants'"
+      }
+    },
+    {
+      "test_case": 3,
+      "original_title": "Mobile Energy Storage Systems Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Mobile Energy Storage Systems",
+      "topic": "mobile-energy-storage-systems",
+      "topicName": "Mobile Energy Storage Systems",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Mobile' \u2192 'Mobile', Preserved formatting: 'Energy' \u2192 'Energy', Preserved formatting: 'Storage' \u2192 'Storage', Preserved formatting: 'Systems' \u2192 'Systems', Original formatting preserved: 'Mobile Energy Storage Systems', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Mobile Energy Storage Systems', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'mobile-energy-storage-systems'"
+      }
+    },
+    {
+      "test_case": 4,
+      "original_title": "Sodium-air Battery Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Sodium-air Battery",
+      "topic": "sodium-air-battery",
+      "topicName": "Sodium-air Battery",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Sodium-air' \u2192 'Sodium-air', Preserved formatting: 'Battery' \u2192 'Battery', Original formatting preserved: 'Sodium-air Battery', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Sodium-air Battery', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'sodium-air-battery'"
+      }
+    },
+    {
+      "test_case": 5,
+      "original_title": "UV Light Stabilizer Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "UV Light Stabilizer",
+      "topic": "uv-light-stabilizer",
+      "topicName": "UV Light Stabilizer",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'UV' \u2192 'UV', Preserved formatting: 'Light' \u2192 'Light', Preserved formatting: 'Stabilizer' \u2192 'Stabilizer', Original formatting preserved: 'UV Light Stabilizer', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'UV Light Stabilizer', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'uv-light-stabilizer'"
+      }
+    },
+    {
+      "test_case": 6,
+      "original_title": "Medical Case Management Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Medical Case Management",
+      "topic": "medical-case-management",
+      "topicName": "Medical Case Management",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Medical' \u2192 'Medical', Preserved formatting: 'Case' \u2192 'Case', Preserved formatting: 'Management' \u2192 'Management', Original formatting preserved: 'Medical Case Management', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Medical Case Management', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'medical-case-management'"
+      }
+    },
+    {
+      "test_case": 7,
+      "original_title": "Healthcare Biometrics Market Size & Share Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Healthcare Biometrics",
+      "topic": "healthcare-biometrics",
+      "topicName": "Healthcare Biometrics",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Healthcare' \u2192 'Healthcare', Preserved formatting: 'Biometrics' \u2192 'Biometrics', Original formatting preserved: 'Healthcare Biometrics', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Healthcare Biometrics', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'healthcare-biometrics'"
+      }
+    },
+    {
+      "test_case": 8,
+      "original_title": "Electrodes for Medical Devices Market Trends, 2013-2019",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2013-2019",
+      "extracted_report_type": "Market Trends",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Electrodes for Medical Devices",
+      "topic": "electrodes-for-medical-devices",
+      "topicName": "Electrodes for Medical Devices",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.98,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Electrodes' \u2192 'Electrodes', Preserved formatting: 'for' \u2192 'for', Preserved formatting: 'Medical' \u2192 'Medical', Preserved formatting: 'Devices' \u2192 'Devices', Original formatting preserved: 'Electrodes for Medical Devices', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Electrodes for Medical Devices', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'electrodes-for-medical-devices'"
+      }
+    },
+    {
+      "test_case": 9,
+      "original_title": "Infrared Sensors Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Infrared Sensors",
+      "topic": "infrared-sensors",
+      "topicName": "Infrared Sensors",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Infrared' \u2192 'Infrared', Preserved formatting: 'Sensors' \u2192 'Sensors', Original formatting preserved: 'Infrared Sensors', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Infrared Sensors', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'infrared-sensors'"
+      }
+    },
+    {
+      "test_case": 10,
+      "original_title": "Flexible, Printed And Thin Film Battery Market Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Flexible, Printed And Thin Film Battery",
+      "topic": "flexible-printed-and-thin-film-battery",
+      "topicName": "Flexible, Printed And Thin Film Battery",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.7000000000000001,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Flexible,' \u2192 'Flexible,', Preserved formatting: 'Printed' \u2192 'Printed', Preserved formatting: 'And' \u2192 'And', Preserved formatting: 'Thin' \u2192 'Thin', Preserved formatting: 'Film' \u2192 'Film', Preserved formatting: 'Battery' \u2192 'Battery', Original formatting preserved: 'Flexible, Printed And Thin Film Battery', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Flexible, Printed And Thin Film Battery', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'flexible-printed-and-thin-film-battery'"
+      }
+    },
+    {
+      "test_case": 11,
+      "original_title": "Small Bone and Joint Orthopedic Devices Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Small Bone and Joint Orthopedic Devices",
+      "topic": "small-bone-and-joint-orthopedic-devices",
+      "topicName": "Small Bone and Joint Orthopedic Devices",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Small' \u2192 'Small', Preserved formatting: 'Bone' \u2192 'Bone', Preserved formatting: 'and' \u2192 'and', Preserved formatting: 'Joint' \u2192 'Joint', Preserved formatting: 'Orthopedic' \u2192 'Orthopedic', Preserved formatting: 'Devices' \u2192 'Devices', Original formatting preserved: 'Small Bone and Joint Orthopedic Devices', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Small Bone and Joint Orthopedic Devices', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'small-bone-and-joint-orthopedic-devices'"
+      }
+    },
+    {
+      "test_case": 12,
+      "original_title": "Vision Positioning System Market Size, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Vision Positioning System",
+      "topic": "vision-positioning-system",
+      "topicName": "Vision Positioning System",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Vision' \u2192 'Vision', Preserved formatting: 'Positioning' \u2192 'Positioning', Preserved formatting: 'System' \u2192 'System', Original formatting preserved: 'Vision Positioning System', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Vision Positioning System', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'vision-positioning-system'"
+      }
+    },
+    {
+      "test_case": 13,
+      "original_title": "Automotive Embedded Systems Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Automotive Embedded Systems",
+      "topic": "automotive-embedded-systems",
+      "topicName": "Automotive Embedded Systems",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Automotive' \u2192 'Automotive', Preserved formatting: 'Embedded' \u2192 'Embedded', Preserved formatting: 'Systems' \u2192 'Systems', Original formatting preserved: 'Automotive Embedded Systems', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Automotive Embedded Systems', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'automotive-embedded-systems'"
+      }
+    },
+    {
+      "test_case": 14,
+      "original_title": "Green Hydrogen Market Size, Share & Growth Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Growth Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Green Hydrogen",
+      "topic": "green-hydrogen",
+      "topicName": "Green Hydrogen",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Green' \u2192 'Green', Preserved formatting: 'Hydrogen' \u2192 'Hydrogen', Original formatting preserved: 'Green Hydrogen', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Green Hydrogen', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'green-hydrogen'"
+      }
+    },
+    {
+      "test_case": 15,
+      "original_title": "Automotive Vehicle-to-Everything Market Size Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Automotive Vehicle-to-Everything",
+      "topic": "automotive-vehicle-to-everything",
+      "topicName": "Automotive Vehicle-to-Everything",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Automotive' \u2192 'Automotive', Preserved formatting: 'Vehicle-to-Everything' \u2192 'Vehicle-to-Everything', Original formatting preserved: 'Automotive Vehicle-to-Everything', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Automotive Vehicle-to-Everything', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'automotive-vehicle-to-everything'"
+      }
+    },
+    {
+      "test_case": 16,
+      "original_title": "Humidity Sensor Market Size, Share & Growth Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Growth Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Humidity Sensor",
+      "topic": "humidity-sensor",
+      "topicName": "Humidity Sensor",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Humidity' \u2192 'Humidity', Preserved formatting: 'Sensor' \u2192 'Sensor', Original formatting preserved: 'Humidity Sensor', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Humidity Sensor', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'humidity-sensor'"
+      }
+    },
+    {
+      "test_case": 17,
+      "original_title": "Gyrocopter Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Gyrocopter",
+      "topic": "gyrocopter",
+      "topicName": "Gyrocopter",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.6
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Gyrocopter' \u2192 'Gyrocopter', Original formatting preserved: 'Gyrocopter', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Gyrocopter', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'gyrocopter'"
+      }
+    },
+    {
+      "test_case": 18,
+      "original_title": "Asia Pacific Group Health Insurance Market Size Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [
+        "Asia Pacific"
+      ],
+      "pipeline_forward_text": "Group Health Insurance",
+      "topic": "group-health-insurance",
+      "topicName": "Group Health Insurance",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8500000000000001,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'Asia Pacific': 1 matches",
+        "topic_notes": "Preserved formatting: 'Group' \u2192 'Group', Preserved formatting: 'Health' \u2192 'Health', Preserved formatting: 'Insurance' \u2192 'Insurance', Original formatting preserved: 'Group Health Insurance', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Group Health Insurance', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'group-health-insurance'"
+      }
+    },
+    {
+      "test_case": 19,
+      "original_title": "Fondaparinux Market Size & Share, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Industry Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Fondaparinux",
+      "topic": "fondaparinux",
+      "topicName": "Fondaparinux",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.6
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Fondaparinux' \u2192 'Fondaparinux', Original formatting preserved: 'Fondaparinux', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Fondaparinux', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'fondaparinux'"
+      }
+    },
+    {
+      "test_case": 20,
+      "original_title": "Real World Evidence Solutions Market Size Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Real World Evidence Solutions",
+      "topic": "real-world-evidence-solutions",
+      "topicName": "Real World Evidence Solutions",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Real' \u2192 'Real', Preserved formatting: 'World' \u2192 'World', Preserved formatting: 'Evidence' \u2192 'Evidence', Preserved formatting: 'Solutions' \u2192 'Solutions', Original formatting preserved: 'Real World Evidence Solutions', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Real World Evidence Solutions', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'real-world-evidence-solutions'"
+      }
+    },
+    {
+      "test_case": 21,
+      "original_title": "MEA Technical And Vocational Education Market, Industry Report 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Industry Report",
+      "extracted_regions": [
+        "MEA"
+      ],
+      "pipeline_forward_text": "Technical Vocational Education",
+      "topic": "technical-vocational-education",
+      "topicName": "Technical Vocational Education",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.6,
+        "report_type": 0.8,
+        "geographic_extraction": 0.8500000000000001,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "Pattern 'MEA': 1 matches",
+        "topic_notes": "Preserved formatting: 'Technical' \u2192 'Technical', Preserved formatting: 'Vocational' \u2192 'Vocational', Preserved formatting: 'Education' \u2192 'Education', Original formatting preserved: 'Technical Vocational Education', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Technical Vocational Education', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'technical-vocational-education'"
+      }
+    },
+    {
+      "test_case": 22,
+      "original_title": "Absorbent Pads Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Absorbent Pads",
+      "topic": "absorbent-pads",
+      "topicName": "Absorbent Pads",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Absorbent' \u2192 'Absorbent', Preserved formatting: 'Pads' \u2192 'Pads', Original formatting preserved: 'Absorbent Pads', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Absorbent Pads', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'absorbent-pads'"
+      }
+    },
+    {
+      "test_case": 23,
+      "original_title": "Flame Detector Market Size & Share Analysis Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Share Analysis Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Flame Detector",
+      "topic": "flame-detector",
+      "topicName": "Flame Detector",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 1.0,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Flame' \u2192 'Flame', Preserved formatting: 'Detector' \u2192 'Detector', Original formatting preserved: 'Flame Detector', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Flame Detector', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'flame-detector'"
+      }
+    },
+    {
+      "test_case": 24,
+      "original_title": "Physician Dispensed Cosmeceuticals Market",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "",
+      "extracted_report_type": "Market",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Physician Dispensed Cosmeceuticals",
+      "topic": "physician-dispensed-cosmeceuticals",
+      "topicName": "Physician Dispensed Cosmeceuticals",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 1.0,
+        "report_type": 0.6,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Physician' \u2192 'Physician', Preserved formatting: 'Dispensed' \u2192 'Dispensed', Preserved formatting: 'Cosmeceuticals' \u2192 'Cosmeceuticals', Original formatting preserved: 'Physician Dispensed Cosmeceuticals', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Physician Dispensed Cosmeceuticals', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'physician-dispensed-cosmeceuticals'"
+      }
+    },
+    {
+      "test_case": 25,
+      "original_title": "Micro Electric Vehicle Market Size, Industry Report, 2030",
+      "market_term_type": "standard",
+      "extracted_forecast_date_range": "2030",
+      "extracted_report_type": "Market Size Industry Report",
+      "extracted_regions": [],
+      "pipeline_forward_text": "Micro Electric Vehicle",
+      "topic": "micro-electric-vehicle",
+      "topicName": "Micro Electric Vehicle",
+      "confidence_scores": {
+        "market_classification": 0.9,
+        "date_extraction": 0.95,
+        "report_type": 0.9,
+        "geographic_extraction": 0.8,
+        "topic_extraction": 0.8
+      },
+      "processing_notes": {
+        "market_workflow": "Standard processing - systematic pattern removal approach",
+        "geographic_notes": "",
+        "topic_notes": "Preserved formatting: 'Micro' \u2192 'Micro', Preserved formatting: 'Electric' \u2192 'Electric', Preserved formatting: 'Vehicle' \u2192 'Vehicle', Original formatting preserved: 'Micro Electric Vehicle', Applied topic name pattern: Ampersand to 'and' conversion for topic names, Applied topic name pattern: Multiple spaces to single space cleanup, TopicName created: 'Micro Electric Vehicle', Applied normalization pattern: Remove parentheses and their contents for normalized topics, Applied normalization pattern: Remove apostrophes and possessive endings, Applied normalization pattern: Remove common punctuation marks, Applied normalization pattern: Convert separators to dashes, Applied normalization pattern: Convert spaces to dashes, Applied normalization pattern: Collapse multiple dashes to single dash, Normalized topic created: 'micro-electric-vehicle'"
+      }
+    }
+  ]
+}
