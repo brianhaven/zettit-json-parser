@@ -194,7 +194,14 @@ def test_full_pipeline(test_quantity: int = 9):
                 logger.info("Stage 4 - No geographic regions found")
 
             # Stage 5: Topic Extraction (DATABASE-FIRST)
-            topic_result = topic_extractor.extract_topics(current_title)
+            # Script 05 needs final_topic_text and extracted_elements
+            extracted_elements = {
+                'market_term_type': market_result.market_type,
+                'extracted_forecast_date_range': date_result.extracted_date_range or '',
+                'extracted_report_type': report_result.extracted_report_type or '',
+                'extracted_regions': geo_result.extracted_regions if geo_result else []
+            }
+            topic_result = topic_extractor.extract(original_title, current_title, extracted_elements)
             if topic_result.topic:
                 logger.info(f"Stage 5 - Topic: {topic_result.topic}")
                 logger.info(f"Stage 5 - TopicName: {topic_result.topicName}")
