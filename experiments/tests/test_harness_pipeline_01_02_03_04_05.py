@@ -208,9 +208,12 @@ def test_full_pipeline(test_quantity: int = 9):
             else:
                 logger.info("Stage 5 - No topic processing applied")
 
-            # Final topic is from Script 05 processing
-            final_topic = topic_result.extracted_topic or current_title.strip()
-            final_topic_name = topic_result.normalized_topic_name or ''
+            # Capture pipeline forward text (what Script 04 passed to Script 05)
+            pipeline_forward_text = current_title.strip()
+
+            # Script 05 extracted values
+            extracted_topic = topic_result.extracted_topic or ''
+            extracted_topic_name = topic_result.normalized_topic_name or ''
 
             # Compile complete result with Script 05 data
             result = {
@@ -220,8 +223,9 @@ def test_full_pipeline(test_quantity: int = 9):
                 'extracted_forecast_date_range': date_result.extracted_date_range or '',
                 'extracted_report_type': report_result.extracted_report_type or '',
                 'extracted_regions': geo_result.extracted_regions if geo_result else [],
-                'topic': final_topic,
-                'topicName': final_topic_name,
+                'pipeline_forward_text': pipeline_forward_text,  # What Script 04 passed to Script 05
+                'topic': extracted_topic,  # What Script 05 extracted as topic
+                'topicName': extracted_topic_name,  # What Script 05 normalized as topic name
                 'confidence_scores': {
                     'market_classification': market_result.confidence,
                     'date_extraction': date_result.confidence,
@@ -265,18 +269,19 @@ def test_full_pipeline(test_quantity: int = 9):
         f.write("Complete Pipeline Results: 01→02→03→04→05 (DATABASE-FIRST)\n")
         f.write(f"Analysis Date (PDT): {timestamp['pst']}\n")
         f.write("=" * 100 + "\n\n")
-        f.write("Format: ORIGINAL → [MARKET] [DATE] [REPORT] [REGIONS] → TOPIC → TOPIC_NAME\n\n")
+        f.write("Format: ORIGINAL → [MARKET] [DATE] [REPORT] [REGIONS] → PIPELINE_FORWARD → TOPIC → TOPIC_NAME\n\n")
 
         for result in results:
             market_type = result['market_term_type'][:3].upper()  # STD, MAR
             date_str = result['extracted_forecast_date_range'] or 'None'
             report_str = result['extracted_report_type'] or 'None'
             regions_str = ', '.join(result['extracted_regions']) if result['extracted_regions'] else 'None'
+            pipeline_forward = result['pipeline_forward_text'] or 'None'
             topic = result['topic'] or 'None'
             topic_name = result['topicName'] or 'None'
 
             f.write(f"{result['test_case']:2d}. {result['original_title']}\n")
-            f.write(f"    → [{market_type}] [{date_str}] [{report_str[:20]}...] [{regions_str}] → {topic} → {topic_name}\n\n")
+            f.write(f"    → [{market_type}] [{date_str}] [{report_str[:20]}...] [{regions_str}] → {pipeline_forward} → {topic} → {topic_name}\n\n")
 
     # Generate detailed successful extractions with Script 05 data
     successful_file = os.path.join(output_dir, "successful_pipeline_extractions.txt")
@@ -295,8 +300,9 @@ def test_full_pipeline(test_quantity: int = 9):
             f.write(f"Date Range: {result['extracted_forecast_date_range'] or 'None'}\n")
             f.write(f"Report Type: {result['extracted_report_type'] or 'None'}\n")
             f.write(f"Geographic Regions: {', '.join(result['extracted_regions']) if result['extracted_regions'] else 'None'}\n")
-            f.write(f"Final Topic: {result['topic']}\n")
-            f.write(f"Topic Name: {result['topicName'] or 'None'}\n")
+            f.write(f"Pipeline Forward Text: {result['pipeline_forward_text']}\n")
+            f.write(f"Final Topic (Script 05): {result['topic'] or 'None'}\n")
+            f.write(f"Topic Name (Script 05): {result['topicName'] or 'None'}\n")
             f.write(f"Confidence Scores:\n")
             f.write(f"  - Geographic: {result['confidence_scores']['geographic_extraction']:.3f}\n")
             f.write(f"  - Topic: {result['confidence_scores']['topic_extraction']:.3f}\n")
@@ -372,10 +378,21 @@ def test_full_pipeline(test_quantity: int = 9):
         for region in all_regions:
             f.write(f"{region}\n")
 
-    # 5) Final topics file (Script 05 processed topics)
-    topics_file = os.path.join(output_dir, "final_topics.txt")
+    # 5) Final topics file (Pipeline Forward Text from Script 04 to Script 05)
+    final_topics_file = os.path.join(output_dir, "final_topics.txt")
+    with open(final_topics_file, 'w') as f:
+        f.write("Final Topics (Pipeline Forward Text from Script 04)\n")
+        f.write(f"Analysis Date (PDT): {timestamp['pst']}\n")
+        f.write("=" * 50 + "\n\n")
+
+        for result in results:
+            if result['pipeline_forward_text']:
+                f.write(f"{result['pipeline_forward_text']}\n")
+
+    # 6) NEW: Topics file (Script 05 extracted topics)
+    topics_file = os.path.join(output_dir, "topics.txt")
     with open(topics_file, 'w') as f:
-        f.write("Final Topics (Script 05 Processed)\n")
+        f.write("Topics (Script 05 Extracted)\n")
         f.write(f"Analysis Date (PDT): {timestamp['pst']}\n")
         f.write("=" * 50 + "\n\n")
 
@@ -383,7 +400,7 @@ def test_full_pipeline(test_quantity: int = 9):
             if result['topic']:
                 f.write(f"{result['topic']}\n")
 
-    # 6) NEW: Topic Names file (Script 05 normalized topics)
+    # 7) Topic Names file (Script 05 normalized topics)
     topic_names_file = os.path.join(output_dir, "topic_names.txt")
     with open(topic_names_file, 'w') as f:
         f.write("Topic Names (Script 05 Normalized)\n")
@@ -401,15 +418,16 @@ def test_full_pipeline(test_quantity: int = 9):
         f.write(f"**Analysis Date (PDT):** {timestamp['pst']}  \n")
         f.write(f"**Analysis Date (UTC):** {timestamp['utc']}\n\n")
         f.write("## Topic Processing Results\n\n")
-        f.write("| Original Title | Final Topic | Topic Name | Confidence |\n")
-        f.write("|---|---|---|---|\n")
+        f.write("| Original Title | Pipeline Forward | Script 05 Topic | Topic Name | Confidence |\n")
+        f.write("|---|---|---|---|---|\n")
 
         for result in results:
-            original = result['original_title'][:50] + ('...' if len(result['original_title']) > 50 else '')
+            original = result['original_title'][:40] + ('...' if len(result['original_title']) > 40 else '')
+            pipeline_forward = result['pipeline_forward_text'][:30] + ('...' if len(result['pipeline_forward_text']) > 30 else '')
             topic = result['topic'] or 'None'
             topic_name = result['topicName'] or 'None'
             confidence = f"{result['confidence_scores']['topic_extraction']:.3f}"
-            f.write(f"| {original} | {topic} | {topic_name} | {confidence} |\n")
+            f.write(f"| {original} | {pipeline_forward} | {topic} | {topic_name} | {confidence} |\n")
 
     # Generate summary report with Script 05 integration
     summary_file = os.path.join(output_dir, "summary_report.md")
