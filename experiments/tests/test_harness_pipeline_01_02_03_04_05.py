@@ -202,15 +202,15 @@ def test_full_pipeline(test_quantity: int = 9):
                 'extracted_regions': geo_result.extracted_regions if geo_result else []
             }
             topic_result = topic_extractor.extract(original_title, current_title, extracted_elements)
-            if topic_result.topic:
-                logger.info(f"Stage 5 - Topic: {topic_result.topic}")
-                logger.info(f"Stage 5 - TopicName: {topic_result.topicName}")
+            if topic_result.extracted_topic:
+                logger.info(f"Stage 5 - Topic: {topic_result.extracted_topic}")
+                logger.info(f"Stage 5 - TopicName: {topic_result.normalized_topic_name}")
             else:
                 logger.info("Stage 5 - No topic processing applied")
 
             # Final topic is from Script 05 processing
-            final_topic = topic_result.topic or current_title.strip()
-            final_topic_name = topic_result.topicName or ''
+            final_topic = topic_result.extracted_topic or current_title.strip()
+            final_topic_name = topic_result.normalized_topic_name or ''
 
             # Compile complete result with Script 05 data
             result = {
@@ -232,7 +232,7 @@ def test_full_pipeline(test_quantity: int = 9):
                 'processing_notes': {
                     'market_workflow': market_result.notes or '',
                     'geographic_notes': geo_result.notes if geo_result else '',
-                    'topic_notes': topic_result.notes if topic_result else ''
+                    'topic_notes': ', '.join(topic_result.processing_notes) if topic_result and topic_result.processing_notes else ''
                 }
             }
 
